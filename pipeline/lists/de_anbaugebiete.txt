@@ -1,0 +1,14 @@
+# The 13 German wine-growing regions (Anbaugebiete), Weingesetz §3
+Ahr
+Baden
+Franken
+Hessische Bergstraße
+Mittelrhein
+Mosel
+Nahe
+Pfalz
+Rheingau
+Rheinhessen
+Saale-Unstrut
+Sachsen
+Württemberg

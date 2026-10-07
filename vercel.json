@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "web",
+  "cleanUrls": true,
+  "headers": [
+    { "source": "/data/(.*)\\.pmtiles", "headers": [
+      { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
+      { "key": "Content-Type", "value": "application/vnd.pmtiles" } ] },
+    { "source": "/fonts/(.*)", "headers": [
+      { "key": "Cache-Control", "value": "public, max-age=2592000, immutable" },
+      { "key": "Content-Type", "value": "application/x-protobuf" } ] },
+    { "source": "/data/(.*)\\.json", "headers": [
+      { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" } ] }
+  ]
+}

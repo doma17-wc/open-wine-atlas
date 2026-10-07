@@ -1,0 +1,8 @@
+raw/
+build/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+# base64 copies are only for the claude.ai artifact host
+web/**/*.txt

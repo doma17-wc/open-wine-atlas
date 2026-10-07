@@ -1,0 +1,59 @@
+{
+ "inao": {
+  "name": "INAO, Délimitation parcellaire des AOC viticoles",
+  "version": "2026-08-31",
+  "license": "Licence Ouverte / Open Licence 2.0",
+  "attribution": "Institut national de l'origine et de la qualité (INAO)",
+  "url": "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f",
+  "download_used": "https://github.com/puredevotion/vino-glim/releases/download/inao-parcel-v1/2026-08-31-delim-parcellaire-aoc-shp.zip",
+  "notes": "Mirror of the official file. Prefer the data.gouv.fr download when available."
+ },
+ "eupdo": {
+  "name": "A geospatial inventory of regulatory information for wine protected designations of origin in Europe",
+  "year": 2022,
+  "license": "CC BY 4.0",
+  "attribution": "Candiago et al. (2022), Scientific Data",
+  "url": "https://www.nature.com/articles/s41597-022-01513-0",
+  "data": "https://doi.org/10.6084/m9.figshare.c.5877659.v1",
+  "download_used": "https://github.com/puredevotion/vino-glim/releases/download/eu-pdo-v1/eu_pdo_wgs84.geojson",
+  "notes": "Outlines follow the communes named in each product specification."
+ },
+ "rlp": {
+  "name": "Weinbergsrolle Rheinland-Pfalz (Weinlagen)",
+  "version": "2021-10-06",
+  "license": "Datenlizenz Deutschland – Namensnennung – Version 2.0 (dl-de/by-2-0)",
+  "attribution": "© Landwirtschaftskammer Rheinland-Pfalz",
+  "url": "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen",
+  "download_used": "https://raw.githubusercontent.com/ldproxy/ldproxy/master/demo/vineyards/db/vineyards.dml.sql"
+ },
+ "bfs": {
+  "name": "Generalised canton boundaries 2024",
+  "license": "Open use, source must be provided",
+  "attribution": "Bundesamt für Statistik (BFS), GEOSTAT / swisstopo",
+  "url": "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html",
+  "download_used": "npm package swiss-maps 4.7.0"
+ },
+ "osm": {
+  "name": "OpenStreetMap wineries and vineyards",
+  "license": "ODbL 1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "url": "https://www.openstreetmap.org/copyright",
+  "download_used": "https://github.com/openhistorymap/openwinemap (data/countries/*.geojson)"
+ },
+ "naturalearth": {
+  "name": "Natural Earth countries 1:10m",
+  "license": "Public domain",
+  "download_used": "npm package world-atlas 2.0.2"
+ },
+ "lists": {
+  "it_docg": "https://en.wikipedia.org/wiki/List_of_Italian_DOCG_wines (CC BY-SA, list of names only)",
+  "es_pago": "https://en.wikipedia.org/wiki/Vino_de_Pago (CC BY-SA, list of names only)"
+ },
+ "mapterhorn": {
+  "name": "Mapterhorn terrain tiles",
+  "url": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+  "about": "https://mapterhorn.com/attribution",
+  "licence": "open licences of each source DEM",
+  "used_for": "hillshade, 3D terrain, per place elevation, slope and aspect (read live, not copied)"
+ }
+}

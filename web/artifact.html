@@ -1,0 +1,1213 @@
+<title>Open Wine Atlas</title>
+<meta name="description" content="An open, interactive atlas of wine places in France, Italy, Spain, Germany and Switzerland, built from official open data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+.maplibregl-map{font:12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:rgb(0 0 0/0)}.maplibregl-canvas{left:0;position:absolute;top:0}.maplibregl-map:fullscreen{height:100%;width:100%}.maplibregl-ctrl-group button.maplibregl-ctrl-compass{touch-action:none}.maplibregl-canvas-container.maplibregl-interactive,.maplibregl-ctrl-group button.maplibregl-ctrl-compass{cursor:grab;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-canvas-container.maplibregl-interactive.maplibregl-track-pointer{cursor:pointer}.maplibregl-canvas-container.maplibregl-interactive:active,.maplibregl-ctrl-group button.maplibregl-ctrl-compass:active{cursor:grabbing}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-canvas-container.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:pinch-zoom}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:none}.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures,.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right,.maplibregl-ctrl-top-left,.maplibregl-ctrl-top-right{pointer-events:none;position:absolute;z-index:2}.maplibregl-ctrl-top-left{left:0;top:0}.maplibregl-ctrl-top-right{right:0;top:0}.maplibregl-ctrl-bottom-left{bottom:0;left:0}.maplibregl-ctrl-bottom-right{bottom:0;right:0}.maplibregl-ctrl{clear:both;pointer-events:auto;transform:translate(0)}.maplibregl-ctrl-top-left .maplibregl-ctrl{float:left;margin:10px 0 0 10px}.maplibregl-ctrl-top-right .maplibregl-ctrl{float:right;margin:10px 10px 0 0}.maplibregl-ctrl-bottom-left .maplibregl-ctrl{float:left;margin:0 0 10px 10px}.maplibregl-ctrl-bottom-right .maplibregl-ctrl{float:right;margin:0 10px 10px 0}.maplibregl-ctrl-group{background:#fff;border-radius:4px}.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px rgba(0,0,0,.1)}@media (forced-colors:active){.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px ButtonText}}.maplibregl-ctrl-group button{background-color:transparent;border:0;box-sizing:border-box;cursor:pointer;display:block;height:29px;outline:none;padding:0;width:29px}.maplibregl-ctrl-group button+button{border-top:1px solid #ddd}.maplibregl-ctrl button .maplibregl-ctrl-icon{background-position:50%;background-repeat:no-repeat;display:block;height:100%;width:100%}@media (forced-colors:active){.maplibregl-ctrl-icon{background-color:transparent}.maplibregl-ctrl-group button+button{border-top:1px solid ButtonText}}.maplibregl-ctrl button::-moz-focus-inner{border:0;padding:0}.maplibregl-ctrl-attrib-button:focus,.maplibregl-ctrl-group button:focus{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl button:disabled{cursor:not-allowed}.maplibregl-ctrl button:disabled .maplibregl-ctrl-icon{opacity:.25}@media (hover:hover){.maplibregl-ctrl button:not(:disabled):hover{background-color:rgba(0,0,0,.05)}}.maplibregl-ctrl button:not(:disabled):active{background-color:rgba(0,0,0,.05)}.maplibregl-ctrl-group button:focus:focus-visible{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl-group button:focus:not(:focus-visible){box-shadow:none}.maplibregl-ctrl-group button:focus:first-child{border-radius:4px 4px 0 0}.maplibregl-ctrl-group button:focus:last-child{border-radius:0 0 4px 4px}.maplibregl-ctrl-group button:focus:only-child{border-radius:inherit}.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-globe .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none' stroke='%23333' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='8.5'/%3E%3Cpath d='M17.5 11c0 4.819-3.02 8.5-6.5 8.5S4.5 15.819 4.5 11 7.52 2.5 11 2.5s6.5 3.681 6.5 8.5Z'/%3E%3Cpath d='M13.5 11c0 2.447-.331 4.64-.853 6.206-.262.785-.562 1.384-.872 1.777-.314.399-.58.517-.775.517s-.461-.118-.775-.517c-.31-.393-.61-.992-.872-1.777C8.831 15.64 8.5 13.446 8.5 11s.331-4.64.853-6.206c.262-.785.562-1.384.872-1.777.314-.399.58-.517.775-.517s.461.118.775.517c.31.393.61.992.872 1.777.522 1.565.853 3.76.853 6.206Z'/%3E%3Cpath d='M11 7.5c-1.909 0-3.622-.166-4.845-.428-.616-.132-1.08-.283-1.379-.434a1.3 1.3 0 0 1-.224-.138q.07-.058.224-.138c.299-.151.763-.302 1.379-.434C7.378 5.666 9.091 5.5 11 5.5s3.622.166 4.845.428c.616.132 1.08.283 1.379.434.105.053.177.1.224.138q-.07.058-.224.138c-.299.151-.763.302-1.379.434-1.223.262-2.936.428-4.845.428ZM4.486 6.436ZM11 16.5c-1.909 0-3.622-.166-4.845-.428-.616-.132-1.08-.283-1.379-.434a1.3 1.3 0 0 1-.224-.138 1.3 1.3 0 0 1 .224-.138c.299-.151.763-.302 1.379-.434C7.378 14.666 9.091 14.5 11 14.5s3.622.166 4.845.428c.616.132 1.08.283 1.379.434.105.053.177.1.224.138a1.3 1.3 0 0 1-.224.138c-.299.151-.763.302-1.379.434-1.223.262-2.936.428-4.845.428Zm-6.514-1.064ZM11 12.5c-2.46 0-4.672-.222-6.255-.574-.796-.177-1.406-.38-1.805-.59a1.5 1.5 0 0 1-.39-.272.3.3 0 0 1-.047-.064.3.3 0 0 1 .048-.064c.066-.073.189-.167.389-.272.399-.21 1.009-.413 1.805-.59C6.328 9.722 8.54 9.5 11 9.5s4.672.222 6.256.574c.795.177 1.405.38 1.804.59.2.105.323.2.39.272a.3.3 0 0 1 .047.064.3.3 0 0 1-.048.064 1.4 1.4 0 0 1-.389.272c-.399.21-1.009.413-1.804.59-1.584.352-3.796.574-6.256.574Zm-8.501-1.51v.002zm0 .018v.002zm17.002.002v-.002zm0-.018v-.002z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-globe-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none' stroke='%2333b5e5' viewBox='0 0 22 22'%3E%3Ccircle cx='11' cy='11' r='8.5'/%3E%3Cpath d='M17.5 11c0 4.819-3.02 8.5-6.5 8.5S4.5 15.819 4.5 11 7.52 2.5 11 2.5s6.5 3.681 6.5 8.5Z'/%3E%3Cpath d='M13.5 11c0 2.447-.331 4.64-.853 6.206-.262.785-.562 1.384-.872 1.777-.314.399-.58.517-.775.517s-.461-.118-.775-.517c-.31-.393-.61-.992-.872-1.777C8.831 15.64 8.5 13.446 8.5 11s.331-4.64.853-6.206c.262-.785.562-1.384.872-1.777.314-.399.58-.517.775-.517s.461.118.775.517c.31.393.61.992.872 1.777.522 1.565.853 3.76.853 6.206Z'/%3E%3Cpath d='M11 7.5c-1.909 0-3.622-.166-4.845-.428-.616-.132-1.08-.283-1.379-.434a1.3 1.3 0 0 1-.224-.138q.07-.058.224-.138c.299-.151.763-.302 1.379-.434C7.378 5.666 9.091 5.5 11 5.5s3.622.166 4.845.428c.616.132 1.08.283 1.379.434.105.053.177.1.224.138q-.07.058-.224.138c-.299.151-.763.302-1.379.434-1.223.262-2.936.428-4.845.428ZM4.486 6.436ZM11 16.5c-1.909 0-3.622-.166-4.845-.428-.616-.132-1.08-.283-1.379-.434a1.3 1.3 0 0 1-.224-.138 1.3 1.3 0 0 1 .224-.138c.299-.151.763-.302 1.379-.434C7.378 14.666 9.091 14.5 11 14.5s3.622.166 4.845.428c.616.132 1.08.283 1.379.434.105.053.177.1.224.138a1.3 1.3 0 0 1-.224.138c-.299.151-.763.302-1.379.434-1.223.262-2.936.428-4.845.428Zm-6.514-1.064ZM11 12.5c-2.46 0-4.672-.222-6.255-.574-.796-.177-1.406-.38-1.805-.59a1.5 1.5 0 0 1-.39-.272.3.3 0 0 1-.047-.064.3.3 0 0 1 .048-.064c.066-.073.189-.167.389-.272.399-.21 1.009-.413 1.805-.59C6.328 9.722 8.54 9.5 11 9.5s4.672.222 6.256.574c.795.177 1.405.38 1.804.59.2.105.323.2.39.272a.3.3 0 0 1 .047.064.3.3 0 0 1-.048.064 1.4 1.4 0 0 1-.389.272c-.399.21-1.009.413-1.804.59-1.584.352-3.796.574-6.256.574Zm-8.501-1.51v.002zm0 .018v.002zm17.002.002v-.002zm0-.018v-.002z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%23333' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%2333b5e5' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23aaa' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-waiting .maplibregl-ctrl-icon{animation:maplibregl-spin 2s linear infinite}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23999' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23666' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}}@keyframes maplibregl-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;cursor:pointer;display:block;height:23px;margin:0 0 -4px -4px;overflow:hidden;width:88px}a.maplibregl-ctrl-logo.maplibregl-compact{width:14px}@media (forced-colors:active){a.maplibregl-ctrl-logo{background-color:transparent;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}.maplibregl-ctrl.maplibregl-ctrl-attrib{background-color:hsla(0,0%,100%,.5);margin:0;padding:0 5px}@media screen{.maplibregl-ctrl-attrib.maplibregl-compact{background-color:#fff;border-radius:12px;box-sizing:content-box;color:#000;margin:10px;min-height:20px;padding:2px 24px 2px 0;position:relative}.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:2px 28px 2px 8px;visibility:visible}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact-show{border-radius:12px;padding:2px 8px 2px 28px}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-inner{display:none}.maplibregl-ctrl-attrib-button{background-color:hsla(0,0%,100%,.5);background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E");border:0;border-radius:12px;box-sizing:border-box;cursor:pointer;display:none;height:24px;outline:none;position:absolute;right:0;top:0;width:24px}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;list-style:none}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker{display:none}.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-top-left .maplibregl-ctrl-attrib-button{left:0}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{display:block}.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-button{background-color:rgba(0,0,0,.05)}.maplibregl-ctrl-bottom-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;right:0}.maplibregl-ctrl-top-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{right:0;top:0}.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{left:0;top:0}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;left:0}}@media screen and (forced-colors:active){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}@media screen and (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}.maplibregl-ctrl-attrib a{color:rgba(0,0,0,.75);text-decoration:none}.maplibregl-ctrl-attrib a:hover{color:inherit;text-decoration:underline}.maplibregl-attrib-empty{display:none}.maplibregl-ctrl-scale{background-color:hsla(0,0%,100%,.75);border:2px solid #333;border-top:#333;box-sizing:border-box;color:#333;font-size:10px;padding:0 5px;white-space:nowrap}.maplibregl-popup{display:flex;left:0;pointer-events:none;position:absolute;top:0;will-change:transform}.maplibregl-popup-anchor-top,.maplibregl-popup-anchor-top-left,.maplibregl-popup-anchor-top-right{flex-direction:column}.maplibregl-popup-anchor-bottom,.maplibregl-popup-anchor-bottom-left,.maplibregl-popup-anchor-bottom-right{flex-direction:column-reverse}.maplibregl-popup-anchor-left{flex-direction:row}.maplibregl-popup-anchor-right{flex-direction:row-reverse}.maplibregl-popup-tip{border:10px solid transparent;height:0;width:0;z-index:1}.maplibregl-popup-anchor-top .maplibregl-popup-tip{align-self:center;border-bottom-color:#fff;border-top:none}.maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-start;border-bottom-color:#fff;border-left:none;border-top:none}.maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-end;border-bottom-color:#fff;border-right:none;border-top:none}.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{align-self:center;border-bottom:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-start;border-bottom:none;border-left:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-end;border-bottom:none;border-right:none;border-top-color:#fff}.maplibregl-popup-anchor-left .maplibregl-popup-tip{align-self:center;border-left:none;border-right-color:#fff}.maplibregl-popup-anchor-right .maplibregl-popup-tip{align-self:center;border-left-color:#fff;border-right:none}[dir=rtl] .maplibregl-popup-anchor-left{flex-direction:row-reverse}[dir=rtl] .maplibregl-popup-anchor-right{flex-direction:row}[dir=rtl] .maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-end}[dir=rtl] .maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-start}[dir=rtl] .maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-end}[dir=rtl] .maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-start}.maplibregl-popup-close-button{background-color:transparent;border:0;border-radius:0 3px 0 0;cursor:pointer;position:absolute;right:0;top:0}.maplibregl-popup-close-button:hover{background-color:rgba(0,0,0,.05)}.maplibregl-popup-content{background:#fff;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px 10px;pointer-events:auto;position:relative}.maplibregl-popup-anchor-top-left .maplibregl-popup-content{border-top-left-radius:0}.maplibregl-popup-anchor-top-right .maplibregl-popup-content{border-top-right-radius:0}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-content{border-bottom-left-radius:0}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-content{border-bottom-right-radius:0}.maplibregl-popup-track-pointer{display:none}.maplibregl-popup-track-pointer *{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-map:hover .maplibregl-popup-track-pointer{display:flex}.maplibregl-map:active .maplibregl-popup-track-pointer{display:none}.maplibregl-marker{left:0;position:absolute;top:0;transition:opacity .2s;will-change:transform}.maplibregl-user-location-dot,.maplibregl-user-location-dot:before{background-color:#1da1f2;border-radius:50%;height:15px;width:15px}.maplibregl-user-location-dot:before{animation:maplibregl-user-location-dot-pulse 2s infinite;content:"";position:absolute}.maplibregl-user-location-dot:after{border:2px solid #fff;border-radius:50%;box-shadow:0 0 3px rgba(0,0,0,.35);box-sizing:border-box;content:"";height:19px;left:-2px;position:absolute;top:-2px;width:19px}@media (prefers-reduced-motion:reduce){.maplibregl-user-location-dot:before{animation:none}}@keyframes maplibregl-user-location-dot-pulse{0%{opacity:1;transform:scale(1)}70%{opacity:0;transform:scale(3)}to{opacity:0;transform:scale(1)}}.maplibregl-user-location-dot-stale{background-color:#aaa}.maplibregl-user-location-dot-stale:after{display:none}.maplibregl-user-location-accuracy-circle{background-color:#1da1f233;border-radius:100%;height:1px;width:1px}.maplibregl-crosshair,.maplibregl-crosshair .maplibregl-interactive,.maplibregl-crosshair .maplibregl-interactive:active{cursor:crosshair}.maplibregl-boxzoom{background:#fff;border:2px dotted #202020;height:0;left:0;opacity:.5;position:absolute;top:0;width:0}.maplibregl-cooperative-gesture-screen{align-items:center;background:rgba(0,0,0,.4);color:#fff;display:flex;font-size:1.4em;inset:0;justify-content:center;line-height:1.2;opacity:0;padding:1rem;pointer-events:none;position:absolute;transition:opacity 1s ease 1s;z-index:99999}.maplibregl-cooperative-gesture-screen.maplibregl-show{opacity:1;transition:opacity .05s}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:none}@media (hover:none),(pointer:coarse){.maplibregl-cooperative-gesture-screen .maplibregl-desktop-message{display:none}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:block}}.maplibregl-pseudo-fullscreen{height:100%!important;left:0!important;position:fixed!important;top:0!important;width:100%!important;z-index:99999}
+</style>
+<style>
+/* Layout: full-bleed dark map; a quiet left rail (title, search, places, legend) and a detail sheet
+   that slides in from the right on desktop and up from the bottom on phones. One committed dark look. */
+:root {
+  color-scheme: dark;
+  --night: #0b0b0d;        /* page and sea */
+  --land: #151518;         /* land fill */
+  --panel: rgba(17,17,20,.92);
+  --line: #2a2a31;         /* hairlines */
+  --parchment: #e6dccb;    /* primary text, appellation outlines */
+  --muted: #8d877c;        /* secondary text */
+  --gold: #e7c06a;         /* top classification: grand cru, DOCG, DOCa, pago */
+  --copper: #cf8f5f;       /* premier cru */
+  --slate: #9db0c0;        /* German Einzellagen */
+  --vine: #7f9b6f;         /* vineyard areas */
+  --focus: #fff8ea;
+  --f-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 10px;
+}
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--night); color: var(--parchment); font: 14px/1.5 var(--f-body); overflow: hidden; }
+#map { position: absolute; inset: 0; background: var(--night); }
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- left rail */
+.rail { position: absolute; top: calc(16px + env(safe-area-inset-top, 0px)); left: 16px; width: min(340px, calc(100% - 32px));
+  display: flex; flex-direction: column; gap: 10px; z-index: 3; max-height: calc(100% - 32px); }
+.brand { padding: 14px 16px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px); }
+.brand h1 { margin: 0; font: 600 30px/1 var(--f-display); letter-spacing: .01em; text-wrap: balance; }
+.brand p { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; }
+.brand .count { font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--parchment); }
+
+.search { position: relative; }
+.search input { width: 100%; box-sizing: border-box; padding: 12px 14px 12px 38px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); outline: none; backdrop-filter: blur(10px); }
+.search input:focus { border-color: #4a4740; }
+.search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); opacity: .55; }
+.results { list-style: none; margin: 6px 0 0; padding: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+  max-height: 46vh; overflow: auto; backdrop-filter: blur(10px); }
+.results li button { all: unset; box-sizing: border-box; width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px;
+  padding: 8px 10px; border-radius: 7px; cursor: pointer; }
+.results li button:hover, .results li button[aria-selected="true"] { background: #222228; }
+.results .n { font-weight: 500; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.results .m { grid-column: 1; color: var(--muted); font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.results .c { grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 500 11px var(--f-mono); color: var(--muted); }
+
+.countries { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); cursor: pointer; font-size: 12.5px;
+  backdrop-filter: blur(10px); }
+.chip:hover { border-color: #57534a; }
+.chip .k { font: 500 10.5px var(--f-mono); color: var(--muted); margin-right: 5px; }
+
+.legend { padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px);
+  display: grid; gap: 7px; font-size: 12.5px; }
+.legend label { display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 8px; cursor: pointer; }
+.legend input { position: absolute; opacity: 0; pointer-events: none; }
+.sw { width: 16px; height: 10px; border-radius: 2px; border: 1.5px solid currentColor; box-sizing: border-box; }
+.legend input:not(:checked) + .sw { opacity: .25; }
+.legend input:not(:checked) ~ span { color: var(--muted); text-decoration: line-through; text-decoration-color: #555; }
+.legend input:focus-visible + .sw { outline: 2px solid var(--focus); outline-offset: 2px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-left: 4px; }
+.legend .hd { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.rail-foot { display: flex; gap: 6px; flex-wrap: wrap; }
+.link-btn { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); cursor: pointer; font-size: 12.5px; }
+.link-btn:hover { border-color: #57534a; }
+
+/* ---------- detail sheet */
+.sheet { position: absolute; z-index: 4; top: calc(16px + env(safe-area-inset-top, 0px)); right: 16px; bottom: 16px; width: min(380px, calc(100% - 32px));
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(12px);
+  display: flex; flex-direction: column; transform: translateX(calc(100% + 24px)); transition: transform .32s cubic-bezier(.2,.7,.2,1); }
+.sheet.open { transform: none; }
+.sheet header { padding: 18px 18px 12px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.eyebrow { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.sheet h2 { margin: 0; font: 600 32px/1.02 var(--f-display); text-wrap: balance; overflow-wrap: anywhere; }
+.crumbs { color: var(--muted); font-size: 12.5px; }
+.crumbs button { all: unset; cursor: pointer; color: var(--parchment); border-bottom: 1px solid #4a463f; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 999px; font: 500 11px var(--f-mono);
+  border: 1px solid currentColor; width: fit-content; }
+.badge.top { color: var(--gold); } .badge.pc { color: var(--copper); } .badge.std { color: var(--parchment); } .badge.de { color: var(--slate); }
+.sheet .body { padding: 14px 18px 18px; overflow: auto; display: grid; gap: 16px; align-content: start; min-height: 0; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 7px 14px; margin: 0; }
+.facts dt { color: var(--muted); font-size: 12.5px; }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.grapes { display: flex; flex-wrap: wrap; gap: 5px; }
+.grapes span { padding: 2px 7px; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; }
+.sec h3 { margin: 0 0 6px; font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.communes { color: #bdb4a5; font-size: 13px; }
+.source { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+.source a { color: var(--parchment); }
+.x { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line);
+  background: transparent; cursor: pointer; display: grid; place-items: center; }
+.x:hover { border-color: #57534a; }
+.sub-list { display: grid; gap: 2px; }
+.sub-list button { all: unset; cursor: pointer; padding: 4px 0; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed #2a2a31; font-size: 13px; }
+.sub-list button:hover { color: var(--focus); }
+.sub-list .r { font: 500 10.5px var(--f-mono); color: var(--muted); }
+.primary { justify-self: start; padding: 8px 12px; border-radius: 8px; border: 1px solid #4a463f; background: #1d1c1f; cursor: pointer; }
+.primary:hover { border-color: var(--parchment); }
+
+
+/* ---------- richer place sheet */
+.lede { margin: 0; font: 400 15px/1.55 var(--f-body); color: #ddd3c2; }
+.atlas-note { border-left: 2px solid var(--gold); padding: 2px 0 2px 12px; display: grid; gap: 4px; }
+.atlas-note .an-h { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.atlas-note p { margin: 0; font: italic 500 17px/1.4 var(--f-display); color: var(--parchment); }
+.atlas-note .an-f { font-size: 11.5px; color: var(--muted); }
+.q { all: unset; cursor: pointer; display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; border: 1px solid #4a463f;
+  font: 500 10px var(--f-mono); color: var(--muted); vertical-align: middle; margin-left: 4px; }
+.q:hover, .q:focus-visible { color: var(--parchment); border-color: var(--parchment); }
+.bars { display: grid; gap: 6px; }
+.bar { display: grid; grid-template-columns: minmax(0, 1fr) 70px 36px; gap: 8px; align-items: center; font-size: 12.5px; }
+.bar .bl { min-width: 0; }
+.bar .bt { height: 6px; background: #24242a; border-radius: 3px; overflow: hidden; }
+.bar .bt i { display: block; height: 100%; background: var(--copper); }
+.bar .num { text-align: right; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { all: unset; cursor: pointer; padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; }
+.chips button:hover, .chips button:focus-visible { border-color: var(--parchment); }
+.chips small { color: var(--gold); font: 500 10px var(--f-mono); }
+.wine { padding: 10px 0; border-top: 1px solid var(--line); display: grid; gap: 6px; }
+.wine:first-of-type { border-top: 0; padding-top: 2px; }
+.wh { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.wh b { font-weight: 500; }
+.wchip { width: 9px; height: 9px; border-radius: 50%; display: inline-block; margin-right: 7px; transform: translateY(-1px); }
+.wk { color: var(--muted); font-size: 12px; }
+.wn { font: 400 12px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.sec2 summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+.sec2[open] summary { margin-bottom: 6px; }
+.gdot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; transform: translateY(-1px); }
+.wlist { display: grid; gap: 3px; font-size: 13px; }
+.wlist a, .links a { color: var(--parchment); text-decoration-color: #4a463f; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.links a { padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; text-decoration: none; }
+.links a:hover { border-color: var(--parchment); }
+.gloss dt { font: 600 19px/1.2 var(--f-display); margin-top: 10px; color: var(--parchment); }
+.gloss dd { margin: 4px 0 0; color: #c9c0b1; }
+.gloss h3 { margin: 16px 0 0; font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- modal for "Open data" and "Suggest" */
+.modal { position: absolute; inset: 0; z-index: 6; background: rgba(5,5,6,.6); display: grid; place-items: center; padding: 16px; }
+.modal .card { width: min(560px, 100%); max-height: calc(100% - 32px); overflow: auto; background: #131316; border: 1px solid var(--line);
+  border-radius: 12px; padding: 22px; position: relative; display: grid; gap: 12px; }
+.modal h2 { margin: 0; font: 600 28px/1.1 var(--f-display); }
+.modal p { margin: 0; color: #c9c0b1; max-width: 62ch; }
+.modal table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.modal td, .modal th { text-align: left; padding: 6px 8px 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.modal th { font: 500 10.5px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.tbl { overflow-x: auto; }
+.modal a { color: var(--parchment); }
+form.suggest { display: grid; gap: 10px; }
+form.suggest label { display: grid; gap: 4px; font-size: 12.5px; color: var(--muted); }
+form.suggest input, form.suggest textarea, form.suggest select { background: #1b1b1f; border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; color: var(--parchment); }
+form.suggest textarea { min-height: 90px; resize: vertical; }
+.note { font-size: 12.5px; color: var(--muted); }
+.queue { display: grid; gap: 6px; }
+.queue div { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; }
+.queue b { font-weight: 500; }
+
+/* ---------- loading + attribution + hover tag */
+.loading { position: absolute; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 5;
+  padding: 8px 14px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); font: 500 12px var(--f-mono); color: var(--muted); }
+.attrib { position: absolute; right: 16px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); z-index: 2; font-size: 11px; color: #6f6a62;
+  max-width: calc(100% - 32px); text-align: right; }
+.attrib button { all: unset; cursor: pointer; text-decoration: underline; text-decoration-color: #4a463f; }
+.sheet.open ~ .attrib { right: 412px; }
+.tag { position: absolute; z-index: 3; pointer-events: none; padding: 5px 9px; border-radius: 6px; background: rgba(10,10,12,.92);
+  border: 1px solid var(--line); font-size: 12.5px; white-space: nowrap; transform: translate(12px, -50%); }
+.tag small { color: var(--muted); margin-left: 6px; font: 500 10.5px var(--f-mono); }
+.maplibregl-ctrl-group { background: var(--panel) !important; border: 1px solid var(--line); box-shadow: none !important; }
+.maplibregl-ctrl-group button + button { border-top: 1px solid var(--line) !important; }
+.maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(.88); }
+.maplibregl-ctrl-scale { background: transparent; color: var(--muted); border-color: var(--muted); font: 10px var(--f-mono); }
+
+/* ---------- relief: 3D toggle + terrain section of the sheet */
+.relief-btn { position: absolute; top: 16px; right: 16px; z-index: 2; display: flex; gap: 0; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--panel); overflow: hidden; }
+.relief-btn button { all: unset; cursor: pointer; padding: 7px 12px; font: 500 11.5px var(--f-mono); letter-spacing: .08em; color: var(--muted); }
+.relief-btn button[aria-pressed="true"] { color: var(--night); background: var(--parchment); }
+.relief-btn button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.sheet.open ~ .relief-btn { right: 412px; }
+.terrain { display: grid; grid-template-columns: 1fr 112px; gap: 10px 16px; align-items: start; }
+.terrain .facts { grid-column: 1; }
+.terrain svg { grid-column: 2; grid-row: 1 / span 2; width: 112px; height: 112px; }
+.terrain .bars { grid-column: 1 / -1; }
+.terrain .bar { grid-template-columns: 126px minmax(0, 1fr) 36px; }
+.note a { color: inherit; }
+.terrain .bar .bt i { background: var(--gold); opacity: .85; }
+.terrain-wait { display: flex; align-items: center; gap: 8px; }
+.terrain-wait i { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--muted); border-top-color: transparent; animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 760px) {
+  .relief-btn { top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); right: 16px; }
+  .sheet.open ~ .relief-btn { display: none; }
+  .rail { width: calc(100% - 32px); }
+  .legend, .rail-foot { display: none; }
+  .rail.more .legend, .rail.more .rail-foot { display: grid; }
+  .rail.more .rail-foot { display: flex; }
+  .brand { padding: 10px 12px; }
+  .brand h1 { font-size: 24px; }
+  .brand p { display: none; }
+  .sheet { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62%; border-radius: 14px 14px 0 0; padding-bottom: env(safe-area-inset-bottom, 0px);
+    transform: translateY(105%); }
+  .sheet.open ~ .attrib { right: 16px; }
+  .attrib { display: none; }
+  .maplibregl-ctrl-bottom-right { display: none; }
+}
+.more-btn { display: none; }
+@media (max-width: 760px) { .more-btn { display: inline-block; } }
+@media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+</style>
+
+<div id="map" aria-label="Map of wine appellations"></div>
+
+<div class="rail" id="rail">
+  <div class="brand">
+    <h1>Open Wine Atlas</h1>
+    <p><span class="count" id="count">…</span> wine places from official open registers. Click any outline.</p>
+  </div>
+  <div class="search">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <input id="q" type="search" placeholder="Search Barolo, Musigny, Wehlener Sonnenuhr…" autocomplete="off" aria-label="Search wine places" aria-controls="results">
+    <ul class="results" id="results" role="listbox" hidden></ul>
+  </div>
+  <div class="countries" id="countries">
+    <button class="chip" data-c="FR"><span class="k">FR</span>France</button>
+    <button class="chip" data-c="IT"><span class="k">IT</span>Italia</button>
+    <button class="chip" data-c="ES"><span class="k">ES</span>España</button>
+    <button class="chip" data-c="DE"><span class="k">DE</span>Deutschland</button>
+    <button class="chip" data-c="CH"><span class="k">CH</span>Schweiz</button>
+    <button class="chip more-btn" id="moreBtn" aria-expanded="false">Layers</button>
+  </div>
+  <div class="legend" id="legend">
+    <div class="hd">Layers</div>
+    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations, DOC, DO</span></label>
+    <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span>Grand cru, DOCG, DOCa, Pago</span></label>
+    <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span>Premiers crus and climats</span></label>
+    <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span>Einzellagen (Rheinland-Pfalz)</span></label>
+    <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span>Vineyards (Switzerland, OSM)</span></label>
+    <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span>Wineries (OSM)</span></label>
+    <label style="color:#a9a296" class="web-only" hidden><input type="checkbox" id="lg-relief" checked><span class="sw" style="background:linear-gradient(135deg,#3a3a40,#0b0b0d);border:0"></span><span>Relief (lidar where available)</span></label>
+  </div>
+  <div class="rail-foot">
+    <button class="link-btn" id="openGuide">How to read the atlas</button>
+    <button class="link-btn" id="openData">Open data &amp; sources</button>
+    <button class="link-btn" id="openSuggest">Suggest a place</button>
+  </div>
+</div>
+
+<aside class="sheet" id="sheet" aria-live="polite" aria-label="Place details">
+  <button class="x" id="close" aria-label="Close details"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <header id="sh-head"></header>
+  <div class="body" id="sh-body"></div>
+</aside>
+
+<div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" hidden>
+  <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
+</div>
+<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
+<div class="loading" id="loading">Loading the atlas…</div>
+<div class="tag" id="tag" hidden></div>
+<div class="modal" id="modal" hidden><div class="card" id="modalCard" role="dialog" aria-modal="true"></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pmtiles@4.5.0/dist/pmtiles.js"></script>
+<script>
+(() => {
+"use strict";
+const $ = (id) => document.getElementById(id);
+const C = { night: "#0b0b0d", land: "#151518", line: "#2a2a31", parchment: "#e6dccb", muted: "#8d877c",
+  gold: "#e7c06a", copper: "#cf8f5f", slate: "#9db0c0", vine: "#7f9b6f", focus: "#fff8ea", water: "#08090b", river: "#1e2833" };
+const TOP = ["grand_cru", "docg", "doca", "pago"];
+const COUNTRY = { FR: "France", IT: "Italia", ES: "España", DE: "Deutschland", CH: "Schweiz" };
+const VIEWS = { FR: [[-5.2, 42.3], [8.3, 51.1]], IT: [[6.6, 36.6], [18.6, 47.1]], ES: [[-9.4, 36.0], [3.4, 43.8]],
+  DE: [[5.9, 47.3], [15.0, 55.1]], CH: [[5.95, 45.8], [10.5, 47.85]] };
+const SOURCES = {
+  inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
+  eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
+  rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
+  bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
+  osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
+  dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
+};
+const LEVEL_LABEL = { region: "Wine region", appellation: "Appellation", subzone: "Sub-zone", vineyard: "Vineyard site", vineyard_area: "Vineyard area" };
+const RANK_LABEL = { grand_cru: "Grand cru", premier_cru: "Premier cru", docg: "DOCG", doca: "DOCa", pago: "Vino de Pago" };
+
+const base = location.origin + location.pathname.replace(/[^/]*$/, "");
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const norm = (s) => String(s).normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const fmt = (n) => Number(n).toLocaleString("en-US");
+
+// ---------- hosting mode
+// "web": static hosting with HTTP range requests (Vercel). Tiles are read in small pieces, terrain is on.
+// "artifact": the claude.ai artifact host, which serves text only and blocks outside requests.
+const MODE = "artifact"; // set by build_web.py
+const WEB = MODE === "web";
+const QS = new URLSearchParams(location.search);
+const REPO = "https://github.com/doma17-wc/open-wine-atlas";
+// Terrain: Mapterhorn terrarium tiles (national lidar models where open, Copernicus GLO-30 elsewhere)
+const DEM_URL = QS.get("dem") || "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp";
+const DEM_TILE = 512, DEM_MAX = 14;
+if (WEB) document.querySelectorAll(".web-only").forEach((el) => { el.hidden = false; });
+
+// ---------- PMTiles kept in memory (each file is fetched once, then read by offset)
+class MemSource {
+  constructor(key, buf) { this.key = key; this.buf = buf; }
+  getKey() { return this.key; }
+  async getBytes(offset, length) { return { data: this.buf.slice(offset, offset + length) }; }
+}
+const protocol = new pmtiles.Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+const loaded = new Map(); // file -> Promise
+// binary files are published as base64 text (the host serves text data, not raw binary)
+function b64ToBuffer(s) {
+  if (Uint8Array.fromBase64) return Uint8Array.fromBase64(s.trim()).buffer;
+  const bin = atob(s.trim()), u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  return u.buffer;
+}
+const fetchBin = (path) => fetch(path + ".txt").then((r) => { if (!r.ok) throw new Error(path + " " + r.status); return r.text(); }).then(b64ToBuffer);
+maplibregl.addProtocol("glyphs", async (params) => {
+  const m = params.url.match(/^glyphs:\/\/(.+)\/(\d+-\d+)$/);
+  return { data: await fetchBin("fonts/" + decodeURIComponent(m[1]) + "/" + m[2] + ".pbf") };
+});
+
+function loadArchive(file) {
+  if (!loaded.has(file)) {
+    let p;
+    if (WEB) {
+      // read by HTTP range request; if the server ignores ranges, fall back to one full download
+      const pm = new pmtiles.PMTiles(base + "data/" + file);
+      p = pm.getHeader().then(() => { protocol.add(pm); return file; }).catch(() =>
+        fetch(base + "data/" + file).then((r) => { if (!r.ok) throw new Error(file + " " + r.status); return r.arrayBuffer(); })
+          .then((buf) => { protocol.add(new pmtiles.PMTiles(new MemSource(base + "data/" + file, buf))); return file; }));
+    } else {
+      p = fetchBin("data/" + file).then((buf) => { protocol.add(new pmtiles.PMTiles(new MemSource(file, buf))); return file; });
+    }
+    loaded.set(file, p);
+  }
+  return loaded.get(file);
+}
+// sources are registered as pmtiles://<key>; in web mode the key is the absolute file URL
+const pmUrl = (file) => "pmtiles://" + (WEB ? base + "data/" + file : file);
+
+// ---------- map
+const map = new maplibregl.Map({
+  container: "map",
+  style: {
+    version: 8,
+    glyphs: WEB ? base + "fonts/{fontstack}/{range}.pbf" : "glyphs://{fontstack}/{range}",
+    sources: {},
+    layers: [{ id: "bg", type: "background", paint: { "background-color": C.water } }],
+  },
+  bounds: [[-9.5, 36.2], [17.5, 54.5]],
+  fitBoundsOptions: { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 } },
+  maxBounds: [[-25, 28], [35, 62]],
+  minZoom: 4, maxZoom: 17.5, maxPitch: 78,
+  attributionControl: false,
+  dragRotate: true, pitchWithRotate: true,
+});
+window.__map = map; // handy for debugging in the console
+map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+map.addControl(new maplibregl.ScaleControl({ maxWidth: 90 }), "bottom-left");
+
+const fillOpacityByLevel = (base) => ["case", ["boolean", ["feature-state", "selected"], false], 0.22,
+  ["boolean", ["feature-state", "hover"], false], 0.12, base];
+const INAO = ["==", ["get", "src"], "inao"];
+const SEL = ["boolean", ["feature-state", "selected"], false], HOV = ["boolean", ["feature-state", "hover"], false];
+// zoom must be the top-level input, so the hover/selected switch goes inside each stop
+const zstate = (stops, selV, hovV) => ["interpolate", ["linear"], ["zoom"],
+  ...stops.flatMap(([z, v]) => [z, ["case", SEL, selV, HOV, hovV ?? v, v]])];
+const rankColor = ["case",
+  ["in", ["get", "rank"], ["literal", TOP]], C.gold,
+  ["==", ["get", "rank"], "premier_cru"], C.copper,
+  ["==", ["get", "level"], "vineyard"], ["case", ["==", ["get", "country"], "DE"], C.slate, C.copper],
+  C.parchment];
+
+const LAYERS = []; // [layerId, group] for legend toggles
+function add(layer, group) { map.addLayer(layer); LAYERS.push([layer.id, group]); }
+
+function addBase() {
+  map.addSource("base", { type: "vector", url: pmUrl("base.pmtiles") });
+  map.addLayer({ id: "land", type: "fill", source: "base", "source-layer": "countries", paint: { "fill-color": C.land } });
+  map.addLayer({ id: "lakes", type: "fill", source: "base", "source-layer": "lakes", paint: { "fill-color": C.water } });
+  map.addLayer({ id: "rivers", type: "line", source: "base", "source-layer": "rivers", minzoom: 5,
+    paint: { "line-color": C.river, "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.4, 10, 1.2, 14, 2] } });
+  map.addLayer({ id: "borders", type: "line", source: "base", "source-layer": "countries",
+    paint: { "line-color": "#34343c", "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.6, 10, 1.4] } });
+  // one label per country, placed by hand (tile-based polygon labels repeat on every tile)
+  const pts = [["FRANCE", 2.4, 46.7], ["ITALIA", 12.6, 42.9], ["ESPAÑA", -3.6, 40.0], ["DEUTSCHLAND", 10.2, 51.2], ["SCHWEIZ", 8.2, 46.85],
+    ["ÖSTERREICH", 14.2, 47.6], ["PORTUGAL", -8.0, 39.6]];
+  map.addSource("country-pts", { type: "geojson", data: { type: "FeatureCollection", features: pts.map(([n, x, y]) => ({ type: "Feature", properties: { n }, geometry: { type: "Point", coordinates: [x, y] } })) } });
+  map.addLayer({ id: "country-labels", type: "symbol", source: "country-pts", maxzoom: 7.5,
+    layout: { "text-field": ["get", "n"], "text-font": ["noto-medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 7, 15],
+      "text-letter-spacing": 0.5, "text-allow-overlap": true },
+    paint: { "text-color": "#5f5b55", "text-halo-color": C.land, "text-halo-width": 1.2,
+      "text-opacity": ["interpolate", ["linear"], ["zoom"], 6.5, 1, 7.5, 0] } });
+}
+
+function addOverview() {
+  map.addSource("ov", { type: "vector", url: pmUrl("overview.pmtiles"), promoteId: "id" });
+  // For INAO appellations the parcel-level files take over from zoom 10.5
+  const frHide = ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]];
+  add({ id: "ov-fill", type: "fill", source: "ov", "source-layer": "appellations", filter: frHide,
+    paint: { "fill-color": rankColor, "fill-opacity": fillOpacityByLevel(["case", ["in", ["get", "rank"], ["literal", TOP]], 0.07, INAO, 0.02, 0.025]) } }, "app");
+  add({ id: "ov-line", type: "line", source: "ov", "source-layer": "appellations", filter: frHide,
+    paint: { "line-color": rankColor,
+      // French appellations overlap many times (regional, village, crémant…): draw them lighter
+      "line-opacity": zstate([[4, ["case", INAO, 0.14, 0.28]], [8, ["case", INAO, 0.34, 0.55]]], 1, 0.95),
+      "line-width": zstate([[4, 0.35], [8, 0.8], [12, 1.4]], 2.2) } }, "app");
+  add({ id: "ov-labels", type: "symbol", source: "ov", "source-layer": "labels",
+    filter: ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]],
+    layout: { "text-field": ["get", "name"], "text-font": ["noto-medium"],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 5, ["case", ["==", ["get", "level"], "region"], 12, 10.5], 10, 12.5],
+      "text-letter-spacing": 0.06, "text-transform": "uppercase", "text-max-width": 8, "text-padding": 4,
+      "symbol-sort-key": ["-", 0, ["get", "ha"]] },
+    paint: { "text-color": ["case", ["in", ["get", "rank"], ["literal", TOP]], C.gold, "#cbbfa9"], "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.4 } }, "app");
+}
+
+function addDetail(file) {
+  const id = file.replace(".pmtiles", "");
+  const isDE = id === "de-rlp";
+  map.addSource(id, { type: "vector", url: pmUrl(file), promoteId: "id" });
+  const before = "ov-labels";
+  if (!isDE) {
+    add({ id: id + "-app-fill", type: "fill", source: id, "source-layer": "appellations", minzoom: 10.5,
+      paint: { "fill-color": rankColor, "fill-opacity": fillOpacityByLevel(["case", ["in", ["get", "rank"], ["literal", TOP]], 0.1, 0]) } }, "app");
+    // regional appellations overlap many times over the same parcels: keep their lines faint
+    add({ id: id + "-app-line", type: "line", source: id, "source-layer": "appellations", minzoom: 10.5,
+      paint: { "line-color": rankColor, "line-opacity": ["case", SEL, 1, HOV, 0.9, ["in", ["get", "rank"], ["literal", TOP]], 0.8, 0.22],
+        "line-width": zstate([[10, 0.6], [15, 1.1]], 2.4) } }, "app");
+    map.moveLayer(id + "-app-fill", before); map.moveLayer(id + "-app-line", before);
+  } else {
+    add({ id: id + "-gl-line", type: "line", source: id, "source-layer": "grosslagen", minzoom: 8, maxzoom: 12,
+      paint: { "line-color": C.slate, "line-opacity": 0.35, "line-width": 0.8, "line-dasharray": [3, 2] } }, "de");
+    map.moveLayer(id + "-gl-line", before);
+  }
+  add({ id: id + "-cru-fill", type: "fill", source: id, "source-layer": "crus", minzoom: isDE ? 9.5 : 10.5,
+    filter: isDE ? ["all"] : ["==", ["get", "level"], "vineyard"],
+    paint: { "fill-color": rankColor, "fill-opacity": fillOpacityByLevel(["case", ["in", ["get", "rank"], ["literal", TOP]], 0.16, 0.06]) } }, isDE ? "de" : "pc");
+  add({ id: id + "-cru-line", type: "line", source: id, "source-layer": "crus", minzoom: isDE ? 9.5 : 10.5,
+    filter: isDE ? ["all"] : ["==", ["get", "level"], "vineyard"],
+    paint: { "line-color": rankColor, "line-opacity": ["case", ["boolean", ["feature-state", "selected"], false], 1, ["boolean", ["feature-state", "hover"], false], 1, 0.75],
+      "line-width": zstate([[11, 0.6], [15, 1.4]], 2.4) } }, isDE ? "de" : "pc");
+  if (!isDE) {
+    add({ id: id + "-sub-line", type: "line", source: id, "source-layer": "crus", minzoom: 10,
+      filter: ["==", ["get", "level"], "subzone"],
+      paint: { "line-color": ["case", ["==", ["get", "rank"], "premier_cru"], C.copper, C.parchment], "line-opacity": 0.45, "line-width": 0.9, "line-dasharray": [2, 1.5] } }, "pc");
+    add({ id: id + "-sub-fill", type: "fill", source: id, "source-layer": "crus", minzoom: 10,
+      filter: ["==", ["get", "level"], "subzone"], paint: { "fill-color": C.parchment, "fill-opacity": fillOpacityByLevel(0) } }, "pc");
+  }
+  [id + "-cru-fill", id + "-cru-line"].concat(isDE ? [] : [id + "-sub-line", id + "-sub-fill"]).forEach((l) => map.moveLayer(l, before));
+  add({ id: id + "-labels", type: "symbol", source: id, "source-layer": "labels",
+    filter: isDE ? ["any", ["==", ["get", "level"], "vineyard"], ["<", ["zoom"], 12]] : ["any", ["!=", ["get", "level"], "appellation"], [">=", ["zoom"], 10.5]],
+    layout: { "text-field": isDE ? ["get", "name"] : ["case", ["==", ["get", "level"], "appellation"], ["upcase", ["get", "name"]], ["get", "short"]],
+      "text-font": ["case", ["==", ["get", "level"], "appellation"], ["literal", ["noto-medium"]], ["literal", ["noto-italic"]]],
+      "text-letter-spacing": ["case", ["==", ["get", "level"], "appellation"], 0.08, 0],
+      "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10.5, 15, 13.5], "text-max-width": 7, "text-padding": 2,
+      "symbol-sort-key": ["-", 0, ["get", "ha"]] },
+    paint: { "text-color": rankColor, "text-halo-color": "rgba(11,11,13,.92)", "text-halo-width": 1.3 } }, isDE ? "de" : "pc");
+  bindHover(isDE ? [id + "-cru-fill"] : [id + "-cru-fill", id + "-app-fill", id + "-sub-fill"]);
+  applyLegend();
+}
+
+function addPoi() {
+  map.addSource("poi", { type: "vector", url: pmUrl("poi.pmtiles") });
+  add({ id: "vine-fill", type: "fill", source: "poi", "source-layer": "vineyard_areas", minzoom: 7,
+    paint: { "fill-color": C.vine, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0.35, 13, 0.25] } }, "vine");
+  add({ id: "vine-line", type: "line", source: "poi", "source-layer": "vineyard_areas", minzoom: 11,
+    paint: { "line-color": C.vine, "line-width": 0.8, "line-opacity": 0.7 } }, "vine");
+  add({ id: "wineries", type: "circle", source: "poi", "source-layer": "wineries", minzoom: 9,
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 1.6, 14, 4], "circle-color": "#c9c2b6", "circle-opacity": 0.85,
+      "circle-stroke-color": C.night, "circle-stroke-width": 1 } }, "win");
+  add({ id: "winery-labels", type: "symbol", source: "poi", "source-layer": "wineries", minzoom: 13,
+    layout: { "text-field": ["get", "name"], "text-font": ["noto-regular"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top", "text-max-width": 9, "text-optional": true },
+    paint: { "text-color": "#a9a296", "text-halo-color": C.night, "text-halo-width": 1.2 } }, "win");
+}
+
+// ---------- relief: hillshade, 3D terrain
+function addRelief() {
+  const dem = { type: "raster-dem", tiles: [DEM_URL], tileSize: DEM_TILE, maxzoom: DEM_MAX, encoding: "terrarium",
+    attribution: '<a href="https://mapterhorn.com/attribution">© Mapterhorn</a>' };
+  // two sources: MapLibre recommends separate sources for hillshade and terrain
+  map.addSource("dem", dem);
+  map.addSource("dem3d", { ...dem });
+  map.addLayer({ id: "relief", type: "hillshade", source: "dem", minzoom: 5,
+    paint: { "hillshade-exaggeration": ["interpolate", ["linear"], ["zoom"], 5, 0.55, 10, 0.4, 14, 0.3],
+      "hillshade-shadow-color": "rgba(0,0,0,0.6)", "hillshade-highlight-color": "rgba(255,244,222,0.10)",
+      "hillshade-accent-color": "rgba(0,0,0,0.25)", "hillshade-illumination-direction": 315 } }, "lakes");
+  LAYERS.push(["relief", "relief"]);
+}
+let is3d = false;
+function set3d(on) {
+  is3d = on;
+  $("btn2d").setAttribute("aria-pressed", String(!on)); $("btn3d").setAttribute("aria-pressed", String(on));
+  if (on) {
+    map.setTerrain({ source: "dem3d", exaggeration: 1.4 });
+    try { map.setSky({ "sky-color": "#121216", "horizon-color": "#1d1d22", "fog-color": "#0b0b0d", "sky-horizon-blend": 0.6, "horizon-fog-blend": 0.7, "fog-ground-blend": 0.2 }); } catch (e) {}
+    if (map.getPitch() < 30) map.easeTo({ pitch: 62, bearing: map.getBearing() || -12, duration: 1100 });
+  } else {
+    map.setTerrain(null);
+    map.easeTo({ pitch: 0, bearing: 0, duration: 900 });
+  }
+}
+if (WEB) { $("btn2d").onclick = () => is3d && set3d(false); $("btn3d").onclick = () => !is3d && set3d(true); }
+
+// ---------- terrain of a place: elevation, slope and aspect, measured in the browser from the elevation tiles
+const TERRAIN = new Map(); // id -> stats
+const SECTORS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+const SECTOR_NAME = { N: "north", NE: "north-east", E: "east", SE: "south-east", S: "south", SW: "south-west", W: "west", NW: "north-west" };
+const mercX = (lon) => (lon + 180) / 360;
+const mercY = (lat) => { const s = Math.sin(lat * Math.PI / 180); return 0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI); };
+const latOfY = (y) => Math.atan(Math.sinh(Math.PI * (1 - 2 * y))) * 180 / Math.PI;
+
+function nextIdle() {
+  return new Promise((res) => {
+    requestAnimationFrame(() => {
+      if (!map.isMoving() && !map.isEasing() && map.areTilesLoaded()) res(); else map.once("idle", res);
+    });
+  });
+}
+// every outline fragment of the place in the loaded vector tiles (parcel-level files win over the overview)
+function geometryFor(id) {
+  const detail = [], ov = [];
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi").map(([k]) => k);
+  for (const s of srcs) for (const sl of ["appellations", "crus", "grosslagen"]) {
+    let fs = [];
+    try { fs = map.querySourceFeatures(s, { sourceLayer: sl, filter: ["==", ["get", "id"], id] }); } catch (e) {}
+    fs.forEach((f) => { if (/Polygon/.test(f.geometry.type)) (s === "ov" ? ov : detail).push(f.geometry); });
+  }
+  return detail.length ? detail : ov;
+}
+const polysOf = (g) => g.type === "Polygon" ? [g.coordinates] : g.coordinates;
+
+async function loadDem(z, tx0, ty0, nx, ny) {
+  const W = nx * DEM_TILE, H = ny * DEM_TILE;
+  const cv = typeof OffscreenCanvas !== "undefined" ? new OffscreenCanvas(W, H) : Object.assign(document.createElement("canvas"), { width: W, height: H });
+  const ctx = cv.getContext("2d", { willReadFrequently: true });
+  const jobs = [];
+  for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) {
+    const url = DEM_URL.replace("{z}", z).replace("{x}", tx0 + i).replace("{y}", ty0 + j);
+    jobs.push(fetch(url).then((r) => r.ok ? r.blob() : null).then((b) => b && createImageBitmap(b))
+      .then((img) => { if (img) ctx.drawImage(img, i * DEM_TILE, j * DEM_TILE, DEM_TILE, DEM_TILE); return !!img; }).catch(() => false));
+  }
+  const ok = await Promise.all(jobs);
+  if (!ok.some(Boolean)) throw new Error("no elevation tiles");
+  const px = ctx.getImageData(0, 0, W, H).data;
+  const elev = new Float32Array(W * H);
+  for (let k = 0, q = 0; k < elev.length; k++, q += 4) elev[k] = px[q + 3] === 0 ? NaN : px[q] * 256 + px[q + 1] + px[q + 2] / 256 - 32768;
+  return { elev, W, H };
+}
+
+async function measureTerrain(id) {
+  if (TERRAIN.has(id)) return TERRAIN.get(id);
+  const geoms = geometryFor(id);
+  if (!geoms.length) return null;
+  let x0 = 1, y0 = 1, x1 = 0, y1 = 0;
+  geoms.forEach((g) => polysOf(g).forEach((poly) => poly[0].forEach(([lon, lat]) => {
+    const x = mercX(lon), y = mercY(lat);
+    if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+  })));
+  // finest zoom that keeps the download to at most 9 tiles of 512 px
+  let z = DEM_MAX, tx0, ty0, nx, ny;
+  for (; z >= 4; z--) {
+    const n = 2 ** z;
+    tx0 = Math.floor(x0 * n); ty0 = Math.floor(y0 * n); nx = Math.floor(x1 * n) - tx0 + 1; ny = Math.floor(y1 * n) - ty0 + 1;
+    if (nx * ny <= 9) break;
+  }
+  const { elev, W, H } = await loadDem(z, tx0, ty0, nx, ny);
+  const scale = 2 ** z * DEM_TILE, ox = tx0 * DEM_TILE, oy = ty0 * DEM_TILE;
+  // rasterise the outline (even-odd scanlines, fragments OR-ed together)
+  const mask = new Uint8Array(W * H);
+  geoms.forEach((g) => polysOf(g).forEach((poly) => {
+    const rings = poly.map((r) => r.map(([lon, lat]) => [mercX(lon) * scale - ox, mercY(lat) * scale - oy]));
+    let rmin = H, rmax = 0;
+    rings[0].forEach(([, y]) => { rmin = Math.min(rmin, y); rmax = Math.max(rmax, y); });
+    for (let row = Math.max(0, Math.floor(rmin)); row <= Math.min(H - 1, Math.ceil(rmax)); row++) {
+      const cy = row + 0.5, xs = [];
+      rings.forEach((r) => { for (let k = 0, m = r.length - 1; k < r.length; m = k++) {
+        const [ax, ay] = r[m], [bx, by] = r[k];
+        if ((ay > cy) !== (by > cy)) xs.push(ax + (cy - ay) * (bx - ax) / (by - ay));
+      } });
+      xs.sort((a, b) => a - b);
+      for (let k = 0; k + 1 < xs.length; k += 2) {
+        const a = Math.max(0, Math.ceil(xs[k] - 0.5)), b = Math.min(W - 1, Math.floor(xs[k + 1] - 0.5));
+        for (let x = a; x <= b; x++) mask[row * W + x] = 1;
+      }
+    }
+  }));
+  const lat = latOfY((y0 + y1) / 2);
+  const res = 40075016.686 * Math.cos(lat * Math.PI / 180) / scale; // metres per pixel
+  const els = [], slopes = [], sect = new Float64Array(8);
+  let sx = 0, sy = 0, steep = 0, nAsp = 0;
+  const classes = [0, 0, 0, 0, 0]; // <3°, 3-8°, 8-15°, 15-25°, >25°
+  for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) {
+    const k = y * W + x;
+    if (!mask[k] || !(elev[k] > -500)) continue;
+    els.push(elev[k]);
+    const a = elev[k - W - 1], b = elev[k - W], c = elev[k - W + 1], d = elev[k - 1], f = elev[k + 1], g = elev[k + W - 1], h = elev[k + W], i = elev[k + W + 1];
+    const dzdx = ((c + 2 * f + i) - (a + 2 * d + g)) / (8 * res); // rises to the east
+    const dzdy = ((g + 2 * h + i) - (a + 2 * b + c)) / (8 * res); // rises to the south
+    if (!isFinite(dzdx) || !isFinite(dzdy)) continue;
+    const s = Math.atan(Math.hypot(dzdx, dzdy)) * 180 / Math.PI;
+    slopes.push(s);
+    classes[s < 3 ? 0 : s < 8 ? 1 : s < 15 ? 2 : s < 25 ? 3 : 4]++;
+    if (s >= 2) {
+      // the direction the ground faces = downhill, as a compass bearing
+      const asp = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360) % 360;
+      sect[Math.round(asp / 45) % 8]++;
+      const w = Math.sin(s * Math.PI / 180);
+      sx += w * Math.sin(asp * Math.PI / 180); sy += w * Math.cos(asp * Math.PI / 180); steep += w; nAsp++;
+    }
+  }
+  if (els.length < 4) return null;
+  const sorted = Float32Array.from(els).sort();
+  const q = (p) => sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))];
+  const sl = Float32Array.from(slopes).sort();
+  const sq = (p) => sl[Math.min(sl.length - 1, Math.floor(p * sl.length))];
+  const mean = els.reduce((s, v) => s + v, 0) / els.length;
+  const totalSect = sect.reduce((s, v) => s + v, 0) || 1;
+  const dom = sect.indexOf(Math.max(...sect));
+  const R = steep ? Math.hypot(sx, sy) / steep : 0;
+  const out = {
+    z, res, n: els.length,
+    min: sorted[0], max: sorted[sorted.length - 1], mean, p10: q(0.1), p90: q(0.9),
+    slope: sl.length ? sl.reduce((s, v) => s + v, 0) / sl.length : null, slopeP90: sl.length ? sq(0.9) : null,
+    classes: classes.map((c) => c / (sl.length || 1)),
+    sectors: [...sect].map((v) => v / totalSect), flatShare: 1 - nAsp / (sl.length || 1),
+    dominant: SECTORS[dom], meanAspect: R > 0.2 ? (Math.atan2(sx, sy) * 180 / Math.PI + 360) % 360 : null, R,
+    partial: !geomInView(x0, y0, x1, y1),
+  };
+  TERRAIN.set(id, out);
+  return out;
+}
+function geomInView(x0, y0, x1, y1) {
+  const b = map.getBounds();
+  return mercX(b.getWest()) <= x0 && mercX(b.getEast()) >= x1 && mercY(b.getNorth()) <= y0 && mercY(b.getSouth()) >= y1;
+}
+const compass = (deg) => SECTORS[Math.round(deg / 45) % 8];
+
+function roseSvg(t) {
+  const c = 56, r0 = 9, rmax = 44, mx = Math.max(...t.sectors) || 1;
+  let s = '<svg viewBox="0 0 112 112" role="img" aria-label="Aspect: share of the ground facing each direction">';
+  [rmax * 0.5, rmax].forEach((r) => { s += '<circle cx="' + c + '" cy="' + c + '" r="' + r + '" fill="none" stroke="#2a2a31" stroke-width="1"/>'; });
+  t.sectors.forEach((v, k) => {
+    const r = r0 + (rmax - r0) * Math.sqrt(v / mx), a0 = (k * 45 - 21) * Math.PI / 180, a1 = (k * 45 + 21) * Math.PI / 180;
+    const P = (a, rr) => (c + rr * Math.sin(a)).toFixed(1) + " " + (c - rr * Math.cos(a)).toFixed(1);
+    s += '<path d="M' + P(a0, r0) + " L" + P(a0, r) + " A" + r.toFixed(1) + " " + r.toFixed(1) + " 0 0 1 " + P(a1, r) + " L" + P(a1, r0) + " A" + r0 + " " + r0 + ' 0 0 0 ' + P(a0, r0) + 'Z" fill="#e7c06a" fill-opacity="' + (0.25 + 0.7 * v / mx).toFixed(2) + '"/>';
+  });
+  [["N", c, 8], ["E", 107, c + 3.5], ["S", c, 110], ["W", 5, c + 3.5]].forEach(([l, x, y]) => {
+    s += '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-size="9" font-family="IBM Plex Mono, monospace" fill="#8d877c">' + l + "</text>";
+  });
+  return s + "</svg>";
+}
+
+function terrainSentence(t) {
+  const m = (v) => fmtN(Math.round(v / 5) * 5);
+  let s = t.max - t.min < 15 ? "The ground lies at about " + m(t.mean) + " m" : "Most of the ground lies between " + m(t.p10) + " and " + m(t.p90) + " m";
+  if (t.res <= 35 && t.slope != null) {
+    s += t.slope < 3 ? ", almost flat" : ", on a mean slope of " + fmtN(t.slope, 0) + "°";
+    if (t.slope >= 3 && t.flatShare < 0.6) s += t.meanAspect != null ? ", facing " + SECTOR_NAME[compass(t.meanAspect)] : ", facing several directions";
+  }
+  return s + ".";
+}
+
+async function fillTerrain(p, token) {
+  const el = () => (token === sheetToken ? $("terrain-sec") : null);
+  try {
+    await nextIdle();
+    const t = await measureTerrain(p.id);
+    const box = el();
+    if (!box) return;
+    if (!t) { box.innerHTML = '<h3>Terrain</h3><p class="note">Zoom in on the place to measure its terrain.</p>'; return; }
+    const pct = (v) => Math.round(v * 100);
+    const rows = [
+      ["Elevation", '<span class="num">' + fmtN(t.min) + "–" + fmtN(t.max) + " m</span>"],
+      ["Mean elevation", '<span class="num">' + fmtN(t.mean) + " m</span>"],
+    ];
+    const fine = t.res <= 35;
+    if (fine && t.slope != null) {
+      rows.push(["Mean slope", '<span class="num">' + fmtN(t.slope, 1) + "° · " + fmtN(Math.tan(t.slope * Math.PI / 180) * 100) + " %</span>"]);
+      rows.push(["Steepest tenth", '<span class="num">above ' + fmtN(t.slopeP90, 0) + "°</span>"]);
+      rows.push(["Faces", esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : "mixed") +
+        ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>"]);
+    }
+    const cls = ["Flat, under 3°", "Gentle, 3–8°", "Moderate, 8–15°", "Steep, 15–25°", "Very steep, 25°+"];
+    box.innerHTML = '<h3>Terrain <button class="q" data-gloss="terrain" aria-label="About this data">?</button></h3>' +
+      '<p class="lede" style="font-size:14px;margin-bottom:10px">' + terrainSentence(t) + "</p>" +
+      '<div class="terrain"><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl>" +
+      (fine ? roseSvg(t) : "") +
+      (fine ? '<div class="bars">' + t.classes.map((v, k) => '<div class="bar"><span class="bl">' + cls[k] + '</span><span class="bt"><i style="width:' + pct(v) + '%"></i></span><span class="num">' + pct(v) + "%</span></div>").join("") + "</div>" : "") +
+      "</div>" +
+      '<p class="note">Measured in your browser on ' + fmt(t.n) + " elevation cells of about " + (t.res < 10 ? fmtN(t.res, 1) : fmtN(t.res)) + " m. " +
+      (fine ? "" : "Zoom into a smaller place for slope and aspect. ") +
+      (t.partial ? "Only the part of the place on screen was measured. " : "") +
+      'Elevation: <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>.</p>';
+  } catch (e) {
+    console.warn("terrain", e);
+    const box = el();
+    if (box) box.innerHTML = '<h3>Terrain</h3><p class="note">The elevation tiles could not be loaded right now.</p>';
+  }
+}
+
+// ---------- manifest-driven lazy loading of detail files
+let manifest = { files: [] };
+function inView(b) {
+  const v = map.getBounds();
+  return !(b[2] < v.getWest() || b[0] > v.getEast() || b[3] < v.getSouth() || b[1] > v.getNorth());
+}
+function ensureDetail() {
+  const z = map.getZoom();
+  manifest.files.filter((f) => f.bounds && z >= f.minzoom - 1 && inView(f.bounds)).forEach((f) => {
+    if (loaded.has(f.file)) return;
+    showLoading("Loading " + (f.label || f.file).toLowerCase() + "…");
+    loadArchive(f.file).then(() => { addDetail(f.file); hideLoading(); }).catch((e) => { console.error(e); hideLoading(); });
+  });
+}
+let loadingCount = 0;
+function showLoading(t) { loadingCount++; $("loading").textContent = t; $("loading").hidden = false; }
+function hideLoading() { loadingCount = Math.max(0, loadingCount - 1); if (!loadingCount) $("loading").hidden = true; }
+
+// ---------- hover + select
+let hovered = null, selected = null;
+const pickLayers = new Set(["ov-fill"]);
+function bindHover(ids) { ids.forEach((i) => pickLayers.add(i)); }
+function setState(f, key, val) {
+  if (!f) return;
+  try { map.setFeatureState({ source: f.source, sourceLayer: f.sourceLayer, id: f.id }, { [key]: val }); } catch (e) {}
+}
+const PRI = { vineyard: 0, subzone: 1, appellation: 2, region: 3 };
+function pick(point) {
+  const layers = [...pickLayers].filter((l) => map.getLayer(l) && map.getLayoutProperty(l, "visibility") !== "none");
+  const fs = map.queryRenderedFeatures(point, { layers });
+  fs.sort((a, b) => (PRI[a.properties.level] ?? 9) - (PRI[b.properties.level] ?? 9));
+  return fs[0] || null;
+}
+const tag = $("tag");
+map.on("mousemove", (e) => {
+  const f = pick(e.point);
+  if (hovered && (!f || f.id !== hovered.id)) { setState(hovered, "hover", false); hovered = null; }
+  if (f) {
+    if (!hovered) { hovered = f; setState(f, "hover", true); }
+    map.getCanvas().style.cursor = "pointer";
+    const p = f.properties;
+    tag.innerHTML = esc(p.name) + "<small>" + esc(RANK_LABEL[p.rank] || LEVEL_LABEL[p.level] || "") + "</small>";
+    tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
+  } else { map.getCanvas().style.cursor = ""; tag.hidden = true; }
+});
+map.on("mouseout", () => { tag.hidden = true; });
+map.on("click", (e) => {
+  const f = pick(e.point);
+  if (f) select(f.properties, f); else closeSheet();
+});
+
+function clearSelected() {
+  if (selected) selected.forEach((s) => setState(s, "selected", false));
+  selected = null;
+}
+function markSelected(id) {
+  clearSelected();
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi").map(([k]) => k);
+  selected = [];
+  srcs.forEach((s) => ["appellations", "crus", "grosslagen"].forEach((sl) => {
+    const f = { source: s, sourceLayer: sl, id };
+    try { map.setFeatureState(f, { selected: true }); selected.push(f); } catch (e) {}
+  }));
+}
+
+// ---------- search index + details
+let INDEX = [], byId = new Map(), byName = new Map(), children = new Map();
+const details = {};
+function getDetails(cc) {
+  if (!details[cc]) details[cc] = fetch("data/details-" + cc.toLowerCase() + ".json").then((r) => r.json()).catch(() => ({}));
+  return details[cc];
+}
+
+function shortName(name, parent) {
+  if (parent && name.startsWith(parent + " ") && name.length > parent.length + 1) {
+    return name.slice(parent.length + 1).replace(/^premier cru /, "").replace(/^grand cru /, "");
+  }
+  return name;
+}
+
+async function select(p, feature) {
+  const rec = byId.get(p.id);
+  markSelected(p.id);
+  const all = await getDetails(p.country);
+  const d = all[p.id] || {};
+  // climats inherit the wine rules of their appellation
+  const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
+  const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
+  renderSheet(p, d, rec, pd, parentRec);
+  if (!feature && rec) fitTo(rec[6], p.level);
+  if (WEB) {
+    fillTerrain(p, sheetToken);
+    try { history.replaceState(null, "", "#" + encodeURIComponent(p.id)); } catch (e) {}
+  }
+}
+function fitTo(b, level) {
+  const maxZ = { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
+  const wide = innerWidth > 760;
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 380 : 30, right: wide ? 420 : 30 }, maxZoom: maxZ, duration: 1400, essential: true });
+}
+
+function badgeFor(p) {
+  const g = (k) => ' <button class="q" data-gloss="' + k + '" aria-label="What does this mean?">?</button>';
+  if (TOP.includes(p.rank)) return '<span class="badge top">' + esc(RANK_LABEL[p.rank]) + "</span>" + g(p.rank);
+  if (p.rank === "premier_cru") return '<span class="badge pc">Premier cru</span>' + g("premier_cru");
+  if (p.country === "DE" && p.level === "vineyard") return '<span class="badge de">Einzellage</span>' + g("einzellage");
+  return '<span class="badge std">' + esc(LEVEL_LABEL[p.level] || p.level) + "</span>" + g(p.level);
+}
+
+// OIV grape names end with a colour code: N noir, B blanc, G gris, Rs/Rg rose/rouge
+const GRAPE_COLOUR = { N: "#7d2a35", B: "#d8c98f", G: "#a99a8c", Rs: "#c98a8a", Rg: "#a8505a" };
+function grape(g) {
+  const m = String(g).trim().match(/^(.*?)\s+(N|B|G|Rs|Rg)$/);
+  const name = m ? m[1] : String(g).trim(), c = m ? GRAPE_COLOUR[m[2]] : null;
+  return "<span>" + (c ? '<i class="gdot" style="background:' + c + '"></i>' : "") + esc(name) + "</span>";
+}
+const COLOUR_CHIP = { Red: "#8e3040", White: "#d9c88a", "Rosé": "#d39aa0", Rose: "#d39aa0", Other: "#8d877c" };
+const num = (v) => v == null ? null : Number(String(v).replace(",", "."));
+const fmtN = (v, d = 0) => { const n = num(v); return n == null || isNaN(n) ? esc(v) : n.toLocaleString("en-US", { maximumFractionDigits: d }); };
+const fmtList = (a) => a.length <= 2 ? a.join(" and ") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+
+function summary(p, d, pd) {
+  const kind = !RANK_LABEL[p.rank] ? "" : p.rank.endsWith("_cru") ? RANK_LABEL[p.rank].toLowerCase() : RANK_LABEL[p.rank];
+  const lvl = { region: "wine region", appellation: "appellation", subzone: "named sub-zone", vineyard: p.country === "DE" ? "registered vineyard site (Einzellage)" : "climat" }[p.level] || "place";
+  let t = esc(p.name) + " is " + (/^[aeiou]/i.test(kind || lvl) && !/^(DOC|DOCa|DOCG)/.test(kind) ? "an " : "a ") + (kind ? kind + " " : "") + lvl;
+  if (p.parent) t += " of " + esc(p.parent);
+  t += " in " + esc({ FR: "France", IT: "Italy", ES: "Spain", DE: "Germany", CH: "Switzerland" }[p.country] || p.country);
+  const area = d.area_ha ?? null;
+  if (area) t += ", covering " + fmtN(area, 1) + " ha";
+  const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
+  if (towns?.length && towns.length <= 3) t += " in " + esc(fmtList(towns));
+  else if (towns?.length) t += " across " + towns.length + " communes";
+  t += ".";
+  if (d.share_of_parent) t += " That is " + d.share_of_parent + "% of the " + esc(p.parent) + " appellation area.";
+  if (d.share_of_grosslage) t += " It makes up " + d.share_of_grosslage + "% of the Großlage " + esc(d.grosslage) + ".";
+  const wines = d.wines || pd.wines;
+  if (wines?.length) {
+    const cols = [...new Set(wines.map((w) => w.colour).filter(Boolean))].map((c) => c.toLowerCase());
+    const mains = [...new Set(wines.flatMap((w) => w.main || []))].map((g) => g.replace(/\s+(N|B|G|Rs|Rg)$/, ""));
+    if (cols.length) t += " The rules allow " + fmtList(cols) + " wine";
+    if (mains.length && mains.length <= 4) t += ", based on " + esc(fmtList(mains));
+    if (cols.length) t += ".";
+  }
+  if (d.bedrock?.length) t += " Regional bedrock: " + esc(d.bedrock[0][0].replace(/ \(.*\)/, "").toLowerCase()) + ".";
+  return t;
+}
+
+function wineTable(wines) {
+  return wines.map((w) => {
+    const main = (w.main || []).map(grape).join("");
+    const sec = (w.secondary || []);
+    return '<div class="wine"><div class="wh"><b><i class="wchip" style="background:' + (COLOUR_CHIP[w.colour] || COLOUR_CHIP.Other) + '"></i>' + esc(w.wine) + "</b>" +
+      '<span class="wk">' + esc([w.colour, w.category !== "Wine" ? w.category : ""].filter(Boolean).join(" · ")) + "</span></div>" +
+      (main ? '<div class="grapes">' + main + "</div>" : "") +
+      (sec.length ? '<details class="sec2"><summary>Also allowed · ' + (w.secondary_total || sec.length) + "</summary><div class=\"grapes\">" + sec.map(grape).join("") +
+        (w.secondary_total > sec.length ? "<span>+" + (w.secondary_total - sec.length) + "</span>" : "") + "</div></details>" : "") +
+      '<div class="wn">' + [w.yield_hl ? "max " + fmtN(w.yield_hl, 1) + " hl/ha" : "", w.yield_kg ? fmtN(w.yield_kg) + " kg/ha" : "", w.density ? "min " + fmtN(w.density) + " vines/ha" : ""].filter(Boolean).join(" · ") + "</div></div>";
+  }).join("");
+}
+
+let sheetToken = 0;
+function renderSheet(p, d, rec, pd = {}, parentRec = null) {
+  sheetToken++;
+  const src = SOURCES[p.src] || {};
+  $("sh-head").innerHTML =
+    '<div class="eyebrow"><span>' + esc(COUNTRY[p.country] || p.country) + "</span><span>·</span><span>" + esc(d.type || LEVEL_LABEL[p.level]) + "</span></div>" +
+    "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p) + "</div>" +
+    (p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
+      (d.grosslage ? " · Großlage " + esc(d.grosslage) : "") + "</div>" : "");
+  let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
+  if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">Atlas note</div><p>' + esc(d.atlas_note) + '</p><div class="an-f">Editorial summary. Check the official specification before you rely on it.</div></div>';
+
+  // key facts
+  const rows = [];
+  const area = d.area_ha ?? d.outline_area_ha;
+  if (area != null) rows.push(["Area", '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">outline of listed communes</span>' : "")]);
+  if (d.share_of_parent) rows.push(["Share of " + esc(p.parent), '<span class="num">' + d.share_of_parent + " %</span>"]);
+  if (d.share_of_grosslage) rows.push(["Share of Großlage", '<span class="num">' + d.share_of_grosslage + " %</span>"]);
+  if (d.plots > 1) rows.push(["Separate plots", '<span class="num">' + d.plots + "</span>"]);
+  if (d.extent_km) rows.push(["Extent N–S × E–W", '<span class="num">' + fmtN(d.extent_km[0], 2) + " × " + fmtN(d.extent_km[1], 2) + " km</span>"]);
+  if (d.lat) rows.push(["Centre", '<span class="num">' + d.lat.toFixed(4) + "° N, " + Math.abs(d.lon).toFixed(4) + "° " + (d.lon < 0 ? "W" : "E") + "</span>"]);
+  const reg = d.registered || pd.registered;
+  if (reg) rows.push(["Protected since", '<span class="num">' + esc(String(reg).slice(0, 10)) + "</span>" + (d.registered ? "" : ' <span class="note">appellation</span>')]);
+  if (d.category) rows.push(["Wine types", esc(String(d.category).replace(/, /g, " · "))]);
+  if (!d.wines && !pd.wines) {
+    if (d.max_yield_hl_ha) rows.push(["Max. yield", '<span class="num">' + fmtN(d.max_yield_hl_ha, 1) + " hl/ha</span>"]);
+    else if (d.max_yield_kg_ha) rows.push(["Max. yield", '<span class="num">' + fmtN(d.max_yield_kg_ha) + " kg/ha</span>"]);
+    if (d.min_planting_density) rows.push(["Min. density", '<span class="num">' + fmtN(d.min_planting_density) + " vines/ha</span>"]);
+  }
+  if (d.irrigation && d.irrigation !== "na") rows.push(["Irrigation", esc(d.irrigation)]);
+  if (d.gemarkungen && d.gemarkungen.length) rows.push(["Gemarkung", esc(d.gemarkungen.join(", "))]);
+  if (d.communes && d.communes.length && d.gemarkungen) rows.push(["Gemeinde", esc(d.communes.join(", "))]);
+  if (d.bereich) rows.push(["Bereich", esc(d.bereich)]);
+  if (d.region) rows.push(["Anbaugebiet", esc(d.region)]);
+  if (d.wine_region) rows.push(["Wine region", esc(d.wine_region)]);
+  if (d.register_no) rows.push(["Register no.", '<span class="num">' + esc(d.register_no) + "</span>"]);
+  if (d.inao_office) rows.push(["INAO office", esc(d.inao_office)]);
+  if (d.official_name && d.official_name !== p.name) rows.push(["Official name", esc(d.official_name)]);
+  if (rows.length) html += '<div class="sec"><h3>Key facts</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
+  if (WEB) html += '<div class="sec" id="terrain-sec"><h3>Terrain</h3><div class="note terrain-wait"><i></i>Measuring elevation, slope and aspect…</div></div>';
+
+  // wine rules
+  const wines = d.wines || pd.wines;
+  if (wines?.length) {
+    html += '<div class="sec"><h3>' + (d.wines ? "Wines in the specification · " : "Wines of " + esc(p.parent) + " · ") + wines.length + "</h3>" +
+      (d.wines ? "" : '<p class="note">This place follows the rules of its appellation.</p>') + wineTable(wines.slice(0, 30)) + "</div>";
+  } else if (d.grapes) {
+    const g = String(d.grapes).split("/").map((s) => s.trim()).filter(Boolean);
+    html += '<div class="sec"><h3>Authorised grapes · ' + g.length + '</h3><div class="grapes">' + g.slice(0, 40).map(grape).join("") +
+      (g.length > 40 ? "<span>+" + (g.length - 40) + "</span>" : "") + "</div></div>";
+  }
+
+  // bedrock
+  if (d.bedrock?.length) {
+    html += '<div class="sec"><h3>Regional bedrock <button class="q" data-gloss="bedrock" aria-label="About this data">?</button></h3><div class="bars">' +
+      d.bedrock.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + pc + '%"></i></span><span class="num">' + pc + "%</span></div>").join("") +
+      '</div><p class="note">From the Global Lithological Map (1:3.75 million). It shows the rock type of the wider area, not the soil of each row.</p></div>';
+  }
+
+  // neighbours
+  if (d.neighbours?.length) {
+    html += '<div class="sec"><h3>Neighbouring sites · ' + d.neighbours.length + '</h3><div class="chips">' +
+      d.neighbours.map((id) => { const r = byId.get(id); return r ? '<button data-goto="' + esc(id) + '">' + esc(shortName(r[0], r[5])) + (r[4] ? ' <small>' + esc(RANK_LABEL[r[4]] || "") + "</small>" : "") + "</button>" : ""; }).join("") + "</div></div>";
+  }
+
+  // places inside
+  const kids = (children.get(norm(p.name)) || []).filter((k) => k[1] !== p.id);
+  if (kids.length) {
+    html += '<div class="sec"><h3>Inside ' + esc(p.name) + " · " + kids.length + '</h3><div class="sub-list">' +
+      kids.slice(0, 120).map((k) => '<button data-goto="' + esc(k[1]) + '"><span>' + esc(shortName(k[0], p.name)) + '</span><span class="r">' + esc(RANK_LABEL[k[4]] || LEVEL_LABEL[k[3]] || "") + "</span></button>").join("") +
+      (kids.length > 120 ? '<span class="note">and ' + (kids.length - 120) + " more. Use search to find them.</span>" : "") + "</div></div>";
+  }
+
+  // wineries
+  if (d.wineries?.length) {
+    html += '<div class="sec"><h3>Wineries mapped inside · ' + d.wineries_count + '</h3><div class="wlist">' +
+      d.wineries.map(([n, w]) => "<div>" + (w ? '<a href="' + esc(w) + '" target="_blank" rel="noopener">' + esc(n) + "</a>" : esc(n)) + "</div>").join("") +
+      (d.wineries_count > d.wineries.length ? '<div class="note">and ' + (d.wineries_count - d.wineries.length) + " more</div>" : "") +
+      '</div><p class="note">From OpenStreetMap, edited by volunteers. Missing a producer? Add it there or suggest it here.</p></div>';
+  }
+
+  // communes (France, Italy, Spain)
+  if (d.communes && d.communes.length && !d.gemarkungen) {
+    html += '<div class="sec"><h3>Communes · ' + d.communes.length + '</h3><div class="communes">' + d.communes.slice(0, 80).map(esc).join(", ") +
+      (d.communes.length > 80 ? " and " + (d.communes.length - 80) + " more" : "") + "</div></div>";
+  }
+  if (d.note) html += '<p class="note">' + esc(d.note) + "</p>";
+
+  // read more
+  const lang = { FR: "fr", IT: "it", ES: "es", DE: "de", CH: "de" }[p.country] || "en";
+  const links = [];
+  links.push('<a href="https://' + lang + ".wikipedia.org/w/index.php?search=" + encodeURIComponent(p.name + " " + (p.country === "DE" ? "Weinlage" : "vin")) + '" target="_blank" rel="noopener">Wikipedia</a>');
+  if (d.lat) {
+    links.push('<a href="https://www.openstreetmap.org/?mlat=' + d.lat + "&mlon=" + d.lon + "#map=16/" + d.lat + "/" + d.lon + '" target="_blank" rel="noopener">OpenStreetMap</a>');
+    links.push('<a href="https://www.google.com/maps/@' + d.lat + "," + d.lon + ',1500m/data=!3m1!1e3" target="_blank" rel="noopener">Satellite view</a>');
+  }
+  const eu = d.eu_register || pd.eu_register;
+  if (eu) links.push('<a href="' + esc(eu) + '" target="_blank" rel="noopener">EU register</a>');
+  html += '<div class="sec"><h3>Read and look further</h3><div class="links">' + links.join("") + "</div></div>";
+
+  html += '<button class="primary" id="suggestHere">Suggest a correction</button>';
+  html += '<div class="source">Source: ' + esc(src.name || p.src) + " · " + esc(src.license || "") +
+    (src.url ? ' · <a href="' + esc(src.url) + '" target="_blank" rel="noopener">dataset</a>' : "") +
+    (d.source_date ? " · data as of " + esc(d.source_date) : "") +
+    ((d.wines || pd.wines) ? "<br>Wine rules: EU product specifications as compiled by Candiago et al. 2022 (CC BY 4.0)." : "") +
+    '<br><span class="num">' + esc(p.id) + "</span></div>";
+  $("sh-body").innerHTML = html;
+  $("sh-body").scrollTop = 0;
+  $("sheet").classList.add("open");
+  $("suggestHere").onclick = () => openSuggest(p);
+}
+function closeSheet() { $("sheet").classList.remove("open"); clearSelected(); sheetToken++; if (WEB) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+$("close").onclick = closeSheet;
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") { if (!$("modal").hidden) closeModal(); else closeSheet(); } });
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-goto]");
+  if (b) { const r = byId.get(b.dataset.goto); if (r) goTo(r); }
+});
+function goTo(r) {
+  const p = { name: r[0], id: r[1], country: r[2], level: r[3], rank: r[4], parent: r[5], src: srcOf(r[1]) };
+  select(p, null);
+}
+const srcOf = (id) => id.split("-")[1] === "canton" ? "bfs" : id.split("-")[1];
+
+// ---------- search
+const qEl = $("q"), resEl = $("results");
+let active = -1, current = [];
+function search(q) {
+  const n = norm(q);
+  if (n.length < 2) return [];
+  const words = n.split(" ");
+  const out = [];
+  for (const r of INDEX) {
+    const key = r._k;
+    // German site names are written "Wehlener Sonnenuhr": match "wehlener" against the village "Wehlen"
+    if (!words.every((w) => key.includes(w) || (w.length > 5 && w.endsWith("er") && key.includes(w.slice(0, -2))))) continue;
+    const nameKey = norm(r[0]);
+    let s = nameKey.startsWith(n) ? 0 : nameKey.includes(" " + n) ? 1 : 2;
+    s += ({ region: 0, appellation: 0.2, subzone: 0.5, vineyard: 0.6 }[r[3]] ?? 1);
+    s += key.length / 200;
+    out.push([s, r]);
+    if (out.length > 600) break;
+  }
+  return out.sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
+}
+function renderResults() {
+  if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">No place found. Try another spelling.</li>' : ""; return; }
+  resEl.innerHTML = current.map((r, i) => '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n">' + esc(r[0]) +
+    '</span><span class="m">' + esc(RANK_LABEL[r[4]] || LEVEL_LABEL[r[3]]) + (r[7] ? " · " + esc(r[7].split(", ")[0]) : "") + (r[5] ? " · " + esc(r[5]) : "") + '</span><span class="c">' + r[2] + "</span></button></li>").join("");
+  resEl.hidden = false;
+}
+qEl.addEventListener("input", () => { current = search(qEl.value); active = -1; renderResults(); });
+qEl.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowDown") { active = Math.min(active + 1, current.length - 1); renderResults(); e.preventDefault(); }
+  else if (e.key === "ArrowUp") { active = Math.max(active - 1, 0); renderResults(); e.preventDefault(); }
+  else if (e.key === "Enter" && current.length) { choose(current[Math.max(active, 0)]); }
+});
+resEl.addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (b) choose(current[+b.dataset.i]); });
+function choose(r) { resEl.hidden = true; qEl.value = r[0]; qEl.blur(); goTo(r); }
+document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search")) resEl.hidden = true; });
+
+// ---------- country chips, legend
+document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
+  const v = VIEWS[b.dataset.c];
+  map.fitBounds(v, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 370 : 20, right: 20 }, duration: 1300 });
+});
+$("moreBtn").onclick = () => { const r = $("rail"); r.classList.toggle("more"); $("moreBtn").setAttribute("aria-expanded", r.classList.contains("more")); };
+const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win", relief: "lg-relief" };
+function applyLegend() {
+  const on = (g) => $(GROUPS[g]).checked;
+  LAYERS.forEach(([id, g]) => {
+    if (!map.getLayer(id)) return;
+    if (g === "app") {
+      // the "top" toggle filters top-ranked outlines out of appellation layers
+      map.setLayoutProperty(id, "visibility", on("app") || on("top") ? "visible" : "none");
+    } else map.setLayoutProperty(id, "visibility", on(g) ? "visible" : "none");
+  });
+  const rankFilter = on("app") && on("top") ? null : on("top") ? ["in", ["get", "rank"], ["literal", TOP]] : ["!", ["in", ["get", "rank"], ["literal", TOP]]];
+  LAYERS.filter(([, g]) => g === "app").forEach(([id]) => {
+    if (!map.getLayer(id)) return;
+    const baseF = id.startsWith("ov-") && id !== "ov-labels" ? ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]] :
+      id === "ov-labels" ? ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]] : null;
+    const parts = [baseF, rankFilter].filter(Boolean);
+    map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
+  });
+}
+Object.values(GROUPS).forEach((id) => $(id).addEventListener("change", applyLegend));
+
+
+// ---------- glossary and guide
+const GLOSS = {
+  appellation: ["Appellation", "A protected name of origin with legal rules: the delimited area, grapes, maximum yield, planting density and how the wine is made. In the EU these are all Protected Designations of Origin (PDO): AOC/AOP in France, DOC and DOCG in Italy, DO, DOCa and Vino de Pago in Spain, g.U. in Germany. On this map each outline is the legally delimited area."],
+  region: ["Wine region (Anbaugebiet)", "One of Germany's 13 regions for quality wine, such as Mosel or Rheingau. Every German quality wine must name its Anbaugebiet."],
+  subzone: ["Sub-zone", "A named part of an appellation that may appear on the label. Examples: the premier cru area of a Burgundy village, Côtes de Bordeaux Blaye, a Muscadet cru communal, or a German Großlage."],
+  vineyard: ["Climat or vineyard site", "A precisely delimited, named vineyard. In Burgundy these are climats, recorded in many cases since the Middle Ages and inscribed as UNESCO World Heritage in 2015. In Germany they are Einzellagen in the official register."],
+  vineyard_area: ["Vineyard area", "Land mapped as vineyard in OpenStreetMap. It shows where vines grow, not a legal boundary."],
+  grand_cru: ["Grand cru", "In Burgundy the top of four levels: regional, village, premier cru, grand cru. Each Burgundy grand cru is its own appellation, so the label shows only the vineyard name, such as Chambertin. Alsace has 51 grand cru appellations. In Chablis one grand cru appellation covers seven climats. In Champagne the term applies to whole villages."],
+  premier_cru: ["Premier cru", "Burgundy's second tier. A premier cru sits inside a village appellation and is written after it: Gevrey-Chambertin premier cru Clos Saint-Jacques. Wine from several premier cru climats of one village may be blended and sold simply as premier cru."],
+  docg: ["DOCG", "Denominazione di Origine Controllata e Garantita, Italy's top tier above DOC. Rules are stricter and every wine is tasted and approved before release."],
+  doca: ["DOCa", "Denominación de Origen Calificada, Spain's top tier above DO. Only Rioja and Priorat (DOQ in Catalan) hold it."],
+  pago: ["Vino de Pago", "A Spanish appellation for a single estate with a distinctive terroir. The estate itself is the appellation."],
+  einzellage: ["Einzellage", "A registered single vineyard in Germany. On the label it follows the village name in adjectival form: Wehlener Sonnenuhr is the Sonnenuhr site of Wehlen. The VDP growers' association uses its own private ranking (Grosse Lage, Erste Lage), which is separate from this official register."],
+  grosslage: ["Großlage", "A group of neighbouring Einzellagen that may share one name on the label, such as Piesporter Michelsberg. Because it reads like a single site it is often criticised, and recent German wine law limits how it can be used."],
+  terrain: ["Terrain", "Elevation, slope and aspect are measured live from open elevation models served by Mapterhorn: IGN RGE ALTI in France, DGM1 lidar in Germany, swissALTI3D in Switzerland, IGN MDT in Spain, regional models in parts of Italy, and Copernicus GLO-30 (30 m) elsewhere. Slope uses the Horn method on each cell. Aspect is the compass direction the ground faces, counted only where the slope is 2° or more. The rose shows how much of the place faces each direction. For a large appellation the cells are coarse, so read slope and aspect on single vineyards."],
+  bedrock: ["Regional bedrock", "Rock type under the place, sampled from the Global Lithological Map by Hartmann and Moosdorf (2012). The map works at about 1:3.75 million, so it shows the geology of the wider area. Local soils, such as the marl and limestone mosaic of a Burgundy slope, can differ."],
+};
+function openGloss(key) {
+  const g = GLOSS[key];
+  if (!g) return;
+  openModal('<h2>' + esc(g[0]) + "</h2><p>" + esc(g[1]) + '</p><p><button class="link-btn" id="fullGuide">Open the full guide</button></p>');
+  $("fullGuide").onclick = openGuide;
+}
+function openGuide() {
+  const block = (keys) => "<dl class=\"gloss\">" + keys.map((k) => "<dt>" + esc(GLOSS[k][0]) + "</dt><dd>" + esc(GLOSS[k][1]) + "</dd>").join("") + "</dl>";
+  openModal("<h2>How to read the atlas</h2>" +
+    "<p>Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.</p>" +
+    "<h3>Levels</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
+    "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage"]) +
+    "<h3>How precise is each layer</h3><dl class=\"gloss\">" +
+    "<dt>France</dt><dd>Official INAO parcel delimitation, dated 31 August 2026. Exact to the cadastral parcel. Champagne and a few others are shown by commune.</dd>" +
+    "<dt>Italy and Spain</dt><dd>Appellation outlines built from the communes named in each specification. Single vineyards (MGA, paratges, viñedos singulares) are not mapped yet.</dd>" +
+    "<dt>Germany</dt><dd>Official Einzellagen for Mosel, Rheinhessen, Pfalz, Nahe, Mittelrhein and Ahr (register of 6 October 2021). Other regions by outline only.</dd>" +
+    "<dt>Switzerland</dt><dd>Swiss AOCs are defined canton by canton, so the canton boundary stands in for the appellation until the cantonal vineyard cadastres are added.</dd>" +
+    "<dt>Wine rules</dt><dd>Grapes, yields and planting density from the EU product specifications, compiled by Candiago et al. (2022). Always check the current specification for legal use.</dd>" +
+    (WEB ? "<dt>Terrain</dt><dd>" + esc(GLOSS.terrain[1]) + "</dd>" : "") +
+    "<dt>Bedrock and wineries</dt><dd>" + esc(GLOSS.bedrock[1]) + " Wineries come from OpenStreetMap and are as complete as its volunteers made them.</dd></dl>");
+}
+document.addEventListener("click", (e) => { const q = e.target.closest("[data-gloss]"); if (q) { e.stopPropagation(); openGloss(q.dataset.gloss); } });
+$("openGuide").onclick = openGuide;
+
+// ---------- modal: open data + suggestions
+function openModal(html) { $("modalCard").innerHTML = '<button class="x" id="mclose" aria-label="Close">✕</button>' + html; $("modal").hidden = false; $("mclose").onclick = closeModal; }
+function closeModal() { $("modal").hidden = true; }
+$("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
+function openData() {
+  const counts = {};
+  INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
+  openModal("<h2>Open data &amp; sources</h2><p>Every outline on this map comes from an official or community register published under an open licence. " +
+    "The atlas keeps one simple schema for all countries, so anyone can add a region by converting one more dataset.</p>" +
+    '<div class="tbl"><table><tr><th>Layer</th><th>Source</th><th>Licence</th></tr>' +
+    [["France: AOC, premiers crus, climats (parcel level)", "inao"], ["Italy, Spain, Germany: DOP outlines (communes)", "eupdo"],
+     ["Germany: Einzellagen and Großlagen", "rlp"], ["Switzerland: cantonal AOC outlines", "bfs"], ["Wineries, Swiss vineyards, rivers, lakes", "osm"]]
+      .concat(WEB ? [["Relief, elevation, slope and aspect", "dem"]] : [])
+      .map(([l, k]) => "<tr><td>" + l + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
+    "</table></div>" +
+    '<p class="note">Places per country: ' + Object.entries(counts).map(([c, n]) => c + " " + fmt(n)).join(" · ") +
+    ". Country borders: Natural Earth (public domain). Label font: Noto Sans (OFL). DOCG and Pago flags follow public lists and can be corrected by anyone.</p>" +
+    "<p><b>Schema.</b> Every place has <span class=\"num\">id, name, country, level, rank, parent, src</span>. Levels run region → appellation → sub-zone → vineyard site.</p>");
+}
+$("openData").onclick = openData; $("attribMore").onclick = openData;
+
+let dbPromise = null;
+function getDb() {
+  if (!dbPromise) dbPromise = (window.claude && window.claude.use) ? window.claude.use("db").catch(() => null) : Promise.resolve(null);
+  return dbPromise;
+}
+async function openSuggest(p) {
+  openModal("<h2>Suggest " + (p ? "a correction" : "a place") + "</h2>" +
+    "<p>Add a missing vineyard, fix a boundary or a classification. Every suggestion is reviewed before it enters the open dataset. Please name your source.</p>" +
+    '<form class="suggest" id="sform">' +
+    '<label for="s-place">Place<input id="s-place" required maxlength="120" value="' + esc(p ? p.name : "") + '"></label>' +
+    '<label for="s-kind">Type<select id="s-kind"><option>Correction</option><option>Missing place</option><option>Classification</option><option>Boundary</option><option>Producer / winery</option></select></label>' +
+    '<label for="s-text">What should change<textarea id="s-text" required maxlength="2000" placeholder="For example: Barolo MGA Cannubi is missing. Boundary per Disciplinare art. 1."></textarea></label>' +
+    '<label for="s-src">Source (link or document)<input id="s-src" maxlength="300" placeholder="https://…"></label>' +
+    '<button class="primary" type="submit">Send suggestion</button><div class="note" id="s-msg"></div></form>' +
+    '<div class="sec"><h3>Recent suggestions</h3><div class="queue" id="queue"><span class="note">Loading…</span></div></div>');
+  const db = WEB ? null : await getDb();
+  const queue = $("queue");
+  if (WEB) { queue.innerHTML = '<span class="note">Suggestions open as a GitHub issue, where anyone can follow the review. <a href="' + REPO + '/issues" target="_blank" rel="noopener">See open suggestions</a>.</span>'; }
+  else if (!db) { queue.innerHTML = '<span class="note">Suggestions are stored when you open the atlas signed in to Claude. You can still copy your text and send it to the maintainers.</span>'; }
+  else {
+    const unsub = db.collection("suggestions").orderBy("at", "desc").limit(8).onSnapshot((snap) => {
+      queue.innerHTML = snap.docs.length ? snap.docs.map((d) => { const x = d.data(); return "<div><b>" + esc(x.place) + "</b> · " + esc(x.kind) + '<br><span class="note">' + esc(String(x.text).slice(0, 160)) + "</span></div>"; }).join("")
+        : '<span class="note">No suggestions yet. Yours can be the first.</span>';
+    }, () => { queue.innerHTML = '<span class="note">Could not load suggestions.</span>'; });
+    const stop = () => { try { unsub(); } catch (e) {} };
+    $("mclose").addEventListener("click", stop, { once: true });
+  }
+  $("sform").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const msg = $("s-msg");
+    const doc = { place: $("s-place").value.trim(), kind: $("s-kind").value, text: $("s-text").value.trim(), source: $("s-src").value.trim(),
+      placeId: p ? p.id : "", at: new Date().toISOString(), status: "open" };
+    if (WEB) {
+      const body = "**Place:** " + doc.place + (doc.placeId ? " (`" + doc.placeId + "`)" : "") + "\n**Type:** " + doc.kind + "\n\n" + doc.text + "\n\n**Source:** " + (doc.source || "none given");
+      window.open(REPO + "/issues/new?labels=suggestion&title=" + encodeURIComponent(doc.kind + ": " + doc.place) + "&body=" + encodeURIComponent(body), "_blank", "noopener");
+      msg.textContent = "GitHub opens in a new tab. Check the text and submit the issue there.";
+      return;
+    }
+    if (!db) { msg.textContent = "Not saved: this view has no shared storage. Copy your text and send it to the maintainers."; return; }
+    try { await db.collection("suggestions").add(doc); msg.textContent = "Thank you. Your suggestion is in the review queue."; $("s-text").value = ""; $("s-src").value = ""; }
+    catch (err) { msg.textContent = "Not saved: you need contributor access to this atlas. Ask the owner to invite you."; }
+  });
+}
+$("openSuggest").onclick = () => openSuggest(null);
+
+// ---------- boot
+map.on("load", async () => {
+  try {
+    showLoading("Loading the atlas…");
+    const [m, idx] = await Promise.all([fetch("data/manifest.json").then((r) => r.json()), fetch("data/search.json").then((r) => r.json()),
+      loadArchive("base.pmtiles")]);
+    manifest = m;
+    INDEX = idx;
+    INDEX.forEach((r) => {
+      r._k = norm(r[0] + (r[7] ? " " + r[7] : ""));
+      byId.set(r[1], r);
+      if (!byName.has(r._k) || r[3] === "appellation") byName.set(r._k, r);
+      if (r[5]) { const k = norm(r[5]); if (!children.has(k)) children.set(k, []); children.get(k).push(r); }
+    });
+    children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
+    $("count").textContent = fmt(INDEX.length);
+    addBase();
+    if (WEB) addRelief();
+    hideLoading();
+    showLoading("Loading appellations…");
+    await loadArchive("overview.pmtiles");
+    addOverview();
+    bindHover(["ov-fill"]);
+    hideLoading();
+    showLoading("Loading wineries…");
+    await loadArchive("poi.pmtiles");
+    addPoi();
+    hideLoading();
+    applyLegend();
+    ensureDetail();
+    map.on("moveend", ensureDetail);
+    // deep link: #<place id>
+    const hid = decodeURIComponent(location.hash.slice(1));
+    if (hid && byId.has(hid)) goTo(byId.get(hid));
+  } catch (e) {
+    console.error(e);
+    $("loading").textContent = "The map data could not load. Reload the page to try again.";
+  }
+});
+})();
+</script>

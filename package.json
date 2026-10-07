@@ -1,0 +1,12 @@
+{
+  "name": "open-wine-atlas",
+  "private": true,
+  "description": "Open Wine Atlas: build tools. The site itself is static (web/).",
+  "license": "MIT",
+  "scripts": {
+    "build:web": "python3 web/build_web.py"
+  },
+  "devDependencies": {
+    "mapshaper": "^0.6.121"
+  }
+}

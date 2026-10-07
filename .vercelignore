@@ -1,0 +1,7 @@
+raw
+build
+node_modules
+pipeline
+contrib
+web/**/*.txt
+*.log

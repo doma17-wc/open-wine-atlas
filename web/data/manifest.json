@@ -1,0 +1,202 @@
+{
+ "files": [
+  {
+   "file": "base.pmtiles",
+   "minzoom": 0,
+   "maxzoom": 11,
+   "bounds": null
+  },
+  {
+   "file": "overview.pmtiles",
+   "minzoom": 4,
+   "maxzoom": 9,
+   "bounds": null
+  },
+  {
+   "file": "fr-angers.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    -2.0236,
+    46.361,
+    1.5509,
+    47.6823
+   ],
+   "label": "Angers"
+  },
+  {
+   "file": "fr-avignon.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    4.2454,
+    43.6202,
+    6.071,
+    45.5213
+   ],
+   "label": "Avignon"
+  },
+  {
+   "file": "fr-bordeaux.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    -1.0604,
+    44.0893,
+    0.835,
+    45.4567
+   ],
+   "label": "Bordeaux"
+  },
+  {
+   "file": "fr-colmar.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    5.8204,
+    47.7914,
+    7.9526,
+    49.4664
+   ],
+   "label": "Colmar"
+  },
+  {
+   "file": "fr-corse.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    8.5747,
+    41.4541,
+    9.5514,
+    43.0076
+   ],
+   "label": "Corse"
+  },
+  {
+   "file": "fr-dijon.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    3.3149,
+    45.8362,
+    5.9007,
+    47.9943
+   ],
+   "label": "Dijon"
+  },
+  {
+   "file": "fr-gaillac.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    0.3996,
+    43.7323,
+    3.2155,
+    44.7188
+   ],
+   "label": "Gaillac"
+  },
+  {
+   "file": "fr-la-valette-du-var.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    4.7047,
+    42.9853,
+    7.1056,
+    43.9473
+   ],
+   "label": "La Valette du Var"
+  },
+  {
+   "file": "fr-montpellier.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    2.3454,
+    42.4353,
+    4.8909,
+    43.965
+   ],
+   "label": "Montpellier"
+  },
+  {
+   "file": "fr-macon.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    4.4335,
+    45.464,
+    6.5261,
+    46.9035
+   ],
+   "label": "M\u00e2con"
+  },
+  {
+   "file": "fr-narbonne.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    1.97,
+    42.4353,
+    3.1941,
+    43.4089
+   ],
+   "label": "Narbonne"
+  },
+  {
+   "file": "fr-pau.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    -1.3663,
+    43.1313,
+    0.2655,
+    43.7661
+   ],
+   "label": "Pau"
+  },
+  {
+   "file": "fr-tours.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    0.0559,
+    45.4423,
+    4.109,
+    47.9083
+   ],
+   "label": "Tours"
+  },
+  {
+   "file": "fr-valence.pmtiles",
+   "minzoom": 9,
+   "maxzoom": 14,
+   "bounds": [
+    4.3111,
+    44.26,
+    5.5117,
+    45.5213
+   ],
+   "label": "Valence"
+  },
+  {
+   "file": "de-rlp.pmtiles",
+   "minzoom": 8,
+   "maxzoom": 14,
+   "bounds": [
+    6.3584,
+    49.0337,
+    8.4151,
+    50.602
+   ],
+   "label": "Rheinland-Pfalz"
+  },
+  {
+   "file": "poi.pmtiles",
+   "minzoom": 7,
+   "maxzoom": 14,
+   "bounds": null
+  }
+ ]
+}
