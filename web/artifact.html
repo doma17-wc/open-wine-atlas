@@ -150,7 +150,7 @@ button, input { font: inherit; color: inherit; }
 .gloss h3 { margin: 16px 0 0; font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* ---------- modal for "Open data" and "Suggest" */
-.modal { position: absolute; inset: 0; z-index: 6; background: rgba(5,5,6,.6); display: grid; place-items: center; padding: 16px; }
+.modal { position: absolute; inset: 0; z-index: 10; background: rgba(5,5,6,.6); display: grid; place-items: center; padding: 16px; }
 .modal .card { width: min(560px, 100%); max-height: calc(100% - 32px); overflow: auto; background: #131316; border: 1px solid var(--line);
   border-radius: 12px; padding: 22px; position: relative; display: grid; gap: 12px; }
 .modal h2 { margin: 0; font: 600 28px/1.1 var(--f-display); }
@@ -184,6 +184,98 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(.88); }
 .maplibregl-ctrl-scale { background: transparent; color: var(--muted); border-color: var(--muted); font: 10px var(--f-mono); }
 
+/* ---------- personal dashboard ("My atlas") */
+.brand { position: relative; }
+.dash-btn { position: absolute; top: 12px; right: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
+  border: 1px solid var(--line); background: #1b1b1f; cursor: pointer; font: 500 12px var(--f-body); color: var(--parchment); }
+.dash-btn:hover, .dash-btn:focus-visible { border-color: var(--parchment); }
+.dash-btn .n { font: 600 10.5px var(--f-mono); background: var(--gold); color: var(--night); border-radius: 999px; padding: 1px 6px; }
+.dash { position: absolute; inset: 0; z-index: 8; background: rgba(5,5,7,.62); display: grid; place-items: center; padding: 16px; }
+.dash-card { width: min(1120px, 100%); height: min(880px, 100%); background: #121215; border: 1px solid var(--line); border-radius: 14px;
+  display: flex; flex-direction: column; overflow: hidden; position: relative; }
+.dash-head { display: flex; align-items: center; gap: 18px; padding: 16px 64px 14px 22px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.dash-head h2 { margin: 0; font: 600 28px/1 var(--f-display); }
+.dash-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+.dash-tabs button { all: unset; cursor: pointer; padding: 6px 12px; border-radius: 999px; font-size: 13px; color: var(--muted); }
+.dash-tabs button:hover { color: var(--parchment); }
+.dash-tabs button[aria-selected="true"] { color: var(--night); background: var(--parchment); }
+.dash-tabs button:focus-visible { outline: 2px solid var(--focus); }
+.dash-body { overflow: auto; padding: 20px 22px 28px; flex: 1; display: flex; flex-direction: column; gap: 22px; }
+.dash-body > * { flex-shrink: 0; }
+.dash-body h3 { margin: 0 0 8px; font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.dash-body .lead { margin: 0; color: #c9c0b1; max-width: 70ch; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.tile { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; }
+.tile b { font: 600 30px/1.05 var(--f-display); font-variant-numeric: tabular-nums; }
+.tile span { color: var(--muted); font-size: 12px; }
+.dgrid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.pcard { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 8px; align-content: start; }
+.pcard h4 { margin: 0; font: 600 19px/1.15 var(--f-display); }
+.pcard .meta { font: 500 10.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.pcard dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; margin: 0; font-size: 12.5px; }
+.pcard dt { color: var(--muted); } .pcard dd { margin: 0; font-family: var(--f-mono); }
+.row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.mini-btn { all: unset; cursor: pointer; font-size: 12px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--parchment); }
+.mini-btn:hover, .mini-btn:focus-visible { border-color: var(--parchment); }
+.mini-btn[aria-pressed="true"] { background: var(--parchment); color: var(--night); border-color: var(--parchment); }
+.mini-btn.warn { color: #e0a090; }
+.acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.empty { border: 1px dashed var(--line); border-radius: 10px; padding: 18px; color: var(--muted); font-size: 13px; }
+.fbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.fbar input, .fbar select, .jform input, .jform select, .jform textarea { background: #1b1b1f; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--parchment); font: 13px var(--f-body); }
+.fbar input[type="search"] { min-width: 220px; flex: 1 1 220px; }
+.fbar label { display: inline-flex; gap: 6px; align-items: center; font-size: 12.5px; color: var(--muted); }
+.dt { width: 100%; border-collapse: collapse; font-size: 13px; }
+.dt th { font: 500 10px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.dt th button { all: unset; cursor: pointer; } .dt th button:hover { color: var(--parchment); }
+.dt td { padding: 6px 8px; border-bottom: 1px solid #1d1d22; vertical-align: top; }
+.dt tr.go { cursor: pointer; } .dt tr.go:hover td { background: #18181c; }
+.dt td.n { font-family: var(--f-mono); text-align: right; white-space: nowrap; }
+.dt .best { color: var(--gold); }
+.hbars { display: grid; gap: 5px; }
+.hbar { all: unset; cursor: pointer; display: grid; grid-template-columns: 120px minmax(0, 1fr) 54px; gap: 8px; align-items: center; font-size: 12.5px; }
+.hbar .t { height: 10px; background: #24242a; border-radius: 0 4px 4px 0; overflow: hidden; }
+.hbar .t i { display: block; height: 100%; background: var(--gold); border-radius: 0 4px 4px 0; }
+.hbar .v { font-family: var(--f-mono); color: var(--muted); text-align: right; }
+.hbar:hover .t i, .hbar:focus-visible .t i, .hbar[aria-pressed="true"] .t i { background: var(--focus); }
+.jform { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; align-items: end; }
+.jform input, .jform select, .jform textarea { width: 100%; box-sizing: border-box; min-width: 0; }
+.jform label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); position: relative; }
+.jform .wide { grid-column: 1 / -1; }
+.jform textarea { min-height: 72px; resize: vertical; }
+.sugg { position: absolute; top: 100%; left: 0; right: 0; z-index: 2; margin: 4px 0 0; padding: 4px; list-style: none; background: #17171b; border: 1px solid var(--line); border-radius: 8px; max-height: 220px; overflow: auto; }
+.sugg button { all: unset; display: block; width: 100%; box-sizing: border-box; cursor: pointer; padding: 6px 8px; border-radius: 6px; font-size: 13px; color: var(--parchment); }
+.sugg button:hover, .sugg button:focus-visible { background: #24242a; }
+.sugg small { color: var(--muted); margin-left: 6px; }
+.jentry { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; display: grid; gap: 4px; }
+.jentry .top { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.jentry b { font: 600 17px var(--f-display); }
+.jentry .sc { font: 600 12px var(--f-mono); color: var(--night); background: var(--gold); border-radius: 4px; padding: 1px 6px; }
+.jentry p { margin: 0; color: #c9c0b1; font-size: 13.5px; white-space: pre-line; }
+.lchart { width: 100%; height: auto; display: block; }
+.lchart text { font: 10px var(--f-mono); fill: #8d877c; }
+.lchart .lbl { font: 600 11px var(--f-body); }
+.legend2 { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; }
+.legend2 span { display: inline-flex; gap: 6px; align-items: center; }
+.legend2 i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+.ctip { position: absolute; pointer-events: none; background: rgba(10,10,12,.95); border: 1px solid var(--line); border-radius: 8px; padding: 6px 9px; font-size: 12px; white-space: nowrap; z-index: 3; }
+.ctip div { display: flex; gap: 6px; align-items: center; } .ctip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.toast { position: absolute; left: 50%; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 9; padding: 9px 14px;
+  border-radius: 999px; background: #1d1c20; border: 1px solid #4a463f; font-size: 13px; display: flex; gap: 10px; align-items: center; }
+.toast button { all: unset; cursor: pointer; text-decoration: underline; color: var(--gold); }
+.readout { position: absolute; left: 50%; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 3; pointer-events: none;
+  font: 500 12px var(--f-mono); padding: 6px 12px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); color: var(--parchment); white-space: nowrap; }
+.readout i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin: 0 4px -1px 8px; }
+@media (max-width: 760px) {
+  .dash { padding: 0; }
+  .dash-card { height: 100%; border-radius: 0; }
+  .dash-head { padding: 14px 56px 10px 16px; gap: 10px; }
+  .dash-body { padding: 16px; }
+  .dgrid { grid-template-columns: 1fr; }
+  .hbar { grid-template-columns: 90px minmax(0, 1fr) 44px; }
+  .dash-btn { top: 9px; }
+}
 /* ---------- map selector */
 .rail-scroll { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; min-height: 0; flex: 1 1 auto; scrollbar-width: thin; }
 .mapsel { display: grid; gap: 7px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
@@ -276,6 +368,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 <div class="rail" id="rail">
   <div class="brand">
     <h1>Open Wine Atlas</h1>
+    <button class="dash-btn" id="openDash" aria-haspopup="dialog" title="My atlas (M)">My atlas <span class="n" id="dashCount" hidden>0</span></button>
     <p><span class="count" id="count">…</span> wine places from official open registers. Click any outline.</p>
   </div>
   <div class="search">
@@ -337,6 +430,17 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
 </div>
 <div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
+<div class="readout" id="readout" hidden aria-hidden="true"></div>
+<section class="dash" id="dash" hidden>
+  <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+    <header class="dash-head"><h2 id="dashTitle">My atlas</h2>
+      <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections">
+        <button role="tab" data-tab="overview" aria-selected="true">Overview</button><button role="tab" data-tab="saved" aria-selected="false">Saved</button><button role="tab" data-tab="journal" aria-selected="false">Journal</button><button role="tab" data-tab="compare" aria-selected="false">Compare</button><button role="tab" data-tab="explore" aria-selected="false">Explore</button>
+      </nav></header>
+    <button class="x" id="dashClose" aria-label="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <div class="dash-body" id="dashBody" role="tabpanel"></div>
+  </div>
+</section>
 <div class="loading" id="loading">Loading the atlas…</div>
 <div class="tag" id="tag" hidden></div>
 <div class="modal" id="modal" hidden><div class="card" id="modalCard" role="dialog" aria-modal="true"></div></div>
@@ -901,6 +1005,7 @@ async function fillClimate(p, d, rec, token, terrain) {
     const c = await getClimate(pt[0], pt[1], terrain ? terrain.mean : null);
     const b = box();
     if (!b || !c.years.length) { if (b) b.remove(); return; }
+    noteFacts(p.id, "climate", c);
     const N = c.normal, band = gstBand(N.gst);
     let lede = (/^[aeiou]/.test(band[1]) ? "An " : "A ") + band[1] + " climate for wine: the growing season averages " + fmtN(N.gst, 1) + " °C (" + winkler(N.gdd) + ", Huglin " + fmtN(N.hi) + ", " + huglinClass(N.hi) + ").";
     if (c.trend != null) lede += " The last ten seasons ran " + (c.trend >= 0 ? fmtN(c.trend, 1) + " °C warmer" : fmtN(-c.trend, 1) + " °C cooler") + " than the 1990s.";
@@ -990,6 +1095,7 @@ async function fillSoil(p, d, rec, token) {
     };
     const top = layer("top"), sub = layer("sub");
     if (!top) { b.innerHTML = '<h3>Soil</h3><p class="note">No modelled soil data at this point (built-up land or water).</p>'; return; }
+    noteFacts(p.id, "soil", { texture: texture(top.sand, top.silt, top.clay), ph: top.ph != null ? +top.ph.toFixed(1) : null });
     const bar = (L) => '<div class="soilbar" role="img" aria-label="Sand ' + Math.round(L.sand) + "%, silt " + Math.round(L.silt) + "%, clay " + Math.round(L.clay) + '%">' +
       '<i style="width:' + L.sand + '%;background:#d8c38f"></i><i style="width:' + L.silt + '%;background:#a98f6a"></i><i style="width:' + L.clay + '%;background:#7b5b46"></i></div>';
     const row = (name, L) => L ? "<dt>" + name + "</dt><dd>" + esc(texture(L.sand, L.silt, L.clay)) + ' <span class="note">sand ' + Math.round(L.sand) + " · silt " + Math.round(L.silt) + " · clay " + Math.round(L.clay) + " %</span>" + bar(L) + "</dd>" : "";
@@ -1267,6 +1373,7 @@ async function fillTerrain(p, token) {
       (fine ? "" : "Zoom into a smaller place for slope and aspect. ") +
       (t.partial ? "Only the part of the place on screen was measured. " : "") +
       'Elevation: <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>.</p>';
+    noteFacts(p.id, "terrain", t);
     return t;
   } catch (e) {
     console.warn("terrain", e);
@@ -1365,6 +1472,8 @@ async function select(p, feature) {
   const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
+  pushRecent(p);
+  if (MY.saved[p.id]) { const s = snapshot(p, d, rec); MY.saved[p.id] = { ...MY.saved[p.id], lat: s.lat, lon: s.lon, area: s.area }; saveMY("saved"); }
   if (!feature && rec) fitTo(rec[6], p.level);
   if (WEB) {
     const tok = sheetToken;
@@ -1450,6 +1559,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p) + "</div>" +
     (p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
       (d.grosslage ? " · Großlage " + esc(d.grosslage) : "") + "</div>" : "");
+  CURRENT = { p, d, rec };
+  $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
   let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
   if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">Atlas note</div><p>' + esc(d.atlas_note) + '</p><div class="an-f">Editorial summary. Check the official specification before you rely on it.</div></div>';
 
@@ -1568,7 +1679,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
 }
 function closeSheet() { $("sheet").classList.remove("open"); clearSelected(); sheetToken++; if (WEB) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
 $("close").onclick = closeSheet;
-document.addEventListener("keydown", (e) => { if (e.key === "Escape") { if (!$("modal").hidden) closeModal(); else closeSheet(); } });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("dash").hidden) { if (!$("modal").hidden) closeModal(); else closeSheet(); } });
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-goto]");
   if (b) { const r = byId.get(b.dataset.goto); if (r) goTo(r); }
@@ -1756,6 +1867,419 @@ async function openSuggest(p) {
 }
 $("openSuggest").onclick = () => openSuggest(null);
 
+// ---------- My atlas: saved places, tasting journal, compare, explore (kept on this device)
+const loadJSON = (k, def) => { try { const v = JSON.parse(store.get(k)); return v ?? def; } catch (e) { return def; } };
+const MY = { saved: loadJSON("saved", {}), journal: loadJSON("journal", []), recent: loadJSON("recent", []), compare: loadJSON("compare", []) };
+const FACTS = new Map(); // id -> measured terrain / climate / soil from this visit
+let CURRENT = null;      // the place open in the sheet
+const CMP_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500"]; // validated categorical slots (dark surface)
+function saveMY(k) { store.set(k, JSON.stringify(MY[k])); refreshMine(); updateDashBadge(); }
+function snapFacts(id) {
+  const f = FACTS.get(id) || {}, o = {};
+  if (f.terrain) {
+    const t = f.terrain, fine = t.res <= 35;
+    o.terrain = { min: Math.round(t.min), max: Math.round(t.max), mean: Math.round(t.mean), slope: fine && t.slope != null ? +t.slope.toFixed(1) : null,
+      aspect: fine && t.meanAspect != null ? Math.round(t.meanAspect) : null, sun: fine && t.sun != null ? +t.sun.toFixed(3) : null };
+  }
+  if (f.climate) {
+    const c = f.climate, N = c.normal;
+    o.climate = { gst: +N.gst.toFixed(2), gdd: Math.round(N.gdd), hi: Math.round(N.hi), rain: Math.round(N.rain), hot30: +N.hot30.toFixed(1),
+      frost: +N.frost.toFixed(1), trend: c.trend != null ? +c.trend.toFixed(2) : null, series: c.years.map((y) => [y.year, +y.gst.toFixed(2)]) };
+  }
+  if (f.soil) o.soil = f.soil;
+  return o;
+}
+function noteFacts(id, part, val) {
+  const f = FACTS.get(id) || {};
+  f[part] = val; FACTS.set(id, f);
+  if (MY.saved[id]) { Object.assign(MY.saved[id], snapFacts(id)); saveMY("saved"); }
+  if (!$("dash").hidden && (dashTab === "saved" || dashTab === "compare")) renderDash();
+}
+function snapshot(p, d = {}, rec = null) {
+  const pt = placePoint(p, d, rec) || [null, null];
+  return { id: p.id, name: p.name, country: p.country, level: p.level, rank: p.rank || "", parent: p.parent || "", at: new Date().toISOString(),
+    lat: pt[0], lon: pt[1], area: d.area_ha ?? d.outline_area_ha ?? null, type: d.type || "", ...snapFacts(p.id) };
+}
+function pushRecent(p) {
+  MY.recent = [p.id, ...MY.recent.filter((x) => x !== p.id)].slice(0, 12);
+  saveMY("recent");
+}
+const recOf = (id) => byId.get(id);
+const placeOf = (id) => { const r = recOf(id); return r ? { name: r[0], id: r[1], country: r[2], level: r[3], rank: r[4], parent: r[5], src: srcOf(r[1]) } : null; };
+const kindOf = (x) => RANK_LABEL[x.rank] || (x.country === "US" ? "AVA" : x.country === "DE" && x.level === "vineyard" ? "Einzellage" : LEVEL_LABEL[x.level] || "");
+
+// sheet action buttons
+function sheetActs(p) {
+  const s = !!MY.saved[p.id], c = MY.compare.includes(p.id);
+  return '<div class="acts"><button class="mini-btn" data-act="save" aria-pressed="' + s + '">' + (s ? "★ Saved" : "☆ Save") + "</button>" +
+    '<button class="mini-btn" data-act="compare" aria-pressed="' + c + '">' + (c ? "✓ In compare" : "+ Compare") + "</button>" +
+    '<button class="mini-btn" data-act="taste">Log a tasting</button></div>';
+}
+function refreshActs() { const box = document.querySelector("#sh-head .acts"); if (box && CURRENT) box.outerHTML = sheetActs(CURRENT.p); }
+let toastTimer = null;
+function toast(html) {
+  let t = $("toast");
+  if (!t) { t = document.createElement("div"); t.id = "toast"; t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
+  t.innerHTML = html; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 4200);
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-act]");
+  if (!b || !CURRENT) return;
+  const { p, d, rec } = CURRENT;
+  if (b.dataset.act === "save") {
+    if (MY.saved[p.id]) { delete MY.saved[p.id]; toast("Removed from your places."); }
+    else { MY.saved[p.id] = snapshot(p, d, rec); toast("Saved to your places. <button data-dash=\"saved\">Open My atlas</button>"); }
+    saveMY("saved");
+  } else if (b.dataset.act === "compare") {
+    if (MY.compare.includes(p.id)) MY.compare = MY.compare.filter((x) => x !== p.id);
+    else {
+      if (MY.compare.length >= 4) MY.compare.shift();
+      MY.compare.push(p.id);
+      if (!MY.saved[p.id]) MY.saved[p.id] = snapshot(p, d, rec); // compare reads the saved measurements
+      saveMY("saved");
+      toast(MY.compare.length >= 2 ? "Comparing " + MY.compare.length + " places. <button data-dash=\"compare\">Open compare</button>" : "Added. Open another place and add it to compare.");
+    }
+    saveMY("compare");
+  } else if (b.dataset.act === "taste") { openDash("journal", p.id); }
+  refreshActs();
+});
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-dash]"); if (b) { e.preventDefault(); openDash(b.dataset.dash); } });
+
+// your places on the map
+function addMine() {
+  map.addSource("mine", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+  map.addLayer({ id: "mine-dot", type: "circle", source: "mine",
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 4, 10, 7], "circle-color": "rgba(0,0,0,0)",
+      "circle-stroke-color": ["match", ["get", "k"], "j", C.copper, C.gold], "circle-stroke-width": 2 } });
+  map.addLayer({ id: "mine-label", type: "symbol", source: "mine", minzoom: 5,
+    layout: { "text-field": ["get", "name"], "text-font": ["noto-medium"], "text-size": 11, "text-offset": [0, 1.2], "text-anchor": "top", "text-optional": true, "text-max-width": 9 },
+    paint: { "text-color": C.gold, "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.3 } });
+  refreshMine();
+}
+function refreshMine() {
+  const src = map.getSource && map.getSource("mine");
+  if (!src) return;
+  const feats = [], seen = new Set();
+  Object.values(MY.saved).forEach((s) => { if (s.lat != null) { seen.add(s.id); feats.push({ type: "Feature", properties: { id: s.id, name: s.name, k: "s" }, geometry: { type: "Point", coordinates: [s.lon, s.lat] } }); } });
+  MY.journal.forEach((j) => { if (j.lat != null && !seen.has(j.placeId)) { seen.add(j.placeId); feats.push({ type: "Feature", properties: { id: j.placeId, name: j.place, k: "j" }, geometry: { type: "Point", coordinates: [j.lon, j.lat] } }); } });
+  src.setData({ type: "FeatureCollection", features: feats });
+}
+function updateDashBadge() {
+  const n = Object.keys(MY.saved).length + MY.journal.length, el = $("dashCount");
+  if (el) { el.textContent = n; el.hidden = !n; }
+}
+
+// ---------- the dashboard
+let dashTab = "overview", dashPrefill = null;
+const EXP = { q: "", cc: "", level: "", top: false, sort: "name", dir: 1, limit: 150 };
+function openDash(tab, prefillId) {
+  dashTab = tab || dashTab; dashPrefill = prefillId || null;
+  $("dash").hidden = false; renderDash();
+  const first = document.querySelector('#dashTabs button[aria-selected="true"]'); if (first) first.focus();
+}
+function closeDash() { $("dash").hidden = true; }
+$("openDash").onclick = () => openDash();
+$("dashClose").onclick = closeDash;
+$("dash").addEventListener("click", (e) => { if (e.target.id === "dash") closeDash(); });
+document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { dashTab = b.dataset.tab; renderDash(); });
+function goFromDash(id) { const r = recOf(id); if (r) { closeDash(); goTo(r); } }
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) { e.preventDefault(); goFromDash(b.dataset.go); } });
+
+function renderDash() {
+  document.querySelectorAll("#dashTabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === dashTab)));
+  const body = $("dashBody");
+  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, compare: dashCompare, explore: dashExplore }[dashTab] || dashOverview)();
+  if (dashTab === "journal") wireJournal();
+  if (dashTab === "compare") wireCompare();
+  if (dashTab === "explore") wireExplore();
+  if (dashTab === "overview") bestVintages();
+}
+const tile = (v, l) => '<div class="tile"><b>' + v + "</b><span>" + l + "</span></div>";
+const facing = (deg) => deg == null ? "–" : SECTOR_NAME[compass(deg)];
+const sunPct = (s) => s == null ? "–" : Math.round(s * 100) + " %";
+
+function dashOverview() {
+  const saved = Object.values(MY.saved), cc = new Set([...saved.map((s) => s.country), ...MY.journal.map((j) => j.country), ...MY.recent.map((id) => recOf(id)?.[2]).filter(Boolean)]);
+  const countries = new Set(INDEX.map((r) => r[2]));
+  const counts = {}; INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
+  const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12), mx = top[0]?.[1] || 1;
+  const recent = MY.recent.map(recOf).filter(Boolean);
+  return '<p class="lead">Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register. Everything here stays on this device.</p>' +
+    '<div class="tiles">' + tile(fmt(INDEX.length), "wine places in the atlas") + tile(countries.size, "countries") + tile(saved.length, "places you saved") +
+    tile(MY.journal.length, "tastings logged") + tile(cc.size, "countries you explored") + "</div>" +
+    '<div class="dgrid"><div><h3>Discover</h3><div class="row">' +
+    '<button class="mini-btn" data-rand="any">Surprise me</button><button class="mini-btn" data-rand="grand_cru">A grand cru</button><button class="mini-btn" data-rand="premier_cru">A premier cru</button>' +
+    '<button class="mini-btn" data-rand="docg">A DOCG</button><button class="mini-btn" data-rand="einzellage">An Einzellage</button><button class="mini-btn" data-rand="ava">An AVA</button></div>' +
+    "<h3 style=\"margin-top:18px\">Recently viewed</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">Places you open on the map appear here.</div>') +
+    "<h3 style=\"margin-top:18px\">Best recent vintages</h3>" + '<div id="bestV" class="note">Loading…</div></div>' +
+    "<div><h3>Places per country</h3><div class=\"hbars\">" + top.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-label="' + esc((COUNTRY_EN[c] || c) + ": " + n + " places, explore") + '"><span>' + esc(COUNTRY[c] || c) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
+    '</div><p class="note">Click a country to explore its places.</p></div></div>';
+}
+function bestVintages() {
+  loadVintages().then((V) => {
+    const el = $("bestV"); if (!el) return;
+    const yrs = V.years.slice(-10);
+    el.outerHTML = '<div class="hbars">' + V.regions.map((r) => { const best = yrs.filter((y) => r.scores[y] === 5); return '<div class="row" style="font-size:12.5px"><span style="min-width:190px">' + esc(r.name) + "</span>" + (best.length ? best.map((y) => scoreCell(5).replace(">5<", ">" + String(y).slice(2) + "<")).join("") : '<span class="note">no 5 in ten years</span>') + "</div>"; }).join("") +
+      '</div><p class="note">Vintages scored 5 in the last ten years. <button class="link-btn" data-open-vintages>Full vintage chart</button></p>';
+  });
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-rand]");
+  if (!b) return;
+  const k = b.dataset.rand;
+  const pool = INDEX.filter((r) => k === "any" ? (TOP.includes(r[4]) || r[4] === "premier_cru" || r[3] === "vineyard") : k === "einzellage" ? (r[2] === "DE" && r[3] === "vineyard") : k === "ava" ? r[2] === "US" : r[4] === k);
+  if (pool.length) goFromDash(pool[Math.floor(Math.random() * pool.length)][1]);
+});
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-explore-cc]"); if (b) { EXP.cc = b.dataset.exploreCc; EXP.limit = 150; dashTab = "explore"; renderDash(); } });
+
+let savedSort = "recent";
+function dashSaved() {
+  const list = Object.values(MY.saved);
+  if (!list.length) return '<div class="empty">No saved places yet. Open any vineyard or appellation and press ☆ Save. Its terrain and climate are stored with it, ready to compare.</div>';
+  const key = { recent: (a, b) => b.at.localeCompare(a.at), name: (a, b) => a.name.localeCompare(b.name), warm: (a, b) => (b.climate?.gst ?? -99) - (a.climate?.gst ?? -99),
+    high: (a, b) => (b.terrain?.mean ?? -9e3) - (a.terrain?.mean ?? -9e3), steep: (a, b) => (b.terrain?.slope ?? -1) - (a.terrain?.slope ?? -1) }[savedSort];
+  list.sort(key);
+  return '<div class="fbar"><label>Sort <select id="savedSort">' + [["recent", "Recently saved"], ["name", "Name"], ["warm", "Warmest"], ["high", "Highest"], ["steep", "Steepest"]]
+    .map(([v, l]) => '<option value="' + v + '"' + (v === savedSort ? " selected" : "") + ">" + l + "</option>").join("") + "</select></label>" +
+    '<span class="note">' + list.length + " places · gold rings on the map</span></div>" +
+    '<div class="cards">' + list.map((s) => {
+      const t = s.terrain || {}, c = s.climate || {};
+      return '<div class="pcard"><div class="meta">' + esc((COUNTRY[s.country] || s.country) + " · " + kindOf(s)) + "</div><h4>" + esc(s.name) + "</h4><dl>" +
+        "<dt>Elevation</dt><dd>" + (t.mean != null ? fmtN(t.mean) + " m" : "–") + "</dd><dt>Slope</dt><dd>" + (t.slope != null ? fmtN(t.slope, 1) + "°" : "–") + "</dd>" +
+        "<dt>Faces</dt><dd>" + esc(facing(t.aspect)) + "</dd><dt>Season</dt><dd>" + (c.gst != null ? fmtN(c.gst, 1) + " °C" : "–") + "</dd></dl>" +
+        '<div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">Show on map</button><button class="mini-btn" data-cmp="' + esc(s.id) + '" aria-pressed="' + MY.compare.includes(s.id) + '">Compare</button>' +
+        '<button class="mini-btn warn" data-unsave="' + esc(s.id) + '">Remove</button></div></div>';
+    }).join("") + "</div>" + '<p class="note">Measurements are taken when you open a place. Missing values fill in the next time you open it on the map.</p>';
+}
+document.addEventListener("change", (e) => { if (e.target.id === "savedSort") { savedSort = e.target.value; renderDash(); } });
+document.addEventListener("click", (e) => {
+  const u = e.target.closest("[data-unsave]"), c = e.target.closest("[data-cmp]");
+  if (u) { delete MY.saved[u.dataset.unsave]; MY.compare = MY.compare.filter((x) => x !== u.dataset.unsave); saveMY("saved"); saveMY("compare"); renderDash(); refreshActs(); }
+  if (c) { const id = c.dataset.cmp; if (MY.compare.includes(id)) MY.compare = MY.compare.filter((x) => x !== id); else { if (MY.compare.length >= 4) MY.compare.shift(); MY.compare.push(id); } saveMY("compare"); renderDash(); refreshActs(); }
+});
+
+// journal
+function dashJournal() {
+  const pre = dashPrefill ? placeOf(dashPrefill) : null;
+  const list = [...MY.journal].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const scored = list.filter((j) => j.score), avg = scored.length ? scored.reduce((s, j) => s + +j.score, 0) / scored.length : null;
+  return '<div><h3>Log a tasting</h3><form class="jform" id="jform" autocomplete="off">' +
+    '<label class="wide">Place<input id="j-place" required placeholder="Start typing: Musigny, Barolo, Oakville…" value="' + esc(pre ? pre.name : "") + '" data-id="' + esc(pre ? pre.id : "") + '"><ul class="sugg" id="j-sugg" hidden></ul></label>' +
+    '<label>Producer and wine<input id="j-wine" maxlength="140" placeholder="Domaine, cuvée"></label>' +
+    '<label>Vintage<input id="j-vint" type="number" min="1900" max="2030" placeholder="2019"></label>' +
+    '<label>Score /100<input id="j-score" type="number" min="50" max="100" placeholder="93"></label>' +
+    '<label>Date<input id="j-date" type="date" value="' + new Date().toISOString().slice(0, 10) + '"></label>' +
+    '<label class="wide">Notes<textarea id="j-note" maxlength="3000" placeholder="Nose, palate, structure, when to drink"></textarea></label>' +
+    '<div class="row wide"><button class="primary" type="submit">Add to journal</button><span class="note" id="j-msg"></span></div></form></div>' +
+    '<div><div class="fbar" style="justify-content:space-between"><h3 style="margin:0">Your journal · ' + list.length + (avg ? " · average " + fmtN(avg, 1) : "") + "</h3>" +
+    '<div class="row"><button class="mini-btn" id="j-csv">Export CSV</button><button class="mini-btn" id="j-json">Export JSON</button><label class="mini-btn" style="cursor:pointer">Import JSON<input id="j-imp" type="file" accept="application/json" hidden></label></div></div>' +
+    (list.length ? '<div style="display:grid;gap:8px;margin-top:10px">' + list.map((j) => '<div class="jentry"><div class="top">' + (j.score ? '<span class="sc">' + esc(j.score) + "</span>" : "") +
+      "<b>" + esc([j.wine, j.vintage].filter(Boolean).join(" ") || j.place) + '</b><button class="mini-btn" data-go="' + esc(j.placeId) + '">' + esc(j.place) + '</button><span class="note">' + esc(j.date || "") + "</span>" +
+      '<button class="mini-btn warn" data-jdel="' + esc(j.at) + '" style="margin-left:auto">Delete</button></div>' + (j.note ? "<p>" + esc(j.note) + "</p>" : "") + "</div>").join("") + "</div>"
+      : '<div class="empty" style="margin-top:10px">No tastings yet. Every note is pinned to its vineyard on the map in copper.</div>') + "</div>";
+}
+function download(name, type, text) {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name;
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function wireJournal() {
+  const inp = $("j-place"), sg = $("j-sugg");
+  let opts = [];
+  inp.addEventListener("input", () => {
+    inp.dataset.id = ""; opts = search(inp.value).slice(0, 8);
+    sg.innerHTML = opts.map((r, i) => '<li><button type="button" data-i="' + i + '">' + esc(r[0]) + "<small>" + esc(kindOf({ rank: r[4], level: r[3], country: r[2] }) + " · " + r[2]) + "</small></button></li>").join("");
+    sg.hidden = !opts.length;
+  });
+  sg.addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (!b) return; const r = opts[+b.dataset.i]; inp.value = r[0]; inp.dataset.id = r[1]; sg.hidden = true; $("j-wine").focus(); });
+  $("jform").addEventListener("submit", (e) => {
+    e.preventDefault();
+    let id = inp.dataset.id;
+    if (!id) { const r = search(inp.value)[0]; if (r) id = r[1]; }
+    const r = recOf(id);
+    if (!r) { $("j-msg").textContent = "Pick a place from the list."; return; }
+    const s = MY.saved[id], pt = s && s.lat != null ? [s.lat, s.lon] : [(r[6][1] + r[6][3]) / 2, (r[6][0] + r[6][2]) / 2];
+    MY.journal.push({ at: new Date().toISOString(), placeId: id, place: r[0], country: r[2], lat: pt[0], lon: pt[1], wine: $("j-wine").value.trim(),
+      vintage: $("j-vint").value, score: $("j-score").value, date: $("j-date").value, note: $("j-note").value.trim() });
+    saveMY("journal"); dashPrefill = null; renderDash(); toast("Tasting logged.");
+  });
+  $("j-csv").onclick = () => {
+    const q = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
+    download("wine-journal.csv", "text/csv", ["date,place,place_id,country,wine,vintage,score,notes"].concat(MY.journal.map((j) => [j.date, j.place, j.placeId, j.country, j.wine, j.vintage, j.score, j.note].map(q).join(","))).join("\n"));
+  };
+  $("j-json").onclick = () => download("wine-journal.json", "application/json", JSON.stringify({ app: "Open Wine Atlas", saved: MY.saved, journal: MY.journal }, null, 1));
+  $("j-imp").onchange = async (e) => {
+    try {
+      const j = JSON.parse(await e.target.files[0].text());
+      const have = new Set(MY.journal.map((x) => x.at));
+      (j.journal || []).forEach((x) => { if (x && x.placeId && !have.has(x.at)) MY.journal.push(x); });
+      Object.assign(MY.saved, j.saved || {});
+      saveMY("journal"); saveMY("saved"); renderDash(); toast("Imported.");
+    } catch (err) { toast("That file could not be read."); }
+  };
+}
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-jdel]"); if (b) { MY.journal = MY.journal.filter((j) => j.at !== b.dataset.jdel); saveMY("journal"); renderDash(); } });
+
+// compare
+function dashCompare() {
+  const items = MY.compare.map((id) => MY.saved[id] || (placeOf(id) && { ...placeOf(id) })).filter(Boolean);
+  const picker = '<div class="fbar" style="position:relative"><input type="search" id="cmp-add" placeholder="Add a place to compare (up to 4)" style="flex:1 1 260px"><ul class="sugg" id="cmp-sugg" hidden></ul></div>';
+  if (items.length < 2) return '<p class="lead">Put up to four places side by side: elevation, slope, exposure, sun, climate, soil and how much each has warmed since the 1990s.</p>' + picker +
+    (items.length ? '<div class="row">' + items.map((s) => '<span class="mini-btn" aria-pressed="true">' + esc(s.name) + "</span>").join("") + "</div>" : "") +
+    '<div class="empty">Add places here, or press + Compare in any place sheet. A place gets its terrain and climate once you have opened it on the map.</div>';
+  const rows = [
+    ["Country", (s) => esc(COUNTRY[s.country] || s.country)], ["Classification", (s) => esc(kindOf(s))],
+    ["Area", (s) => s.area != null ? fmtN(s.area, 1) + " ha" : null, (s) => s.area],
+    ["Mean elevation", (s) => s.terrain ? fmtN(s.terrain.mean) + " m" : null, (s) => s.terrain?.mean],
+    ["Elevation range", (s) => s.terrain ? fmtN(s.terrain.min) + "–" + fmtN(s.terrain.max) + " m" : null],
+    ["Mean slope", (s) => s.terrain?.slope != null ? fmtN(s.terrain.slope, 1) + "°" : null, (s) => s.terrain?.slope],
+    ["Faces", (s) => s.terrain?.aspect != null ? esc(facing(s.terrain.aspect)) : null],
+    ["Sun on the ground", (s) => s.terrain?.sun != null ? sunPct(s.terrain.sun) : null, (s) => s.terrain?.sun],
+    ["Growing season mean", (s) => s.climate ? fmtN(s.climate.gst, 1) + " °C" : null, (s) => s.climate?.gst],
+    ["Degree days (Winkler)", (s) => s.climate ? fmtN(s.climate.gdd) : null, (s) => s.climate?.gdd],
+    ["Huglin index", (s) => s.climate ? fmtN(s.climate.hi) : null, (s) => s.climate?.hi],
+    ["Rain Apr–Oct", (s) => s.climate ? fmtN(s.climate.rain) + " mm" : null, (s) => s.climate?.rain],
+    ["Days above 30 °C", (s) => s.climate ? fmtN(s.climate.hot30, 1) : null, (s) => s.climate?.hot30],
+    ["Spring frost days", (s) => s.climate ? fmtN(s.climate.frost, 1) : null, (s) => s.climate?.frost],
+    ["Warming since the 1990s", (s) => s.climate?.trend != null ? sign(s.climate.trend) + " °C" : null, (s) => s.climate?.trend],
+    ["Topsoil", (s) => s.soil ? esc(s.soil.texture) : null], ["Soil pH", (s) => s.soil?.ph != null ? fmtN(s.soil.ph, 1) : null, (s) => s.soil?.ph],
+  ];
+  const head = "<tr><th></th>" + items.map((s, i) => '<th><span style="color:' + CMP_COLORS[i] + '">●</span> ' + esc(s.name) + "</th>").join("") + "</tr>";
+  const body = rows.map(([label, f, num]) => {
+    const vals = items.map((s) => num ? num(s) : null), real = vals.filter((v) => v != null), mx = real.length > 1 ? Math.max(...real) : null;
+    return "<tr><td>" + label + "</td>" + items.map((s, i) => { const v = f(s); return '<td class="' + (num ? "n" : "") + (mx != null && vals[i] === mx ? " best" : "") + '">' + (v ?? '<button class="mini-btn" data-go="' + esc(s.id) + '">measure</button>') + "</td>"; }).join("") + "</tr>";
+  }).join("");
+  const series = items.map((s, i) => ({ name: s.name, color: CMP_COLORS[i], pts: s.climate?.series || [] })).filter((x) => x.pts.length);
+  return picker + '<div class="tbl"><table class="dt">' + head + body + '<tr><td></td>' + items.map((s) => '<td><div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">Map</button><button class="mini-btn warn" data-cmp="' + esc(s.id) + '">Remove</button></div></td>').join("") + "</tr></table></div>" +
+    '<p class="note">Gold marks the highest value in each row. "measure" opens the place on the map so its terrain and climate can be read.</p>' +
+    (series.length ? "<div><h3>Growing season temperature per vintage</h3>" + '<div class="legend2">' + series.map((s) => '<span><i style="background:' + s.color + '"></i>' + esc(s.name) + "</span>").join("") + "</div>" +
+      '<div style="position:relative" id="lwrap">' + lineChart(series) + '<div class="ctip" id="ctip" hidden></div></div></div>' : "");
+}
+let LCH = null;
+function lineChart(series) {
+  const W = 760, H = 240, L = 34, R = 110, T = 10, B = 22;
+  const years = [...new Set(series.flatMap((s) => s.pts.map((p) => p[0])))].sort((a, b) => a - b);
+  const vals = series.flatMap((s) => s.pts.map((p) => p[1])), lo = Math.floor(Math.min(...vals) - 0.3), hi = Math.ceil(Math.max(...vals) + 0.3);
+  const x = (y) => L + (W - L - R) * (y - years[0]) / ((years[years.length - 1] - years[0]) || 1), yv = (v) => T + (H - T - B) * (1 - (v - lo) / ((hi - lo) || 1));
+  LCH = { series, years, x, yv, W, H, L, R, T, B };
+  let s = '<svg class="lchart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Growing season temperature per vintage for the compared places">';
+  for (let v = lo; v <= hi; v++) s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + yv(v).toFixed(1) + '" y2="' + yv(v).toFixed(1) + '" stroke="#24242a" stroke-width="1"/><text x="' + (L - 6) + '" y="' + (yv(v) + 3).toFixed(1) + '" text-anchor="end">' + v + "°</text>";
+  years.forEach((y) => { if (y % 5 === 0) s += '<text x="' + x(y).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle">' + y + "</text>"; });
+  series.forEach((se) => {
+    s += '<path d="' + se.pts.map((p, k) => (k ? "L" : "M") + x(p[0]).toFixed(1) + " " + yv(p[1]).toFixed(1)).join("") + '" fill="none" stroke="' + se.color + '" stroke-width="2" stroke-linejoin="round"/>';
+  });
+  // direct labels at the line ends, pushed apart so they never collide
+  const ends = series.map((se) => { const last = se.pts[se.pts.length - 1]; return { se, x: x(last[0]) + 8, y: yv(last[1]) + 4 }; }).sort((a, b) => a.y - b.y);
+  for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 13) ends[k].y = ends[k - 1].y + 13;
+  ends.forEach(({ se, x: lx, y: ly }) => { s += '<text class="lbl" x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '" fill="' + se.color + '">' + esc(se.name.length > 16 ? se.name.slice(0, 15) + "…" : se.name) + "</text>"; });
+  s += '<line id="lx" x1="0" x2="0" y1="' + T + '" y2="' + (H - B) + '" stroke="#8d877c" stroke-width="1" visibility="hidden"/>';
+  s += '<rect id="lhit" x="' + L + '" y="' + T + '" width="' + (W - L - R) + '" height="' + (H - T - B) + '" fill="transparent"/>';
+  return s + "</svg>";
+}
+function wireCompare() {
+  const inp = $("cmp-add"), sg = $("cmp-sugg");
+  let opts = [];
+  if (inp) {
+    inp.addEventListener("input", () => {
+      opts = search(inp.value).slice(0, 8);
+      sg.innerHTML = opts.map((r, i) => '<li><button type="button" data-i="' + i + '">' + esc(r[0]) + "<small>" + esc(kindOf({ rank: r[4], level: r[3], country: r[2] }) + " · " + r[2]) + "</small></button></li>").join("");
+      sg.hidden = !opts.length;
+    });
+    sg.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-i]"); if (!b) return;
+      const r = opts[+b.dataset.i], p = placeOf(r[1]);
+      if (!MY.compare.includes(p.id)) { if (MY.compare.length >= 4) MY.compare.shift(); MY.compare.push(p.id); }
+      if (!MY.saved[p.id]) MY.saved[p.id] = snapshot(p, {}, r);
+      saveMY("saved"); saveMY("compare"); renderDash();
+    });
+  }
+  const svg = document.querySelector("#lwrap svg"), hit = $("lhit"), tip = $("ctip"), lx = $("lx");
+  if (!svg || !LCH) return;
+  const move = (ev) => {
+    const r = svg.getBoundingClientRect(), sx = (ev.clientX - r.left) * LCH.W / r.width;
+    let best = LCH.years[0];
+    LCH.years.forEach((y) => { if (Math.abs(LCH.x(y) - sx) < Math.abs(LCH.x(best) - sx)) best = y; });
+    lx.setAttribute("x1", LCH.x(best)); lx.setAttribute("x2", LCH.x(best)); lx.setAttribute("visibility", "visible");
+    tip.innerHTML = "<b>" + best + "</b>" + LCH.series.map((s) => { const p = s.pts.find((q) => q[0] === best); return p ? '<div><i style="background:' + s.color + '"></i>' + esc(s.name) + " " + fmtN(p[1], 1) + " °C</div>" : ""; }).join("");
+    tip.hidden = false;
+    const px = LCH.x(best) * r.width / LCH.W;
+    tip.style.left = Math.min(r.width - tip.offsetWidth, px + 12) + "px"; tip.style.top = "8px";
+  };
+  hit.addEventListener("mousemove", move);
+  hit.addEventListener("mouseleave", () => { tip.hidden = true; lx.setAttribute("visibility", "hidden"); });
+}
+
+// explore
+function exploreRows() {
+  const n = norm(EXP.q);
+  let rows = INDEX.filter((r) => (!EXP.cc || r[2] === EXP.cc) && (!EXP.level || r[3] === EXP.level) && (!EXP.top || TOP.includes(r[4]) || r[4] === "premier_cru") && (!n || r._k.includes(n)));
+  const k = { name: (r) => r[0], country: (r) => r[2], kind: (r) => kindOf({ rank: r[4], level: r[3], country: r[2] }), parent: (r) => r[5] || "" }[EXP.sort];
+  rows.sort((a, b) => EXP.dir * String(k(a)).localeCompare(String(k(b))));
+  return rows;
+}
+function dashExplore() {
+  const counts = {}; INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
+  const rows = exploreRows(), shown = rows.slice(0, EXP.limit);
+  const byCc = {}; rows.forEach((r) => { byCc[r[2]] = (byCc[r[2]] || 0) + 1; });
+  const ccTop = Object.entries(byCc).sort((a, b) => b[1] - a[1]).slice(0, 8), mx = ccTop[0]?.[1] || 1;
+  const th = (k, l) => '<th><button data-esort="' + k + '">' + l + (EXP.sort === k ? (EXP.dir > 0 ? " ↑" : " ↓") : "") + "</button></th>";
+  return '<div class="fbar"><input type="search" id="ex-q" placeholder="Filter by name, village or grape region" value="' + esc(EXP.q) + '">' +
+    '<select id="ex-cc" aria-label="Country"><option value="">All countries</option>' + Object.keys(counts).sort((a, b) => (COUNTRY_EN[a] || a).localeCompare(COUNTRY_EN[b] || b)).map((c) => '<option value="' + c + '"' + (EXP.cc === c ? " selected" : "") + ">" + esc((COUNTRY_EN[c] || c).replace(/^the /, "")) + " · " + counts[c] + "</option>").join("") + "</select>" +
+    '<select id="ex-level" aria-label="Level"><option value="">All levels</option>' + ["region", "appellation", "subzone", "vineyard"].map((l) => '<option value="' + l + '"' + (EXP.level === l ? " selected" : "") + ">" + LEVEL_LABEL[l] + "</option>").join("") + "</select>" +
+    '<label><input type="checkbox" id="ex-top"' + (EXP.top ? " checked" : "") + "> Top classifications only</label>" +
+    '<span class="note">' + fmt(rows.length) + " places</span></div>" +
+    '<div class="dgrid"><div class="tbl"><table class="dt"><tr>' + th("name", "Name") + th("kind", "Classification") + th("parent", "Part of") + th("country", "Country") + "</tr>" +
+    shown.map((r) => '<tr class="go" data-go="' + esc(r[1]) + '" tabindex="0"><td>' + esc(r[0]) + "</td><td>" + esc(kindOf({ rank: r[4], level: r[3], country: r[2] })) + "</td><td>" + esc(r[5] || "") + "</td><td>" + r[2] + "</td></tr>").join("") +
+    "</table>" + (rows.length > shown.length ? '<button class="mini-btn" id="ex-more" style="margin-top:10px">Show ' + Math.min(150, rows.length - shown.length) + " more</button>" : "") + "</div>" +
+    "<div><h3>By country</h3><div class=\"hbars\">" + ccTop.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-pressed="' + (EXP.cc === c) + '"><span>' + esc(COUNTRY[c] || c) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
+    "</div>" + (EXP.cc ? '<p><button class="mini-btn" id="ex-clear">Show all countries</button></p>' : "") + "</div></div>";
+}
+function wireExplore() {
+  const q = $("ex-q");
+  q.addEventListener("input", () => { EXP.q = q.value; EXP.limit = 150; const pos = q.selectionStart; renderDash(); const n = $("ex-q"); n.focus(); n.setSelectionRange(pos, pos); });
+  $("ex-cc").onchange = (e) => { EXP.cc = e.target.value; EXP.limit = 150; renderDash(); };
+  $("ex-level").onchange = (e) => { EXP.level = e.target.value; EXP.limit = 150; renderDash(); };
+  $("ex-top").onchange = (e) => { EXP.top = e.target.checked; renderDash(); };
+  const more = $("ex-more"); if (more) more.onclick = () => { EXP.limit += 150; renderDash(); };
+  const clr = $("ex-clear"); if (clr) clr.onclick = () => { EXP.cc = ""; renderDash(); };
+  document.querySelectorAll("[data-esort]").forEach((b) => b.onclick = () => { const k = b.dataset.esort; EXP.dir = EXP.sort === k ? -EXP.dir : 1; EXP.sort = k; renderDash(); });
+  document.querySelectorAll("tr.go").forEach((tr) => tr.addEventListener("keydown", (e) => { if (e.key === "Enter") goFromDash(tr.dataset.go); }));
+}
+
+// ---------- live terrain readout under the cursor
+let roPending = false, roLast = null;
+function readoutAt(lngLat) {
+  const el = $("readout");
+  if (!WEB || !el || overlay === "none" || map.getZoom() < 9 || is3d) { el.hidden = true; return; }
+  roLast = lngLat;
+  if (roPending) return;
+  roPending = true;
+  setTimeout(async () => {
+    roPending = false;
+    const ll = roLast, z = Math.min(DEM_MAX, Math.floor(map.getZoom())), n = 2 ** z, N = DEM_TILE;
+    const fx = mercX(ll.lng) * n, fy = mercY(ll.lat) * n, tx = Math.floor(fx), ty = Math.floor(fy);
+    const e = await demTile(z, tx, ty);
+    if (!e || roLast !== ll) return;
+    const i = Math.min(N - 2, Math.max(1, Math.floor((fx - tx) * N))), j = Math.min(N - 2, Math.max(1, Math.floor((fy - ty) * N)));
+    const at = (a, b) => e[b * N + a], res = 40075016.686 * Math.cos(ll.lat * Math.PI / 180) / (N * n);
+    const dzdx = ((at(i + 1, j - 1) + 2 * at(i + 1, j) + at(i + 1, j + 1)) - (at(i - 1, j - 1) + 2 * at(i - 1, j) + at(i - 1, j + 1))) / (8 * res);
+    const dzdy = ((at(i - 1, j + 1) + 2 * at(i, j + 1) + at(i + 1, j + 1)) - (at(i - 1, j - 1) + 2 * at(i, j - 1) + at(i + 1, j - 1))) / (8 * res);
+    const s = Math.atan(Math.hypot(dzdx, dzdy)) * 180 / Math.PI, asp = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360) % 360, k = Math.round(asp / 45) % 8;
+    el.innerHTML = fmtN(at(i, j)) + " m · " + fmtN(s, 0) + "° slope" + (s >= 2 ? ' <i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>faces ' + SECTORS[k] : " · flat");
+    el.hidden = false;
+  }, 60);
+}
+map.on("mousemove", (e) => readoutAt(e.lngLat));
+map.on("mouseout", () => { const el = $("readout"); if (el) el.hidden = true; });
+
+// keyboard: "/" search, "m" My atlas
+document.addEventListener("keydown", (e) => {
+  if (e.target.closest("input, textarea, select")) return;
+  if (e.key === "/") { e.preventDefault(); qEl.focus(); }
+  else if (e.key === "m" || e.key === "M") { $("dash").hidden ? openDash() : closeDash(); }
+  else if (e.key === "Escape" && !$("dash").hidden) closeDash();
+});
+
 // ---------- boot
 map.on("load", async () => {
   try {
@@ -1783,6 +2307,8 @@ map.on("load", async () => {
     showLoading("Loading wineries…");
     await loadArchive("poi.pmtiles");
     addPoi();
+    addMine();
+    updateDashBadge();
     hideLoading();
     applyLegend();
     ensureDetail();

@@ -86,6 +86,19 @@ cadastral parcels (IGN) can be switched on from zoom 14.
 * Soil: texture, pH, stones and organic carbon from SoilGrids 2.0 (250 m model).
 * Wikipedia summary when an article clearly matches the place.
 
+## My atlas (personal dashboard)
+
+Press **My atlas** (or the M key) for a dashboard that stays on the visitor's device:
+
+* Overview: counts, recently viewed places, random discovery (grand cru, DOCG, Einzellage, AVA), the best recent vintages, places per country.
+* Saved: places saved from any sheet, with the terrain and climate measured when they were opened, sortable by warmth, height or slope.
+* Journal: tasting notes pinned to a vineyard (wine, vintage, score, notes), export to CSV or JSON, import JSON.
+* Compare: up to four places side by side, with the growing season temperature of every vintage on one chart.
+* Explore: every place in the atlas, filtered by name, country, level and classification, sortable.
+
+Saved places show as gold rings on the map, tastings as copper rings. With a terrain overlay on, the cursor shows
+elevation, slope and exposure under it.
+
 ## Terrain
 
 The web build adds a hillshade, a 2D/3D switch and a Terrain section on every sheet. When you open a
