@@ -18,7 +18,7 @@ ORDER = {"appellation": 0, "region": 1, "subzone": 2, "vineyard": 3}
 
 def build_details():
     merged = defaultdict(dict)
-    for name in ["fr_details.json", "eu_details.json", "de_details.json", "ch_details.json"]:
+    for name in ["fr_details.json", "eu_details.json", "de_details.json", "ch_details.json", "us_details.json"]:
         path = os.path.join(BUILD, name)
         if os.path.exists(path):
             for k, v in json.load(open(path, encoding="utf-8")).items():

@@ -3,12 +3,12 @@
   {
    "file": "base.pmtiles",
    "minzoom": 0,
-   "maxzoom": 11,
+   "maxzoom": 8,
    "bounds": null
   },
   {
    "file": "overview.pmtiles",
-   "minzoom": 4,
+   "minzoom": 2,
    "maxzoom": 9,
    "bounds": null
   },

@@ -1,4 +1,4 @@
-"""Italy, Spain, Germany: EU wine PDO boundaries (Candiago et al. 2022, Scientific Data, CC BY 4.0).
+"""All EU wine PDOs outside the French INAO file (21 countries): EU wine PDO boundaries (Candiago et al. 2022, Scientific Data, CC BY 4.0).
 
 Boundaries follow the municipalities listed in each product specification, so they are
 appellation outlines, not vineyard plots. France uses the more precise INAO data instead.
@@ -15,7 +15,13 @@ import shapely
 
 from common import BUILD, RAW, norm, round_geom, write_details, write_features
 
-COUNTRIES = {"IT", "ES", "DE", "FR"}  # FR only for PDOs missing from the INAO parcel file (e.g. Champagne)
+# every country in the inventory; FR only for PDOs missing from the INAO parcel file (e.g. Champagne)
+COUNTRIES = {"IT", "ES", "DE", "FR", "AT", "PT", "GR", "HU", "RO", "BG", "HR", "SI", "CZ", "SK", "BE", "CY", "NL", "GB",
+             "MT", "DK", "LU"}
+TYPE = {"IT": "DOP (DOC/DOCG)", "ES": "DOP", "DE": "g.U. (PDO)", "FR": "AOP", "AT": "g.U. (DAC / Qualitätswein)",
+        "PT": "DOP (DOC)", "GR": "ΠΟΠ (PDO)", "HU": "OEM (PDO)", "RO": "DOC (PDO)", "BG": "ЗНП (PDO)", "HR": "ZOI (PDO)",
+        "SI": "ZGP (PDO)", "CZ": "CHOP (PDO)", "SK": "CHOP (PDO)", "BE": "BOB / AOP (PDO)", "CY": "ΠΟΠ (PDO)",
+        "NL": "BOB (PDO)", "GB": "PDO", "MT": "DOK (PDO)", "DK": "BOB (PDO)", "LU": "AOP (PDO)"}
 SRC = "eupdo"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -76,7 +82,11 @@ def main():
     gdf["country"] = gdf["Country"]
     gdf["parent"] = ""
     gdf["src"] = SRC
-    gdf["geometry"] = [round_geom(shapely.make_valid(g), 5) for g in gdf.geometry]
+    gdf["geometry"] = [None if g is None else round_geom(shapely.make_valid(g), 5) for g in gdf.geometry]
+    missing = gdf[gdf.geometry.isna() | gdf.geometry.is_empty]
+    if len(missing):
+        print("no outline in the inventory:", sorted(missing["name"]))
+    gdf = gdf[~(gdf.geometry.isna() | gdf.geometry.is_empty)].copy()
 
     # German single-vineyard PDOs sit inside an Anbaugebiet: find it spatially
     regions = gdf[(gdf["country"] == "DE") & (gdf["level"] == "region")]
@@ -96,7 +106,7 @@ def main():
             v = r.get(c)
             return None if pd.isna(v) else v
         details[r["id"]] = {
-            "type": {"IT": "DOP (DOC/DOCG)", "ES": "DOP", "DE": "g.U. (PDO)", "FR": "AOP"}[r["country"]],
+            "type": TYPE.get(r["country"], "PDO"),
             "official_name": r["PDOnam"],
             "registered": val("Registration"),
             "category": val("Category_of_wine_product"),

@@ -1,8 +1,10 @@
 # Open Wine Atlas
 
 An open, interactive atlas of wine places: appellations, crus, climats and single vineyards.
-It starts with France, Italy, Spain, Germany and Switzerland and is built only from data
+It covers all 21 EU wine countries, Switzerland and the United States, and is built only from data
 published under open licences, so anyone can check it, reuse it and extend it.
+
+Live: https://open-wine-atlas.vercel.app
 
 ## What is in it (v0.1, October 2026)
 
@@ -12,6 +14,8 @@ published under open licences, so anyone can check it, reuse it and extend it.
 | Italy | 408 DOC/DOCG outlines (by commune), 73 flagged DOCG | Candiago et al. 2022, EU wine PDO inventory | CC BY 4.0 |
 | Spain | 99 DO/DOCa/Vino de Pago outlines (by commune) | Candiago et al. 2022 | CC BY 4.0 |
 | Germany | 13 Anbaugebiete and 6 single-site PDOs; 1,586 Einzellagen and 84 Großlagen for Mosel, Rheinhessen, Pfalz, Nahe, Mittelrhein and Ahr | Candiago et al. 2022; Landwirtschaftskammer Rheinland-Pfalz | CC BY 4.0; dl-de/by-2-0 |
+| 17 more EU countries | 337 PDO outlines: Austria, Portugal, Greece, Hungary, Romania, Bulgaria, Croatia, Slovenia, Czechia, Slovakia, Belgium, Cyprus, the Netherlands, UK, Malta, Denmark, Luxembourg | Candiago et al. 2022 | CC BY 4.0 |
+| United States | 276 AVAs with legal text, hierarchy, states and counties | UC Davis Library AVA project (27 CFR part 9) | CC0 1.0 |
 | Switzerland | 13 cantonal AOC outlines (canton boundary), OSM vineyard areas | BFS GEOSTAT / swisstopo; OpenStreetMap | Open use with attribution; ODbL |
 | All | About 5,800 wineries | OpenStreetMap | ODbL |
 | France, Italy | Per-wine rules: colour, category, main and secondary grapes, yields, density | EU specifications compiled by Candiago et al. 2022 (via pdo-wine-data) | CC BY 4.0 |
@@ -25,7 +29,9 @@ published under open licences, so anyone can check it, reuse it and extend it.
 raw/            downloaded source files (not committed, see sources.json)
 pipeline/       one Python script per source, all writing the same schema
   inao.py         France
-  eu_pdo.py       Italy, Spain, Germany (appellation outlines)
+  basemap.py      world countries, lakes, rivers (Natural Earth)
+  eu_pdo.py       all EU PDO outlines outside the INAO file
+  us_ava.py       United States AVAs
   rlp.py          Germany, Rheinland-Pfalz Einzellagen
   ch.py           Switzerland
   osm.py          wineries, Swiss vineyard areas
@@ -47,7 +53,7 @@ Run it:
 ```bash
 pip install geopandas pyogrio shapely pyproj
 # install tippecanoe: https://github.com/felt/tippecanoe
-python pipeline/inao.py && python pipeline/eu_pdo.py && python pipeline/rlp.py \
+python pipeline/basemap.py && python pipeline/inao.py && python pipeline/eu_pdo.py && python pipeline/us_ava.py && python pipeline/rlp.py \
   && python pipeline/ch.py && python pipeline/osm.py && python pipeline/fr_overview.py \
   && python pipeline/build_tiles.py && python pipeline/enrich.py && python pipeline/build_details.py
 python web/build_web.py                   # writes web/index.html and web/artifact.html
@@ -62,6 +68,23 @@ PMTiles archives in small pieces. Vercel deploys it as is (`vercel.json`). Local
 ```bash
 npx serve web        # serve answers range requests; python -m http.server does not
 ```
+
+## Map types
+
+Base maps: Atlas (dark), Paper (light), Satellite (Sentinel-2 cloudless by EOX, with IGN France, swisstopo and
+IGN España orthophotos from zoom 12) and Topo (OpenTopoMap). Terrain overlays: shaded relief, altitude tint,
+slope and exposure. Slope and exposure tiles are computed in the browser from the elevation tiles. French
+cadastral parcels (IGN) can be switched on from zoom 14.
+
+## Per place, live in the browser
+
+* Terrain: elevation, slope, aspect rose, slope classes and clear-sky sun on the ground relative to flat land.
+* Climate 1991 to 2025 (Open-Meteo, ERA5-Land): growing season temperature, Winkler degree days, Huglin index,
+  rain, harvest rain, sunshine, heat days, spring frost, cool nights, warming since the 1990s.
+* Vintages: the measured climate of every vintage at that place, ranked, plus the editorial vintage chart of
+  its region (`web/data/vintages.json`, 13 regions, 2005 to 2024).
+* Soil: texture, pH, stones and organic carbon from SoilGrids 2.0 (250 m model).
+* Wikipedia summary when an article clearly matches the place.
 
 ## Terrain
 
@@ -89,5 +112,7 @@ Large appellations are measured on coarser cells, so slope and aspect are shown 
 * Germany: Einzellagen for Baden, Württemberg, Franken, Rheingau, Hessische Bergstraße, Saale-Unstrut, Sachsen.
 * Italy: Barolo and Barbaresco MGA, Etna contrade, Chianti Classico UGA where open data exists.
 * Spain: MAPA "Zonas de calidad diferenciada: vinos" layer, Priorat vi de vila and paratges.
+* Australia (Wine Australia GIs), New Zealand, South Africa, Canada, Chile, Argentina: open GI boundaries exist for
+  some of these but their hosts are not reachable from the current build environment.
 * Precomputed terrain for every place in the search index, so places can be sorted by slope or aspect.
 * Climate: growing degree days and rainfall per place from E-OBS or ERA5-Land.

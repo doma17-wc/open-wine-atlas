@@ -75,7 +75,8 @@ def sample_points(geom, n=60, tries=4000):
 
 def main():
     places = (read("fr_overview.geojsonl") + read("fr_denominations.geojsonl") + read("eu_appellations.geojsonl")
-              + read("ch_appellations.geojsonl") + read("de_einzellagen.geojsonl") + read("de_grosslagen.geojsonl"))
+              + read("ch_appellations.geojsonl") + read("de_einzellagen.geojsonl") + read("de_grosslagen.geojsonl")
+              + read("us_appellations.geojsonl"))
     gc = {ft["properties"]["id"]: ft for ft in grand_cru_apps()}
     geoms = {}
     for ft in places:

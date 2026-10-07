@@ -119,9 +119,9 @@ def main():
     base = os.path.join(WEB, "base.pmtiles")
     tippecanoe(base, [("countries", os.path.join(BUILD, "base", "countries.geojson")),
                       ("lakes", os.path.join(BUILD, "base", "lakes.geojson")),
-                      ("rivers", os.path.join(BUILD, "base", "rivers.geojson"))], 0, 11,
-               ["--drop-smallest-as-needed"])
-    manifest["files"].append({"file": "base.pmtiles", "minzoom": 0, "maxzoom": 11, "bounds": None})
+                      ("rivers", os.path.join(BUILD, "base", "rivers.geojson"))], 0, 8,
+               ["--drop-smallest-as-needed", "--simplification=2", "--detect-shared-borders"])
+    manifest["files"].append({"file": "base.pmtiles", "minzoom": 0, "maxzoom": 8, "bounds": None})
 
     only_ov = os.environ.get("ONLY") == "overview"
     fr_ov = read("fr_overview.geojsonl")  # generalised outlines from fr_overview.py
@@ -129,13 +129,14 @@ def main():
     fr_dens = [] if only_ov else read("fr_denominations.geojsonl")
     eu = read("eu_appellations.geojsonl")
     ch = read("ch_appellations.geojsonl")
+    us = read("us_appellations.geojsonl")
     de_lagen = read("de_einzellagen.geojsonl")
     de_gross = read("de_grosslagen.geojsonl")
     osm_v = read("osm_vineyards.geojsonl")
     osm_w = read("osm_wineries.geojsonl")
 
     # ---------- overview: every appellation, generalised
-    apps = fr_ov + eu + ch
+    apps = fr_ov + eu + ch + us
     labels = labels_for(apps)
     # the overview only needs ~80 m precision: parcel detail comes from the regional files
     gen = []
@@ -147,9 +148,9 @@ def main():
     write_geojsonl(os.path.join(TMP, "labels.geojsonl"), labels)
     ov = os.path.join(WEB, "overview.pmtiles")
     tippecanoe(ov, [("appellations", os.path.join(TMP, "apps.geojsonl")),
-                    ("labels", os.path.join(TMP, "labels.geojsonl"))], 4, 9,
+                    ("labels", os.path.join(TMP, "labels.geojsonl"))], 2, 9,
                ["--coalesce-densest-as-needed", "--extend-zooms-if-still-dropping"])
-    manifest["files"].append({"file": "overview.pmtiles", "minzoom": 4, "maxzoom": 9, "bounds": None})
+    manifest["files"].append({"file": "overview.pmtiles", "minzoom": 2, "maxzoom": 9, "bounds": None})
     if os.environ.get("ONLY") == "overview":
         return
 

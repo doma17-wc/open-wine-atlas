@@ -184,6 +184,52 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(.88); }
 .maplibregl-ctrl-scale { background: transparent; color: var(--muted); border-color: var(--muted); font: 10px var(--f-mono); }
 
+/* ---------- map selector */
+.rail-scroll { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; min-height: 0; flex: 1 1 auto; scrollbar-width: thin; }
+.mapsel { display: grid; gap: 7px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+.mapsel .hd { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.seg { display: flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { all: unset; cursor: pointer; flex: 1 1 auto; text-align: center; padding: 6px 7px; font-size: 12px; color: var(--muted); border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-checked="true"] { background: var(--parchment); color: var(--night); }
+.seg button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.ovleg { font-size: 11.5px; color: var(--muted); display: grid; gap: 4px; }
+.ovleg .ramp { height: 8px; border-radius: 4px; }
+.ovleg .ticks { display: flex; justify-content: space-between; font: 10.5px var(--f-mono); }
+.ovleg .sw8 { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; text-align: center; font: 10px var(--f-mono); }
+.ovleg .sw8 i { display: block; height: 10px; border-radius: 2px; margin-bottom: 2px; }
+.mapsel .cad { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); cursor: pointer; }
+/* ---------- sheet: charts, tables, soil */
+.chart { width: 100%; height: auto; display: block; }
+.chart text { font: 10px var(--f-mono); fill: #8d877c; }
+.chart .b { fill: var(--gold); }
+.chart .b.rain { fill: #7f9fbf; }
+.chart .b:hover { fill: var(--focus); }
+.vt { width: 100%; border-collapse: collapse; font-size: 12px; }
+.vt th { font: 500 10px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: right; padding: 4px 4px; border-bottom: 1px solid var(--line); }
+.vt th:first-child, .vt td:first-child { text-align: left; }
+.vt td { padding: 4px; text-align: right; border-bottom: 1px solid #1f1f24; font-family: var(--f-mono); }
+.vt tr.hot td:nth-child(2) { color: var(--gold); }
+.score { display: inline-grid; place-items: center; min-width: 20px; height: 20px; border-radius: 4px; font: 600 11px var(--f-mono); color: #0b0b0d; }
+.vgrid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.vgrid div { display: grid; gap: 2px; justify-items: center; font: 10px var(--f-mono); color: var(--muted); }
+.vchart { overflow-x: auto; }
+.vchart table { border-collapse: separate; border-spacing: 2px; font-size: 12px; }
+.vchart th { font: 500 10px var(--f-mono); color: var(--muted); padding: 2px 4px; }
+.vchart td.r { white-space: nowrap; padding-right: 8px; }
+.vchart td.c { width: 24px; min-width: 24px; height: 24px; padding: 0 !important; text-align: center !important; vertical-align: middle; border-radius: 4px; border: 0 !important; font: 600 11px var(--f-mono); color: #0b0b0d; }
+.vchart td.r { border: 0 !important; padding: 0 10px 0 0 !important; vertical-align: middle; }
+.vchart th { border: 0 !important; text-align: center !important; }
+.modal .card.wide { max-width: min(1000px, calc(100vw - 32px)); width: auto; }
+.soilbar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; gap: 2px; }
+.soilbar i { display: block; height: 100%; }
+.wiki { font-size: 13.5px; line-height: 1.55; color: #d4cab8; }
+h4.sub { margin: 10px 0 6px; font: 500 12.5px var(--f-body); color: var(--parchment); }
+button.inline { all: unset; cursor: pointer; text-decoration: underline; text-decoration-color: #57534a; }
+.tabs2 { display: flex; gap: 6px; margin-bottom: 8px; }
+.tabs2 button { all: unset; cursor: pointer; font: 500 11px var(--f-mono); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.tabs2 button[aria-pressed="true"] { color: var(--night); background: var(--parchment); border-color: var(--parchment); }
+
 /* ---------- relief: 3D toggle + terrain section of the sheet */
 .relief-btn { position: absolute; top: 16px; right: 16px; z-index: 2; display: flex; gap: 0; border: 1px solid var(--line); border-radius: 999px;
   background: var(--panel); overflow: hidden; }
@@ -206,8 +252,10 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
   .relief-btn { top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); right: 16px; }
   .sheet.open ~ .relief-btn { display: none; }
   .rail { width: calc(100% - 32px); }
-  .legend, .rail-foot { display: none; }
-  .rail.more .legend, .rail.more .rail-foot { display: grid; }
+  .legend, .rail-foot, .mapsel, .chip-x { display: none; }
+  .rail.more .chip-x { display: inline-block; }
+  .rail-scroll { max-height: 58vh; }
+  .rail.more .legend, .rail.more .rail-foot, .rail.more .mapsel:not([hidden]) { display: grid; }
   .rail.more .rail-foot { display: flex; }
   .brand { padding: 10px 12px; }
   .brand h1 { font-size: 24px; }
@@ -241,22 +289,41 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
     <button class="chip" data-c="ES"><span class="k">ES</span>España</button>
     <button class="chip" data-c="DE"><span class="k">DE</span>Deutschland</button>
     <button class="chip" data-c="CH"><span class="k">CH</span>Schweiz</button>
+    <button class="chip chip-x" data-c="AT"><span class="k">AT</span>Österreich</button>
+    <button class="chip chip-x" data-c="PT"><span class="k">PT</span>Portugal</button>
+    <button class="chip chip-x" data-c="GR"><span class="k">GR</span>Ελλάδα</button>
+    <button class="chip chip-x" data-c="HU"><span class="k">HU</span>Magyarország</button>
+    <button class="chip chip-x" data-c="US"><span class="k">US</span>USA</button>
     <button class="chip more-btn" id="moreBtn" aria-expanded="false">Layers</button>
+  </div>
+  <div class="rail-scroll">
+  <div class="mapsel web-only" id="mapsel" hidden>
+    <div class="hd">Map</div>
+    <div class="seg" id="baseSeg" role="radiogroup" aria-label="Base map">
+      <button data-base="dark" aria-checked="true" role="radio">Atlas</button><button data-base="light" aria-checked="false" role="radio">Paper</button><button data-base="satellite" aria-checked="false" role="radio">Satellite</button><button data-base="topo" aria-checked="false" role="radio">Topo</button>
+    </div>
+    <div class="hd">Terrain</div>
+    <div class="seg" id="ovSeg" role="radiogroup" aria-label="Terrain overlay">
+      <button data-ov="none" aria-checked="false" role="radio">Off</button><button data-ov="relief" aria-checked="true" role="radio">Relief</button><button data-ov="elevation" aria-checked="false" role="radio">Altitude</button><button data-ov="slope" aria-checked="false" role="radio">Slope</button><button data-ov="aspect" aria-checked="false" role="radio">Exposure</button>
+    </div>
+    <div class="ovleg" id="ovLegend"></div>
+    <label class="cad"><input type="checkbox" id="lg-cad"><span>Cadastral parcels (France, zoom in)</span></label>
   </div>
   <div class="legend" id="legend">
     <div class="hd">Layers</div>
-    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations, DOC, DO</span></label>
+    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations (AOC, DOC, DO, PDO, AVA)</span></label>
     <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span>Grand cru, DOCG, DOCa, Pago</span></label>
     <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span>Premiers crus and climats</span></label>
     <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span>Einzellagen (Rheinland-Pfalz)</span></label>
     <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span>Vineyards (Switzerland, OSM)</span></label>
     <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span>Wineries (OSM)</span></label>
-    <label style="color:#a9a296" class="web-only" hidden><input type="checkbox" id="lg-relief" checked><span class="sw" style="background:linear-gradient(135deg,#3a3a40,#0b0b0d);border:0"></span><span>Relief (lidar where available)</span></label>
   </div>
   <div class="rail-foot">
     <button class="link-btn" id="openGuide">How to read the atlas</button>
+    <button class="link-btn" id="openVintages">Vintage chart</button>
     <button class="link-btn" id="openData">Open data &amp; sources</button>
     <button class="link-btn" id="openSuggest">Suggest a place</button>
+  </div>
   </div>
 </div>
 
@@ -283,15 +350,29 @@ const $ = (id) => document.getElementById(id);
 const C = { night: "#0b0b0d", land: "#151518", line: "#2a2a31", parchment: "#e6dccb", muted: "#8d877c",
   gold: "#e7c06a", copper: "#cf8f5f", slate: "#9db0c0", vine: "#7f9b6f", focus: "#fff8ea", water: "#08090b", river: "#1e2833" };
 const TOP = ["grand_cru", "docg", "doca", "pago"];
-const COUNTRY = { FR: "France", IT: "Italia", ES: "España", DE: "Deutschland", CH: "Schweiz" };
+const COUNTRY = { FR: "France", IT: "Italia", ES: "España", DE: "Deutschland", CH: "Schweiz", AT: "Österreich", PT: "Portugal",
+  GR: "Ελλάδα", HU: "Magyarország", RO: "România", BG: "България", HR: "Hrvatska", SI: "Slovenija", CZ: "Česko", SK: "Slovensko",
+  BE: "Belgique", CY: "Κύπρος", NL: "Nederland", GB: "United Kingdom", MT: "Malta", DK: "Danmark", LU: "Luxembourg", US: "United States" };
+// English names for running text
+const COUNTRY_EN = { FR: "France", IT: "Italy", ES: "Spain", DE: "Germany", CH: "Switzerland", AT: "Austria", PT: "Portugal", GR: "Greece",
+  HU: "Hungary", RO: "Romania", BG: "Bulgaria", HR: "Croatia", SI: "Slovenia", CZ: "Czechia", SK: "Slovakia", BE: "Belgium", CY: "Cyprus",
+  NL: "the Netherlands", GB: "the United Kingdom", MT: "Malta", DK: "Denmark", LU: "Luxembourg", US: "the United States" };
+const LANG = { FR: "fr", IT: "it", ES: "es", DE: "de", CH: "de", AT: "de", PT: "pt", GR: "el", HU: "hu", RO: "ro", BG: "bg", HR: "hr",
+  SI: "sl", CZ: "cs", SK: "sk", BE: "fr", CY: "el", NL: "nl", GB: "en", MT: "en", DK: "da", LU: "fr", US: "en" };
 const VIEWS = { FR: [[-5.2, 42.3], [8.3, 51.1]], IT: [[6.6, 36.6], [18.6, 47.1]], ES: [[-9.4, 36.0], [3.4, 43.8]],
-  DE: [[5.9, 47.3], [15.0, 55.1]], CH: [[5.95, 45.8], [10.5, 47.85]] };
+  DE: [[5.9, 47.3], [15.0, 55.1]], CH: [[5.95, 45.8], [10.5, 47.85]], AT: [[9.5, 46.4], [17.2, 49.0]], PT: [[-9.6, 36.9], [-6.2, 42.2]],
+  GR: [[19.4, 34.8], [28.3, 41.8]], HU: [[16.1, 45.7], [22.9, 48.6]], US: [[-125, 24.5], [-66.9, 49.4]] };
 const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
   rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
   bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
   osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
+  ava: { name: "UC Davis Library, AVA Digitizing Project (from 27 CFR part 9)", license: "CC0 1.0", url: "https://github.com/UCDavisLibrary/ava" },
+  meteo: { name: "Open-Meteo historical weather API (ERA5 and ERA5-Land, Copernicus Climate Change Service)", license: "CC BY 4.0", url: "https://open-meteo.com/en/docs/historical-weather-api" },
+  soil: { name: "SoilGrids 2.0, ISRIC World Soil Information (250 m model)", license: "CC BY 4.0", url: "https://soilgrids.org" },
+  eox: { name: "Sentinel-2 cloudless 2025 by EOX IT Services (contains modified Copernicus Sentinel data); IGN France, swisstopo and IGN España orthophotos up close", license: "CC BY-NC-SA 4.0 (EOX); open licences (national orthophotos)", url: "https://s2maps.eu" },
+  otm: { name: "OpenTopoMap (data © OpenStreetMap contributors, SRTM)", license: "CC BY-SA 3.0", url: "https://opentopomap.org" },
   dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
 };
 const LEVEL_LABEL = { region: "Wine region", appellation: "Appellation", subzone: "Sub-zone", vineyard: "Vineyard site", vineyard_area: "Vineyard area" };
@@ -366,8 +447,7 @@ const map = new maplibregl.Map({
   },
   bounds: [[-9.5, 36.2], [17.5, 54.5]],
   fitBoundsOptions: { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 } },
-  maxBounds: [[-25, 28], [35, 62]],
-  minZoom: 4, maxZoom: 17.5, maxPitch: 78,
+  minZoom: 2, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
   attributionControl: false,
   dragRotate: true, pitchWithRotate: true,
 });
@@ -401,7 +481,9 @@ function addBase() {
     paint: { "line-color": "#34343c", "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.6, 10, 1.4] } });
   // one label per country, placed by hand (tile-based polygon labels repeat on every tile)
   const pts = [["FRANCE", 2.4, 46.7], ["ITALIA", 12.6, 42.9], ["ESPAÑA", -3.6, 40.0], ["DEUTSCHLAND", 10.2, 51.2], ["SCHWEIZ", 8.2, 46.85],
-    ["ÖSTERREICH", 14.2, 47.6], ["PORTUGAL", -8.0, 39.6]];
+    ["ÖSTERREICH", 14.2, 47.6], ["PORTUGAL", -8.0, 39.6], ["ΕΛΛΆΔΑ", 22.0, 39.3], ["MAGYARORSZÁG", 19.4, 47.1], ["ROMÂNIA", 24.9, 45.9],
+    ["БЪЛГАРИЯ", 25.3, 42.7], ["HRVATSKA", 16.0, 45.5], ["SLOVENIJA", 14.8, 46.1], ["ČESKO", 15.4, 49.8], ["SLOVENSKO", 19.6, 48.7],
+    ["UNITED KINGDOM", -2.0, 53.0], ["BELGIQUE", 4.6, 50.6], ["NEDERLAND", 5.6, 52.2], ["DANMARK", 9.3, 56.1], ["UNITED STATES", -98.5, 39.5]];
   map.addSource("country-pts", { type: "geojson", data: { type: "FeatureCollection", features: pts.map(([n, x, y]) => ({ type: "Feature", properties: { n }, geometry: { type: "Point", coordinates: [x, y] } })) } });
   map.addLayer({ id: "country-labels", type: "symbol", source: "country-pts", maxzoom: 7.5,
     layout: { "text-field": ["get", "n"], "text-font": ["noto-medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 7, 15],
@@ -473,6 +555,7 @@ function addDetail(file) {
     paint: { "text-color": rankColor, "text-halo-color": "rgba(11,11,13,.92)", "text-halo-width": 1.3 } }, isDE ? "de" : "pc");
   bindHover(isDE ? [id + "-cru-fill"] : [id + "-cru-fill", id + "-app-fill", id + "-sub-fill"]);
   applyLegend();
+  if (WEB) applyTheme();
 }
 
 function addPoi() {
@@ -500,7 +583,6 @@ function addRelief() {
     paint: { "hillshade-exaggeration": ["interpolate", ["linear"], ["zoom"], 5, 0.55, 10, 0.4, 14, 0.3],
       "hillshade-shadow-color": "rgba(0,0,0,0.6)", "hillshade-highlight-color": "rgba(255,244,222,0.10)",
       "hillshade-accent-color": "rgba(0,0,0,0.25)", "hillshade-illumination-direction": 315 } }, "lakes");
-  LAYERS.push(["relief", "relief"]);
 }
 let is3d = false;
 function set3d(on) {
@@ -516,6 +598,477 @@ function set3d(on) {
   }
 }
 if (WEB) { $("btn2d").onclick = () => is3d && set3d(false); $("btn3d").onclick = () => !is3d && set3d(true); }
+
+// ---------- map types: base maps (Atlas dark, Paper, Satellite, Topo) and terrain overlays
+const ASPECT_RGB = [[70, 110, 190], [80, 165, 165], [150, 195, 110], [242, 201, 76], [242, 150, 70], [224, 96, 63], [170, 95, 176], [95, 95, 200]];
+const INK = {
+  dark: { bg: "#08090b", land: "#151518", water: "#08090b", river: "#1e2833", border: "#34343c", ctry: "#5f5b55",
+    parchment: "#e6dccb", gold: "#e7c06a", copper: "#cf8f5f", slate: "#9db0c0", vine: "#7f9b6f", label: "#cbbfa9",
+    halo: "rgba(11,11,13,.9)", winery: "#c9c2b6", wlabel: "#a9a296", night: "#0b0b0d",
+    shade: ["rgba(0,0,0,0.6)", "rgba(255,244,222,0.10)", "rgba(0,0,0,0.25)"] },
+  light: { bg: "#c9d3d6", land: "#f1ebdf", water: "#c9d3d6", river: "#a7b9c2", border: "#b5ab9b", ctry: "#8a8073",
+    parchment: "#4a3c2e", gold: "#946400", copper: "#a4471f", slate: "#2f5677", vine: "#557d3f", label: "#4a3c2e",
+    halo: "rgba(246,242,234,.92)", winery: "#5b5047", wlabel: "#5b5047", night: "#f6f2ea",
+    shade: ["rgba(70,50,30,0.38)", "rgba(255,255,255,0.35)", "rgba(70,50,30,0.18)"] },
+};
+INK.satellite = { ...INK.dark, bg: "#000000", halo: "rgba(0,0,0,.82)", label: "#f3ead9", parchment: "#f6eedf", border: "rgba(255,255,255,.35)", ctry: "#e8e2d6" };
+INK.topo = { ...INK.light, halo: "rgba(255,255,255,.92)" };
+let baseMap = "dark", overlay = "relief", P = INK.dark;
+const store = { get(k) { try { return localStorage.getItem("owa." + k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem("owa." + k, v); } catch (e) {} } };
+const rankColorP = (P) => ["case", ["in", ["get", "rank"], ["literal", TOP]], P.gold, ["==", ["get", "rank"], "premier_cru"], P.copper,
+  ["==", ["get", "level"], "vineyard"], ["case", ["==", ["get", "country"], "DE"], P.slate, P.copper], P.parchment];
+const setP = (id, prop, v) => { if (map.getLayer(id)) try { map.setPaintProperty(id, prop, v); } catch (e) {} };
+const setVis = (id, on) => { if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on ? "visible" : "none"); };
+
+const IGN = (layer, style, fmt) => "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=" + layer + "&STYLE=" + style +
+  "&TILEMATRIXSET=PM&FORMAT=" + fmt + "&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}";
+const FR_BOUNDS = [-5.3, 41.3, 9.6, 51.1];
+function addRasters() {
+  const add = (id, tiles, src, lyr = {}) => {
+    map.addSource(id, { type: "raster", tiles, tileSize: 256, ...src });
+    map.addLayer({ id, type: "raster", source: id, layout: { visibility: "none" }, ...lyr }, "land");
+  };
+  add("sat-eox", ["https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2025_3857/default/g/{z}/{y}/{x}.jpg"],
+    { maxzoom: 15, attribution: '<a href="https://s2maps.eu">Sentinel-2 cloudless 2025</a> by EOX (Copernicus Sentinel data 2025)' },
+    { paint: { "raster-saturation": -0.1 } });
+  // national orthophotos (20 to 50 cm) take over close up
+  add("sat-es", ["https://www.ign.es/wmts/pnoa-ma?request=GetTile&service=WMTS&VERSION=1.0.0&Layer=OI.OrthoimageCoverage&Style=default&Format=image/jpeg&TileMatrixSet=GoogleMapsCompatible&TileMatrix={z}&TileRow={y}&TileCol={x}"],
+    { bounds: [-9.4, 35.9, 4.4, 43.9], minzoom: 12, maxzoom: 19, attribution: "PNOA © IGN España (CC BY 4.0)" }, { minzoom: 12 });
+  add("sat-fr", [IGN("ORTHOIMAGERY.ORTHOPHOTOS", "normal", "image/jpeg")],
+    { bounds: FR_BOUNDS, minzoom: 12, maxzoom: 19, attribution: "Orthophotos © IGN France" }, { minzoom: 12 });
+  add("sat-ch", ["https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg"],
+    { bounds: [5.95, 45.8, 10.5, 47.82], minzoom: 12, maxzoom: 19, attribution: "SWISSIMAGE © swisstopo" }, { minzoom: 12 });
+  add("topo", ["a", "b", "c"].map((s) => "https://" + s + ".tile.opentopomap.org/{z}/{x}/{y}.png"),
+    { maxzoom: 17, attribution: 'Map © <a href="https://opentopomap.org">OpenTopoMap</a> (CC BY-SA), data © OpenStreetMap contributors, SRTM' });
+  // altitude tint, slope and exposure all read the same elevation tiles
+  map.addLayer({ id: "alt", type: "color-relief", source: "dem", minzoom: 4, layout: { visibility: "none" },
+    paint: { "color-relief-opacity": 0.62, "color-relief-color": ["interpolate", ["linear"], ["elevation"],
+      -50, "#163b4a", 0, "#2c4f3a", 150, "#3f6b3e", 300, "#6f8a45", 500, "#a39a52", 800, "#b98454", 1200, "#a8685a", 1800, "#b9a29a", 2600, "#e9e4de", 4000, "#ffffff"] } }, "relief");
+  ["slope", "aspect"].forEach((k) => {
+    map.addSource(k + "-src", { type: "raster", tiles: ["derived://" + k + "/{z}/{x}/{y}"], tileSize: DEM_TILE, minzoom: 8, maxzoom: DEM_MAX });
+    map.addLayer({ id: k, type: "raster", source: k + "-src", minzoom: 8, layout: { visibility: "none" }, paint: { "raster-opacity": k === "aspect" ? 0.7 : 0.8, "raster-resampling": "linear" } }, "lakes");
+  });
+}
+function ensureCadastre() {
+  if (map.getLayer("cadastre")) return;
+  map.addSource("cadastre", { type: "raster", tiles: [IGN("CADASTRALPARCELS.PARCELLAIRE_EXPRESS", "PCI%20vecteur", "image/png")], tileSize: 256,
+    bounds: FR_BOUNDS, minzoom: 14, maxzoom: 19, attribution: "Cadastre © IGN, DGFiP" });
+  map.addLayer({ id: "cadastre", type: "raster", source: "cadastre", minzoom: 14, layout: { visibility: "none" }, paint: { "raster-opacity": 0.75 } },
+    map.getLayer("ov-fill") ? "ov-fill" : undefined);
+}
+
+function applyTheme() {
+  P = INK[baseMap];
+  const raster = baseMap === "satellite" || baseMap === "topo";
+  setP("bg", "background-color", P.bg);
+  setP("land", "fill-color", P.land); setVis("land", !raster);
+  setP("lakes", "fill-color", P.water); setVis("lakes", !raster);
+  setP("rivers", "line-color", P.river); setVis("rivers", !raster);
+  setP("borders", "line-color", P.border); setVis("borders", baseMap !== "topo");
+  setP("country-labels", "text-color", P.ctry); setP("country-labels", "text-halo-color", raster ? P.halo : P.land);
+  const rc = rankColorP(P);
+  map.getStyle().layers.forEach(({ id }) => {
+    if (!/^(ov|fr-|de-)/.test(id)) return;
+    if (/-sub-line$/.test(id)) setP(id, "line-color", ["case", ["==", ["get", "rank"], "premier_cru"], P.copper, P.parchment]);
+    else if (/-sub-fill$/.test(id)) setP(id, "fill-color", P.parchment);
+    else if (/-gl-line$/.test(id)) setP(id, "line-color", P.slate);
+    else if (/-fill$/.test(id)) setP(id, "fill-color", rc);
+    else if (/-line$/.test(id)) setP(id, "line-color", rc);
+    else if (id === "ov-labels") { setP(id, "text-color", ["case", ["in", ["get", "rank"], ["literal", TOP]], P.gold, P.label]); setP(id, "text-halo-color", P.halo); }
+    else if (/-labels$/.test(id)) { setP(id, "text-color", rc); setP(id, "text-halo-color", P.halo); }
+  });
+  setP("vine-fill", "fill-color", P.vine); setP("vine-line", "line-color", P.vine);
+  setP("wineries", "circle-color", P.winery); setP("wineries", "circle-stroke-color", P.night);
+  setP("winery-labels", "text-color", P.wlabel); setP("winery-labels", "text-halo-color", P.night);
+  setP("relief", "hillshade-shadow-color", P.shade[0]); setP("relief", "hillshade-highlight-color", P.shade[1]); setP("relief", "hillshade-accent-color", P.shade[2]);
+  ["sat-eox", "sat-es", "sat-fr", "sat-ch"].forEach((id) => setVis(id, baseMap === "satellite"));
+  setVis("topo", baseMap === "topo");
+  // the cadastre is drawn in dark ink: invert it on the dark map
+  setP("cadastre", "raster-brightness-min", baseMap === "dark" ? 1 : 0); setP("cadastre", "raster-brightness-max", baseMap === "dark" ? 0 : 1);
+  document.documentElement.dataset.base = baseMap;
+}
+const OV_LEGEND = {
+  none: "",
+  relief: '<span>Shaded relief from national lidar models where open, Copernicus 30 m elsewhere.</span>',
+  elevation: '<div class="ramp" style="background:linear-gradient(90deg,#2c4f3a,#3f6b3e,#6f8a45 12%,#a39a52 20%,#b98454 32%,#a8685a 46%,#b9a29a 66%,#e9e4de 90%,#fff)"></div><div class="ticks"><span>0</span><span>500</span><span>1000</span><span>1800</span><span>2600 m</span></div>',
+  slope: '<div class="ramp" style="background:linear-gradient(90deg,rgba(242,230,160,.15),#f2e6a0 12%,#f0b85a 30%,#e07b39 52%,#c4442c 75%,#8e1f3a)"></div><div class="ticks"><span>3°</span><span>10°</span><span>18°</span><span>28°</span><span>40°+</span></div><span>Zoom in to see slopes (from zoom 8).</span>',
+  aspect: '<div class="sw8">' + ["N", "NE", "E", "SE", "S", "SW", "W", "NW"].map((d, k) => '<span><i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>' + d + "</span>").join("") + '</div><span>The direction each slope faces. Flat ground stays clear. From zoom 8.</span>',
+};
+function setBase(b) {
+  baseMap = INK[b] ? b : "dark";
+  document.querySelectorAll("#baseSeg button").forEach((x) => x.setAttribute("aria-checked", String(x.dataset.base === baseMap)));
+  applyTheme(); store.set("base", baseMap);
+}
+function setOverlay(o) {
+  overlay = OV_LEGEND[o] !== undefined ? o : "relief";
+  document.querySelectorAll("#ovSeg button").forEach((x) => x.setAttribute("aria-checked", String(x.dataset.ov === overlay)));
+  setVis("relief", overlay !== "none");
+  setVis("alt", overlay === "elevation");
+  setVis("slope", overlay === "slope");
+  setVis("aspect", overlay === "aspect");
+  setP("relief", "hillshade-exaggeration", overlay === "relief" ? ["interpolate", ["linear"], ["zoom"], 5, 0.55, 10, 0.4, 14, 0.3] : 0.25);
+  $("ovLegend").innerHTML = OV_LEGEND[overlay];
+  store.set("overlay", overlay);
+}
+if (WEB) {
+  document.querySelectorAll("#baseSeg button").forEach((b) => b.onclick = () => setBase(b.dataset.base));
+  document.querySelectorAll("#ovSeg button").forEach((b) => b.onclick = () => setOverlay(b.dataset.ov));
+  $("lg-cad").onchange = () => { ensureCadastre(); applyTheme(); setVis("cadastre", $("lg-cad").checked); };
+}
+
+// slope and exposure tiles are computed on the fly from the elevation tiles
+const SLOPE_STOPS = [[3, [242, 230, 160, 0]], [5, [242, 230, 160, 90]], [10, [240, 184, 90, 150]], [18, [224, 123, 57, 180]], [28, [196, 68, 44, 205]], [40, [142, 31, 58, 225]]];
+function slopeRGBA(s) {
+  if (s <= SLOPE_STOPS[0][0]) return SLOPE_STOPS[0][1];
+  for (let k = 1; k < SLOPE_STOPS.length; k++) {
+    const [s1, c1] = SLOPE_STOPS[k];
+    if (s <= s1) { const [s0, c0] = SLOPE_STOPS[k - 1], t = (s - s0) / (s1 - s0); return c0.map((v, i) => v + (c1[i] - v) * t); }
+  }
+  return SLOPE_STOPS[SLOPE_STOPS.length - 1][1];
+}
+const newCanvas = (w, h) => typeof OffscreenCanvas !== "undefined" ? new OffscreenCanvas(w, h) : Object.assign(document.createElement("canvas"), { width: w, height: h });
+const demCache = new Map();
+function demTile(z, x, y) {
+  const key = z + "/" + x + "/" + y;
+  if (!demCache.has(key)) {
+    demCache.set(key, fetch(DEM_URL.replace("{z}", z).replace("{x}", x).replace("{y}", y))
+      .then((r) => r.ok ? r.blob() : null).then((b) => b && createImageBitmap(b)).then((img) => {
+        if (!img) return null;
+        const cv = newCanvas(DEM_TILE, DEM_TILE), ctx = cv.getContext("2d", { willReadFrequently: true });
+        ctx.drawImage(img, 0, 0, DEM_TILE, DEM_TILE);
+        const d = ctx.getImageData(0, 0, DEM_TILE, DEM_TILE).data, e = new Float32Array(DEM_TILE * DEM_TILE);
+        for (let k = 0, q = 0; k < e.length; k++, q += 4) e[k] = d[q] * 256 + d[q + 1] + d[q + 2] / 256 - 32768;
+        return e;
+      }).catch(() => null));
+    if (demCache.size > 64) demCache.delete(demCache.keys().next().value);
+  }
+  return demCache.get(key);
+}
+if (WEB) maplibregl.addProtocol("derived", async (params) => {
+  const m = params.url.match(/^derived:\/\/(slope|aspect)\/(\d+)\/(\d+)\/(\d+)/);
+  const kind = m[1], z = +m[2], x = +m[3], y = +m[4], N = DEM_TILE;
+  const e = await demTile(z, x, y);
+  const out = new Uint8ClampedArray(N * N * 4);
+  if (e) {
+    const lat = latOfY((y + 0.5) / 2 ** z), res = 40075016.686 * Math.cos(lat * Math.PI / 180) / (N * 2 ** z);
+    for (let j = 0; j < N; j++) {
+      const jmr = Math.max(0, j - 1), jpr = Math.min(N - 1, j + 1), jm = jmr * N, j0 = j * N, jp = jpr * N, sy = 4 * (jpr - jmr) * res;
+      for (let i = 0; i < N; i++) {
+        const im = Math.max(0, i - 1), ip = Math.min(N - 1, i + 1);
+        const a = e[jm + im], b = e[jm + i], c = e[jm + ip], d = e[j0 + im], f = e[j0 + ip], g = e[jp + im], h = e[jp + i], ii = e[jp + ip];
+        // one-sided differences at the tile edge, so the edge cells keep the true slope
+        const dzdx = ((c + 2 * f + ii) - (a + 2 * d + g)) / (4 * (ip - im) * res), dzdy = ((g + 2 * h + ii) - (a + 2 * b + c)) / sy;
+        const s = Math.atan(Math.hypot(dzdx, dzdy)) * 180 / Math.PI, o = (j0 + i) * 4;
+        if (kind === "slope") { const rgba = slopeRGBA(s); out[o] = rgba[0]; out[o + 1] = rgba[1]; out[o + 2] = rgba[2]; out[o + 3] = rgba[3]; }
+        else if (s > 2) {
+          const asp = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360) % 360, t = asp / 45, k0 = Math.floor(t) % 8, k1 = (k0 + 1) % 8, w = t - Math.floor(t);
+          const c0 = ASPECT_RGB[k0], c1 = ASPECT_RGB[k1];
+          out[o] = c0[0] + (c1[0] - c0[0]) * w; out[o + 1] = c0[1] + (c1[1] - c0[1]) * w; out[o + 2] = c0[2] + (c1[2] - c0[2]) * w;
+          out[o + 3] = Math.min(1, (s - 2) / 10) * 205;
+        }
+      }
+    }
+  }
+  const cv = newCanvas(N, N);
+  cv.getContext("2d").putImageData(new ImageData(out, N, N), 0, 0);
+  const blob = cv.convertToBlob ? await cv.convertToBlob({ type: "image/png" }) : await new Promise((r) => cv.toBlob(r, "image/png"));
+  return { data: await blob.arrayBuffer() };
+});
+
+// ---------- sun on the slope: clear-sky direct sun over the growing season, relative to flat ground
+const SUN_LUT = new Map();
+function sunLUT(lat) {
+  const key = Math.round(lat);
+  if (SUN_LUT.has(key)) return SUN_LUT.get(key);
+  const R = Math.PI / 180, phi = Math.abs(key) * R, sums = new Float64Array(31 * 24);
+  let flat = 0;
+  // northern growing season Apr to Oct; in the south the same sun geometry applies Oct to Apr
+  for (let n = 91; n <= 304; n += 7) {
+    const dec = 23.44 * R * Math.sin(2 * Math.PI * (284 + n) / 365);
+    for (let t = 4; t <= 20; t += 0.25) {
+      const h = (t - 12) * 15 * R, sa = Math.sin(phi) * Math.sin(dec) + Math.cos(phi) * Math.cos(dec) * Math.cos(h);
+      if (sa <= 0.02) continue;
+      const ca = Math.sqrt(1 - sa * sa);
+      let A = Math.acos(Math.max(-1, Math.min(1, (Math.sin(dec) - sa * Math.sin(phi)) / (ca * Math.cos(phi)))));
+      if (h > 0) A = 2 * Math.PI - A;
+      const I = Math.pow(0.7, Math.pow(1 / sa, 0.678));
+      flat += I * sa;
+      for (let si = 0; si < 31; si++) {
+        const s = si * 2 * R, cs = Math.cos(s), ss = Math.sin(s);
+        for (let ai = 0; ai < 24; ai++) {
+          const c = cs * sa + ss * ca * Math.cos(A - ai * 15 * R);
+          if (c > 0) sums[si * 24 + ai] += I * c;
+        }
+      }
+    }
+  }
+  for (let k = 0; k < sums.length; k++) sums[k] /= flat;
+  SUN_LUT.set(key, sums);
+  return sums;
+}
+
+// ---------- climate per place: ERA5 / ERA5-Land daily series via Open-Meteo, 1991 to 2025
+const CLIMATE = new Map();
+const HUGLIN_K = (lat) => { const a = Math.abs(lat); return a < 40 ? 1.0 : a < 42 ? 1.02 : a < 44 ? 1.03 : a < 46 ? 1.04 : a < 48 ? 1.05 : 1.06; };
+function computeClimate(j, lat) {
+  const d = j.daily, south = lat < 0, Y = {};
+  const v = (k) => d[k] || [];
+  const tx = v("temperature_2m_max"), tn = v("temperature_2m_min"), tm = v("temperature_2m_mean"), pr = v("precipitation_sum"), sd = v("sunshine_duration");
+  for (let k = 0; k < d.time.length; k++) {
+    const t = d.time[k], yr = +t.slice(0, 4), mo = +t.slice(5, 7);
+    const vint = south ? (mo >= 10 ? yr + 1 : mo <= 4 ? yr : null) : (mo >= 4 && mo <= 10 ? yr : null);
+    if (vint == null || tm[k] == null) continue;
+    const o = Y[vint] || (Y[vint] = { n: 0, t: 0, gdd: 0, hi: 0, rain: 0, sep: 0, hot30: 0, hot35: 0, frost: 0, sun: 0, night: 0, nn: 0 });
+    o.n++; o.t += tm[k]; o.gdd += Math.max(0, tm[k] - 10);
+    const huglinM = south ? (mo >= 10 || mo <= 3) : (mo <= 9);
+    if (huglinM && tx[k] != null) o.hi += Math.max(0, ((tm[k] - 10) + (tx[k] - 10)) / 2);
+    o.rain += pr[k] || 0;
+    if (mo === (south ? 3 : 9)) { o.sep += pr[k] || 0; if (tn[k] != null) { o.night += tn[k]; o.nn++; } }
+    if (tx[k] >= 30) o.hot30++;
+    if (tx[k] >= 35) o.hot35++;
+    if ((south ? (mo === 10 || mo === 11) : (mo === 4 || mo === 5)) && tn[k] != null && tn[k] <= -1) o.frost++;
+    o.sun += (sd[k] || 0) / 3600;
+  }
+  const k = HUGLIN_K(lat), years = [];
+  for (const [yr, o] of Object.entries(Y)) {
+    if (o.n < 200) continue; // incomplete season
+    years.push({ year: +yr, gst: o.t / o.n, gdd: o.gdd, hi: o.hi * k, rain: o.rain, sep: o.sep, hot30: o.hot30, hot35: o.hot35,
+      frost: o.frost, sun: o.sun, night: o.nn ? o.night / o.nn : null });
+  }
+  years.sort((a, b) => a.year - b.year);
+  const mean = (arr, f) => arr.length ? arr.reduce((s, x) => s + f(x), 0) / arr.length : null;
+  const nrm = years.filter((y) => y.year >= 1991 && y.year <= 2020), early = years.filter((y) => y.year <= 2000), recent = years.slice(-10);
+  const N = {}; ["gst", "gdd", "hi", "rain", "sep", "hot30", "hot35", "frost", "sun", "night"].forEach((f) => { N[f] = mean(nrm, (y) => y[f] ?? 0); });
+  const byWarm = [...years].sort((a, b) => b.gst - a.gst);
+  years.forEach((y) => { y.rankWarm = byWarm.indexOf(y) + 1; });
+  return { years, normal: N, trend: recent.length && early.length ? mean(recent, (y) => y.gst) - mean(early, (y) => y.gst) : null,
+    recent: mean(recent, (y) => y.gst), cellElev: j.elevation, first: years[0]?.year, last: years[years.length - 1]?.year };
+}
+async function getClimate(lat, lon, elev) {
+  const key = lat.toFixed(2) + "," + lon.toFixed(2) + "," + (elev == null ? "" : Math.round(elev / 25));
+  if (!CLIMATE.has(key)) {
+    const url = "https://archive-api.open-meteo.com/v1/archive?latitude=" + lat.toFixed(4) + "&longitude=" + lon.toFixed(4) +
+      "&start_date=1991-01-01&end_date=2025-12-31&daily=temperature_2m_max,temperature_2m_min,temperature_2m_mean,precipitation_sum,sunshine_duration&timezone=GMT" +
+      (elev != null && isFinite(elev) ? "&elevation=" + Math.round(elev) : "");
+    CLIMATE.set(key, fetch(url).then((r) => { if (!r.ok) throw new Error("climate " + r.status); return r.json(); }).then((j) => computeClimate(j, lat))
+      .catch((e) => { CLIMATE.delete(key); throw e; }));
+  }
+  return CLIMATE.get(key);
+}
+const winkler = (g) => g < 1389 ? "Region I" : g < 1667 ? "Region II" : g < 1944 ? "Region III" : g < 2222 ? "Region IV" : "Region V";
+const huglinClass = (h) => h < 1500 ? "very cool" : h < 1800 ? "cool" : h < 2100 ? "temperate" : h < 2400 ? "warm temperate" : h < 3000 ? "warm" : "very warm";
+const GST_BANDS = [[13, "too cool for most wine grapes", ""], [15, "cool", "Pinot Noir, Riesling, Chardonnay, Pinot Gris"],
+  [17, "intermediate", "Chardonnay, Merlot, Cabernet Franc, Tempranillo, Syrah"], [19, "warm", "Cabernet Sauvignon, Syrah, Sangiovese, Nebbiolo"],
+  [21, "hot", "Grenache, Mourvèdre, Zinfandel, Carignan"], [99, "very hot", "fortified wines and table grapes"]];
+const gstBand = (g) => GST_BANDS.find(([max]) => g < max);
+const sign = (v, d = 1) => (v >= 0 ? "+" : "−") + fmtN(Math.abs(v), d);
+
+function barChart(years, f, opts) {
+  const W = 320, H = 96, L = 4, R = 12, B = 16, n = years.length, bw = (W - L - R) / n;
+  const vals = years.map(f), lo = opts.min ?? Math.min(...vals), hi = Math.max(...vals), sc = (v) => (H - B) * (v - lo) / ((hi - lo) || 1);
+  let s = '<svg class="chart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(opts.label) + '">';
+  years.forEach((y, k) => {
+    const v = vals[k], h = Math.max(1.5, sc(v));
+    s += '<rect class="b' + (opts.cls ? " " + opts.cls : "") + '" x="' + (L + k * bw + 0.6).toFixed(1) + '" y="' + (H - B - h).toFixed(1) + '" width="' + Math.max(1, bw - 1.2).toFixed(1) +
+      '" height="' + h.toFixed(1) + '" rx="1"><title>' + y.year + ": " + opts.fmt(v) + "</title></rect>";
+  });
+  if (opts.ref != null) { const yy = (H - B - sc(opts.ref)).toFixed(1); s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + yy + '" y2="' + yy + '" stroke="#8d877c" stroke-dasharray="3 3" stroke-width="1"/>'; }
+  years.forEach((y, k) => { if (y.year % 5 === 0) s += '<text x="' + (L + k * bw + bw / 2).toFixed(1) + '" y="' + (H - 3) + '" text-anchor="middle">' + y.year + "</text>"; });
+  return s + "</svg>";
+}
+
+function placePoint(p, d, rec) {
+  if (d.lat != null && d.lon != null) return [d.lat, d.lon];
+  if (rec) return [(rec[6][1] + rec[6][3]) / 2, (rec[6][0] + rec[6][2]) / 2];
+  return null;
+}
+let vintSort = "year";
+function climateTable(c) {
+  const rows = c.years.slice(-15);
+  const sorted = vintSort === "warm" ? [...rows].sort((a, b) => b.gst - a.gst) : vintSort === "dry" ? [...rows].sort((a, b) => a.rain - b.rain) : [...rows].reverse();
+  return '<div class="tabs2" role="group" aria-label="Sort vintages"><button data-vsort="year" aria-pressed="' + (vintSort === "year") + '">By year</button><button data-vsort="warm" aria-pressed="' + (vintSort === "warm") +
+    '">Warmest first</button><button data-vsort="dry" aria-pressed="' + (vintSort === "dry") + '">Driest first</button></div>' +
+    '<div class="tbl"><table class="vt"><tr><th>Vintage</th><th>Season °C</th><th>Rain mm</th><th>Days 30°+</th><th>Frost</th><th>Harvest rain</th><th>Warmth rank</th></tr>' +
+    sorted.map((y) => '<tr class="' + (y.rankWarm <= 5 ? "hot" : "") + '"><td>' + y.year + "</td><td>" + fmtN(y.gst, 1) + ' <span class="note">' + sign(y.gst - c.normal.gst) + "</span></td><td>" + fmtN(y.rain) +
+      "</td><td>" + y.hot30 + "</td><td>" + y.frost + "</td><td>" + fmtN(y.sep) + "</td><td>" + y.rankWarm + "/" + c.years.length + "</td></tr>").join("") + "</table></div>";
+}
+async function fillClimate(p, d, rec, token, terrain) {
+  const box = () => (token === sheetToken ? $("climate-sec") : null);
+  const pt = placePoint(p, d, rec);
+  if (!pt) { const b = box(); if (b) b.remove(); return; }
+  try {
+    const c = await getClimate(pt[0], pt[1], terrain ? terrain.mean : null);
+    const b = box();
+    if (!b || !c.years.length) { if (b) b.remove(); return; }
+    const N = c.normal, band = gstBand(N.gst);
+    let lede = (/^[aeiou]/.test(band[1]) ? "An " : "A ") + band[1] + " climate for wine: the growing season averages " + fmtN(N.gst, 1) + " °C (" + winkler(N.gdd) + ", Huglin " + fmtN(N.hi) + ", " + huglinClass(N.hi) + ").";
+    if (c.trend != null) lede += " The last ten seasons ran " + (c.trend >= 0 ? fmtN(c.trend, 1) + " °C warmer" : fmtN(-c.trend, 1) + " °C cooler") + " than the 1990s.";
+    if (band[2]) lede += " Typical match: " + band[2] + ".";
+    const rows = [
+      ["Growing season mean", fmtN(N.gst, 1) + " °C", "Apr–Oct"], ["Growing degree days", fmtN(N.gdd) + " °C·d", winkler(N.gdd) + " (Winkler)"],
+      ["Huglin index", fmtN(N.hi), huglinClass(N.hi)], ["Rain, growing season", fmtN(N.rain) + " mm", ""], ["Harvest-month rain", fmtN(N.sep) + " mm", "Sep"],
+      ["Sunshine, growing season", fmtN(N.sun) + " h", ""], ["Days above 30 °C", fmtN(N.hot30), "per season"], ["Days above 35 °C", fmtN(N.hot35, 1), "per season"],
+      ["Spring frost days", fmtN(N.frost, 1), "Apr–May, ≤ −1 °C"], ["Cool nights", N.night != null ? fmtN(N.night, 1) + " °C" : "–", "mean Sep minimum"],
+    ];
+    b.innerHTML = '<h3>Climate · 1991–2020 <button class="q" data-gloss="climate" aria-label="About this data">?</button></h3>' +
+      '<p class="lede" style="font-size:14px;margin-bottom:10px">' + esc(lede) + "</p>" +
+      '<dl class="facts">' + rows.map(([k, v, n]) => "<dt>" + k + '</dt><dd><span class="num">' + v + "</span>" + (n ? ' <span class="note">' + esc(n) + "</span>" : "") + "</dd>").join("") + "</dl>" +
+      '<div class="note" style="margin:12px 0 4px">Growing season temperature per vintage, ' + c.first + "–" + c.last + ". Dashed line: 1991–2020 mean.</div>" +
+      barChart(c.years, (y) => y.gst, { label: "Growing season mean temperature per vintage", fmt: (v) => fmtN(v, 1) + " °C", ref: N.gst, min: Math.min(...c.years.map((y) => y.gst)) - 0.4 }) +
+      '<div class="note" style="margin:10px 0 4px">Rain in the growing season per vintage (mm).</div>' +
+      barChart(c.years, (y) => y.rain, { label: "Growing season rain per vintage", fmt: (v) => fmtN(v) + " mm", ref: N.rain, min: 0, cls: "rain" }) +
+      '<p class="note">ERA5-Land reanalysis via <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), about 9 km cells' +
+      (terrain ? ", adjusted to the measured mean elevation of " + fmtN(terrain.mean) + " m" : "") + ". It describes the area, not one row of vines.</p>";
+    const v = token === sheetToken ? $("vint-clim") : null;
+    if (v) { v.innerHTML = "<h4 class=\"sub\">Vintage climate here</h4>" + climateTable(c); v.dataset.ready = "1"; v._c = c; }
+  } catch (e) {
+    console.warn("climate", e);
+    const b = box();
+    if (b) b.innerHTML = '<h3>Climate</h3><p class="note">The climate service could not be reached right now. Try again in a minute.</p>';
+    const v = token === sheetToken ? $("vint-clim") : null;
+    if (v) v.innerHTML = "";
+  }
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-vsort]");
+  if (!b) return;
+  vintSort = b.dataset.vsort;
+  const v = $("vint-clim");
+  if (v && v._c) v.innerHTML = "<h4 class=\"sub\">Vintage climate here</h4>" + climateTable(v._c);
+});
+
+// ---------- soil per place: SoilGrids 2.0 (ISRIC), modelled at 250 m
+const SOIL = new Map();
+function texture(sand, silt, clay) {
+  if (silt + 1.5 * clay < 15) return "sand";
+  if (silt + 2 * clay < 30) return "loamy sand";
+  if ((clay >= 7 && clay < 20 && sand > 52) || (clay < 7 && silt < 50)) return "sandy loam";
+  if (clay >= 7 && clay < 27 && silt >= 28 && silt < 50 && sand <= 52) return "loam";
+  if ((silt >= 50 && clay >= 12 && clay < 27) || (silt >= 50 && silt < 80 && clay < 12)) return "silt loam";
+  if (silt >= 80 && clay < 12) return "silt";
+  if (clay >= 20 && clay < 35 && silt < 28 && sand > 45) return "sandy clay loam";
+  if (clay >= 27 && clay < 40 && sand > 20 && sand <= 45) return "clay loam";
+  if (clay >= 27 && clay < 40 && sand <= 20) return "silty clay loam";
+  if (clay >= 35 && sand > 45) return "sandy clay";
+  if (clay >= 40 && silt >= 40) return "silty clay";
+  return "clay";
+}
+const phWord = (ph) => ph < 5.5 ? "strongly acid" : ph < 6.5 ? "slightly acid" : ph < 7.3 ? "neutral" : ph < 7.9 ? "slightly alkaline" : "alkaline, typical of limestone and marl";
+async function getSoil(lat, lon) {
+  const key = lat.toFixed(3) + "," + lon.toFixed(3);
+  if (!SOIL.has(key)) {
+    const url = "https://rest.isric.org/soilgrids/v2.0/properties/query?lon=" + lon.toFixed(4) + "&lat=" + lat.toFixed(4) +
+      ["clay", "sand", "silt", "phh2o", "soc", "cfvo"].map((x) => "&property=" + x).join("") +
+      ["0-5cm", "5-15cm", "15-30cm", "30-60cm", "60-100cm"].map((x) => "&depth=" + x).join("") + "&value=mean";
+    SOIL.set(key, fetch(url).then((r) => { if (!r.ok) throw new Error("soil " + r.status); return r.json(); }).then((j) => {
+      const out = {};
+      (j.properties?.layers || []).forEach((L) => {
+        const f = L.unit_measure?.d_factor || 1, get = (lab) => { const dd = L.depths.find((x) => x.label === lab); return dd && dd.values.mean != null ? dd.values.mean / f : null; };
+        const wavg = (pairs) => { let s = 0, w = 0; pairs.forEach(([lab, t]) => { const v = get(lab); if (v != null) { s += v * t; w += t; } }); return w ? s / w : null; };
+        out[L.name] = { top: wavg([["0-5cm", 5], ["5-15cm", 10], ["15-30cm", 15]]), sub: wavg([["30-60cm", 30], ["60-100cm", 40]]) };
+      });
+      return out;
+    }).catch((e) => { SOIL.delete(key); throw e; }));
+  }
+  return SOIL.get(key);
+}
+async function fillSoil(p, d, rec, token) {
+  const box = () => (token === sheetToken ? $("soil-sec") : null);
+  const pt = placePoint(p, d, rec);
+  if (!pt) { const b = box(); if (b) b.remove(); return; }
+  try {
+    const s = await getSoil(pt[0], pt[1]);
+    const b = box();
+    if (!b) return;
+    // SoilGrids gives sand, silt and clay in % (g/kg ÷ 10 after d_factor), pH, organic carbon in g/kg, coarse fragments in cm³/dm³ (‰)
+    const layer = (k) => {
+      const sa = s.sand?.[k], si = s.silt?.[k], cl = s.clay?.[k];
+      if (sa == null || si == null || cl == null) return null;
+      const t = sa + si + cl || 1;
+      return { sand: 100 * sa / t, silt: 100 * si / t, clay: 100 * cl / t, ph: s.phh2o?.[k], soc: s.soc?.[k], stones: s.cfvo?.[k] != null ? s.cfvo[k] / 10 : null };
+    };
+    const top = layer("top"), sub = layer("sub");
+    if (!top) { b.innerHTML = '<h3>Soil</h3><p class="note">No modelled soil data at this point (built-up land or water).</p>'; return; }
+    const bar = (L) => '<div class="soilbar" role="img" aria-label="Sand ' + Math.round(L.sand) + "%, silt " + Math.round(L.silt) + "%, clay " + Math.round(L.clay) + '%">' +
+      '<i style="width:' + L.sand + '%;background:#d8c38f"></i><i style="width:' + L.silt + '%;background:#a98f6a"></i><i style="width:' + L.clay + '%;background:#7b5b46"></i></div>';
+    const row = (name, L) => L ? "<dt>" + name + "</dt><dd>" + esc(texture(L.sand, L.silt, L.clay)) + ' <span class="note">sand ' + Math.round(L.sand) + " · silt " + Math.round(L.silt) + " · clay " + Math.round(L.clay) + " %</span>" + bar(L) + "</dd>" : "";
+    b.innerHTML = '<h3>Soil <button class="q" data-gloss="soil" aria-label="About this data">?</button></h3><dl class="facts">' +
+      row("Topsoil 0–30 cm", top) + row("Subsoil 30–100 cm", sub) +
+      (top.ph != null ? '<dt>pH (water)</dt><dd><span class="num">' + fmtN(top.ph, 1) + "</span> " + esc(phWord(top.ph)) + "</dd>" : "") +
+      (top.stones != null ? '<dt>Stones and gravel</dt><dd><span class="num">' + fmtN(top.stones) + " %</span> " + '<span class="note">of the topsoil volume</span></dd>' : "") +
+      (top.soc != null ? '<dt>Organic carbon</dt><dd><span class="num">' + fmtN(top.soc, 1) + " g/kg</span></dd>" : "") + "</dl>" +
+      '<p class="note">Modelled by <a href="https://soilgrids.org" target="_blank" rel="noopener">SoilGrids 2.0</a> (ISRIC, CC BY 4.0) at 250 m, at the centre of the place. A guide to the soil family, not a pit dug in the vineyard.</p>';
+  } catch (e) {
+    console.warn("soil", e);
+    const b = box();
+    if (b) b.innerHTML = '<h3>Soil</h3><p class="note">The soil service (ISRIC SoilGrids) did not answer. It is sometimes busy; reopen the place later.</p>';
+  }
+}
+
+// ---------- Wikipedia summary, only when the article is clearly about this wine place
+const WINE_WORD = /\b(vin|vins|vign|vigne|vignoble|wine|wines|wein|weinbau|weinlage|vino|vini|vigneto|viñedo|vinho|cru|appellation|denominaci|denominazione|viticultur|viticult|rebe|reben|winery|aoc|doc|docg|ava)/i;
+async function fillWiki(p, token) {
+  const box = () => (token === sheetToken ? $("wiki-sec") : null);
+  const short = shortName(p.name, p.parent), langs = [...new Set([LANG[p.country] || "en", "en"])];
+  const WORD = { fr: "vin", it: "vino", es: "vino", de: "Wein", pt: "vinho", en: "wine", el: "κρασί", hu: "bor", ro: "vin" };
+  try {
+    for (const lang of langs) {
+      const q = p.name + " " + (WORD[lang] || "wine");
+      const s = await fetch("https://" + lang + ".wikipedia.org/w/api.php?action=query&list=search&srlimit=5&format=json&origin=*&srsearch=" + encodeURIComponent(q)).then((r) => r.json());
+      const hit = (s.query?.search || []).find((r) => { const t = norm(r.title.replace(/\s*\(.*\)$/, "")); return t === norm(short) || t === norm(p.name) || t.startsWith(norm(short) + " ") || norm(p.name).endsWith(" " + t) && t.length > 6; });
+      if (!hit) continue;
+      const sum = await fetch("https://" + lang + ".wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(hit.title.replace(/ /g, "_"))).then((r) => r.json());
+      if (!sum.extract || !WINE_WORD.test(sum.extract) || sum.type === "disambiguation") continue;
+      const b = box();
+      if (!b) return;
+      const ex = sum.extract.length > 700 ? sum.extract.slice(0, 700).replace(/\s+\S*$/, "") + "…" : sum.extract;
+      b.innerHTML = "<h3>About · Wikipedia</h3>" + '<p class="wiki"' + (lang !== "en" ? ' lang="' + lang + '"' : "") + ">" + esc(ex) + "</p>" +
+        '<p class="note"><a href="' + esc(sum.content_urls?.desktop?.page || "#") + '" target="_blank" rel="noopener">Read “' + esc(sum.title) + "” on Wikipedia</a> · CC BY-SA 4.0</p>";
+      return;
+    }
+    const b = box(); if (b) b.remove();
+  } catch (e) { const b = box(); if (b) b.remove(); }
+}
+
+// ---------- vintage chart (editorial)
+let VINTAGES = null;
+const SCORE_BG = { 1: "#4a3e2c", 2: "#75603a", 3: "#a2803f", 4: "#cfa04a", 5: "#f2c665" };
+const SCORE_FG = { 1: "#e6dccb", 2: "#f3ead9", 3: "#0b0b0d", 4: "#0b0b0d", 5: "#0b0b0d" };
+function loadVintages() { if (!VINTAGES) VINTAGES = fetch("data/vintages.json").then((r) => r.json()).catch(() => ({ regions: [] })); return VINTAGES; }
+function vintageRegionsFor(p, d, pd, regions) {
+  const office = (d.inao_office || pd.inao_office || "").toLowerCase(), n = norm(p.name), par = norm(p.parent || ""), reg = (d.region || "").toLowerCase();
+  return regions.filter((r) => {
+    const m = r.match || {};
+    if (m.office && office && m.office.includes(office)) return true;
+    if (m.names && m.names.some((x) => n === norm(x) || n.startsWith(norm(x) + " ") || par === norm(x))) return true;
+    if (m.de_region && p.country === "DE" && (m.de_region.includes(reg) || m.de_region.includes(n) || m.de_region.includes(par))) return true;
+    if (m.ava_within && p.country === "US" && (m.ava_within.includes(p.name) || (d.within || []).some((w) => m.ava_within.includes(w)))) return true;
+    return false;
+  });
+}
+const scoreCell = (v) => v ? '<span class="score" style="background:' + SCORE_BG[v] + ";color:" + SCORE_FG[v] + '">' + v + "</span>" : '<span class="note">–</span>';
+async function fillVintages(p, d, pd, token) {
+  const V = await loadVintages();
+  const box = token === sheetToken ? $("vint-ed") : null;
+  if (!box) return;
+  const regs = vintageRegionsFor(p, d, pd, V.regions || []);
+  if (!regs.length) { box.innerHTML = ""; return; }
+  const yrs = V.years.slice(-20);
+  box.innerHTML = regs.map((r) => '<h4 class="sub">' + esc(r.name) + ' <span class="note">editorial, 1 to 5</span></h4><div class="vgrid">' +
+    yrs.map((y) => "<div>" + scoreCell(r.scores[y]) + "<span>" + String(y).slice(2) + "</span></div>").join("") + "</div>").join("") +
+    '<p class="note">' + esc(V.note) + ' <button class="link-btn" data-open-vintages>Full vintage chart</button></p>';
+}
+async function openVintages() {
+  const V = await loadVintages();
+  const yrs = V.years;
+  openModal("<h2>Vintage chart</h2><p>" + esc(V.intro) + "</p>" +
+    '<div class="vchart"><table><tr><th></th>' + yrs.map((y) => "<th>" + String(y).slice(2) + "</th>").join("") + "</tr>" +
+    V.regions.map((r) => '<tr><td class="r">' + esc(r.name) + "</td>" + yrs.map((y) => { const v = r.scores[y]; return '<td class="c" style="background:' + (v ? SCORE_BG[v] : "#1b1b1f") + ";color:" + (v ? SCORE_FG[v] : "#8d877c") + '" title="' + esc(r.name + " " + y + ": " + (v || "–")) + '">' + (v || "") + "</td>"; }).join("") + "</tr>").join("") +
+    "</table></div>" +
+    '<p class="note">Scale: ' + esc(V.scale) + ". " + esc(V.note) + "</p><p class=\"note\">Open any vineyard on the map to see the measured climate of each vintage there: season temperature, rain, heat days, spring frost and harvest rain, ranked against 1991–2025.</p>", true);
+}
+document.addEventListener("click", (e) => { if (e.target.closest("[data-open-vintages]")) openVintages(); });
 
 // ---------- terrain of a place: elevation, slope and aspect, measured in the browser from the elevation tiles
 const TERRAIN = new Map(); // id -> stats
@@ -602,8 +1155,8 @@ async function measureTerrain(id) {
   }));
   const lat = latOfY((y0 + y1) / 2);
   const res = 40075016.686 * Math.cos(lat * Math.PI / 180) / scale; // metres per pixel
-  const els = [], slopes = [], sect = new Float64Array(8);
-  let sx = 0, sy = 0, steep = 0, nAsp = 0;
+  const els = [], slopes = [], sect = new Float64Array(8), lut = sunLUT(lat);
+  let sx = 0, sy = 0, steep = 0, nAsp = 0, sunSum = 0, nSun = 0;
   const classes = [0, 0, 0, 0, 0]; // <3°, 3-8°, 8-15°, 15-25°, >25°
   for (let y = 1; y < H - 1; y++) for (let x = 1; x < W - 1; x++) {
     const k = y * W + x;
@@ -616,6 +1169,11 @@ async function measureTerrain(id) {
     const s = Math.atan(Math.hypot(dzdx, dzdy)) * 180 / Math.PI;
     slopes.push(s);
     classes[s < 3 ? 0 : s < 8 ? 1 : s < 15 ? 2 : s < 25 ? 3 : 4]++;
+    {
+      // southern hemisphere: mirror the aspect so that north-facing reads as sun-facing
+      const aspS = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360 + (lat < 0 ? 180 : 0)) % 360;
+      sunSum += lut[Math.min(30, Math.round(s / 2)) * 24 + Math.round(aspS / 15) % 24]; nSun++;
+    }
     if (s >= 2) {
       // the direction the ground faces = downhill, as a compass bearing
       const asp = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360) % 360;
@@ -641,6 +1199,7 @@ async function measureTerrain(id) {
     sectors: [...sect].map((v) => v / totalSect), flatShare: 1 - nAsp / (sl.length || 1),
     dominant: SECTORS[dom], meanAspect: R > 0.2 ? (Math.atan2(sx, sy) * 180 / Math.PI + 360) % 360 : null, R,
     partial: !geomInView(x0, y0, x1, y1),
+    sun: nSun ? sunSum / nSun : null,
   };
   TERRAIN.set(id, out);
   return out;
@@ -683,7 +1242,7 @@ async function fillTerrain(p, token) {
     const t = await measureTerrain(p.id);
     const box = el();
     if (!box) return;
-    if (!t) { box.innerHTML = '<h3>Terrain</h3><p class="note">Zoom in on the place to measure its terrain.</p>'; return; }
+    if (!t) { box.innerHTML = '<h3>Terrain</h3><p class="note">Zoom in on the place to measure its terrain.</p>'; return null; }
     const pct = (v) => Math.round(v * 100);
     const rows = [
       ["Elevation", '<span class="num">' + fmtN(t.min) + "–" + fmtN(t.max) + " m</span>"],
@@ -696,6 +1255,7 @@ async function fillTerrain(p, token) {
       rows.push(["Faces", esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : "mixed") +
         ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>"]);
     }
+    if (fine && t.sun != null) rows.push(["Sun on the ground", '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">of flat ground, Apr–Oct, clear sky</span>']);
     const cls = ["Flat, under 3°", "Gentle, 3–8°", "Moderate, 8–15°", "Steep, 15–25°", "Very steep, 25°+"];
     box.innerHTML = '<h3>Terrain <button class="q" data-gloss="terrain" aria-label="About this data">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + terrainSentence(t) + "</p>" +
@@ -707,10 +1267,12 @@ async function fillTerrain(p, token) {
       (fine ? "" : "Zoom into a smaller place for slope and aspect. ") +
       (t.partial ? "Only the part of the place on screen was measured. " : "") +
       'Elevation: <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>.</p>';
+    return t;
   } catch (e) {
     console.warn("terrain", e);
     const box = el();
     if (box) box.innerHTML = '<h3>Terrain</h3><p class="note">The elevation tiles could not be loaded right now.</p>';
+    return null;
   }
 }
 
@@ -805,7 +1367,11 @@ async function select(p, feature) {
   renderSheet(p, d, rec, pd, parentRec);
   if (!feature && rec) fitTo(rec[6], p.level);
   if (WEB) {
-    fillTerrain(p, sheetToken);
+    const tok = sheetToken;
+    fillTerrain(p, tok).then((t) => fillClimate(p, d, rec, tok, t));
+    fillVintages(p, d, pd, tok);
+    fillSoil(p, d, rec, tok);
+    fillWiki(p, tok);
     try { history.replaceState(null, "", "#" + encodeURIComponent(p.id)); } catch (e) {}
   }
 }
@@ -820,6 +1386,7 @@ function badgeFor(p) {
   if (TOP.includes(p.rank)) return '<span class="badge top">' + esc(RANK_LABEL[p.rank]) + "</span>" + g(p.rank);
   if (p.rank === "premier_cru") return '<span class="badge pc">Premier cru</span>' + g("premier_cru");
   if (p.country === "DE" && p.level === "vineyard") return '<span class="badge de">Einzellage</span>' + g("einzellage");
+  if (p.country === "US") return '<span class="badge std">AVA' + (p.level === "subzone" ? " · nested" : "") + "</span>" + g("ava");
   return '<span class="badge std">' + esc(LEVEL_LABEL[p.level] || p.level) + "</span>" + g(p.level);
 }
 
@@ -840,7 +1407,7 @@ function summary(p, d, pd) {
   const lvl = { region: "wine region", appellation: "appellation", subzone: "named sub-zone", vineyard: p.country === "DE" ? "registered vineyard site (Einzellage)" : "climat" }[p.level] || "place";
   let t = esc(p.name) + " is " + (/^[aeiou]/i.test(kind || lvl) && !/^(DOC|DOCa|DOCG)/.test(kind) ? "an " : "a ") + (kind ? kind + " " : "") + lvl;
   if (p.parent) t += " of " + esc(p.parent);
-  t += " in " + esc({ FR: "France", IT: "Italy", ES: "Spain", DE: "Germany", CH: "Switzerland" }[p.country] || p.country);
+  t += " in " + esc(COUNTRY_EN[p.country] || p.country);
   const area = d.area_ha ?? null;
   if (area) t += ", covering " + fmtN(area, 1) + " ha";
   const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
@@ -912,8 +1479,20 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.register_no) rows.push(["Register no.", '<span class="num">' + esc(d.register_no) + "</span>"]);
   if (d.inao_office) rows.push(["INAO office", esc(d.inao_office)]);
   if (d.official_name && d.official_name !== p.name) rows.push(["Official name", esc(d.official_name)]);
+  if (d.aka) rows.push(["Also known as", esc(d.aka)]);
+  if (d.states?.length) rows.push(["State", esc(d.states.join(", "))]);
+  if (d.counties?.length) rows.push(["County", esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " and " + (d.counties.length - 12) + " more" : ""))]);
+  if (d.within?.length) rows.push(["Within", d.within.map((w) => { const r = byName.get(norm(w)); return r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(w) + "</button>" : esc(w); }).join(", ")]);
+  if (d.petitioner) rows.push(["Petitioned by", esc(d.petitioner)]);
+  if (d.cfr) rows.push(["Legal text", d.cfr_url ? '<a href="' + esc(d.cfr_url) + '" target="_blank" rel="noopener">' + esc(d.cfr) + "</a>" : esc(d.cfr)]);
   if (rows.length) html += '<div class="sec"><h3>Key facts</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
-  if (WEB) html += '<div class="sec" id="terrain-sec"><h3>Terrain</h3><div class="note terrain-wait"><i></i>Measuring elevation, slope and aspect…</div></div>';
+  if (WEB) {
+    const wait = (t) => '<div class="note terrain-wait"><i></i>' + t + "</div>";
+    html += '<div class="sec" id="terrain-sec"><h3>Terrain</h3>' + wait("Measuring elevation, slope and aspect…") + "</div>";
+    html += '<div class="sec" id="climate-sec"><h3>Climate</h3>' + wait("Reading 35 years of weather…") + "</div>";
+    html += '<div class="sec" id="vint-sec"><h3>Vintages</h3><div id="vint-ed"></div><div id="vint-clim">' + wait("Ranking the vintages…") + "</div></div>";
+    html += '<div class="sec" id="soil-sec"><h3>Soil</h3>' + wait("Reading the soil model…") + "</div>";
+  }
 
   // wine rules
   const wines = d.wines || pd.wines;
@@ -961,9 +1540,11 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
       (d.communes.length > 80 ? " and " + (d.communes.length - 80) + " more" : "") + "</div></div>";
   }
   if (d.note) html += '<p class="note">' + esc(d.note) + "</p>";
+  if (d.boundary_text) html += '<details class="sec2"><summary>Legal boundary description</summary><p class="note" style="white-space:pre-line">' + esc(d.boundary_text) + "</p></details>";
 
+  if (WEB) html += '<div class="sec" id="wiki-sec"></div>';
   // read more
-  const lang = { FR: "fr", IT: "it", ES: "es", DE: "de", CH: "de" }[p.country] || "en";
+  const lang = LANG[p.country] || "en";
   const links = [];
   links.push('<a href="https://' + lang + ".wikipedia.org/w/index.php?search=" + encodeURIComponent(p.name + " " + (p.country === "DE" ? "Weinlage" : "vin")) + '" target="_blank" rel="noopener">Wikipedia</a>');
   if (d.lat) {
@@ -1041,7 +1622,7 @@ document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
   map.fitBounds(v, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 370 : 20, right: 20 }, duration: 1300 });
 });
 $("moreBtn").onclick = () => { const r = $("rail"); r.classList.toggle("more"); $("moreBtn").setAttribute("aria-expanded", r.classList.contains("more")); };
-const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win", relief: "lg-relief" };
+const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win" };
 function applyLegend() {
   const on = (g) => $(GROUPS[g]).checked;
   LAYERS.forEach(([id, g]) => {
@@ -1077,6 +1658,9 @@ const GLOSS = {
   pago: ["Vino de Pago", "A Spanish appellation for a single estate with a distinctive terroir. The estate itself is the appellation."],
   einzellage: ["Einzellage", "A registered single vineyard in Germany. On the label it follows the village name in adjectival form: Wehlener Sonnenuhr is the Sonnenuhr site of Wehlen. The VDP growers' association uses its own private ranking (Grosse Lage, Erste Lage), which is separate from this official register."],
   grosslage: ["Großlage", "A group of neighbouring Einzellagen that may share one name on the label, such as Piesporter Michelsberg. Because it reads like a single site it is often criticised, and recent German wine law limits how it can be used."],
+  climate: ["Climate", "Daily weather from 1991 to 2025 for the centre of the place, from the ERA5-Land reanalysis (about 9 km cells) served by Open-Meteo, adjusted to the measured elevation. Growing season means April to October in the northern hemisphere. Growing degree days (Winkler) add up each day's mean above 10 °C. The Huglin index weights daytime warmth from April to September and the latitude. Typical grape matches follow the growing season temperature bands of Gregory Jones (2006). A vintage's warmth rank compares it with all seasons since 1991."],
+  soil: ["Soil", "Soil texture (sand, silt, clay), pH, stones and organic carbon from SoilGrids 2.0 by ISRIC, a global soil model at 250 m. Topsoil is 0 to 30 cm, subsoil 30 to 100 cm. Vineyard soils change over a few metres, so treat this as the soil family of the area, then check local soil maps."],
+  ava: ["AVA", "American Viticultural Area: a grape-growing region defined by the US Alcohol and Tobacco Tax and Trade Bureau (TTB) in 27 CFR part 9. If an AVA appears on the label, at least 85% of the grapes come from it. AVAs can sit inside larger AVAs, like Oakville inside Napa Valley."],
   terrain: ["Terrain", "Elevation, slope and aspect are measured live from open elevation models served by Mapterhorn: IGN RGE ALTI in France, DGM1 lidar in Germany, swissALTI3D in Switzerland, IGN MDT in Spain, regional models in parts of Italy, and Copernicus GLO-30 (30 m) elsewhere. Slope uses the Horn method on each cell. Aspect is the compass direction the ground faces, counted only where the slope is 2° or more. The rose shows how much of the place faces each direction. For a large appellation the cells are coarse, so read slope and aspect on single vineyards."],
   bedrock: ["Regional bedrock", "Rock type under the place, sampled from the Global Lithological Map by Hartmann and Moosdorf (2012). The map works at about 1:3.75 million, so it shows the geology of the wider area. Local soils, such as the marl and limestone mosaic of a Burgundy slope, can differ."],
 };
@@ -1103,9 +1687,10 @@ function openGuide() {
 }
 document.addEventListener("click", (e) => { const q = e.target.closest("[data-gloss]"); if (q) { e.stopPropagation(); openGloss(q.dataset.gloss); } });
 $("openGuide").onclick = openGuide;
+$("openVintages").onclick = () => openVintages();
 
 // ---------- modal: open data + suggestions
-function openModal(html) { $("modalCard").innerHTML = '<button class="x" id="mclose" aria-label="Close">✕</button>' + html; $("modal").hidden = false; $("mclose").onclick = closeModal; }
+function openModal(html, wide) { $("modalCard").className = "card" + (wide ? " wide" : ""); $("modalCard").innerHTML = '<button class="x" id="mclose" aria-label="Close">✕</button>' + html; $("modal").hidden = false; $("mclose").onclick = closeModal; }
 function closeModal() { $("modal").hidden = true; }
 $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
 function openData() {
@@ -1114,9 +1699,10 @@ function openData() {
   openModal("<h2>Open data &amp; sources</h2><p>Every outline on this map comes from an official or community register published under an open licence. " +
     "The atlas keeps one simple schema for all countries, so anyone can add a region by converting one more dataset.</p>" +
     '<div class="tbl"><table><tr><th>Layer</th><th>Source</th><th>Licence</th></tr>' +
-    [["France: AOC, premiers crus, climats (parcel level)", "inao"], ["Italy, Spain, Germany: DOP outlines (communes)", "eupdo"],
+    [["France: AOC, premiers crus, climats (parcel level)", "inao"], ["Italy, Spain, Germany and 17 more EU countries: PDO outlines (communes)", "eupdo"],
      ["Germany: Einzellagen and Großlagen", "rlp"], ["Switzerland: cantonal AOC outlines", "bfs"], ["Wineries, Swiss vineyards, rivers, lakes", "osm"]]
-      .concat(WEB ? [["Relief, elevation, slope and aspect", "dem"]] : [])
+      .concat([["United States: AVAs", "ava"]])
+      .concat(WEB ? [["Relief, elevation, slope and aspect", "dem"], ["Climate and vintage weather", "meteo"], ["Soil", "soil"], ["Satellite map", "eox"], ["Topographic map", "otm"]] : [])
       .map(([l, k]) => "<tr><td>" + l + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
     "</table></div>" +
     '<p class="note">Places per country: ' + Object.entries(counts).map(([c, n]) => c + " " + fmt(n)).join(" · ") +
@@ -1187,7 +1773,7 @@ map.on("load", async () => {
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
     addBase();
-    if (WEB) addRelief();
+    if (WEB) { addRelief(); addRasters(); }
     hideLoading();
     showLoading("Loading appellations…");
     await loadArchive("overview.pmtiles");
@@ -1201,6 +1787,7 @@ map.on("load", async () => {
     applyLegend();
     ensureDetail();
     map.on("moveend", ensureDetail);
+    if (WEB) { setBase(store.get("base") || "dark"); setOverlay(store.get("overlay") || "relief"); }
     // deep link: #<place id>
     const hid = decodeURIComponent(location.hash.slice(1));
     if (hid && byId.has(hid)) goTo(byId.get(hid));

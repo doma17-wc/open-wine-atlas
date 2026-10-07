@@ -12,7 +12,7 @@ from common import BUILD, ROOT
 
 WEB = os.path.join(ROOT, "web", "data")
 FILES = ["fr_appellations.geojsonl", "fr_denominations.geojsonl", "eu_appellations.geojsonl",
-         "ch_appellations.geojsonl", "de_einzellagen.geojsonl", "de_grosslagen.geojsonl"]
+         "ch_appellations.geojsonl", "de_einzellagen.geojsonl", "de_grosslagen.geojsonl", "us_appellations.geojsonl"]
 ORDER = {"region": 0, "appellation": 1, "subzone": 2, "vineyard": 3}
 
 
