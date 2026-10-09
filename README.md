@@ -19,7 +19,7 @@ Live: https://open-wine-atlas.vercel.app
 | 17 more EU countries | 337 PDO outlines: Austria, Portugal, Greece, Hungary, Romania, Bulgaria, Croatia, Slovenia, Czechia, Slovakia, Belgium, Cyprus, the Netherlands, UK, Malta, Denmark, Luxembourg | Candiago et al. 2022 | CC BY 4.0 |
 | United States | 276 AVAs with legal text, hierarchy, states and counties | UC Davis Library AVA project (27 CFR part 9) | CC0 1.0 |
 | Switzerland | 13 cantonal AOC outlines (canton boundary), OSM vineyard areas | BFS GEOSTAT / swisstopo; OpenStreetMap | Open use with attribution; ODbL |
-| Australia | 100 GIs: zones, regions, subregions; Tasmania from the state outline | Wine Australia GI register via adynak/WineRegions; geoBoundaries | CC BY 4.0 (Wine Australia) |
+| Australia | 100 GIs: zones, regions, subregions; the 14 subregions from the official Wine Australia layer, the rest via adynak/WineRegions; Tasmania from the state outline | Wine Australia; geoBoundaries | CC BY 4.0 (Wine Australia) |
 | Chile | 117 DOs: 6 regions, 18 subregions, 8 zones, areas, by comuna | Decreto 464/1994 (consolidated 2026) + geoBoundaries CHL ADM3 | CC BY 3.0 IGO |
 | Argentina | 100 IGs and both DOCs, by department; 14 parajes as markers | INV resolutions (list of 18 April 2024 plus 2025) + geoBoundaries ARG ADM2 | CC BY 3.0 IGO |
 | South Africa | 56 Wine of Origin units: geographical units, regions, districts, wards | Wine of Origin Scheme + geoBoundaries ZAF ADM1/ADM3 | CC BY 3.0 IGO |
@@ -162,8 +162,9 @@ geoBoundaries gbOpen (Runfola et al. 2020); each place shows the licence of its 
 * Spain: MAPA "Zonas de calidad diferenciada: vinos" layer, Priorat vi de vila and paratges.
 * Australia: the official Wine Australia GI layer (CC BY 4.0, ArcGIS FeatureServer
   `services6.arcgis.com/s8j6JbJJCqmhNgh7/arcgis/rest/services/Wine_Geographical_Indications_Australia/FeatureServer`,
-  layers 0 subregions, 1 regions, 2 zones) to replace the adynak copy. It is not reachable from the build
-  environment: download the three layers as GeoJSON and commit them to `raw/au_official/`.
+  layers 0 subregions, 1 regions, 2 zones) to replace the adynak copy. Subregions are in
+  `pipeline/world/au_official_subregions.geojson`; save the regions and zones layers next to it as
+  `au_official_regions.geojson` and `au_official_zones.geojson` and `world.py` uses them automatically.
 * New Zealand (IPONZ GI boundary files), South Africa (SAWIS demarcations), British Columbia (sub-GI schedule maps),
   Ontario (O. Reg. 359/24 areas): official boundaries exist only as PDFs or behind restrictive terms.
 * Russia, Albania, Kosovo, Peru, Bolivia, Morocco, Tunisia: wine regions not yet mapped.

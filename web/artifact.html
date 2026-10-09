@@ -507,6 +507,7 @@ const SOURCES = {
   eox: { name: "Sentinel-2 cloudless 2025 by EOX IT Services (contains modified Copernicus Sentinel data); IGN France, swisstopo and IGN España orthophotos up close", license: "CC BY-NC-SA 4.0 (EOX); open licences (national orthophotos)", url: "https://s2maps.eu" },
   otm: { name: "OpenTopoMap (data © OpenStreetMap contributors, SRTM)", license: "CC BY-SA 3.0", url: "https://opentopomap.org" },
   geob: { name: "geoBoundaries gbOpen (Runfola et al. 2020): the administrative units named in each country's wine law", license: "Per country: CC BY, ODbL, OGL or public domain (shown on each place)", url: "https://www.geoboundaries.org" },
+  wao: { name: "Wine Australia, Wine Geographical Indications Australia (official GI layer)", license: "CC BY 4.0", url: "https://wineaustralia-opendata-wineaustralia.hub.arcgis.com/datasets/2dd4c385f0ed4d109c2e18ae99e819e2" },
   wa: { name: "Wine Australia, Register of Protected GIs (outlines via adynak/WineRegions)", license: "CC BY 4.0 (Wine Australia)", url: "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications" },
   marker: { name: "Open Wine Atlas contributors: location of the namesake town", license: "CC BY 4.0", url: "https://github.com/doma17-wc/open-wine-atlas" },
   dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
@@ -1697,7 +1698,7 @@ function wineTable(wines) {
 let sheetToken = 0;
 function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   sheetToken++;
-  const src = SOURCES[p.src === "world" ? (d.outline_quality === "point" ? "marker" : p.country === "AU" && d.state ? "wa" : "geob") : p.src] || {};
+  const src = SOURCES[p.src === "world" ? (d.outline_quality === "point" ? "marker" : p.country === "AU" && d.state ? (d.gi_url ? "wao" : "wa") : "geob") : p.src] || {};
   $("sh-head").innerHTML =
     '<div class="eyebrow"><span>' + esc(COUNTRY[p.country] || p.country) + "</span><span>·</span><span>" + esc(d.type || LEVEL_LABEL[p.level]) + "</span></div>" +
     "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p, d) + "</div>" +
@@ -1739,6 +1740,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.states?.length) rows.push(["State", esc(d.states.join(", "))]);
   if (d.state) rows.push(["State", esc(d.state)]);
   if (d.register_ref) rows.push(["Legal act", esc(d.register_ref)]);
+  if (d.vine_area_ha) rows.push(["Vineyards planted", '<span class="num">' + fmtN(d.vine_area_ha) + " ha</span>" + ' <span class="note">Wine Australia</span>']);
+  if (d.gi_url) rows.push(["Register", '<a href="' + esc(d.gi_url) + '" target="_blank" rel="noopener">Wine Australia GI page</a>']);
   if (d.basis) rows.push(["Legal basis", esc(d.basis)]);
   if (d.outline_source) rows.push(["Outline data", esc(d.outline_source.name) + ' <span class="note">· ' + esc(d.outline_source.licence) + "</span>"]);
   if (d.counties?.length) rows.push(["County", esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " and " + (d.counties.length - 12) + " more" : ""))]);

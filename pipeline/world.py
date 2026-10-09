@@ -28,12 +28,15 @@ from shapely.geometry import Point, mapping, shape
 from common import BUILD, RAW, norm, round_geom, slug, write_details
 from world_specs import SPECS
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+
 GEOD = Geod(ellps="WGS84")
 OUTLINE_TEXT = {
     "legal": "Built from the administrative units that the legal definition names.",
     "approx": "Built from the administrative units that contain the area. The legal boundary follows other lines (roads, rivers, farms or altitude), so the real area is smaller.",
     "point": "Shown as a point at the place it is named after. The registered area is much smaller than any administrative unit, and its boundary is not yet available as open data.",
     "au": "From the Wine Australia GI register, via the adynak/WineRegions copy.",
+    "au_official": "Official outline from Wine Australia's Geographical Indications layer (CC BY 4.0).",
     "au_gap": "From the Wine Australia GI register, via the adynak/WineRegions copy. A short stretch of the boundary is missing in that copy and is closed with a straight line; the official Wine Australia outline will replace it.",
     "au_point": "Shown as a point: the copy of this boundary available to the atlas is incomplete. The official Wine Australia outline will replace it.",
 }
@@ -168,7 +171,20 @@ AU_STATES = {norm(x) for x in ["New South Wales", "New Souuth Wales", "Victoria"
 AU_FIX = {norm("South West Australiia"): "South West Australia"}
 
 
+def load_au_official():
+    """Official Wine Australia GI layers (CC BY 4.0) committed as pipeline/world/au_official_<layer>.geojson.
+    Download from the FeatureServer in README; any layer present replaces the adynak copy for its GIs."""
+    off = {}
+    for path in sorted(glob.glob(os.path.join(HERE, "world", "au_official_*.geojson"))):
+        for ft in json.load(open(path, encoding="utf-8"))["features"]:
+            p = ft["properties"]
+            if ft.get("geometry") and p.get("GI_NAME"):
+                off[norm(p["GI_NAME"])] = (shapely.make_valid(shape(ft["geometry"])), p)
+    return off
+
+
 def build_australia(out, details):
+    official = load_au_official()
     feats = {}
     for path in sorted(glob.glob(os.path.join(RAW, "au", "*.geojson"))):
         data = json.load(open(path, encoding="utf-8"))
@@ -184,6 +200,13 @@ def build_australia(out, details):
         cut = (gap > 0.2, gap > 0.02)
         within = [AU_FIX.get(norm(w), w.strip()) for w in str(p.get("within") or "").split("|") if w.strip()]
         feats[norm(name)] = (name, shapely.make_valid(g), cut, within, p, os.path.basename(path).split("__")[0].replace("_", " "))
+    used = 0
+    for k, (og, op) in official.items():
+        if k in feats:
+            name, _, _, within, p, state = feats[k]
+            feats[k] = (name, og, (False, 0), within, dict(p, official=op), state)
+            used += 1
+    print(f"  Australia: {used} GIs from the official Wine Australia layer, {len(feats) - used} from the adynak copy")
     names = {k: v[0] for k, v in feats.items()}
     for k, (name, g, cut, within, p, state) in feats.items():
         level = "region" if k in AU_ZONES else "subzone" if k in AU_SUB else "appellation"
@@ -200,11 +223,14 @@ def build_australia(out, details):
         ol = "point" if broken else "legal"
         out.append({"type": "Feature", "geometry": mapping(round_geom(geom, 5)),
                     "properties": {"id": pid, "name": name, "country": "AU", "level": level, "rank": "", "parent": parent,
-                                   "src": "marker" if broken else "wa", "ol": ol}})
+                                   "src": "marker" if broken else "wao" if p.get("official") else "wa", "ol": ol}})
+        op = p.get("official") or {}
         d = {"type": kind + " (Wine Australia)", "state": state,
              "basis": "Wine Australia Act 2013; Register of Protected GIs and Other Terms.",
-             "outline": OUTLINE_TEXT["au_point" if broken else "au_gap" if gap else "au"], "outline_quality": ol,
-             "registered": str(p.get("created"))[:10] if p.get("created") not in (None, "None", "") else None,
+             "outline": OUTLINE_TEXT["au_official" if op else "au_point" if broken else "au_gap" if gap else "au"], "outline_quality": ol,
+             "registered": str(op["YEAR_REGISTER"]) if op.get("YEAR_REGISTER") else
+                           str(p.get("created"))[:10] if p.get("created") not in (None, "None", "") else None,
+             "register_no": op.get("GI_NUMBER"), "vine_area_ha": op.get("VINE_AREA_HA"), "gi_url": op.get("GI_URL"),
              "outline_area_ha": None if broken else round(area_ha(g)),
              "contains": [c.strip() for c in str(p.get("contains") or "").split("|") if c.strip() and c.strip() != "None"] or None,
              "lat": round(lp.y, 5), "lon": round(lp.x, 5)}

@@ -27,7 +27,7 @@ from build_tiles import TMP, WEB, labels_for, tippecanoe, write_geojsonl
 from common import BUILD, norm
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-WORLD_SRC = ["geob", "wa", "marker"]
+WORLD_SRC = ["geob", "wa", "wao", "marker"]
 TILE_JOIN = os.environ.get("TILE_JOIN", "tile-join")
 ORDER = {"region": 0, "appellation": 1, "subzone": 2, "vineyard": 3}
 
