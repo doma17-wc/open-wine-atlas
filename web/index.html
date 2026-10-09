@@ -340,12 +340,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 .tabs2 button[aria-pressed="true"] { color: var(--night); background: var(--parchment); border-color: var(--parchment); }
 
 /* ---------- relief: 3D toggle + terrain section of the sheet */
-.relief-btn { position: absolute; top: 16px; right: 16px; z-index: 2; display: flex; gap: 0; border: 1px solid var(--line); border-radius: 999px;
-  background: var(--panel); overflow: hidden; }
+.viewbar { position: absolute; top: 16px; right: 16px; z-index: 2; display: flex; gap: 8px; }
+.relief-btn { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); overflow: hidden; }
+.relief-btn[hidden] { display: none; }
 .relief-btn button { all: unset; cursor: pointer; padding: 7px 12px; font: 500 11.5px var(--f-mono); letter-spacing: .08em; color: var(--muted); }
 .relief-btn button[aria-pressed="true"] { color: var(--night); background: var(--parchment); }
 .relief-btn button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.sheet.open ~ .relief-btn { right: 412px; }
+.sheet.open ~ .viewbar { right: 412px; }
 .terrain { display: grid; grid-template-columns: 1fr 112px; gap: 10px 16px; align-items: start; }
 .terrain .facts { grid-column: 1; }
 .terrain svg { grid-column: 2; grid-row: 1 / span 2; width: 112px; height: 112px; }
@@ -358,8 +359,8 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 @keyframes spin { to { transform: rotate(360deg); } }
 
 @media (max-width: 760px) {
-  .relief-btn { top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); right: 16px; }
-  .sheet.open ~ .relief-btn { display: none; }
+  .viewbar { top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); right: 16px; }
+  .sheet.open ~ .viewbar { display: none; }
   .rail { width: calc(100% - 32px); }
   .legend, .rail-foot, .mapsel, .chip-x { display: none; }
   .rail.more .chip-x { display: inline-block; }
@@ -452,8 +453,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="body" id="sh-body"></div>
 </aside>
 
-<div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" hidden>
-  <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
+<div class="viewbar" id="viewbar">
+  <div class="relief-btn" id="projBtn" role="group" aria-label="Globe or flat map">
+    <button id="btnGlobe" aria-pressed="true" title="The world as a globe (G)">Globe</button><button id="btnFlat" aria-pressed="false" title="Flat map (G)">Flat</button>
+  </div>
+  <div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" hidden>
+    <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
+  </div>
 </div>
 <div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
@@ -497,6 +503,7 @@ const LANG = { FR: "fr", IT: "it", ES: "es", DE: "de", CH: "de", AT: "de", PT: "
   SI: "sl", CZ: "cs", SK: "sk", BE: "fr", CY: "el", NL: "nl", GB: "en", MT: "en", DK: "da", LU: "fr", US: "en",
   AU: "en", NZ: "en", ZA: "en", CL: "es", AR: "es", BR: "pt", UY: "es", CA: "en", MX: "es", GE: "en", MD: "ro", UA: "en", AM: "en",
   TR: "tr", IL: "en", LB: "en", RS: "en", MK: "en", ME: "en", BA: "en", JP: "en", CN: "en", IN: "en" };
+const EUROPE = [[-9.5, 36.2], [17.5, 54.5]];
 const VIEWS = { FR: [[-5.2, 42.3], [8.3, 51.1]], IT: [[6.6, 36.6], [18.6, 47.1]], ES: [[-9.4, 36.0], [3.4, 43.8]],
   DE: [[5.9, 47.3], [15.0, 55.1]], CH: [[5.95, 45.8], [10.5, 47.85]], AT: [[9.5, 46.4], [17.2, 49.0]], PT: [[-9.6, 36.9], [-6.2, 42.2]],
   GR: [[19.4, 34.8], [28.3, 41.8]], HU: [[16.1, 45.7], [22.9, 48.6]], US: [[-125, 24.5], [-66.9, 49.4]],
@@ -585,6 +592,10 @@ function loadArchive(file) {
 const pmUrl = (file) => "pmtiles://" + (WEB ? base + "data/" + file : file);
 
 // ---------- map
+// globe or flat: the viewer's last choice, globe by default. MapLibre's globe turns into the flat map by itself around zoom 11-12.
+const startGlobe = (() => { try { return localStorage.getItem("owa.proj") !== "flat"; } catch (e) { return true; } })();
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const INTRO = startGlobe && !REDUCED && !location.hash.slice(1);
 const map = new maplibregl.Map({
   container: "map",
   style: {
@@ -592,8 +603,10 @@ const map = new maplibregl.Map({
     glyphs: WEB ? base + "fonts/{fontstack}/{range}.pbf" : "glyphs://{fontstack}/{range}",
     sources: {},
     layers: [{ id: "bg", type: "background", paint: { "background-color": C.water } }],
+    projection: { type: startGlobe ? "globe" : "mercator" },
   },
-  bounds: [[-9.5, 36.2], [17.5, 54.5]],
+  // with the globe the atlas opens on the whole earth and flies in to Europe once the base map is drawn
+  ...(INTRO ? { center: [12, 32], zoom: 1.4 } : { bounds: EUROPE }),
   fitBoundsOptions: { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 } },
   minZoom: 1, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
   attributionControl: false,
@@ -766,10 +779,12 @@ function set3d(on) {
   $("btn2d").setAttribute("aria-pressed", String(!on)); $("btn3d").setAttribute("aria-pressed", String(on));
   if (on) {
     map.setTerrain({ source: "dem3d", exaggeration: 1.4 });
-    try { map.setSky({ "sky-color": "#121216", "horizon-color": "#1d1d22", "fog-color": "#0b0b0d", "sky-horizon-blend": 0.6, "horizon-fog-blend": 0.7, "fog-ground-blend": 0.2 }); } catch (e) {}
-    if (map.getPitch() < 30) map.easeTo({ pitch: 62, bearing: map.getBearing() || -12, duration: 1100 });
+    applySky();
+    // seen from far out the whole globe would tip over: tilt less until the viewer is close to the ground
+    if (map.getPitch() < 30) map.easeTo({ pitch: map.getZoom() < 5 ? 40 : 62, bearing: map.getBearing() || -12, duration: 1100 });
   } else {
     map.setTerrain(null);
+    applySky();
     map.easeTo({ pitch: 0, bearing: 0, duration: 900 });
   }
 }
@@ -863,6 +878,7 @@ function applyTheme() {
   // the cadastre is drawn in dark ink: invert it on the dark map
   setP("cadastre", "raster-brightness-min", baseMap === "dark" ? 1 : 0); setP("cadastre", "raster-brightness-max", baseMap === "dark" ? 0 : 1);
   document.documentElement.dataset.base = baseMap;
+  applySky();
 }
 const OV_LEGEND = {
   none: "",
@@ -887,6 +903,48 @@ function setOverlay(o) {
   $("ovLegend").innerHTML = OV_LEGEND[overlay];
   store.set("overlay", overlay);
 }
+
+// ---------- globe: sky, atmosphere and the space around the earth follow the base map
+const SKY = {
+  dark: { sky: "#121216", horizon: "#1d1d22", fog: "#0b0b0d", space: "#060607" },
+  light: { sky: "#e7e1d5", horizon: "#f1ebdf", fog: "#f1ebdf", space: "#e4ddd0" },
+  satellite: { sky: "#0e131b", horizon: "#1d2633", fog: "#06080b", space: "#020203" },
+  topo: { sky: "#e3e8ea", horizon: "#f2f4f4", fog: "#f2f4f4", space: "#dfe4e6" },
+};
+let isGlobe = startGlobe;
+function applySky() {
+  const s = SKY[baseMap] || SKY.dark;
+  try {
+    map.setSky({ "sky-color": s.sky, "horizon-color": s.horizon, "fog-color": s.fog, "sky-horizon-blend": 0.6, "horizon-fog-blend": 0.7,
+      "fog-ground-blend": is3d ? 0.2 : 0,
+      // the glow around the earth: full far out, gone by the time the map is flat
+      "atmosphere-blend": isGlobe ? ["interpolate", ["linear"], ["zoom"], 0, 0.9, 4, 0.7, 8, 0] : 0 });
+  } catch (e) {}
+  $("map").style.background = isGlobe ? s.space : "";
+}
+function setGlobe(on, save = true) {
+  isGlobe = on;
+  $("btnGlobe").setAttribute("aria-pressed", String(on)); $("btnFlat").setAttribute("aria-pressed", String(!on));
+  map.setProjection({ type: on ? "globe" : "mercator" });
+  applySky();
+  if (save) store.set("proj", on ? "globe" : "flat");
+}
+$("btnGlobe").onclick = () => !isGlobe && setGlobe(true);
+$("btnFlat").onclick = () => isGlobe && setGlobe(false);
+// the zoom at which the whole earth fits the free part of the screen
+function worldZoom() {
+  const wide = innerWidth > 760, w = innerWidth - (wide ? 380 : 0), h = innerHeight;
+  if (!isGlobe) return wide ? (innerWidth > 1100 ? 1.2 : 1) : 1;
+  return Math.max(0.6, Math.log2((wide ? 0.8 : 0.94) * Math.min(w, h) * Math.PI / 512));
+}
+function flyToWorld(duration = 1600) {
+  const wide = innerWidth > 760;
+  if (!isGlobe) { map.flyTo({ center: [wide ? -10 : 20, 12], zoom: worldZoom(), duration }); return; }
+  // turn the globe from wherever the viewer is now
+  map.flyTo({ center: [map.getCenter().lng, 18], zoom: worldZoom(), pitch: 0, bearing: 0, duration,
+    padding: { top: 0, bottom: 0, left: wide ? 380 : 0, right: 0 }, essential: true });
+}
+
 if (WEB) {
   document.querySelectorAll("#baseSeg button").forEach((b) => b.onclick = () => setBase(b.dataset.base));
   document.querySelectorAll("#ovSeg button").forEach((b) => b.onclick = () => setOverlay(b.dataset.ov));
@@ -1584,7 +1642,11 @@ map.on("mousemove", (e) => {
 map.on("mouseout", () => { tag.hidden = true; });
 map.on("click", (e) => {
   const f = pick(e.point);
-  if (f) select(f.properties, f); else closeSheet();
+  if (!f) { closeSheet(); return; }
+  select(f.properties, f);
+  // seen from far away (the globe, a whole country) the click flies in to the place; close up the map stays put
+  const rec = byId.get(f.properties.id);
+  if (rec && rec[6] && fitZoom(rec[6], f.properties.level) - map.getZoom() > 1.5) fitTo(rec[6], f.properties.level);
 });
 
 function clearSelected() {
@@ -1637,10 +1699,18 @@ async function select(p, feature) {
     try { history.replaceState(null, "", "#" + encodeURIComponent(p.id)); } catch (e) {}
   }
 }
+const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
+const fitPad = () => { const wide = innerWidth > 760; return { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 380 : 30, right: wide ? 420 : 30 }; };
+// the zoom fitTo would land on
+function fitZoom(b, level) {
+  const cam = map.cameraForBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level) });
+  return cam && cam.zoom != null ? cam.zoom : fitMaxZ(b, level);
+}
 function fitTo(b, level) {
-  const maxZ = b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
-  const wide = innerWidth > 760;
-  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 380 : 30, right: wide ? 420 : 30 }, maxZoom: maxZ, duration: 1400, essential: true });
+  // from far out, or to the other side of the earth, the flight takes longer so the turn of the globe reads
+  const km = map.getCenter().distanceTo(new maplibregl.LngLat((b[0] + b[2]) / 2, (b[1] + b[3]) / 2)) / 1000;
+  const far = map.getZoom() < 4 || km > 2500 ? Math.min(3600, 2200 + km / 10) : 1400;
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level), duration: REDUCED ? 0 : far, essential: true });
 }
 
 const worldType = (p, d) => (/-world-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
@@ -1898,7 +1968,7 @@ document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search
 // ---------- country chips, legend
 document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
   // the whole world only fits at the lowest zoom: centre it beside the panel
-  if (b.dataset.c === "WORLD") { map.flyTo({ center: [innerWidth > 760 ? -10 : 20, 12], zoom: innerWidth > 1100 ? 1.2 : 1, duration: 1300 }); return; }
+  if (b.dataset.c === "WORLD") { flyToWorld(1500); return; }
   const v = VIEWS[b.dataset.c];
   map.fitBounds(v, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 370 : 20, right: 20 }, duration: 1300 });
 });
@@ -2451,6 +2521,7 @@ document.addEventListener("keydown", (e) => {
   if (e.target.closest("input, textarea, select")) return;
   if (e.key === "/") { e.preventDefault(); qEl.focus(); }
   else if (e.key === "m" || e.key === "M") { $("dash").hidden ? openDash() : closeDash(); }
+  else if ((e.key === "g" || e.key === "G") && !e.metaKey && !e.ctrlKey) setGlobe(!isGlobe);
   else if (e.key === "Escape" && !$("dash").hidden) closeDash();
 });
 
@@ -2472,7 +2543,9 @@ map.on("load", async () => {
     $("count").textContent = fmt(INDEX.length);
     addBase();
     if (WEB) { addRelief(); addRasters(); }
+    setGlobe(startGlobe, false);
     hideLoading();
+    if (INTRO) map.fitBounds(EUROPE, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 }, duration: 2600, essential: true });
     showLoading("Loading appellations…");
     await loadArchive("overview.pmtiles");
     addOverview();

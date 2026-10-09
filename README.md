@@ -119,6 +119,14 @@ Press **My atlas** (or the M key) for a dashboard that stays on the visitor's de
 Saved places show as gold rings on the map, tastings as copper rings. With a terrain overlay on, the cursor shows
 elevation, slope and exposure under it.
 
+## Globe
+
+The atlas opens on a globe and flies in to Europe. Globe / Flat (top right, or the G key) switches between the
+globe and the flat map; the choice is remembered in the browser. The globe turns into the flat map by itself
+close in (MapLibre does this around zoom 11 to 12), so parcels look the same in both. World shows the whole
+earth, the country buttons fly across it, and a click on a place seen from far out flies in to it. The base
+map cuts Russia and Fiji at the date line (`pipeline/basemap.py`) so no outline runs round the earth.
+
 ## Terrain
 
 The web build adds a hillshade, a 2D/3D switch and a Terrain section on every sheet. When you open a
