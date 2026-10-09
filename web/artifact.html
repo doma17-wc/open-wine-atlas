@@ -596,12 +596,27 @@ const map = new maplibregl.Map({
   },
   // with the globe the atlas opens on the whole earth and flies in to Europe once the base map is drawn
   ...(INTRO ? { center: [12, 32], zoom: 1.4 } : { bounds: EUROPE }),
-  fitBoundsOptions: { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 } },
+  fitBoundsOptions: { padding: { top: 40, bottom: 40, left: 20, right: 20 } },
   minZoom: 1, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
   attributionControl: false,
   dragRotate: true, pitchWithRotate: true,
 });
 window.__map = map; // handy for debugging in the console
+// the left rail covers part of the map on wide screens: give the map that much padding, so the globe, the flat
+// world and every flight are centred in the free part of the screen. Fits add their own padding on top.
+const railPad = () => ({ top: 0, bottom: 0, right: 0, left: innerWidth > 760 ? 370 : 0 });
+const VIEW_PAD = { top: 40, bottom: 40, left: 20, right: 20 };
+map.setPadding(railPad());
+if (!INTRO) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 0 });
+addEventListener("resize", () => { map.setPadding(railPad()); map.setMinZoom(isGlobe ? Math.max(0, worldZoom() - 0.8) : 0.6); });
+// far out the earth is seen straight on. Tilt is allowed from zoom 2 and in full from zoom 5, so zooming out
+// from a tilted 3D view no longer pushes the globe off centre.
+const pitchCap = (z) => Math.max(0, Math.min(1, (z - 2) / 3)) * 78;
+let wantPitch = 0; // the tilt the viewer chose, restored when they zoom back in
+function capPitch() { const c = pitchCap(map.getZoom()); if (Math.abs(map.getMaxPitch() - c) > 0.25) map.setMaxPitch(c); }
+capPitch();
+map.on("zoom", () => { if (!map.isEasing()) capPitch(); });
+map.on("pitchend", (e) => { if (e.originalEvent && is3d) wantPitch = map.getPitch(); });
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
 map.addControl(new maplibregl.ScaleControl({ maxWidth: 90 }), "bottom-left");
 
@@ -770,9 +785,11 @@ function set3d(on) {
     map.setTerrain({ source: "dem3d", exaggeration: 1.4 });
     applySky();
     // seen from far out the whole globe would tip over: tilt less until the viewer is close to the ground
-    if (map.getPitch() < 30) map.easeTo({ pitch: map.getZoom() < 5 ? 40 : 62, bearing: map.getBearing() || -12, duration: 1100 });
+    wantPitch = 62;
+    if (map.getPitch() < 30) map.easeTo({ pitch: Math.min(wantPitch, pitchCap(map.getZoom())), bearing: map.getBearing() || -12, duration: 1100 });
   } else {
     map.setTerrain(null);
+    wantPitch = 0;
     applySky();
     map.easeTo({ pitch: 0, bearing: 0, duration: 900 });
   }
@@ -915,23 +932,61 @@ function setGlobe(on, save = true) {
   isGlobe = on;
   $("btnGlobe").setAttribute("aria-pressed", String(on)); $("btnFlat").setAttribute("aria-pressed", String(!on));
   map.setProjection({ type: on ? "globe" : "mercator" });
+  map.setMinZoom(on ? Math.max(0, worldZoom() - 0.8) : 0.6);
+  // without copies MapLibre forces the flat world to fill the whole window width, rail included, so it could
+  // never sit centred beside the rail. With copies the flat map zooms out like any web map.
+  map.setRenderWorldCopies(!on);
   applySky();
   if (save) store.set("proj", on ? "globe" : "flat");
 }
+// zooming back in after a capped tilt: give 3D its tilt back
+map.on("zoomend", () => {
+  capPitch();
+  // far out, north goes back up, like on a desk globe
+  if (map.getZoom() < 2.6 && Math.abs(map.getBearing()) > 1 && !map.isEasing()) { map.easeTo({ bearing: 0, duration: 600 }); return; }
+  const target = is3d ? Math.min(wantPitch, pitchCap(map.getZoom())) : 0;
+  if (is3d && !map.isEasing() && target - map.getPitch() > 3) map.easeTo({ pitch: target, duration: 500 });
+});
+
+// ---------- gentle snap: turn the globe, let go near a wine region, and it settles on it.
+// Only the centre moves (never the zoom), only after a drag, only when the region is already close to the middle.
+const boxCenter = (v) => [(v[0][0] + v[1][0]) / 2, (v[0][1] + v[1][1]) / 2];
+const SNAP_FAR = [boxCenter(EUROPE), boxCenter(VIEWS.US), [-68.5, -34], boxCenter(VIEWS.ZA), boxCenter(VIEWS.AU), boxCenter(VIEWS.NZ)];
+const SNAP_NEAR = Object.entries(VIEWS).filter(([k]) => k !== "WORLD").map(([, v]) => boxCenter(v));
+let dragged = false;
+map.on("dragstart", () => { dragged = true; });
+map.on("moveend", (e) => {
+  if (!dragged || map.isEasing()) return;
+  dragged = false;
+  const z = map.getZoom();
+  if (REDUCED || z > 5.5 || map.getPitch() > 5) return;
+  const anchors = z < 3.2 ? SNAP_FAR : SNAP_NEAR;
+  const pad = map.getPadding(), cx = pad.left + (map.getContainer().clientWidth - pad.left - pad.right) / 2;
+  const cy = pad.top + (map.getContainer().clientHeight - pad.top - pad.bottom) / 2;
+  const reach = 0.14 * Math.min(map.getContainer().clientWidth - pad.left, map.getContainer().clientHeight);
+  const c = map.getCenter();
+  let best = null, bestD = Infinity;
+  for (const a of anchors) {
+    // the far side of the globe does not count
+    if (c.distanceTo(new maplibregl.LngLat(a[0], a[1])) > 6e6) continue;
+    const p = map.project(a), d = Math.hypot(p.x - cx, p.y - cy);
+    if (d < bestD) { bestD = d; best = a; }
+  }
+  if (best && bestD > 6 && bestD < reach) map.easeTo({ center: best, duration: 700, easing: (t) => 1 - Math.pow(1 - t, 3) });
+});
+
 $("btnGlobe").onclick = () => !isGlobe && setGlobe(true);
 $("btnFlat").onclick = () => isGlobe && setGlobe(false);
 // the zoom at which the whole earth fits the free part of the screen
 function worldZoom() {
   const wide = innerWidth > 760, w = innerWidth - (wide ? 380 : 0), h = innerHeight;
-  if (!isGlobe) return wide ? (innerWidth > 1100 ? 1.2 : 1) : 1;
+  if (!isGlobe) return Math.max(0.6, Math.log2(Math.min(w / 512, h / 400)));
   return Math.max(0.6, Math.log2((wide ? 0.8 : 0.94) * Math.min(w, h) * Math.PI / 512));
 }
 function flyToWorld(duration = 1600) {
-  const wide = innerWidth > 760;
-  if (!isGlobe) { map.flyTo({ center: [wide ? -10 : 20, 12], zoom: worldZoom(), duration }); return; }
+  if (!isGlobe) { map.flyTo({ center: [12, 15], zoom: worldZoom(), pitch: 0, bearing: 0, duration, essential: true }); return; }
   // turn the globe from wherever the viewer is now
-  map.flyTo({ center: [map.getCenter().lng, 18], zoom: worldZoom(), pitch: 0, bearing: 0, duration,
-    padding: { top: 0, bottom: 0, left: wide ? 380 : 0, right: 0 }, essential: true });
+  map.flyTo({ center: [map.getCenter().lng, 18], zoom: worldZoom(), pitch: 0, bearing: 0, duration, essential: true });
 }
 
 if (WEB) {
@@ -1689,7 +1744,7 @@ async function select(p, feature) {
   }
 }
 const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
-const fitPad = () => { const wide = innerWidth > 760; return { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 380 : 30, right: wide ? 420 : 30 }; };
+const fitPad = () => { const wide = innerWidth > 760; return { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? 420 : 30 }; };
 // the zoom fitTo would land on
 function fitZoom(b, level) {
   const cam = map.cameraForBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level) });
@@ -1699,7 +1754,9 @@ function fitTo(b, level) {
   // from far out, or to the other side of the earth, the flight takes longer so the turn of the globe reads
   const km = map.getCenter().distanceTo(new maplibregl.LngLat((b[0] + b[2]) / 2, (b[1] + b[3]) / 2)) / 1000;
   const far = map.getZoom() < 4 || km > 2500 ? Math.min(3600, 2200 + km / 10) : 1400;
-  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level), duration: REDUCED ? 0 : far, essential: true });
+  const z = fitZoom(b, level);
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level), pitch: Math.min(map.getPitch(), pitchCap(z)),
+    duration: REDUCED ? 0 : far, essential: true });
 }
 
 const worldType = (p, d) => (/-world-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
@@ -1959,7 +2016,7 @@ document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
   // the whole world only fits at the lowest zoom: centre it beside the panel
   if (b.dataset.c === "WORLD") { flyToWorld(1500); return; }
   const v = VIEWS[b.dataset.c];
-  map.fitBounds(v, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 370 : 20, right: 20 }, duration: 1300 });
+  map.fitBounds(v, { padding: VIEW_PAD, duration: 1300 });
 });
 $("moreBtn").onclick = () => { const r = $("rail"); r.classList.toggle("more"); $("moreBtn").setAttribute("aria-expanded", r.classList.contains("more")); };
 const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win" };
@@ -2534,7 +2591,7 @@ map.on("load", async () => {
     if (WEB) { addRelief(); addRasters(); }
     setGlobe(startGlobe, false);
     hideLoading();
-    if (INTRO) map.fitBounds(EUROPE, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 }, duration: 2600, essential: true });
+    if (INTRO) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 2600, essential: true });
     showLoading("Loading appellations…");
     await loadArchive("overview.pmtiles");
     addOverview();
