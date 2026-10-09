@@ -56,12 +56,6 @@ button, input { font: inherit; color: inherit; }
 .results .m { grid-column: 1; color: var(--muted); font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .results .c { grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 500 11px var(--f-mono); color: var(--muted); }
 
-.countries { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); cursor: pointer; font-size: 12.5px;
-  backdrop-filter: blur(10px); }
-.chip:hover { border-color: #57534a; }
-.chip .k { font: 500 10.5px var(--f-mono); color: var(--muted); margin-right: 5px; }
-
 .legend { padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px);
   display: grid; gap: 7px; font-size: 12.5px; }
 .legend label { display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 8px; cursor: pointer; }
@@ -84,6 +78,83 @@ button, input { font: inherit; color: inherit; }
 .link-btn { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); cursor: pointer; font-size: 12.5px; }
 .link-btn:hover { border-color: #57534a; }
 
+/* ---------- explorer: tabs, region tree */
+.rtabs { display: grid; grid-template-columns: 1fr 1fr; padding: 3px; gap: 3px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+  backdrop-filter: blur(10px); }
+.rtabs button { all: unset; cursor: pointer; text-align: center; padding: 7px 8px; border-radius: 7px; font-size: 12.5px; color: var(--muted); }
+.rtabs button:hover { color: var(--parchment); }
+.rtabs button[aria-selected="true"] { background: #26252b; color: var(--parchment); box-shadow: inset 0 0 0 1px #3a3830; }
+.rtabs button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.mappanel { display: flex; flex-direction: column; gap: 10px; }
+.explore { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px); padding: 6px 4px 8px; }
+.ex-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 8px 4px 10px; }
+.ex-head .hd, .tcont { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.ex-world { all: unset; cursor: pointer; font-size: 12px; color: var(--muted); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
+.ex-world:hover { color: var(--parchment); border-color: #57534a; }
+.ex-wait { padding: 8px 10px; margin: 0; }
+.tcont { padding: 12px 10px 4px; }
+.tree { font-size: 13px; }
+.tr { position: relative; display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; align-items: center; gap: 2px; min-height: 28px;
+  padding: 0 8px 0 calc(var(--d, 0) * 14px + 2px); border-radius: 6px; }
+.tr:hover { background: #1d1d22; }
+.tr.on { background: #27252a; }
+.tr.on::before { content: ""; position: absolute; left: 0; top: 5px; bottom: 5px; width: 2px; border-radius: 2px; background: var(--gold); }
+.tr.hl:not(.on) { background: #1f1e23; }
+.tw { all: unset; cursor: pointer; width: 18px; height: 24px; display: grid; place-items: center; color: var(--muted); border-radius: 4px; }
+.tw:hover { color: var(--parchment); }
+.tw svg { transition: transform .15s ease; }
+.tn[aria-expanded="true"] > .tr .tw svg { transform: rotate(90deg); }
+.tw.leaf { cursor: default; visibility: hidden; }
+.tl { all: unset; cursor: pointer; min-width: 0; display: flex; align-items: center; gap: 7px; padding: 4px 2px; }
+.tl:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-radius: 4px; }
+.tl .nm { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl .cc { font: 500 10px var(--f-mono); color: var(--muted); width: 18px; flex: none; }
+.tl .rk { width: 7px; height: 7px; border-radius: 50%; flex: none; box-sizing: border-box; border: 1.5px solid var(--parchment); opacity: .7; }
+.tl .rk.top { background: var(--gold); border-color: var(--gold); opacity: 1; }
+.tl .rk.pc { background: var(--copper); border-color: var(--copper); opacity: 1; }
+.tl .rk.de { border-color: var(--slate); }
+.tl .rk.grp { display: none; }
+.tn.grp > .tr .nm { color: var(--parchment); font-weight: 500; }
+.tn.lvl0 > .tr .nm { font-weight: 500; }
+.tc { font: 500 10.5px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; padding-left: 6px; }
+.tk { position: relative; }
+.tk::before { content: ""; position: absolute; top: 2px; bottom: 6px; left: calc(var(--d, 0) * 14px + 10px); border-left: 1px solid #2a2a31; }
+.tmore { all: unset; cursor: pointer; display: block; font-size: 12px; color: var(--muted); padding: 4px 8px 4px calc(var(--d, 0) * 14px + 22px); }
+.tmore:hover { color: var(--parchment); }
+
+/* ---------- map breadcrumb */
+.mcrumbs { position: absolute; z-index: 2; top: calc(16px + env(safe-area-inset-top, 0px)); left: 372px; max-width: calc(100% - 372px - 270px);
+  display: flex; align-items: center; gap: 2px; padding: 4px 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+  backdrop-filter: blur(10px); font-size: 12.5px; white-space: nowrap; overflow: hidden; }
+.sheet.open ~ .mcrumbs { max-width: calc(100% - 372px - 412px - 250px); }
+.mcrumbs button { all: unset; cursor: pointer; padding: 3px 8px; border-radius: 999px; color: var(--muted); min-width: 0; max-width: 190px;
+  overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; }
+.mcrumbs > button:not(.up):not([aria-current]) { min-width: 3.5em; }
+.mcrumbs button:hover { color: var(--parchment); background: #222228; }
+.mcrumbs button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.mcrumbs button[aria-current] { color: var(--parchment); font-weight: 500; flex: 0 0 auto; max-width: 240px; }
+.mcrumbs .sep { color: #57534a; flex: none; }
+.mcrumbs .up { font: 500 11px var(--f-mono); color: var(--muted); border-right: 1px solid var(--line); border-radius: 999px 0 0 999px; padding-right: 9px; margin-right: 2px; flex: none; }
+
+/* ---------- region sheet */
+.gtiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gtiles.n3 { grid-template-columns: 1fr 1fr 1fr; } .gtiles.n1 { grid-template-columns: 1fr; }
+.gtiles div { padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; display: grid; gap: 2px; }
+.gtiles b { font: 500 20px var(--f-mono); font-variant-numeric: tabular-nums; }
+.gtiles span { font-size: 11.5px; color: var(--muted); }
+.gtiles .top b { color: var(--gold); } .gtiles .pc b { color: var(--copper); }
+.gkids { display: grid; gap: 2px; }
+.gkids button { all: unset; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; padding: 6px 8px; border-radius: 6px; }
+.gkids button:hover, .gkids button:focus-visible { background: #1f1e23; }
+.gkids .n { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: flex; gap: 7px; align-items: center; }
+.gkids .c { font: 500 11px var(--f-mono); color: var(--muted); text-align: right; }
+.gkids .bar { grid-column: 1 / -1; height: 3px; border-radius: 2px; background: #222228; overflow: hidden; }
+.gkids .bar i { display: block; height: 100%; background: #6d675d; }
+.gkids .k { font: 500 10px var(--f-mono); color: var(--muted); letter-spacing: .06em; }
+.gkids .rk { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.gkids .rk.top { background: var(--gold); } .gkids .rk.pc { background: var(--copper); }
+.crumbs .sep { color: #57534a; margin: 0 4px; }
+
 /* ---------- detail sheet */
 .sheet { position: absolute; z-index: 4; top: calc(16px + env(safe-area-inset-top, 0px)); right: 16px; bottom: 16px; width: min(380px, calc(100% - 32px));
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(12px);
@@ -101,6 +172,7 @@ button, input { font: inherit; color: inherit; }
 .facts { display: grid; grid-template-columns: auto 1fr; gap: 7px 14px; margin: 0; }
 .facts dt { color: var(--muted); font-size: 12.5px; }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.facts dd a { color: var(--parchment); text-decoration-color: #6d675d; }
 .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 .grapes { display: flex; flex-wrap: wrap; gap: 5px; }
 .grapes span { padding: 2px 7px; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; }
@@ -353,11 +425,10 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .viewbar { top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); right: 16px; }
   .sheet.open ~ .viewbar { display: none; }
   .rail { width: calc(100% - 32px); }
-  .legend, .rail-foot, .mapsel, .chip-x { display: none; }
-  .rail.more .chip-x { display: inline-block; }
+  .rail:not(.open) .rail-scroll { display: none; }
+  .rail:not(.open) .rtabs button[aria-selected="true"] { background: none; box-shadow: none; color: var(--muted); }
   .rail-scroll { max-height: 58vh; }
-  .rail.more .legend, .rail.more .rail-foot, .rail.more .mapsel:not([hidden]) { display: grid; }
-  .rail.more .rail-foot { display: flex; }
+  .mcrumbs { display: none; }
   .brand { padding: 10px 12px; }
   .brand h1 { font-size: 24px; }
   .brand p { display: none; }
@@ -367,8 +438,6 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .attrib { display: none; }
   .maplibregl-ctrl-bottom-right { display: none; }
 }
-.more-btn { display: none; }
-@media (max-width: 760px) { .more-btn { display: inline-block; } }
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
 </style>
 
@@ -385,26 +454,16 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <input id="q" type="search" placeholder="Search Barolo, Musigny, Barossa Valley, Paraje Altamira…" autocomplete="off" aria-label="Search wine places" aria-controls="results">
     <ul class="results" id="results" role="listbox" hidden></ul>
   </div>
-  <div class="countries" id="countries">
-    <button class="chip" data-c="FR"><span class="k">FR</span>France</button>
-    <button class="chip" data-c="IT"><span class="k">IT</span>Italia</button>
-    <button class="chip" data-c="ES"><span class="k">ES</span>España</button>
-    <button class="chip" data-c="DE"><span class="k">DE</span>Deutschland</button>
-    <button class="chip" data-c="CH"><span class="k">CH</span>Schweiz</button>
-    <button class="chip chip-x" data-c="AT"><span class="k">AT</span>Österreich</button>
-    <button class="chip chip-x" data-c="PT"><span class="k">PT</span>Portugal</button>
-    <button class="chip chip-x" data-c="GR"><span class="k">GR</span>Ελλάδα</button>
-    <button class="chip chip-x" data-c="HU"><span class="k">HU</span>Magyarország</button>
-    <button class="chip chip-x" data-c="US"><span class="k">US</span>USA</button>
-    <button class="chip chip-x" data-c="AU"><span class="k">AU</span>Australia</button>
-    <button class="chip chip-x" data-c="NZ"><span class="k">NZ</span>New Zealand</button>
-    <button class="chip chip-x" data-c="ZA"><span class="k">ZA</span>South Africa</button>
-    <button class="chip chip-x" data-c="CL"><span class="k">CL</span>Chile</button>
-    <button class="chip chip-x" data-c="AR"><span class="k">AR</span>Argentina</button>
-    <button class="chip chip-x" data-c="WORLD"><span class="k">◎</span>World</button>
-    <button class="chip more-btn" id="moreBtn" aria-expanded="false">Layers</button>
+  <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar">
+    <button role="tab" id="tabExplore" aria-selected="true" aria-controls="explore">Explore regions</button>
+    <button role="tab" id="tabMap" aria-selected="false" aria-controls="mapPanel">Map and layers</button>
   </div>
-  <div class="rail-scroll">
+  <div class="rail-scroll" id="railScroll">
+  <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
+    <div class="ex-head"><span class="hd">Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world">World view</button></div>
+    <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations"><p class="note ex-wait">Loading the regions…</p></div>
+  </nav>
+  <div class="mappanel" id="mapPanel" role="tabpanel" aria-labelledby="tabMap" hidden>
   <div class="mapsel web-only" id="mapsel" hidden>
     <div class="hd">Map</div>
     <div class="seg" id="baseSeg" role="radiogroup" aria-label="Base map">
@@ -426,6 +485,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span>Vineyards (Switzerland, OSM)</span></label>
     <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span>Wineries (OSM)</span></label>
     <p class="note lg-note"><svg width="18" height="6" aria-hidden="true"><path d="M1 3h16" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg> approximate outline, built from administrative units<br><svg width="18" height="8" aria-hidden="true"><circle cx="9" cy="4" r="3.2" fill="currentColor"/></svg> place without an open boundary, shown at its namesake town</p>
+  </div>
   </div>
   <div class="rail-foot">
     <button class="link-btn" id="openGuide">How to read the atlas</button>
@@ -450,6 +510,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
   </div>
 </div>
+<nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" hidden></nav>
 <div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
@@ -624,6 +685,7 @@ const fillOpacityByLevel = (base) => ["case", ["boolean", ["feature-state", "sel
   ["boolean", ["feature-state", "hover"], false], 0.12, base];
 const INAO = ["==", ["get", "src"], "inao"];
 const SEL = ["boolean", ["feature-state", "selected"], false], HOV = ["boolean", ["feature-state", "hover"], false];
+const WHOV = ["boolean", ["feature-state", "whover"], false];
 // zoom must be the top-level input, so the hover/selected switch goes inside each stop
 const zstate = (stops, selV, hovV) => ["interpolate", ["linear"], ["zoom"],
   ...stops.flatMap(([z, v]) => [z, ["case", SEL, selV, HOV, hovV ?? v, v]])];
@@ -693,6 +755,19 @@ function addOverview() {
       "text-offset": ["case", ["==", ["get", "ol"], "point"], ["literal", [0, 0.7]], ["literal", [0, 0]]],
       "symbol-sort-key": ["-", 0, ["get", "ha"]] },
     paint: { "text-color": ["case", ["in", ["get", "rank"], ["literal", TOP]], C.gold, "#cbbfa9"], "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.4 } }, "app");
+  addTreeHl("ov", ["appellations"], { maxzoom: 10.6 }, "ov-labels");
+}
+
+// gold outline for what the pointer is on in the sidebar or a sheet list (feature-state "thl"), one pair per source
+const THL = ["boolean", ["feature-state", "thl"], false];
+function addTreeHl(src, sourceLayers, zoom, before) {
+  sourceLayers.forEach((sl) => {
+    const id = src + "-thl-" + sl;
+    if (map.getLayer(id)) return;
+    map.addLayer({ id: id + "-f", type: "fill", source: src, "source-layer": sl, ...zoom, paint: { "fill-color": C.gold, "fill-opacity": ["case", THL, 0.18, 0] } }, before);
+    map.addLayer({ id, type: "line", source: src, "source-layer": sl, ...zoom,
+      paint: { "line-color": "#f2d48a", "line-opacity": ["case", THL, 1, 0], "line-width": ["interpolate", ["linear"], ["zoom"], 4, 1.4, 12, 2.6] } }, before);
+  });
 }
 
 function addOverviewLow() {
@@ -746,23 +821,29 @@ function addDetail(file) {
       "text-size": ["interpolate", ["linear"], ["zoom"], 11, 10.5, 15, 13.5], "text-max-width": 7, "text-padding": 2,
       "symbol-sort-key": ["-", 0, ["get", "ha"]] },
     paint: { "text-color": rankColor, "text-halo-color": "rgba(11,11,13,.92)", "text-halo-width": 1.3 } }, isDE ? "de" : "pc");
+  addTreeHl(id, isDE ? ["crus", "grosslagen"] : ["appellations", "crus"], { minzoom: isDE ? 8 : 10.5 }, "ov-labels");
   bindHover(isDE ? [id + "-cru-fill"] : [id + "-cru-fill", id + "-app-fill", id + "-sub-fill"]);
   applyLegend();
   if (WEB) applyTheme();
 }
 
 function addPoi() {
-  map.addSource("poi", { type: "vector", url: pmUrl("poi.pmtiles") });
+  map.addSource("poi", { type: "vector", url: pmUrl("poi.pmtiles"), promoteId: { wineries: "id" } });
   add({ id: "vine-fill", type: "fill", source: "poi", "source-layer": "vineyard_areas", minzoom: 7,
     paint: { "fill-color": C.vine, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 7, 0.35, 13, 0.25] } }, "vine");
   add({ id: "vine-line", type: "line", source: "poi", "source-layer": "vineyard_areas", minzoom: 11,
     paint: { "line-color": C.vine, "line-width": 0.8, "line-opacity": 0.7 } }, "vine");
   add({ id: "wineries", type: "circle", source: "poi", "source-layer": "wineries", minzoom: 9,
-    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 1.6, 14, 4], "circle-color": "#c9c2b6", "circle-opacity": 0.85,
-      "circle-stroke-color": C.night, "circle-stroke-width": 1 } }, "win");
-  add({ id: "winery-labels", type: "symbol", source: "poi", "source-layer": "wineries", minzoom: 13,
-    layout: { "text-field": ["get", "name"], "text-font": ["noto-regular"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top", "text-max-width": 9, "text-optional": true },
-    paint: { "text-color": "#a9a296", "text-halo-color": C.night, "text-halo-width": 1.2 } }, "win");
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, ["case", WHOV, 4, 1.8], 14, ["case", WHOV, 6.5, 4.2]],
+      "circle-color": ["case", WHOV, "#f3e6c8", "#c9c2b6"], "circle-opacity": 0.9,
+      "circle-stroke-color": ["case", WHOV, "#e7c06a", C.night], "circle-stroke-width": ["case", WHOV, 1.5, 1] } }, "win");
+  // names from zoom 10.5; where they would collide the map keeps the first and drops the rest, hover shows any
+  add({ id: "winery-labels", type: "symbol", source: "poi", "source-layer": "wineries", minzoom: 10.5,
+    layout: { "text-field": ["get", "name"], "text-font": ["noto-regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 10.5, 10, 14, 11.5],
+      "text-variable-anchor": ["top", "bottom", "left", "right"], "text-radial-offset": 0.7, "text-justify": "auto", "text-max-width": 8,
+      "text-padding": 3 },
+    paint: { "text-color": ["case", WHOV, "#f3e6c8", "#bdb5a8"], "text-halo-color": C.night, "text-halo-width": 1.4,
+      "text-opacity": ["interpolate", ["linear"], ["zoom"], 10.5, 0, 11, 1] } }, "win");
 }
 
 // ---------- relief: hillshade, 3D terrain
@@ -1672,7 +1753,58 @@ function pick(point) {
   return fs[0] || null;
 }
 const tag = $("tag");
+// wineries: the nearest dot within a few pixels wins over the outline under it
+let wHover = null;
+function pickWinery(pt) {
+  if (!map.getLayer("wineries") || map.getLayoutProperty("wineries", "visibility") === "none" || map.getZoom() < 9) return null;
+  const fs = map.queryRenderedFeatures([[pt.x - 7, pt.y - 7], [pt.x + 7, pt.y + 7]], { layers: ["wineries"] });
+  if (!fs.length) return null;
+  const d = (f) => { const q = map.project(f.geometry.coordinates); return (q.x - pt.x) ** 2 + (q.y - pt.y) ** 2; };
+  return fs.sort((a, b) => d(a) - d(b))[0];
+}
+function setWHover(f) {
+  const st = (x, v) => { try { map.setFeatureState({ source: "poi", sourceLayer: "wineries", id: x.id }, { whover: v }); } catch (e) {} };
+  if (wHover && (!f || f.id !== wHover.id)) { st(wHover, false); wHover = null; }
+  if (f && !wHover) { wHover = f; st(f, true); }
+}
+function openWinery(f) {
+  sheetToken++;
+  CURRENT = null;
+  const p = f.properties, [lon, lat] = f.geometry.coordinates, pt = map.project([lon, lat]);
+  const layers = [...pickLayers].filter((l) => map.getLayer(l) && map.getLayoutProperty(l, "visibility") !== "none");
+  const seen = new Set(), inside = map.queryRenderedFeatures(pt, { layers }).map((x) => x.properties)
+    .filter((x) => x.id && byId.has(x.id) && !seen.has(x.id) && seen.add(x.id)).sort((a, b) => (PRI[a.level] ?? 9) - (PRI[b.level] ?? 9));
+  const home = inside[0] ? inside[0].id : null;
+  $("sh-head").innerHTML = '<div class="eyebrow"><span>' + esc((tnode("g:" + p.country) || [COUNTRY[p.country] || p.country])[0]) + "</span><span>·</span><span>Winery</span></div>" +
+    "<h2>" + esc(p.name) + "</h2>" + (home && TREE ? '<div class="crumbs">' + trail(pathOf(home), null) + "</div>" : "");
+  let html = '<p class="lede">' + esc(p.name) + (inside.length ? " lies inside " + fmtList(inside.slice(0, 3).map((x) => esc(x.name))) + "." : " is outside the mapped appellations at this zoom.") + "</p>";
+  const rows = [["Location", '<span class="num">' + Math.abs(lat).toFixed(4) + "° " + (lat < 0 ? "S" : "N") + ", " + Math.abs(lon).toFixed(4) + "° " + (lon < 0 ? "W" : "E") + "</span>"]];
+  if (p.web) rows.push(["Website", '<a href="' + esc(/^https?:/.test(p.web) ? p.web : "https://" + p.web) + '" target="_blank" rel="noopener">' + esc(p.web.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")) + "</a>"]);
+  html += '<div class="sec"><h3>Key facts</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
+  if (inside.length) html += '<div class="sec"><h3>Appellations here · ' + inside.length + '</h3><div class="sub-list">' +
+    inside.map((x) => '<button data-goto="' + esc(x.id) + '"><span>' + esc(x.name) + '</span><span class="r">' + esc(RANK_LABEL[x.rank] || LEVEL_LABEL[x.level] || "") + "</span></button>").join("") + "</div></div>";
+  const osm = /-osm-([nwr])(\d+)$/.exec(p.id || "");
+  html += '<div class="sec"><h3>Read and look further</h3><div class="links">' +
+    (osm ? '<a href="https://www.openstreetmap.org/' + { n: "node", w: "way", r: "relation" }[osm[1]] + "/" + osm[2] + '" target="_blank" rel="noopener">OpenStreetMap</a>' : "") +
+    '<a href="https://www.google.com/maps/@' + lat + "," + lon + ',800m/data=!3m1!1e3" target="_blank" rel="noopener">Satellite view</a></div></div>';
+  html += '<div class="source">From OpenStreetMap, edited by volunteers · ODbL. Missing or wrong? Edit it there.</div>';
+  $("sh-body").innerHTML = html;
+  $("sh-body").scrollTop = 0;
+  $("sheet").classList.add("open");
+  clearSelected();
+  ACTIVE = null;
+  if (home) { setActive(home); ACTIVE = null; renderMapCrumbs(home, p.name); }
+}
 map.on("mousemove", (e) => {
+  const w = pickWinery(e.point);
+  setWHover(w);
+  if (w) {
+    if (hovered) { setState(hovered, "hover", false); hovered = null; }
+    map.getCanvas().style.cursor = "pointer";
+    tag.innerHTML = esc(w.properties.name) + "<small>Winery</small>";
+    tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
+    return;
+  }
   const f = pick(e.point);
   if (hovered && (!f || f.id !== hovered.id)) { setState(hovered, "hover", false); hovered = null; }
   if (f) {
@@ -1683,8 +1815,10 @@ map.on("mousemove", (e) => {
     tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
   } else { map.getCanvas().style.cursor = ""; tag.hidden = true; }
 });
-map.on("mouseout", () => { tag.hidden = true; });
+map.on("mouseout", () => { tag.hidden = true; setWHover(null); });
 map.on("click", (e) => {
+  const w = pickWinery(e.point);
+  if (w) { openWinery(w); return; }
   const f = pick(e.point);
   if (!f) { closeSheet(); return; }
   select(f.properties, f);
@@ -1731,6 +1865,7 @@ async function select(p, feature) {
   const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
+  setActive(p.id);
   pushRecent(p);
   if (MY.saved[p.id]) { const s = snapshot(p, d, rec); MY.saved[p.id] = { ...MY.saved[p.id], lat: s.lat, lon: s.lon, area: s.area }; saveMY("saved"); }
   if (!feature && rec) fitTo(rec[6], p.level);
@@ -1743,7 +1878,7 @@ async function select(p, feature) {
     try { history.replaceState(null, "", "#" + encodeURIComponent(p.id)); } catch (e) {}
   }
 }
-const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
+const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9, subregion: 11.5, state: 8, country: 6.5, group: 11.5 }[level] || 13;
 const fitPad = () => { const wide = innerWidth > 760; return { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? 420 : 30 }; };
 // the zoom fitTo would land on
 function fitZoom(b, level) {
@@ -1829,7 +1964,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   $("sh-head").innerHTML =
     '<div class="eyebrow"><span>' + esc(COUNTRY[p.country] || p.country) + "</span><span>·</span><span>" + esc(d.type || LEVEL_LABEL[p.level]) + "</span></div>" +
     "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p, d) + "</div>" +
-    (p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
+    (TREE && TPARENT.has(p.id) ? '<div class="crumbs">' + trail(pathOf(p.id).slice(0, -1), null) + "</div>"
+      : p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
       (d.grosslage ? " · Großlage " + esc(d.grosslage) : "") + "</div>" : "");
   CURRENT = { p, d, rec };
   $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
@@ -1961,9 +2097,18 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   $("sheet").classList.add("open");
   $("suggestHere").onclick = () => openSuggest(p);
 }
-function closeSheet() { $("sheet").classList.remove("open"); clearSelected(); sheetToken++; if (WEB) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+function closeSheet() {
+  $("sheet").classList.remove("open"); clearSelected(); sheetToken++;
+  ACTIVE = null; document.querySelectorAll(".tr.on").forEach((r) => r.classList.remove("on")); renderMapCrumbs(null);
+  if (WEB) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+}
 $("close").onclick = closeSheet;
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("dash").hidden) { if (!$("modal").hidden) closeModal(); else closeSheet(); } });
+// Esc: close a dialog, else go up one level (Morey-Saint-Denis → Côte de Nuits → Bourgogne → France), else close
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape" || !$("dash").hidden || e.target.closest("input, textarea")) return;
+  if (!$("modal").hidden) closeModal();
+  else if ($("sheet").classList.contains("open")) goUp();
+});
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-goto]");
   if (b) { const r = byId.get(b.dataset.goto); if (r) goTo(r); }
@@ -2011,14 +2156,318 @@ resEl.addEventListener("click", (e) => { const b = e.target.closest("button[data
 function choose(r) { resEl.hidden = true; qEl.value = r[0]; qEl.blur(); goTo(r); }
 document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search")) resEl.hidden = true; });
 
-// ---------- country chips, legend
-document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
-  // the whole world only fits at the lowest zoom: centre it beside the panel
-  if (b.dataset.c === "WORLD") { flyToWorld(1500); return; }
-  const v = VIEWS[b.dataset.c];
-  map.fitBounds(v, { padding: VIEW_PAD, duration: 1300 });
+// ---------- sidebar tabs: Explore regions / Map and layers
+const PHONE = () => innerWidth <= 760;
+function setTab(which, toggle = false) {
+  const rail = $("rail"), isEx = which === "explore";
+  // on phones the tabs open and close the panel; on a desk one panel is always open
+  if (PHONE() && toggle && rail.classList.contains("open") && $(isEx ? "tabExplore" : "tabMap").getAttribute("aria-selected") === "true") {
+    rail.classList.remove("open"); return;
+  }
+  rail.classList.add("open");
+  $("tabExplore").setAttribute("aria-selected", isEx); $("tabMap").setAttribute("aria-selected", !isEx);
+  $("explore").hidden = !isEx; $("mapPanel").hidden = isEx;
+  store.set("tab", which);
+  if (isEx && ACTIVE) revealRow(ACTIVE);
+}
+$("tabExplore").onclick = () => setTab("explore", true);
+$("tabMap").onclick = () => setTab("map", true);
+$("exWorld").onclick = () => { closeSheet(); flyToWorld(1500); if (PHONE()) $("rail").classList.remove("open"); };
+
+// ---------- explorer: region tree, region sheet, breadcrumbs
+// tree.json (pipeline/build_tree.py): {roots: [[continent, [keys]]], nodes: {key: [name, kind, box, [kids], places]}}
+// Keys are place ids or "g:..." groups. A kid key missing from nodes is a place without children.
+let TREE = null, ACTIVE = null;
+const TPARENT = new Map(), EXPANDED = new Set(), MORE = new Map(), NOEXPAND = new Set();
+const KIND_LABEL = { country: "Country", region: "Wine region", subregion: "Sub-region", state: "State", group: "Group" };
+const ADMIN_CC = new Set(["IT", "ES", "AT", "GR"]);
+const TREE_PAGE = 150;
+const isGroup = (k) => typeof k === "string" && k.startsWith("g:");
+const tnode = (k) => TREE ? TREE.nodes[k] : null;
+const kidsOf = (k) => (tnode(k) || [0, 0, 0, []])[3];
+const countOf = (k) => (tnode(k) || [0, 0, 0, 0, 0])[4];
+const ccOf = (k) => isGroup(k) ? k.slice(2, 4) : (byId.get(k) || [])[2];
+const TW = '<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.5 1.5L7 5l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function indexTree() {
+  TPARENT.clear();
+  const seen = new Set();
+  const visit = (k, p) => {
+    if (p && !TPARENT.has(k)) TPARENT.set(k, p);
+    if (seen.has(k)) return;
+    seen.add(k);
+    kidsOf(k).forEach((c) => visit(c, k));
+  };
+  TREE.roots.forEach(([, keys]) => keys.forEach((k) => visit(k, null)));
+}
+function pathOf(k) { const out = [k]; let p = TPARENT.get(k); while (p && out.length < 12) { out.unshift(p); p = TPARENT.get(p); } return out; }
+// the name of a node as it reads under its parent: "Les Ruchots" under "Morey-Saint-Denis premier cru"
+function labelOf(k, parentKey) {
+  const n = tnode(k);
+  if (n && n[0]) return n[0];
+  const r = byId.get(k);
+  if (!r) return k;
+  const pr = parentKey && byId.get(parentKey);
+  // French climats repeat their village: "Morey-Saint-Denis premier cru Les Ruchots" reads "Les Ruchots" under it
+  let name = pr && r[2] === "FR" ? shortName(r[0], pr[0]) : r[0];
+  name = name.replace(/^Alsace grand cru /, "");
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+const rankCls = (r) => !r ? "" : TOP.includes(r[4]) ? "top" : r[4] === "premier_cru" ? "pc" : r[2] === "DE" && r[3] === "vineyard" ? "de" : "";
+function kindLabel(k) {
+  const n = tnode(k);
+  if (isGroup(k)) return n[1] === "region" && ADMIN_CC.has(ccOf(k)) ? "Region" : KIND_LABEL[n[1]] || "";
+  const x = placeOf(k);
+  return x ? kindOf(x) : "";
+}
+
+function rowHtml(k, parentKey, depth) {
+  const n = tnode(k), r = byId.get(k), kids = kidsOf(k), has = kids.length > 0, grp = isGroup(k), exp = has && EXPANDED.has(k);
+  const lead = n && n[1] === "country" ? '<span class="cc">' + esc(k.slice(2)) + "</span>" : r ? '<i class="rk ' + rankCls(r) + '"></i>' : "";
+  return '<div class="tn' + (grp ? " grp" : "") + (depth === 0 ? " lvl0" : "") + '" role="treeitem" aria-level="' + (depth + 1) + '"' +
+    (has ? ' aria-expanded="' + exp + '"' : "") + ' data-k="' + esc(k) + '">' +
+    '<div class="tr' + (k === ACTIVE ? " on" : "") + '" style="--d:' + depth + '">' +
+    '<button class="tw' + (has ? "" : " leaf") + '" tabindex="-1" aria-label="' + (exp ? "Collapse" : "Expand") + '">' + (has ? TW : "") + "</button>" +
+    '<button class="tl" data-open="' + esc(k) + '" title="' + esc(r ? r[0] : n[0]) + '">' + lead + '<span class="nm">' + esc(labelOf(k, parentKey)) + "</span></button>" +
+    '<span class="tc">' + (has ? fmt(countOf(k)) : "") + "</span></div>" +
+    (exp ? '<div class="tk" role="group" style="--d:' + depth + '">' + kidsHtml(k, depth + 1) + "</div>" : "") + "</div>";
+}
+function kidsHtml(k, depth) {
+  const kids = kidsOf(k), lim = MORE.get(k) || TREE_PAGE;
+  return kids.slice(0, lim).map((c) => rowHtml(c, k, depth)).join("") +
+    (kids.length > lim ? '<button class="tmore" data-more="' + esc(k) + '" style="--d:' + depth + '">Show all ' + fmt(kids.length) + "</button>" : "");
+}
+function renderTree() {
+  if (!TREE) return;
+  const sc = $("railScroll").scrollTop;
+  $("tree").innerHTML = TREE.roots.map(([cont, keys]) => '<div class="tcont">' + esc(cont) + "</div>" + keys.map((k) => rowHtml(k, null, 0)).join("")).join("");
+  $("railScroll").scrollTop = sc;
+}
+const rowOf = (k) => $("tree").querySelector('.tn[data-k="' + CSS.escape(k) + '"] > .tr');
+function revealRow(k) {
+  const row = rowOf(k);
+  if (!row || $("explore").hidden) return;
+  const box = $("railScroll").getBoundingClientRect(), rb = row.getBoundingClientRect();
+  if (rb.top < box.top + 40 || rb.bottom > box.bottom - 12) $("railScroll").scrollTop += rb.top - box.top - box.height / 3;
+}
+function toggleNode(k, open) {
+  if (!kidsOf(k).length) return;
+  const want = open ?? !EXPANDED.has(k);
+  want ? EXPANDED.add(k) : EXPANDED.delete(k);
+  renderTree();
+  const b = $("tree").querySelector('.tl[data-open="' + CSS.escape(k) + '"]');
+  if (b && document.activeElement && document.activeElement.closest(".tree")) b.focus({ preventScroll: true });
+}
+// the node now open in the sheet: open its path in the tree, mark it, update the breadcrumbs
+function setActive(k) {
+  ACTIVE = k;
+  if (TREE && k && (tnode(k) || TPARENT.has(k))) {
+    const path = pathOf(k);
+    path.slice(0, -1).forEach((p, i) => {
+      EXPANDED.add(p);
+      const idx = kidsOf(p).indexOf(path[i + 1]);
+      if (idx >= (MORE.get(p) || TREE_PAGE)) MORE.set(p, kidsOf(p).length);
+    });
+    if (NOEXPAND.has(k)) NOEXPAND.delete(k); else if (kidsOf(k).length) EXPANDED.add(k);
+  }
+  renderTree();
+  revealRow(k);
+  renderMapCrumbs(k);
+}
+
+// one breadcrumb trail, used on the map and in the sheet
+function trail(path, current, keep = 0) {
+  const short = keep && path.length > keep ? [null, ...path.slice(-keep)] : path.length > 5 ? [path[0], null, ...path.slice(-3)] : path;
+  return short.map((p, i) => {
+    const sep = i ? '<span class="sep" aria-hidden="true">›</span>' : "";
+    if (p === null) return sep + '<span class="sep">…</span>';
+    const prev = path[path.indexOf(p) - 1];
+    return sep + '<button data-open="' + esc(p) + '"' + (p === current ? ' aria-current="location"' : "") + ">" + esc(labelOf(p, prev)) + "</button>";
+  }).join("");
+}
+function renderMapCrumbs(k, extra) {
+  const el = $("mcrumbs");
+  if (!TREE || !k || !(tnode(k) || TPARENT.has(k))) { el.hidden = true; return; }
+  const up = extra ? k : TPARENT.get(k);
+  el.innerHTML = (up ? '<button class="up" data-open="' + esc(up) + '" title="Up one level (Esc)" aria-label="Up one level">↑</button>' : "") +
+    trail(pathOf(k), extra ? null : k, extra ? 2 : 3) + (extra ? '<span class="sep" aria-hidden="true">›</span><button aria-current="location">' + esc(extra) + "</button>" : "");
+  el.hidden = false;
+}
+
+// hovering a row lights its outline (or the outlines of everything in a region) on the map
+let hoverNow = null, hoverMarks = [];
+function placesUnder(k, limit) {
+  const out = [], queue = [k], seen = new Set();
+  while (queue.length && out.length < limit) {
+    const x = queue.shift();
+    if (seen.has(x)) continue;
+    seen.add(x);
+    if (byId.has(x)) out.push(x); else queue.push(...kidsOf(x));
+  }
+  return out;
+}
+function hoverKey(k) {
+  if (k === hoverNow) return;
+  hoverNow = k;
+  hoverMarks.forEach((f) => { try { map.setFeatureState(f, { thl: false }); } catch (e) {} });
+  hoverMarks = [];
+  document.querySelectorAll(".tr.hl").forEach((r) => r.classList.remove("hl"));
+  if (!k || (isGroup(k) && tnode(k)[1] === "country")) return;
+  const ids = placesUnder(k, 160);
+  const style = map.getStyle();
+  if (!style) return;
+  const srcs = Object.entries(style.sources).filter(([s, v]) => v.type === "vector" && s !== "base" && s !== "poi" && s !== "ovlo").map(([s]) => s);
+  const fileBox = new Map(manifest.files.map((f) => [f.file.replace(".pmtiles", ""), f.bounds]));
+  ids.forEach((id) => {
+    const r = byId.get(id);
+    if (!r) return;
+    const b = r[6], layers = r[3] === "appellation" || r[3] === "region" ? ["appellations"] : r[2] === "DE" && r[3] === "subzone" ? ["grosslagen"] : ["crus"];
+    srcs.forEach((s) => {
+      const fb = fileBox.get(s);
+      if (fb && (b[2] < fb[0] || b[0] > fb[2] || b[3] < fb[1] || b[1] > fb[3])) return;
+      (s === "ov" ? ["appellations"] : layers).forEach((sl) => {
+        const f = { source: s, sourceLayer: sl, id };
+        try { map.setFeatureState(f, { thl: true }); hoverMarks.push(f); } catch (e) {}
+      });
+    });
+  });
+}
+
+function openNode(k) {
+  if (isGroup(k)) openGroup(k);
+  else { const r = byId.get(k); if (r) goTo(r); }
+}
+function flyToNode(k) {
+  const n = tnode(k);
+  if (!n) return;
+  const cc = k.slice(2);
+  if (n[1] === "country" && VIEWS[cc]) { map.fitBounds(VIEWS[cc], { padding: fitPad(), duration: REDUCED ? 0 : 1400, essential: true }); return; }
+  if (n[2]) fitTo(n[2], n[1]);
+}
+function openGroup(k, fly = true) {
+  if (!tnode(k)) return;
+  clearSelected();
+  if (fly) flyToNode(k);
+  renderGroupSheet(k);
+  setActive(k);
+  if (WEB) try { history.replaceState(null, "", "#" + encodeURIComponent(k)); } catch (e) {}
+}
+function goUp() {
+  const up = ACTIVE ? TPARENT.get(ACTIVE) : null;
+  if (up) openNode(up); else closeSheet();
+}
+
+// every place in a node, counted once (a grand cru in two villages counts once)
+function statsOf(k) {
+  const seen = new Set(), st = { all: 0, app: 0, top: 0, pc: 0, vin: 0, sub: 0 }, stack = [k];
+  while (stack.length) {
+    const x = stack.pop();
+    if (seen.has(x)) continue;
+    seen.add(x);
+    const r = byId.get(x);
+    if (r && x !== k) {
+      st.all++;
+      if (r[3] === "appellation" || r[3] === "region") st.app++;
+      if (r[3] === "subzone") st.sub++;
+      if (r[3] === "vineyard") st.vin++;
+      if (TOP.includes(r[4])) st.top++;
+      if (r[4] === "premier_cru") st.pc++;
+    }
+    stack.push(...kidsOf(x));
+  }
+  st.seen = seen;
+  return st;
+}
+const TOP_WORD = { FR: "Grands crus", IT: "DOCG", ES: "DOCa and Pagos", DE: "Grosse Lagen" };
+const TREE_SOURCE = {
+  FR: "Regions and sub-regions follow the usual division of the French vineyard (Open Wine Atlas editorial grouping). Grands crus sit under the village they lie in.",
+  DE: "Anbaugebiet, Bereich and Großlage from the Weinbergsrolle of the Landwirtschaftskammer Rheinland-Pfalz.",
+  US: "AVAs grouped by the states named in their federal definition (27 CFR part 9), nested AVAs under the AVA they lie in.",
+  AU: "Zones, regions and subregions as registered by Wine Australia, grouped by state.",
+};
+function renderGroupSheet(k) {
+  sheetToken++;
+  CURRENT = null;
+  const n = tnode(k), cc = ccOf(k), path = pathOf(k), st = statsOf(k);
+  $("sh-head").innerHTML =
+    '<div class="eyebrow">' + (n[1] === "country" ? "<span>" + esc(TREE.roots.find(([, ks]) => ks.includes(k))?.[0] || "") + "</span><span>·</span>" : "<span>" + esc((tnode("g:" + cc) || [cc])[0]) + "</span><span>·</span>") +
+    "<span>" + esc(kindLabel(k)) + "</span></div>" +
+    "<h2>" + esc(n[0]) + "</h2>" +
+    (path.length > 1 ? '<div class="crumbs">' + trail(path.slice(0, -1), null) + "</div>" : "");
+  let html = "";
+  const tiles = [[st.all, "places in the atlas", ""]];
+  if (st.app && st.app !== st.all) tiles.push([st.app, cc === "US" ? "AVAs" : cc === "DE" ? "regions" : "appellations", ""]);
+  if (st.top) tiles.push([st.top, TOP_WORD[cc] || "top classified", "top"]);
+  if (st.pc) tiles.push([st.pc, "premiers crus", "pc"]);
+  if (st.vin && cc !== "FR") tiles.push([st.vin, cc === "DE" ? "Einzellagen" : "vineyard sites", ""]);
+  else if (st.vin) tiles.push([st.vin, "climats and lieux-dits", ""]);
+  html += '<div class="gtiles n' + Math.min(4, tiles.length) + '">' + tiles.slice(0, 4).map(([v, l, c]) => '<div class="' + c + '"><b>' + fmt(v) + "</b><span>" + l + "</span></div>").join("") + "</div>";
+
+  // what is inside, as a list that leads one level down
+  const kids = kidsOf(k);
+  if (kids.length) {
+    const max = Math.max(1, ...kids.map((c) => countOf(c) + (byId.has(c) ? 1 : 0)));
+    const bars = kids.length > 1 && kids.some((c) => countOf(c) > 0);
+    html += '<div class="sec"><h3>Inside ' + esc(n[0]) + " · " + kids.length + '</h3><div class="gkids">' +
+      kids.slice(0, 200).map((c) => {
+        const r = byId.get(c), m = countOf(c) + (r ? 1 : 0);
+        return '<button data-open="' + esc(c) + '"><span class="n">' + (r ? '<i class="rk ' + rankCls(r) + '"></i>' : "") + esc(labelOf(c, k)) + "</span>" +
+          '<span class="c">' + (countOf(c) ? fmt(countOf(c)) : '<span class="k">' + esc(kindLabel(c)) + "</span>") + "</span>" +
+          (bars ? '<span class="bar"><i style="width:' + Math.max(2, Math.round(m / max * 100)) + '%"></i></span>' : "") + "</button>";
+      }).join("") + (kids.length > 200 ? '<span class="note">and ' + (kids.length - 200) + " more in the sidebar</span>" : "") + "</div></div>";
+  }
+  // the top classified places, wherever they sit
+  if (st.top) {
+    const tops = [...st.seen].map((x) => byId.get(x)).filter((r) => r && TOP.includes(r[4])).sort((a, b) => a[0].localeCompare(b[0]));
+    html += '<div class="sec"><h3>' + esc(TOP_WORD[cc] || "Top classified") + " · " + tops.length + '</h3><div class="chips">' +
+      tops.slice(0, 80).map((r) => '<button data-goto="' + esc(r[1]) + '">' + esc(r[0].replace(/^Alsace grand cru /, "")) + "</button>").join("") + "</div>" +
+      (tops.length > 80 ? '<p class="note">and ' + (tops.length - 80) + " more</p>" : "") + "</div>";
+  }
+  if (WEB && n[1] !== "country" && !/appellations|^Other|^Großlagenfrei/.test(n[0])) html += '<div class="sec" id="wiki-sec"></div>';
+  const how = ADMIN_CC.has(cc) && n[1] === "region" ? "Grouped by the administrative region that holds the centre of each appellation (geoBoundaries). Appellations that cross a border sit in one region only."
+    : TREE_SOURCE[cc] || "Grouped by the hierarchy published with each register.";
+  html += '<div class="source">' + esc(how) + '<br>Click a place on the map or in the list to open it. <span class="num">' + esc(k) + "</span></div>";
+  $("sh-body").innerHTML = html;
+  $("sh-body").scrollTop = 0;
+  $("sheet").classList.add("open");
+  if (WEB && n[1] !== "country") fillWiki({ name: n[0].replace(/^Bereich /, ""), parent: "", country: cc }, sheetToken);
+}
+
+// the tree: a click on the name opens the place or region and unfolds it, the arrow only unfolds
+$("tree").addEventListener("click", (e) => {
+  const more = e.target.closest("[data-more]");
+  if (more) { MORE.set(more.dataset.more, Infinity); renderTree(); return; }
+  const node = e.target.closest(".tn");
+  if (!node) return;
+  const k = node.dataset.k;
+  if (e.target.closest(".tw")) { toggleNode(k); return; }
+  if (!e.target.closest(".tl")) return;
+  if (ACTIVE === k && EXPANDED.has(k)) { EXPANDED.delete(k); NOEXPAND.add(k); }
+  openNode(k);
+  if (PHONE()) $("rail").classList.remove("open");
 });
-$("moreBtn").onclick = () => { const r = $("rail"); r.classList.toggle("more"); $("moreBtn").setAttribute("aria-expanded", r.classList.contains("more")); };
+$("tree").addEventListener("keydown", (e) => {
+  const b = e.target.closest(".tl");
+  if (!b) return;
+  const k = b.dataset.open, all = [...$("tree").querySelectorAll(".tl")], i = all.indexOf(b);
+  if (e.key === "ArrowDown" && all[i + 1]) { all[i + 1].focus(); e.preventDefault(); }
+  else if (e.key === "ArrowUp" && all[i - 1]) { all[i - 1].focus(); e.preventDefault(); }
+  else if (e.key === "ArrowRight") { if (kidsOf(k).length && !EXPANDED.has(k)) toggleNode(k, true); else if (all[i + 1]) all[i + 1].focus(); e.preventDefault(); }
+  else if (e.key === "ArrowLeft") {
+    if (EXPANDED.has(k)) toggleNode(k, false);
+    else { const p = b.closest(".tk")?.closest(".tn"); if (p) p.querySelector(".tl").focus(); }
+    e.preventDefault();
+  }
+});
+$("tree").addEventListener("mouseover", (e) => { const n = e.target.closest(".tn"); if (n) hoverKey(n.dataset.k); });
+$("tree").addEventListener("mouseleave", () => hoverKey(null));
+$("sh-body").addEventListener("mouseover", (e) => { const b = e.target.closest("[data-open],[data-goto]"); hoverKey(b ? b.dataset.open || b.dataset.goto : null); });
+$("sh-body").addEventListener("mouseleave", () => hoverKey(null));
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-open]");
+  if (b && !b.closest(".tree")) openNode(b.dataset.open);
+});
+
 const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win" };
 function applyLegend() {
   const on = (g) => $(GROUPS[g]).checked;
@@ -2071,6 +2520,7 @@ function openGuide() {
   const block = (keys) => "<dl class=\"gloss\">" + keys.map((k) => "<dt>" + esc(GLOSS[k][0]) + "</dt><dd>" + esc(GLOSS[k][1]) + "</dd>").join("") + "</dl>";
   openModal("<h2>How to read the atlas</h2>" +
     "<p>Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.</p>" +
+    "<p>Explore regions, in the sidebar, walks the same places as a list: France › Bourgogne › Côte de Nuits › Morey-Saint-Denis. A name opens its sheet and flies the map there, the arrow only unfolds it. Hover a name to see it in gold on the map. The trail at the top of the map shows where you are; Esc goes up one level. Winery dots show their names as you zoom in; hover or click any dot.</p>" +
     "<h3>Levels</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
     "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage", "gi"]) +
     "<h3>How precise is each layer</h3><dl class=\"gloss\">" +
@@ -2575,8 +3025,8 @@ document.addEventListener("keydown", (e) => {
 map.on("load", async () => {
   try {
     showLoading("Loading the atlas…");
-    const [m, idx] = await Promise.all([fetch("data/manifest.json").then((r) => r.json()), fetch("data/search.json").then((r) => r.json()),
-      loadArchive("base.pmtiles")]);
+    const [m, idx, tree] = await Promise.all([fetch("data/manifest.json").then((r) => r.json()), fetch("data/search.json").then((r) => r.json()),
+      fetch("data/tree.json").then((r) => r.json()).catch(() => null), loadArchive("base.pmtiles")]);
     manifest = m;
     INDEX = idx;
     INDEX.forEach((r) => {
@@ -2587,6 +3037,10 @@ map.on("load", async () => {
     });
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
+    if (tree) { TREE = tree; indexTree(); renderTree(); }
+    else $("tree").innerHTML = '<p class="note ex-wait">The region list could not load. Search still works.</p>';
+    setTab(store.get("tab") || "explore");
+    if (PHONE()) $("rail").classList.remove("open");
     addBase();
     if (WEB) { addRelief(); addRasters(); }
     setGlobe(startGlobe, false);
@@ -2612,6 +3066,7 @@ map.on("load", async () => {
     // deep link: #<place id>
     const hid = decodeURIComponent(location.hash.slice(1));
     if (hid && byId.has(hid)) goTo(byId.get(hid));
+    else if (hid && tnode(hid)) openGroup(hid);
   } catch (e) {
     console.error(e);
     $("loading").textContent = "The map data could not load. Reload the page to try again.";

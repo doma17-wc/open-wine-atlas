@@ -1,0 +1,80 @@
+{
+  "_note": "French wine regions and sub-regions for the explorer tree. Every AOC of the INAO file belongs to exactly one sub-region. Burgundy grands crus are attached to their village by commune in build_tree.py, so they are not listed here. Order is the display order (north to south inside each sub-region where it helps).",
+  "regions": [
+    {"name": "Champagne", "subregions": [
+      {"name": "", "aocs": ["Champagne", "Coteaux champenois", "Rosé des Riceys"]}
+    ]},
+    {"name": "Alsace", "subregions": [
+      {"name": "", "aocs": ["Alsace", "Crémant d'Alsace"]},
+      {"name": "Alsace grands crus", "match": "^Alsace grand cru "}
+    ]},
+    {"name": "Lorraine", "subregions": [
+      {"name": "", "aocs": ["Côtes de Toul", "Moselle"]}
+    ]},
+    {"name": "Bourgogne", "subregions": [
+      {"name": "Regional appellations", "aocs": ["Bourgogne", "Bourgogne aligoté", "Bourgogne Passe-tout-grains", "Bourgogne mousseux", "Coteaux Bourguignons", "Crémant de Bourgogne"]},
+      {"name": "Chablis and Grand Auxerrois", "aocs": ["Chablis Grand Cru", "Chablis", "Petit Chablis", "Irancy", "Saint-Bris", "Vézelay"]},
+      {"name": "Côte de Nuits", "aocs": ["Marsannay", "Fixin", "Gevrey-Chambertin", "Morey-Saint-Denis", "Chambolle-Musigny", "Vougeot", "Vosne-Romanée", "Nuits-Saint-Georges", "Côte de Nuits-Villages"]},
+      {"name": "Côte de Beaune", "aocs": ["Ladoix", "Aloxe-Corton", "Pernand-Vergelesses", "Savigny-lès-Beaune", "Chorey-lès-Beaune", "Beaune", "Côte de Beaune", "Pommard", "Volnay", "Monthélie", "Auxey-Duresses", "Saint-Romain", "Meursault", "Blagny", "Puligny-Montrachet", "Chassagne-Montrachet", "Saint-Aubin", "Santenay", "Maranges", "Côte de Beaune-Villages"]},
+      {"name": "Côte Chalonnaise", "aocs": ["Bouzeron", "Rully", "Mercurey", "Givry", "Montagny"]},
+      {"name": "Mâconnais", "aocs": ["Mâcon", "Viré-Clessé", "Pouilly-Fuissé", "Pouilly-Loché", "Pouilly-Vinzelles", "Saint-Véran"]}
+    ]},
+    {"name": "Beaujolais", "subregions": [
+      {"name": "", "aocs": ["Beaujolais"]},
+      {"name": "Crus du Beaujolais", "aocs": ["Saint-Amour", "Juliénas", "Chénas", "Moulin-à-Vent", "Fleurie", "Chiroubles", "Morgon", "Régnié", "Brouilly", "Côte de Brouilly"]},
+      {"name": "", "aocs": ["Coteaux du Lyonnais"]}
+    ]},
+    {"name": "Jura", "subregions": [
+      {"name": "", "aocs": ["Arbois", "Château-Chalon", "L'Etoile", "Côtes du Jura", "Crémant du Jura", "Macvin du Jura"]}
+    ]},
+    {"name": "Savoie and Bugey", "subregions": [
+      {"name": "", "aocs": ["Vin de Savoie", "Roussette de Savoie", "Seyssel", "Bugey", "Roussette du Bugey"]}
+    ]},
+    {"name": "Vallée de la Loire", "subregions": [
+      {"name": "Regional appellations", "aocs": ["Crémant de Loire", "Rosé de Loire"]},
+      {"name": "Pays nantais", "aocs": ["Muscadet", "Muscadet Sèvre et Maine", "Muscadet Coteaux de la Loire", "Muscadet Côtes de Grandlieu", "Gros Plant du Pays Nantais", "Coteaux d'Ancenis", "Fiefs Vendéens"]},
+      {"name": "Anjou and Saumur", "aocs": ["Anjou", "Anjou Villages", "Anjou Villages Brissac", "Anjou Brissac", "Anjou-Coteaux de la Loire", "Savennières", "Savennières Roche aux Moines", "Savennières Coulée de Serrant", "Coulée de Serrant", "Coteaux du Layon", "Quarts de Chaume", "Bonnezeaux", "Coteaux de l'Aubance", "Cabernet d'Anjou", "Rosé d'Anjou", "Saumur", "Saumur-Champigny", "Coteaux de Saumur", "Cabernet de Saumur", "Haut-Poitou"]},
+      {"name": "Touraine", "aocs": ["Touraine", "Touraine Noble Joué", "Chinon", "Bourgueil", "Saint-Nicolas-de-Bourgueil", "Vouvray", "Montlouis-sur-Loire", "Jasnières", "Coteaux du Loir", "Coteaux du Vendômois", "Cheverny", "Cour-Cheverny", "Valençay", "Orléans", "Orléans-Cléry"]},
+      {"name": "Centre-Loire", "aocs": ["Sancerre", "Pouilly-Fumé", "Pouilly-sur-Loire", "Menetou-Salon", "Quincy", "Reuilly", "Coteaux du Giennois", "Châteaumeillant"]},
+      {"name": "Upper Loire and Auvergne", "aocs": ["Saint-Pourçain", "Côte roannaise", "Côtes du Forez", "Côtes d'Auvergne"]}
+    ]},
+    {"name": "Bordeaux", "subregions": [
+      {"name": "Regional appellations", "aocs": ["Bordeaux", "Bordeaux supérieur", "Crémant de Bordeaux"]},
+      {"name": "Médoc", "aocs": ["Médoc", "Haut-Médoc", "Saint-Estèphe", "Pauillac", "Saint-Julien", "Listrac-Médoc", "Moulis", "Margaux"]},
+      {"name": "Graves and Sauternais", "aocs": ["Pessac-Léognan", "Graves", "Graves supérieures", "Cérons", "Barsac", "Sauternes"]},
+      {"name": "Libournais", "aocs": ["Saint-Emilion", "Saint-Emilion grand cru", "Montagne-Saint-Emilion", "Lussac Saint-Emilion", "Puisseguin Saint-Emilion", "Saint-Georges-Saint-Emilion", "Pomerol", "Lalande-de-Pomerol", "Fronsac", "Canon Fronsac"]},
+      {"name": "Entre-deux-Mers and the Côtes", "aocs": ["Entre-deux-Mers", "Graves de Vayres", "Sainte-Foy-Bordeaux", "Côtes de Bordeaux", "Côtes de Bordeaux-Saint-Macaire", "Premières Côtes de Bordeaux", "Cadillac", "Loupiac", "Sainte-Croix-du-Mont", "Blaye", "Côtes de Blaye", "Bourg", "Côtes de Bourg, Bourg et Bourgeais"]}
+    ]},
+    {"name": "Sud-Ouest", "subregions": [
+      {"name": "Bergerac and Dordogne", "aocs": ["Bergerac", "Côtes de Bergerac", "Monbazillac", "Saussignac", "Pécharmant", "Rosette", "Montravel", "Côtes de Montravel", "Haut-Montravel"]},
+      {"name": "Garonne and Lot", "aocs": ["Côtes de Duras", "Côtes du Marmandais", "Buzet", "Brulhois", "Cahors", "Coteaux du Quercy", "Fronton", "Saint-Sardos"]},
+      {"name": "Gaillac and Aveyron", "aocs": ["Gaillac", "Gaillac premières côtes", "Marcillac", "Entraygues - Le Fel", "Estaing", "Côtes de Millau"]},
+      {"name": "Gascogne and Pyrénées", "aocs": ["Madiran", "Pacherenc du Vic-Bilh", "Saint-Mont", "Tursan", "Béarn", "Jurançon", "Irouléguy", "Floc de Gascogne"]},
+      {"name": "Charentes", "aocs": ["Pineau des Charentes"]}
+    ]},
+    {"name": "Vallée du Rhône", "subregions": [
+      {"name": "Regional appellations", "aocs": ["Côtes du Rhône", "Côtes du Rhône Villages"]},
+      {"name": "Northern Rhône", "aocs": ["Côte Rôtie", "Condrieu", "Château-Grillet", "Saint-Joseph", "Hermitage", "Crozes-Hermitage", "Cornas", "Saint-Péray"]},
+      {"name": "Diois", "aocs": ["Clairette de Die", "Crémant de Die", "Coteaux de Die", "Châtillon-en-Diois"]},
+      {"name": "Southern Rhône", "aocs": ["Châteauneuf-du-Pape", "Gigondas", "Vacqueyras", "Rasteau", "Cairanne", "Vinsobres", "Beaumes de Venise", "Muscat de Beaumes-de-Venise", "Lirac", "Tavel", "Laudun", "Grignan-les-Adhémar", "Côtes du Vivarais", "Ventoux", "Luberon", "Pierrevert", "Costières de Nîmes", "Clairette de Bellegarde"]}
+    ]},
+    {"name": "Provence", "subregions": [
+      {"name": "", "aocs": ["Côtes de Provence", "Coteaux d'Aix-en-Provence", "Coteaux varois en Provence", "Les Baux de Provence", "Bandol", "Cassis", "Palette", "Bellet"]}
+    ]},
+    {"name": "Languedoc", "subregions": [
+      {"name": "", "aocs": ["Languedoc", "Pic Saint-Loup", "Grés de Montpellier", "Terrasses du Larzac", "Clairette du Languedoc", "Picpoul de Pinet", "Faugères", "Saint-Chinian", "Minervois", "Minervois-la-Livinière", "La Livinière", "Corbières", "Corbières-Boutenac", "Boutenac", "La Clape", "Fitou", "Cabardès", "Malepère", "Limoux", "Crémant de Limoux"]},
+      {"name": "Muscats", "aocs": ["Muscat de Frontignan", "Muscat de Lunel", "Muscat de Mireval", "Muscat de Saint-Jean-de-Minervois"]},
+      {"name": "Camargue", "aocs": ["Sable de Camargue", "Taureau de Camargue"]}
+    ]},
+    {"name": "Roussillon", "subregions": [
+      {"name": "", "aocs": ["Côtes du Roussillon", "Côtes du Roussillon Villages", "Collioure", "Banyuls", "Banyuls grand cru", "Maury", "Rivesaltes", "Muscat de Rivesaltes", "Grand Roussillon", "Béa du Roussillon"]}
+    ]},
+    {"name": "Corse", "subregions": [
+      {"name": "", "aocs": ["Vin de Corse", "Ajaccio", "Patrimonio", "Muscat du Cap Corse"]}
+    ]}
+  ],
+  "grand_cru_village": {
+    "Flagey-Echezeaux": "Vosne-Romanée",
+    "Ladoix-Serrigny": "Ladoix"
+  }
+}

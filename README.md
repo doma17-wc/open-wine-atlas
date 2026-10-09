@@ -53,6 +53,7 @@ pipeline/       one Python script per source, all writing the same schema
   build_index.py  search index
   enrich.py       computed facts per place: bedrock, neighbours, wineries inside, share of parent, wine rules
   build_details.py  merges source facts, computed facts and editorial notes per country
+  build_tree.py   the explorer tree of the sidebar (web/data/tree.json)
   notes/          editorial notes (CC BY 4.0)
   build_tiles.py  vector tiles (PMTiles), search index, place details
   lists/          classification lists (DOCG, Vinos de Pago, Anbaugebiete)
@@ -70,9 +71,9 @@ pip install geopandas pyogrio shapely pyproj
 python pipeline/basemap.py && python pipeline/inao.py && python pipeline/eu_pdo.py && python pipeline/us_ava.py && python pipeline/rlp.py \
   && python pipeline/ch.py && python pipeline/osm.py && python pipeline/fr_overview.py \
   && python pipeline/fetch_world.py && python pipeline/world.py \
-  && python pipeline/build_tiles.py && python pipeline/enrich.py && python pipeline/build_details.py
+  && python pipeline/build_tiles.py && python pipeline/enrich.py && python pipeline/build_details.py && python pipeline/build_tree.py
 # or, to refresh only the world layer and the wineries on top of the published web/data:
-python pipeline/fetch_world.py && python pipeline/world.py && python pipeline/osm.py && python pipeline/build_world_web.py
+python pipeline/fetch_world.py && python pipeline/world.py && python pipeline/osm.py && python pipeline/build_world_web.py && python pipeline/build_tree.py
 python web/build_web.py                   # writes web/index.html and web/artifact.html
 python web/encode_bin.py                  # only for the claude.ai artifact host, which serves text files
 ```
@@ -106,6 +107,31 @@ cadastral parcels (IGN) can be switched on from zoom 14.
 * Soil: texture, pH, stones and organic carbon from SoilGrids 2.0 (250 m model).
 * Wikipedia summary when an article clearly matches the place.
 
+## Explore regions (sidebar)
+
+The sidebar lists every place as a tree, so a region is two clicks away without knowing where it is on the map:
+France › Bourgogne › Côte de Nuits › Morey-Saint-Denis › Premier cru › Les Ruchots.
+
+* A name opens its sheet and flies the map there; the arrow only unfolds it. Arrow keys move through the list.
+* Countries, regions and sub-regions open a region sheet: places, appellations, top crus and premiers crus counted, every
+  place inside with its size, the top classified sites, and a Wikipedia summary when one matches.
+* Hovering a name, in the sidebar or in a sheet list, draws it in gold on the map.
+* A trail at the top of the map shows where you are; any step of it, or Esc, goes back up. Regions have their own
+  links (`#g:FR/bourgogne/cote-de-nuits`).
+* Wineries show their names from zoom 10.5 (the map drops names that would collide), and any dot shows its name on
+  hover; a click opens a small sheet with its website and the appellations it sits in.
+
+The hierarchy is built by `pipeline/build_tree.py` into `web/data/tree.json`:
+
+| Country | Levels | From |
+|---|---|---|
+| France | region › sub-region › appellation › premier cru › climat; grands crus under their village | `pipeline/lists/fr_regions.json` (editorial), INAO communes |
+| Germany | Anbaugebiet › Bereich › Großlage › Einzellage | LWK Rheinland-Pfalz |
+| United States | state › AVA › nested AVAs | UC Davis AVA project |
+| Australia | state › zone › region › subregion | Wine Australia |
+| Italy, Spain, Austria, Greece | administrative region › appellation | geoBoundaries ADM1/ADM2, by the centre of each place |
+| Everywhere else | the parent named in each register | the source of each country |
+
 ## My atlas (personal dashboard)
 
 Press **My atlas** (or the M key) for a dashboard that stays on the visitor's device:
@@ -123,8 +149,8 @@ elevation, slope and exposure under it.
 
 The atlas opens on a globe and flies in to Europe. Globe / Flat (top right, or the G key) switches between the
 globe and the flat map; the choice is remembered in the browser. The globe turns into the flat map by itself
-close in (MapLibre does this around zoom 11 to 12), so parcels look the same in both. World shows the whole
-earth, the country buttons fly across it, and a click on a place seen from far out flies in to it. The base
+close in (MapLibre does this around zoom 11 to 12), so parcels look the same in both. World view shows the whole
+earth, the countries in Explore regions fly across it, and a click on a place seen from far out flies in to it. The base
 map cuts Russia and Fiji at the date line (`pipeline/basemap.py`) so no outline runs round the earth.
 
 ## Terrain
