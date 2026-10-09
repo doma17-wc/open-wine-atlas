@@ -54,6 +54,7 @@ pipeline/       one Python script per source, all writing the same schema
   enrich.py       computed facts per place: bedrock, neighbours, wineries inside, share of parent, wine rules
   build_details.py  merges source facts, computed facts and editorial notes per country
   build_tree.py   the explorer tree of the sidebar (web/data/tree.json)
+  i18n_extract.py the translatable texts (web/i18n/_keys.json) and what each language still misses
   notes/          editorial notes (CC BY 4.0)
   build_tiles.py  vector tiles (PMTiles), search index, place details
   lists/          classification lists (DOCG, Vinos de Pago, Anbaugebiete)
@@ -106,6 +107,20 @@ cadastral parcels (IGN) can be switched on from zoom 14.
   its region (`web/data/vintages.json`, 13 regions, 2005 to 2024).
 * Soil: texture, pH, stones and organic carbon from SoilGrids 2.0 (250 m model).
 * Wikipedia summary when an article clearly matches the place.
+
+## Languages
+
+The interface is in English by default and in Français, Italiano, Deutsch, Español, Português, Nederlands, 日本語,
+中文 and 한국어 (button with the globe in the title box; `?lang=it` in a link opens a language directly; the choice is
+remembered). Everything the interface writes is translated: menus, sheets, region pages, terrain, climate, soil,
+vintages, My atlas, the guide and the glossary, plus the editorial atlas notes and the place types that come with the
+data. Place names, grape names and the legal classifications (Grand cru, DOCG, AVA, Einzellage…) stay as the registers
+write them. Country names come from the browser in the chosen language; Wikipedia summaries are fetched in the chosen
+language first.
+
+Texts live in `web/i18n/<code>.json`, keyed by the English text. `python pipeline/i18n_extract.py` lists every
+translatable text in `web/i18n/_keys.json` and reports what each language is missing; see `web/i18n/README.md` for
+the rules and how to add a language.
 
 ## Explore regions (sidebar)
 

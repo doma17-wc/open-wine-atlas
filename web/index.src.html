@@ -38,7 +38,7 @@ button, input { font: inherit; color: inherit; }
 .rail { position: absolute; top: calc(16px + env(safe-area-inset-top, 0px)); left: 16px; width: min(340px, calc(100% - 32px));
   display: flex; flex-direction: column; gap: 10px; z-index: 3; max-height: calc(100% - 32px); }
 .brand { padding: 14px 16px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px); }
-.brand h1 { margin: 0; font: 600 30px/1 var(--f-display); letter-spacing: .01em; text-wrap: balance; }
+.brand h1 { margin: 0; font: 600 27px/1.1 var(--f-display); letter-spacing: .01em; text-wrap: balance; padding-right: 108px; white-space: nowrap; }
 .brand p { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; }
 .brand .count { font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--parchment); }
 
@@ -89,6 +89,20 @@ button, input { font: inherit; color: inherit; }
 .rtabs .rcollapse { all: unset; cursor: pointer; display: grid; place-items: center; border-radius: 7px; color: var(--muted); }
 .rtabs .rcollapse:hover { color: var(--parchment); background: #222228; }
 .rcollapse:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+/* ---------- language */
+.brand { position: relative; z-index: 4; }
+.brand p { padding-right: 58px; }
+.lang-btn { position: absolute; right: 12px; bottom: 11px; display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; cursor: pointer; font: 500 11px var(--f-mono); color: var(--muted); letter-spacing: .06em; }
+.lang-btn:hover, .lang-btn[aria-expanded="true"] { color: var(--parchment); border-color: #57534a; }
+.langmenu { position: absolute; z-index: 6; right: 8px; top: calc(100% - 4px); min-width: 180px; padding: 5px; background: #17171b; border: 1px solid #3a3830;
+  border-radius: var(--r); box-shadow: 0 12px 30px rgba(0,0,0,.45); display: grid; gap: 1px; }
+.langmenu button { all: unset; cursor: pointer; display: flex; justify-content: space-between; gap: 16px; padding: 7px 10px; border-radius: 6px; font-size: 13px; }
+.langmenu button:hover, .langmenu button:focus-visible { background: #26252b; }
+.langmenu button[aria-checked="true"] { color: var(--gold); }
+.langmenu .k { font: 500 10.5px var(--f-mono); color: var(--muted); }
+.rail.mini .langmenu { position: fixed; left: 76px; top: 120px; right: auto; }
 
 /* ---------- panel sizes: slim sidebar, small / large sheet, map only */
 .minibar { display: none; }
@@ -298,8 +312,8 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .maplibregl-ctrl-scale { background: transparent; color: var(--muted); border-color: var(--muted); font: 10px var(--f-mono); }
 
 /* ---------- personal dashboard ("My atlas") */
-.brand { position: relative; }
-.dash-btn { position: absolute; top: 12px; right: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
+.brand { position: relative; z-index: 4; }
+.dash-btn { position: absolute; top: 12px; right: 12px; max-width: 104px; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
   border: 1px solid var(--line); background: #1b1b1f; cursor: pointer; font: 500 12px var(--f-body); color: var(--parchment); }
 .dash-btn:hover, .dash-btn:focus-visible { border-color: var(--parchment); }
 .dash-btn .n { font: 600 10.5px var(--f-mono); background: var(--gold); color: var(--night); border-radius: 999px; padding: 1px 6px; }
@@ -462,13 +476,14 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .rail-scroll { max-height: 58vh; }
   .mcrumbs { display: none; }
   .rtabs .rcollapse { display: none; }
+  .lang-btn { bottom: auto; top: 12px; right: 92px; }
   .sheet.min.open ~ .viewbar { display: flex; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
   .rtabs { grid-template-columns: 1fr 1fr; }
   .sheet.wide { max-height: calc(100% - 24px); }
   .sheet.min { width: auto; max-height: none; }
   .sheet.min { bottom: 0; }
   .brand { padding: 10px 12px; }
-  .brand h1 { font-size: 24px; }
+  .brand h1 { font-size: 24px; padding-right: 150px; }
   .brand p { display: none; }
   .sheet { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 62%; border-radius: 14px 14px 0 0; padding-bottom: env(safe-area-inset-bottom, 0px);
     transform: translateY(105%); }
@@ -479,105 +494,108 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
 </style>
 
-<div id="map" aria-label="Map of wine appellations"></div>
+<div id="map" aria-label="Map of wine appellations" data-i18n-aria="Map of wine appellations"></div>
 
 <div class="rail" id="rail">
-  <div class="minibar" id="minibar" aria-label="Slim sidebar">
-    <button id="miniOpen" title="Open the sidebar ( [ )" aria-label="Open the sidebar"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5L11 8l-4.5 4.5M3 3.5v9"/></svg></button>
-    <button id="miniSearch" title="Search ( / )" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.5 10.5L14 14"/></svg></button>
-    <button id="miniExplore" title="Explore regions" aria-label="Explore regions"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3.5h6M5 8h7M7 12.5h6M3 3.5v9h4M3 8h2"/></svg></button>
-    <button id="miniLayers" title="Map and layers" aria-label="Map and layers"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5l6 3-6 3-6-3z"/><path d="M2 9l6 3 6-3"/></svg></button>
-    <button id="miniDash" title="My atlas (M)" aria-label="My atlas"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l1.8 3.7 4 .6-2.9 2.8.7 4L8 11.4l-3.6 1.9.7-4L2.2 6.5l4-.6z"/></svg></button>
+  <div class="minibar" id="minibar" aria-label="Slim sidebar" data-i18n-aria="Slim sidebar">
+    <button id="miniOpen" title="Open the sidebar ( [ )" data-i18n-title="Open the sidebar ( [ )" aria-label="Open the sidebar" data-i18n-aria="Open the sidebar"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5L11 8l-4.5 4.5M3 3.5v9"/></svg></button>
+    <button id="miniSearch" title="Search ( / )" data-i18n-title="Search ( / )" aria-label="Search" data-i18n-aria="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.5 10.5L14 14"/></svg></button>
+    <button id="miniExplore" title="Explore regions" data-i18n-title="Explore regions" aria-label="Explore regions" data-i18n-aria="Explore regions"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3.5h6M5 8h7M7 12.5h6M3 3.5v9h4M3 8h2"/></svg></button>
+    <button id="miniLayers" title="Map and layers" data-i18n-title="Map and layers" aria-label="Map and layers" data-i18n-aria="Map and layers"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5l6 3-6 3-6-3z"/><path d="M2 9l6 3 6-3"/></svg></button>
+    <button id="miniLang" title="Language" data-i18n-title="Language" aria-label="Language" data-i18n-aria="Language"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 4 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.8 5.4 8s.8 4.3 2.6 6.2"/></svg></button>
+    <button id="miniDash" title="My atlas (M)" data-i18n-title="My atlas (M)" aria-label="My atlas" data-i18n-aria="My atlas"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l1.8 3.7 4 .6-2.9 2.8.7 4L8 11.4l-3.6 1.9.7-4L2.2 6.5l4-.6z"/></svg></button>
   </div>
   <div class="brand">
     <h1>Open Wine Atlas</h1>
-    <button class="dash-btn" id="openDash" aria-haspopup="dialog" title="My atlas (M)">My atlas <span class="n" id="dashCount" hidden>0</span></button>
-    <p><span class="count" id="count">…</span> wine places from official open registers. Click any outline.</p>
+    <button class="dash-btn" id="openDash" aria-haspopup="dialog" title="My atlas (M)" data-i18n-title="My atlas (M)"><span data-i18n style="overflow:hidden;text-overflow:ellipsis">My atlas</span> <span class="n" id="dashCount" hidden>0</span></button>
+    <p><span class="count" id="count">…</span> <span data-i18n>wine places from official open registers. Click any outline.</span></p>
+    <button class="lang-btn" id="langBtn" aria-haspopup="menu" aria-expanded="false" title="Language" data-i18n-title="Language"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 4 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.8 5.4 8s.8 4.3 2.6 6.2"/></svg><span id="langCode">EN</span></button>
+    <div class="langmenu" id="langMenu" role="menu" hidden></div>
   </div>
   <div class="search">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    <input id="q" type="search" placeholder="Search Barolo, Musigny, Barossa Valley, Paraje Altamira…" autocomplete="off" aria-label="Search wine places" aria-controls="results">
+    <input id="q" type="search" placeholder="Search Barolo, Musigny, Barossa Valley, Paraje Altamira…" data-i18n-ph="Search Barolo, Musigny, Barossa Valley, Paraje Altamira…" autocomplete="off" aria-label="Search wine places" data-i18n-aria="Search wine places" aria-controls="results">
     <ul class="results" id="results" role="listbox" hidden></ul>
   </div>
-  <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar">
-    <button role="tab" id="tabExplore" aria-selected="true" aria-controls="explore">Explore regions</button>
-    <button role="tab" id="tabMap" aria-selected="false" aria-controls="mapPanel">Map and layers</button>
-    <button class="rcollapse" id="railHide" title="Slim sidebar ( [ )" aria-label="Make the sidebar slim"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5L5 8l4.5 4.5M13 3.5v9"/></svg></button>
+  <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar" data-i18n-aria="Sidebar">
+    <button role="tab" id="tabExplore" aria-selected="true" aria-controls="explore" data-i18n>Explore regions</button>
+    <button role="tab" id="tabMap" aria-selected="false" aria-controls="mapPanel" data-i18n>Map and layers</button>
+    <button class="rcollapse" id="railHide" title="Slim sidebar ( [ )" data-i18n-title="Slim sidebar ( [ )" aria-label="Make the sidebar slim" data-i18n-aria="Make the sidebar slim"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5L5 8l4.5 4.5M13 3.5v9"/></svg></button>
   </div>
   <div class="rail-scroll" id="railScroll">
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
-    <div class="ex-head"><span class="hd">Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world">World view</button></div>
-    <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations"><p class="note ex-wait">Loading the regions…</p></div>
+    <div class="ex-head"><span class="hd" data-i18n>Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world" data-i18n-title="Show the whole world" data-i18n>World view</button></div>
+    <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
   </nav>
   <div class="mappanel" id="mapPanel" role="tabpanel" aria-labelledby="tabMap" hidden>
   <div class="mapsel web-only" id="mapsel" hidden>
-    <div class="hd">Map</div>
-    <div class="seg" id="baseSeg" role="radiogroup" aria-label="Base map">
-      <button data-base="dark" aria-checked="true" role="radio">Atlas</button><button data-base="light" aria-checked="false" role="radio">Paper</button><button data-base="satellite" aria-checked="false" role="radio">Satellite</button><button data-base="topo" aria-checked="false" role="radio">Topo</button>
+    <div class="hd" data-i18n>Map</div>
+    <div class="seg" id="baseSeg" role="radiogroup" aria-label="Base map" data-i18n-aria="Base map">
+      <button data-base="dark" aria-checked="true" role="radio" data-i18n>Atlas</button><button data-base="light" aria-checked="false" role="radio" data-i18n>Paper</button><button data-base="satellite" aria-checked="false" role="radio" data-i18n>Satellite</button><button data-base="topo" aria-checked="false" role="radio" data-i18n>Topo</button>
     </div>
-    <div class="hd">Terrain</div>
-    <div class="seg" id="ovSeg" role="radiogroup" aria-label="Terrain overlay">
-      <button data-ov="none" aria-checked="false" role="radio">Off</button><button data-ov="relief" aria-checked="true" role="radio">Relief</button><button data-ov="elevation" aria-checked="false" role="radio">Altitude</button><button data-ov="slope" aria-checked="false" role="radio">Slope</button><button data-ov="aspect" aria-checked="false" role="radio">Exposure</button>
+    <div class="hd" data-i18n>Terrain</div>
+    <div class="seg" id="ovSeg" role="radiogroup" aria-label="Terrain overlay" data-i18n-aria="Terrain overlay">
+      <button data-ov="none" aria-checked="false" role="radio" data-i18n>Off</button><button data-ov="relief" aria-checked="true" role="radio" data-i18n>Relief</button><button data-ov="elevation" aria-checked="false" role="radio" data-i18n>Altitude</button><button data-ov="slope" aria-checked="false" role="radio" data-i18n>Slope</button><button data-ov="aspect" aria-checked="false" role="radio" data-i18n>Exposure</button>
     </div>
     <div class="ovleg" id="ovLegend"></div>
-    <label class="cad"><input type="checkbox" id="lg-cad"><span>Cadastral parcels (France, zoom in)</span></label>
+    <label class="cad"><input type="checkbox" id="lg-cad"><span data-i18n>Cadastral parcels (France, zoom in)</span></label>
   </div>
   <div class="legend" id="legend">
-    <div class="hd">Layers</div>
-    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations and GIs (AOC, DOC, DO, PDO, AVA, GI)</span></label>
-    <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span>Grand cru, DOCG, DOCa, Pago</span></label>
-    <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span>Premiers crus and climats</span></label>
-    <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span>Einzellagen (Rheinland-Pfalz)</span></label>
-    <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span>Vineyards (Switzerland, OSM)</span></label>
-    <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span>Wineries (OSM)</span></label>
-    <p class="note lg-note"><svg width="18" height="6" aria-hidden="true"><path d="M1 3h16" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg> approximate outline, built from administrative units<br><svg width="18" height="8" aria-hidden="true"><circle cx="9" cy="4" r="3.2" fill="currentColor"/></svg> place without an open boundary, shown at its namesake town</p>
+    <div class="hd" data-i18n>Layers</div>
+    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span data-i18n>Appellations and GIs (AOC, DOC, DO, PDO, AVA, GI)</span></label>
+    <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span data-i18n>Grand cru, DOCG, DOCa, Pago</span></label>
+    <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span data-i18n>Premiers crus and climats</span></label>
+    <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span data-i18n>Einzellagen (Rheinland-Pfalz)</span></label>
+    <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span data-i18n>Vineyards (Switzerland, OSM)</span></label>
+    <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span data-i18n>Wineries (OSM)</span></label>
+    <p class="note lg-note"><svg width="18" height="6" aria-hidden="true"><path d="M1 3h16" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg> <span data-i18n>approximate outline, built from administrative units</span><br><svg width="18" height="8" aria-hidden="true"><circle cx="9" cy="4" r="3.2" fill="currentColor"/></svg> <span data-i18n>place without an open boundary, shown at its namesake town</span></p>
   </div>
   </div>
   <div class="rail-foot">
-    <button class="link-btn" id="openGuide">How to read the atlas</button>
-    <button class="link-btn" id="openVintages">Vintage chart</button>
-    <button class="link-btn" id="openData">Open data &amp; sources</button>
-    <button class="link-btn" id="openSuggest">Suggest a place</button>
+    <button class="link-btn" id="openGuide" data-i18n>How to read the atlas</button>
+    <button class="link-btn" id="openVintages" data-i18n>Vintage chart</button>
+    <button class="link-btn" id="openData" data-i18n>Open data &amp; sources</button>
+    <button class="link-btn" id="openSuggest" data-i18n>Suggest a place</button>
   </div>
   </div>
 </div>
 
-<aside class="sheet" id="sheet" aria-live="polite" aria-label="Place details">
-  <div class="sh-ctl" role="group" aria-label="Panel size">
-    <button id="shMin" title="Small window" aria-label="Make the panel small"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8"/></svg></button>
-    <button id="shWide" title="Large window" aria-label="Make the panel large"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3H13v3.5M13 3L9 7M6.5 13H3V9.5M3 13l4-4"/></svg></button>
-    <button id="close" aria-label="Close details" title="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+<aside class="sheet" id="sheet" aria-live="polite" aria-label="Place details" data-i18n-aria="Place details">
+  <div class="sh-ctl" role="group" aria-label="Panel size" data-i18n-aria="Panel size">
+    <button id="shMin" title="Small window" data-i18n-title="Small window" aria-label="Make the panel small" data-i18n-aria="Make the panel small"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8"/></svg></button>
+    <button id="shWide" title="Large window" data-i18n-title="Large window" aria-label="Make the panel large" data-i18n-aria="Make the panel large"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3H13v3.5M13 3L9 7M6.5 13H3V9.5M3 13l4-4"/></svg></button>
+    <button id="close" aria-label="Close details" data-i18n-aria="Close details" title="Close" data-i18n-title="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
   </div>
   <header id="sh-head"></header>
   <div class="body" id="sh-body"></div>
 </aside>
 
 <div class="viewbar" id="viewbar">
-  <div class="relief-btn" role="group" aria-label="Map only">
-    <button id="btnMapOnly" aria-pressed="false" title="Only the map, panels hidden (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/></svg><span class="sr">Map only</span></button>
+  <div class="relief-btn" role="group" aria-label="Map only" data-i18n-aria="Map only">
+    <button id="btnMapOnly" aria-pressed="false" title="Only the map, panels hidden (F)" data-i18n-title="Only the map, panels hidden (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/></svg><span class="sr" data-i18n>Map only</span></button>
   </div>
-  <div class="relief-btn" id="projBtn" role="group" aria-label="Globe or flat map">
-    <button id="btnGlobe" aria-pressed="true" title="The world as a globe (G)">Globe</button><button id="btnFlat" aria-pressed="false" title="Flat map (G)">Flat</button>
+  <div class="relief-btn" id="projBtn" role="group" aria-label="Globe or flat map" data-i18n-aria="Globe or flat map">
+    <button id="btnGlobe" aria-pressed="true" title="The world as a globe (G)" data-i18n-title="The world as a globe (G)" data-i18n>Globe</button><button id="btnFlat" aria-pressed="false" title="Flat map (G)" data-i18n-title="Flat map (G)" data-i18n>Flat</button>
   </div>
-  <div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" hidden>
+  <div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" data-i18n-aria="Map view" hidden>
     <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
   </div>
 </div>
-<nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" hidden></nav>
-<button class="showpanels" id="showPanels" hidden title="Show the panels again (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3h11v10h-11zM6 3v10"/></svg><span>Show panels</span></button>
-<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
+<nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" data-i18n-aria="Where you are" hidden></nav>
+<button class="showpanels" id="showPanels" hidden title="Show the panels again (F)" data-i18n-title="Show the panels again (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3h11v10h-11zM6 3v10"/></svg><span data-i18n>Show panels</span></button>
+<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap <span data-i18n>contributors</span><span class="web-only" hidden> · <span data-i18n>terrain</span> © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore" data-i18n>all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
-    <header class="dash-head"><h2 id="dashTitle">My atlas</h2>
-      <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections">
-        <button role="tab" data-tab="overview" aria-selected="true">Overview</button><button role="tab" data-tab="saved" aria-selected="false">Saved</button><button role="tab" data-tab="journal" aria-selected="false">Journal</button><button role="tab" data-tab="compare" aria-selected="false">Compare</button><button role="tab" data-tab="explore" aria-selected="false">Explore</button>
+    <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2>
+      <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
+        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button>
       </nav></header>
-    <button class="x" id="dashClose" aria-label="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
     <div class="dash-body" id="dashBody" role="tabpanel"></div>
   </div>
 </section>
-<div class="loading" id="loading">Loading the atlas…</div>
+<div class="loading" id="loading" data-i18n>Loading the atlas…</div>
 <div class="tag" id="tag" hidden></div>
 <div class="modal" id="modal" hidden><div class="card" id="modalCard" role="dialog" aria-modal="true"></div></div>
 
@@ -587,6 +605,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 (() => {
 "use strict";
 const $ = (id) => document.getElementById(id);
+const N_ = (s) => s; // marks an English text for translation (see "language of the interface")
 const C = { night: "#0b0b0d", land: "#151518", line: "#2a2a31", parchment: "#e6dccb", muted: "#8d877c",
   gold: "#e7c06a", copper: "#cf8f5f", slate: "#9db0c0", vine: "#7f9b6f", focus: "#fff8ea", water: "#08090b", river: "#1e2833" };
 const TOP = ["grand_cru", "docg", "doca", "pago"];
@@ -634,13 +653,58 @@ const SOURCES = {
   marker: { name: "Open Wine Atlas contributors: location of the namesake town", license: "CC BY 4.0", url: "https://github.com/doma17-wc/open-wine-atlas" },
   dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
 };
-const LEVEL_LABEL = { region: "Wine region", appellation: "Appellation", subzone: "Sub-zone", vineyard: "Vineyard site", vineyard_area: "Vineyard area" };
+const LEVEL_LABEL = { region: N_("Wine region"), appellation: N_("Appellation"), subzone: N_("Sub-zone"), vineyard: N_("Vineyard site"), vineyard_area: N_("Vineyard area") };
 const RANK_LABEL = { grand_cru: "Grand cru", premier_cru: "Premier cru", docg: "DOCG", doca: "DOCa", pago: "Vino de Pago" };
+// label tables written in English above and below are translated in place once the language file is in
+const LOCALIZE = [LEVEL_LABEL];
+function localizeConsts() {
+  const walk = (o) => { for (const k in o) { if (typeof o[k] === "string") o[k] = t_(o[k]); else if (o[k] && typeof o[k] === "object") walk(o[k]); } };
+  LOCALIZE.forEach(walk);
+}
 
 const base = location.origin + location.pathname.replace(/[^/]*$/, "");
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const norm = (s) => String(s).normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-const fmt = (n) => Number(n).toLocaleString("en-US");
+// ---------- language of the interface
+// English is the base language: every interface text is written in English in this file, wrapped in t_(), and looked
+// up in web/i18n/<lang>.json (key: the English text, value: the translation). Missing keys fall back to English.
+// N_() only marks a text for the extractor (pipeline/i18n_extract.py); it is translated where it is shown.
+// Place names, classifications (Grand cru, DOCG, AVA…) and editorial notes stay as written in the registers.
+const LANGS = { en: "English", fr: "Français", it: "Italiano", de: "Deutsch", es: "Español", pt: "Português", nl: "Nederlands",
+  ja: "日本語", zh: "中文（简体）", ko: "한국어" };
+const LOCALES = { en: "en-GB", fr: "fr-FR", it: "it-IT", de: "de-DE", es: "es-ES", pt: "pt-PT", nl: "nl-NL", ja: "ja-JP", zh: "zh-CN", ko: "ko-KR" };
+const UILANG = (() => {
+  let l = new URLSearchParams(location.search).get("lang");
+  if (!l) try { l = localStorage.getItem("owa.lang"); } catch (e) {}
+  l = String(l || "en").toLowerCase().slice(0, 2);
+  return LANGS[l] ? l : "en";
+})();
+const LOCALE = LOCALES[UILANG];
+let DICT = {};
+function t_(s, vars) {
+  let out = (DICT[s] ?? s);
+  if (vars) out = out.replace(/\{(\w+)\}/g, (m, k) => (vars[k] ?? m));
+  return out;
+}
+const I18N_READY = UILANG === "en" ? Promise.resolve() :
+  fetch("i18n/" + UILANG + ".json").then((r) => r.ok ? r.json() : {}).then((d) => { DICT = d || {}; }).catch(() => {});
+document.documentElement.lang = UILANG;
+// country names in the interface language (the browser knows them all)
+const REGION_NAMES = (() => { try { return new Intl.DisplayNames([LOCALE], { type: "region" }); } catch (e) { return null; } })();
+function cname(cc) {
+  if (UILANG === "en" && COUNTRY_EN[cc]) return COUNTRY_EN[cc].replace(/^the /, "");
+  try { return (REGION_NAMES && REGION_NAMES.of(cc)) || COUNTRY_EN[cc] || cc; } catch (e) { return COUNTRY_EN[cc] || cc; }
+}
+// in a running English sentence: "in the Netherlands"
+const cnameRun = (cc) => UILANG === "en" ? (COUNTRY_EN[cc] || cc) : cname(cc);
+// texts in the HTML: data-i18n (text), data-i18n-title, data-i18n-aria, data-i18n-ph (placeholder)
+function applyStatic(root = document) {
+  root.querySelectorAll("[data-i18n]").forEach((el) => { el.dataset.i18nKey = el.dataset.i18nKey || el.textContent.trim(); el.textContent = t_(el.dataset.i18nKey); });
+  [["i18nTitle", "title"], ["i18nAria", "aria-label"], ["i18nPh", "placeholder"]].forEach(([d, attr]) => {
+    root.querySelectorAll("[data-" + d.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase()) + "]").forEach((el) => el.setAttribute(attr, t_(el.dataset[d])));
+  });
+}
+const fmt = (n) => Number(n).toLocaleString(LOCALE);
 
 // ---------- hosting mode
 // "web": static hosting with HTTP range requests (Vercel). Tiles are read in small pieces, terrain is on.
@@ -699,7 +763,9 @@ const pmUrl = (file) => "pmtiles://" + (WEB ? base + "data/" + file : file);
 // globe or flat: the viewer's last choice, globe by default. MapLibre's globe turns into the flat map by itself around zoom 11-12.
 const startGlobe = (() => { try { return localStorage.getItem("owa.proj") !== "flat"; } catch (e) { return true; } })();
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const INTRO = startGlobe && !REDUCED && !location.hash.slice(1);
+// after a change of language the page reloads where it was
+const SAVED_VIEW = (() => { try { const v = JSON.parse(sessionStorage.getItem("owa.view")); sessionStorage.removeItem("owa.view"); return v; } catch (e) { return null; } })();
+const INTRO = startGlobe && !REDUCED && !location.hash.slice(1) && !SAVED_VIEW;
 const map = new maplibregl.Map({
   container: "map",
   style: {
@@ -710,7 +776,7 @@ const map = new maplibregl.Map({
     projection: { type: startGlobe ? "globe" : "mercator" },
   },
   // with the globe the atlas opens on the whole earth and flies in to Europe once the base map is drawn
-  ...(INTRO ? { center: [12, 32], zoom: 1.4 } : { bounds: EUROPE }),
+  ...(INTRO ? { center: [12, 32], zoom: 1.4 } : SAVED_VIEW ? SAVED_VIEW : { bounds: EUROPE }),
   fitBoundsOptions: { padding: { top: 40, bottom: 40, left: 20, right: 20 } },
   minZoom: 1, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
   attributionControl: false,
@@ -724,7 +790,7 @@ const UI = { rail: "open", sheet: "normal", mapOnly: false };
 const railPad = () => ({ top: 0, bottom: 0, right: 0, left: innerWidth > 760 ? (UI.mapOnly ? 0 : UI.rail === "mini" ? 62 : 370) : 0 });
 const VIEW_PAD = { top: 40, bottom: 40, left: 20, right: 20 };
 map.setPadding(railPad());
-if (!INTRO) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 0 });
+if (!INTRO && !SAVED_VIEW) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 0 });
 addEventListener("resize", () => { map.setPadding(railPad()); map.setMinZoom(isGlobe ? Math.max(0, worldZoom() - 0.8) : 0.6); });
 // far out the earth is seen straight on. Tilt is allowed from zoom 2 and in full from zoom 5, so zooming out
 // from a tilted 3D view no longer pushes the globe off centre.
@@ -764,16 +830,15 @@ function addBase() {
   map.addLayer({ id: "borders", type: "line", source: "base", "source-layer": "countries",
     paint: { "line-color": "#34343c", "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.6, 10, 1.4] } });
   // one label per country, placed by hand (tile-based polygon labels repeat on every tile)
-  const pts = [["FRANCE", 2.4, 46.7], ["ITALIA", 12.6, 42.9], ["ESPAÑA", -3.6, 40.0], ["DEUTSCHLAND", 10.2, 51.2], ["SCHWEIZ", 8.2, 46.85],
-    ["ÖSTERREICH", 14.2, 47.6], ["PORTUGAL", -8.0, 39.6], ["ΕΛΛΆΔΑ", 22.0, 39.3], ["MAGYARORSZÁG", 19.4, 47.1], ["ROMÂNIA", 24.9, 45.9],
-    ["БЪЛГАРИЯ", 25.3, 42.7], ["HRVATSKA", 16.0, 45.5], ["SLOVENIJA", 14.8, 46.1], ["ČESKO", 15.4, 49.8], ["SLOVENSKO", 19.6, 48.7],
-    ["UNITED KINGDOM", -2.0, 53.0], ["BELGIQUE", 4.6, 50.6], ["NEDERLAND", 5.6, 52.2], ["DANMARK", 9.3, 56.1], ["UNITED STATES", -98.5, 39.5],
-    // the label font covers Latin, Greek and Cyrillic: other scripts are transliterated
-    ["AUSTRALIA", 134, -25], ["NEW ZEALAND", 172.5, -41.5], ["SOUTH AFRICA", 24, -30], ["CHILE", -71.3, -30.5], ["ARGENTINA", -65, -36],
-    ["BRASIL", -51, -12], ["URUGUAY", -56, -32.8], ["CANADA", -100, 56], ["MÉXICO", -102, 24], ["SAKARTVELO", 43.5, 42.2],
-    ["MOLDOVA", 28.5, 47.2], ["УКРАЇНА", 31.5, 49], ["HAYASTAN", 45, 40.3], ["TÜRKIYE", 35, 39], ["ISRAEL", 34.9, 31.0],
-    ["LEBANON", 35.9, 34.0], ["СРБИЈА", 20.8, 44.0], ["МАКЕДОНИЈА", 21.7, 41.6], ["CRNA GORA", 19.3, 42.8],
-    ["BOSNA I HERCEGOVINA", 17.8, 44.2], ["NIHON", 138, 37], ["ZHONGGUO", 104, 35], ["BHARAT", 79, 22]];
+  // the label font covers Latin, Greek and Cyrillic: in Japanese, Chinese and Korean the map keeps English names
+  const pts = [["FR", 2.4, 46.7], ["IT", 12.6, 42.9], ["ES", -3.6, 40.0], ["DE", 10.2, 51.2], ["CH", 8.2, 46.85], ["AT", 14.2, 47.6],
+    ["PT", -8.0, 39.6], ["GR", 22.0, 39.3], ["HU", 19.4, 47.1], ["RO", 24.9, 45.9], ["BG", 25.3, 42.7], ["HR", 16.0, 45.5], ["SI", 14.8, 46.1],
+    ["CZ", 15.4, 49.8], ["SK", 19.6, 48.7], ["GB", -2.0, 53.0], ["BE", 4.6, 50.6], ["NL", 5.6, 52.2], ["DK", 9.3, 56.1], ["US", -98.5, 39.5],
+    ["AU", 134, -25], ["NZ", 172.5, -41.5], ["ZA", 24, -30], ["CL", -71.3, -30.5], ["AR", -65, -36], ["BR", -51, -12], ["UY", -56, -32.8],
+    ["CA", -100, 56], ["MX", -102, 24], ["GE", 43.5, 42.2], ["MD", 28.5, 47.2], ["UA", 31.5, 49], ["AM", 45, 40.3], ["TR", 35, 39],
+    ["IL", 34.9, 31.0], ["LB", 35.9, 34.0], ["RS", 20.8, 44.0], ["MK", 21.7, 41.6], ["ME", 19.3, 42.8], ["BA", 17.8, 44.2],
+    ["JP", 138, 37], ["CN", 104, 35], ["IN", 79, 22]]
+    .map(([cc, x, y]) => [(["ja", "zh", "ko"].includes(UILANG) ? COUNTRY_EN[cc].replace(/^the /, "") : cname(cc)).toLocaleUpperCase(LOCALE), x, y]);
   map.addSource("country-pts", { type: "geojson", data: { type: "FeatureCollection", features: pts.map(([n, x, y]) => ({ type: "Feature", properties: { n }, geometry: { type: "Point", coordinates: [x, y] } })) } });
   map.addLayer({ id: "country-labels", type: "symbol", source: "country-pts", maxzoom: 7.5,
     layout: { "text-field": ["get", "n"], "text-font": ["noto-medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 7, 15],
@@ -1025,10 +1090,10 @@ function applyTheme() {
 }
 const OV_LEGEND = {
   none: "",
-  relief: '<span>Shaded relief from national lidar models where open, Copernicus 30 m elsewhere.</span>',
+  relief: '<span>' + N_("Shaded relief from national lidar models where open, Copernicus 30 m elsewhere.") + '</span>',
   elevation: '<div class="ramp" style="background:linear-gradient(90deg,#2c4f3a,#3f6b3e,#6f8a45 12%,#a39a52 20%,#b98454 32%,#a8685a 46%,#b9a29a 66%,#e9e4de 90%,#fff)"></div><div class="ticks"><span>0</span><span>500</span><span>1000</span><span>1800</span><span>2600 m</span></div>',
-  slope: '<div class="ramp" style="background:linear-gradient(90deg,rgba(242,230,160,.15),#f2e6a0 12%,#f0b85a 30%,#e07b39 52%,#c4442c 75%,#8e1f3a)"></div><div class="ticks"><span>3°</span><span>10°</span><span>18°</span><span>28°</span><span>40°+</span></div><span>Zoom in to see slopes (from zoom 8).</span>',
-  aspect: '<div class="sw8">' + ["N", "NE", "E", "SE", "S", "SW", "W", "NW"].map((d, k) => '<span><i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>' + d + "</span>").join("") + '</div><span>The direction each slope faces. Flat ground stays clear. From zoom 8.</span>',
+  slope: '<div class="ramp" style="background:linear-gradient(90deg,rgba(242,230,160,.15),#f2e6a0 12%,#f0b85a 30%,#e07b39 52%,#c4442c 75%,#8e1f3a)"></div><div class="ticks"><span>3°</span><span>10°</span><span>18°</span><span>28°</span><span>40°+</span></div><span>' + N_("Zoom in to see slopes (from zoom 8).") + '</span>',
+  aspect: '<div class="sw8">' + ["N", "NE", "E", "SE", "S", "SW", "W", "NW"].map((d, k) => '<span><i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>' + d + "</span>").join("") + '</div><span>' + N_("The direction each slope faces. Flat ground stays clear. From zoom 8.") + '</span>',
 };
 function setBase(b) {
   baseMap = INK[b] ? b : "dark";
@@ -1043,7 +1108,7 @@ function setOverlay(o) {
   setVis("slope", overlay === "slope");
   setVis("aspect", overlay === "aspect");
   setP("relief", "hillshade-exaggeration", overlay === "relief" ? ["interpolate", ["linear"], ["zoom"], 5, 0.55, 10, 0.4, 14, 0.3] : 0.25);
-  $("ovLegend").innerHTML = OV_LEGEND[overlay];
+  $("ovLegend").innerHTML = OV_LEGEND[overlay].replace(/<span>([^<]+)<\/span>/g, (m, x) => "<span>" + esc(t_(x)) + "</span>");
   store.set("overlay", overlay);
 }
 
@@ -1271,11 +1336,12 @@ async function getClimate(lat, lon, elev) {
   }
   return CLIMATE.get(key);
 }
-const winkler = (g) => g < 1389 ? "Region I" : g < 1667 ? "Region II" : g < 1944 ? "Region III" : g < 2222 ? "Region IV" : "Region V";
-const huglinClass = (h) => h < 1500 ? "very cool" : h < 1800 ? "cool" : h < 2100 ? "temperate" : h < 2400 ? "warm temperate" : h < 3000 ? "warm" : "very warm";
-const GST_BANDS = [[13, "too cool for most wine grapes", ""], [15, "cool", "Pinot Noir, Riesling, Chardonnay, Pinot Gris"],
-  [17, "intermediate", "Chardonnay, Merlot, Cabernet Franc, Tempranillo, Syrah"], [19, "warm", "Cabernet Sauvignon, Syrah, Sangiovese, Nebbiolo"],
-  [21, "hot", "Grenache, Mourvèdre, Zinfandel, Carignan"], [99, "very hot", "fortified wines and table grapes"]];
+const winkler = (g) => t_("Region {n}", { n: g < 1389 ? "I" : g < 1667 ? "II" : g < 1944 ? "III" : g < 2222 ? "IV" : "V" });
+const huglinClass = (h) => t_(h < 1500 ? N_("very cool") : h < 1800 ? N_("cool") : h < 2100 ? N_("temperate") : h < 2400 ? N_("warm temperate") : h < 3000 ? N_("warm") : N_("very warm"));
+// [upper limit °C, the climate in a phrase, typical grapes]
+const GST_BANDS = [[13, N_("A climate too cool for most wine grapes"), ""], [15, N_("A cool climate for wine"), "Pinot Noir, Riesling, Chardonnay, Pinot Gris"],
+  [17, N_("An intermediate climate for wine"), "Chardonnay, Merlot, Cabernet Franc, Tempranillo, Syrah"], [19, N_("A warm climate for wine"), "Cabernet Sauvignon, Syrah, Sangiovese, Nebbiolo"],
+  [21, N_("A hot climate for wine"), "Grenache, Mourvèdre, Zinfandel, Carignan"], [99, N_("A very hot climate for wine"), N_("fortified wines and table grapes")]];
 const gstBand = (g) => GST_BANDS.find(([max]) => g < max);
 const sign = (v, d = 1) => (v >= 0 ? "+" : "−") + fmtN(Math.abs(v), d);
 
@@ -1302,9 +1368,9 @@ let vintSort = "year";
 function climateTable(c) {
   const rows = c.years.slice(-15);
   const sorted = vintSort === "warm" ? [...rows].sort((a, b) => b.gst - a.gst) : vintSort === "dry" ? [...rows].sort((a, b) => a.rain - b.rain) : [...rows].reverse();
-  return '<div class="tabs2" role="group" aria-label="Sort vintages"><button data-vsort="year" aria-pressed="' + (vintSort === "year") + '">By year</button><button data-vsort="warm" aria-pressed="' + (vintSort === "warm") +
-    '">Warmest first</button><button data-vsort="dry" aria-pressed="' + (vintSort === "dry") + '">Driest first</button></div>' +
-    '<div class="tbl"><table class="vt"><tr><th>Vintage</th><th>Season °C</th><th>Rain mm</th><th>Days 30°+</th><th>Frost</th><th>Harvest rain</th><th>Warmth rank</th></tr>' +
+  return '<div class="tabs2" role="group" aria-label="' + t_("Sort vintages") + '"><button data-vsort="year" aria-pressed="' + (vintSort === "year") + '">' + t_("By year") + '</button><button data-vsort="warm" aria-pressed="' + (vintSort === "warm") +
+    '">' + t_("Warmest first") + '</button><button data-vsort="dry" aria-pressed="' + (vintSort === "dry") + '">' + t_("Driest first") + '</button></div>' +
+    '<div class="tbl"><table class="vt"><tr>' + [N_("Vintage"), N_("Season °C"), N_("Rain mm"), N_("Days 30°+"), N_("Frost"), N_("Harvest rain"), N_("Warmth rank")].map((h) => "<th>" + t_(h) + "</th>").join("") + "</tr>" +
     sorted.map((y) => '<tr class="' + (y.rankWarm <= 5 ? "hot" : "") + '"><td>' + y.year + "</td><td>" + fmtN(y.gst, 1) + ' <span class="note">' + sign(y.gst - c.normal.gst) + "</span></td><td>" + fmtN(y.rain) +
       "</td><td>" + y.hot30 + "</td><td>" + y.frost + "</td><td>" + fmtN(y.sep) + "</td><td>" + y.rankWarm + "/" + c.years.length + "</td></tr>").join("") + "</table></div>";
 }
@@ -1318,33 +1384,36 @@ async function fillClimate(p, d, rec, token, terrain) {
     if (!b || !c.years.length) { if (b) b.remove(); return; }
     noteFacts(p.id, "climate", c);
     const N = c.normal, band = gstBand(N.gst), S = pt[0] < 0;
-    let lede = (/^[aeiou]/.test(band[1]) ? "An " : "A ") + band[1] + " climate for wine: the growing season averages " + fmtN(N.gst, 1) + " °C (" + winkler(N.gdd) + ", Huglin " + fmtN(N.hi) + ", " + huglinClass(N.hi) + ").";
-    if (c.trend != null) lede += " The last ten seasons ran " + (c.trend >= 0 ? fmtN(c.trend, 1) + " °C warmer" : fmtN(-c.trend, 1) + " °C cooler") + " than the 1990s.";
-    if (band[2]) lede += " Typical match: " + band[2] + ".";
+    let lede = t_("{climate}: the growing season averages {gst} °C ({winkler}, Huglin {hi}, {huglin}).",
+      { climate: t_(band[1]), gst: fmtN(N.gst, 1), winkler: winkler(N.gdd), hi: fmtN(N.hi), huglin: huglinClass(N.hi) });
+    if (c.trend != null) lede += " " + (c.trend >= 0 ? t_("The last ten seasons ran {d} °C warmer than the 1990s.", { d: fmtN(c.trend, 1) })
+      : t_("The last ten seasons ran {d} °C cooler than the 1990s.", { d: fmtN(-c.trend, 1) }));
+    if (band[2]) lede += " " + t_("Typical match: {grapes}.", { grapes: t_(band[2]) });
+    const perSeason = t_("per season");
     const rows = [
-      ["Growing season mean", fmtN(N.gst, 1) + " °C", S ? "Oct–Apr" : "Apr–Oct"], ["Growing degree days", fmtN(N.gdd) + " °C·d", winkler(N.gdd) + " (Winkler)"],
-      ["Huglin index", fmtN(N.hi), huglinClass(N.hi)], ["Rain, growing season", fmtN(N.rain) + " mm", ""], ["Harvest-month rain", fmtN(N.sep) + " mm", S ? "Mar" : "Sep"],
-      ["Sunshine, growing season", fmtN(N.sun) + " h", ""], ["Days above 30 °C", fmtN(N.hot30), "per season"], ["Days above 35 °C", fmtN(N.hot35, 1), "per season"],
-      ["Spring frost days", fmtN(N.frost, 1), (S ? "Oct–Nov" : "Apr–May") + ", ≤ −1 °C"], ["Cool nights", N.night != null ? fmtN(N.night, 1) + " °C" : "–", "mean " + (S ? "Mar" : "Sep") + " minimum"],
+      [N_("Growing season mean"), fmtN(N.gst, 1) + " °C", t_(S ? "Oct–Apr" : "Apr–Oct")], [N_("Growing degree days"), fmtN(N.gdd) + " °C·d", winkler(N.gdd) + " (Winkler)"],
+      [N_("Huglin index"), fmtN(N.hi), huglinClass(N.hi)], [N_("Rain, growing season"), fmtN(N.rain) + " mm", ""], [N_("Harvest-month rain"), fmtN(N.sep) + " mm", t_(S ? "Mar" : "Sep")],
+      [N_("Sunshine, growing season"), fmtN(N.sun) + " h", ""], [N_("Days above 30 °C"), fmtN(N.hot30), perSeason], [N_("Days above 35 °C"), fmtN(N.hot35, 1), perSeason],
+      [N_("Spring frost days"), fmtN(N.frost, 1), t_(S ? "Oct–Nov" : "Apr–May") + ", ≤ −1 °C"], [N_("Cool nights"), N.night != null ? fmtN(N.night, 1) + " °C" : "–", t_(S ? "mean March minimum" : "mean September minimum")],
     ];
-    b.innerHTML = '<h3>Climate · 1991–2020 <button class="q" data-gloss="climate" aria-label="About this data">?</button></h3>' +
+    b.innerHTML = '<h3>' + t_("Climate") + ' · 1991–2020 <button class="q" data-gloss="climate" aria-label="' + t_("About this data") + '">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + esc(lede) + "</p>" +
-      '<dl class="facts">' + rows.map(([k, v, n]) => "<dt>" + k + '</dt><dd><span class="num">' + v + "</span>" + (n ? ' <span class="note">' + esc(n) + "</span>" : "") + "</dd>").join("") + "</dl>" +
-      '<div class="note" style="margin:12px 0 4px">Growing season temperature per vintage, ' + c.first + "–" + c.last + ". Dashed line: 1991–2020 mean.</div>" +
-      barChart(c.years, (y) => y.gst, { label: "Growing season mean temperature per vintage", fmt: (v) => fmtN(v, 1) + " °C", ref: N.gst, min: Math.min(...c.years.map((y) => y.gst)) - 0.4 }) +
-      '<div class="note" style="margin:10px 0 4px">Rain in the growing season per vintage (mm).</div>' +
-      barChart(c.years, (y) => y.rain, { label: "Growing season rain per vintage", fmt: (v) => fmtN(v) + " mm", ref: N.rain, min: 0, cls: "rain" }) +
-      '<p class="note">ERA5-Land reanalysis via <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), about 9 km cells' +
-      (terrain ? ", adjusted to the measured mean elevation of " + fmtN(terrain.mean) + " m" : "") + ". It describes the area, not one row of vines." +
-      (S ? " Southern hemisphere: the season runs October to April and a vintage is named after its harvest year." : "") + "</p>" +
-      '<div id="twins-box"><button class="link-btn" data-twins>Compare with wine regions worldwide</button></div>';
+      '<dl class="facts">' + rows.map(([k, v, n]) => "<dt>" + t_(k) + '</dt><dd><span class="num">' + v + "</span>" + (n ? ' <span class="note">' + esc(n) + "</span>" : "") + "</dd>").join("") + "</dl>" +
+      '<div class="note" style="margin:12px 0 4px">' + t_("Growing season temperature per vintage, {first}–{last}. Dashed line: 1991–2020 mean.", { first: c.first, last: c.last }) + "</div>" +
+      barChart(c.years, (y) => y.gst, { label: t_("Growing season mean temperature per vintage"), fmt: (v) => fmtN(v, 1) + " °C", ref: N.gst, min: Math.min(...c.years.map((y) => y.gst)) - 0.4 }) +
+      '<div class="note" style="margin:10px 0 4px">' + t_("Rain in the growing season per vintage (mm).") + "</div>" +
+      barChart(c.years, (y) => y.rain, { label: t_("Growing season rain per vintage"), fmt: (v) => fmtN(v) + " mm", ref: N.rain, min: 0, cls: "rain" }) +
+      '<p class="note">' + t_("ERA5-Land reanalysis via {link} (CC BY 4.0), about 9 km cells.", { link: '<a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>' }) +
+      (terrain ? " " + t_("Adjusted to the measured mean elevation of {m} m.", { m: fmtN(terrain.mean) }) : "") + " " + t_("It describes the area, not one row of vines.") +
+      (S ? " " + t_("Southern hemisphere: the season runs October to April and a vintage is named after its harvest year.") : "") + "</p>" +
+      '<div id="twins-box"><button class="link-btn" data-twins>' + t_("Compare with wine regions worldwide") + "</button></div>";
     b._c = c; b._p = p;
     const v = token === sheetToken ? $("vint-clim") : null;
-    if (v) { v.innerHTML = "<h4 class=\"sub\">Vintage climate here</h4>" + climateTable(c); v.dataset.ready = "1"; v._c = c; }
+    if (v) { v.innerHTML = "<h4 class=\"sub\">" + t_("Vintage climate here") + "</h4>" + climateTable(c); v.dataset.ready = "1"; v._c = c; }
   } catch (e) {
     console.warn("climate", e);
     const b = box();
-    if (b) b.innerHTML = '<h3>Climate</h3><p class="note">The climate service could not be reached right now. Try again in a minute.</p>';
+    if (b) b.innerHTML = '<h3>' + t_("Climate") + '</h3><p class="note">' + t_("The climate service could not be reached right now. Try again in a minute.") + "</p>";
     const v = token === sheetToken ? $("vint-clim") : null;
     if (v) v.innerHTML = "";
   }
@@ -1403,8 +1472,8 @@ async function showTwins() {
   const box = $("twins-box"), cb = $("climate-sec");
   if (!box || !cb || !cb._c) return;
   const me = twinStats(cb._c), p = cb._p;
-  if (!me) { box.innerHTML = '<p class="note">Not enough recent seasons here to compare.</p>'; return; }
-  box.innerHTML = '<div class="note terrain-wait"><i></i>Reading the same seasons at ' + BENCH.length + " wine regions…</div>";
+  if (!me) { box.innerHTML = '<p class="note">' + t_("Not enough recent seasons here to compare.") + "</p>"; return; }
+  box.innerHTML = '<div class="note terrain-wait"><i></i>' + t_("Reading the same seasons at {n} wine regions…", { n: BENCH.length }) + "</div>";
   try {
     const bench = await loadBench();
     const rows = BENCH.map((b, k) => ({ cc: b[0], name: b[1], s: bench[k] })).filter((r) => r.s && norm(r.name) !== norm(p.name));
@@ -1412,13 +1481,14 @@ async function showTwins() {
     rows.sort((a, b) => dist(a.s) - dist(b.s));
     const warmer = rows.filter((r) => r.s.gst < me.gst).length;
     const rec = (r) => { const c = (byName.get(norm(r.name)) && byName.get(norm(r.name))[2] === r.cc) ? byName.get(norm(r.name)) : INDEX.find((x) => x[2] === r.cc && norm(x[0]) === norm(r.name)); return c; };
-    box.innerHTML = '<h4 class="sub">Climate twins, ' + TWIN_YEARS[0] + "–" + TWIN_YEARS[1] + "</h4>" +
-      '<p class="note">Warmer than ' + warmer + " of " + rows.length + " benchmark regions over the same seasons (" + fmtN(me.gst, 1) + " °C, " + fmtN(me.rain) + " mm). Closest in warmth, rain and heat days:</p>" +
-      '<div class="twins">' + rows.slice(0, 6).map((r) => { const x = rec(r); return "<button" + (x ? ' data-goto="' + esc(x[1]) + '"' : " disabled") + "><span>" + esc(r.name) + ' <span class="note">· ' + esc(COUNTRY_EN[r.cc] || r.cc) + '</span></span><span class="r">' + sign(r.s.gst - me.gst) + " °C · " + fmtN(r.s.rain) + " mm</span></button>"; }).join("") + "</div>" +
-      '<p class="note">Same ERA5-Land data at each benchmark centre (no elevation adjustment). Climate is one part of terroir: soils, slope and the grower matter as much.</p>';
+    box.innerHTML = '<h4 class="sub">' + t_("Climate twins, {from}–{to}", { from: TWIN_YEARS[0], to: TWIN_YEARS[1] }) + "</h4>" +
+      '<p class="note">' + t_("Warmer than {n} of {total} benchmark regions over the same seasons ({gst} °C, {rain} mm). Closest in warmth, rain and heat days:",
+        { n: warmer, total: rows.length, gst: fmtN(me.gst, 1), rain: fmtN(me.rain) }) + "</p>" +
+      '<div class="twins">' + rows.slice(0, 6).map((r) => { const x = rec(r); return "<button" + (x ? ' data-goto="' + esc(x[1]) + '"' : " disabled") + "><span>" + esc(r.name) + ' <span class="note">· ' + esc(cname(r.cc)) + '</span></span><span class="r">' + sign(r.s.gst - me.gst) + " °C · " + fmtN(r.s.rain) + " mm</span></button>"; }).join("") + "</div>" +
+      '<p class="note">' + t_("Same ERA5-Land data at each benchmark centre (no elevation adjustment). Climate is one part of terroir: soils, slope and the grower matter as much.") + "</p>";
   } catch (e) {
     console.warn("twins", e);
-    box.innerHTML = '<p class="note">The climate service could not be reached right now. Try again in a minute.</p>';
+    box.innerHTML = '<p class="note">' + t_("The climate service could not be reached right now. Try again in a minute.") + "</p>";
   }
 }
 document.addEventListener("click", (e) => { if (e.target.closest("[data-twins]")) showTwins(); });
@@ -1427,26 +1497,26 @@ document.addEventListener("click", (e) => {
   if (!b) return;
   vintSort = b.dataset.vsort;
   const v = $("vint-clim");
-  if (v && v._c) v.innerHTML = "<h4 class=\"sub\">Vintage climate here</h4>" + climateTable(v._c);
+  if (v && v._c) v.innerHTML = "<h4 class=\"sub\">" + t_("Vintage climate here") + "</h4>" + climateTable(v._c);
 });
 
 // ---------- soil per place: SoilGrids 2.0 (ISRIC), modelled at 250 m
 const SOIL = new Map();
 function texture(sand, silt, clay) {
-  if (silt + 1.5 * clay < 15) return "sand";
-  if (silt + 2 * clay < 30) return "loamy sand";
-  if ((clay >= 7 && clay < 20 && sand > 52) || (clay < 7 && silt < 50)) return "sandy loam";
-  if (clay >= 7 && clay < 27 && silt >= 28 && silt < 50 && sand <= 52) return "loam";
-  if ((silt >= 50 && clay >= 12 && clay < 27) || (silt >= 50 && silt < 80 && clay < 12)) return "silt loam";
-  if (silt >= 80 && clay < 12) return "silt";
-  if (clay >= 20 && clay < 35 && silt < 28 && sand > 45) return "sandy clay loam";
-  if (clay >= 27 && clay < 40 && sand > 20 && sand <= 45) return "clay loam";
-  if (clay >= 27 && clay < 40 && sand <= 20) return "silty clay loam";
-  if (clay >= 35 && sand > 45) return "sandy clay";
-  if (clay >= 40 && silt >= 40) return "silty clay";
-  return "clay";
+  if (silt + 1.5 * clay < 15) return N_("sand");
+  if (silt + 2 * clay < 30) return N_("loamy sand");
+  if ((clay >= 7 && clay < 20 && sand > 52) || (clay < 7 && silt < 50)) return N_("sandy loam");
+  if (clay >= 7 && clay < 27 && silt >= 28 && silt < 50 && sand <= 52) return N_("loam");
+  if ((silt >= 50 && clay >= 12 && clay < 27) || (silt >= 50 && silt < 80 && clay < 12)) return N_("silt loam");
+  if (silt >= 80 && clay < 12) return N_("silt");
+  if (clay >= 20 && clay < 35 && silt < 28 && sand > 45) return N_("sandy clay loam");
+  if (clay >= 27 && clay < 40 && sand > 20 && sand <= 45) return N_("clay loam");
+  if (clay >= 27 && clay < 40 && sand <= 20) return N_("silty clay loam");
+  if (clay >= 35 && sand > 45) return N_("sandy clay");
+  if (clay >= 40 && silt >= 40) return N_("silty clay");
+  return N_("clay");
 }
-const phWord = (ph) => ph < 5.5 ? "strongly acid" : ph < 6.5 ? "slightly acid" : ph < 7.3 ? "neutral" : ph < 7.9 ? "slightly alkaline" : "alkaline, typical of limestone and marl";
+const phWord = (ph) => t_(ph < 5.5 ? N_("strongly acid") : ph < 6.5 ? N_("slightly acid") : ph < 7.3 ? N_("neutral") : ph < 7.9 ? N_("slightly alkaline") : N_("alkaline, typical of limestone and marl"));
 async function getSoil(lat, lon) {
   const key = lat.toFixed(3) + "," + lon.toFixed(3);
   if (!SOIL.has(key)) {
@@ -1481,30 +1551,32 @@ async function fillSoil(p, d, rec, token) {
       return { sand: 100 * sa / t, silt: 100 * si / t, clay: 100 * cl / t, ph: s.phh2o?.[k], soc: s.soc?.[k], stones: s.cfvo?.[k] != null ? s.cfvo[k] / 10 : null };
     };
     const top = layer("top"), sub = layer("sub");
-    if (!top) { b.innerHTML = '<h3>Soil</h3><p class="note">No modelled soil data at this point (built-up land or water).</p>'; return; }
+    if (!top) { b.innerHTML = '<h3>' + t_("Soil") + '</h3><p class="note">' + t_("No modelled soil data at this point (built-up land or water).") + "</p>"; return; }
     noteFacts(p.id, "soil", { texture: texture(top.sand, top.silt, top.clay), ph: top.ph != null ? +top.ph.toFixed(1) : null });
-    const bar = (L) => '<div class="soilbar" role="img" aria-label="Sand ' + Math.round(L.sand) + "%, silt " + Math.round(L.silt) + "%, clay " + Math.round(L.clay) + '%">' +
+    const mix = (L) => t_("sand {sand} · silt {silt} · clay {clay} %", { sand: Math.round(L.sand), silt: Math.round(L.silt), clay: Math.round(L.clay) });
+    const bar = (L) => '<div class="soilbar" role="img" aria-label="' + esc(mix(L)) + '">' +
       '<i style="width:' + L.sand + '%;background:#d8c38f"></i><i style="width:' + L.silt + '%;background:#a98f6a"></i><i style="width:' + L.clay + '%;background:#7b5b46"></i></div>';
-    const row = (name, L) => L ? "<dt>" + name + "</dt><dd>" + esc(texture(L.sand, L.silt, L.clay)) + ' <span class="note">sand ' + Math.round(L.sand) + " · silt " + Math.round(L.silt) + " · clay " + Math.round(L.clay) + " %</span>" + bar(L) + "</dd>" : "";
-    b.innerHTML = '<h3>Soil <button class="q" data-gloss="soil" aria-label="About this data">?</button></h3><dl class="facts">' +
-      row("Topsoil 0–30 cm", top) + row("Subsoil 30–100 cm", sub) +
-      (top.ph != null ? '<dt>pH (water)</dt><dd><span class="num">' + fmtN(top.ph, 1) + "</span> " + esc(phWord(top.ph)) + "</dd>" : "") +
-      (top.stones != null ? '<dt>Stones and gravel</dt><dd><span class="num">' + fmtN(top.stones) + " %</span> " + '<span class="note">of the topsoil volume</span></dd>' : "") +
-      (top.soc != null ? '<dt>Organic carbon</dt><dd><span class="num">' + fmtN(top.soc, 1) + " g/kg</span></dd>" : "") + "</dl>" +
-      '<p class="note">Modelled by <a href="https://soilgrids.org" target="_blank" rel="noopener">SoilGrids 2.0</a> (ISRIC, CC BY 4.0) at 250 m, at the centre of the place. A guide to the soil family, not a pit dug in the vineyard.</p>';
+    const row = (name, L) => L ? "<dt>" + t_(name) + "</dt><dd>" + esc(t_(texture(L.sand, L.silt, L.clay))) + ' <span class="note">' + esc(mix(L)) + "</span>" + bar(L) + "</dd>" : "";
+    b.innerHTML = '<h3>' + t_("Soil") + ' <button class="q" data-gloss="soil" aria-label="' + t_("About this data") + '">?</button></h3><dl class="facts">' +
+      row(N_("Topsoil 0–30 cm"), top) + row(N_("Subsoil 30–100 cm"), sub) +
+      (top.ph != null ? "<dt>" + t_("pH (water)") + '</dt><dd><span class="num">' + fmtN(top.ph, 1) + "</span> " + esc(phWord(top.ph)) + "</dd>" : "") +
+      (top.stones != null ? "<dt>" + t_("Stones and gravel") + '</dt><dd><span class="num">' + fmtN(top.stones) + " %</span> " + '<span class="note">' + t_("of the topsoil volume") + "</span></dd>" : "") +
+      (top.soc != null ? "<dt>" + t_("Organic carbon") + '</dt><dd><span class="num">' + fmtN(top.soc, 1) + " g/kg</span></dd>" : "") + "</dl>" +
+      '<p class="note">' + t_("Modelled by {link} (ISRIC, CC BY 4.0) at 250 m, at the centre of the place. A guide to the soil family, not a pit dug in the vineyard.", { link: '<a href="https://soilgrids.org" target="_blank" rel="noopener">SoilGrids 2.0</a>' }) + "</p>";
   } catch (e) {
     console.warn("soil", e);
     const b = box();
-    if (b) b.innerHTML = '<h3>Soil</h3><p class="note">The soil service (ISRIC SoilGrids) did not answer. It is sometimes busy; reopen the place later.</p>';
+    if (b) b.innerHTML = '<h3>' + t_("Soil") + '</h3><p class="note">' + t_("The soil service (ISRIC SoilGrids) did not answer. It is sometimes busy; reopen the place later.") + "</p>";
   }
 }
 
 // ---------- Wikipedia summary, only when the article is clearly about this wine place
-const WINE_WORD = /\b(vin|vins|vign|vigne|vignoble|wine|wines|wein|weinbau|weinlage|vino|vini|vigneto|viñedo|vinho|cru|appellation|denominaci|denominazione|viticultur|viticult|rebe|reben|winery|aoc|doc|docg|ava)/i;
+const WINE_WORD = /\b(vin|vins|vign|vigne|vignoble|wine|wines|wein|weinbau|weinlage|vino|vini|vigneto|viñedo|vinho|wijn|wijnbouw|cru|appellation|denominaci|denominazione|viticultur|viticult|rebe|reben|winery|aoc|doc|docg|ava)|ワイン|葡萄酒|葡萄园|ブドウ|와인|포도/i;
 async function fillWiki(p, token) {
   const box = () => (token === sheetToken ? $("wiki-sec") : null);
-  const short = shortName(p.name, p.parent), langs = [...new Set([LANG[p.country] || "en", "en"])];
-  const WORD = { fr: "vin", it: "vino", es: "vino", de: "Wein", pt: "vinho", en: "wine", el: "κρασί", hu: "bor", ro: "vin" };
+  // the summary in the reader's language first, then the place's own language, then English
+  const short = shortName(p.name, p.parent), langs = [...new Set([UILANG, LANG[p.country] || "en", "en"])];
+  const WORD = { fr: "vin", it: "vino", es: "vino", de: "Wein", pt: "vinho", nl: "wijn", en: "wine", el: "κρασί", hu: "bor", ro: "vin", ja: "ワイン", zh: "葡萄酒", ko: "와인" };
   try {
     for (const lang of langs) {
       const q = p.name + " " + (WORD[lang] || "wine");
@@ -1516,8 +1588,8 @@ async function fillWiki(p, token) {
       const b = box();
       if (!b) return;
       const ex = sum.extract.length > 700 ? sum.extract.slice(0, 700).replace(/\s+\S*$/, "") + "…" : sum.extract;
-      b.innerHTML = "<h3>About · Wikipedia</h3>" + '<p class="wiki"' + (lang !== "en" ? ' lang="' + lang + '"' : "") + ">" + esc(ex) + "</p>" +
-        '<p class="note"><a href="' + esc(sum.content_urls?.desktop?.page || "#") + '" target="_blank" rel="noopener">Read “' + esc(sum.title) + "” on Wikipedia</a> · CC BY-SA 4.0</p>";
+      b.innerHTML = "<h3>" + t_("About · Wikipedia") + "</h3>" + '<p class="wiki"' + (lang !== UILANG ? ' lang="' + lang + '"' : "") + ">" + esc(ex) + "</p>" +
+        '<p class="note"><a href="' + esc(sum.content_urls?.desktop?.page || "#") + '" target="_blank" rel="noopener">' + esc(t_("Read “{title}” on Wikipedia", { title: sum.title })) + "</a> · CC BY-SA 4.0</p>";
       return;
     }
     const b = box(); if (b) b.remove();
@@ -1548,25 +1620,26 @@ async function fillVintages(p, d, pd, token) {
   const regs = vintageRegionsFor(p, d, pd, V.regions || []);
   if (!regs.length) { box.innerHTML = ""; return; }
   const yrs = V.years.slice(-20);
-  box.innerHTML = regs.map((r) => '<h4 class="sub">' + esc(r.name) + ' <span class="note">editorial, 1 to 5</span></h4><div class="vgrid">' +
+  box.innerHTML = regs.map((r) => '<h4 class="sub">' + esc(t_(r.name)) + ' <span class="note">' + t_("editorial, 1 to 5") + '</span></h4><div class="vgrid">' +
     yrs.map((y) => "<div>" + scoreCell(r.scores[y]) + "<span>" + String(y).slice(2) + "</span></div>").join("") + "</div>").join("") +
-    '<p class="note">' + esc(V.note) + ' <button class="link-btn" data-open-vintages>Full vintage chart</button></p>';
+    '<p class="note">' + esc(t_(V.note)) + ' <button class="link-btn" data-open-vintages>' + t_("Full vintage chart") + "</button></p>";
 }
 async function openVintages() {
   const V = await loadVintages();
   const yrs = V.years;
-  openModal("<h2>Vintage chart</h2><p>" + esc(V.intro) + "</p>" +
+  openModal("<h2>" + t_("Vintage chart") + "</h2><p>" + esc(t_(V.intro)) + "</p>" +
     '<div class="vchart"><table><tr><th></th>' + yrs.map((y) => "<th>" + String(y).slice(2) + "</th>").join("") + "</tr>" +
-    V.regions.map((r) => '<tr><td class="r">' + esc(r.name) + "</td>" + yrs.map((y) => { const v = r.scores[y]; return '<td class="c" style="background:' + (v ? SCORE_BG[v] : "#1b1b1f") + ";color:" + (v ? SCORE_FG[v] : "#8d877c") + '" title="' + esc(r.name + " " + y + ": " + (v || "–")) + '">' + (v || "") + "</td>"; }).join("") + "</tr>").join("") +
+    V.regions.map((r) => '<tr><td class="r">' + esc(t_(r.name)) + "</td>" + yrs.map((y) => { const v = r.scores[y]; return '<td class="c" style="background:' + (v ? SCORE_BG[v] : "#1b1b1f") + ";color:" + (v ? SCORE_FG[v] : "#8d877c") + '" title="' + esc(r.name + " " + y + ": " + (v || "–")) + '">' + (v || "") + "</td>"; }).join("") + "</tr>").join("") +
     "</table></div>" +
-    '<p class="note">Scale: ' + esc(V.scale) + ". " + esc(V.note) + "</p><p class=\"note\">Open any vineyard on the map to see the measured climate of each vintage there: season temperature, rain, heat days, spring frost and harvest rain, ranked against 1991–2025.</p>", true);
+    '<p class="note">' + esc(t_("Scale: {scale}.", { scale: t_(V.scale) })) + " " + esc(t_(V.note)) + '</p><p class="note">' + t_("Open any vineyard on the map to see the measured climate of each vintage there: season temperature, rain, heat days, spring frost and harvest rain, ranked against 1991–2025.") + "</p>", true);
 }
 document.addEventListener("click", (e) => { if (e.target.closest("[data-open-vintages]")) openVintages(); });
 
 // ---------- terrain of a place: elevation, slope and aspect, measured in the browser from the elevation tiles
 const TERRAIN = new Map(); // id -> stats
 const SECTORS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
-const SECTOR_NAME = { N: "north", NE: "north-east", E: "east", SE: "south-east", S: "south", SW: "south-west", W: "west", NW: "north-west" };
+const SECTOR_NAME = { N: N_("north"), NE: N_("north-east"), E: N_("east"), SE: N_("south-east"), S: N_("south"), SW: N_("south-west"), W: N_("west"), NW: N_("north-west") };
+LOCALIZE.push(SECTOR_NAME);
 const mercX = (lon) => (lon + 180) / 360;
 const mercY = (lat) => { const s = Math.sin(lat * Math.PI / 180); return 0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI); };
 const latOfY = (y) => Math.atan(Math.sinh(Math.PI * (1 - 2 * y))) * 180 / Math.PI;
@@ -1705,7 +1778,7 @@ const compass = (deg) => SECTORS[Math.round(deg / 45) % 8];
 
 function roseSvg(t) {
   const c = 56, r0 = 9, rmax = 44, mx = Math.max(...t.sectors) || 1;
-  let s = '<svg viewBox="0 0 112 112" role="img" aria-label="Aspect: share of the ground facing each direction">';
+  let s = '<svg viewBox="0 0 112 112" role="img" aria-label="' + t_("Aspect: share of the ground facing each direction") + '">';
   [rmax * 0.5, rmax].forEach((r) => { s += '<circle cx="' + c + '" cy="' + c + '" r="' + r + '" fill="none" stroke="#2a2a31" stroke-width="1"/>'; });
   t.sectors.forEach((v, k) => {
     const r = r0 + (rmax - r0) * Math.sqrt(v / mx), a0 = (k * 45 - 21) * Math.PI / 180, a1 = (k * 45 + 21) * Math.PI / 180;
@@ -1720,19 +1793,19 @@ function roseSvg(t) {
 
 function terrainSentence(t) {
   const m = (v) => fmtN(Math.round(v / 5) * 5);
-  let s = t.max - t.min < 15 ? "The ground lies at about " + m(t.mean) + " m" : "Most of the ground lies between " + m(t.p10) + " and " + m(t.p90) + " m";
+  let s = t.max - t.min < 15 ? t_("The ground lies at about {m} m", { m: m(t.mean) }) : t_("Most of the ground lies between {a} and {b} m", { a: m(t.p10), b: m(t.p90) });
   if (t.res <= 35 && t.slope != null) {
-    s += t.slope < 3 ? ", almost flat" : ", on a mean slope of " + fmtN(t.slope, 0) + "°";
-    if (t.slope >= 3 && t.flatShare < 0.6) s += t.meanAspect != null ? ", facing " + SECTOR_NAME[compass(t.meanAspect)] : ", facing several directions";
+    s += t.slope < 3 ? t_(", almost flat") : t_(", on a mean slope of {d}°", { d: fmtN(t.slope, 0) });
+    if (t.slope >= 3 && t.flatShare < 0.6) s += t.meanAspect != null ? t_(", facing {dir}", { dir: SECTOR_NAME[compass(t.meanAspect)] }) : t_(", facing several directions");
   }
-  return s + ".";
+  return t_("{text}.", { text: s });
 }
 
 async function fillTerrain(p, token) {
   const el = () => (token === sheetToken ? $("terrain-sec") : null);
   if (CURRENT && CURRENT.p.id === p.id && CURRENT.d.outline_quality === "point") {
     const box = el();
-    if (box) box.innerHTML = '<h3>Terrain</h3><p class="note">This place is a marker without an outline, so there is no area to measure. Climate and soil are read at the marker.</p>';
+    if (box) box.innerHTML = '<h3>' + t_("Terrain") + '</h3><p class="note">' + t_("This place is a marker without an outline, so there is no area to measure. Climate and soil are read at the marker.") + "</p>";
     return null;
   }
   try {
@@ -1740,37 +1813,38 @@ async function fillTerrain(p, token) {
     const t = await measureTerrain(p.id);
     const box = el();
     if (!box) return;
-    if (!t) { box.innerHTML = '<h3>Terrain</h3><p class="note">Zoom in on the place to measure its terrain.</p>'; return null; }
+    if (!t) { box.innerHTML = '<h3>' + t_("Terrain") + '</h3><p class="note">' + t_("Zoom in on the place to measure its terrain.") + "</p>"; return null; }
     const pct = (v) => Math.round(v * 100);
     const rows = [
-      ["Elevation", '<span class="num">' + fmtN(t.min) + "–" + fmtN(t.max) + " m</span>"],
-      ["Mean elevation", '<span class="num">' + fmtN(t.mean) + " m</span>"],
+      [N_("Elevation"), '<span class="num">' + fmtN(t.min) + "–" + fmtN(t.max) + " m</span>"],
+      [N_("Mean elevation"), '<span class="num">' + fmtN(t.mean) + " m</span>"],
     ];
     const fine = t.res <= 35;
     if (fine && t.slope != null) {
-      rows.push(["Mean slope", '<span class="num">' + fmtN(t.slope, 1) + "° · " + fmtN(Math.tan(t.slope * Math.PI / 180) * 100) + " %</span>"]);
-      rows.push(["Steepest tenth", '<span class="num">above ' + fmtN(t.slopeP90, 0) + "°</span>"]);
-      rows.push(["Faces", esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : "mixed") +
+      rows.push([N_("Mean slope"), '<span class="num">' + fmtN(t.slope, 1) + "° · " + fmtN(Math.tan(t.slope * Math.PI / 180) * 100) + " %</span>"]);
+      rows.push([N_("Steepest tenth"), '<span class="num">' + t_("above {d}°", { d: fmtN(t.slopeP90, 0) }) + "</span>"]);
+      rows.push([N_("Faces"), esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : t_("mixed")) +
         ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>"]);
     }
-    if (fine && t.sun != null) rows.push(["Sun on the ground", '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">of flat ground, ' + ((byId.get(p.id)?.[6]?.[1] ?? 0) < 0 ? "Oct–Apr" : "Apr–Oct") + ", clear sky</span>"]);
-    const cls = ["Flat, under 3°", "Gentle, 3–8°", "Moderate, 8–15°", "Steep, 15–25°", "Very steep, 25°+"];
-    box.innerHTML = '<h3>Terrain <button class="q" data-gloss="terrain" aria-label="About this data">?</button></h3>' +
+    if (fine && t.sun != null) rows.push([N_("Sun on the ground"), '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">' +
+      t_("of flat ground, {months}, clear sky", { months: t_((byId.get(p.id)?.[6]?.[1] ?? 0) < 0 ? "Oct–Apr" : "Apr–Oct") }) + "</span>"]);
+    const cls = [N_("Flat, under 3°"), N_("Gentle, 3–8°"), N_("Moderate, 8–15°"), N_("Steep, 15–25°"), N_("Very steep, 25°+")].map((x) => t_(x));
+    box.innerHTML = '<h3>' + t_("Terrain") + ' <button class="q" data-gloss="terrain" aria-label="' + t_("About this data") + '">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + terrainSentence(t) + "</p>" +
-      '<div class="terrain"><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl>" +
+      '<div class="terrain"><dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl>" +
       (fine ? roseSvg(t) : "") +
       (fine ? '<div class="bars">' + t.classes.map((v, k) => '<div class="bar"><span class="bl">' + cls[k] + '</span><span class="bt"><i style="width:' + pct(v) + '%"></i></span><span class="num">' + pct(v) + "%</span></div>").join("") + "</div>" : "") +
       "</div>" +
-      '<p class="note">Measured in your browser on ' + fmt(t.n) + " elevation cells of about " + (t.res < 10 ? fmtN(t.res, 1) : fmtN(t.res)) + " m. " +
-      (fine ? "" : "Zoom into a smaller place for slope and aspect. ") +
-      (t.partial ? "Only the part of the place on screen was measured. " : "") +
-      'Elevation: <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>.</p>';
+      '<p class="note">' + t_("Measured in your browser on {n} elevation cells of about {res} m.", { n: fmt(t.n), res: t.res < 10 ? fmtN(t.res, 1) : fmtN(t.res) }) + " " +
+      (fine ? "" : t_("Zoom into a smaller place for slope and aspect.") + " ") +
+      (t.partial ? t_("Only the part of the place on screen was measured.") + " " : "") +
+      t_("Elevation: {link}.", { link: '<a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>' }) + "</p>";
     noteFacts(p.id, "terrain", t);
     return t;
   } catch (e) {
     console.warn("terrain", e);
     const box = el();
-    if (box) box.innerHTML = '<h3>Terrain</h3><p class="note">The elevation tiles could not be loaded right now.</p>';
+    if (box) box.innerHTML = '<h3>' + t_("Terrain") + '</h3><p class="note">' + t_("The elevation tiles could not be loaded right now.") + "</p>";
     return null;
   }
 }
@@ -1785,7 +1859,7 @@ function ensureDetail() {
   const z = map.getZoom();
   manifest.files.filter((f) => f.bounds && z >= f.minzoom - 1 && inView(f.bounds)).forEach((f) => {
     if (loaded.has(f.file)) return;
-    showLoading("Loading " + (f.label || f.file).toLowerCase() + "…");
+    showLoading(t_("Loading {name}…", { name: f.label || f.file }));
     loadArchive(f.file).then(() => { addDetail(f.file); hideLoading(); }).catch((e) => { console.error(e); hideLoading(); });
   });
 }
@@ -1831,19 +1905,20 @@ function openWinery(f) {
   const seen = new Set(), inside = map.queryRenderedFeatures(pt, { layers }).map((x) => x.properties)
     .filter((x) => x.id && byId.has(x.id) && !seen.has(x.id) && seen.add(x.id)).sort((a, b) => (PRI[a.level] ?? 9) - (PRI[b.level] ?? 9));
   const home = inside[0] ? inside[0].id : null;
-  $("sh-head").innerHTML = '<div class="eyebrow"><span>' + esc((tnode("g:" + p.country) || [COUNTRY[p.country] || p.country])[0]) + "</span><span>·</span><span>Winery</span></div>" +
+  $("sh-head").innerHTML = '<div class="eyebrow"><span>' + esc(cname(p.country)) + "</span><span>·</span><span>" + t_("Winery") + "</span></div>" +
     "<h2>" + esc(p.name) + "</h2>" + (home && TREE ? '<div class="crumbs">' + trail(pathOf(home), null) + "</div>" : "");
-  let html = '<p class="lede">' + esc(p.name) + (inside.length ? " lies inside " + fmtList(inside.slice(0, 3).map((x) => esc(x.name))) + "." : " is outside the mapped appellations at this zoom.") + "</p>";
-  const rows = [["Location", '<span class="num">' + Math.abs(lat).toFixed(4) + "° " + (lat < 0 ? "S" : "N") + ", " + Math.abs(lon).toFixed(4) + "° " + (lon < 0 ? "W" : "E") + "</span>"]];
-  if (p.web) rows.push(["Website", '<a href="' + esc(/^https?:/.test(p.web) ? p.web : "https://" + p.web) + '" target="_blank" rel="noopener">' + esc(p.web.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")) + "</a>"]);
-  html += '<div class="sec"><h3>Key facts</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
-  if (inside.length) html += '<div class="sec"><h3>Appellations here · ' + inside.length + '</h3><div class="sub-list">' +
+  let html = '<p class="lede">' + (inside.length ? t_("{name} lies inside {places}.", { name: esc(p.name), places: fmtList(inside.slice(0, 3).map((x) => esc(x.name))) })
+    : t_("{name} is outside the mapped appellations at this zoom.", { name: esc(p.name) })) + "</p>";
+  const rows = [[t_("Location"), '<span class="num">' + Math.abs(lat).toFixed(4) + "° " + (lat < 0 ? "S" : "N") + ", " + Math.abs(lon).toFixed(4) + "° " + (lon < 0 ? "W" : "E") + "</span>"]];
+  if (p.web) rows.push([t_("Website"), '<a href="' + esc(/^https?:/.test(p.web) ? p.web : "https://" + p.web) + '" target="_blank" rel="noopener">' + esc(p.web.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")) + "</a>"]);
+  html += '<div class="sec"><h3>' + t_("Key facts") + '</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
+  if (inside.length) html += '<div class="sec"><h3>' + t_("Appellations here · {n}", { n: inside.length }) + '</h3><div class="sub-list">' +
     inside.map((x) => '<button data-goto="' + esc(x.id) + '"><span>' + esc(x.name) + '</span><span class="r">' + esc(RANK_LABEL[x.rank] || LEVEL_LABEL[x.level] || "") + "</span></button>").join("") + "</div></div>";
   const osm = /-osm-([nwr])(\d+)$/.exec(p.id || "");
-  html += '<div class="sec"><h3>Read and look further</h3><div class="links">' +
+  html += '<div class="sec"><h3>' + t_("Read and look further") + '</h3><div class="links">' +
     (osm ? '<a href="https://www.openstreetmap.org/' + { n: "node", w: "way", r: "relation" }[osm[1]] + "/" + osm[2] + '" target="_blank" rel="noopener">OpenStreetMap</a>' : "") +
-    '<a href="https://www.google.com/maps/@' + lat + "," + lon + ',800m/data=!3m1!1e3" target="_blank" rel="noopener">Satellite view</a></div></div>';
-  html += '<div class="source">From OpenStreetMap, edited by volunteers · ODbL. Missing or wrong? Edit it there.</div>';
+    '<a href="https://www.google.com/maps/@' + lat + "," + lon + ',800m/data=!3m1!1e3" target="_blank" rel="noopener">' + t_("Satellite view") + "</a></div></div>";
+  html += '<div class="source">' + t_("From OpenStreetMap, edited by volunteers · ODbL. Missing or wrong? Edit it there.") + "</div>";
   $("sh-body").innerHTML = html;
   $("sh-body").scrollTop = 0;
   $("sheet").classList.add("open");
@@ -1857,7 +1932,7 @@ map.on("mousemove", (e) => {
   if (w) {
     if (hovered) { setState(hovered, "hover", false); hovered = null; }
     map.getCanvas().style.cursor = "pointer";
-    tag.innerHTML = esc(w.properties.name) + "<small>Winery</small>";
+    tag.innerHTML = esc(w.properties.name) + "<small>" + t_("Winery") + "</small>";
     tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
     return;
   }
@@ -1953,13 +2028,13 @@ function fitTo(b, level) {
 
 const worldType = (p, d) => (/-world-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
 function badgeFor(p, d) {
-  const g = (k) => ' <button class="q" data-gloss="' + k + '" aria-label="What does this mean?">?</button>';
+  const g = (k) => ' <button class="q" data-gloss="' + k + '" aria-label="' + t_("What does this mean?") + '">?</button>';
   const wt = worldType(p, d);
-  if (wt) return '<span class="badge std">' + esc(wt) + "</span>" + g(d.outline_quality === "legal" ? "gi" : "outline");
+  if (wt) return '<span class="badge std">' + esc(t_(wt)) + "</span>" + g(d.outline_quality === "legal" ? "gi" : "outline");
   if (TOP.includes(p.rank)) return '<span class="badge top">' + esc(RANK_LABEL[p.rank]) + "</span>" + g(p.rank);
   if (p.rank === "premier_cru") return '<span class="badge pc">Premier cru</span>' + g("premier_cru");
   if (p.country === "DE" && p.level === "vineyard") return '<span class="badge de">Einzellage</span>' + g("einzellage");
-  if (p.country === "US") return '<span class="badge std">AVA' + (p.level === "subzone" ? " · nested" : "") + "</span>" + g("ava");
+  if (p.country === "US") return '<span class="badge std">AVA' + (p.level === "subzone" ? " · " + t_("nested") : "") + "</span>" + g("ava");
   return '<span class="badge std">' + esc(LEVEL_LABEL[p.level] || p.level) + "</span>" + g(p.level);
 }
 
@@ -1972,32 +2047,43 @@ function grape(g) {
 }
 const COLOUR_CHIP = { Red: "#8e3040", White: "#d9c88a", "Rosé": "#d39aa0", Rose: "#d39aa0", Other: "#8d877c" };
 const num = (v) => v == null ? null : Number(String(v).replace(",", "."));
-const fmtN = (v, d = 0) => { const n = num(v); return n == null || isNaN(n) ? esc(v) : n.toLocaleString("en-US", { maximumFractionDigits: d }); };
-const fmtList = (a) => a.length <= 2 ? a.join(" and ") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+const fmtN = (v, d = 0) => { const n = num(v); return n == null || isNaN(n) ? esc(v) : n.toLocaleString(LOCALE, { maximumFractionDigits: d }); };
+const LISTFMT = (() => { try { return new Intl.ListFormat(LOCALE, { type: "conjunction" }); } catch (e) { return null; } })();
+const fmtList = (a) => LISTFMT ? LISTFMT.format(a.map(String)) : a.length <= 2 ? a.join(" and ") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
 
+// the opening sentence of a sheet, assembled from translated pieces
+const WHAT = { region: N_("a wine region"), appellation: N_("an appellation"), subzone: N_("a named sub-zone"), vineyard: N_("a climat"),
+  vineyard_DE: N_("a registered vineyard site (Einzellage)"), place: N_("a place"),
+  "grand_cru appellation": N_("a grand cru appellation"), "grand_cru subzone": N_("a grand cru sub-zone"), "grand_cru vineyard": N_("a grand cru climat"),
+  "premier_cru appellation": N_("a premier cru appellation"), "premier_cru subzone": N_("a premier cru sub-zone"), "premier_cru vineyard": N_("a premier cru climat"),
+  "docg appellation": N_("a DOCG appellation"), "doca appellation": N_("a DOCa appellation"), "pago appellation": N_("a Vino de Pago appellation"),
+  "docg subzone": N_("a DOCG sub-zone"), "doca subzone": N_("a DOCa sub-zone") };
 function summary(p, d, pd) {
-  const kind = !RANK_LABEL[p.rank] ? "" : p.rank.endsWith("_cru") ? RANK_LABEL[p.rank].toLowerCase() : RANK_LABEL[p.rank];
-  const lvl = worldType(p, d) || { region: "wine region", appellation: "appellation", subzone: "named sub-zone", vineyard: p.country === "DE" ? "registered vineyard site (Einzellage)" : "climat" }[p.level] || "place";
-  let t = esc(p.name) + " is " + (/^[aeiou]/i.test(kind || lvl) && !/^(DOC|DOCa|DOCG)/.test(kind) ? "an " : "a ") + (kind ? kind + " " : "") + lvl;
-  if (p.parent) t += " of " + esc(p.parent);
-  t += " in " + esc(COUNTRY_EN[p.country] || p.country);
+  const wt = worldType(p, d);
+  const lvlKey = p.level === "vineyard" && p.country === "DE" ? "vineyard_DE" : p.level;
+  const what = wt ? t_("a {type}", { type: t_(wt) }) : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
   const area = d.area_ha ?? null;
-  if (area) t += ", covering " + fmtN(area, 1) + " ha";
   const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
-  if (towns?.length && towns.length <= 3) t += " in " + esc(fmtList(towns));
-  else if (towns?.length) t += " across " + towns.length + " communes";
-  t += ".";
-  if (d.share_of_parent) t += " That is " + d.share_of_parent + "% of the " + esc(p.parent) + " appellation area.";
-  if (d.share_of_grosslage) t += " It makes up " + d.share_of_grosslage + "% of the Großlage " + esc(d.grosslage) + ".";
+  let t = t_("{name} is {what}{of} in {country}{area}{towns}.", {
+    name: esc(p.name), what,
+    of: p.parent ? t_(" of {parent}", { parent: esc(p.parent) }) : "",
+    country: esc(cnameRun(p.country)),
+    area: area ? t_(", covering {ha} ha", { ha: fmtN(area, 1) }) : "",
+    towns: towns?.length && towns.length <= 3 ? t_(" in {list}", { list: esc(fmtList(towns)) }) : towns?.length ? t_(" across {n} communes", { n: towns.length }) : "",
+  });
+  if (d.share_of_parent) t += " " + t_("That is {pct}% of the {parent} appellation area.", { pct: d.share_of_parent, parent: esc(p.parent) });
+  if (d.share_of_grosslage) t += " " + t_("It makes up {pct}% of the Großlage {name}.", { pct: d.share_of_grosslage, name: esc(d.grosslage) });
   const wines = d.wines || pd.wines;
   if (wines?.length) {
-    const cols = [...new Set(wines.map((w) => w.colour).filter(Boolean))].map((c) => c.toLowerCase());
+    const cols = [...new Set(wines.map((w) => w.colour).filter(Boolean))].map((c) => t_(c.toLowerCase()));
     const mains = [...new Set(wines.flatMap((w) => w.main || []))].map((g) => g.replace(/\s+(N|B|G|Rs|Rg)$/, ""));
-    if (cols.length) t += " The rules allow " + fmtList(cols) + " wine";
-    if (mains.length && mains.length <= 4) t += ", based on " + esc(fmtList(mains));
-    if (cols.length) t += ".";
+    if (cols.length && mains.length && mains.length <= 4) t += " " + t_("The rules allow {colours} wine, based on {grapes}.", { colours: fmtList(cols), grapes: esc(fmtList(mains)) });
+    else if (cols.length) t += " " + t_("The rules allow {colours} wine.", { colours: fmtList(cols) });
   }
-  if (d.bedrock?.length) t += " Regional bedrock: " + esc(d.bedrock[0][0].replace(/ \(.*\)/, "").toLowerCase()) + ".";
+  if (d.bedrock?.length) {
+    const rock = t_(d.bedrock[0][0].replace(/ \(.*\)/, ""));
+    t += " " + t_("Regional bedrock: {rock}.", { rock: esc(UILANG === "en" ? rock.toLowerCase() : rock) });
+  }
   return t;
 }
 
@@ -2006,11 +2092,11 @@ function wineTable(wines) {
     const main = (w.main || []).map(grape).join("");
     const sec = (w.secondary || []);
     return '<div class="wine"><div class="wh"><b><i class="wchip" style="background:' + (COLOUR_CHIP[w.colour] || COLOUR_CHIP.Other) + '"></i>' + esc(w.wine) + "</b>" +
-      '<span class="wk">' + esc([w.colour, w.category !== "Wine" ? w.category : ""].filter(Boolean).join(" · ")) + "</span></div>" +
+      '<span class="wk">' + esc([w.colour ? t_(w.colour) : "", w.category !== "Wine" && w.category ? t_(w.category) : ""].filter(Boolean).join(" · ")) + "</span></div>" +
       (main ? '<div class="grapes">' + main + "</div>" : "") +
-      (sec.length ? '<details class="sec2"><summary>Also allowed · ' + (w.secondary_total || sec.length) + "</summary><div class=\"grapes\">" + sec.map(grape).join("") +
+      (sec.length ? '<details class="sec2"><summary>' + t_("Also allowed · {n}", { n: w.secondary_total || sec.length }) + "</summary><div class=\"grapes\">" + sec.map(grape).join("") +
         (w.secondary_total > sec.length ? "<span>+" + (w.secondary_total - sec.length) + "</span>" : "") + "</div></details>" : "") +
-      '<div class="wn">' + [w.yield_hl ? "max " + fmtN(w.yield_hl, 1) + " hl/ha" : "", w.yield_kg ? fmtN(w.yield_kg) + " kg/ha" : "", w.density ? "min " + fmtN(w.density) + " vines/ha" : ""].filter(Boolean).join(" · ") + "</div></div>";
+      '<div class="wn">' + [w.yield_hl ? t_("max {n} hl/ha", { n: fmtN(w.yield_hl, 1) }) : "", w.yield_kg ? fmtN(w.yield_kg) + " kg/ha" : "", w.density ? t_("min {n} vines/ha", { n: fmtN(w.density) }) : ""].filter(Boolean).join(" · ") + "</div></div>";
   }).join("");
 }
 
@@ -2019,135 +2105,135 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   sheetToken++;
   const src = SOURCES[p.src === "world" ? (d.outline_quality === "point" ? "marker" : p.country === "AU" && d.state ? (d.gi_url ? "wao" : "wa") : "geob") : p.src] || {};
   $("sh-head").innerHTML =
-    '<div class="eyebrow"><span>' + esc(COUNTRY[p.country] || p.country) + "</span><span>·</span><span>" + esc(d.type || LEVEL_LABEL[p.level]) + "</span></div>" +
+    '<div class="eyebrow"><span>' + esc(cname(p.country)) + "</span><span>·</span><span>" + esc(d.type ? t_(d.type) : LEVEL_LABEL[p.level]) + "</span></div>" +
     "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p, d) + "</div>" +
     (TREE && TPARENT.has(p.id) ? '<div class="crumbs">' + trail(pathOf(p.id).slice(0, -1), null) + "</div>"
-      : p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
-      (d.grosslage ? " · Großlage " + esc(d.grosslage) : "") + "</div>" : "");
+      : p.parent ? '<div class="crumbs">' + t_("Part of") + " " + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
+      (d.grosslage ? " · " + t_("Großlage") + " " + esc(d.grosslage) : "") + "</div>" : "");
   CURRENT = { p, d, rec };
   $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
   let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
-  if (d.outline) html += '<p class="ol-note"><b>' + ({ legal: "Outline.", approx: "Approximate outline.", point: "Location only." }[d.outline_quality] || "Outline.") + "</b> " + esc(d.outline) + ' <button class="q" data-gloss="outline" aria-label="How outlines are drawn">?</button></p>';
-  if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">Atlas note</div><p>' + esc(d.atlas_note) + '</p><div class="an-f">Editorial summary. Check the official specification before you rely on it.</div></div>';
+  if (d.outline) html += '<p class="ol-note"><b>' + t_({ legal: N_("Outline."), approx: N_("Approximate outline."), point: N_("Location only.") }[d.outline_quality] || "Outline.") + "</b> " + esc(t_(d.outline)) + ' <button class="q" data-gloss="outline" aria-label="' + t_("How outlines are drawn") + '">?</button></p>';
+  if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">' + t_("Atlas note") + '</div><p>' + esc(t_(d.atlas_note)) + '</p><div class="an-f">' + t_("Editorial summary. Check the official specification before you rely on it.") + "</div></div>";
 
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  if (area != null) rows.push(["Area", '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + (d.admin_units ? "outline of the administrative units" : d.outline_quality ? "registered outline" : "outline of listed communes") + "</span>" : "")]);
-  if (d.share_of_parent) rows.push(["Share of " + esc(p.parent), '<span class="num">' + d.share_of_parent + " %</span>"]);
-  if (d.share_of_grosslage) rows.push(["Share of Großlage", '<span class="num">' + d.share_of_grosslage + " %</span>"]);
-  if (d.plots > 1) rows.push(["Separate plots", '<span class="num">' + d.plots + "</span>"]);
-  if (d.extent_km) rows.push(["Extent N–S × E–W", '<span class="num">' + fmtN(d.extent_km[0], 2) + " × " + fmtN(d.extent_km[1], 2) + " km</span>"]);
-  if (d.lat) rows.push([d.outline_quality === "point" ? "Location" : "Centre", '<span class="num">' + Math.abs(d.lat).toFixed(4) + "° " + (d.lat < 0 ? "S" : "N") + ", " + Math.abs(d.lon).toFixed(4) + "° " + (d.lon < 0 ? "W" : "E") + "</span>"]);
+  if (area != null) rows.push([N_("Area"), '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "")]);
+  if (d.share_of_parent) rows.push([t_("Share of {name}", { name: esc(p.parent) }), '<span class="num">' + d.share_of_parent + " %</span>"]);
+  if (d.share_of_grosslage) rows.push([N_("Share of Großlage"), '<span class="num">' + d.share_of_grosslage + " %</span>"]);
+  if (d.plots > 1) rows.push([N_("Separate plots"), '<span class="num">' + d.plots + "</span>"]);
+  if (d.extent_km) rows.push([N_("Extent N–S × E–W"), '<span class="num">' + fmtN(d.extent_km[0], 2) + " × " + fmtN(d.extent_km[1], 2) + " km</span>"]);
+  if (d.lat) rows.push([d.outline_quality === "point" ? N_("Location") : N_("Centre"), '<span class="num">' + Math.abs(d.lat).toFixed(4) + "° " + (d.lat < 0 ? "S" : "N") + ", " + Math.abs(d.lon).toFixed(4) + "° " + (d.lon < 0 ? "W" : "E") + "</span>"]);
   const reg = d.registered || pd.registered;
-  if (reg) rows.push(["Protected since", '<span class="num">' + esc(String(reg).slice(0, 10)) + "</span>" + (d.registered ? "" : ' <span class="note">appellation</span>')]);
-  if (d.category) rows.push(["Wine types", esc(String(d.category).replace(/, /g, " · "))]);
+  if (reg) rows.push([N_("Protected since"), '<span class="num">' + esc(String(reg).slice(0, 10)) + "</span>" + (d.registered ? "" : ' <span class="note">' + t_("appellation") + "</span>")]);
+  if (d.category) rows.push([N_("Wine types"), esc(String(d.category).split(/, |\//).map((x) => t_(x.trim())).join(" · "))]);
   if (!d.wines && !pd.wines) {
-    if (d.max_yield_hl_ha) rows.push(["Max. yield", '<span class="num">' + fmtN(d.max_yield_hl_ha, 1) + " hl/ha</span>"]);
-    else if (d.max_yield_kg_ha) rows.push(["Max. yield", '<span class="num">' + fmtN(d.max_yield_kg_ha) + " kg/ha</span>"]);
-    if (d.min_planting_density) rows.push(["Min. density", '<span class="num">' + fmtN(d.min_planting_density) + " vines/ha</span>"]);
+    if (d.max_yield_hl_ha) rows.push([N_("Max. yield"), '<span class="num">' + fmtN(d.max_yield_hl_ha, 1) + " hl/ha</span>"]);
+    else if (d.max_yield_kg_ha) rows.push([N_("Max. yield"), '<span class="num">' + fmtN(d.max_yield_kg_ha) + " kg/ha</span>"]);
+    if (d.min_planting_density) rows.push([N_("Min. density"), '<span class="num">' + fmtN(d.min_planting_density) + " " + t_("vines/ha") + "</span>"]);
   }
-  if (d.irrigation && d.irrigation !== "na") rows.push(["Irrigation", esc(d.irrigation)]);
-  if (d.gemarkungen && d.gemarkungen.length) rows.push(["Gemarkung", esc(d.gemarkungen.join(", "))]);
-  if (d.communes && d.communes.length && d.gemarkungen) rows.push(["Gemeinde", esc(d.communes.join(", "))]);
-  if (d.bereich) rows.push(["Bereich", esc(d.bereich)]);
-  if (d.region) rows.push(["Anbaugebiet", esc(d.region)]);
-  if (d.wine_region) rows.push(["Wine region", esc(d.wine_region)]);
-  if (d.register_no) rows.push(["Register no.", '<span class="num">' + esc(d.register_no) + "</span>"]);
-  if (d.inao_office) rows.push(["INAO office", esc(d.inao_office)]);
-  if (d.official_name && d.official_name !== p.name) rows.push(["Official name", esc(d.official_name)]);
-  if (d.aka) rows.push(["Also known as", esc(d.aka)]);
-  if (d.states?.length) rows.push(["State", esc(d.states.join(", "))]);
-  if (d.state) rows.push(["State", esc(d.state)]);
-  if (d.register_ref) rows.push(["Legal act", esc(d.register_ref)]);
-  if (d.vine_area_ha) rows.push(["Vineyards planted", '<span class="num">' + fmtN(d.vine_area_ha) + " ha</span>" + ' <span class="note">Wine Australia</span>']);
-  if (d.gi_url) rows.push(["Register", '<a href="' + esc(d.gi_url) + '" target="_blank" rel="noopener">Wine Australia GI page</a>']);
-  if (d.basis) rows.push(["Legal basis", esc(d.basis)]);
-  if (d.outline_source) rows.push(["Outline data", esc(d.outline_source.name) + ' <span class="note">· ' + esc(d.outline_source.licence) + "</span>"]);
-  if (d.counties?.length) rows.push(["County", esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " and " + (d.counties.length - 12) + " more" : ""))]);
-  if (d.within?.length) rows.push(["Within", d.within.map((w) => { const r = byName.get(norm(w)); return r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(w) + "</button>" : esc(w); }).join(", ")]);
-  if (d.petitioner) rows.push(["Petitioned by", esc(d.petitioner)]);
-  if (d.cfr) rows.push(["Legal text", d.cfr_url ? '<a href="' + esc(d.cfr_url) + '" target="_blank" rel="noopener">' + esc(d.cfr) + "</a>" : esc(d.cfr)]);
-  if (rows.length) html += '<div class="sec"><h3>Key facts</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + k + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
+  if (d.irrigation && d.irrigation !== "na") rows.push([N_("Irrigation"), esc(t_(d.irrigation))]);
+  if (d.gemarkungen && d.gemarkungen.length) rows.push([N_("Gemarkung"), esc(d.gemarkungen.join(", "))]);
+  if (d.communes && d.communes.length && d.gemarkungen) rows.push([N_("Gemeinde"), esc(d.communes.join(", "))]);
+  if (d.bereich) rows.push([N_("Bereich"), esc(d.bereich)]);
+  if (d.region) rows.push([N_("Anbaugebiet"), esc(d.region)]);
+  if (d.wine_region) rows.push([N_("Wine region"), esc(d.wine_region)]);
+  if (d.register_no) rows.push([N_("Register no."), '<span class="num">' + esc(d.register_no) + "</span>"]);
+  if (d.inao_office) rows.push([N_("INAO office"), esc(d.inao_office)]);
+  if (d.official_name && d.official_name !== p.name) rows.push([N_("Official name"), esc(d.official_name)]);
+  if (d.aka) rows.push([N_("Also known as"), esc(d.aka)]);
+  if (d.states?.length) rows.push([N_("State"), esc(d.states.join(", "))]);
+  if (d.state) rows.push([N_("State"), esc(d.state)]);
+  if (d.register_ref) rows.push([N_("Legal act"), esc(d.register_ref)]);
+  if (d.vine_area_ha) rows.push([N_("Vineyards planted"), '<span class="num">' + fmtN(d.vine_area_ha) + " ha</span>" + ' <span class="note">Wine Australia</span>']);
+  if (d.gi_url) rows.push([N_("Register"), '<a href="' + esc(d.gi_url) + '" target="_blank" rel="noopener">' + t_("Wine Australia GI page") + '</a>']);
+  if (d.basis) rows.push([N_("Legal basis"), esc(d.basis)]);
+  if (d.outline_source) rows.push([N_("Outline data"), esc(d.outline_source.name) + ' <span class="note">· ' + esc(d.outline_source.licence) + "</span>"]);
+  if (d.counties?.length) rows.push([N_("County"), esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " " + t_("and {n} more", { n: d.counties.length - 12 }) : ""))]);
+  if (d.within?.length) rows.push([N_("Within"), d.within.map((w) => { const r = byName.get(norm(w)); return r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(w) + "</button>" : esc(w); }).join(", ")]);
+  if (d.petitioner) rows.push([N_("Petitioned by"), esc(d.petitioner)]);
+  if (d.cfr) rows.push([N_("Legal text"), d.cfr_url ? '<a href="' + esc(d.cfr_url) + '" target="_blank" rel="noopener">' + esc(d.cfr) + "</a>" : esc(d.cfr)]);
+  if (rows.length) html += '<div class="sec"><h3>' + t_("Key facts") + '</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
   if (WEB) {
-    const wait = (t) => '<div class="note terrain-wait"><i></i>' + t + "</div>";
-    html += '<div class="sec" id="terrain-sec"><h3>Terrain</h3>' + wait("Measuring elevation, slope and aspect…") + "</div>";
-    html += '<div class="sec" id="climate-sec"><h3>Climate</h3>' + wait("Reading 35 years of weather…") + "</div>";
-    html += '<div class="sec" id="vint-sec"><h3>Vintages</h3><div id="vint-ed"></div><div id="vint-clim">' + wait("Ranking the vintages…") + "</div></div>";
-    html += '<div class="sec" id="soil-sec"><h3>Soil</h3>' + wait("Reading the soil model…") + "</div>";
+    const wait = (t) => '<div class="note terrain-wait"><i></i>' + t_(t) + "</div>";
+    html += '<div class="sec" id="terrain-sec"><h3>' + t_("Terrain") + "</h3>" + wait(N_("Measuring elevation, slope and aspect…")) + "</div>";
+    html += '<div class="sec" id="climate-sec"><h3>' + t_("Climate") + "</h3>" + wait(N_("Reading 35 years of weather…")) + "</div>";
+    html += '<div class="sec" id="vint-sec"><h3>' + t_("Vintages") + '</h3><div id="vint-ed"></div><div id="vint-clim">' + wait(N_("Ranking the vintages…")) + "</div></div>";
+    html += '<div class="sec" id="soil-sec"><h3>' + t_("Soil") + "</h3>" + wait(N_("Reading the soil model…")) + "</div>";
   }
 
   // wine rules
   const wines = d.wines || pd.wines;
   if (wines?.length) {
-    html += '<div class="sec"><h3>' + (d.wines ? "Wines in the specification · " : "Wines of " + esc(p.parent) + " · ") + wines.length + "</h3>" +
-      (d.wines ? "" : '<p class="note">This place follows the rules of its appellation.</p>') + wineTable(wines.slice(0, 30)) + "</div>";
+    html += '<div class="sec"><h3>' + (d.wines ? t_("Wines in the specification · {n}", { n: wines.length }) : t_("Wines of {name} · {n}", { name: esc(p.parent), n: wines.length })) + "</h3>" +
+      (d.wines ? "" : '<p class="note">' + t_("This place follows the rules of its appellation.") + "</p>") + wineTable(wines.slice(0, 30)) + "</div>";
   } else if (d.grapes) {
     const g = String(d.grapes).split("/").map((s) => s.trim()).filter(Boolean);
-    html += '<div class="sec"><h3>Authorised grapes · ' + g.length + '</h3><div class="grapes">' + g.slice(0, 40).map(grape).join("") +
+    html += '<div class="sec"><h3>' + t_("Authorised grapes · {n}", { n: g.length }) + '</h3><div class="grapes">' + g.slice(0, 40).map(grape).join("") +
       (g.length > 40 ? "<span>+" + (g.length - 40) + "</span>" : "") + "</div></div>";
   }
 
   // bedrock
   if (d.bedrock?.length) {
-    html += '<div class="sec"><h3>Regional bedrock <button class="q" data-gloss="bedrock" aria-label="About this data">?</button></h3><div class="bars">' +
-      d.bedrock.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + pc + '%"></i></span><span class="num">' + pc + "%</span></div>").join("") +
-      '</div><p class="note">From the Global Lithological Map (1:3.75 million). It shows the rock type of the wider area, not the soil of each row.</p></div>';
+    html += '<div class="sec"><h3>' + t_("Regional bedrock") + ' <button class="q" data-gloss="bedrock" aria-label="' + t_("About this data") + '">?</button></h3><div class="bars">' +
+      d.bedrock.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(t_(n)) + '</span><span class="bt"><i style="width:' + pc + '%"></i></span><span class="num">' + pc + "%</span></div>").join("") +
+      '</div><p class="note">' + t_("From the Global Lithological Map (1:3.75 million). It shows the rock type of the wider area, not the soil of each row.") + "</p></div>";
   }
 
   // neighbours
   if (d.neighbours?.length) {
-    html += '<div class="sec"><h3>Neighbouring sites · ' + d.neighbours.length + '</h3><div class="chips">' +
+    html += '<div class="sec"><h3>' + t_("Neighbouring sites · {n}", { n: d.neighbours.length }) + '</h3><div class="chips">' +
       d.neighbours.map((id) => { const r = byId.get(id); return r ? '<button data-goto="' + esc(id) + '">' + esc(shortName(r[0], r[5])) + (r[4] ? ' <small>' + esc(RANK_LABEL[r[4]] || "") + "</small>" : "") + "</button>" : ""; }).join("") + "</div></div>";
   }
 
   // places inside
   const kids = (children.get(norm(p.name)) || []).filter((k) => k[1] !== p.id);
   if (kids.length) {
-    html += '<div class="sec"><h3>Inside ' + esc(p.name) + " · " + kids.length + '</h3><div class="sub-list">' +
+    html += '<div class="sec"><h3>' + t_("Inside {name} · {n}", { name: esc(p.name), n: kids.length }) + '</h3><div class="sub-list">' +
       kids.slice(0, 120).map((k) => '<button data-goto="' + esc(k[1]) + '"><span>' + esc(shortName(k[0], p.name)) + '</span><span class="r">' + esc(RANK_LABEL[k[4]] || LEVEL_LABEL[k[3]] || "") + "</span></button>").join("") +
-      (kids.length > 120 ? '<span class="note">and ' + (kids.length - 120) + " more. Use search to find them.</span>" : "") + "</div></div>";
+      (kids.length > 120 ? '<span class="note">' + t_("and {n} more. Use search to find them.", { n: kids.length - 120 }) + "</span>" : "") + "</div></div>";
   }
 
   // wineries
   if (d.wineries?.length) {
-    html += '<div class="sec"><h3>Wineries mapped inside · ' + d.wineries_count + '</h3><div class="wlist">' +
+    html += '<div class="sec"><h3>' + t_("Wineries mapped inside · {n}", { n: d.wineries_count }) + '</h3><div class="wlist">' +
       d.wineries.map(([n, w]) => "<div>" + (w ? '<a href="' + esc(w) + '" target="_blank" rel="noopener">' + esc(n) + "</a>" : esc(n)) + "</div>").join("") +
       (d.wineries_count > d.wineries.length ? '<div class="note">and ' + (d.wineries_count - d.wineries.length) + " more</div>" : "") +
-      '</div><p class="note">From OpenStreetMap, edited by volunteers. Missing a producer? Add it there or suggest it here.</p></div>';
+      '</div><p class="note">' + t_("From OpenStreetMap, edited by volunteers. Missing a producer? Add it there or suggest it here.") + "</p></div>";
   }
 
   // registered inside, not yet mapped (Argentine parajes), and Australian GIs inside
-  if (d.also_registered?.length) html += '<div class="sec"><h3>Also registered inside · ' + d.also_registered.length + '</h3><div class="communes">' + d.also_registered.map(esc).join(", ") +
-    '</div><p class="note">Registered GIs inside this one that are not mapped yet.</p></div>';
-  if (d.admin_units?.length) html += '<div class="sec"><h3>Administrative units · ' + d.admin_units.length + '</h3><div class="communes">' + d.admin_units.slice(0, 80).map(esc).join(", ") +
+  if (d.also_registered?.length) html += '<div class="sec"><h3>' + t_("Also registered inside · {n}", { n: d.also_registered.length }) + '</h3><div class="communes">' + d.also_registered.map(esc).join(", ") +
+    '</div><p class="note">' + t_("Registered GIs inside this one that are not mapped yet.") + "</p></div>";
+  if (d.admin_units?.length) html += '<div class="sec"><h3>' + t_("Administrative units · {n}", { n: d.admin_units.length }) + '</h3><div class="communes">' + d.admin_units.slice(0, 80).map(esc).join(", ") +
     (d.admin_units.length > 80 ? " and " + (d.admin_units.length - 80) + " more" : "") + "</div></div>";
   // communes (France, Italy, Spain)
   if (d.communes && d.communes.length && !d.gemarkungen) {
-    html += '<div class="sec"><h3>Communes · ' + d.communes.length + '</h3><div class="communes">' + d.communes.slice(0, 80).map(esc).join(", ") +
+    html += '<div class="sec"><h3>' + t_("Communes · {n}", { n: d.communes.length }) + '</h3><div class="communes">' + d.communes.slice(0, 80).map(esc).join(", ") +
       (d.communes.length > 80 ? " and " + (d.communes.length - 80) + " more" : "") + "</div></div>";
   }
   if (d.note) html += '<p class="note">' + esc(d.note) + "</p>";
-  if (d.boundary_text) html += '<details class="sec2"><summary>Legal boundary description</summary><p class="note" style="white-space:pre-line">' + esc(d.boundary_text) + "</p></details>";
+  if (d.boundary_text) html += '<details class="sec2"><summary>' + t_("Legal boundary description") + '</summary><p class="note" style="white-space:pre-line">' + esc(d.boundary_text) + "</p></details>";
 
   if (WEB) html += '<div class="sec" id="wiki-sec"></div>';
   // read more
   const lang = LANG[p.country] || "en";
   const links = [];
-  links.push('<a href="https://' + lang + ".wikipedia.org/w/index.php?search=" + encodeURIComponent(p.name + " " + (p.country === "DE" ? "Weinlage" : "vin")) + '" target="_blank" rel="noopener">Wikipedia</a>');
+  links.push('<a href="https://' + (UILANG === "en" ? lang : UILANG) + ".wikipedia.org/w/index.php?search=" + encodeURIComponent(p.name) + '" target="_blank" rel="noopener">Wikipedia</a>');
   if (d.lat) {
     links.push('<a href="https://www.openstreetmap.org/?mlat=' + d.lat + "&mlon=" + d.lon + "#map=16/" + d.lat + "/" + d.lon + '" target="_blank" rel="noopener">OpenStreetMap</a>');
-    links.push('<a href="https://www.google.com/maps/@' + d.lat + "," + d.lon + ',1500m/data=!3m1!1e3" target="_blank" rel="noopener">Satellite view</a>');
+    links.push('<a href="https://www.google.com/maps/@' + d.lat + "," + d.lon + ',1500m/data=!3m1!1e3" target="_blank" rel="noopener">' + t_("Satellite view") + "</a>");
   }
   const eu = d.eu_register || pd.eu_register;
-  if (eu) links.push('<a href="' + esc(eu) + '" target="_blank" rel="noopener">EU register</a>');
-  html += '<div class="sec"><h3>Read and look further</h3><div class="links">' + links.join("") + "</div></div>";
+  if (eu) links.push('<a href="' + esc(eu) + '" target="_blank" rel="noopener">' + t_("EU register") + "</a>");
+  html += '<div class="sec"><h3>' + t_("Read and look further") + '</h3><div class="links">' + links.join("") + "</div></div>";
 
-  html += '<button class="primary" id="suggestHere">Suggest a correction</button>';
-  html += '<div class="source">Source: ' + esc(src.name || p.src) + " · " + esc(src.license || "") +
-    (src.url ? ' · <a href="' + esc(src.url) + '" target="_blank" rel="noopener">dataset</a>' : "") +
-    (d.source_date ? " · data as of " + esc(d.source_date) : "") +
-    ((d.wines || pd.wines) ? "<br>Wine rules: EU product specifications as compiled by Candiago et al. 2022 (CC BY 4.0)." : "") +
+  html += '<button class="primary" id="suggestHere">' + t_("Suggest a correction") + "</button>";
+  html += '<div class="source">' + t_("Source:") + " " + esc(src.name || p.src) + " · " + esc(src.license || "") +
+    (src.url ? ' · <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + t_("dataset") + "</a>" : "") +
+    (d.source_date ? " · " + t_("data as of {date}", { date: esc(d.source_date) }) : "") +
+    ((d.wines || pd.wines) ? "<br>" + t_("Wine rules: EU product specifications as compiled by Candiago et al. 2022 (CC BY 4.0).") : "") +
     '<br><span class="num">' + esc(p.id) + "</span></div>";
   $("sh-body").innerHTML = html;
   $("sh-body").scrollTop = 0;
@@ -2199,7 +2285,7 @@ function search(q) {
   return out.sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
 }
 function renderResults() {
-  if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">No place found. Try another spelling.</li>' : ""; return; }
+  if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">' + t_("No place found. Try another spelling.") + "</li>" : ""; return; }
   resEl.innerHTML = current.map((r, i) => '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n">' + esc(r[0]) +
     '</span><span class="m">' + esc(RANK_LABEL[r[4]] || LEVEL_LABEL[r[3]]) + (r[7] ? " · " + esc(r[7].split(", ")[0]) : "") + (r[5] ? " · " + esc(r[5]) : "") + '</span><span class="c">' + r[2] + "</span></button></li>").join("");
   resEl.hidden = false;
@@ -2248,9 +2334,9 @@ function applyLayout() {
   R.setProperty("--topR", (open && desk ? w + 32 : 16) + "px");
   R.setProperty("--botR", (open && desk && size !== "min" ? w + 32 : 16) + "px");
   $("shMin").setAttribute("aria-pressed", size === "min");
-  $("shMin").title = size === "min" ? "Normal window" : "Small window";
+  $("shMin").title = (size === "min" ? t_("Normal window") : t_("Small window"));
   $("shWide").setAttribute("aria-pressed", size === "wide");
-  $("shWide").title = size === "wide" ? "Normal window" : "Large window";
+  $("shWide").title = (size === "wide" ? t_("Normal window") : t_("Large window"));
   $("btnMapOnly").setAttribute("aria-pressed", UI.mapOnly);
   $("showPanels").hidden = !UI.mapOnly;
   // only when it changes: setting the padding stops a flight that is under way
@@ -2283,6 +2369,39 @@ UI.rail = store.get("rail") === "mini" ? "mini" : "open";
 UI.sheet = store.get("sheet") === "wide" ? "wide" : "normal";
 applyLayout();
 
+// ---------- language picker: English by default, the choice is remembered; ?lang=xx in a link sets it too
+function renderLangMenu() {
+  $("langCode").textContent = UILANG.toUpperCase();
+  $("langMenu").innerHTML = Object.entries(LANGS).map(([k, v]) => '<button role="menuitemradio" aria-checked="' + (k === UILANG) + '" data-lang="' + k + '" lang="' + k + '"><span>' + esc(v) + '</span><span class="k">' + k.toUpperCase() + "</span></button>").join("");
+}
+function toggleLangMenu(open) {
+  const m = $("langMenu"), want = open ?? m.hidden;
+  m.hidden = !want; $("langBtn").setAttribute("aria-expanded", want);
+  if (want) (m.querySelector('[aria-checked="true"]') || m.querySelector("button")).focus();
+}
+function setLang(l) {
+  if (!LANGS[l] || l === UILANG) { toggleLangMenu(false); return; }
+  store.set("lang", l);
+  try {
+    const c = map.getCenter();
+    sessionStorage.setItem("owa.view", JSON.stringify({ center: [c.lng, c.lat], zoom: map.getZoom(), bearing: map.getBearing(), pitch: map.getPitch() }));
+  } catch (e) {}
+  const q = new URLSearchParams(location.search);
+  if (l === "en") q.delete("lang"); else q.set("lang", l);
+  location.replace(location.pathname + (q.toString() ? "?" + q : "") + location.hash);
+}
+renderLangMenu();
+$("langBtn").onclick = (e) => { e.stopPropagation(); toggleLangMenu(); };
+$("miniLang").onclick = (e) => { e.stopPropagation(); setRail("open"); toggleLangMenu(true); };
+$("langMenu").addEventListener("click", (e) => { const b = e.target.closest("[data-lang]"); if (b) setLang(b.dataset.lang); });
+$("langMenu").addEventListener("keydown", (e) => {
+  const all = [...$("langMenu").querySelectorAll("button")], i = all.indexOf(document.activeElement);
+  if (e.key === "ArrowDown") { all[(i + 1) % all.length].focus(); e.preventDefault(); }
+  else if (e.key === "ArrowUp") { all[(i - 1 + all.length) % all.length].focus(); e.preventDefault(); }
+  else if (e.key === "Escape") { toggleLangMenu(false); $("langBtn").focus(); e.stopPropagation(); }
+});
+document.addEventListener("pointerdown", (e) => { if (!e.target.closest("#langMenu, #langBtn, #miniLang")) toggleLangMenu(false); });
+
 $("exWorld").onclick = () => { closeSheet(); flyToWorld(1500); if (PHONE()) $("rail").classList.remove("open"); };
 
 // ---------- explorer: region tree, region sheet, breadcrumbs
@@ -2290,7 +2409,8 @@ $("exWorld").onclick = () => { closeSheet(); flyToWorld(1500); if (PHONE()) $("r
 // Keys are place ids or "g:..." groups. A kid key missing from nodes is a place without children.
 let TREE = null, ACTIVE = null;
 const TPARENT = new Map(), EXPANDED = new Set(), MORE = new Map(), NOEXPAND = new Set();
-const KIND_LABEL = { country: "Country", region: "Wine region", subregion: "Sub-region", state: "State", group: "Group" };
+const KIND_LABEL = { country: N_("Country"), region: N_("Wine region"), subregion: N_("Sub-region"), state: N_("State"), group: N_("Group") };
+LOCALIZE.push(KIND_LABEL);
 const ADMIN_CC = new Set(["IT", "ES", "AT", "GR"]);
 const TREE_PAGE = 150;
 const isGroup = (k) => typeof k === "string" && k.startsWith("g:");
@@ -2315,7 +2435,7 @@ function pathOf(k) { const out = [k]; let p = TPARENT.get(k); while (p && out.le
 // the name of a node as it reads under its parent: "Les Ruchots" under "Morey-Saint-Denis premier cru"
 function labelOf(k, parentKey) {
   const n = tnode(k);
-  if (n && n[0]) return n[0];
+  if (n && n[0]) return n[1] === "country" ? cname(k.slice(2)) : t_(n[0]);
   const r = byId.get(k);
   if (!r) return k;
   const pr = parentKey && byId.get(parentKey);
@@ -2327,7 +2447,7 @@ function labelOf(k, parentKey) {
 const rankCls = (r) => !r ? "" : TOP.includes(r[4]) ? "top" : r[4] === "premier_cru" ? "pc" : r[2] === "DE" && r[3] === "vineyard" ? "de" : "";
 function kindLabel(k) {
   const n = tnode(k);
-  if (isGroup(k)) return n[1] === "region" && ADMIN_CC.has(ccOf(k)) ? "Region" : KIND_LABEL[n[1]] || "";
+  if (isGroup(k)) return n[1] === "region" && ADMIN_CC.has(ccOf(k)) ? t_("Region") : KIND_LABEL[n[1]] || "";
   const x = placeOf(k);
   return x ? kindOf(x) : "";
 }
@@ -2338,20 +2458,20 @@ function rowHtml(k, parentKey, depth) {
   return '<div class="tn' + (grp ? " grp" : "") + (depth === 0 ? " lvl0" : "") + '" role="treeitem" aria-level="' + (depth + 1) + '"' +
     (has ? ' aria-expanded="' + exp + '"' : "") + ' data-k="' + esc(k) + '">' +
     '<div class="tr' + (k === ACTIVE ? " on" : "") + '" style="--d:' + depth + '">' +
-    '<button class="tw' + (has ? "" : " leaf") + '" tabindex="-1" aria-label="' + (exp ? "Collapse" : "Expand") + '">' + (has ? TW : "") + "</button>" +
-    '<button class="tl" data-open="' + esc(k) + '" title="' + esc(r ? r[0] : n[0]) + '">' + lead + '<span class="nm">' + esc(labelOf(k, parentKey)) + "</span></button>" +
+    '<button class="tw' + (has ? "" : " leaf") + '" tabindex="-1" aria-label="' + t_(exp ? "Collapse" : "Expand") + '">' + (has ? TW : "") + "</button>" +
+    '<button class="tl" data-open="' + esc(k) + '" title="' + esc(r ? r[0] : labelOf(k, parentKey)) + '">' + lead + '<span class="nm">' + esc(labelOf(k, parentKey)) + "</span></button>" +
     '<span class="tc">' + (has ? fmt(countOf(k)) : "") + "</span></div>" +
     (exp ? '<div class="tk" role="group" style="--d:' + depth + '">' + kidsHtml(k, depth + 1) + "</div>" : "") + "</div>";
 }
 function kidsHtml(k, depth) {
   const kids = kidsOf(k), lim = MORE.get(k) || TREE_PAGE;
   return kids.slice(0, lim).map((c) => rowHtml(c, k, depth)).join("") +
-    (kids.length > lim ? '<button class="tmore" data-more="' + esc(k) + '" style="--d:' + depth + '">Show all ' + fmt(kids.length) + "</button>" : "");
+    (kids.length > lim ? '<button class="tmore" data-more="' + esc(k) + '" style="--d:' + depth + '">' + t_("Show all {n}", { n: fmt(kids.length) }) + "</button>" : "");
 }
 function renderTree() {
   if (!TREE) return;
   const sc = $("railScroll").scrollTop;
-  $("tree").innerHTML = TREE.roots.map(([cont, keys]) => '<div class="tcont">' + esc(cont) + "</div>" + keys.map((k) => rowHtml(k, null, 0)).join("")).join("");
+  $("tree").innerHTML = TREE.roots.map(([cont, keys]) => '<div class="tcont">' + esc(t_(cont)) + "</div>" + keys.map((k) => rowHtml(k, null, 0)).join("")).join("");
   $("railScroll").scrollTop = sc;
 }
 const rowOf = (k) => $("tree").querySelector('.tn[data-k="' + CSS.escape(k) + '"] > .tr');
@@ -2400,7 +2520,7 @@ function renderMapCrumbs(k, extra) {
   const el = $("mcrumbs");
   if (!TREE || !k || !(tnode(k) || TPARENT.has(k))) { el.hidden = true; return; }
   const up = extra ? k : TPARENT.get(k);
-  el.innerHTML = (up ? '<button class="up" data-open="' + esc(up) + '" title="Up one level (Esc)" aria-label="Up one level">↑</button>' : "") +
+  el.innerHTML = (up ? '<button class="up" data-open="' + esc(up) + '" title="' + t_("Up one level (Esc)") + '" aria-label="' + t_("Up one level") + '">↑</button>' : "") +
     trail(pathOf(k), extra ? null : k, extra ? 2 : 3) + (extra ? '<span class="sep" aria-hidden="true">›</span><button aria-current="location">' + esc(extra) + "</button>" : "");
   el.hidden = false;
 }
@@ -2489,29 +2609,31 @@ function statsOf(k) {
   st.seen = seen;
   return st;
 }
-const TOP_WORD = { FR: "Grands crus", IT: "DOCG", ES: "DOCa and Pagos", DE: "Grosse Lagen" };
+const TOP_WORD = { FR: N_("Grands crus"), IT: "DOCG", ES: N_("DOCa and Pagos"), DE: "Grosse Lagen" };
+LOCALIZE.push(TOP_WORD);
 const TREE_SOURCE = {
-  FR: "Regions and sub-regions follow the usual division of the French vineyard (Open Wine Atlas editorial grouping). Grands crus sit under the village they lie in.",
-  DE: "Anbaugebiet, Bereich and Großlage from the Weinbergsrolle of the Landwirtschaftskammer Rheinland-Pfalz.",
-  US: "AVAs grouped by the states named in their federal definition (27 CFR part 9), nested AVAs under the AVA they lie in.",
-  AU: "Zones, regions and subregions as registered by Wine Australia, grouped by state.",
+  FR: N_("Regions and sub-regions follow the usual division of the French vineyard (Open Wine Atlas editorial grouping). Grands crus sit under the village they lie in."),
+  DE: N_("Anbaugebiet, Bereich and Großlage from the Weinbergsrolle of the Landwirtschaftskammer Rheinland-Pfalz."),
+  US: N_("AVAs grouped by the states named in their federal definition (27 CFR part 9), nested AVAs under the AVA they lie in."),
+  AU: N_("Zones, regions and subregions as registered by Wine Australia, grouped by state."),
 };
+LOCALIZE.push(TREE_SOURCE);
 function renderGroupSheet(k) {
   sheetToken++;
   CURRENT = null;
   const n = tnode(k), cc = ccOf(k), path = pathOf(k), st = statsOf(k);
   $("sh-head").innerHTML =
-    '<div class="eyebrow">' + (n[1] === "country" ? "<span>" + esc(TREE.roots.find(([, ks]) => ks.includes(k))?.[0] || "") + "</span><span>·</span>" : "<span>" + esc((tnode("g:" + cc) || [cc])[0]) + "</span><span>·</span>") +
+    '<div class="eyebrow">' + (n[1] === "country" ? "<span>" + esc(t_(TREE.roots.find(([, ks]) => ks.includes(k))?.[0] || "")) + "</span><span>·</span>" : "<span>" + esc(cname(cc)) + "</span><span>·</span>") +
     "<span>" + esc(kindLabel(k)) + "</span></div>" +
-    "<h2>" + esc(n[0]) + "</h2>" +
+    "<h2>" + esc(labelOf(k)) + "</h2>" +
     (path.length > 1 ? '<div class="crumbs">' + trail(path.slice(0, -1), null) + "</div>" : "");
   let html = "";
-  const tiles = [[st.all, "places in the atlas", ""]];
-  if (st.app && st.app !== st.all) tiles.push([st.app, cc === "US" ? "AVAs" : cc === "DE" ? "regions" : "appellations", ""]);
-  if (st.top) tiles.push([st.top, TOP_WORD[cc] || "top classified", "top"]);
-  if (st.pc) tiles.push([st.pc, "premiers crus", "pc"]);
-  if (st.vin && cc !== "FR") tiles.push([st.vin, cc === "DE" ? "Einzellagen" : "vineyard sites", ""]);
-  else if (st.vin) tiles.push([st.vin, "climats and lieux-dits", ""]);
+  const tiles = [[st.all, t_("places in the atlas"), ""]];
+  if (st.app && st.app !== st.all) tiles.push([st.app, cc === "US" ? "AVAs" : (cc === "DE" ? t_("regions") : t_("appellations")), ""]);
+  if (st.top) tiles.push([st.top, TOP_WORD[cc] || t_("top classified"), "top"]);
+  if (st.pc) tiles.push([st.pc, t_("premiers crus"), "pc"]);
+  if (st.vin && cc !== "FR") tiles.push([st.vin, cc === "DE" ? "Einzellagen" : t_("vineyard sites"), ""]);
+  else if (st.vin) tiles.push([st.vin, t_("climats and lieux-dits"), ""]);
   html += '<div class="gtiles n' + Math.min(4, tiles.length) + '">' + tiles.slice(0, 4).map(([v, l, c]) => '<div class="' + c + '"><b>' + fmt(v) + "</b><span>" + l + "</span></div>").join("") + "</div>";
 
   // what is inside, as a list that leads one level down
@@ -2519,25 +2641,25 @@ function renderGroupSheet(k) {
   if (kids.length) {
     const max = Math.max(1, ...kids.map((c) => countOf(c) + (byId.has(c) ? 1 : 0)));
     const bars = kids.length > 1 && kids.some((c) => countOf(c) > 0);
-    html += '<div class="sec"><h3>Inside ' + esc(n[0]) + " · " + kids.length + '</h3><div class="gkids">' +
+    html += '<div class="sec"><h3>' + t_("Inside {name} · {n}", { name: esc(labelOf(k)), n: kids.length }) + '</h3><div class="gkids">' +
       kids.slice(0, 200).map((c) => {
         const r = byId.get(c), m = countOf(c) + (r ? 1 : 0);
         return '<button data-open="' + esc(c) + '"><span class="n">' + (r ? '<i class="rk ' + rankCls(r) + '"></i>' : "") + esc(labelOf(c, k)) + "</span>" +
           '<span class="c">' + (countOf(c) ? fmt(countOf(c)) : '<span class="k">' + esc(kindLabel(c)) + "</span>") + "</span>" +
           (bars ? '<span class="bar"><i style="width:' + Math.max(2, Math.round(m / max * 100)) + '%"></i></span>' : "") + "</button>";
-      }).join("") + (kids.length > 200 ? '<span class="note">and ' + (kids.length - 200) + " more in the sidebar</span>" : "") + "</div></div>";
+      }).join("") + (kids.length > 200 ? '<span class="note">' + t_("and {n} more in the sidebar", { n: kids.length - 200 }) + "</span>" : "") + "</div></div>";
   }
   // the top classified places, wherever they sit
   if (st.top) {
     const tops = [...st.seen].map((x) => byId.get(x)).filter((r) => r && TOP.includes(r[4])).sort((a, b) => a[0].localeCompare(b[0]));
-    html += '<div class="sec"><h3>' + esc(TOP_WORD[cc] || "Top classified") + " · " + tops.length + '</h3><div class="chips">' +
+    html += '<div class="sec"><h3>' + esc(TOP_WORD[cc] || t_("Top classified")) + " · " + tops.length + '</h3><div class="chips">' +
       tops.slice(0, 80).map((r) => '<button data-goto="' + esc(r[1]) + '">' + esc(r[0].replace(/^Alsace grand cru /, "")) + "</button>").join("") + "</div>" +
-      (tops.length > 80 ? '<p class="note">and ' + (tops.length - 80) + " more</p>" : "") + "</div>";
+      (tops.length > 80 ? '<p class="note">' + t_("and {n} more", { n: tops.length - 80 }) + "</p>" : "") + "</div>";
   }
   if (WEB && n[1] !== "country" && !/appellations|^Other|^Großlagenfrei/.test(n[0])) html += '<div class="sec" id="wiki-sec"></div>';
-  const how = ADMIN_CC.has(cc) && n[1] === "region" ? "Grouped by the administrative region that holds the centre of each appellation (geoBoundaries). Appellations that cross a border sit in one region only."
-    : TREE_SOURCE[cc] || "Grouped by the hierarchy published with each register.";
-  html += '<div class="source">' + esc(how) + '<br>Click a place on the map or in the list to open it. <span class="num">' + esc(k) + "</span></div>";
+  const how = ADMIN_CC.has(cc) && n[1] === "region" ? t_("Grouped by the administrative region that holds the centre of each appellation (geoBoundaries). Appellations that cross a border sit in one region only.")
+    : TREE_SOURCE[cc] || t_("Grouped by the hierarchy published with each register.");
+  html += '<div class="source">' + esc(how) + "<br>" + t_("Click a place on the map or in the list to open it.") + ' <span class="num">' + esc(k) + "</span></div>";
   $("sh-body").innerHTML = html;
   $("sh-body").scrollTop = 0;
   $("sheet").classList.add("open");
@@ -2601,50 +2723,51 @@ Object.values(GROUPS).forEach((id) => $(id).addEventListener("change", applyLege
 
 // ---------- glossary and guide
 const GLOSS = {
-  appellation: ["Appellation", "A protected name of origin with legal rules: the delimited area, grapes, maximum yield, planting density and how the wine is made. In the EU these are all Protected Designations of Origin (PDO): AOC/AOP in France, DOC and DOCG in Italy, DO, DOCa and Vino de Pago in Spain, g.U. in Germany. On this map each outline is the legally delimited area."],
-  region: ["Wine region (Anbaugebiet)", "One of Germany's 13 regions for quality wine, such as Mosel or Rheingau. Every German quality wine must name its Anbaugebiet."],
-  subzone: ["Sub-zone", "A named part of an appellation that may appear on the label. Examples: the premier cru area of a Burgundy village, Côtes de Bordeaux Blaye, a Muscadet cru communal, or a German Großlage."],
-  vineyard: ["Climat or vineyard site", "A precisely delimited, named vineyard. In Burgundy these are climats, recorded in many cases since the Middle Ages and inscribed as UNESCO World Heritage in 2015. In Germany they are Einzellagen in the official register."],
-  vineyard_area: ["Vineyard area", "Land mapped as vineyard in OpenStreetMap. It shows where vines grow, not a legal boundary."],
-  grand_cru: ["Grand cru", "In Burgundy the top of four levels: regional, village, premier cru, grand cru. Each Burgundy grand cru is its own appellation, so the label shows only the vineyard name, such as Chambertin. Alsace has 51 grand cru appellations. In Chablis one grand cru appellation covers seven climats. In Champagne the term applies to whole villages."],
-  premier_cru: ["Premier cru", "Burgundy's second tier. A premier cru sits inside a village appellation and is written after it: Gevrey-Chambertin premier cru Clos Saint-Jacques. Wine from several premier cru climats of one village may be blended and sold simply as premier cru."],
-  docg: ["DOCG", "Denominazione di Origine Controllata e Garantita, Italy's top tier above DOC. Rules are stricter and every wine is tasted and approved before release."],
-  doca: ["DOCa", "Denominación de Origen Calificada, Spain's top tier above DO. Only Rioja and Priorat (DOQ in Catalan) hold it."],
-  pago: ["Vino de Pago", "A Spanish appellation for a single estate with a distinctive terroir. The estate itself is the appellation."],
-  einzellage: ["Einzellage", "A registered single vineyard in Germany. On the label it follows the village name in adjectival form: Wehlener Sonnenuhr is the Sonnenuhr site of Wehlen. The VDP growers' association uses its own private ranking (Grosse Lage, Erste Lage), which is separate from this official register."],
-  grosslage: ["Großlage", "A group of neighbouring Einzellagen that may share one name on the label, such as Piesporter Michelsberg. Because it reads like a single site it is often criticised, and recent German wine law limits how it can be used."],
-  climate: ["Climate", "Daily weather from 1991 to 2025 for the centre of the place, from the ERA5-Land reanalysis (about 9 km cells) served by Open-Meteo, adjusted to the measured elevation. Growing season means April to October in the northern hemisphere and October to April in the southern, where a vintage is named after its harvest year. Growing degree days (Winkler) add up each day's mean above 10 °C. The Huglin index weights daytime warmth from April to September (October to March in the south) and the latitude. Climate twins compare the last five seasons with benchmark wine regions on every continent. Typical grape matches follow the growing season temperature bands of Gregory Jones (2006). A vintage's warmth rank compares it with all seasons since 1991."],
-  soil: ["Soil", "Soil texture (sand, silt, clay), pH, stones and organic carbon from SoilGrids 2.0 by ISRIC, a global soil model at 250 m. Topsoil is 0 to 30 cm, subsoil 30 to 100 cm. Vineyard soils change over a few metres, so treat this as the soil family of the area, then check local soil maps."],
-  ava: ["AVA", "American Viticultural Area: a grape-growing region defined by the US Alcohol and Tobacco Tax and Trade Bureau (TTB) in 27 CFR part 9. If an AVA appears on the label, at least 85% of the grapes come from it. AVAs can sit inside larger AVAs, like Oakville inside Napa Valley."],
-  terrain: ["Terrain", "Elevation, slope and aspect are measured live from open elevation models served by Mapterhorn: IGN RGE ALTI in France, DGM1 lidar in Germany, swissALTI3D in Switzerland, IGN MDT in Spain, regional models in parts of Italy, and Copernicus GLO-30 (30 m) elsewhere. Slope uses the Horn method on each cell. Aspect is the compass direction the ground faces, counted only where the slope is 2° or more. The rose shows how much of the place faces each direction. For a large appellation the cells are coarse, so read slope and aspect on single vineyards."],
-  gi: ["Geographical indication (GI)", "Outside the EU most wine names are protected as geographical indications: Wine Australia GIs (zones, regions, subregions), New Zealand registered GIs, South Africa's Wine of Origin units (regions, districts, wards), Chilean DOs, Argentine IGs and DOCs, Brazilian IPs and DOs, Canada's VQA areas. They protect where the grapes come from; most set few or no rules on grapes or yields."],
-  outline: ["How outlines are drawn outside the EU", "Few countries publish their wine boundaries as open data. Where the law defines a place by administrative units (Chilean comunas, Argentine departments, Japanese prefectures, Moldovan raions) the outline is the union of those units. Where the legal line follows roads, rivers, farms or altitude, the units only approximate it: the outline is dashed and larger than the real area. Places much smaller than any unit, like South African wards or Mendoza parajes, are shown as a dot at the town they are named after."],
-  bedrock: ["Regional bedrock", "Rock type under the place, sampled from the Global Lithological Map by Hartmann and Moosdorf (2012). The map works at about 1:3.75 million, so it shows the geology of the wider area. Local soils, such as the marl and limestone mosaic of a Burgundy slope, can differ."],
+  appellation: [N_("Appellation"), N_("A protected name of origin with legal rules: the delimited area, grapes, maximum yield, planting density and how the wine is made. In the EU these are all Protected Designations of Origin (PDO): AOC/AOP in France, DOC and DOCG in Italy, DO, DOCa and Vino de Pago in Spain, g.U. in Germany. On this map each outline is the legally delimited area.")],
+  region: [N_("Wine region (Anbaugebiet)"), N_("One of Germany's 13 regions for quality wine, such as Mosel or Rheingau. Every German quality wine must name its Anbaugebiet.")],
+  subzone: [N_("Sub-zone"), N_("A named part of an appellation that may appear on the label. Examples: the premier cru area of a Burgundy village, Côtes de Bordeaux Blaye, a Muscadet cru communal, or a German Großlage.")],
+  vineyard: [N_("Climat or vineyard site"), N_("A precisely delimited, named vineyard. In Burgundy these are climats, recorded in many cases since the Middle Ages and inscribed as UNESCO World Heritage in 2015. In Germany they are Einzellagen in the official register.")],
+  vineyard_area: [N_("Vineyard area"), N_("Land mapped as vineyard in OpenStreetMap. It shows where vines grow, not a legal boundary.")],
+  grand_cru: [N_("Grand cru"), N_("In Burgundy the top of four levels: regional, village, premier cru, grand cru. Each Burgundy grand cru is its own appellation, so the label shows only the vineyard name, such as Chambertin. Alsace has 51 grand cru appellations. In Chablis one grand cru appellation covers seven climats. In Champagne the term applies to whole villages.")],
+  premier_cru: [N_("Premier cru"), N_("Burgundy's second tier. A premier cru sits inside a village appellation and is written after it: Gevrey-Chambertin premier cru Clos Saint-Jacques. Wine from several premier cru climats of one village may be blended and sold simply as premier cru.")],
+  docg: [N_("DOCG"), N_("Denominazione di Origine Controllata e Garantita, Italy's top tier above DOC. Rules are stricter and every wine is tasted and approved before release.")],
+  doca: [N_("DOCa"), N_("Denominación de Origen Calificada, Spain's top tier above DO. Only Rioja and Priorat (DOQ in Catalan) hold it.")],
+  pago: [N_("Vino de Pago"), N_("A Spanish appellation for a single estate with a distinctive terroir. The estate itself is the appellation.")],
+  einzellage: [N_("Einzellage"), N_("A registered single vineyard in Germany. On the label it follows the village name in adjectival form: Wehlener Sonnenuhr is the Sonnenuhr site of Wehlen. The VDP growers' association uses its own private ranking (Grosse Lage, Erste Lage), which is separate from this official register.")],
+  grosslage: [N_("Großlage"), N_("A group of neighbouring Einzellagen that may share one name on the label, such as Piesporter Michelsberg. Because it reads like a single site it is often criticised, and recent German wine law limits how it can be used.")],
+  climate: [N_("Climate"), N_("Daily weather from 1991 to 2025 for the centre of the place, from the ERA5-Land reanalysis (about 9 km cells) served by Open-Meteo, adjusted to the measured elevation. Growing season means April to October in the northern hemisphere and October to April in the southern, where a vintage is named after its harvest year. Growing degree days (Winkler) add up each day's mean above 10 °C. The Huglin index weights daytime warmth from April to September (October to March in the south) and the latitude. Climate twins compare the last five seasons with benchmark wine regions on every continent. Typical grape matches follow the growing season temperature bands of Gregory Jones (2006). A vintage's warmth rank compares it with all seasons since 1991.")],
+  soil: [N_("Soil"), N_("Soil texture (sand, silt, clay), pH, stones and organic carbon from SoilGrids 2.0 by ISRIC, a global soil model at 250 m. Topsoil is 0 to 30 cm, subsoil 30 to 100 cm. Vineyard soils change over a few metres, so treat this as the soil family of the area, then check local soil maps.")],
+  ava: [N_("AVA"), N_("American Viticultural Area: a grape-growing region defined by the US Alcohol and Tobacco Tax and Trade Bureau (TTB) in 27 CFR part 9. If an AVA appears on the label, at least 85% of the grapes come from it. AVAs can sit inside larger AVAs, like Oakville inside Napa Valley.")],
+  terrain: [N_("Terrain"), N_("Elevation, slope and aspect are measured live from open elevation models served by Mapterhorn: IGN RGE ALTI in France, DGM1 lidar in Germany, swissALTI3D in Switzerland, IGN MDT in Spain, regional models in parts of Italy, and Copernicus GLO-30 (30 m) elsewhere. Slope uses the Horn method on each cell. Aspect is the compass direction the ground faces, counted only where the slope is 2° or more. The rose shows how much of the place faces each direction. For a large appellation the cells are coarse, so read slope and aspect on single vineyards.")],
+  gi: [N_("Geographical indication (GI)"), N_("Outside the EU most wine names are protected as geographical indications: Wine Australia GIs (zones, regions, subregions), New Zealand registered GIs, South Africa's Wine of Origin units (regions, districts, wards), Chilean DOs, Argentine IGs and DOCs, Brazilian IPs and DOs, Canada's VQA areas. They protect where the grapes come from; most set few or no rules on grapes or yields.")],
+  outline: [N_("How outlines are drawn outside the EU"), N_("Few countries publish their wine boundaries as open data. Where the law defines a place by administrative units (Chilean comunas, Argentine departments, Japanese prefectures, Moldovan raions) the outline is the union of those units. Where the legal line follows roads, rivers, farms or altitude, the units only approximate it: the outline is dashed and larger than the real area. Places much smaller than any unit, like South African wards or Mendoza parajes, are shown as a dot at the town they are named after.")],
+  bedrock: [N_("Regional bedrock"), N_("Rock type under the place, sampled from the Global Lithological Map by Hartmann and Moosdorf (2012). The map works at about 1:3.75 million, so it shows the geology of the wider area. Local soils, such as the marl and limestone mosaic of a Burgundy slope, can differ.")],
 };
+LOCALIZE.push(GLOSS);
 function openGloss(key) {
   const g = GLOSS[key];
   if (!g) return;
-  openModal('<h2>' + esc(g[0]) + "</h2><p>" + esc(g[1]) + '</p><p><button class="link-btn" id="fullGuide">Open the full guide</button></p>');
+  openModal('<h2>' + esc(g[0]) + "</h2><p>" + esc(g[1]) + '</p><p><button class="link-btn" id="fullGuide">' + t_("Open the full guide") + '</button></p>');
   $("fullGuide").onclick = openGuide;
 }
 function openGuide() {
   const block = (keys) => "<dl class=\"gloss\">" + keys.map((k) => "<dt>" + esc(GLOSS[k][0]) + "</dt><dd>" + esc(GLOSS[k][1]) + "</dd>").join("") + "</dl>";
-  openModal("<h2>How to read the atlas</h2>" +
-    "<p>Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.</p>" +
-    "<p>Explore regions, in the sidebar, walks the same places as a list: France › Bourgogne › Côte de Nuits › Morey-Saint-Denis. A name opens its sheet and flies the map there, the arrow only unfolds it. Hover a name to see it in gold on the map. The trail at the top of the map shows where you are; Esc goes up one level. Winery dots show their names as you zoom in; hover or click any dot.</p>" +
-    "<p>Make room for the map: the arrow beside the tabs (or [ ) slims the sidebar to a row of icons, the buttons on top of a sheet make it a small or a large window, and Map only (or F) hides every panel. Esc brings them back.</p>" +
-    "<h3>Levels</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
-    "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage", "gi"]) +
-    "<h3>How precise is each layer</h3><dl class=\"gloss\">" +
-    "<dt>France</dt><dd>Official INAO parcel delimitation, dated 31 August 2026. Exact to the cadastral parcel. Champagne and a few others are shown by commune.</dd>" +
-    "<dt>Italy and Spain</dt><dd>Appellation outlines built from the communes named in each specification. Single vineyards (MGA, paratges, viñedos singulares) are not mapped yet.</dd>" +
-    "<dt>Germany</dt><dd>Official Einzellagen for Mosel, Rheinhessen, Pfalz, Nahe, Mittelrhein and Ahr (register of 6 October 2021). Other regions by outline only.</dd>" +
-    "<dt>Switzerland</dt><dd>Swiss AOCs are defined canton by canton, so the canton boundary stands in for the appellation until the cantonal vineyard cadastres are added.</dd>" +
-    "<dt>United States</dt><dd>Every AVA from the legal descriptions in 27 CFR part 9, digitised by the UC Davis Library.</dd>" +
-    "<dt>Rest of the world</dt><dd>" + esc(GLOSS.outline[1]) + " Australia uses the Wine Australia GI outlines.</dd>" +
-    "<dt>Wine rules</dt><dd>Grapes, yields and planting density from the EU product specifications, compiled by Candiago et al. (2022). Always check the current specification for legal use.</dd>" +
-    (WEB ? "<dt>Terrain</dt><dd>" + esc(GLOSS.terrain[1]) + "</dd>" : "") +
-    "<dt>Bedrock and wineries</dt><dd>" + esc(GLOSS.bedrock[1]) + " Wineries come from OpenStreetMap and are as complete as its volunteers made them.</dd></dl>");
+  openModal("<h2>" + t_("How to read the atlas") + "</h2>" +
+    "<p>" + t_("Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.") + "</p>" +
+    "<p>" + t_("Explore regions, in the sidebar, walks the same places as a list: France › Bourgogne › Côte de Nuits › Morey-Saint-Denis. A name opens its sheet and flies the map there, the arrow only unfolds it. Hover a name to see it in gold on the map. The trail at the top of the map shows where you are; Esc goes up one level. Winery dots show their names as you zoom in; hover or click any dot.") + "</p>" +
+    "<p>" + t_("Make room for the map: the arrow beside the tabs (or [ ) slims the sidebar to a row of icons, the buttons on top of a sheet make it a small or a large window, and Map only (or F) hides every panel. Esc brings them back.") + "</p>" +
+    "<h3>" + t_("Levels") + "</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
+    "<h3>" + t_("Classifications") + "</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage", "gi"]) +
+    "<h3>" + t_("How precise is each layer") + "</h3><dl class=\"gloss\">" +
+    "<dt>" + t_("France") + "</dt><dd>" + t_("Official INAO parcel delimitation, dated 31 August 2026. Exact to the cadastral parcel. Champagne and a few others are shown by commune.") + "</dd>" +
+    "<dt>" + t_("Italy and Spain") + "</dt><dd>" + t_("Appellation outlines built from the communes named in each specification. Single vineyards (MGA, paratges, viñedos singulares) are not mapped yet.") + "</dd>" +
+    "<dt>" + t_("Germany") + "</dt><dd>" + t_("Official Einzellagen for Mosel, Rheinhessen, Pfalz, Nahe, Mittelrhein and Ahr (register of 6 October 2021). Other regions by outline only.") + "</dd>" +
+    "<dt>" + t_("Switzerland") + "</dt><dd>" + t_("Swiss AOCs are defined canton by canton, so the canton boundary stands in for the appellation until the cantonal vineyard cadastres are added.") + "</dd>" +
+    "<dt>" + t_("United States") + "</dt><dd>" + t_("Every AVA from the legal descriptions in 27 CFR part 9, digitised by the UC Davis Library.") + "</dd>" +
+    "<dt>" + t_("Rest of the world") + "</dt><dd>" + esc(GLOSS.outline[1]) + " " + t_("Australia uses the Wine Australia GI outlines.") + "</dd>" +
+    "<dt>" + t_("Wine rules") + "</dt><dd>" + t_("Grapes, yields and planting density from the EU product specifications, compiled by Candiago et al. (2022). Always check the current specification for legal use.") + "</dd>" +
+    (WEB ? "<dt>" + t_("Terrain") + "</dt><dd>" + esc(GLOSS.terrain[1]) + "</dd>" : "") +
+    "<dt>" + t_("Bedrock and wineries") + "</dt><dd>" + esc(GLOSS.bedrock[1]) + " " + t_("Wineries come from OpenStreetMap and are as complete as its volunteers made them.") + "</dd></dl>");
 }
 document.addEventListener("click", (e) => { const q = e.target.closest("[data-gloss]"); if (q) { e.stopPropagation(); openGloss(q.dataset.gloss); } });
 $("openGuide").onclick = openGuide;
@@ -2657,20 +2780,19 @@ $("modal").addEventListener("click", (e) => { if (e.target.id === "modal") close
 function openData() {
   const counts = {};
   INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
-  openModal("<h2>Open data &amp; sources</h2><p>Every outline on this map comes from an official or community register published under an open licence. " +
-    "The atlas keeps one simple schema for all countries, so anyone can add a region by converting one more dataset.</p>" +
-    '<div class="tbl"><table><tr><th>Layer</th><th>Source</th><th>Licence</th></tr>' +
-    [["France: AOC, premiers crus, climats (parcel level)", "inao"], ["Italy, Spain, Germany and 17 more EU countries: PDO outlines (communes)", "eupdo"],
-     ["Germany: Einzellagen and Großlagen", "rlp"], ["Switzerland: cantonal AOC outlines", "bfs"], ["Wineries, Swiss vineyards, rivers, lakes", "osm"]]
-      .concat([["United States: AVAs", "ava"], ["Australia: GI zones, regions and subregions", "wa"],
-        ["New Zealand, South Africa, Chile, Argentina, Brazil, Canada, Japan and 16 more: outlines from administrative units", "geob"],
-        ["Small GIs without an open boundary: markers", "marker"]])
-      .concat(WEB ? [["Relief, elevation, slope and aspect", "dem"], ["Climate and vintage weather", "meteo"], ["Soil", "soil"], ["Satellite map", "eox"], ["Topographic map", "otm"]] : [])
-      .map(([l, k]) => "<tr><td>" + l + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
+  openModal("<h2>" + esc(t_("Open data & sources")) + "</h2><p>" + t_("Every outline on this map comes from an official or community register published under an open licence. The atlas keeps one simple schema for all countries, so anyone can add a region by converting one more dataset.") + "</p>" +
+    '<div class="tbl"><table><tr><th>' + t_("Layer") + '</th><th>' + t_("Source") + '</th><th>' + t_("Licence") + '</th></tr>' +
+    [[N_("France: AOC, premiers crus, climats (parcel level)"), "inao"], [N_("Italy, Spain, Germany and 17 more EU countries: PDO outlines (communes)"), "eupdo"],
+     [N_("Germany: Einzellagen and Großlagen"), "rlp"], [N_("Switzerland: cantonal AOC outlines"), "bfs"], [N_("Wineries, Swiss vineyards, rivers, lakes"), "osm"]]
+      .concat([[N_("United States: AVAs"), "ava"], [N_("Australia: GI zones, regions and subregions"), "wa"],
+        [N_("New Zealand, South Africa, Chile, Argentina, Brazil, Canada, Japan and 16 more: outlines from administrative units"), "geob"],
+        [N_("Small GIs without an open boundary: markers"), "marker"]])
+      .concat(WEB ? [[N_("Relief, elevation, slope and aspect"), "dem"], [N_("Climate and vintage weather"), "meteo"], ["Soil", "soil"], [N_("Satellite map"), "eox"], [N_("Topographic map"), "otm"]] : [])
+      .map(([l, k]) => "<tr><td>" + t_(l) + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
     "</table></div>" +
-    '<p class="note">Places per country: ' + Object.entries(counts).map(([c, n]) => c + " " + fmt(n)).join(" · ") +
-    ". Country borders: Natural Earth (public domain). Label font: Noto Sans (OFL). DOCG and Pago flags follow public lists and can be corrected by anyone.</p>" +
-    "<p><b>Schema.</b> Every place has <span class=\"num\">id, name, country, level, rank, parent, src</span>. Levels run region → appellation → sub-zone → vineyard site.</p>");
+    '<p class="note">' + t_("Places per country:") + " " + Object.entries(counts).map(([c, n]) => c + " " + fmt(n)).join(" · ") + ". " +
+    t_("Country borders: Natural Earth (public domain). Label font: Noto Sans (OFL). DOCG and Pago flags follow public lists and can be corrected by anyone.") + "</p>" +
+    "<p><b>" + t_("Schema.") + "</b> " + t_("Every place has {fields}. Levels run region → appellation → sub-zone → vineyard site.", { fields: '<span class="num">id, name, country, level, rank, parent, src</span>' }) + "</p>");
 }
 $("openData").onclick = openData; $("attribMore").onclick = openData;
 
@@ -2680,24 +2802,24 @@ function getDb() {
   return dbPromise;
 }
 async function openSuggest(p) {
-  openModal("<h2>Suggest " + (p ? "a correction" : "a place") + "</h2>" +
-    "<p>Add a missing vineyard, fix a boundary or a classification. Every suggestion is reviewed before it enters the open dataset. Please name your source.</p>" +
+  openModal("<h2>" + t_(p ? "Suggest a correction" : "Suggest a place") + "</h2>" +
+    "<p>" + t_("Add a missing vineyard, fix a boundary or a classification. Every suggestion is reviewed before it enters the open dataset. Please name your source.") + "</p>" +
     '<form class="suggest" id="sform">' +
-    '<label for="s-place">Place<input id="s-place" required maxlength="120" value="' + esc(p ? p.name : "") + '"></label>' +
-    '<label for="s-kind">Type<select id="s-kind"><option>Correction</option><option>Missing place</option><option>Classification</option><option>Boundary</option><option>Producer / winery</option></select></label>' +
-    '<label for="s-text">What should change<textarea id="s-text" required maxlength="2000" placeholder="For example: Barolo MGA Cannubi is missing. Boundary per Disciplinare art. 1."></textarea></label>' +
-    '<label for="s-src">Source (link or document)<input id="s-src" maxlength="300" placeholder="https://…"></label>' +
-    '<button class="primary" type="submit">Send suggestion</button><div class="note" id="s-msg"></div></form>' +
-    '<div class="sec"><h3>Recent suggestions</h3><div class="queue" id="queue"><span class="note">Loading…</span></div></div>');
+    '<label for="s-place">' + t_("Place") + '<input id="s-place" required maxlength="120" value="' + esc(p ? p.name : "") + '"></label>' +
+    '<label for="s-kind">' + t_("Type") + '<select id="s-kind"><option>' + t_("Correction") + '</option><option>' + t_("Missing place") + '</option><option>' + t_("Classification") + '</option><option>' + t_("Boundary") + '</option><option>' + t_("Producer / winery") + '</option></select></label>' +
+    '<label for="s-text">' + t_("What should change") + '<textarea id="s-text" required maxlength="2000" placeholder="' + esc(t_("For example: Barolo MGA Cannubi is missing. Boundary per Disciplinare art. 1.")) + '"></textarea></label>' +
+    '<label for="s-src">' + t_("Source (link or document)") + '<input id="s-src" maxlength="300" placeholder="https://…"></label>' +
+    '<button class="primary" type="submit">' + t_("Send suggestion") + '</button><div class="note" id="s-msg"></div></form>' +
+    '<div class="sec"><h3>' + t_("Recent suggestions") + '</h3><div class="queue" id="queue"><span class="note">' + t_("Loading…") + '</span></div></div>');
   const db = WEB ? null : await getDb();
   const queue = $("queue");
-  if (WEB) { queue.innerHTML = '<span class="note">Suggestions open as a GitHub issue, where anyone can follow the review. <a href="' + REPO + '/issues" target="_blank" rel="noopener">See open suggestions</a>.</span>'; }
-  else if (!db) { queue.innerHTML = '<span class="note">Suggestions are stored when you open the atlas signed in to Claude. You can still copy your text and send it to the maintainers.</span>'; }
+  if (WEB) { queue.innerHTML = '<span class="note">' + t_("Suggestions open as a GitHub issue, where anyone can follow the review.") + ' <a href="' + REPO + '/issues" target="_blank" rel="noopener">' + t_("See open suggestions") + '</a>.</span>'; }
+  else if (!db) { queue.innerHTML = '<span class="note">' + t_("Suggestions are stored when you open the atlas signed in to Claude. You can still copy your text and send it to the maintainers.") + '</span>'; }
   else {
     const unsub = db.collection("suggestions").orderBy("at", "desc").limit(8).onSnapshot((snap) => {
       queue.innerHTML = snap.docs.length ? snap.docs.map((d) => { const x = d.data(); return "<div><b>" + esc(x.place) + "</b> · " + esc(x.kind) + '<br><span class="note">' + esc(String(x.text).slice(0, 160)) + "</span></div>"; }).join("")
-        : '<span class="note">No suggestions yet. Yours can be the first.</span>';
-    }, () => { queue.innerHTML = '<span class="note">Could not load suggestions.</span>'; });
+        : '<span class="note">' + t_("No suggestions yet. Yours can be the first.") + '</span>';
+    }, () => { queue.innerHTML = '<span class="note">' + t_("Could not load suggestions.") + '</span>'; });
     const stop = () => { try { unsub(); } catch (e) {} };
     $("mclose").addEventListener("click", stop, { once: true });
   }
@@ -2709,12 +2831,12 @@ async function openSuggest(p) {
     if (WEB) {
       const body = "**Place:** " + doc.place + (doc.placeId ? " (`" + doc.placeId + "`)" : "") + "\n**Type:** " + doc.kind + "\n\n" + doc.text + "\n\n**Source:** " + (doc.source || "none given");
       window.open(REPO + "/issues/new?labels=suggestion&title=" + encodeURIComponent(doc.kind + ": " + doc.place) + "&body=" + encodeURIComponent(body), "_blank", "noopener");
-      msg.textContent = "GitHub opens in a new tab. Check the text and submit the issue there.";
+      msg.textContent = t_("GitHub opens in a new tab. Check the text and submit the issue there.");
       return;
     }
-    if (!db) { msg.textContent = "Not saved: this view has no shared storage. Copy your text and send it to the maintainers."; return; }
-    try { await db.collection("suggestions").add(doc); msg.textContent = "Thank you. Your suggestion is in the review queue."; $("s-text").value = ""; $("s-src").value = ""; }
-    catch (err) { msg.textContent = "Not saved: you need contributor access to this atlas. Ask the owner to invite you."; }
+    if (!db) { msg.textContent = t_("Not saved: this view has no shared storage. Copy your text and send it to the maintainers."); return; }
+    try { await db.collection("suggestions").add(doc); msg.textContent = t_("Thank you. Your suggestion is in the review queue."); $("s-text").value = ""; $("s-src").value = ""; }
+    catch (err) { msg.textContent = t_("Not saved: you need contributor access to this atlas. Ask the owner to invite you."); }
   });
 }
 $("openSuggest").onclick = () => openSuggest(null);
@@ -2763,9 +2885,9 @@ const kindOf = (x) => RANK_LABEL[x.rank] || (x.country === "US" ? "AVA" : x.coun
 // sheet action buttons
 function sheetActs(p) {
   const s = !!MY.saved[p.id], c = MY.compare.includes(p.id);
-  return '<div class="acts"><button class="mini-btn" data-act="save" aria-pressed="' + s + '">' + (s ? "★ Saved" : "☆ Save") + "</button>" +
-    '<button class="mini-btn" data-act="compare" aria-pressed="' + c + '">' + (c ? "✓ In compare" : "+ Compare") + "</button>" +
-    '<button class="mini-btn" data-act="taste">Log a tasting</button></div>';
+  return '<div class="acts"><button class="mini-btn" data-act="save" aria-pressed="' + s + '">' + (s ? "★ " + t_("Saved") : "☆ " + t_("Save")) + "</button>" +
+    '<button class="mini-btn" data-act="compare" aria-pressed="' + c + '">' + (c ? "✓ " + t_("In compare") : "+ " + t_("Compare")) + "</button>" +
+    '<button class="mini-btn" data-act="taste">' + t_("Log a tasting") + '</button></div>';
 }
 function refreshActs() { const box = document.querySelector("#sh-head .acts"); if (box && CURRENT) box.outerHTML = sheetActs(CURRENT.p); }
 let toastTimer = null;
@@ -2780,8 +2902,8 @@ document.addEventListener("click", (e) => {
   if (!b || !CURRENT) return;
   const { p, d, rec } = CURRENT;
   if (b.dataset.act === "save") {
-    if (MY.saved[p.id]) { delete MY.saved[p.id]; toast("Removed from your places."); }
-    else { MY.saved[p.id] = snapshot(p, d, rec); toast("Saved to your places. <button data-dash=\"saved\">Open My atlas</button>"); }
+    if (MY.saved[p.id]) { delete MY.saved[p.id]; toast(t_("Removed from your places.")); }
+    else { MY.saved[p.id] = snapshot(p, d, rec); toast(t_("Saved to your places.") + ' <button data-dash="saved">' + t_("Open My atlas") + "</button>"); }
     saveMY("saved");
   } else if (b.dataset.act === "compare") {
     if (MY.compare.includes(p.id)) MY.compare = MY.compare.filter((x) => x !== p.id);
@@ -2790,7 +2912,7 @@ document.addEventListener("click", (e) => {
       MY.compare.push(p.id);
       if (!MY.saved[p.id]) MY.saved[p.id] = snapshot(p, d, rec); // compare reads the saved measurements
       saveMY("saved");
-      toast(MY.compare.length >= 2 ? "Comparing " + MY.compare.length + " places. <button data-dash=\"compare\">Open compare</button>" : "Added. Open another place and add it to compare.");
+      toast(MY.compare.length >= 2 ? t_("Comparing {n} places.", { n: MY.compare.length }) + ' <button data-dash="compare">' + t_("Open compare") + "</button>" : t_("Added. Open another place and add it to compare."));
     }
     saveMY("compare");
   } else if (b.dataset.act === "taste") { openDash("journal", p.id); }
@@ -2857,23 +2979,23 @@ function dashOverview() {
   const counts = {}; INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12), mx = top[0]?.[1] || 1;
   const recent = MY.recent.map(recOf).filter(Boolean);
-  return '<p class="lead">Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register. Everything here stays on this device.</p>' +
-    '<div class="tiles">' + tile(fmt(INDEX.length), "wine places in the atlas") + tile(countries.size, "countries") + tile(saved.length, "places you saved") +
-    tile(MY.journal.length, "tastings logged") + tile(cc.size, "countries you explored") + "</div>" +
-    '<div class="dgrid"><div><h3>Discover</h3><div class="row">' +
-    '<button class="mini-btn" data-rand="any">Surprise me</button><button class="mini-btn" data-rand="grand_cru">A grand cru</button><button class="mini-btn" data-rand="premier_cru">A premier cru</button>' +
-    '<button class="mini-btn" data-rand="docg">A DOCG</button><button class="mini-btn" data-rand="einzellage">An Einzellage</button><button class="mini-btn" data-rand="ava">An AVA</button></div>' +
-    "<h3 style=\"margin-top:18px\">Recently viewed</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">Places you open on the map appear here.</div>') +
-    "<h3 style=\"margin-top:18px\">Best recent vintages</h3>" + '<div id="bestV" class="note">Loading…</div></div>' +
-    "<div><h3>Places per country</h3><div class=\"hbars\">" + top.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-label="' + esc((COUNTRY_EN[c] || c) + ": " + n + " places, explore") + '"><span>' + esc(COUNTRY[c] || c) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
-    '</div><p class="note">Click a country to explore its places.</p></div></div>';
+  return '<p class="lead">' + t_("Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register. Everything here stays on this device.") + '</p>' +
+    '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
+    tile(MY.journal.length, t_("tastings logged")) + tile(cc.size, t_("countries you explored")) + "</div>" +
+    '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
+    '<button class="mini-btn" data-rand="any">' + t_("Surprise me") + '</button><button class="mini-btn" data-rand="grand_cru">' + t_("A grand cru") + '</button><button class="mini-btn" data-rand="premier_cru">' + t_("A premier cru") + '</button>' +
+    '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + '</button></div>' +
+    "<h3 style=\"margin-top:18px\">" + t_("Recently viewed") + "</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">' + t_("Places you open on the map appear here.") + '</div>') +
+    "<h3 style=\"margin-top:18px\">" + t_("Best recent vintages") + "</h3>" + '<div id="bestV" class="note">' + t_("Loading…") + '</div></div>' +
+    "<div><h3>" + t_("Places per country") + "</h3><div class=\"hbars\">" + top.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-label="' + esc(t_("{country}: {n} places, explore", { country: cname(c), n })) + '"><span>' + esc(cname(c)) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
+    '</div><p class="note">' + t_("Click a country to explore its places.") + '</p></div></div>';
 }
 function bestVintages() {
   loadVintages().then((V) => {
     const el = $("bestV"); if (!el) return;
     const yrs = V.years.slice(-10);
-    el.outerHTML = '<div class="hbars">' + V.regions.map((r) => { const best = yrs.filter((y) => r.scores[y] === 5); return '<div class="row" style="font-size:12.5px"><span style="min-width:190px">' + esc(r.name) + "</span>" + (best.length ? best.map((y) => scoreCell(5).replace(">5<", ">" + String(y).slice(2) + "<")).join("") : '<span class="note">no 5 in ten years</span>') + "</div>"; }).join("") +
-      '</div><p class="note">Vintages scored 5 in the last ten years. <button class="link-btn" data-open-vintages>Full vintage chart</button></p>';
+    el.outerHTML = '<div class="hbars">' + V.regions.map((r) => { const best = yrs.filter((y) => r.scores[y] === 5); return '<div class="row" style="font-size:12.5px"><span style="min-width:190px">' + esc(t_(r.name)) + "</span>" + (best.length ? best.map((y) => scoreCell(5).replace(">5<", ">" + String(y).slice(2) + "<")).join("") : '<span class="note">' + t_("no 5 in ten years") + '</span>') + "</div>"; }).join("") +
+      '</div><p class="note">' + t_("Vintages scored 5 in the last ten years.") + ' <button class="link-btn" data-open-vintages>' + t_("Full vintage chart") + '</button></p>';
   });
 }
 document.addEventListener("click", (e) => {
@@ -2888,21 +3010,21 @@ document.addEventListener("click", (e) => { const b = e.target.closest("[data-ex
 let savedSort = "recent";
 function dashSaved() {
   const list = Object.values(MY.saved);
-  if (!list.length) return '<div class="empty">No saved places yet. Open any vineyard or appellation and press ☆ Save. Its terrain and climate are stored with it, ready to compare.</div>';
+  if (!list.length) return '<div class="empty">' + t_("No saved places yet. Open any vineyard or appellation and press ☆ Save. Its terrain and climate are stored with it, ready to compare.") + '</div>';
   const key = { recent: (a, b) => b.at.localeCompare(a.at), name: (a, b) => a.name.localeCompare(b.name), warm: (a, b) => (b.climate?.gst ?? -99) - (a.climate?.gst ?? -99),
     high: (a, b) => (b.terrain?.mean ?? -9e3) - (a.terrain?.mean ?? -9e3), steep: (a, b) => (b.terrain?.slope ?? -1) - (a.terrain?.slope ?? -1) }[savedSort];
   list.sort(key);
-  return '<div class="fbar"><label>Sort <select id="savedSort">' + [["recent", "Recently saved"], ["name", "Name"], ["warm", "Warmest"], ["high", "Highest"], ["steep", "Steepest"]]
-    .map(([v, l]) => '<option value="' + v + '"' + (v === savedSort ? " selected" : "") + ">" + l + "</option>").join("") + "</select></label>" +
-    '<span class="note">' + list.length + " places · gold rings on the map</span></div>" +
+  return '<div class="fbar"><label>' + t_("Sort") + ' <select id="savedSort">' + [["recent", N_("Recently saved")], ["name", N_("Name")], ["warm", N_("Warmest")], ["high", N_("Highest")], ["steep", N_("Steepest")]]
+    .map(([v, l]) => '<option value="' + v + '"' + (v === savedSort ? " selected" : "") + ">" + t_(l) + "</option>").join("") + "</select></label>" +
+    '<span class="note">' + t_("{n} places · gold rings on the map", { n: list.length }) + "</span></div>" +
     '<div class="cards">' + list.map((s) => {
       const t = s.terrain || {}, c = s.climate || {};
-      return '<div class="pcard"><div class="meta">' + esc((COUNTRY[s.country] || s.country) + " · " + kindOf(s)) + "</div><h4>" + esc(s.name) + "</h4><dl>" +
-        "<dt>Elevation</dt><dd>" + (t.mean != null ? fmtN(t.mean) + " m" : "–") + "</dd><dt>Slope</dt><dd>" + (t.slope != null ? fmtN(t.slope, 1) + "°" : "–") + "</dd>" +
-        "<dt>Faces</dt><dd>" + esc(facing(t.aspect)) + "</dd><dt>Season</dt><dd>" + (c.gst != null ? fmtN(c.gst, 1) + " °C" : "–") + "</dd></dl>" +
-        '<div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">Show on map</button><button class="mini-btn" data-cmp="' + esc(s.id) + '" aria-pressed="' + MY.compare.includes(s.id) + '">Compare</button>' +
-        '<button class="mini-btn warn" data-unsave="' + esc(s.id) + '">Remove</button></div></div>';
-    }).join("") + "</div>" + '<p class="note">Measurements are taken when you open a place. Missing values fill in the next time you open it on the map.</p>';
+      return '<div class="pcard"><div class="meta">' + esc(cname(s.country) + " · " + kindOf(s)) + "</div><h4>" + esc(s.name) + "</h4><dl>" +
+        "<dt>" + t_("Elevation") + "</dt><dd>" + (t.mean != null ? fmtN(t.mean) + " m" : "–") + "</dd><dt>" + t_("Slope") + "</dt><dd>" + (t.slope != null ? fmtN(t.slope, 1) + "°" : "–") + "</dd>" +
+        "<dt>" + t_("Faces") + "</dt><dd>" + esc(facing(t.aspect)) + "</dd><dt>" + t_("Season") + "</dt><dd>" + (c.gst != null ? fmtN(c.gst, 1) + " °C" : "–") + "</dd></dl>" +
+        '<div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">' + t_("Show on map") + '</button><button class="mini-btn" data-cmp="' + esc(s.id) + '" aria-pressed="' + MY.compare.includes(s.id) + '">' + t_("Compare") + '</button>' +
+        '<button class="mini-btn warn" data-unsave="' + esc(s.id) + '">' + t_("Remove") + '</button></div></div>';
+    }).join("") + "</div>" + '<p class="note">' + t_("Measurements are taken when you open a place. Missing values fill in the next time you open it on the map.") + '</p>';
 }
 document.addEventListener("change", (e) => { if (e.target.id === "savedSort") { savedSort = e.target.value; renderDash(); } });
 document.addEventListener("click", (e) => {
@@ -2916,20 +3038,20 @@ function dashJournal() {
   const pre = dashPrefill ? placeOf(dashPrefill) : null;
   const list = [...MY.journal].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   const scored = list.filter((j) => j.score), avg = scored.length ? scored.reduce((s, j) => s + +j.score, 0) / scored.length : null;
-  return '<div><h3>Log a tasting</h3><form class="jform" id="jform" autocomplete="off">' +
-    '<label class="wide">Place<input id="j-place" required placeholder="Start typing: Musigny, Barolo, Oakville…" value="' + esc(pre ? pre.name : "") + '" data-id="' + esc(pre ? pre.id : "") + '"><ul class="sugg" id="j-sugg" hidden></ul></label>' +
-    '<label>Producer and wine<input id="j-wine" maxlength="140" placeholder="Domaine, cuvée"></label>' +
-    '<label>Vintage<input id="j-vint" type="number" min="1900" max="2030" placeholder="2019"></label>' +
-    '<label>Score /100<input id="j-score" type="number" min="50" max="100" placeholder="93"></label>' +
-    '<label>Date<input id="j-date" type="date" value="' + new Date().toISOString().slice(0, 10) + '"></label>' +
-    '<label class="wide">Notes<textarea id="j-note" maxlength="3000" placeholder="Nose, palate, structure, when to drink"></textarea></label>' +
-    '<div class="row wide"><button class="primary" type="submit">Add to journal</button><span class="note" id="j-msg"></span></div></form></div>' +
+  return '<div><h3>' + t_("Log a tasting") + '</h3><form class="jform" id="jform" autocomplete="off">' +
+    '<label class="wide">' + t_("Place") + '<input id="j-place" required placeholder="' + esc(t_("Start typing: Musigny, Barolo, Oakville…")) + '" value="' + esc(pre ? pre.name : "") + '" data-id="' + esc(pre ? pre.id : "") + '"><ul class="sugg" id="j-sugg" hidden></ul></label>' +
+    '<label>' + t_("Producer and wine") + '<input id="j-wine" maxlength="140" placeholder="Domaine, cuvée"></label>' +
+    '<label>' + t_("Vintage") + '<input id="j-vint" type="number" min="1900" max="2030" placeholder="2019"></label>' +
+    '<label>' + t_("Score /100") + '<input id="j-score" type="number" min="50" max="100" placeholder="93"></label>' +
+    '<label>' + t_("Date") + '<input id="j-date" type="date" value="' + new Date().toISOString().slice(0, 10) + '"></label>' +
+    '<label class="wide">' + t_("Notes") + '<textarea id="j-note" maxlength="3000" placeholder="' + esc(t_("Nose, palate, structure, when to drink")) + '"></textarea></label>' +
+    '<div class="row wide"><button class="primary" type="submit">' + t_("Add to journal") + '</button><span class="note" id="j-msg"></span></div></form></div>' +
     '<div><div class="fbar" style="justify-content:space-between"><h3 style="margin:0">Your journal · ' + list.length + (avg ? " · average " + fmtN(avg, 1) : "") + "</h3>" +
-    '<div class="row"><button class="mini-btn" id="j-csv">Export CSV</button><button class="mini-btn" id="j-json">Export JSON</button><label class="mini-btn" style="cursor:pointer">Import JSON<input id="j-imp" type="file" accept="application/json" hidden></label></div></div>' +
+    '<div class="row"><button class="mini-btn" id="j-csv">' + t_("Export CSV") + '</button><button class="mini-btn" id="j-json">' + t_("Export JSON") + '</button><label class="mini-btn" style="cursor:pointer">' + t_("Import JSON") + '<input id="j-imp" type="file" accept="application/json" hidden></label></div></div>' +
     (list.length ? '<div style="display:grid;gap:8px;margin-top:10px">' + list.map((j) => '<div class="jentry"><div class="top">' + (j.score ? '<span class="sc">' + esc(j.score) + "</span>" : "") +
       "<b>" + esc([j.wine, j.vintage].filter(Boolean).join(" ") || j.place) + '</b><button class="mini-btn" data-go="' + esc(j.placeId) + '">' + esc(j.place) + '</button><span class="note">' + esc(j.date || "") + "</span>" +
-      '<button class="mini-btn warn" data-jdel="' + esc(j.at) + '" style="margin-left:auto">Delete</button></div>' + (j.note ? "<p>" + esc(j.note) + "</p>" : "") + "</div>").join("") + "</div>"
-      : '<div class="empty" style="margin-top:10px">No tastings yet. Every note is pinned to its vineyard on the map in copper.</div>') + "</div>";
+      '<button class="mini-btn warn" data-jdel="' + esc(j.at) + '" style="margin-left:auto">' + t_("Delete") + '</button></div>' + (j.note ? "<p>" + esc(j.note) + "</p>" : "") + "</div>").join("") + "</div>"
+      : '<div class="empty" style="margin-top:10px">' + t_("No tastings yet. Every note is pinned to its vineyard on the map in copper.") + '</div>') + "</div>";
 }
 function download(name, type, text) {
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name;
@@ -2949,11 +3071,11 @@ function wireJournal() {
     let id = inp.dataset.id;
     if (!id) { const r = search(inp.value)[0]; if (r) id = r[1]; }
     const r = recOf(id);
-    if (!r) { $("j-msg").textContent = "Pick a place from the list."; return; }
+    if (!r) { $("j-msg").textContent = t_("Pick a place from the list."); return; }
     const s = MY.saved[id], pt = s && s.lat != null ? [s.lat, s.lon] : [(r[6][1] + r[6][3]) / 2, (r[6][0] + r[6][2]) / 2];
     MY.journal.push({ at: new Date().toISOString(), placeId: id, place: r[0], country: r[2], lat: pt[0], lon: pt[1], wine: $("j-wine").value.trim(),
       vintage: $("j-vint").value, score: $("j-score").value, date: $("j-date").value, note: $("j-note").value.trim() });
-    saveMY("journal"); dashPrefill = null; renderDash(); toast("Tasting logged.");
+    saveMY("journal"); dashPrefill = null; renderDash(); toast(t_("Tasting logged."));
   });
   $("j-csv").onclick = () => {
     const q = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
@@ -2966,8 +3088,8 @@ function wireJournal() {
       const have = new Set(MY.journal.map((x) => x.at));
       (j.journal || []).forEach((x) => { if (x && x.placeId && !have.has(x.at)) MY.journal.push(x); });
       Object.assign(MY.saved, j.saved || {});
-      saveMY("journal"); saveMY("saved"); renderDash(); toast("Imported.");
-    } catch (err) { toast("That file could not be read."); }
+      saveMY("journal"); saveMY("saved"); renderDash(); toast(t_("Imported."));
+    } catch (err) { toast(t_("That file could not be read.")); }
   };
 }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-jdel]"); if (b) { MY.journal = MY.journal.filter((j) => j.at !== b.dataset.jdel); saveMY("journal"); renderDash(); } });
@@ -2975,36 +3097,36 @@ document.addEventListener("click", (e) => { const b = e.target.closest("[data-jd
 // compare
 function dashCompare() {
   const items = MY.compare.map((id) => MY.saved[id] || (placeOf(id) && { ...placeOf(id) })).filter(Boolean);
-  const picker = '<div class="fbar" style="position:relative"><input type="search" id="cmp-add" placeholder="Add a place to compare (up to 4)" style="flex:1 1 260px"><ul class="sugg" id="cmp-sugg" hidden></ul></div>';
-  if (items.length < 2) return '<p class="lead">Put up to four places side by side: elevation, slope, exposure, sun, climate, soil and how much each has warmed since the 1990s.</p>' + picker +
+  const picker = '<div class="fbar" style="position:relative"><input type="search" id="cmp-add" placeholder="' + esc(t_("Add a place to compare (up to 4)")) + '" style="flex:1 1 260px"><ul class="sugg" id="cmp-sugg" hidden></ul></div>';
+  if (items.length < 2) return '<p class="lead">' + t_("Put up to four places side by side: elevation, slope, exposure, sun, climate, soil and how much each has warmed since the 1990s.") + '</p>' + picker +
     (items.length ? '<div class="row">' + items.map((s) => '<span class="mini-btn" aria-pressed="true">' + esc(s.name) + "</span>").join("") + "</div>" : "") +
-    '<div class="empty">Add places here, or press + Compare in any place sheet. A place gets its terrain and climate once you have opened it on the map.</div>';
+    '<div class="empty">' + t_("Add places here, or press + Compare in any place sheet. A place gets its terrain and climate once you have opened it on the map.") + '</div>';
   const rows = [
-    ["Country", (s) => esc(COUNTRY[s.country] || s.country)], ["Classification", (s) => esc(kindOf(s))],
-    ["Area", (s) => s.area != null ? fmtN(s.area, 1) + " ha" : null, (s) => s.area],
-    ["Mean elevation", (s) => s.terrain ? fmtN(s.terrain.mean) + " m" : null, (s) => s.terrain?.mean],
-    ["Elevation range", (s) => s.terrain ? fmtN(s.terrain.min) + "–" + fmtN(s.terrain.max) + " m" : null],
-    ["Mean slope", (s) => s.terrain?.slope != null ? fmtN(s.terrain.slope, 1) + "°" : null, (s) => s.terrain?.slope],
-    ["Faces", (s) => s.terrain?.aspect != null ? esc(facing(s.terrain.aspect)) : null],
-    ["Sun on the ground", (s) => s.terrain?.sun != null ? sunPct(s.terrain.sun) : null, (s) => s.terrain?.sun],
-    ["Growing season mean", (s) => s.climate ? fmtN(s.climate.gst, 1) + " °C" : null, (s) => s.climate?.gst],
-    ["Degree days (Winkler)", (s) => s.climate ? fmtN(s.climate.gdd) : null, (s) => s.climate?.gdd],
-    ["Huglin index", (s) => s.climate ? fmtN(s.climate.hi) : null, (s) => s.climate?.hi],
-    ["Rain, growing season", (s) => s.climate ? fmtN(s.climate.rain) + " mm" : null, (s) => s.climate?.rain],
-    ["Days above 30 °C", (s) => s.climate ? fmtN(s.climate.hot30, 1) : null, (s) => s.climate?.hot30],
-    ["Spring frost days", (s) => s.climate ? fmtN(s.climate.frost, 1) : null, (s) => s.climate?.frost],
-    ["Warming since the 1990s", (s) => s.climate?.trend != null ? sign(s.climate.trend) + " °C" : null, (s) => s.climate?.trend],
-    ["Topsoil", (s) => s.soil ? esc(s.soil.texture) : null], ["Soil pH", (s) => s.soil?.ph != null ? fmtN(s.soil.ph, 1) : null, (s) => s.soil?.ph],
+    [N_("Country"), (s) => esc(cname(s.country))], [N_("Classification"), (s) => esc(kindOf(s))],
+    [N_("Area"), (s) => s.area != null ? fmtN(s.area, 1) + " ha" : null, (s) => s.area],
+    [N_("Mean elevation"), (s) => s.terrain ? fmtN(s.terrain.mean) + " m" : null, (s) => s.terrain?.mean],
+    [N_("Elevation range"), (s) => s.terrain ? fmtN(s.terrain.min) + "–" + fmtN(s.terrain.max) + " m" : null],
+    [N_("Mean slope"), (s) => s.terrain?.slope != null ? fmtN(s.terrain.slope, 1) + "°" : null, (s) => s.terrain?.slope],
+    [N_("Faces"), (s) => s.terrain?.aspect != null ? esc(facing(s.terrain.aspect)) : null],
+    [N_("Sun on the ground"), (s) => s.terrain?.sun != null ? sunPct(s.terrain.sun) : null, (s) => s.terrain?.sun],
+    [N_("Growing season mean"), (s) => s.climate ? fmtN(s.climate.gst, 1) + " °C" : null, (s) => s.climate?.gst],
+    [N_("Degree days (Winkler)"), (s) => s.climate ? fmtN(s.climate.gdd) : null, (s) => s.climate?.gdd],
+    [N_("Huglin index"), (s) => s.climate ? fmtN(s.climate.hi) : null, (s) => s.climate?.hi],
+    [N_("Rain, growing season"), (s) => s.climate ? fmtN(s.climate.rain) + " mm" : null, (s) => s.climate?.rain],
+    [N_("Days above 30 °C"), (s) => s.climate ? fmtN(s.climate.hot30, 1) : null, (s) => s.climate?.hot30],
+    [N_("Spring frost days"), (s) => s.climate ? fmtN(s.climate.frost, 1) : null, (s) => s.climate?.frost],
+    [N_("Warming since the 1990s"), (s) => s.climate?.trend != null ? sign(s.climate.trend) + " °C" : null, (s) => s.climate?.trend],
+    [N_("Topsoil"), (s) => s.soil ? esc(t_(s.soil.texture)) : null], [N_("Soil pH"), (s) => s.soil?.ph != null ? fmtN(s.soil.ph, 1) : null, (s) => s.soil?.ph],
   ];
   const head = "<tr><th></th>" + items.map((s, i) => '<th><span style="color:' + CMP_COLORS[i] + '">●</span> ' + esc(s.name) + "</th>").join("") + "</tr>";
   const body = rows.map(([label, f, num]) => {
     const vals = items.map((s) => num ? num(s) : null), real = vals.filter((v) => v != null), mx = real.length > 1 ? Math.max(...real) : null;
-    return "<tr><td>" + label + "</td>" + items.map((s, i) => { const v = f(s); return '<td class="' + (num ? "n" : "") + (mx != null && vals[i] === mx ? " best" : "") + '">' + (v ?? '<button class="mini-btn" data-go="' + esc(s.id) + '">measure</button>') + "</td>"; }).join("") + "</tr>";
+    return "<tr><td>" + t_(label) + "</td>" + items.map((s, i) => { const v = f(s); return '<td class="' + (num ? "n" : "") + (mx != null && vals[i] === mx ? " best" : "") + '">' + (v ?? '<button class="mini-btn" data-go="' + esc(s.id) + '">' + t_("measure") + '</button>') + "</td>"; }).join("") + "</tr>";
   }).join("");
   const series = items.map((s, i) => ({ name: s.name, color: CMP_COLORS[i], pts: s.climate?.series || [] })).filter((x) => x.pts.length);
-  return picker + '<div class="tbl"><table class="dt">' + head + body + '<tr><td></td>' + items.map((s) => '<td><div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">Map</button><button class="mini-btn warn" data-cmp="' + esc(s.id) + '">Remove</button></div></td>').join("") + "</tr></table></div>" +
-    '<p class="note">Gold marks the highest value in each row. "measure" opens the place on the map so its terrain and climate can be read.</p>' +
-    (series.length ? "<div><h3>Growing season temperature per vintage</h3>" + '<div class="legend2">' + series.map((s) => '<span><i style="background:' + s.color + '"></i>' + esc(s.name) + "</span>").join("") + "</div>" +
+  return picker + '<div class="tbl"><table class="dt">' + head + body + '<tr><td></td>' + items.map((s) => '<td><div class="row"><button class="mini-btn" data-go="' + esc(s.id) + '">' + t_("Map") + '</button><button class="mini-btn warn" data-cmp="' + esc(s.id) + '">' + t_("Remove") + '</button></div></td>').join("") + "</tr></table></div>" +
+    '<p class="note">' + t_("Gold marks the highest value in each row. \"measure\" opens the place on the map so its terrain and climate can be read.") + '</p>' +
+    (series.length ? "<div><h3>" + t_("Growing season temperature per vintage") + "</h3>" + '<div class="legend2">' + series.map((s) => '<span><i style="background:' + s.color + '"></i>' + esc(s.name) + "</span>").join("") + "</div>" +
       '<div style="position:relative" id="lwrap">' + lineChart(series) + '<div class="ctip" id="ctip" hidden></div></div></div>' : "");
 }
 let LCH = null;
@@ -3014,7 +3136,7 @@ function lineChart(series) {
   const vals = series.flatMap((s) => s.pts.map((p) => p[1])), lo = Math.floor(Math.min(...vals) - 0.3), hi = Math.ceil(Math.max(...vals) + 0.3);
   const x = (y) => L + (W - L - R) * (y - years[0]) / ((years[years.length - 1] - years[0]) || 1), yv = (v) => T + (H - T - B) * (1 - (v - lo) / ((hi - lo) || 1));
   LCH = { series, years, x, yv, W, H, L, R, T, B };
-  let s = '<svg class="lchart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Growing season temperature per vintage for the compared places">';
+  let s = '<svg class="lchart" viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + t_("Growing season temperature per vintage for the compared places") + '">';
   for (let v = lo; v <= hi; v++) s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + yv(v).toFixed(1) + '" y2="' + yv(v).toFixed(1) + '" stroke="#24242a" stroke-width="1"/><text x="' + (L - 6) + '" y="' + (yv(v) + 3).toFixed(1) + '" text-anchor="end">' + v + "°</text>";
   years.forEach((y) => { if (y % 5 === 0) s += '<text x="' + x(y).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle">' + y + "</text>"; });
   series.forEach((se) => {
@@ -3075,16 +3197,16 @@ function dashExplore() {
   const byCc = {}; rows.forEach((r) => { byCc[r[2]] = (byCc[r[2]] || 0) + 1; });
   const ccTop = Object.entries(byCc).sort((a, b) => b[1] - a[1]).slice(0, 8), mx = ccTop[0]?.[1] || 1;
   const th = (k, l) => '<th><button data-esort="' + k + '">' + l + (EXP.sort === k ? (EXP.dir > 0 ? " ↑" : " ↓") : "") + "</button></th>";
-  return '<div class="fbar"><input type="search" id="ex-q" placeholder="Filter by name, village or grape region" value="' + esc(EXP.q) + '">' +
-    '<select id="ex-cc" aria-label="Country"><option value="">All countries</option>' + Object.keys(counts).sort((a, b) => (COUNTRY_EN[a] || a).localeCompare(COUNTRY_EN[b] || b)).map((c) => '<option value="' + c + '"' + (EXP.cc === c ? " selected" : "") + ">" + esc((COUNTRY_EN[c] || c).replace(/^the /, "")) + " · " + counts[c] + "</option>").join("") + "</select>" +
-    '<select id="ex-level" aria-label="Level"><option value="">All levels</option>' + ["region", "appellation", "subzone", "vineyard"].map((l) => '<option value="' + l + '"' + (EXP.level === l ? " selected" : "") + ">" + LEVEL_LABEL[l] + "</option>").join("") + "</select>" +
-    '<label><input type="checkbox" id="ex-top"' + (EXP.top ? " checked" : "") + "> Top classifications only</label>" +
-    '<span class="note">' + fmt(rows.length) + " places</span></div>" +
-    '<div class="dgrid"><div class="tbl"><table class="dt"><tr>' + th("name", "Name") + th("kind", "Classification") + th("parent", "Part of") + th("country", "Country") + "</tr>" +
+  return '<div class="fbar"><input type="search" id="ex-q" placeholder="' + esc(t_("Filter by name, village or grape region")) + '" value="' + esc(EXP.q) + '">' +
+    '<select id="ex-cc" aria-label="' + t_("Country") + '"><option value="">' + t_("All countries") + '</option>' + Object.keys(counts).sort((a, b) => cname(a).localeCompare(cname(b), LOCALE)).map((c) => '<option value="' + c + '"' + (EXP.cc === c ? " selected" : "") + ">" + esc(cname(c)) + " · " + counts[c] + "</option>").join("") + "</select>" +
+    '<select id="ex-level" aria-label="' + t_("Level") + '"><option value="">' + t_("All levels") + '</option>' + ["region", "appellation", "subzone", "vineyard"].map((l) => '<option value="' + l + '"' + (EXP.level === l ? " selected" : "") + ">" + LEVEL_LABEL[l] + "</option>").join("") + "</select>" +
+    '<label><input type="checkbox" id="ex-top"' + (EXP.top ? " checked" : "") + "> " + t_("Top classifications only") + "</label>" +
+    '<span class="note">' + t_("{n} places", { n: fmt(rows.length) }) + "</span></div>" +
+    '<div class="dgrid"><div class="tbl"><table class="dt"><tr>' + th("name", t_("Name")) + th("kind", t_("Classification")) + th("parent", t_("Part of")) + th("country", t_("Country")) + "</tr>" +
     shown.map((r) => '<tr class="go" data-go="' + esc(r[1]) + '" tabindex="0"><td>' + esc(r[0]) + "</td><td>" + esc(kindOf({ rank: r[4], level: r[3], country: r[2] })) + "</td><td>" + esc(r[5] || "") + "</td><td>" + r[2] + "</td></tr>").join("") +
-    "</table>" + (rows.length > shown.length ? '<button class="mini-btn" id="ex-more" style="margin-top:10px">Show ' + Math.min(150, rows.length - shown.length) + " more</button>" : "") + "</div>" +
-    "<div><h3>By country</h3><div class=\"hbars\">" + ccTop.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-pressed="' + (EXP.cc === c) + '"><span>' + esc(COUNTRY[c] || c) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
-    "</div>" + (EXP.cc ? '<p><button class="mini-btn" id="ex-clear">Show all countries</button></p>' : "") + "</div></div>";
+    "</table>" + (rows.length > shown.length ? '<button class="mini-btn" id="ex-more" style="margin-top:10px">' + t_("Show {n} more", { n: Math.min(150, rows.length - shown.length) }) + "</button>" : "") + "</div>" +
+    "<div><h3>" + t_("By country") + "</h3><div class=\"hbars\">" + ccTop.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-pressed="' + (EXP.cc === c) + '"><span>' + esc(cname(c)) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
+    "</div>" + (EXP.cc ? '<p><button class="mini-btn" id="ex-clear">' + t_("Show all countries") + '</button></p>' : "") + "</div></div>";
 }
 function wireExplore() {
   const q = $("ex-q");
@@ -3117,7 +3239,7 @@ function readoutAt(lngLat) {
     const dzdx = ((at(i + 1, j - 1) + 2 * at(i + 1, j) + at(i + 1, j + 1)) - (at(i - 1, j - 1) + 2 * at(i - 1, j) + at(i - 1, j + 1))) / (8 * res);
     const dzdy = ((at(i - 1, j + 1) + 2 * at(i, j + 1) + at(i + 1, j + 1)) - (at(i - 1, j - 1) + 2 * at(i, j - 1) + at(i + 1, j - 1))) / (8 * res);
     const s = Math.atan(Math.hypot(dzdx, dzdy)) * 180 / Math.PI, asp = (Math.atan2(-dzdx, dzdy) * 180 / Math.PI + 360) % 360, k = Math.round(asp / 45) % 8;
-    el.innerHTML = fmtN(at(i, j)) + " m · " + fmtN(s, 0) + "° slope" + (s >= 2 ? ' <i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>faces ' + SECTORS[k] : " · flat");
+    el.innerHTML = fmtN(at(i, j)) + " m · " + t_("{d}° slope", { d: fmtN(s, 0) }) + (s >= 2 ? ' <i style="background:rgb(' + ASPECT_RGB[k].join(",") + ')"></i>' + t_("faces {dir}", { dir: SECTORS[k] }) : " · " + t_("flat"));
     el.hidden = false;
   }, 60);
 }
@@ -3136,9 +3258,12 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ---------- boot
+// the interface texts as soon as the language file is in
+I18N_READY.then(() => { localizeConsts(); applyStatic(); renderLangMenu(); });
 map.on("load", async () => {
   try {
-    showLoading("Loading the atlas…");
+    await I18N_READY;
+    showLoading(t_("Loading the atlas…"));
     const [m, idx, tree] = await Promise.all([fetch("data/manifest.json").then((r) => r.json()), fetch("data/search.json").then((r) => r.json()),
       fetch("data/tree.json").then((r) => r.json()).catch(() => null), loadArchive("base.pmtiles")]);
     manifest = m;
@@ -3152,7 +3277,7 @@ map.on("load", async () => {
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
     if (tree) { TREE = tree; indexTree(); renderTree(); }
-    else $("tree").innerHTML = '<p class="note ex-wait">The region list could not load. Search still works.</p>';
+    else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
     addBase();
@@ -3160,14 +3285,14 @@ map.on("load", async () => {
     setGlobe(startGlobe, false);
     hideLoading();
     if (INTRO) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 2600, essential: true });
-    showLoading("Loading appellations…");
+    showLoading(t_("Loading appellations…"));
     await loadArchive("overview.pmtiles");
     addOverview();
     // the whole world at zoom 1: a light copy of every outline and marker
     loadArchive("overview-lo.pmtiles").then(addOverviewLow).catch((e) => console.warn("overview-lo", e));
     bindHover(["ov-fill", "ov-pts"]);
     hideLoading();
-    showLoading("Loading wineries…");
+    showLoading(t_("Loading wineries…"));
     await loadArchive("poi.pmtiles");
     addPoi();
     addMine();
@@ -3183,7 +3308,7 @@ map.on("load", async () => {
     else if (hid && tnode(hid)) openGroup(hid);
   } catch (e) {
     console.error(e);
-    $("loading").textContent = "The map data could not load. Reload the page to try again.";
+    $("loading").textContent = t_("The map data could not load. Reload the page to try again.");
   }
 });
 })();
