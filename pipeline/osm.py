@@ -1,17 +1,19 @@
 """OpenStreetMap extracts (ODbL, © OpenStreetMap contributors) via openhistorymap/openwinemap.
 
-Used for: Swiss vineyard areas (no open AOC boundaries yet) and winery points in all five countries.
+Used for: Swiss vineyard areas (no open AOC boundaries yet) and winery points in every country
+that openwinemap covers (44, see fetch_world.py).
 
-Input : raw/osm/{CH,FR,DE,IT,ES}.geojson
+Input : raw/osm/<CC>.geojson
 Output: build/osm_vineyards.geojsonl  (CH only, landuse=vineyard polygons)
-        build/osm_wineries.geojsonl   (points: wineries, all five countries)
+        build/osm_wineries.geojsonl   (points: wineries, all countries)
 """
 import json
 import os
 
 from common import BUILD, RAW
+from fetch_world import OWM_COUNTRIES
 
-COUNTRIES = ["CH", "FR", "DE", "IT", "ES"]
+COUNTRIES = [c for c in OWM_COUNTRIES if os.path.exists(os.path.join(RAW, "osm", f"{c}.geojson"))]
 
 
 def main():

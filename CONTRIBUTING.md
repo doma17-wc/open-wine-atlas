@@ -26,6 +26,11 @@ This is the most valuable contribution. Write `pipeline/<source>.py` that:
 3. Writes `build/<source>.geojsonl` and `build/<source>_details.json` with the helpers in `common.py`.
 4. Registers the new files in `build_tiles.py`.
 
+For a country whose wine law defines places by administrative units, you do not need a new script: add a spec to
+`pipeline/world_specs.py` with the legal basis, the admin layer and the units of each place, and mark it `legal`
+or `approx`. Places far smaller than any unit get a `point` at their namesake town. `world.py` checks that every
+unit name exists in the geoBoundaries layer.
+
 Only use data whose licence allows redistribution and commercial reuse with attribution
 (Licence Ouverte, CC BY, CC0, dl-de/by, ODbL, government open data). If you are unsure, open an issue first.
 

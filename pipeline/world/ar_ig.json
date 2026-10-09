@@ -1,0 +1,3076 @@
+{
+"Mendoza": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Santa Rosa",
+"61730980B20079308616386"
+],
+[
+"Mendoza",
+"La Paz",
+"61730980B24308348826219"
+],
+[
+"Mendoza",
+"Rivadavia",
+"61730980B42888218741442"
+],
+[
+"Mendoza",
+"Guaymallén",
+"61730980B57963533011884"
+],
+[
+"Mendoza",
+"Lavalle",
+"61730980B15586340414503"
+],
+[
+"Mendoza",
+"San Martín",
+"61730980B45978264735485"
+],
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+],
+[
+"Mendoza",
+"General Alvear",
+"61730980B19531104090182"
+],
+[
+"Mendoza",
+"Malargüe",
+"61730980B71777653725604"
+],
+[
+"Mendoza",
+"Tupungato",
+"61730980B55098803042234"
+],
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+],
+[
+"Mendoza",
+"San Rafael",
+"61730980B42121604183922"
+],
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+],
+[
+"Mendoza",
+"Las Heras",
+"61730980B92952848138392"
+],
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+],
+[
+"Mendoza",
+"Junín",
+"61730980B95365862986383"
+],
+[
+"Mendoza",
+"Godoy Cruz",
+"61730980B65696881637259"
+],
+[
+"Mendoza",
+"Capital",
+"61730980B70316540328463"
+]
+]
+},
+"San Juan": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Iglesia",
+"61730980B72303812021480"
+],
+[
+"San Juan",
+"Pocito",
+"61730980B55193733465089"
+],
+[
+"San Juan",
+"25 de Mayo",
+"61730980B22681975457322"
+],
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+],
+[
+"San Juan",
+"Rawson",
+"61730980B18994779185278"
+],
+[
+"San Juan",
+"Santa Lucía",
+"61730980B73949498906302"
+],
+[
+"San Juan",
+"Albardón",
+"61730980B78651805295457"
+],
+[
+"San Juan",
+"Angaco",
+"61730980B81698180684339"
+],
+[
+"San Juan",
+"Valle Fértil",
+"61730980B31889101729395"
+],
+[
+"San Juan",
+"Chimbas",
+"61730980B27264787590241"
+],
+[
+"San Juan",
+"San Martín",
+"61730980B78285538688755"
+],
+[
+"San Juan",
+"Rivadavia",
+"61730980B90561116594730"
+],
+[
+"San Juan",
+"Ullum",
+"61730980B46716169011508"
+],
+[
+"San Juan",
+"Caucete",
+"61730980B84345100673034"
+],
+[
+"San Juan",
+"9 de julio",
+"61730980B85841660882492"
+],
+[
+"San Juan",
+"Jáchal",
+"61730980B94061248290097"
+],
+[
+"San Juan",
+"Capital",
+"61730980B45550942809451"
+],
+[
+"San Juan",
+"Sarmiento",
+"61730980B2987031825940"
+],
+[
+"San Juan",
+"Zonda",
+"61730980B79956801813082"
+]
+]
+},
+"La Rioja Argentina": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Arauco",
+"61730980B43357395590927"
+],
+[
+"La Roja",
+"Independencia",
+"61730980B36977394728144"
+],
+[
+"La Roja",
+"General Ocampo",
+"61730980B1877190753616"
+],
+[
+"La Roja",
+"Chamical",
+"61730980B75694434489660"
+],
+[
+"La Roja",
+"General Juan F.Quiroga",
+"61730980B64076546006472"
+],
+[
+"La Roja",
+"Capital",
+"61730980B64159378499320"
+],
+[
+"La Roja",
+"General Lamadrid",
+"61730980B10920715294308"
+],
+[
+"La Roja",
+"Castro Barros",
+"61730980B97852769949948"
+],
+[
+"La Roja",
+"Sanagasta",
+"61730980B91158656720381"
+],
+[
+"La Roja",
+"Rosario Vera Peñaloza",
+"61730980B25026306557945"
+],
+[
+"La Roja",
+"Coronel Felipe Varela",
+"61730980B22460334108875"
+],
+[
+"La Roja",
+"General Belgrano",
+"61730980B43723065760012"
+],
+[
+"La Roja",
+"San Blas de los Sauces",
+"61730980B47967614400586"
+],
+[
+"La Roja",
+"General Angel V. Peñaloza",
+"61730980B31870245826613"
+],
+[
+"La Roja",
+"General San Martín",
+"61730980B53159304456053"
+],
+[
+"La Roja",
+"Chilecito",
+"61730980B21035116848731"
+],
+[
+"La Roja",
+"Vinchina",
+"61730980B36020479947957"
+],
+[
+"La Roja",
+"Famatina",
+"61730980B89547050111737"
+]
+]
+},
+"Salta": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Salta",
+"Molinos",
+"61730980B63550758975873"
+],
+[
+"Salta",
+"La Viña",
+"61730980B12479001808037"
+],
+[
+"Salta",
+"San Carlos",
+"61730980B20324539983987"
+],
+[
+"Salta",
+"Cachi",
+"61730980B38910879035127"
+],
+[
+"Salta",
+"Chicoana",
+"61730980B71873263236869"
+],
+[
+"Salta",
+"General Güemes",
+"61730980B57744536697119"
+],
+[
+"Salta",
+"Metán",
+"61730980B22124593999918"
+],
+[
+"Salta",
+"General José de San Martín",
+"61730980B17678477966583"
+],
+[
+"Salta",
+"Capital",
+"61730980B15488687390300"
+],
+[
+"Salta",
+"La Poma",
+"61730980B84051306954372"
+],
+[
+"Salta",
+"Rosario de Lerma",
+"61730980B26191328353907"
+],
+[
+"Salta",
+"Cerrillos",
+"61730980B31698660486966"
+],
+[
+"Salta",
+"Orán",
+"61730980B46256753723149"
+],
+[
+"Salta",
+"Rosario de la Frontera",
+"61730980B41964155809664"
+],
+[
+"Salta",
+"La Candelaria",
+"61730980B21173322628341"
+],
+[
+"Salta",
+"La Caldera",
+"61730980B48775712926369"
+],
+[
+"Salta",
+"Santa Victoria",
+"61730980B62992861219638"
+],
+[
+"Salta",
+"Anta",
+"61730980B73249877879896"
+],
+[
+"Salta",
+"Guachipas",
+"61730980B8942789897843"
+],
+[
+"Salta",
+"Rivadavia",
+"61730980B79245586725774"
+],
+[
+"Salta",
+"Los Andes",
+"61730980B96224963686238"
+],
+[
+"Salta",
+"Cafayate",
+"61730980B8590137946072"
+],
+[
+"Salta",
+"Iruya",
+"61730980B58435423783603"
+]
+]
+},
+"Catamarca": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Catamarca",
+"Santa María",
+"61730980B13734740101485"
+],
+[
+"Catamarca",
+"Tinogasta",
+"61730980B86901307553736"
+],
+[
+"Catamarca",
+"Ancasti",
+"61730980B28877560844945"
+],
+[
+"Catamarca",
+"Poman",
+"61730980B48511689100190"
+],
+[
+"Catamarca",
+"Capital",
+"61730980B81007798348630"
+],
+[
+"Catamarca",
+"Paclin",
+"61730980B62302984984112"
+],
+[
+"Catamarca",
+"Fray Mamerto Esquiú",
+"61730980B86021730445369"
+],
+[
+"Catamarca",
+"Ambato",
+"61730980B94999737100466"
+],
+[
+"Catamarca",
+"Andalgalá",
+"61730980B92024748366562"
+],
+[
+"Catamarca",
+"Antofagasta de la Sierra",
+"61730980B49626425367328"
+],
+[
+"Catamarca",
+"Santa Rosa",
+"61730980B62858565899892"
+],
+[
+"Catamarca",
+"Capayán",
+"61730980B90105410435104"
+],
+[
+"Catamarca",
+"El Alto",
+"61730980B19433533444932"
+],
+[
+"Catamarca",
+"Belén",
+"61730980B98918352953876"
+],
+[
+"Catamarca",
+"La Paz",
+"61730980B42057198063965"
+],
+[
+"Catamarca",
+"Valle Viejo",
+"61730980B26555197201604"
+]
+]
+},
+"Tucumán": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Tucumán",
+"Graneros",
+"61730980B10036181744679"
+],
+[
+"Tucumán",
+"Chicligasta",
+"61730980B55497812442102"
+],
+[
+"Tucumán",
+"Burruyacú",
+"61730980B16369231979992"
+],
+[
+"Tucumán",
+"Tafí del Valle",
+"61730980B13889034691247"
+],
+[
+"Tucumán",
+"Simoca",
+"61730980B79833488690103"
+],
+[
+"Tucumán",
+"Capital",
+"61730980B8317426780894"
+],
+[
+"Tucumán",
+"Lules",
+"61730980B17356077685479"
+],
+[
+"Tucumán",
+"Cruz Alta",
+"61730980B32203515925344"
+],
+[
+"Tucumán",
+"Monteros",
+"61730980B2158029988508"
+],
+[
+"Tucumán",
+"Tafí Viejo",
+"61730980B77291084066522"
+],
+[
+"Tucumán",
+"Trancas",
+"61730980B98032525509739"
+],
+[
+"Tucumán",
+"Famallá",
+"61730980B2044576725385"
+],
+[
+"Tucumán",
+"Río Chico",
+"61730980B68338717287929"
+],
+[
+"Tucumán",
+"Leales",
+"61730980B91056584985438"
+],
+[
+"Tucumán",
+"Yerba Buena",
+"61730980B10668196443859"
+],
+[
+"Tucumán",
+"La Cocha",
+"61730980B81092064808968"
+],
+[
+"Tucumán",
+"Juan B. Alberdi",
+"61730980B38664240857483"
+]
+]
+},
+"Jujuy": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Jujuy",
+"El Carmen",
+"61730980B76568954927707"
+],
+[
+"Jujuy",
+"Tumbaya",
+"61730980B96811087093060"
+],
+[
+"Jujuy",
+"San Pedro",
+"61730980B38086174579280"
+],
+[
+"Jujuy",
+"Ledesma",
+"61730980B60516348074924"
+],
+[
+"Jujuy",
+"Palpalá",
+"61730980B21987921647817"
+],
+[
+"Jujuy",
+"Valle Grande",
+"61730980B80142303912096"
+],
+[
+"Jujuy",
+"San Antonio",
+"61730980B57262290665163"
+],
+[
+"Jujuy",
+"Susques",
+"61730980B41665984357705"
+],
+[
+"Jujuy",
+"Dr. Manuel Belgrano",
+"61730980B9597683153912"
+],
+[
+"Jujuy",
+"Tilcara",
+"61730980B79181726487815"
+],
+[
+"Jujuy",
+"Cochinoca",
+"61730980B75559747618877"
+],
+[
+"Jujuy",
+"Yaví",
+"61730980B17407958230561"
+],
+[
+"Jujuy",
+"Humahuaca",
+"61730980B42347447507011"
+],
+[
+"Jujuy",
+"Santa Catalina",
+"61730980B27320368944921"
+],
+[
+"Jujuy",
+"Rinconada",
+"61730980B37720115941003"
+],
+[
+"Jujuy",
+"Santa Bárbara",
+"61730980B61196907081286"
+]
+]
+},
+"Neuquén": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Neuquén",
+"Catan Lil",
+"61730980B52691065899930"
+],
+[
+"Neuquén",
+"Los Lagos",
+"61730980B98633333764723"
+],
+[
+"Neuquén",
+"Collón Curá",
+"61730980B40628819919033"
+],
+[
+"Neuquén",
+"Minas",
+"61730980B83273988840504"
+],
+[
+"Neuquén",
+"Zapala",
+"61730980B1496247249680"
+],
+[
+"Neuquén",
+"Aluminé",
+"61730980B74102790629524"
+],
+[
+"Neuquén",
+"Huiliches",
+"61730980B75660067581001"
+],
+[
+"Neuquén",
+"Ñorquín",
+"61730980B83392374898421"
+],
+[
+"Neuquén",
+"Picún Leufú",
+"61730980B82324044769491"
+],
+[
+"Neuquén",
+"Loncopué",
+"61730980B52932124932957"
+],
+[
+"Neuquén",
+"Chos Malal",
+"61730980B85751419294070"
+],
+[
+"Neuquén",
+"Confluencia",
+"61730980B39164148007065"
+],
+[
+"Neuquén",
+"Picunches",
+"61730980B43835404707600"
+],
+[
+"Neuquén",
+"Lacar",
+"61730980B88853023630124"
+],
+[
+"Neuquén",
+"Anelo",
+"61730980B32081384015227"
+],
+[
+"Neuquén",
+"Pehuenches",
+"61730980B17144703425543"
+]
+]
+},
+"Río Negro": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Río Negro",
+"Bariloche",
+"61730980B38483237983856"
+],
+[
+"Río Negro",
+"General Roca",
+"61730980B10000603471831"
+],
+[
+"Río Negro",
+"Conesa",
+"61730980B12252554718289"
+],
+[
+"Río Negro",
+"Pichi Mahuída",
+"61730980B95848117097679"
+],
+[
+"Río Negro",
+"Ñorquinco",
+"61730980B33253419160429"
+],
+[
+"Río Negro",
+"9 de Julio",
+"61730980B80423249669200"
+],
+[
+"Río Negro",
+"Adolfo Alsina",
+"61730980B95988601788876"
+],
+[
+"Río Negro",
+"Valcheta",
+"61730980B79261334873375"
+],
+[
+"Río Negro",
+"Avellaneda",
+"61730980B30095926529222"
+],
+[
+"Río Negro",
+"San Antonio",
+"61730980B19099504402623"
+],
+[
+"Río Negro",
+"25 de Mayo",
+"61730980B23941823928589"
+],
+[
+"Río Negro",
+"Pilnaniyeu",
+"61730980B63808307170695"
+],
+[
+"Río Negro",
+"El Cuy",
+"61730980B90515114322880"
+]
+]
+},
+"Córdoba Argentina": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Córdoba",
+"Ojo de agua",
+"61730980B49758081905530"
+],
+[
+"Córdoba",
+"Rivadavia",
+"61730980B21057051979490"
+],
+[
+"Córdoba",
+"Punilla",
+"61730980B72863725650935"
+],
+[
+"Córdoba",
+"Colón",
+"61730980B91207709402211"
+],
+[
+"Córdoba",
+"San Justo",
+"61730980B4375422681595"
+],
+[
+"Córdoba",
+"Juárez Celman",
+"61730980B81524529409154"
+],
+[
+"Córdoba",
+"Tercero Arriba",
+"61730980B38611506941533"
+],
+[
+"Córdoba",
+"Río Seco",
+"61730980B71498262551365"
+],
+[
+"Córdoba",
+"Río Cuarto",
+"61730980B70788741625134"
+],
+[
+"Córdoba",
+"Ischilín",
+"61730980B34793654756209"
+],
+[
+"Córdoba",
+"Tulumba",
+"61730980B98199782535920"
+],
+[
+"Córdoba",
+"San Javier",
+"61730980B55835159827036"
+],
+[
+"Córdoba",
+"Pocho",
+"61730980B20468593076410"
+],
+[
+"Córdoba",
+"Calamuchita",
+"61730980B46916447207534"
+],
+[
+"Córdoba",
+"Río Segundo",
+"61730980B13530253245747"
+],
+[
+"Córdoba",
+"Totoral",
+"61730980B56418772605079"
+],
+[
+"Córdoba",
+"General San Martín",
+"61730980B38131446935101"
+],
+[
+"Córdoba",
+"Marcos Juárez",
+"61730980B3825468035519"
+],
+[
+"Córdoba",
+"General Roca",
+"61730980B65942785311638"
+],
+[
+"Córdoba",
+"Minas",
+"61730980B27944530838107"
+],
+[
+"Córdoba",
+"Unión",
+"61730980B31238250662903"
+],
+[
+"Córdoba",
+"Cruz del Eje",
+"61730980B83091517859764"
+],
+[
+"Córdoba",
+"Sobremonte",
+"61730980B85685003882590"
+],
+[
+"Córdoba",
+"Santa María",
+"61730980B95109119515520"
+],
+[
+"Córdoba",
+"Capital",
+"61730980B11086319733728"
+],
+[
+"Córdoba",
+"San Alberto",
+"61730980B48132302456703"
+],
+[
+"Córdoba",
+"Presidente Roque Sáenz Peña",
+"61730980B59546711189461"
+],
+[
+"Córdoba",
+"Río Primero",
+"61730980B52469297457294"
+]
+]
+},
+"San Luis": {
+"type": "IG (provincial)",
+"precision": "exact",
+"resolution": "RESOL-2019-10-APN-INV#MPYT",
+"admin2": [
+[
+"San Luis",
+"Gobernador Dupuy",
+"61730980B64718886155143"
+],
+[
+"San Luis",
+"Chacabuco",
+"61730980B56219468048048"
+],
+[
+"San Luis",
+"La Capital",
+"61730980B37295099370503"
+],
+[
+"San Luis",
+"Belgrano",
+"61730980B87239881423217"
+],
+[
+"San Luis",
+"Libertador General San Martín",
+"61730980B21399673280914"
+],
+[
+"San Luis",
+"Coronel Pringles",
+"61730980B39626183389698"
+],
+[
+"San Luis",
+"General Pedernera",
+"61730980B72595291642381"
+],
+[
+"San Luis",
+"Ayacucho",
+"61730980B39092532797168"
+],
+[
+"San Luis",
+"Junín",
+"61730980B92635702663446"
+]
+]
+},
+"General Alvear": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"General Alvear",
+"61730980B19531104090182"
+]
+]
+},
+"Godoy Cruz": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Godoy Cruz",
+"61730980B65696881637259"
+]
+]
+},
+"Guaymallén": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Guaymallén",
+"61730980B57963533011884"
+]
+]
+},
+"Junín": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Junín",
+"61730980B95365862986383"
+]
+]
+},
+"La Paz": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"La Paz",
+"61730980B24308348826219"
+]
+]
+},
+"Las Heras": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Las Heras",
+"61730980B92952848138392"
+]
+]
+},
+"Lavalle - Desierto de Lavalle": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Lavalle",
+"61730980B15586340414503"
+]
+]
+},
+"Luján de Cuyo": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"Maipú": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+]
+]
+},
+"Rivadavia (Mendoza)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Rivadavia",
+"61730980B42888218741442"
+]
+]
+},
+"San Carlos (Mendoza)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"San Martín (Mendoza)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"San Martín",
+"61730980B45978264735485"
+]
+]
+},
+"San Rafael": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"San Rafael",
+"61730980B42121604183922"
+]
+]
+},
+"Santa Rosa": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Santa Rosa",
+"61730980B20079308616386"
+]
+]
+},
+"Tunuyán": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+]
+]
+},
+"Tupungato - Valle de Tupungato": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Mendoza",
+"Tupungato",
+"61730980B55098803042234"
+]
+]
+},
+"Albardón": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Albardón",
+"61730980B78651805295457"
+]
+]
+},
+"Angaco": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Angaco",
+"61730980B81698180684339"
+]
+]
+},
+"Calingasta - Valle de Calingasta": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+]
+]
+},
+"Caucete": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Caucete",
+"61730980B84345100673034"
+]
+]
+},
+"Chimbas": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Chimbas",
+"61730980B27264787590241"
+]
+]
+},
+"Iglesia": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Iglesia",
+"61730980B72303812021480"
+]
+]
+},
+"Jáchal": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Jáchal",
+"61730980B94061248290097"
+]
+]
+},
+"9 de Julio": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"9 de julio",
+"61730980B85841660882492"
+]
+]
+},
+"Pocito": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Pocito",
+"61730980B55193733465089"
+]
+]
+},
+"Rawson": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Rawson",
+"61730980B18994779185278"
+]
+]
+},
+"Rivadavia (San Juan)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Rivadavia",
+"61730980B90561116594730"
+]
+]
+},
+"San Martín (San Juan)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"San Martín",
+"61730980B78285538688755"
+]
+]
+},
+"Santa Lucía": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Santa Lucía",
+"61730980B73949498906302"
+]
+]
+},
+"Sarmiento": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Sarmiento",
+"61730980B2987031825940"
+]
+]
+},
+"25 de Mayo": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"25 de Mayo",
+"61730980B22681975457322"
+]
+]
+},
+"Ullum": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Ullum",
+"61730980B46716169011508"
+]
+]
+},
+"Valle Fértil": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Valle Fértil",
+"61730980B31889101729395"
+]
+]
+},
+"Zonda": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Zonda",
+"61730980B79956801813082"
+]
+]
+},
+"Arauco": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Arauco",
+"61730980B43357395590927"
+]
+]
+},
+"Castro Barros": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Castro Barros",
+"61730980B97852769949948"
+]
+]
+},
+"Chilecito": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Chilecito",
+"61730980B21035116848731"
+]
+]
+},
+"Famatina": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Famatina",
+"61730980B89547050111737"
+]
+]
+},
+"Felipe Varela": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Coronel Felipe Varela",
+"61730980B22460334108875"
+]
+]
+},
+"General Lamadrid": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"General Lamadrid",
+"61730980B10920715294308"
+]
+]
+},
+"San Blas de los Sauces": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"San Blas de los Sauces",
+"61730980B47967614400586"
+]
+]
+},
+"Sanagasta": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Sanagasta",
+"61730980B91158656720381"
+]
+]
+},
+"Vinchina": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"La Roja",
+"Vinchina",
+"61730980B36020479947957"
+]
+]
+},
+"Belén": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Catamarca",
+"Belén",
+"61730980B98918352953876"
+]
+]
+},
+"Pomán": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Catamarca",
+"Poman",
+"61730980B48511689100190"
+]
+]
+},
+"Santa María": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Catamarca",
+"Santa María",
+"61730980B13734740101485"
+]
+]
+},
+"Tinogasta": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Catamarca",
+"Tinogasta",
+"61730980B86901307553736"
+]
+]
+},
+"Colón": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Córdoba",
+"Colón",
+"61730980B91207709402211"
+]
+]
+},
+"Cruz del Eje": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Córdoba",
+"Cruz del Eje",
+"61730980B83091517859764"
+]
+]
+},
+"San Javier": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Córdoba",
+"San Javier",
+"61730980B55835159827036"
+]
+]
+},
+"Añelo": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Neuquén",
+"Anelo",
+"61730980B32081384015227"
+]
+]
+},
+"Confluencia": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Neuquén",
+"Confluencia",
+"61730980B39164148007065"
+]
+]
+},
+"General Roca": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Río Negro",
+"General Roca",
+"61730980B10000603471831"
+]
+]
+},
+"General Conesa": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Río Negro",
+"Conesa",
+"61730980B12252554718289"
+]
+]
+},
+"Avellaneda": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Río Negro",
+"Avellaneda",
+"61730980B30095926529222"
+]
+]
+},
+"Pichimahuida": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Río Negro",
+"Pichi Mahuída",
+"61730980B95848117097679"
+]
+]
+},
+"Cachi": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Salta",
+"Cachi",
+"61730980B38910879035127"
+]
+]
+},
+"Cafayate - Valle de Cafayate": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Salta",
+"Cafayate",
+"61730980B8590137946072"
+]
+]
+},
+"Molinos": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Salta",
+"Molinos",
+"61730980B63550758975873"
+]
+]
+},
+"San Carlos (Salta)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Salta",
+"San Carlos",
+"61730980B20324539983987"
+]
+]
+},
+"Tafí": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"Tucumán",
+"Tafí del Valle",
+"61730980B13889034691247"
+]
+]
+},
+"Luján de Cuyo DOC": {
+"type": "DOC",
+"precision": "exact",
+"resolution": "Res. INV C.15/2005",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"San Rafael DOC": {
+"type": "DOC",
+"precision": "exact",
+"resolution": "Res. INV C.31/2007",
+"admin2": [
+[
+"Mendoza",
+"San Rafael",
+"61730980B42121604183922"
+]
+]
+},
+"Valle de Uco": {
+"type": "IG (regional)",
+"precision": "exact",
+"resolution": "Res. INV C.37/2002",
+"admin2": [
+[
+"Mendoza",
+"Tupungato",
+"61730980B55098803042234"
+],
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+],
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"Cuyo": {
+"type": "IG (regional)",
+"precision": "approx",
+"resolution": "Res. INV C.37/2002",
+"admin2": [
+[
+"Mendoza",
+"Santa Rosa",
+"61730980B20079308616386"
+],
+[
+"Mendoza",
+"La Paz",
+"61730980B24308348826219"
+],
+[
+"Mendoza",
+"Rivadavia",
+"61730980B42888218741442"
+],
+[
+"Mendoza",
+"Guaymallén",
+"61730980B57963533011884"
+],
+[
+"Mendoza",
+"Lavalle",
+"61730980B15586340414503"
+],
+[
+"Mendoza",
+"San Martín",
+"61730980B45978264735485"
+],
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+],
+[
+"Mendoza",
+"General Alvear",
+"61730980B19531104090182"
+],
+[
+"Mendoza",
+"Malargüe",
+"61730980B71777653725604"
+],
+[
+"Mendoza",
+"Tupungato",
+"61730980B55098803042234"
+],
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+],
+[
+"Mendoza",
+"San Rafael",
+"61730980B42121604183922"
+],
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+],
+[
+"Mendoza",
+"Las Heras",
+"61730980B92952848138392"
+],
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+],
+[
+"Mendoza",
+"Junín",
+"61730980B95365862986383"
+],
+[
+"Mendoza",
+"Godoy Cruz",
+"61730980B65696881637259"
+],
+[
+"Mendoza",
+"Capital",
+"61730980B70316540328463"
+],
+[
+"San Juan",
+"Iglesia",
+"61730980B72303812021480"
+],
+[
+"San Juan",
+"Pocito",
+"61730980B55193733465089"
+],
+[
+"San Juan",
+"25 de Mayo",
+"61730980B22681975457322"
+],
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+],
+[
+"San Juan",
+"Rawson",
+"61730980B18994779185278"
+],
+[
+"San Juan",
+"Santa Lucía",
+"61730980B73949498906302"
+],
+[
+"San Juan",
+"Albardón",
+"61730980B78651805295457"
+],
+[
+"San Juan",
+"Angaco",
+"61730980B81698180684339"
+],
+[
+"San Juan",
+"Valle Fértil",
+"61730980B31889101729395"
+],
+[
+"San Juan",
+"Chimbas",
+"61730980B27264787590241"
+],
+[
+"San Juan",
+"San Martín",
+"61730980B78285538688755"
+],
+[
+"San Juan",
+"Rivadavia",
+"61730980B90561116594730"
+],
+[
+"San Juan",
+"Ullum",
+"61730980B46716169011508"
+],
+[
+"San Juan",
+"Caucete",
+"61730980B84345100673034"
+],
+[
+"San Juan",
+"9 de julio",
+"61730980B85841660882492"
+],
+[
+"San Juan",
+"Jáchal",
+"61730980B94061248290097"
+],
+[
+"San Juan",
+"Capital",
+"61730980B45550942809451"
+],
+[
+"San Juan",
+"Sarmiento",
+"61730980B2987031825940"
+],
+[
+"San Juan",
+"Zonda",
+"61730980B79956801813082"
+],
+[
+"San Luis",
+"Gobernador Dupuy",
+"61730980B64718886155143"
+],
+[
+"San Luis",
+"Chacabuco",
+"61730980B56219468048048"
+],
+[
+"San Luis",
+"La Capital",
+"61730980B37295099370503"
+],
+[
+"San Luis",
+"Belgrano",
+"61730980B87239881423217"
+],
+[
+"San Luis",
+"Libertador General San Martín",
+"61730980B21399673280914"
+],
+[
+"San Luis",
+"Coronel Pringles",
+"61730980B39626183389698"
+],
+[
+"San Luis",
+"General Pedernera",
+"61730980B72595291642381"
+],
+[
+"San Luis",
+"Ayacucho",
+"61730980B39092532797168"
+],
+[
+"San Luis",
+"Junín",
+"61730980B92635702663446"
+]
+],
+"note": "INV list gives Mendoza, San Juan y San Luis; some sources add La Rioja"
+},
+"Alto Valle de Río Negro": {
+"type": "IG (regional)",
+"precision": "approx (superset)",
+"resolution": "Res. INV C.37/2002",
+"admin2": [
+[
+"Río Negro",
+"General Roca",
+"61730980B10000603471831"
+]
+],
+"note": "irrigated upper valley inside General Roca dept; legal annex not found"
+},
+"Valle del Tulum": {
+"type": "IG (regional)",
+"precision": "approx",
+"resolution": "Res. INV C.32/2002",
+"admin2": [
+[
+"San Juan",
+"Capital",
+"61730980B45550942809451"
+],
+[
+"San Juan",
+"Rawson",
+"61730980B18994779185278"
+],
+[
+"San Juan",
+"Pocito",
+"61730980B55193733465089"
+],
+[
+"San Juan",
+"Chimbas",
+"61730980B27264787590241"
+],
+[
+"San Juan",
+"Santa Lucía",
+"61730980B73949498906302"
+],
+[
+"San Juan",
+"Rivadavia",
+"61730980B90561116594730"
+],
+[
+"San Juan",
+"9 de julio",
+"61730980B85841660882492"
+],
+[
+"San Juan",
+"San Martín",
+"61730980B78285538688755"
+],
+[
+"San Juan",
+"Caucete",
+"61730980B84345100673034"
+],
+[
+"San Juan",
+"Angaco",
+"61730980B81698180684339"
+],
+[
+"San Juan",
+"Albardón",
+"61730980B78651805295457"
+],
+[
+"San Juan",
+"25 de Mayo",
+"61730980B22681975457322"
+],
+[
+"San Juan",
+"Sarmiento",
+"61730980B2987031825940"
+]
+],
+"note": "department list compiled, not from legal annex"
+},
+"Valles Calchaquíes - Valle Calchaquí": {
+"type": "IG (regional, interprovincial)",
+"precision": "approx",
+"resolution": "Res. INV C.37/2002; C.16/2010",
+"admin2": [
+[
+"Salta",
+"Cachi",
+"61730980B38910879035127"
+],
+[
+"Salta",
+"Molinos",
+"61730980B63550758975873"
+],
+[
+"Salta",
+"San Carlos",
+"61730980B20324539983987"
+],
+[
+"Salta",
+"Cafayate",
+"61730980B8590137946072"
+],
+[
+"Salta",
+"La Poma",
+"61730980B84051306954372"
+],
+[
+"Catamarca",
+"Santa María",
+"61730980B13734740101485"
+],
+[
+"Tucumán",
+"Tafí del Valle",
+"61730980B13889034691247"
+]
+],
+"note": "legal annex not found"
+},
+"Patagonia - Patagonia Argentina": {
+"type": "IG (regional, interprovincial)",
+"precision": "approx",
+"resolution": "Res. INV C.37/2002; 10/2009; 1/2022",
+"admin2": [
+[
+"Neuquén",
+"Catan Lil",
+"61730980B52691065899930"
+],
+[
+"Neuquén",
+"Los Lagos",
+"61730980B98633333764723"
+],
+[
+"Neuquén",
+"Collón Curá",
+"61730980B40628819919033"
+],
+[
+"Neuquén",
+"Minas",
+"61730980B83273988840504"
+],
+[
+"Neuquén",
+"Zapala",
+"61730980B1496247249680"
+],
+[
+"Neuquén",
+"Aluminé",
+"61730980B74102790629524"
+],
+[
+"Neuquén",
+"Huiliches",
+"61730980B75660067581001"
+],
+[
+"Neuquén",
+"Ñorquín",
+"61730980B83392374898421"
+],
+[
+"Neuquén",
+"Picún Leufú",
+"61730980B82324044769491"
+],
+[
+"Neuquén",
+"Loncopué",
+"61730980B52932124932957"
+],
+[
+"Neuquén",
+"Chos Malal",
+"61730980B85751419294070"
+],
+[
+"Neuquén",
+"Confluencia",
+"61730980B39164148007065"
+],
+[
+"Neuquén",
+"Picunches",
+"61730980B43835404707600"
+],
+[
+"Neuquén",
+"Lacar",
+"61730980B88853023630124"
+],
+[
+"Neuquén",
+"Anelo",
+"61730980B32081384015227"
+],
+[
+"Neuquén",
+"Pehuenches",
+"61730980B17144703425543"
+],
+[
+"Río Negro",
+"Bariloche",
+"61730980B38483237983856"
+],
+[
+"Río Negro",
+"General Roca",
+"61730980B10000603471831"
+],
+[
+"Río Negro",
+"Conesa",
+"61730980B12252554718289"
+],
+[
+"Río Negro",
+"Pichi Mahuída",
+"61730980B95848117097679"
+],
+[
+"Río Negro",
+"Ñorquinco",
+"61730980B33253419160429"
+],
+[
+"Río Negro",
+"9 de Julio",
+"61730980B80423249669200"
+],
+[
+"Río Negro",
+"Adolfo Alsina",
+"61730980B95988601788876"
+],
+[
+"Río Negro",
+"Valcheta",
+"61730980B79261334873375"
+],
+[
+"Río Negro",
+"Avellaneda",
+"61730980B30095926529222"
+],
+[
+"Río Negro",
+"San Antonio",
+"61730980B19099504402623"
+],
+[
+"Río Negro",
+"25 de Mayo",
+"61730980B23941823928589"
+],
+[
+"Río Negro",
+"Pilnaniyeu",
+"61730980B63808307170695"
+],
+[
+"Río Negro",
+"El Cuy",
+"61730980B90515114322880"
+],
+[
+"Chubut",
+"Gaiman",
+"61730980B48415799275237"
+],
+[
+"Chubut",
+"Tehuelches",
+"61730980B58139732195743"
+],
+[
+"Chubut",
+"Paso de los Indios",
+"61730980B85851407891039"
+],
+[
+"Chubut",
+"Río Senguer",
+"61730980B47831130528254"
+],
+[
+"Chubut",
+"Biedma",
+"61730980B40140971915743"
+],
+[
+"Chubut",
+"Languiñeo",
+"61730980B26762692885030"
+],
+[
+"Chubut",
+"Cushamen",
+"61730980B86195124517763"
+],
+[
+"Chubut",
+"Martires",
+"61730980B5870054171142"
+],
+[
+"Chubut",
+"Gastre",
+"61730980B58028591073526"
+],
+[
+"Chubut",
+"Telsen",
+"61730980B58440268064680"
+],
+[
+"Chubut",
+"Escalante",
+"61730980B51244903644877"
+],
+[
+"Chubut",
+"Futaleufú",
+"61730980B18376344054138"
+],
+[
+"Chubut",
+"Rawson",
+"61730980B86456825396626"
+],
+[
+"Chubut",
+"Florentino Ameghino",
+"61730980B85426679485259"
+],
+[
+"Chubut",
+"Sarmiento",
+"61730980B44143601291146"
+],
+[
+"La Pampa",
+"Rancul",
+"61730980B63706771284544"
+],
+[
+"La Pampa",
+"Caleu Caleu",
+"61730980B9086176864437"
+],
+[
+"La Pampa",
+"Limay Mahuida",
+"61730980B5115619218657"
+],
+[
+"La Pampa",
+"Conhelo",
+"61730980B19911830788880"
+],
+[
+"La Pampa",
+"Atreuco",
+"61730980B71031057558278"
+],
+[
+"La Pampa",
+"Chalileo",
+"61730980B72501201061130"
+],
+[
+"La Pampa",
+"Maracó",
+"61730980B39039474647755"
+],
+[
+"La Pampa",
+"Curacó",
+"61730980B59721877076450"
+],
+[
+"La Pampa",
+"Lihuel Calel",
+"61730980B18005946349792"
+],
+[
+"La Pampa",
+"Capital",
+"61730980B66206062383215"
+],
+[
+"La Pampa",
+"Chical Có",
+"61730980B98672472309924"
+],
+[
+"La Pampa",
+"Quemú Quemú",
+"61730980B51204300351665"
+],
+[
+"La Pampa",
+"Realicó",
+"61730980B60690576919105"
+],
+[
+"La Pampa",
+"Hucal",
+"61730980B74223418294329"
+],
+[
+"La Pampa",
+"Utracán",
+"61730980B38803740288067"
+],
+[
+"La Pampa",
+"Guatraché",
+"61730980B9884818603028"
+],
+[
+"La Pampa",
+"Catriló",
+"61730980B1153371895886"
+],
+[
+"La Pampa",
+"Puelén",
+"61730980B41536985277959"
+],
+[
+"La Pampa",
+"Chapaleufú",
+"61730980B17447660038504"
+],
+[
+"La Pampa",
+"Trenel",
+"61730980B26408179177195"
+],
+[
+"La Pampa",
+"Toay",
+"61730980B2132713179088"
+],
+[
+"La Pampa",
+"Loventué",
+"61730980B54162974925510"
+],
+[
+"Santa Cruz",
+"Lago Buenos Aires",
+"61730980B62951780268980"
+],
+[
+"Santa Cruz",
+"Río Chico",
+"61730980B6428657658770"
+],
+[
+"Santa Cruz",
+"Güer Aike",
+"61730980B56904104065194"
+],
+[
+"Santa Cruz",
+"Deseado",
+"61730980B75519794586759"
+],
+[
+"Santa Cruz",
+"Lago Argentino",
+"61730980B69433296380231"
+],
+[
+"Santa Cruz",
+"Magallanes",
+"61730980B60081089408424"
+],
+[
+"Santa Cruz",
+"Corpen Aike",
+"61730980B24902089769894"
+],
+[
+"Tierra del Fuego",
+"Río Grande",
+"61730980B7053808465014"
+],
+[
+"Tierra del Fuego",
+"Ushuaia",
+"61730980B87507155551581"
+]
+],
+"note": "legal text: set of valleys across provinces, no list"
+},
+"Agrelo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.21/2005",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"Alto Agrelo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "Res. INV 27/2025",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"Las Compuertas": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.30/2007",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"Vistalba": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2022-12",
+"admin2": [
+[
+"Mendoza",
+"Luján de Cuyo",
+"61730980B1211136539314"
+]
+]
+},
+"Barrancas": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.22/2005",
+"admin2": [
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+]
+]
+},
+"Lunlunta": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.04/2005",
+"admin2": [
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+]
+]
+},
+"Russel": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.05/2005",
+"admin2": [
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+]
+]
+},
+"El Paraíso": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.28/2007",
+"admin2": [
+[
+"Mendoza",
+"Maipú",
+"61730980B18829369395752"
+]
+]
+},
+"La Consulta": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.19/2014",
+"admin2": [
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"Paraje Altamira": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.44/2013",
+"admin2": [
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"Pampa El Cepillo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2019-1",
+"admin2": [
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"Cordón el Cepillo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2022-7",
+"admin2": [
+[
+"Mendoza",
+"San Carlos",
+"61730980B94822321270328"
+]
+]
+},
+"Los Chacayes": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2017-249",
+"admin2": [
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+]
+]
+},
+"Vista Flores": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.11/2012",
+"admin2": [
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+]
+]
+},
+"San Pablo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2019-10",
+"admin2": [
+[
+"Mendoza",
+"Tunuyán",
+"61730980B64785063825959"
+]
+]
+},
+"El Peral": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2022-1",
+"admin2": [
+[
+"Mendoza",
+"Tupungato",
+"61730980B55098803042234"
+]
+]
+},
+"Canota - Valle de Canota": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2020-19",
+"admin2": [
+[
+"Mendoza",
+"Las Heras",
+"61730980B92952848138392"
+]
+]
+},
+"Reducción": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2020-34",
+"admin2": [
+[
+"Mendoza",
+"Rivadavia",
+"61730980B42888218741442"
+]
+]
+},
+"Barreal": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.42/2013",
+"admin2": [
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+]
+]
+},
+"Hilario - Valle de Calingasta": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2023-37",
+"admin2": [
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+]
+]
+},
+"Sorocayense - Paraje Sorocayense": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2023-36",
+"admin2": [
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+]
+]
+},
+"Tamberías - Valle de Calingasta": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2023-35",
+"admin2": [
+[
+"San Juan",
+"Calingasta",
+"61730980B6490927359782"
+]
+]
+},
+"Pozo de los Algarrobos": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.33/2015",
+"admin2": [
+[
+"San Juan",
+"Caucete",
+"61730980B84345100673034"
+]
+]
+},
+"Valle del Pedernal": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.21/2007",
+"admin2": [
+[
+"San Juan",
+"Sarmiento",
+"61730980B2987031825940"
+]
+]
+},
+"Valle de Zonda": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.04/2015",
+"admin2": [
+[
+"San Juan",
+"Zonda",
+"61730980B79956801813082"
+]
+]
+},
+"Valle de Chañarmuyo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.28/2014",
+"admin2": [
+[
+"La Roja",
+"Famatina",
+"61730980B89547050111737"
+]
+]
+},
+"Colonia Caroya": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "C.36/2004",
+"admin2": [
+[
+"Córdoba",
+"Colón",
+"61730980B91207709402211"
+]
+]
+},
+"Valle de Pucará": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "Res. INV 8/2025",
+"admin2": [
+[
+"Salta",
+"San Carlos",
+"61730980B20324539983987"
+]
+]
+},
+"El Hoyo": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2023-25",
+"admin2": [
+[
+"Chubut",
+"Cushamen",
+"61730980B86195124517763"
+]
+]
+},
+"Trevelin": {
+"type": "IG (sub-department)",
+"precision": "superset (parent department)",
+"resolution": "RESOL-2020-28",
+"admin2": [
+[
+"Chubut",
+"Futaleufú",
+"61730980B18376344054138"
+]
+]
+},
+"Distrito Medrano": {
+"type": "IG (sub-department)",
+"precision": "superset (parent departments)",
+"resolution": "C.29/2014",
+"admin2": [
+[
+"Mendoza",
+"Rivadavia",
+"61730980B42888218741442"
+],
+[
+"Mendoza",
+"Junín",
+"61730980B95365862986383"
+]
+]
+},
+"Valles del Famatina": {
+"type": "IG",
+"precision": "approx",
+"resolution": "C.29/2004",
+"admin2": [
+[
+"La Roja",
+"Famatina",
+"61730980B89547050111737"
+],
+[
+"La Roja",
+"Chilecito",
+"61730980B21035116848731"
+]
+]
+},
+"Quebrada de Humahuaca": {
+"type": "IG",
+"precision": "approx (superset)",
+"resolution": "C.39/2015",
+"admin2": [
+[
+"Jujuy",
+"Humahuaca",
+"61730980B42347447507011"
+],
+[
+"Jujuy",
+"Tilcara",
+"61730980B79181726487815"
+],
+[
+"Jujuy",
+"Tumbaya",
+"61730980B96811087093060"
+]
+]
+},
+"Valles Templados": {
+"type": "IG",
+"precision": "approx",
+"resolution": "Res. INV 28/2025",
+"admin2": [
+[
+"Jujuy",
+"Dr. Manuel Belgrano",
+"61730980B9597683153912"
+],
+[
+"Jujuy",
+"El Carmen",
+"61730980B76568954927707"
+],
+[
+"Jujuy",
+"Palpalá",
+"61730980B21987921647817"
+],
+[
+"Jujuy",
+"San Antonio",
+"61730980B57262290665163"
+]
+],
+"note": "departments not confirmed"
+},
+"Sarmiento (Chubut)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "RESOL-2023-9",
+"admin2": [
+[
+"Chubut",
+"Sarmiento",
+"61730980B44143601291146"
+]
+]
+},
+"Victoria (Entre Ríos)": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "RESOL-2021-5",
+"admin2": [
+[
+"Entre Ríos",
+"Victoria",
+"61730980B18675393261940"
+]
+]
+},
+"Chapadmalal": {
+"type": "IG (sub-department)",
+"precision": "superset (parent partido)",
+"resolution": "C.20/2014",
+"admin2": [
+[
+"Buenos Aires",
+"General Pueyrredón",
+"61730980B30127630418266"
+]
+]
+},
+"Balcarce": {
+"type": "IG (department)",
+"precision": "exact",
+"resolution": "RESOL-2022-11",
+"admin2": [
+[
+"Buenos Aires",
+"Balcarce",
+"61730980B79646305787935"
+]
+]
+},
+"Villa Ventana": {
+"type": "IG (sub-department)",
+"precision": "superset (parent partido)",
+"resolution": "C.46/2011",
+"admin2": [
+[
+"Buenos Aires",
+"Tornquist",
+"61730980B13616489731470"
+]
+]
+}
+}

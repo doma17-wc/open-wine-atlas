@@ -1,12 +1,14 @@
 # Open Wine Atlas
 
-An open, interactive atlas of wine places: appellations, crus, climats and single vineyards.
-It covers all 21 EU wine countries, Switzerland and the United States, and is built only from data
-published under open licences, so anyone can check it, reuse it and extend it.
+An open, interactive atlas of wine places: appellations, geographical indications, crus, climats and
+single vineyards. It covers 45 countries on six continents: all 21 EU wine countries, Switzerland, the United
+States, and since October 2026 Australia, New Zealand, South Africa, South America, Canada, Mexico, the Caucasus,
+the Balkans, the Middle East and Asia. It is built only from data published under open licences, so anyone can
+check it, reuse it and extend it.
 
 Live: https://open-wine-atlas.vercel.app
 
-## What is in it (v0.1, October 2026)
+## What is in it (v0.2, October 2026)
 
 | Country | Detail | Source | Licence |
 |---|---|---|---|
@@ -17,7 +19,14 @@ Live: https://open-wine-atlas.vercel.app
 | 17 more EU countries | 337 PDO outlines: Austria, Portugal, Greece, Hungary, Romania, Bulgaria, Croatia, Slovenia, Czechia, Slovakia, Belgium, Cyprus, the Netherlands, UK, Malta, Denmark, Luxembourg | Candiago et al. 2022 | CC BY 4.0 |
 | United States | 276 AVAs with legal text, hierarchy, states and counties | UC Davis Library AVA project (27 CFR part 9) | CC0 1.0 |
 | Switzerland | 13 cantonal AOC outlines (canton boundary), OSM vineyard areas | BFS GEOSTAT / swisstopo; OpenStreetMap | Open use with attribution; ODbL |
-| All | About 5,800 wineries | OpenStreetMap | ODbL |
+| Australia | 100 GIs: zones, regions, subregions; Tasmania from the state outline | Wine Australia GI register via adynak/WineRegions; geoBoundaries | CC BY 4.0 (Wine Australia) |
+| Chile | 117 DOs: 6 regions, 18 subregions, 8 zones, areas, by comuna | Decreto 464/1994 (consolidated 2026) + geoBoundaries CHL ADM3 | CC BY 3.0 IGO |
+| Argentina | 100 IGs and both DOCs, by department; 14 parajes as markers | INV resolutions (list of 18 April 2024 plus 2025) + geoBoundaries ARG ADM2 | CC BY 3.0 IGO |
+| South Africa | 56 Wine of Origin units: geographical units, regions, districts, wards | Wine of Origin Scheme + geoBoundaries ZAF ADM1/ADM3 | CC BY 3.0 IGO |
+| New Zealand, Brazil, Uruguay, Canada, Mexico | 75 GIs, IPs, DOs, VQA areas and regions | IPONZ, INPI, INAVI, VQA Ontario, BC VQA + geoBoundaries | per country, see DATA_LICENSE.md |
+| Georgia, Moldova, Ukraine, Armenia, Türkiye, Israel, Lebanon, Serbia, North Macedonia, Montenegro, Bosnia and Herzegovina | 98 PDOs, IGPs and regions | Sakpatenti, AGEPI, Ukrainepatent, national wine laws + geoBoundaries | per country |
+| Japan, China, India | 12 GIs and regions | National Tax Agency (JP), EU-China GI agreement, Indian GI registry + geoBoundaries | per country |
+| All | About 9,600 wineries in 44 countries | OpenStreetMap via openwinemap | ODbL |
 | France, Italy | Per-wine rules: colour, category, main and secondary grapes, yields, density | EU specifications compiled by Candiago et al. 2022 (via pdo-wine-data) | CC BY 4.0 |
 | All | Regional bedrock per place | GLiM, Hartmann & Moosdorf 2012 | CC BY 3.0 |
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
@@ -32,6 +41,11 @@ pipeline/       one Python script per source, all writing the same schema
   basemap.py      world countries, lakes, rivers (Natural Earth)
   eu_pdo.py       all EU PDO outlines outside the INAO file
   us_ava.py       United States AVAs
+  fetch_world.py  downloads geoBoundaries, the Australian GI copy and OSM wine POIs for 44 countries
+  world_specs.py  wine places outside the EU and US, each defined by the administrative units its law names
+  world/          Chilean DO and Argentine IG tables compiled from the law texts
+  world.py        builds those places (outlines, markers) and the Australian GIs
+  build_world_web.py  merges the world layer into an existing web/data build (no need to rerun EU sources)
   rlp.py          Germany, Rheinland-Pfalz Einzellagen
   ch.py           Switzerland
   osm.py          wineries, Swiss vineyard areas
@@ -55,7 +69,10 @@ pip install geopandas pyogrio shapely pyproj
 # install tippecanoe: https://github.com/felt/tippecanoe
 python pipeline/basemap.py && python pipeline/inao.py && python pipeline/eu_pdo.py && python pipeline/us_ava.py && python pipeline/rlp.py \
   && python pipeline/ch.py && python pipeline/osm.py && python pipeline/fr_overview.py \
+  && python pipeline/fetch_world.py && python pipeline/world.py \
   && python pipeline/build_tiles.py && python pipeline/enrich.py && python pipeline/build_details.py
+# or, to refresh only the world layer and the wineries on top of the published web/data:
+python pipeline/fetch_world.py && python pipeline/world.py && python pipeline/osm.py && python pipeline/build_world_web.py
 python web/build_web.py                   # writes web/index.html and web/artifact.html
 python web/encode_bin.py                  # only for the claude.ai artifact host, which serves text files
 ```
@@ -80,7 +97,10 @@ cadastral parcels (IGN) can be switched on from zoom 14.
 
 * Terrain: elevation, slope, aspect rose, slope classes and clear-sky sun on the ground relative to flat land.
 * Climate 1991 to 2025 (Open-Meteo, ERA5-Land): growing season temperature, Winkler degree days, Huglin index,
-  rain, harvest rain, sunshine, heat days, spring frost, cool nights, warming since the 1990s.
+  rain, harvest rain, sunshine, heat days, spring frost, cool nights, warming since the 1990s. In the southern
+  hemisphere the season runs October to April and each vintage is named after its harvest year.
+* Climate twins: the last five seasons of the place compared with 63 benchmark wine regions on every continent
+  (same ERA5-Land data, fetched once and cached in the browser), with the closest matches and the warmth rank.
 * Vintages: the measured climate of every vintage at that place, ranked, plus the editorial vintage chart of
   its region (`web/data/vintages.json`, 13 regions, 2005 to 2024).
 * Soil: texture, pH, stones and organic carbon from SoilGrids 2.0 (250 m model).
@@ -119,13 +139,33 @@ Large appellations are measured on coarser cells, so slope and aspect are shown 
 * Fixing a place: open an issue or send a suggestion from the map ("Suggest a correction").
 * Code: MIT. Data: each layer keeps the licence of its source, see [DATA_LICENSE.md](DATA_LICENSE.md).
 
+## How outlines are drawn outside the EU and the US
+
+Few countries publish their wine boundaries as open data. The atlas uses three levels of precision, shown on
+every sheet and on the map:
+
+* **legal**: the outline is the union of the administrative units that the law names (Chilean comunas in
+  Decreto 464, Argentine departments, Japanese prefectures, Moldovan raions), or the official GI outline (Australia).
+* **approx** (dashed on the map): the law draws the line along roads, rivers, farms or altitude, so the
+  administrative units that contain the area stand in for it. The real area is smaller.
+* **point**: places far smaller than any unit (South African wards, Mendoza parajes, Georgian village PDOs, the
+  Niagara benches) are a marker at the town they are named after, never a misleadingly large polygon.
+
+Political choices: Crimea, the Golan Heights and the West Bank are not drawn. Admin units come from
+geoBoundaries gbOpen (Runfola et al. 2020); each place shows the licence of its unit layer.
+
 ## Next datasets to add
 
 * Switzerland: cantonal vineyard cadastres (Rebbaukataster) and Geneva's AOC cadastre.
 * Germany: Einzellagen for Baden, Württemberg, Franken, Rheingau, Hessische Bergstraße, Saale-Unstrut, Sachsen.
 * Italy: Barolo and Barbaresco MGA, Etna contrade, Chianti Classico UGA where open data exists.
 * Spain: MAPA "Zonas de calidad diferenciada: vinos" layer, Priorat vi de vila and paratges.
-* Australia (Wine Australia GIs), New Zealand, South Africa, Canada, Chile, Argentina: open GI boundaries exist for
-  some of these but their hosts are not reachable from the current build environment.
+* Australia: the official Wine Australia GI layer (CC BY 4.0, ArcGIS FeatureServer
+  `services6.arcgis.com/s8j6JbJJCqmhNgh7/arcgis/rest/services/Wine_Geographical_Indications_Australia/FeatureServer`,
+  layers 0 subregions, 1 regions, 2 zones) to replace the adynak copy. It is not reachable from the build
+  environment: download the three layers as GeoJSON and commit them to `raw/au_official/`.
+* New Zealand (IPONZ GI boundary files), South Africa (SAWIS demarcations), British Columbia (sub-GI schedule maps),
+  Ontario (O. Reg. 359/24 areas): official boundaries exist only as PDFs or behind restrictive terms.
+* Russia, Albania, Kosovo, Peru, Bolivia, Morocco, Tunisia: wine regions not yet mapped.
 * Precomputed terrain for every place in the search index, so places can be sorted by slope or aspect.
 * Climate: growing degree days and rainfall per place from E-OBS or ERA5-Land.

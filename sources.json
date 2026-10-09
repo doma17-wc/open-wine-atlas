@@ -38,7 +38,7 @@
   "license": "ODbL 1.0",
   "attribution": "© OpenStreetMap contributors",
   "url": "https://www.openstreetmap.org/copyright",
-  "download_used": "https://github.com/openhistorymap/openwinemap (data/countries/*.geojson)"
+  "download_used": "https://github.com/openhistorymap/openwinemap (data/countries/<CC>.geojson, 44 countries)"
  },
  "naturalearth": {
   "name": "Natural Earth countries 1:10m",
@@ -55,5 +55,32 @@
   "about": "https://mapterhorn.com/attribution",
   "licence": "open licences of each source DEM",
   "used_for": "hillshade, 3D terrain, per place elevation, slope and aspect (read live, not copied)"
+ },
+ "geoboundaries": {
+  "name": "geoBoundaries gbOpen, simplified administrative boundaries",
+  "attribution": "Runfola et al. (2020), geoBoundaries: A global database of political administrative boundaries, PLoS ONE",
+  "license": "per layer, see geoBoundariesOpen-meta.csv",
+  "url": "https://www.geoboundaries.org",
+  "download_used": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/main/releaseData/gbOpen/<ISO>/<ADM>/geoBoundaries-<ISO>-<ADM>_simplified.geojson",
+  "used_for": "outlines of wine places defined by administrative units (pipeline/world_specs.py)"
+ },
+ "wine_australia": {
+  "name": "Wine Geographical Indications Australia",
+  "attribution": "Geographical Indications of Australia, © Wine Australia",
+  "license": "CC BY 4.0",
+  "url": "https://wineaustralia-opendata-wineaustralia.hub.arcgis.com/datasets/2dd4c385f0ed4d109c2e18ae99e819e2",
+  "download_used": "https://raw.githubusercontent.com/adynak/WineRegions/master/Australia/<state>/<GI>.geojson",
+  "notes": "Copy published as CC0 by adynak/WineRegions; rings are cut at 5,000 vertices. Replace with the official FeatureServer layers when reachable."
+ },
+ "laws": {
+  "CL": "Decreto 464/1994, consolidated text (LeyChile idNorma 13601), amendment Diario Oficial 2025-05-14",
+  "AR": "Ley 25.163; INV Res. C.32/2002, C.37/2002; INV list of IG and DOC, 18 April 2024; Res. 8/2025, 27/2025, 28/2025",
+  "ZA": "Wine of Origin Scheme, Liquor Products Act 60 of 1989 (SAWIS)",
+  "NZ": "Geographical Indications (Wine and Spirits) Registration Act 2006 (IPONZ register)",
+  "BR": "INPI list of recognised IPs, 21 July 2026",
+  "JP": "National Tax Agency GI designations (2013, 2018, 2021)",
+  "MD": "AGEPI register",
+  "GE": "Sakpatenti register of appellations of origin",
+  "CA": "O. Reg. 359/24 (VQA Act, Ontario); Wines of Marque Regulation (British Columbia); CARTV IGP Vin du Québec"
  }
 }

@@ -1,0 +1,1317 @@
+{
+"Valle de Copiapó": {
+"level": "subregion",
+"parent": "Atacama",
+"comunas": [
+"Caldera",
+"Copiapó",
+"Tierra Amarilla"
+]
+},
+"Valle del Huasco": {
+"level": "subregion",
+"parent": "Atacama",
+"comunas": [
+"Alto del Carmen",
+"Freirina",
+"Huasco",
+"Vallenar"
+]
+},
+"Valle del Elqui": {
+"level": "subregion",
+"parent": "Coquimbo",
+"comunas": [
+"Andacollo",
+"Coquimbo",
+"La Higuera",
+"La Serena",
+"Paihuano",
+"Vicuña"
+]
+},
+"Vicuña": {
+"level": "area",
+"parent": "Valle del Elqui",
+"comunas": [
+"Vicuña"
+]
+},
+"Paiguano": {
+"level": "area",
+"parent": "Valle del Elqui",
+"comunas": [
+"Paihuano"
+]
+},
+"La Serena": {
+"level": "area",
+"parent": "Valle del Elqui",
+"comunas": [
+"La Serena"
+]
+},
+"Valle del Limarí": {
+"level": "subregion",
+"parent": "Coquimbo",
+"comunas": [
+"Combarbalá",
+"Monte Patria",
+"Ovalle",
+"Punitaqui",
+"Río Hurtado"
+]
+},
+"Ovalle": {
+"level": "area",
+"parent": "Valle del Limarí",
+"comunas": [
+"Ovalle"
+]
+},
+"Monte Patria": {
+"level": "area",
+"parent": "Valle del Limarí",
+"comunas": [
+"Monte Patria"
+]
+},
+"Punitaqui": {
+"level": "area",
+"parent": "Valle del Limarí",
+"comunas": [
+"Punitaqui"
+]
+},
+"Río Hurtado": {
+"level": "area",
+"parent": "Valle del Limarí",
+"comunas": [
+"Río Hurtado"
+]
+},
+"Valle del Choapa": {
+"level": "subregion",
+"parent": "Coquimbo",
+"comunas": [
+"Canela",
+"Illapel",
+"Los Vilos",
+"Salamanca"
+]
+},
+"Salamanca": {
+"level": "area",
+"parent": "Valle del Choapa",
+"comunas": [
+"Salamanca"
+]
+},
+"Illapel": {
+"level": "area",
+"parent": "Valle del Choapa",
+"comunas": [
+"Illapel"
+]
+},
+"Valle del Aconcagua": {
+"level": "subregion",
+"parent": "Aconcagua",
+"comunas": [
+"Calera",
+"Calle Larga",
+"Catemu",
+"Hijuelas",
+"La Cruz",
+"Llaillay",
+"Los Andes",
+"Nogales",
+"Panquehue",
+"Putaendo",
+"Quillota",
+"Rinconada",
+"San Esteban",
+"San Felipe",
+"Santa María"
+]
+},
+"Panquehue": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Panquehue"
+]
+},
+"Quillota": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Quillota"
+]
+},
+"Hijuelas": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Hijuelas"
+]
+},
+"Catemu": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Catemu"
+]
+},
+"Llaillay": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Llaillay"
+]
+},
+"San Felipe": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"San Felipe"
+]
+},
+"Santa María": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Santa María"
+]
+},
+"Calle Larga": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"Calle Larga"
+]
+},
+"San Esteban": {
+"level": "area",
+"parent": "Valle del Aconcagua",
+"comunas": [
+"San Esteban"
+]
+},
+"Valle de Casablanca": {
+"level": "subregion",
+"parent": "Aconcagua",
+"comunas": [
+"Casablanca"
+]
+},
+"Valle de San Antonio": {
+"level": "subregion",
+"parent": "Aconcagua",
+"comunas": [
+"Algarrobo",
+"Cartagena",
+"El Quisco",
+"El Tabo",
+"San Antonio",
+"Santo Domingo"
+]
+},
+"Valle de Leyda": {
+"level": "zone",
+"parent": "Valle de San Antonio",
+"comunas": [
+"San Antonio",
+"Santo Domingo"
+]
+},
+"San Juan": {
+"level": "area",
+"parent": "Valle de Leyda",
+"comunas": [
+"San Antonio"
+],
+"note": "area is part of comuna San Antonio"
+},
+"Santo Domingo": {
+"level": "area",
+"parent": "Valle de Leyda",
+"comunas": [
+"Santo Domingo"
+]
+},
+"Lo Abarca": {
+"level": "area",
+"parent": "Valle de San Antonio",
+"comunas": [
+"Cartagena"
+],
+"note": "rural locality within comuna Cartagena; comuna polygon is a superset"
+},
+"Cartagena": {
+"level": "area",
+"parent": "Valle de San Antonio",
+"comunas": [
+"Cartagena"
+]
+},
+"Algarrobo": {
+"level": "area",
+"parent": "Valle de San Antonio",
+"comunas": [
+"Algarrobo"
+]
+},
+"Valle del Marga-Marga": {
+"level": "area",
+"parent": "Aconcagua",
+"comunas": [
+"Quilpué"
+]
+},
+"Zapallar": {
+"level": "area",
+"parent": "Aconcagua",
+"comunas": [
+"Zapallar"
+]
+},
+"Valle del Maipo": {
+"level": "subregion",
+"parent": "Valle Central",
+"comunas": [
+"Alhué",
+"Buin",
+"Calera de Tango",
+"Cerrillos",
+"Cerro Navia",
+"Colina",
+"Conchalí",
+"Curacaví",
+"El Bosque",
+"El Monte",
+"Estación Central",
+"Huechuraba",
+"Independencia",
+"Isla de Maipo",
+"La Cisterna",
+"La Florida",
+"La Granja",
+"La Pintana",
+"La Reina",
+"Lampa",
+"Las Condes",
+"Lo Barnechea",
+"Lo Espejo",
+"Lo Prado",
+"Macul",
+"Maipú",
+"María Pinto",
+"Melipilla",
+"Padre Hurtado",
+"Paine",
+"Pedro Aguirre Cerda",
+"Peñaflor",
+"Peñalolén",
+"Pirque",
+"Providencia",
+"Pudahuel",
+"Puente Alto",
+"Quilicura",
+"Quinta Normal",
+"Recoleta",
+"Renca",
+"San Bernardo",
+"San Joaquín",
+"San José de Maipo",
+"San Miguel",
+"San Pedro",
+"San Ramón",
+"Santiago",
+"Talagante",
+"Tiltil",
+"Vitacura",
+"Ñuñoa"
+]
+},
+"Santiago": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"La Florida",
+"Peñalolén"
+]
+},
+"Pirque": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Pirque"
+]
+},
+"Puente Alto": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"La Pintana",
+"Puente Alto"
+]
+},
+"Buin": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Buin",
+"Paine",
+"San Bernardo"
+]
+},
+"Isla de Maipo": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Isla de Maipo"
+]
+},
+"Talagante": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"El Monte",
+"Padre Hurtado",
+"Peñaflor",
+"Talagante"
+]
+},
+"Melipilla": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Melipilla",
+"San Pedro"
+]
+},
+"Alhué": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Alhué"
+]
+},
+"María Pinto": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"María Pinto"
+]
+},
+"Colina": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Colina"
+]
+},
+"Calera de Tango": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Calera de Tango"
+]
+},
+"Til Til": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Tiltil"
+]
+},
+"Lampa": {
+"level": "area",
+"parent": "Valle del Maipo",
+"comunas": [
+"Lampa"
+]
+},
+"Valle del Rapel": {
+"level": "subregion",
+"parent": "Valle Central",
+"comunas": [
+"Chimbarongo",
+"Chépica",
+"Codegua",
+"Coinco",
+"Coltauco",
+"Doñihue",
+"Graneros",
+"La Estrella",
+"Las Cabras",
+"Litueche",
+"Lolol",
+"Machalí",
+"Malloa",
+"Marchigüe",
+"Mostazal",
+"Nancagua",
+"Navidad",
+"Olivar",
+"Palmilla",
+"Paredones",
+"Peralillo",
+"Peumo",
+"Pichidegua",
+"Pichilemu",
+"Placilla",
+"Pumanque",
+"Quinta de Tilcoco",
+"Rancagua",
+"Rengo",
+"Requínoa",
+"San Fernando",
+"San Vicente",
+"Santa Cruz"
+]
+},
+"Valle del Cachapoal": {
+"level": "zone",
+"parent": "Valle del Rapel",
+"comunas": [
+"Codegua",
+"Coinco",
+"Coltauco",
+"Doñihue",
+"Graneros",
+"Las Cabras",
+"Machalí",
+"Malloa",
+"Mostazal",
+"Olivar",
+"Peumo",
+"Pichidegua",
+"Quinta de Tilcoco",
+"Rancagua",
+"Rengo",
+"Requínoa",
+"San Vicente"
+]
+},
+"Rancagua": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Codegua",
+"Graneros",
+"Mostazal",
+"Olivar",
+"Rancagua"
+]
+},
+"Requínoa": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Requínoa"
+]
+},
+"Rengo": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Malloa",
+"Quinta de Tilcoco",
+"Rengo"
+]
+},
+"Peumo": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Las Cabras",
+"Peumo",
+"Pichidegua",
+"San Vicente"
+]
+},
+"Machalí": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Machalí"
+]
+},
+"Coltauco": {
+"level": "area",
+"parent": "Valle del Cachapoal",
+"comunas": [
+"Coltauco"
+]
+},
+"Valle de Colchagua": {
+"level": "zone",
+"parent": "Valle del Rapel",
+"comunas": [
+"Chimbarongo",
+"Chépica",
+"La Estrella",
+"Litueche",
+"Lolol",
+"Marchigüe",
+"Nancagua",
+"Navidad",
+"Palmilla",
+"Paredones",
+"Peralillo",
+"Pichilemu",
+"Placilla",
+"Pumanque",
+"San Fernando",
+"Santa Cruz"
+]
+},
+"San Fernando": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"San Fernando"
+]
+},
+"Chimbarongo": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Chimbarongo"
+]
+},
+"Nancagua": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Nancagua",
+"Placilla"
+]
+},
+"Santa Cruz": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Chépica",
+"Santa Cruz"
+]
+},
+"Palmilla": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Palmilla"
+]
+},
+"Peralillo": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Peralillo"
+]
+},
+"Lolol": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Lolol"
+]
+},
+"Marchigüe": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Marchigüe"
+]
+},
+"Litueche": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Litueche"
+]
+},
+"La Estrella": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"La Estrella"
+]
+},
+"Paredones": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Paredones"
+]
+},
+"Pumanque": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Pumanque"
+]
+},
+"Los Lingues": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"San Fernando"
+],
+"note": "rural locality within comuna San Fernando; comuna polygon is a superset"
+},
+"Apalta": {
+"level": "area",
+"parent": "Valle de Colchagua",
+"comunas": [
+"Santa Cruz"
+],
+"note": "rural locality within comuna Santa Cruz; comuna polygon is a superset"
+},
+"Valle de Curicó": {
+"level": "subregion",
+"parent": "Valle Central",
+"comunas": [
+"Curicó",
+"Hualañé",
+"Licantén",
+"Molina",
+"Rauco",
+"Romeral",
+"Río Claro",
+"Sagrada Familia",
+"Teno",
+"Vichuquén"
+]
+},
+"Valle del Teno": {
+"level": "zone",
+"parent": "Valle de Curicó",
+"comunas": [
+"Hualañé",
+"Licantén",
+"Rauco",
+"Romeral",
+"Teno",
+"Vichuquén"
+],
+"note": "Licantén added as area within Teno zone"
+},
+"Rauco": {
+"level": "area",
+"parent": "Valle del Teno",
+"comunas": [
+"Hualañé",
+"Rauco"
+]
+},
+"Romeral": {
+"level": "area",
+"parent": "Valle del Teno",
+"comunas": [
+"Romeral",
+"Teno"
+]
+},
+"Vichuquén": {
+"level": "area",
+"parent": "Valle del Teno",
+"comunas": [
+"Vichuquén"
+]
+},
+"Licantén": {
+"level": "area",
+"parent": "Valle del Teno",
+"comunas": [
+"Licantén"
+]
+},
+"Valle del Lontué": {
+"level": "zone",
+"parent": "Valle de Curicó",
+"comunas": [
+"Curicó",
+"Molina",
+"Río Claro",
+"Sagrada Familia"
+]
+},
+"Molina": {
+"level": "area",
+"parent": "Valle del Lontué",
+"comunas": [
+"Curicó",
+"Molina",
+"Río Claro"
+]
+},
+"Sagrada Familia": {
+"level": "area",
+"parent": "Valle del Lontué",
+"comunas": [
+"Sagrada Familia"
+]
+},
+"Valle del Maule": {
+"level": "subregion",
+"parent": "Valle Central",
+"comunas": [
+"Cauquenes",
+"Colbún",
+"Constitución",
+"Curepto",
+"Empedrado",
+"Linares",
+"Longaví",
+"Maule",
+"Parral",
+"Pelarco",
+"Pencahue",
+"Retiro",
+"San Clemente",
+"San Javier",
+"San Rafael",
+"Talca",
+"Villa Alegre",
+"Yerbas Buenas"
+]
+},
+"Valle del Claro": {
+"level": "zone",
+"parent": "Valle del Maule",
+"comunas": [
+"Curepto",
+"Empedrado",
+"Maule",
+"Pelarco",
+"Pencahue",
+"San Clemente",
+"San Rafael",
+"Talca"
+]
+},
+"Talca": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"Maule",
+"Pelarco",
+"Talca"
+]
+},
+"Pencahue": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"Pencahue"
+]
+},
+"San Clemente": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"San Clemente"
+]
+},
+"San Rafael": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"San Rafael"
+]
+},
+"Empedrado": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"Empedrado"
+]
+},
+"Curepto": {
+"level": "area",
+"parent": "Valle del Claro",
+"comunas": [
+"Curepto"
+]
+},
+"Valle del Loncomilla": {
+"level": "zone",
+"parent": "Valle del Maule",
+"comunas": [
+"Colbún",
+"Linares",
+"Longaví",
+"Parral",
+"Retiro",
+"San Javier",
+"Villa Alegre",
+"Yerbas Buenas"
+]
+},
+"San Javier": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"San Javier"
+]
+},
+"Villa Alegre": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Villa Alegre"
+]
+},
+"Parral": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Parral"
+]
+},
+"Linares": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Linares",
+"Yerbas Buenas"
+]
+},
+"Colbún": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Colbún"
+]
+},
+"Longaví": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Longaví"
+]
+},
+"Retiro": {
+"level": "area",
+"parent": "Valle del Loncomilla",
+"comunas": [
+"Retiro"
+]
+},
+"Valle del Tutuvén": {
+"level": "zone",
+"parent": "Valle del Maule",
+"comunas": [
+"Cauquenes"
+]
+},
+"Cauquenes": {
+"level": "area",
+"parent": "Valle del Tutuvén",
+"comunas": [
+"Cauquenes"
+]
+},
+"Valle del Itata": {
+"level": "subregion",
+"parent": "Sur",
+"comunas": [
+"Bulnes",
+"Chillán",
+"Chillán Viejo",
+"Coelemu",
+"Florida",
+"Ninhue",
+"Portezuelo",
+"Quillón",
+"Quirihue",
+"Ranquil",
+"San Carlos",
+"San Nicolás",
+"Treguaco",
+"Ñiquén"
+],
+"note": "Chillán Viejo and Ñiquén enter via Área Chillán"
+},
+"Chillán": {
+"level": "area",
+"parent": "Valle del Itata",
+"comunas": [
+"Bulnes",
+"Chillán",
+"Chillán Viejo",
+"San Carlos",
+"Ñiquén"
+]
+},
+"Quillón": {
+"level": "area",
+"parent": "Valle del Itata",
+"comunas": [
+"Florida",
+"Quillón",
+"Ranquil"
+]
+},
+"Portezuelo": {
+"level": "area",
+"parent": "Valle del Itata",
+"comunas": [
+"Ninhue",
+"Portezuelo",
+"Quirihue",
+"San Nicolás"
+]
+},
+"Coelemu": {
+"level": "area",
+"parent": "Valle del Itata",
+"comunas": [
+"Coelemu",
+"Treguaco"
+]
+},
+"Valle del Biobío": {
+"level": "subregion",
+"parent": "Sur",
+"comunas": [
+"Laja",
+"Mulchén",
+"Nacimiento",
+"Negrete",
+"Yumbel"
+]
+},
+"Yumbel": {
+"level": "area",
+"parent": "Valle del Biobío",
+"comunas": [
+"Laja",
+"Yumbel"
+]
+},
+"Mulchén": {
+"level": "area",
+"parent": "Valle del Biobío",
+"comunas": [
+"Mulchén",
+"Nacimiento",
+"Negrete"
+]
+},
+"Valle del Malleco": {
+"level": "subregion",
+"parent": "Sur",
+"comunas": [
+"Angol",
+"Collipulli",
+"Ercilla",
+"Los Sauces",
+"Lumaco",
+"Purén",
+"Renaico",
+"Traiguén",
+"Victoria"
+]
+},
+"Traiguén": {
+"level": "area",
+"parent": "Valle del Malleco",
+"comunas": [
+"Traiguén"
+]
+},
+"Valle del Cautín": {
+"level": "subregion",
+"parent": "Austral",
+"comunas": [
+"Galvarino",
+"Perquenco"
+]
+},
+"Valle de Osorno": {
+"level": "subregion",
+"parent": "Austral",
+"comunas": [
+"Futrono",
+"La Unión",
+"Osorno",
+"Purranque",
+"San Pablo"
+]
+},
+"Chiloé": {
+"level": "subregion",
+"parent": "Austral",
+"comunas": [
+"Ancud",
+"Castro",
+"Chonchi",
+"Curaco de Vélez",
+"Dalcahue",
+"Puqueldón",
+"Queilén",
+"Quellón",
+"Quemchi",
+"Quinchao"
+],
+"note": "added by decree published DO 14-05-2025"
+},
+"Rapa Nui - Isla de Pascua": {
+"level": "area",
+"parent": null,
+"comunas": [
+"Isla de Pascua"
+],
+"note": "numeral 7, added by decree published DO 14-05-2025"
+},
+"Atacama": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Alto del Carmen",
+"Caldera",
+"Copiapó",
+"Freirina",
+"Huasco",
+"Tierra Amarilla",
+"Vallenar"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+},
+"Coquimbo": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Andacollo",
+"Canela",
+"Combarbalá",
+"Coquimbo",
+"Illapel",
+"La Higuera",
+"La Serena",
+"Los Vilos",
+"Monte Patria",
+"Ovalle",
+"Paihuano",
+"Punitaqui",
+"Río Hurtado",
+"Salamanca",
+"Vicuña"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+},
+"Aconcagua": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Algarrobo",
+"Calera",
+"Calle Larga",
+"Cartagena",
+"Casablanca",
+"Catemu",
+"El Quisco",
+"El Tabo",
+"Hijuelas",
+"La Cruz",
+"Llaillay",
+"Los Andes",
+"Nogales",
+"Panquehue",
+"Putaendo",
+"Quillota",
+"Quilpué",
+"Rinconada",
+"San Antonio",
+"San Esteban",
+"San Felipe",
+"Santa María",
+"Santo Domingo",
+"Zapallar"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+},
+"Valle Central": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Alhué",
+"Buin",
+"Calera de Tango",
+"Cauquenes",
+"Cerrillos",
+"Cerro Navia",
+"Chimbarongo",
+"Chépica",
+"Codegua",
+"Coinco",
+"Colbún",
+"Colina",
+"Coltauco",
+"Conchalí",
+"Constitución",
+"Curacaví",
+"Curepto",
+"Curicó",
+"Doñihue",
+"El Bosque",
+"El Monte",
+"Empedrado",
+"Estación Central",
+"Graneros",
+"Hualañé",
+"Huechuraba",
+"Independencia",
+"Isla de Maipo",
+"La Cisterna",
+"La Estrella",
+"La Florida",
+"La Granja",
+"La Pintana",
+"La Reina",
+"Lampa",
+"Las Cabras",
+"Las Condes",
+"Licantén",
+"Linares",
+"Litueche",
+"Lo Barnechea",
+"Lo Espejo",
+"Lo Prado",
+"Lolol",
+"Longaví",
+"Machalí",
+"Macul",
+"Maipú",
+"Malloa",
+"Marchigüe",
+"María Pinto",
+"Maule",
+"Melipilla",
+"Molina",
+"Mostazal",
+"Nancagua",
+"Navidad",
+"Olivar",
+"Padre Hurtado",
+"Paine",
+"Palmilla",
+"Paredones",
+"Parral",
+"Pedro Aguirre Cerda",
+"Pelarco",
+"Pencahue",
+"Peralillo",
+"Peumo",
+"Peñaflor",
+"Peñalolén",
+"Pichidegua",
+"Pichilemu",
+"Pirque",
+"Placilla",
+"Providencia",
+"Pudahuel",
+"Puente Alto",
+"Pumanque",
+"Quilicura",
+"Quinta Normal",
+"Quinta de Tilcoco",
+"Rancagua",
+"Rauco",
+"Recoleta",
+"Renca",
+"Rengo",
+"Requínoa",
+"Retiro",
+"Romeral",
+"Río Claro",
+"Sagrada Familia",
+"San Bernardo",
+"San Clemente",
+"San Fernando",
+"San Javier",
+"San Joaquín",
+"San José de Maipo",
+"San Miguel",
+"San Pedro",
+"San Rafael",
+"San Ramón",
+"San Vicente",
+"Santa Cruz",
+"Santiago",
+"Talagante",
+"Talca",
+"Teno",
+"Tiltil",
+"Vichuquén",
+"Villa Alegre",
+"Vitacura",
+"Yerbas Buenas",
+"Ñuñoa"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+},
+"Sur": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Angol",
+"Bulnes",
+"Chillán",
+"Chillán Viejo",
+"Coelemu",
+"Collipulli",
+"Ercilla",
+"Florida",
+"Laja",
+"Los Sauces",
+"Lumaco",
+"Mulchén",
+"Nacimiento",
+"Negrete",
+"Ninhue",
+"Portezuelo",
+"Purén",
+"Quillón",
+"Quirihue",
+"Ranquil",
+"Renaico",
+"San Carlos",
+"San Nicolás",
+"Traiguén",
+"Treguaco",
+"Victoria",
+"Yumbel",
+"Ñiquén"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+},
+"Austral": {
+"level": "region",
+"parent": null,
+"comunas": [
+"Ancud",
+"Castro",
+"Chonchi",
+"Curaco de Vélez",
+"Dalcahue",
+"Futrono",
+"Galvarino",
+"La Unión",
+"Osorno",
+"Perquenco",
+"Puqueldón",
+"Purranque",
+"Queilén",
+"Quellón",
+"Quemchi",
+"Quinchao",
+"San Pablo"
+],
+"note": "union of its subregions/areas (legal text names admin regions/provinces more broadly)"
+}
+}

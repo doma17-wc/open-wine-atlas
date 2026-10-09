@@ -71,6 +71,14 @@ button, input { font: inherit; color: inherit; }
 .legend input:not(:checked) ~ span { color: var(--muted); text-decoration: line-through; text-decoration-color: #555; }
 .legend input:focus-visible + .sw { outline: 2px solid var(--focus); outline-offset: 2px; }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-left: 4px; }
+.lg-note { margin: 6px 0 0; font-size: 11px; line-height: 1.6; }
+.lg-note svg { vertical-align: middle; margin-right: 4px; }
+.ol-note { margin: 0 0 12px; padding: 8px 10px; border-left: 2px solid var(--line); font-size: 12.5px; color: var(--muted); }
+.ol-note b { color: var(--parchment); font-weight: 500; }
+.twins { display: grid; gap: 4px; margin: 8px 0; }
+.twins button { display: grid; grid-template-columns: 1fr auto; gap: 8px; text-align: left; background: none; border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; color: var(--parchment); cursor: pointer; font: inherit; font-size: 13px; }
+.twins button:hover { border-color: var(--muted); }
+.twins .r { color: var(--muted); font-variant-numeric: tabular-nums; }
 .legend .hd { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .rail-foot { display: flex; gap: 6px; flex-wrap: wrap; }
 .link-btn { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); cursor: pointer; font-size: 12.5px; }
@@ -373,7 +381,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   </div>
   <div class="search">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    <input id="q" type="search" placeholder="Search Barolo, Musigny, Wehlener Sonnenuhr…" autocomplete="off" aria-label="Search wine places" aria-controls="results">
+    <input id="q" type="search" placeholder="Search Barolo, Musigny, Barossa Valley, Paraje Altamira…" autocomplete="off" aria-label="Search wine places" aria-controls="results">
     <ul class="results" id="results" role="listbox" hidden></ul>
   </div>
   <div class="countries" id="countries">
@@ -387,6 +395,12 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button class="chip chip-x" data-c="GR"><span class="k">GR</span>Ελλάδα</button>
     <button class="chip chip-x" data-c="HU"><span class="k">HU</span>Magyarország</button>
     <button class="chip chip-x" data-c="US"><span class="k">US</span>USA</button>
+    <button class="chip chip-x" data-c="AU"><span class="k">AU</span>Australia</button>
+    <button class="chip chip-x" data-c="NZ"><span class="k">NZ</span>New Zealand</button>
+    <button class="chip chip-x" data-c="ZA"><span class="k">ZA</span>South Africa</button>
+    <button class="chip chip-x" data-c="CL"><span class="k">CL</span>Chile</button>
+    <button class="chip chip-x" data-c="AR"><span class="k">AR</span>Argentina</button>
+    <button class="chip chip-x" data-c="WORLD"><span class="k">◎</span>World</button>
     <button class="chip more-btn" id="moreBtn" aria-expanded="false">Layers</button>
   </div>
   <div class="rail-scroll">
@@ -404,12 +418,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   </div>
   <div class="legend" id="legend">
     <div class="hd">Layers</div>
-    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations (AOC, DOC, DO, PDO, AVA)</span></label>
+    <label style="color:var(--parchment)"><input type="checkbox" id="lg-app" checked><span class="sw"></span><span>Appellations and GIs (AOC, DOC, DO, PDO, AVA, GI)</span></label>
     <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span>Grand cru, DOCG, DOCa, Pago</span></label>
     <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span>Premiers crus and climats</span></label>
     <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span>Einzellagen (Rheinland-Pfalz)</span></label>
     <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span>Vineyards (Switzerland, OSM)</span></label>
     <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span>Wineries (OSM)</span></label>
+    <p class="note lg-note"><svg width="18" height="6" aria-hidden="true"><path d="M1 3h16" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg> approximate outline, built from administrative units<br><svg width="18" height="8" aria-hidden="true"><circle cx="9" cy="4" r="3.2" fill="currentColor"/></svg> place without an open boundary, shown at its namesake town</p>
   </div>
   <div class="rail-foot">
     <button class="link-btn" id="openGuide">How to read the atlas</button>
@@ -429,7 +444,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 <div class="relief-btn web-only" id="reliefBtn" role="group" aria-label="Map view" hidden>
   <button id="btn2d" aria-pressed="true">2D</button><button id="btn3d" aria-pressed="false">3D</button>
 </div>
-<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
+<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
@@ -456,16 +471,30 @@ const C = { night: "#0b0b0d", land: "#151518", line: "#2a2a31", parchment: "#e6d
 const TOP = ["grand_cru", "docg", "doca", "pago"];
 const COUNTRY = { FR: "France", IT: "Italia", ES: "España", DE: "Deutschland", CH: "Schweiz", AT: "Österreich", PT: "Portugal",
   GR: "Ελλάδα", HU: "Magyarország", RO: "România", BG: "България", HR: "Hrvatska", SI: "Slovenija", CZ: "Česko", SK: "Slovensko",
-  BE: "Belgique", CY: "Κύπρος", NL: "Nederland", GB: "United Kingdom", MT: "Malta", DK: "Danmark", LU: "Luxembourg", US: "United States" };
+  BE: "Belgique", CY: "Κύπρος", NL: "Nederland", GB: "United Kingdom", MT: "Malta", DK: "Danmark", LU: "Luxembourg", US: "United States",
+  AU: "Australia", NZ: "New Zealand", ZA: "South Africa", CL: "Chile", AR: "Argentina", BR: "Brasil", UY: "Uruguay", CA: "Canada",
+  MX: "México", GE: "საქართველო", MD: "Moldova", UA: "Україна", AM: "Հայաստան", TR: "Türkiye", IL: "ישראל", LB: "لبنان",
+  RS: "Србија", MK: "Северна Македонија", ME: "Crna Gora", BA: "Bosna i Hercegovina", JP: "日本", CN: "中国", IN: "India" };
 // English names for running text
 const COUNTRY_EN = { FR: "France", IT: "Italy", ES: "Spain", DE: "Germany", CH: "Switzerland", AT: "Austria", PT: "Portugal", GR: "Greece",
   HU: "Hungary", RO: "Romania", BG: "Bulgaria", HR: "Croatia", SI: "Slovenia", CZ: "Czechia", SK: "Slovakia", BE: "Belgium", CY: "Cyprus",
-  NL: "the Netherlands", GB: "the United Kingdom", MT: "Malta", DK: "Denmark", LU: "Luxembourg", US: "the United States" };
+  NL: "the Netherlands", GB: "the United Kingdom", MT: "Malta", DK: "Denmark", LU: "Luxembourg", US: "the United States",
+  AU: "Australia", NZ: "New Zealand", ZA: "South Africa", CL: "Chile", AR: "Argentina", BR: "Brazil", UY: "Uruguay", CA: "Canada",
+  MX: "Mexico", GE: "Georgia", MD: "Moldova", UA: "Ukraine", AM: "Armenia", TR: "Türkiye", IL: "Israel", LB: "Lebanon",
+  RS: "Serbia", MK: "North Macedonia", ME: "Montenegro", BA: "Bosnia and Herzegovina", JP: "Japan", CN: "China", IN: "India" };
 const LANG = { FR: "fr", IT: "it", ES: "es", DE: "de", CH: "de", AT: "de", PT: "pt", GR: "el", HU: "hu", RO: "ro", BG: "bg", HR: "hr",
-  SI: "sl", CZ: "cs", SK: "sk", BE: "fr", CY: "el", NL: "nl", GB: "en", MT: "en", DK: "da", LU: "fr", US: "en" };
+  SI: "sl", CZ: "cs", SK: "sk", BE: "fr", CY: "el", NL: "nl", GB: "en", MT: "en", DK: "da", LU: "fr", US: "en",
+  AU: "en", NZ: "en", ZA: "en", CL: "es", AR: "es", BR: "pt", UY: "es", CA: "en", MX: "es", GE: "en", MD: "ro", UA: "en", AM: "en",
+  TR: "tr", IL: "en", LB: "en", RS: "en", MK: "en", ME: "en", BA: "en", JP: "en", CN: "en", IN: "en" };
 const VIEWS = { FR: [[-5.2, 42.3], [8.3, 51.1]], IT: [[6.6, 36.6], [18.6, 47.1]], ES: [[-9.4, 36.0], [3.4, 43.8]],
   DE: [[5.9, 47.3], [15.0, 55.1]], CH: [[5.95, 45.8], [10.5, 47.85]], AT: [[9.5, 46.4], [17.2, 49.0]], PT: [[-9.6, 36.9], [-6.2, 42.2]],
-  GR: [[19.4, 34.8], [28.3, 41.8]], HU: [[16.1, 45.7], [22.9, 48.6]], US: [[-125, 24.5], [-66.9, 49.4]] };
+  GR: [[19.4, 34.8], [28.3, 41.8]], HU: [[16.1, 45.7], [22.9, 48.6]], US: [[-125, 24.5], [-66.9, 49.4]],
+  AU: [[113, -44], [154, -26]], NZ: [[166, -47.5], [179, -34]], ZA: [[17.5, -34.9], [21.5, -31.5]], CL: [[-75, -44], [-68, -26]],
+  AR: [[-72, -46], [-62, -21]], BR: [[-58, -34], [-38, -8]], UY: [[-58.5, -35], [-53, -30]], CA: [[-125, 41], [-60, 51]],
+  MX: [[-117.5, 19], [-98, 33]], GE: [[40, 41], [46.8, 43.6]], MD: [[26.6, 45.4], [30.2, 48.5]], UA: [[22, 44], [40, 52.5]],
+  AM: [[43.4, 38.8], [46.7, 41.4]], TR: [[25.6, 35.8], [44.8, 42.2]], IL: [[34.2, 29.4], [35.9, 33.4]], LB: [[35.0, 33.0], [36.7, 34.7]],
+  RS: [[18.8, 42.2], [23.0, 46.2]], MK: [[20.4, 40.8], [23.1, 42.4]], ME: [[18.4, 41.8], [20.4, 43.6]], BA: [[15.7, 42.5], [19.7, 45.3]],
+  JP: [[129, 31], [146, 45.6]], CN: [[73, 18], [135, 54]], IN: [[68, 6], [97, 36]], WORLD: [[-128, -48], [178, 60]] };
 const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
@@ -477,6 +506,9 @@ const SOURCES = {
   soil: { name: "SoilGrids 2.0, ISRIC World Soil Information (250 m model)", license: "CC BY 4.0", url: "https://soilgrids.org" },
   eox: { name: "Sentinel-2 cloudless 2025 by EOX IT Services (contains modified Copernicus Sentinel data); IGN France, swisstopo and IGN España orthophotos up close", license: "CC BY-NC-SA 4.0 (EOX); open licences (national orthophotos)", url: "https://s2maps.eu" },
   otm: { name: "OpenTopoMap (data © OpenStreetMap contributors, SRTM)", license: "CC BY-SA 3.0", url: "https://opentopomap.org" },
+  geob: { name: "geoBoundaries gbOpen (Runfola et al. 2020): the administrative units named in each country's wine law", license: "Per country: CC BY, ODbL, OGL or public domain (shown on each place)", url: "https://www.geoboundaries.org" },
+  wa: { name: "Wine Australia, Register of Protected GIs (outlines via adynak/WineRegions)", license: "CC BY 4.0 (Wine Australia)", url: "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications" },
+  marker: { name: "Open Wine Atlas contributors: location of the namesake town", license: "CC BY 4.0", url: "https://github.com/doma17-wc/open-wine-atlas" },
   dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
 };
 const LEVEL_LABEL = { region: "Wine region", appellation: "Appellation", subzone: "Sub-zone", vineyard: "Vineyard site", vineyard_area: "Vineyard area" };
@@ -551,7 +583,7 @@ const map = new maplibregl.Map({
   },
   bounds: [[-9.5, 36.2], [17.5, 54.5]],
   fitBoundsOptions: { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 360 : 20, right: 20 } },
-  minZoom: 2, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
+  minZoom: 1, maxZoom: 17.5, maxPitch: 78, renderWorldCopies: false,
   attributionControl: false,
   dragRotate: true, pitchWithRotate: true,
 });
@@ -573,7 +605,8 @@ const rankColor = ["case",
   C.parchment];
 
 const LAYERS = []; // [layerId, group] for legend toggles
-function add(layer, group) { map.addLayer(layer); LAYERS.push([layer.id, group]); }
+const BASEF = {}; // layerId -> its own filter, combined with the legend's rank filter
+function add(layer, group) { map.addLayer(layer); LAYERS.push([layer.id, group]); if (layer.filter) BASEF[layer.id] = layer.filter; }
 
 function addBase() {
   map.addSource("base", { type: "vector", url: pmUrl("base.pmtiles") });
@@ -587,7 +620,13 @@ function addBase() {
   const pts = [["FRANCE", 2.4, 46.7], ["ITALIA", 12.6, 42.9], ["ESPAÑA", -3.6, 40.0], ["DEUTSCHLAND", 10.2, 51.2], ["SCHWEIZ", 8.2, 46.85],
     ["ÖSTERREICH", 14.2, 47.6], ["PORTUGAL", -8.0, 39.6], ["ΕΛΛΆΔΑ", 22.0, 39.3], ["MAGYARORSZÁG", 19.4, 47.1], ["ROMÂNIA", 24.9, 45.9],
     ["БЪЛГАРИЯ", 25.3, 42.7], ["HRVATSKA", 16.0, 45.5], ["SLOVENIJA", 14.8, 46.1], ["ČESKO", 15.4, 49.8], ["SLOVENSKO", 19.6, 48.7],
-    ["UNITED KINGDOM", -2.0, 53.0], ["BELGIQUE", 4.6, 50.6], ["NEDERLAND", 5.6, 52.2], ["DANMARK", 9.3, 56.1], ["UNITED STATES", -98.5, 39.5]];
+    ["UNITED KINGDOM", -2.0, 53.0], ["BELGIQUE", 4.6, 50.6], ["NEDERLAND", 5.6, 52.2], ["DANMARK", 9.3, 56.1], ["UNITED STATES", -98.5, 39.5],
+    // the label font covers Latin, Greek and Cyrillic: other scripts are transliterated
+    ["AUSTRALIA", 134, -25], ["NEW ZEALAND", 172.5, -41.5], ["SOUTH AFRICA", 24, -30], ["CHILE", -71.3, -30.5], ["ARGENTINA", -65, -36],
+    ["BRASIL", -51, -12], ["URUGUAY", -56, -32.8], ["CANADA", -100, 56], ["MÉXICO", -102, 24], ["SAKARTVELO", 43.5, 42.2],
+    ["MOLDOVA", 28.5, 47.2], ["УКРАЇНА", 31.5, 49], ["HAYASTAN", 45, 40.3], ["TÜRKIYE", 35, 39], ["ISRAEL", 34.9, 31.0],
+    ["LEBANON", 35.9, 34.0], ["СРБИЈА", 20.8, 44.0], ["МАКЕДОНИЈА", 21.7, 41.6], ["CRNA GORA", 19.3, 42.8],
+    ["BOSNA I HERCEGOVINA", 17.8, 44.2], ["NIHON", 138, 37], ["ZHONGGUO", 104, 35], ["BHARAT", 79, 22]];
   map.addSource("country-pts", { type: "geojson", data: { type: "FeatureCollection", features: pts.map(([n, x, y]) => ({ type: "Feature", properties: { n }, geometry: { type: "Point", coordinates: [x, y] } })) } });
   map.addLayer({ id: "country-labels", type: "symbol", source: "country-pts", maxzoom: 7.5,
     layout: { "text-field": ["get", "n"], "text-font": ["noto-medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 7, 15],
@@ -600,9 +639,18 @@ function addOverview() {
   map.addSource("ov", { type: "vector", url: pmUrl("overview.pmtiles"), promoteId: "id" });
   // For INAO appellations the parcel-level files take over from zoom 10.5
   const frHide = ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]];
+  // outside the EU and the US many outlines are built from administrative units ("approx"): drawn dashed
+  const APPROX = ["==", ["get", "ol"], "approx"], POINT = ["==", ["geometry-type"], "Point"];
   add({ id: "ov-fill", type: "fill", source: "ov", "source-layer": "appellations", filter: frHide,
     paint: { "fill-color": rankColor, "fill-opacity": fillOpacityByLevel(["case", ["in", ["get", "rank"], ["literal", TOP]], 0.07, INAO, 0.02, 0.025]) } }, "app");
-  add({ id: "ov-line", type: "line", source: "ov", "source-layer": "appellations", filter: frHide,
+  add({ id: "ov-line-approx", type: "line", source: "ov", "source-layer": "appellations", filter: APPROX,
+    paint: { "line-color": rankColor, "line-opacity": zstate([[3, 0.35], [8, 0.6]], 1, 0.95),
+      "line-width": zstate([[3, 0.5], [8, 0.9], [12, 1.4]], 2.2), "line-dasharray": [3, 2] } }, "app");
+  add({ id: "ov-pts", type: "circle", source: "ov", "source-layer": "appellations", filter: POINT,
+    paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, ["case", SEL, 5, 2.4], 9, ["case", SEL, 7, ["==", ["get", "level"], "subzone"], 3.6, 4.6], 13, ["case", SEL, 9, 6]],
+      "circle-color": ["case", ["==", ["get", "level"], "subzone"], C.copper, C.parchment], "circle-opacity": ["case", SEL, 1, HOV, 1, 0.85],
+      "circle-stroke-color": ["case", SEL, C.focus, C.night], "circle-stroke-width": ["case", SEL, 2, 1] } }, "app");
+  add({ id: "ov-line", type: "line", source: "ov", "source-layer": "appellations", filter: ["all", frHide, ["!", APPROX]],
     paint: { "line-color": rankColor,
       // French appellations overlap many times (regional, village, crémant…): draw them lighter
       "line-opacity": zstate([[4, ["case", INAO, 0.14, 0.28]], [8, ["case", INAO, 0.34, 0.55]]], 1, 0.95),
@@ -612,8 +660,20 @@ function addOverview() {
     layout: { "text-field": ["get", "name"], "text-font": ["noto-medium"],
       "text-size": ["interpolate", ["linear"], ["zoom"], 5, ["case", ["==", ["get", "level"], "region"], 12, 10.5], 10, 12.5],
       "text-letter-spacing": 0.06, "text-transform": "uppercase", "text-max-width": 8, "text-padding": 4,
+      "text-anchor": ["case", ["==", ["get", "ol"], "point"], "top", "center"],
+      "text-offset": ["case", ["==", ["get", "ol"], "point"], ["literal", [0, 0.7]], ["literal", [0, 0]]],
       "symbol-sort-key": ["-", 0, ["get", "ha"]] },
     paint: { "text-color": ["case", ["in", ["get", "rank"], ["literal", TOP]], C.gold, "#cbbfa9"], "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.4 } }, "app");
+}
+
+function addOverviewLow() {
+  map.addSource("ovlo", { type: "vector", url: pmUrl("overview-lo.pmtiles"), maxzoom: 1 });
+  add({ id: "lo-line", type: "line", source: "ovlo", "source-layer": "appellations", maxzoom: 2,
+    paint: { "line-color": rankColor, "line-opacity": 0.5, "line-width": 0.5 } }, "app");
+  add({ id: "lo-pts", type: "circle", source: "ovlo", "source-layer": "appellations", maxzoom: 2, filter: ["==", ["geometry-type"], "Point"],
+    paint: { "circle-radius": 1.6, "circle-color": C.parchment, "circle-opacity": 0.7 } }, "app");
+  ["lo-line", "lo-pts"].forEach((l) => map.moveLayer(l, "ov-fill"));
+  applyLegend();
 }
 
 function addDetail(file) {
@@ -1006,15 +1066,15 @@ async function fillClimate(p, d, rec, token, terrain) {
     const b = box();
     if (!b || !c.years.length) { if (b) b.remove(); return; }
     noteFacts(p.id, "climate", c);
-    const N = c.normal, band = gstBand(N.gst);
+    const N = c.normal, band = gstBand(N.gst), S = pt[0] < 0;
     let lede = (/^[aeiou]/.test(band[1]) ? "An " : "A ") + band[1] + " climate for wine: the growing season averages " + fmtN(N.gst, 1) + " °C (" + winkler(N.gdd) + ", Huglin " + fmtN(N.hi) + ", " + huglinClass(N.hi) + ").";
     if (c.trend != null) lede += " The last ten seasons ran " + (c.trend >= 0 ? fmtN(c.trend, 1) + " °C warmer" : fmtN(-c.trend, 1) + " °C cooler") + " than the 1990s.";
     if (band[2]) lede += " Typical match: " + band[2] + ".";
     const rows = [
-      ["Growing season mean", fmtN(N.gst, 1) + " °C", "Apr–Oct"], ["Growing degree days", fmtN(N.gdd) + " °C·d", winkler(N.gdd) + " (Winkler)"],
-      ["Huglin index", fmtN(N.hi), huglinClass(N.hi)], ["Rain, growing season", fmtN(N.rain) + " mm", ""], ["Harvest-month rain", fmtN(N.sep) + " mm", "Sep"],
+      ["Growing season mean", fmtN(N.gst, 1) + " °C", S ? "Oct–Apr" : "Apr–Oct"], ["Growing degree days", fmtN(N.gdd) + " °C·d", winkler(N.gdd) + " (Winkler)"],
+      ["Huglin index", fmtN(N.hi), huglinClass(N.hi)], ["Rain, growing season", fmtN(N.rain) + " mm", ""], ["Harvest-month rain", fmtN(N.sep) + " mm", S ? "Mar" : "Sep"],
       ["Sunshine, growing season", fmtN(N.sun) + " h", ""], ["Days above 30 °C", fmtN(N.hot30), "per season"], ["Days above 35 °C", fmtN(N.hot35, 1), "per season"],
-      ["Spring frost days", fmtN(N.frost, 1), "Apr–May, ≤ −1 °C"], ["Cool nights", N.night != null ? fmtN(N.night, 1) + " °C" : "–", "mean Sep minimum"],
+      ["Spring frost days", fmtN(N.frost, 1), (S ? "Oct–Nov" : "Apr–May") + ", ≤ −1 °C"], ["Cool nights", N.night != null ? fmtN(N.night, 1) + " °C" : "–", "mean " + (S ? "Mar" : "Sep") + " minimum"],
     ];
     b.innerHTML = '<h3>Climate · 1991–2020 <button class="q" data-gloss="climate" aria-label="About this data">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + esc(lede) + "</p>" +
@@ -1024,7 +1084,10 @@ async function fillClimate(p, d, rec, token, terrain) {
       '<div class="note" style="margin:10px 0 4px">Rain in the growing season per vintage (mm).</div>' +
       barChart(c.years, (y) => y.rain, { label: "Growing season rain per vintage", fmt: (v) => fmtN(v) + " mm", ref: N.rain, min: 0, cls: "rain" }) +
       '<p class="note">ERA5-Land reanalysis via <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), about 9 km cells' +
-      (terrain ? ", adjusted to the measured mean elevation of " + fmtN(terrain.mean) + " m" : "") + ". It describes the area, not one row of vines.</p>";
+      (terrain ? ", adjusted to the measured mean elevation of " + fmtN(terrain.mean) + " m" : "") + ". It describes the area, not one row of vines." +
+      (S ? " Southern hemisphere: the season runs October to April and a vintage is named after its harvest year." : "") + "</p>" +
+      '<div id="twins-box"><button class="link-btn" data-twins>Compare with wine regions worldwide</button></div>';
+    b._c = c; b._p = p;
     const v = token === sheetToken ? $("vint-clim") : null;
     if (v) { v.innerHTML = "<h4 class=\"sub\">Vintage climate here</h4>" + climateTable(c); v.dataset.ready = "1"; v._c = c; }
   } catch (e) {
@@ -1035,6 +1098,79 @@ async function fillClimate(p, d, rec, token, terrain) {
     if (v) v.innerHTML = "";
   }
 }
+// ---------- climate twins: the same recent seasons at benchmark wine regions on every continent
+// One request per batch of benchmarks, cached in the browser for 30 days. Same data and years as the place itself.
+const BENCH = [
+  ["FR", "Margaux", 45.04, -0.67], ["FR", "Pauillac", 45.20, -0.75], ["FR", "Saint-Émilion", 44.89, -0.16], ["FR", "Chablis", 47.81, 3.80],
+  ["FR", "Gevrey-Chambertin", 47.23, 4.97], ["FR", "Meursault", 46.98, 4.77], ["FR", "Champagne", 49.04, 3.96], ["FR", "Côte-Rôtie", 45.48, 4.80],
+  ["FR", "Châteauneuf-du-Pape", 44.06, 4.83], ["FR", "Sancerre", 47.33, 2.84], ["FR", "Alsace", 48.08, 7.30],
+  ["IT", "Barolo", 44.61, 7.94], ["IT", "Brunello di Montalcino", 43.06, 11.49], ["IT", "Chianti Classico", 43.50, 11.30], ["IT", "Bolgheri", 43.22, 10.61],
+  ["IT", "Etna", 37.78, 15.08], ["IT", "Valpolicella", 45.53, 10.90], ["ES", "Rioja", 42.55, -2.75], ["ES", "Ribera del Duero", 41.63, -3.95],
+  ["ES", "Priorat", 41.20, 0.80], ["ES", "Rías Baixas", 42.40, -8.70], ["ES", "Jerez-Xérès-Sherry", 36.69, -6.13], ["PT", "Douro", 41.17, -7.55],
+  ["DE", "Mosel", 49.92, 7.05], ["DE", "Rheingau", 50.00, 8.05], ["AT", "Wachau", 48.38, 15.43], ["HU", "Tokaj", 48.12, 21.41],
+  ["GR", "Santorini", 36.41, 25.43], ["CH", "Valais", 46.23, 7.36], ["US", "Napa Valley", 38.43, -122.40], ["US", "Russian River Valley", 38.50, -122.88],
+  ["US", "Willamette Valley", 45.20, -123.05], ["US", "Paso Robles", 35.63, -120.69], ["US", "Finger Lakes", 42.60, -76.90],
+  ["AU", "Barossa Valley", -34.53, 138.95], ["AU", "McLaren Vale", -35.22, 138.54], ["AU", "Coonawarra", -37.29, 140.83], ["AU", "Margaret River", -33.95, 115.07],
+  ["AU", "Yarra Valley", -37.70, 145.45], ["AU", "Tasmania", -41.40, 147.10], ["AU", "Clare Valley", -33.83, 138.60], ["AU", "Hunter", -32.78, 151.30],
+  ["NZ", "Marlborough", -41.52, 173.85], ["NZ", "Central Otago", -45.03, 169.20], ["NZ", "Hawke's Bay", -39.60, 176.80], ["NZ", "Martinborough", -41.22, 175.46],
+  ["ZA", "Stellenbosch", -33.93, 18.86], ["ZA", "Swartland", -33.40, 18.75], ["ZA", "Walker Bay", -34.40, 19.25], ["AR", "Luján de Cuyo", -33.05, -68.90],
+  ["AR", "Valle de Uco", -33.70, -69.20], ["AR", "Cafayate - Valle de Cafayate", -26.07, -65.97], ["CL", "Valle del Maipo", -33.65, -70.70],
+  ["CL", "Valle de Colchagua", -34.65, -71.25], ["CL", "Valle de Casablanca", -33.32, -71.41], ["UY", "Metropolitana", -34.55, -56.28],
+  ["CA", "Niagara Peninsula", 43.15, -79.30], ["CA", "Okanagan Valley", 49.70, -119.58], ["GE", "Tsinandali", 41.89, 45.57], ["LB", "Bekaa Valley", 33.85, 35.90],
+  ["CN", "Helan Mountain East (Ningxia)", 38.45, 106.00], ["JP", "Yamanashi", 35.66, 138.63],
+];
+const TWIN_YEARS = [2020, 2024];
+let BENCH_CLIM = null;
+function loadBench() {
+  if (BENCH_CLIM) return BENCH_CLIM;
+  const KEY = "owa-bench-v1";
+  try { const c = JSON.parse(localStorage.getItem(KEY) || "null"); if (c && Date.now() - c.t < 30 * 864e5 && c.v.length === BENCH.length) return (BENCH_CLIM = Promise.resolve(c.v)); } catch (e) {}
+  BENCH_CLIM = (async () => {
+    const out = [];
+    for (let i = 0; i < BENCH.length; i += 16) {
+      const part = BENCH.slice(i, i + 16);
+      const url = "https://archive-api.open-meteo.com/v1/archive?latitude=" + part.map((b) => b[2]).join(",") + "&longitude=" + part.map((b) => b[3]).join(",") +
+        "&start_date=" + (TWIN_YEARS[0] - 1) + "-10-01&end_date=" + TWIN_YEARS[1] + "-10-31&daily=temperature_2m_max,temperature_2m_mean,precipitation_sum&timezone=GMT";
+      const r = await fetch(url);
+      if (!r.ok) throw new Error("benchmarks " + r.status);
+      let j = await r.json();
+      if (!Array.isArray(j)) j = [j];
+      j.forEach((x, k) => out.push(twinStats(computeClimate(x, part[k][2]))));
+    }
+    try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: out })); } catch (e) {}
+    return out;
+  })().catch((e) => { BENCH_CLIM = null; throw e; });
+  return BENCH_CLIM;
+}
+function twinStats(c) {
+  const ys = c.years.filter((y) => y.year >= TWIN_YEARS[0] && y.year <= TWIN_YEARS[1]);
+  if (!ys.length) return null;
+  const m = (f) => ys.reduce((s, y) => s + y[f], 0) / ys.length;
+  return { gst: m("gst"), gdd: m("gdd"), rain: m("rain"), hot30: m("hot30") };
+}
+async function showTwins() {
+  const box = $("twins-box"), cb = $("climate-sec");
+  if (!box || !cb || !cb._c) return;
+  const me = twinStats(cb._c), p = cb._p;
+  if (!me) { box.innerHTML = '<p class="note">Not enough recent seasons here to compare.</p>'; return; }
+  box.innerHTML = '<div class="note terrain-wait"><i></i>Reading the same seasons at ' + BENCH.length + " wine regions…</div>";
+  try {
+    const bench = await loadBench();
+    const rows = BENCH.map((b, k) => ({ cc: b[0], name: b[1], s: bench[k] })).filter((r) => r.s && norm(r.name) !== norm(p.name));
+    const dist = (s) => Math.hypot((s.gst - me.gst) / 0.8, (s.rain - me.rain) / 220, (s.hot30 - me.hot30) / 12);
+    rows.sort((a, b) => dist(a.s) - dist(b.s));
+    const warmer = rows.filter((r) => r.s.gst < me.gst).length;
+    const rec = (r) => { const c = (byName.get(norm(r.name)) && byName.get(norm(r.name))[2] === r.cc) ? byName.get(norm(r.name)) : INDEX.find((x) => x[2] === r.cc && norm(x[0]) === norm(r.name)); return c; };
+    box.innerHTML = '<h4 class="sub">Climate twins, ' + TWIN_YEARS[0] + "–" + TWIN_YEARS[1] + "</h4>" +
+      '<p class="note">Warmer than ' + warmer + " of " + rows.length + " benchmark regions over the same seasons (" + fmtN(me.gst, 1) + " °C, " + fmtN(me.rain) + " mm). Closest in warmth, rain and heat days:</p>" +
+      '<div class="twins">' + rows.slice(0, 6).map((r) => { const x = rec(r); return "<button" + (x ? ' data-goto="' + esc(x[1]) + '"' : " disabled") + "><span>" + esc(r.name) + ' <span class="note">· ' + esc(COUNTRY_EN[r.cc] || r.cc) + '</span></span><span class="r">' + sign(r.s.gst - me.gst) + " °C · " + fmtN(r.s.rain) + " mm</span></button>"; }).join("") + "</div>" +
+      '<p class="note">Same ERA5-Land data at each benchmark centre (no elevation adjustment). Climate is one part of terroir: soils, slope and the grower matter as much.</p>';
+  } catch (e) {
+    console.warn("twins", e);
+    box.innerHTML = '<p class="note">The climate service could not be reached right now. Try again in a minute.</p>';
+  }
+}
+document.addEventListener("click", (e) => { if (e.target.closest("[data-twins]")) showTwins(); });
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-vsort]");
   if (!b) return;
@@ -1194,7 +1330,7 @@ function nextIdle() {
 // every outline fragment of the place in the loaded vector tiles (parcel-level files win over the overview)
 function geometryFor(id) {
   const detail = [], ov = [];
-  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi").map(([k]) => k);
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi" && k !== "ovlo").map(([k]) => k);
   for (const s of srcs) for (const sl of ["appellations", "crus", "grosslagen"]) {
     let fs = [];
     try { fs = map.querySourceFeatures(s, { sourceLayer: sl, filter: ["==", ["get", "id"], id] }); } catch (e) {}
@@ -1343,6 +1479,11 @@ function terrainSentence(t) {
 
 async function fillTerrain(p, token) {
   const el = () => (token === sheetToken ? $("terrain-sec") : null);
+  if (CURRENT && CURRENT.p.id === p.id && CURRENT.d.outline_quality === "point") {
+    const box = el();
+    if (box) box.innerHTML = '<h3>Terrain</h3><p class="note">This place is a marker without an outline, so there is no area to measure. Climate and soil are read at the marker.</p>';
+    return null;
+  }
   try {
     await nextIdle();
     const t = await measureTerrain(p.id);
@@ -1361,7 +1502,7 @@ async function fillTerrain(p, token) {
       rows.push(["Faces", esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : "mixed") +
         ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>"]);
     }
-    if (fine && t.sun != null) rows.push(["Sun on the ground", '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">of flat ground, Apr–Oct, clear sky</span>']);
+    if (fine && t.sun != null) rows.push(["Sun on the ground", '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">of flat ground, ' + ((byId.get(p.id)?.[6]?.[1] ?? 0) < 0 ? "Oct–Apr" : "Apr–Oct") + ", clear sky</span>"]);
     const cls = ["Flat, under 3°", "Gentle, 3–8°", "Moderate, 8–15°", "Steep, 15–25°", "Very steep, 25°+"];
     box.innerHTML = '<h3>Terrain <button class="q" data-gloss="terrain" aria-label="About this data">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + terrainSentence(t) + "</p>" +
@@ -1440,7 +1581,7 @@ function clearSelected() {
 }
 function markSelected(id) {
   clearSelected();
-  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi").map(([k]) => k);
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi" && k !== "ovlo").map(([k]) => k);
   selected = [];
   srcs.forEach((s) => ["appellations", "crus", "grosslagen"].forEach((sl) => {
     const f = { source: s, sourceLayer: sl, id };
@@ -1485,13 +1626,16 @@ async function select(p, feature) {
   }
 }
 function fitTo(b, level) {
-  const maxZ = { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
+  const maxZ = b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9 }[level] || 13;
   const wide = innerWidth > 760;
   map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 380 : 30, right: wide ? 420 : 30 }, maxZoom: maxZ, duration: 1400, essential: true });
 }
 
-function badgeFor(p) {
+const worldType = (p, d) => (/-world-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
+function badgeFor(p, d) {
   const g = (k) => ' <button class="q" data-gloss="' + k + '" aria-label="What does this mean?">?</button>';
+  const wt = worldType(p, d);
+  if (wt) return '<span class="badge std">' + esc(wt) + "</span>" + g(d.outline_quality === "legal" ? "gi" : "outline");
   if (TOP.includes(p.rank)) return '<span class="badge top">' + esc(RANK_LABEL[p.rank]) + "</span>" + g(p.rank);
   if (p.rank === "premier_cru") return '<span class="badge pc">Premier cru</span>' + g("premier_cru");
   if (p.country === "DE" && p.level === "vineyard") return '<span class="badge de">Einzellage</span>' + g("einzellage");
@@ -1513,7 +1657,7 @@ const fmtList = (a) => a.length <= 2 ? a.join(" and ") : a.slice(0, -1).join(", 
 
 function summary(p, d, pd) {
   const kind = !RANK_LABEL[p.rank] ? "" : p.rank.endsWith("_cru") ? RANK_LABEL[p.rank].toLowerCase() : RANK_LABEL[p.rank];
-  const lvl = { region: "wine region", appellation: "appellation", subzone: "named sub-zone", vineyard: p.country === "DE" ? "registered vineyard site (Einzellage)" : "climat" }[p.level] || "place";
+  const lvl = worldType(p, d) || { region: "wine region", appellation: "appellation", subzone: "named sub-zone", vineyard: p.country === "DE" ? "registered vineyard site (Einzellage)" : "climat" }[p.level] || "place";
   let t = esc(p.name) + " is " + (/^[aeiou]/i.test(kind || lvl) && !/^(DOC|DOCa|DOCG)/.test(kind) ? "an " : "a ") + (kind ? kind + " " : "") + lvl;
   if (p.parent) t += " of " + esc(p.parent);
   t += " in " + esc(COUNTRY_EN[p.country] || p.country);
@@ -1553,26 +1697,27 @@ function wineTable(wines) {
 let sheetToken = 0;
 function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   sheetToken++;
-  const src = SOURCES[p.src] || {};
+  const src = SOURCES[p.src === "world" ? (d.outline_quality === "point" ? "marker" : p.country === "AU" && d.state ? "wa" : "geob") : p.src] || {};
   $("sh-head").innerHTML =
     '<div class="eyebrow"><span>' + esc(COUNTRY[p.country] || p.country) + "</span><span>·</span><span>" + esc(d.type || LEVEL_LABEL[p.level]) + "</span></div>" +
-    "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p) + "</div>" +
+    "<h2>" + esc(p.name) + "</h2><div>" + badgeFor(p, d) + "</div>" +
     (p.parent ? '<div class="crumbs">Part of ' + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
       (d.grosslage ? " · Großlage " + esc(d.grosslage) : "") + "</div>" : "");
   CURRENT = { p, d, rec };
   $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
   let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
+  if (d.outline) html += '<p class="ol-note"><b>' + ({ legal: "Outline.", approx: "Approximate outline.", point: "Location only." }[d.outline_quality] || "Outline.") + "</b> " + esc(d.outline) + ' <button class="q" data-gloss="outline" aria-label="How outlines are drawn">?</button></p>';
   if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">Atlas note</div><p>' + esc(d.atlas_note) + '</p><div class="an-f">Editorial summary. Check the official specification before you rely on it.</div></div>';
 
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  if (area != null) rows.push(["Area", '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">outline of listed communes</span>' : "")]);
+  if (area != null) rows.push(["Area", '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + (d.admin_units ? "outline of the administrative units" : d.outline_quality ? "registered outline" : "outline of listed communes") + "</span>" : "")]);
   if (d.share_of_parent) rows.push(["Share of " + esc(p.parent), '<span class="num">' + d.share_of_parent + " %</span>"]);
   if (d.share_of_grosslage) rows.push(["Share of Großlage", '<span class="num">' + d.share_of_grosslage + " %</span>"]);
   if (d.plots > 1) rows.push(["Separate plots", '<span class="num">' + d.plots + "</span>"]);
   if (d.extent_km) rows.push(["Extent N–S × E–W", '<span class="num">' + fmtN(d.extent_km[0], 2) + " × " + fmtN(d.extent_km[1], 2) + " km</span>"]);
-  if (d.lat) rows.push(["Centre", '<span class="num">' + d.lat.toFixed(4) + "° N, " + Math.abs(d.lon).toFixed(4) + "° " + (d.lon < 0 ? "W" : "E") + "</span>"]);
+  if (d.lat) rows.push([d.outline_quality === "point" ? "Location" : "Centre", '<span class="num">' + Math.abs(d.lat).toFixed(4) + "° " + (d.lat < 0 ? "S" : "N") + ", " + Math.abs(d.lon).toFixed(4) + "° " + (d.lon < 0 ? "W" : "E") + "</span>"]);
   const reg = d.registered || pd.registered;
   if (reg) rows.push(["Protected since", '<span class="num">' + esc(String(reg).slice(0, 10)) + "</span>" + (d.registered ? "" : ' <span class="note">appellation</span>')]);
   if (d.category) rows.push(["Wine types", esc(String(d.category).replace(/, /g, " · "))]);
@@ -1592,6 +1737,10 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.official_name && d.official_name !== p.name) rows.push(["Official name", esc(d.official_name)]);
   if (d.aka) rows.push(["Also known as", esc(d.aka)]);
   if (d.states?.length) rows.push(["State", esc(d.states.join(", "))]);
+  if (d.state) rows.push(["State", esc(d.state)]);
+  if (d.register_ref) rows.push(["Legal act", esc(d.register_ref)]);
+  if (d.basis) rows.push(["Legal basis", esc(d.basis)]);
+  if (d.outline_source) rows.push(["Outline data", esc(d.outline_source.name) + ' <span class="note">· ' + esc(d.outline_source.licence) + "</span>"]);
   if (d.counties?.length) rows.push(["County", esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " and " + (d.counties.length - 12) + " more" : ""))]);
   if (d.within?.length) rows.push(["Within", d.within.map((w) => { const r = byName.get(norm(w)); return r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(w) + "</button>" : esc(w); }).join(", ")]);
   if (d.petitioner) rows.push(["Petitioned by", esc(d.petitioner)]);
@@ -1645,6 +1794,11 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
       '</div><p class="note">From OpenStreetMap, edited by volunteers. Missing a producer? Add it there or suggest it here.</p></div>';
   }
 
+  // registered inside, not yet mapped (Argentine parajes), and Australian GIs inside
+  if (d.also_registered?.length) html += '<div class="sec"><h3>Also registered inside · ' + d.also_registered.length + '</h3><div class="communes">' + d.also_registered.map(esc).join(", ") +
+    '</div><p class="note">Registered GIs inside this one that are not mapped yet.</p></div>';
+  if (d.admin_units?.length) html += '<div class="sec"><h3>Administrative units · ' + d.admin_units.length + '</h3><div class="communes">' + d.admin_units.slice(0, 80).map(esc).join(", ") +
+    (d.admin_units.length > 80 ? " and " + (d.admin_units.length - 80) + " more" : "") + "</div></div>";
   // communes (France, Italy, Spain)
   if (d.communes && d.communes.length && !d.gemarkungen) {
     html += '<div class="sec"><h3>Communes · ' + d.communes.length + '</h3><div class="communes">' + d.communes.slice(0, 80).map(esc).join(", ") +
@@ -1729,6 +1883,8 @@ document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search
 
 // ---------- country chips, legend
 document.querySelectorAll(".chip[data-c]").forEach((b) => b.onclick = () => {
+  // the whole world only fits at the lowest zoom: centre it beside the panel
+  if (b.dataset.c === "WORLD") { map.flyTo({ center: [innerWidth > 760 ? -10 : 20, 12], zoom: innerWidth > 1100 ? 1.2 : 1, duration: 1300 }); return; }
   const v = VIEWS[b.dataset.c];
   map.fitBounds(v, { padding: { top: 40, bottom: 40, left: innerWidth > 760 ? 370 : 20, right: 20 }, duration: 1300 });
 });
@@ -1746,9 +1902,7 @@ function applyLegend() {
   const rankFilter = on("app") && on("top") ? null : on("top") ? ["in", ["get", "rank"], ["literal", TOP]] : ["!", ["in", ["get", "rank"], ["literal", TOP]]];
   LAYERS.filter(([, g]) => g === "app").forEach(([id]) => {
     if (!map.getLayer(id)) return;
-    const baseF = id.startsWith("ov-") && id !== "ov-labels" ? ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]] :
-      id === "ov-labels" ? ["any", ["!=", ["get", "src"], "inao"], ["<", ["zoom"], 10.5]] : null;
-    const parts = [baseF, rankFilter].filter(Boolean);
+    const parts = [BASEF[id], rankFilter].filter(Boolean);
     map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
   });
 }
@@ -1769,10 +1923,12 @@ const GLOSS = {
   pago: ["Vino de Pago", "A Spanish appellation for a single estate with a distinctive terroir. The estate itself is the appellation."],
   einzellage: ["Einzellage", "A registered single vineyard in Germany. On the label it follows the village name in adjectival form: Wehlener Sonnenuhr is the Sonnenuhr site of Wehlen. The VDP growers' association uses its own private ranking (Grosse Lage, Erste Lage), which is separate from this official register."],
   grosslage: ["Großlage", "A group of neighbouring Einzellagen that may share one name on the label, such as Piesporter Michelsberg. Because it reads like a single site it is often criticised, and recent German wine law limits how it can be used."],
-  climate: ["Climate", "Daily weather from 1991 to 2025 for the centre of the place, from the ERA5-Land reanalysis (about 9 km cells) served by Open-Meteo, adjusted to the measured elevation. Growing season means April to October in the northern hemisphere. Growing degree days (Winkler) add up each day's mean above 10 °C. The Huglin index weights daytime warmth from April to September and the latitude. Typical grape matches follow the growing season temperature bands of Gregory Jones (2006). A vintage's warmth rank compares it with all seasons since 1991."],
+  climate: ["Climate", "Daily weather from 1991 to 2025 for the centre of the place, from the ERA5-Land reanalysis (about 9 km cells) served by Open-Meteo, adjusted to the measured elevation. Growing season means April to October in the northern hemisphere and October to April in the southern, where a vintage is named after its harvest year. Growing degree days (Winkler) add up each day's mean above 10 °C. The Huglin index weights daytime warmth from April to September (October to March in the south) and the latitude. Climate twins compare the last five seasons with benchmark wine regions on every continent. Typical grape matches follow the growing season temperature bands of Gregory Jones (2006). A vintage's warmth rank compares it with all seasons since 1991."],
   soil: ["Soil", "Soil texture (sand, silt, clay), pH, stones and organic carbon from SoilGrids 2.0 by ISRIC, a global soil model at 250 m. Topsoil is 0 to 30 cm, subsoil 30 to 100 cm. Vineyard soils change over a few metres, so treat this as the soil family of the area, then check local soil maps."],
   ava: ["AVA", "American Viticultural Area: a grape-growing region defined by the US Alcohol and Tobacco Tax and Trade Bureau (TTB) in 27 CFR part 9. If an AVA appears on the label, at least 85% of the grapes come from it. AVAs can sit inside larger AVAs, like Oakville inside Napa Valley."],
   terrain: ["Terrain", "Elevation, slope and aspect are measured live from open elevation models served by Mapterhorn: IGN RGE ALTI in France, DGM1 lidar in Germany, swissALTI3D in Switzerland, IGN MDT in Spain, regional models in parts of Italy, and Copernicus GLO-30 (30 m) elsewhere. Slope uses the Horn method on each cell. Aspect is the compass direction the ground faces, counted only where the slope is 2° or more. The rose shows how much of the place faces each direction. For a large appellation the cells are coarse, so read slope and aspect on single vineyards."],
+  gi: ["Geographical indication (GI)", "Outside the EU most wine names are protected as geographical indications: Wine Australia GIs (zones, regions, subregions), New Zealand registered GIs, South Africa's Wine of Origin units (regions, districts, wards), Chilean DOs, Argentine IGs and DOCs, Brazilian IPs and DOs, Canada's VQA areas. They protect where the grapes come from; most set few or no rules on grapes or yields."],
+  outline: ["How outlines are drawn outside the EU", "Few countries publish their wine boundaries as open data. Where the law defines a place by administrative units (Chilean comunas, Argentine departments, Japanese prefectures, Moldovan raions) the outline is the union of those units. Where the legal line follows roads, rivers, farms or altitude, the units only approximate it: the outline is dashed and larger than the real area. Places much smaller than any unit, like South African wards or Mendoza parajes, are shown as a dot at the town they are named after."],
   bedrock: ["Regional bedrock", "Rock type under the place, sampled from the Global Lithological Map by Hartmann and Moosdorf (2012). The map works at about 1:3.75 million, so it shows the geology of the wider area. Local soils, such as the marl and limestone mosaic of a Burgundy slope, can differ."],
 };
 function openGloss(key) {
@@ -1786,12 +1942,14 @@ function openGuide() {
   openModal("<h2>How to read the atlas</h2>" +
     "<p>Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.</p>" +
     "<h3>Levels</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
-    "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage"]) +
+    "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage", "gi"]) +
     "<h3>How precise is each layer</h3><dl class=\"gloss\">" +
     "<dt>France</dt><dd>Official INAO parcel delimitation, dated 31 August 2026. Exact to the cadastral parcel. Champagne and a few others are shown by commune.</dd>" +
     "<dt>Italy and Spain</dt><dd>Appellation outlines built from the communes named in each specification. Single vineyards (MGA, paratges, viñedos singulares) are not mapped yet.</dd>" +
     "<dt>Germany</dt><dd>Official Einzellagen for Mosel, Rheinhessen, Pfalz, Nahe, Mittelrhein and Ahr (register of 6 October 2021). Other regions by outline only.</dd>" +
     "<dt>Switzerland</dt><dd>Swiss AOCs are defined canton by canton, so the canton boundary stands in for the appellation until the cantonal vineyard cadastres are added.</dd>" +
+    "<dt>United States</dt><dd>Every AVA from the legal descriptions in 27 CFR part 9, digitised by the UC Davis Library.</dd>" +
+    "<dt>Rest of the world</dt><dd>" + esc(GLOSS.outline[1]) + " Australia uses the Wine Australia GI outlines.</dd>" +
     "<dt>Wine rules</dt><dd>Grapes, yields and planting density from the EU product specifications, compiled by Candiago et al. (2022). Always check the current specification for legal use.</dd>" +
     (WEB ? "<dt>Terrain</dt><dd>" + esc(GLOSS.terrain[1]) + "</dd>" : "") +
     "<dt>Bedrock and wineries</dt><dd>" + esc(GLOSS.bedrock[1]) + " Wineries come from OpenStreetMap and are as complete as its volunteers made them.</dd></dl>");
@@ -1812,7 +1970,9 @@ function openData() {
     '<div class="tbl"><table><tr><th>Layer</th><th>Source</th><th>Licence</th></tr>' +
     [["France: AOC, premiers crus, climats (parcel level)", "inao"], ["Italy, Spain, Germany and 17 more EU countries: PDO outlines (communes)", "eupdo"],
      ["Germany: Einzellagen and Großlagen", "rlp"], ["Switzerland: cantonal AOC outlines", "bfs"], ["Wineries, Swiss vineyards, rivers, lakes", "osm"]]
-      .concat([["United States: AVAs", "ava"]])
+      .concat([["United States: AVAs", "ava"], ["Australia: GI zones, regions and subregions", "wa"],
+        ["New Zealand, South Africa, Chile, Argentina, Brazil, Canada, Japan and 16 more: outlines from administrative units", "geob"],
+        ["Small GIs without an open boundary: markers", "marker"]])
       .concat(WEB ? [["Relief, elevation, slope and aspect", "dem"], ["Climate and vintage weather", "meteo"], ["Soil", "soil"], ["Satellite map", "eox"], ["Topographic map", "otm"]] : [])
       .map(([l, k]) => "<tr><td>" + l + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
     "</table></div>" +
@@ -2138,7 +2298,7 @@ function dashCompare() {
     ["Growing season mean", (s) => s.climate ? fmtN(s.climate.gst, 1) + " °C" : null, (s) => s.climate?.gst],
     ["Degree days (Winkler)", (s) => s.climate ? fmtN(s.climate.gdd) : null, (s) => s.climate?.gdd],
     ["Huglin index", (s) => s.climate ? fmtN(s.climate.hi) : null, (s) => s.climate?.hi],
-    ["Rain Apr–Oct", (s) => s.climate ? fmtN(s.climate.rain) + " mm" : null, (s) => s.climate?.rain],
+    ["Rain, growing season", (s) => s.climate ? fmtN(s.climate.rain) + " mm" : null, (s) => s.climate?.rain],
     ["Days above 30 °C", (s) => s.climate ? fmtN(s.climate.hot30, 1) : null, (s) => s.climate?.hot30],
     ["Spring frost days", (s) => s.climate ? fmtN(s.climate.frost, 1) : null, (s) => s.climate?.frost],
     ["Warming since the 1990s", (s) => s.climate?.trend != null ? sign(s.climate.trend) + " °C" : null, (s) => s.climate?.trend],
@@ -2302,7 +2462,9 @@ map.on("load", async () => {
     showLoading("Loading appellations…");
     await loadArchive("overview.pmtiles");
     addOverview();
-    bindHover(["ov-fill"]);
+    // the whole world at zoom 1: a light copy of every outline and marker
+    loadArchive("overview-lo.pmtiles").then(addOverviewLow).catch((e) => console.warn("overview-lo", e));
+    bindHover(["ov-fill", "ov-pts"]);
     hideLoading();
     showLoading("Loading wineries…");
     await loadArchive("poi.pmtiles");

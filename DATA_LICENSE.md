@@ -14,7 +14,10 @@ source, and anyone who reuses it must give the attribution shown here.
 | Wineries, Swiss vineyard areas, rivers, lakes | ODbL 1.0 | © OpenStreetMap contributors |
 | Country borders | Public domain | Natural Earth |
 | United States AVAs | CC0 1.0 | UC Davis Library, AVA Digitizing Project |
-| Editorial vintage chart (`web/data/vintages.json`) | CC BY 4.0 | Open Wine Atlas contributors |
+| Australia GI outlines | CC BY 4.0 | Geographical Indications of Australia, © Wine Australia (outlines via adynak/WineRegions, published there as CC0) |
+| Outlines built from administrative units (Chile, Argentina, South Africa, New Zealand, Brazil, Uruguay, Canada, Mexico, Georgia, Moldova, Ukraine, Armenia, Türkiye, Israel, Lebanon, Serbia, North Macedonia, Montenegro, Bosnia and Herzegovina, Japan, China, India, Tasmania) | Licence of each geoBoundaries layer, shown on every place: CC BY 3.0 IGO, CC BY 4.0, CC BY 2.5, ODbL, CC BY-SA 2.0 (Türkiye, share-alike), OGL-Canada 2.0, PDDL, CC0 or public domain | geoBoundaries gbOpen, Runfola et al. (2020), and the national sources it lists |
+| Which units make up each place (`pipeline/world_specs.py`, `pipeline/world/`) and marker positions | CC BY 4.0 | Open Wine Atlas contributors, compiled from the wine laws and registers cited on each place |
+| Editorial vintage chart (`web/data/vintages.json`) and editorial notes (`pipeline/notes/`) | CC BY 4.0 | Open Wine Atlas contributors |
 | Climate (read live, not stored) | CC BY 4.0 | Open-Meteo, ERA5 / ERA5-Land (Copernicus Climate Change Service) |
 | Soil (read live, not stored) | CC BY 4.0 | ISRIC SoilGrids 2.0 |
 | Satellite base map (read live) | CC BY-NC-SA 4.0 | Sentinel-2 cloudless by EOX IT Services; IGN France, swisstopo, IGN España orthophotos |

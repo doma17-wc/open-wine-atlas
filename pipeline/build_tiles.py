@@ -90,6 +90,9 @@ def short_name(p):
     return name
 
 
+POINT_MINZOOM = {"region": 5, "appellation": 7, "subzone": 9, "vineyard": 10}
+
+
 def labels_for(feats):
     out = []
     for ft in feats:
@@ -98,6 +101,11 @@ def labels_for(feats):
             continue
         g = shape(ft["geometry"])
         if g.is_empty:
+            continue
+        if g.geom_type == "Point":  # places shown as a marker (world.py): label next to the marker
+            q = dict(p, ha=0, short=p["name"])
+            out.append({"type": "Feature", "properties": q, "geometry": mapping(g),
+                        "tippecanoe": {"minzoom": POINT_MINZOOM.get(p["level"], 9)}})
             continue
         try:
             pt = shapely.polylabel(max(getattr(g, "geoms", [g]), key=lambda x: x.area), tolerance=0.0005)
@@ -130,18 +138,21 @@ def main():
     eu = read("eu_appellations.geojsonl")
     ch = read("ch_appellations.geojsonl")
     us = read("us_appellations.geojsonl")
+    world = read("world_appellations.geojsonl")
     de_lagen = read("de_einzellagen.geojsonl")
     de_gross = read("de_grosslagen.geojsonl")
     osm_v = read("osm_vineyards.geojsonl")
     osm_w = read("osm_wineries.geojsonl")
 
     # ---------- overview: every appellation, generalised
-    apps = fr_ov + eu + ch + us
+    apps = fr_ov + eu + ch + us + world
     labels = labels_for(apps)
     # the overview only needs ~80 m precision: parcel detail comes from the regional files
     gen = []
     for ft in apps:
-        g = shape(ft["geometry"]).simplify(0.0008, preserve_topology=True)
+        g = shape(ft["geometry"])
+        if g.geom_type != "Point":
+            g = g.simplify(0.0008, preserve_topology=True)
         if not g.is_empty:
             gen.append({"type": "Feature", "properties": ft["properties"], "geometry": mapping(g)})
     write_geojsonl(os.path.join(TMP, "apps.geojsonl"), gen)
@@ -207,7 +218,7 @@ def main():
 
     # ---------- details per country
     merged = defaultdict(dict)
-    for name in ["fr_details.json", "eu_details.json", "de_details.json", "ch_details.json"]:
+    for name in ["fr_details.json", "eu_details.json", "de_details.json", "ch_details.json", "world_details.json"]:
         path = os.path.join(BUILD, name)
         if os.path.exists(path):
             for k, v in json.load(open(path, encoding="utf-8")).items():

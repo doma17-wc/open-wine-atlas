@@ -14,6 +14,7 @@ Facts that vary by country go into a separate details record, keyed by the same 
 | `rank` | enum | `premier_cru` | `grand_cru`, `premier_cru`, `docg`, `doca`, `pago`, or empty |
 | `parent` | string | `Gevrey-Chambertin` | Name of the place this one sits inside, or empty |
 | `src` | string | `inao` | Key in `sources.json` |
+| `ol` | enum | `approx` | Optional. Outline precision for places outside the EU and the US: `legal` (union of the units the law names, or an official outline), `approx` (units that contain the area; drawn dashed), `point` (marker at the namesake town, the geometry is a Point) |
 
 ### Levels
 
@@ -33,8 +34,12 @@ Free-form, but use these keys when the source has them:
 `max_yield_kg_ha`, `min_planting_density`, `area_ha`, `outline_area_ha`, `communes` (list),
 `region`, `bereich`, `grosslage`, `register_no`, `eu_register` (URL), `source_date`, `note`.
 
+Places built by `world.py` also use `basis` (legal basis), `outline` and `outline_quality` (how the outline was
+drawn), `admin_units` (list), `outline_source` (`{name, licence, source}`), `register_ref` (legal act),
+`also_registered` (smaller GIs inside that are not mapped yet), `state`, `lat`, `lon`.
+
 ## Geometry
 
-WGS84 (EPSG:4326), Polygon or MultiPolygon, coordinates rounded to 6 decimals (about 0.1 m).
+WGS84 (EPSG:4326), Polygon or MultiPolygon (Point for `ol: point`), coordinates rounded to 6 decimals (about 0.1 m).
 Simplify only to remove survey noise (1 m in a metric projection). Generalisation for small
 zoom levels is done by the tile builder, never in the stored data.
