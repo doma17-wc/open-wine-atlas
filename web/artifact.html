@@ -79,13 +79,47 @@ button, input { font: inherit; color: inherit; }
 .link-btn:hover { border-color: #57534a; }
 
 /* ---------- explorer: tabs, region tree */
-.rtabs { display: grid; grid-template-columns: 1fr 1fr; padding: 3px; gap: 3px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+.rtabs { display: grid; grid-template-columns: 1fr 1fr 32px; padding: 3px; gap: 3px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
   backdrop-filter: blur(10px); }
 .rtabs button { all: unset; cursor: pointer; text-align: center; padding: 7px 8px; border-radius: 7px; font-size: 12.5px; color: var(--muted); }
 .rtabs button:hover { color: var(--parchment); }
 .rtabs button[aria-selected="true"] { background: #26252b; color: var(--parchment); box-shadow: inset 0 0 0 1px #3a3830; }
 .rtabs button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
 .mappanel { display: flex; flex-direction: column; gap: 10px; }
+.rtabs .rcollapse { all: unset; cursor: pointer; display: grid; place-items: center; border-radius: 7px; color: var(--muted); }
+.rtabs .rcollapse:hover { color: var(--parchment); background: #222228; }
+.rcollapse:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+/* ---------- panel sizes: slim sidebar, small / large sheet, map only */
+.minibar { display: none; }
+.rail.mini { width: auto; }
+.rail.mini > :not(.minibar) { display: none !important; }
+.rail.mini .minibar { display: flex; flex-direction: column; gap: 4px; padding: 5px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); backdrop-filter: blur(10px); }
+.minibar button { all: unset; cursor: pointer; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; color: var(--muted); }
+.minibar button:hover { color: var(--parchment); background: #222228; }
+.minibar button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.minibar button:first-child { color: var(--gold); border-bottom: 1px solid var(--line); border-radius: 8px 8px 4px 4px; }
+.sh-ctl { position: absolute; top: 12px; right: 12px; z-index: 1; display: flex; gap: 4px; }
+.sh-ctl button { all: unset; cursor: pointer; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); color: var(--muted); }
+.sh-ctl button:hover { color: var(--parchment); border-color: #57534a; }
+.sh-ctl button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.sh-ctl button[aria-pressed="true"] { color: var(--night); background: var(--parchment); border-color: var(--parchment); }
+.sheet .eyebrow { padding-right: 104px; min-height: 18px; }
+.sheet.wide .body { padding-left: 24px; padding-right: 24px; }
+.sheet.min { bottom: auto; width: min(300px, calc(100% - 32px)); }
+.sheet.min header { cursor: pointer; border-bottom: 0; padding-bottom: 14px; }
+.sheet.min header > :not(.eyebrow):not(h2) { display: none; }
+.sheet.min h2 { font-size: 22px; padding-right: 0; }
+.sheet.min .body { display: none; }
+.sheet.min header:hover h2 { color: var(--focus); }
+.showpanels { position: absolute; z-index: 3; top: calc(16px + env(safe-area-inset-top, 0px)); left: 16px; display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); backdrop-filter: blur(10px); cursor: pointer; font-size: 12.5px; }
+.showpanels:hover { border-color: #57534a; }
+body.maponly .rail, body.maponly .mcrumbs { display: none !important; }
+#btnMapOnly { display: inline-flex; align-items: center; padding: 7px 10px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+#btnMapOnly svg { flex: none; }
 .explore { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px); padding: 6px 4px 8px; }
 .ex-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 8px 4px 10px; }
 .ex-head .hd, .tcont { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -123,10 +157,9 @@ button, input { font: inherit; color: inherit; }
 .tmore:hover { color: var(--parchment); }
 
 /* ---------- map breadcrumb */
-.mcrumbs { position: absolute; z-index: 2; top: calc(16px + env(safe-area-inset-top, 0px)); left: 372px; max-width: calc(100% - 372px - 270px);
+.mcrumbs { position: absolute; z-index: 2; top: calc(16px + env(safe-area-inset-top, 0px)); left: var(--railR, 372px); max-width: calc(100% - var(--railR, 372px) - var(--topR, 16px) - 300px);
   display: flex; align-items: center; gap: 2px; padding: 4px 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
   backdrop-filter: blur(10px); font-size: 12.5px; white-space: nowrap; overflow: hidden; }
-.sheet.open ~ .mcrumbs { max-width: calc(100% - 372px - 412px - 250px); }
 .mcrumbs button { all: unset; cursor: pointer; padding: 3px 8px; border-radius: 999px; color: var(--muted); min-width: 0; max-width: 190px;
   overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; }
 .mcrumbs > button:not(.up):not([aria-current]) { min-width: 3.5em; }
@@ -156,7 +189,7 @@ button, input { font: inherit; color: inherit; }
 .crumbs .sep { color: #57534a; margin: 0 4px; }
 
 /* ---------- detail sheet */
-.sheet { position: absolute; z-index: 4; top: calc(16px + env(safe-area-inset-top, 0px)); right: 16px; bottom: 16px; width: min(380px, calc(100% - 32px));
+.sheet { position: absolute; z-index: 4; top: calc(16px + env(safe-area-inset-top, 0px)); right: 16px; bottom: 16px; width: min(var(--sheetW, 380px), calc(100% - 32px));
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(12px);
   display: flex; flex-direction: column; transform: translateX(calc(100% + 24px)); transition: transform .32s cubic-bezier(.2,.7,.2,1); }
 .sheet.open { transform: none; }
@@ -255,7 +288,7 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .attrib { position: absolute; right: 16px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); z-index: 2; font-size: 11px; color: #6f6a62;
   max-width: calc(100% - 32px); text-align: right; }
 .attrib button { all: unset; cursor: pointer; text-decoration: underline; text-decoration-color: #4a463f; }
-.sheet.open ~ .attrib { right: 412px; }
+.attrib { right: var(--botR, 16px); }
 .tag { position: absolute; z-index: 3; pointer-events: none; padding: 5px 9px; border-radius: 6px; background: rgba(10,10,12,.92);
   border: 1px solid var(--line); font-size: 12.5px; white-space: nowrap; transform: translate(12px, -50%); }
 .tag small { color: var(--muted); margin-left: 6px; font: 500 10.5px var(--f-mono); }
@@ -403,13 +436,12 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 .tabs2 button[aria-pressed="true"] { color: var(--night); background: var(--parchment); border-color: var(--parchment); }
 
 /* ---------- relief: 3D toggle + terrain section of the sheet */
-.viewbar { position: absolute; top: 16px; right: 16px; z-index: 2; display: flex; gap: 8px; }
+.viewbar { position: absolute; top: 16px; right: var(--topR, 16px); z-index: 2; display: flex; gap: 8px; }
 .relief-btn { display: flex; gap: 0; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); overflow: hidden; }
 .relief-btn[hidden] { display: none; }
 .relief-btn button { all: unset; cursor: pointer; padding: 7px 12px; font: 500 11.5px var(--f-mono); letter-spacing: .08em; color: var(--muted); }
 .relief-btn button[aria-pressed="true"] { color: var(--night); background: var(--parchment); }
 .relief-btn button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.sheet.open ~ .viewbar { right: 412px; }
 .terrain { display: grid; grid-template-columns: 1fr 112px; gap: 10px 16px; align-items: start; }
 .terrain .facts { grid-column: 1; }
 .terrain svg { grid-column: 2; grid-row: 1 / span 2; width: 112px; height: 112px; }
@@ -429,6 +461,12 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .rail:not(.open) .rtabs button[aria-selected="true"] { background: none; box-shadow: none; color: var(--muted); }
   .rail-scroll { max-height: 58vh; }
   .mcrumbs { display: none; }
+  .rtabs .rcollapse { display: none; }
+  .sheet.min.open ~ .viewbar { display: flex; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+  .rtabs { grid-template-columns: 1fr 1fr; }
+  .sheet.wide { max-height: calc(100% - 24px); }
+  .sheet.min { width: auto; max-height: none; }
+  .sheet.min { bottom: 0; }
   .brand { padding: 10px 12px; }
   .brand h1 { font-size: 24px; }
   .brand p { display: none; }
@@ -444,6 +482,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 <div id="map" aria-label="Map of wine appellations"></div>
 
 <div class="rail" id="rail">
+  <div class="minibar" id="minibar" aria-label="Slim sidebar">
+    <button id="miniOpen" title="Open the sidebar ( [ )" aria-label="Open the sidebar"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5L11 8l-4.5 4.5M3 3.5v9"/></svg></button>
+    <button id="miniSearch" title="Search ( / )" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="4.6"/><path d="M10.5 10.5L14 14"/></svg></button>
+    <button id="miniExplore" title="Explore regions" aria-label="Explore regions"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3.5h6M5 8h7M7 12.5h6M3 3.5v9h4M3 8h2"/></svg></button>
+    <button id="miniLayers" title="Map and layers" aria-label="Map and layers"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5l6 3-6 3-6-3z"/><path d="M2 9l6 3 6-3"/></svg></button>
+    <button id="miniDash" title="My atlas (M)" aria-label="My atlas"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l1.8 3.7 4 .6-2.9 2.8.7 4L8 11.4l-3.6 1.9.7-4L2.2 6.5l4-.6z"/></svg></button>
+  </div>
   <div class="brand">
     <h1>Open Wine Atlas</h1>
     <button class="dash-btn" id="openDash" aria-haspopup="dialog" title="My atlas (M)">My atlas <span class="n" id="dashCount" hidden>0</span></button>
@@ -457,6 +502,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar">
     <button role="tab" id="tabExplore" aria-selected="true" aria-controls="explore">Explore regions</button>
     <button role="tab" id="tabMap" aria-selected="false" aria-controls="mapPanel">Map and layers</button>
+    <button class="rcollapse" id="railHide" title="Slim sidebar ( [ )" aria-label="Make the sidebar slim"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5L5 8l4.5 4.5M13 3.5v9"/></svg></button>
   </div>
   <div class="rail-scroll" id="railScroll">
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
@@ -497,12 +543,19 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 </div>
 
 <aside class="sheet" id="sheet" aria-live="polite" aria-label="Place details">
-  <button class="x" id="close" aria-label="Close details"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <div class="sh-ctl" role="group" aria-label="Panel size">
+    <button id="shMin" title="Small window" aria-label="Make the panel small"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h8"/></svg></button>
+    <button id="shWide" title="Large window" aria-label="Make the panel large"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3H13v3.5M13 3L9 7M6.5 13H3V9.5M3 13l4-4"/></svg></button>
+    <button id="close" aria-label="Close details" title="Close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  </div>
   <header id="sh-head"></header>
   <div class="body" id="sh-body"></div>
 </aside>
 
 <div class="viewbar" id="viewbar">
+  <div class="relief-btn" role="group" aria-label="Map only">
+    <button id="btnMapOnly" aria-pressed="false" title="Only the map, panels hidden (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/></svg><span class="sr">Map only</span></button>
+  </div>
   <div class="relief-btn" id="projBtn" role="group" aria-label="Globe or flat map">
     <button id="btnGlobe" aria-pressed="true" title="The world as a globe (G)">Globe</button><button id="btnFlat" aria-pressed="false" title="Flat map (G)">Flat</button>
   </div>
@@ -511,6 +564,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   </div>
 </div>
 <nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" hidden></nav>
+<button class="showpanels" id="showPanels" hidden title="Show the panels again (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3h11v10h-11zM6 3v10"/></svg><span>Show panels</span></button>
 <div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap contributors<span class="web-only" hidden> · terrain © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore">all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
@@ -665,7 +719,9 @@ const map = new maplibregl.Map({
 window.__map = map; // handy for debugging in the console
 // the left rail covers part of the map on wide screens: give the map that much padding, so the globe, the flat
 // world and every flight are centred in the free part of the screen. Fits add their own padding on top.
-const railPad = () => ({ top: 0, bottom: 0, right: 0, left: innerWidth > 760 ? 370 : 0 });
+// panel sizes, set by the sidebar and sheet buttons (see "panel sizes" below)
+const UI = { rail: "open", sheet: "normal", mapOnly: false };
+const railPad = () => ({ top: 0, bottom: 0, right: 0, left: innerWidth > 760 ? (UI.mapOnly ? 0 : UI.rail === "mini" ? 62 : 370) : 0 });
 const VIEW_PAD = { top: 40, bottom: 40, left: 20, right: 20 };
 map.setPadding(railPad());
 if (!INTRO) map.fitBounds(EUROPE, { padding: VIEW_PAD, duration: 0 });
@@ -1879,7 +1935,8 @@ async function select(p, feature) {
   }
 }
 const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9, subregion: 11.5, state: 8, country: 6.5, group: 11.5 }[level] || 13;
-const fitPad = () => { const wide = innerWidth > 760; return { top: 60, bottom: wide ? 60 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? 420 : 30 }; };
+const fitPad = () => { const wide = innerWidth > 760, small = UI.mapOnly || UI.sheet === "min";
+  return { top: small ? 110 : 60, bottom: wide ? 60 : small ? 120 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? (small ? 40 : curSheetW() + 40) : 30 }; };
 // the zoom fitTo would land on
 function fitZoom(b, level) {
   const cam = map.cameraForBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: fitMaxZ(b, level) });
@@ -2107,6 +2164,7 @@ $("close").onclick = closeSheet;
 document.addEventListener("keydown", (e) => {
   if (e.key !== "Escape" || !$("dash").hidden || e.target.closest("input, textarea")) return;
   if (!$("modal").hidden) closeModal();
+  else if (UI.mapOnly) setMapOnly(false);
   else if ($("sheet").classList.contains("open")) goUp();
 });
 document.addEventListener("click", (e) => {
@@ -2172,6 +2230,59 @@ function setTab(which, toggle = false) {
 }
 $("tabExplore").onclick = () => setTab("explore", true);
 $("tabMap").onclick = () => setTab("map", true);
+// ---------- panel sizes: slim sidebar, small / normal / large sheet, map only
+function curSheetW() {
+  const railR = UI.mapOnly ? 16 : UI.rail === "mini" ? 76 : 372;
+  return UI.sheet === "wide" ? Math.max(380, Math.min(680, innerWidth - railR - 360)) : 380;
+}
+function applyLayout() {
+  const desk = innerWidth > 760, sh = $("sheet"), size = UI.mapOnly ? "min" : UI.sheet;
+  document.body.classList.toggle("maponly", UI.mapOnly);
+  $("rail").classList.toggle("mini", desk && UI.rail === "mini");
+  sh.classList.toggle("wide", size === "wide");
+  sh.classList.toggle("min", size === "min");
+  const open = sh.classList.contains("open"), w = size === "min" ? 300 : curSheetW();
+  const R = document.documentElement.style;
+  R.setProperty("--railR", (!desk || UI.mapOnly ? 16 : UI.rail === "mini" ? 76 : 372) + "px");
+  R.setProperty("--sheetW", w + "px");
+  R.setProperty("--topR", (open && desk ? w + 32 : 16) + "px");
+  R.setProperty("--botR", (open && desk && size !== "min" ? w + 32 : 16) + "px");
+  $("shMin").setAttribute("aria-pressed", size === "min");
+  $("shMin").title = size === "min" ? "Normal window" : "Small window";
+  $("shWide").setAttribute("aria-pressed", size === "wide");
+  $("shWide").title = size === "wide" ? "Normal window" : "Large window";
+  $("btnMapOnly").setAttribute("aria-pressed", UI.mapOnly);
+  $("showPanels").hidden = !UI.mapOnly;
+  // only when it changes: setting the padding stops a flight that is under way
+  const pad = railPad(), cur = map.getPadding();
+  if (cur.left !== pad.left || cur.right !== pad.right) map.setPadding(pad);
+}
+function setSheetSize(v) {
+  UI.sheet = UI.sheet === v && !UI.mapOnly ? "normal" : v;
+  UI.mapOnly = false;
+  store.set("sheet", UI.sheet === "wide" ? "wide" : "normal"); // a small window is for now, not for the next visit
+  applyLayout();
+}
+function setRail(v) { UI.rail = v; store.set("rail", v); applyLayout(); }
+function setMapOnly(on) { UI.mapOnly = on; applyLayout(); }
+$("shMin").onclick = () => setSheetSize("min");
+$("shWide").onclick = () => setSheetSize("wide");
+// the small window is its title: a click on it opens the sheet again
+$("sh-head").addEventListener("click", (e) => { if ($("sheet").classList.contains("min") && !e.target.closest("button, a")) setSheetSize("normal"); });
+$("railHide").onclick = () => setRail("mini");
+$("miniOpen").onclick = () => setRail("open");
+$("miniSearch").onclick = () => { setRail("open"); qEl.focus(); };
+$("miniExplore").onclick = () => { setRail("open"); setTab("explore"); };
+$("miniLayers").onclick = () => { setRail("open"); setTab("map"); };
+$("miniDash").onclick = () => openDash();
+$("btnMapOnly").onclick = () => setMapOnly(!UI.mapOnly);
+$("showPanels").onclick = () => setMapOnly(false);
+new MutationObserver(applyLayout).observe($("sheet"), { attributes: true, attributeFilter: ["class"] });
+addEventListener("resize", applyLayout);
+UI.rail = store.get("rail") === "mini" ? "mini" : "open";
+UI.sheet = store.get("sheet") === "wide" ? "wide" : "normal";
+applyLayout();
+
 $("exWorld").onclick = () => { closeSheet(); flyToWorld(1500); if (PHONE()) $("rail").classList.remove("open"); };
 
 // ---------- explorer: region tree, region sheet, breadcrumbs
@@ -2521,6 +2632,7 @@ function openGuide() {
   openModal("<h2>How to read the atlas</h2>" +
     "<p>Click any outline to open its sheet. Zoom in to go from regions to appellations, then to climats and single vineyards. Gold marks the top classification of each country, copper marks premiers crus.</p>" +
     "<p>Explore regions, in the sidebar, walks the same places as a list: France › Bourgogne › Côte de Nuits › Morey-Saint-Denis. A name opens its sheet and flies the map there, the arrow only unfolds it. Hover a name to see it in gold on the map. The trail at the top of the map shows where you are; Esc goes up one level. Winery dots show their names as you zoom in; hover or click any dot.</p>" +
+    "<p>Make room for the map: the arrow beside the tabs (or [ ) slims the sidebar to a row of icons, the buttons on top of a sheet make it a small or a large window, and Map only (or F) hides every panel. Esc brings them back.</p>" +
     "<h3>Levels</h3>" + block(["region", "appellation", "subzone", "vineyard"]) +
     "<h3>Classifications</h3>" + block(["grand_cru", "premier_cru", "docg", "doca", "pago", "einzellage", "grosslage", "gi"]) +
     "<h3>How precise is each layer</h3><dl class=\"gloss\">" +
@@ -3018,6 +3130,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "/") { e.preventDefault(); qEl.focus(); }
   else if (e.key === "m" || e.key === "M") { $("dash").hidden ? openDash() : closeDash(); }
   else if ((e.key === "g" || e.key === "G") && !e.metaKey && !e.ctrlKey) setGlobe(!isGlobe);
+  else if ((e.key === "f" || e.key === "F") && !e.metaKey && !e.ctrlKey) setMapOnly(!UI.mapOnly);
+  else if (e.key === "[") setRail(UI.rail === "mini" ? "open" : "mini");
   else if (e.key === "Escape" && !$("dash").hidden) closeDash();
 });
 

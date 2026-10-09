@@ -121,6 +121,11 @@ France › Bourgogne › Côte de Nuits › Morey-Saint-Denis › Premier cru �
 * Wineries show their names from zoom 10.5 (the map drops names that would collide), and any dot shows its name on
   hover; a click opens a small sheet with its website and the appellations it sits in.
 
+* Room for the map: the arrow beside the tabs (or `[`) slims the sidebar to a column of icons; the buttons on top of
+  every sheet switch it between a small window (title only, a click opens it again), the normal panel and a large one;
+  Map only (top right, or `F`) hides every panel and leaves a small title card for whatever you click. Esc brings the
+  panels back. The slim sidebar and the large sheet are remembered in the browser.
+
 The hierarchy is built by `pipeline/build_tree.py` into `web/data/tree.json`:
 
 | Country | Levels | From |
