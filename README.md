@@ -32,6 +32,18 @@ Live: https://open-wine-atlas.vercel.app
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
 | All | Relief, 3D terrain, and per place elevation, slope and aspect (measured live in the browser) | Mapterhorn terrain tiles: IGN RGE ALTI, German DGM1, swissALTI3D, IGN MDT, Copernicus GLO-30 | Open licences, see mapterhorn.com/attribution |
 
+## Share images
+
+`/api/story?id=<place id>` (or `?q=<name>`, or the short form `/story/<place id>`) returns a PNG of one place for
+social media and slides: its real outline, the key facts from its details record and the atlas note. Formats:
+`format=story` (1080 × 1920, default), `post` (1080 × 1350) and `square` (1080 × 1080).
+
+Close up in France, Spain and Switzerland the background is the national orthophoto (IGN France, PNOA © IGN España,
+SWISSIMAGE © swisstopo), whose licences allow reuse with the credit printed on the image. Everywhere else it is the
+atlas' own dark land. Sentinel-2 cloudless is not used here because its licence excludes commercial reuse.
+The function reads `web/data` from its own bundle, so previews and production behave the same.
+Fonts: `api/fonts` (SIL OFL 1.1).
+
 ## How it works
 
 ```

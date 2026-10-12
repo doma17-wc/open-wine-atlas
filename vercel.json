@@ -2,17 +2,57 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "buildCommand": "",
-  "installCommand": "",
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
   "outputDirectory": "web",
   "cleanUrls": true,
   "headers": [
-    { "source": "/data/(.*)\\.pmtiles", "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
-      { "key": "Content-Type", "value": "application/vnd.pmtiles" } ] },
-    { "source": "/fonts/(.*)", "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=2592000, immutable" },
-      { "key": "Content-Type", "value": "application/x-protobuf" } ] },
-    { "source": "/data/(.*)\\.json", "headers": [
-      { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" } ] }
+    {
+      "source": "/data/(.*)\\.pmtiles",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/vnd.pmtiles"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, immutable"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/x-protobuf"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)\\.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "api/story.mjs": {
+      "includeFiles": "{web/data/*.json,web/data/*.pmtiles,api/fonts/*.ttf}",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/story/:id",
+      "destination": "/api/story?id=:id"
+    }
   ]
 }
