@@ -379,7 +379,8 @@ function sourceLabel(id) {
 export default async function handler(req, res) {
   try {
     const u = new URL(req.url, "http://x");
-    const rec = findPlace(u.searchParams.get("id"), u.searchParams.get("q"));
+    // a trailing .png lets tools that sniff the extension accept /story/<id>.png
+    const rec = findPlace((u.searchParams.get("id") || "").replace(/\.png$/i, ""), u.searchParams.get("q"));
     if (!rec) { res.statusCode = 404; res.setHeader("Content-Type", "text/plain"); return res.end("Place not found. Use ?id=<atlas id> or ?q=<name>."); }
     const format = FORMATS[u.searchParams.get("format")] ? u.searchParams.get("format") : "story";
     const details = (() => { try { return readJSON("details-" + rec[2].toLowerCase() + ".json")[rec[1]] || {}; } catch (e) { return {}; } })();
