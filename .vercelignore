@@ -5,3 +5,4 @@ pipeline
 contrib
 web/**/*.txt
 *.log
+!web/robots.txt
