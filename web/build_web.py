@@ -8,6 +8,8 @@ Both inline the MapLibre stylesheet.
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 here = os.path.dirname(os.path.abspath(__file__))
 css_path = sys.argv[1] if len(sys.argv) > 1 else os.path.join(here, "maplibre-gl.css")
 css = open(css_path, encoding="utf-8").read()
@@ -19,6 +21,9 @@ HEAD = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0b0d">
+<meta name="description" content="An open map of the world's wine appellations, crus and vineyard sites, from official registers: outlines, grape rules, terrain, climate and vintages for 4,600 places in 45 countries.">
+<link rel="canonical" href="https://openwineatlas.com/">
+<meta property="og:url" content="https://openwineatlas.com/">
 <meta property="og:title" content="Open Wine Atlas">
 <meta property="og:description" content="Wine appellations, geographical indications, crus and single vineyards of 45 countries from open data, with terrain, climate, vintages and soil for each place.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0d'/%3E%3Cpath d='M7 22l6-9 4 5 3-4 5 8z' fill='none' stroke='%23e7c06a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
@@ -31,3 +36,7 @@ open(os.path.join(here, "index.html"), "w", encoding="utf-8").write(web)
 open(os.path.join(here, "artifact.html"), "w", encoding="utf-8").write(src)
 for f in ("index.html", "artifact.html"):
     print(f, os.path.getsize(os.path.join(here, f)))
+
+# static pages for search engines and sharing (one per place, region and country) and the sitemap
+import build_pages  # noqa: E402
+build_pages.main()

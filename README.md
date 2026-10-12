@@ -165,6 +165,16 @@ Press **My atlas** (or the M key) for a dashboard that stays on the visitor's de
 Saved places show as gold rings on the map, tastings as copper rings. With a terrain overlay on, the cursor shows
 elevation, slope and exposure under it.
 
+## Pages for search engines and the weekly post
+
+`web/build_pages.py` (run by `build_web.py`) writes one static page per place, region and country under
+`web/places/`, plus `web/sitemap.xml` and `web/robots.txt`. The pages are made from the same files as the map, link
+to it (`/#<place id>`) and use `https://openwineatlas.com` as their address.
+
+`pipeline/social_card.py` picks the next place with an editorial note (countries in turn), renders a 1080x1350 card
+of it from the atlas and drafts an English caption. The weekly post keeps its images and the list of posted places
+on the `social` branch.
+
 ## Globe
 
 The atlas opens on a globe and flies in to Europe. Globe / Flat (top right, or the G key) switches between the
