@@ -1,0 +1,17 @@
+{
+  "name": "rend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "maplibre-gl": "^5.24.0",
+    "pmtiles": "^4.5.0",
+    "puppeteer-core": "^25.13.0"
+  }
+}
