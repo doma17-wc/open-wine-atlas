@@ -12,6 +12,7 @@ Run by build_web.py; can also run alone: python3 web/build_pages.py
 """
 import html
 import json
+import math
 import os
 import re
 import shutil
@@ -141,7 +142,7 @@ def page(title, desc, path, body, jsonld=None):
 </head>
 <body>
 <div class="wrap">
-<header class="top"><a class="brand" href="/">Open Wine Atlas</a><nav><a href="/">Map</a><a href="/places/">All places</a></nav></header>
+<header class="top"><a class="brand" href="/">Open Wine Atlas</a><nav><a href="/">Map</a><a href="/places/">All places</a><a href="/records/">Records</a></nav></header>
 {body}
 <footer>Open Wine Atlas is built only from open official registers and open data. Outlines, rules and facts come from the sources
 named on each page. <a href="/places/">All wine places</a> · <a href="/">Open the map</a></footer>
@@ -270,7 +271,38 @@ def main():
                 t += f" The rules allow {fmt_list(cols)} wine."
         if d.get("bedrock"):
             t += " Regional bedrock: " + re.sub(r" \(.*\)", "", d["bedrock"][0][0]).lower() + "."
+        at = where_sentence(r, d)
+        if at:
+            t += " " + at
         return t
+
+    SECT16 = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+    SECT8 = ["north", "north-east", "east", "south-east", "south", "south-west", "west", "north-west"]
+
+    def km_txt(km):
+        return fmt_n(round(km, 1) if km < 10 else round(km), 1 if km < 10 else 0)
+
+    def from_town(name, t, direction=True):
+        town, km, dr = t[0], t[1], t[2]
+        if km < 6 and norm(town) in norm(name):
+            return f"around the town of {town}"
+        if km < 1.5:
+            return f"next to {town}"
+        return f"{km_txt(km)} km {SECT8[int(SECT16.index(dr) / 2 + 0.5) % 8]} of {town}"  # half up, as in the map
+
+    def small_place(r):
+        b = r[6]
+        kx = 111.32 * math.cos(math.radians((b[1] + b[3]) / 2))
+        return math.hypot((b[2] - b[0]) * kx, (b[3] - b[1]) * 110.57) < 25
+
+    def where_sentence(r, d):
+        if not d.get("near_town") or not small_place(r):
+            return ""
+        a = from_town(r[0], d["near_town"])
+        c = d.get("near_city")
+        if c and c[1] < 120:
+            return f"It lies {a} and {from_town('', c)}."
+        return f"It lies {a}."
 
     def short_type(r, d):
         if r[4] in RANK:
@@ -356,6 +388,39 @@ def main():
         b.append("<h2>Key facts</h2><dl class=\"facts\">" + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts) + "</dl>")
         if d.get("outline"):
             b.append(f'<p class="note">Outline: {esc(d["outline"])}</p>')
+
+        wf = []
+        if d.get("near_town"):
+            wf.append(("Nearest town", esc(from_town(name, d["near_town"]))))
+        if d.get("near_city"):
+            wf.append(("Nearest city", esc(from_town("", d["near_city"])) + f' <span class="note">{fmt_n(d["near_city"][3])} people</span>'))
+        if d.get("sea_km") is not None:
+            wf.append(("To the sea", f"{km_txt(d['sea_km'])} km"))
+        if d.get("rivers"):
+            wf.append(("Rivers nearby", " · ".join(f"{esc(n)} ({km_txt(k)} km)" for n, k in d["rivers"])))
+        if d.get("lakes"):
+            wf.append(("Lakes nearby", " · ".join(f"{esc(n)} ({km_txt(k)} km)" for n, k in d["lakes"])))
+        twins = [t for t in d.get("lat_twins", []) if t in by_id]
+        if twins:
+            wf.append(("Same latitude", ", ".join(f"{link(t)} ({esc(cname(by_id[t][2]))})" for t in twins)))
+        if wf:
+            b.append("<h2>Where it is</h2><dl class=\"facts\">" + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in wf) + "</dl>"
+                     '<p class="note">Distances from the centre of the place. Towns: GeoNames (CC BY 4.0). Sea, rivers and lakes: Natural Earth.</p>')
+        tr = d.get("terrain")
+        if tr and tr.get("e"):
+            mn, mean, mx, p10, p90 = tr["e"]
+            tf = [("Elevation", f"{fmt_n(mn)}–{fmt_n(mx)} m"), ("Mean elevation", f"{fmt_n(mean)} m")]
+            if tr.get("s"):
+                tf.append(("Mean slope", f"{tr['s'][0]}° ({round(math.tan(math.radians(tr['s'][0])) * 100)} %)"))
+                tf.append(("Steepest tenth", f"above {round(tr['s'][1])}°"))
+            if tr.get("asp") is not None:
+                tf.append(("Faces", SECT8[int(tr["asp"] / 45 + 0.5) % 8]))
+            elif tr.get("dom") and tr.get("s"):
+                tf.append(("Faces", "several directions, mostly " + SECT8[["N", "NE", "E", "SE", "S", "SW", "W", "NW"].index(tr["dom"])]))
+            b.append("<h2>Terrain</h2><dl class=\"facts\">" + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in tf) + "</dl>"
+                     f'<p class="note">Measured over the whole outline on {fmt_n(tr["n"])} elevation cells of about {fmt_n(tr["res"])} m '
+                     '(Mapterhorn terrain tiles).' + (" The outline is made of whole communes or districts, so it includes land that is not vineyard."
+                                                       if "-eupdo-" in pid or "-world-" in pid else "") + "</p>")
 
         wines = d.get("wines") or []
         if wines:
@@ -490,6 +555,47 @@ def main():
     write("/places/", page("All wine places: appellations of the world by country | Open Wine Atlas",
                            f"{len(idx):,} wine appellations, protected origins, crus and vineyard sites in {len(countries)} countries, from official open registers, on one map.",
                            "/places/", body))
+
+    # ---------- records (pipeline/records.py)
+    rec_path = os.path.join(DATA, "records.json")
+    if os.path.exists(rec_path):
+        rec = json.load(open(rec_path, encoding="utf-8"))
+        titles = {"highest": "Highest", "lowest": "Lowest", "steepest": "Steepest", "largest": "Largest", "smallest": "Smallest",
+                  "wineries": "Most wineries mapped", "inland": "Farthest from the sea", "north": "Farthest north", "south": "Farthest south"}
+        hints = {"highest": "mean elevation, outlines drawn on the wine area only", "lowest": "mean elevation, outlines drawn on the wine area only",
+                 "steepest": "mean slope, outlines drawn on the wine area only", "largest": "area of the outline", "smallest": "measured area",
+                 "wineries": "OpenStreetMap wineries inside the outline", "inland": "from the centre to the nearest sea coast",
+                 "north": "latitude of the centre", "south": "latitude of the centre"}
+
+        def rec_val(c, v):
+            if c["key"] in ("north", "south"):
+                return f"{abs(v):.2f}° {'S' if v < 0 else 'N'}"
+            if c["unit"] == "ha":
+                return f"{fmt_n(round(v / 100))} km²" if v >= 100000 else f"{fmt_n(v, 2 if v < 10 else 0)} ha"
+            if c["unit"] == "°":
+                return f"{v}°"
+            return f"{fmt_n(v)} {c['unit']}".strip()
+
+        def rec_block(scope, heading):
+            sc = rec["scopes"].get(scope, {})
+            out = []
+            for c in rec["cats"]:
+                rows = [x for x in sc.get(c["key"], []) if x[0] in by_id]
+                if not rows:
+                    continue
+                out.append(f'<h3>{titles[c["key"]]}</h3><p class="note">{hints[c["key"]]}</p><ol>' + "".join(
+                    f'<li>{link(pid)} <span class="k">{esc(cname(by_id[pid][2])) + " · " if scope == "ALL" else ""}{rec_val(c, v)}</span></li>' for pid, v in rows) + "</ol>")
+            return f"<h2>{esc(heading)}</h2>" + "".join(out) if out else ""
+
+        lead = ("The extremes of the wine world: the highest, steepest, largest and smallest appellations and vineyard sites, the ones "
+                "farthest from the sea and farthest north and south, measured on the same open data for every place in the atlas.")
+        body = ('<h1>Wine records</h1><p class="lead">' + esc(lead) + '</p><a class="cta" href="/">Open the map →</a>' + rec_block("ALL", "The whole world") +
+                "".join(rec_block(cc, cname(cc)) for cc in sorted((k for k in rec["scopes"] if k != "ALL"), key=cname)) +
+                '<p class="note">Regions are left out, and so are places drawn from the districts that contain them. Outlines made of whole '
+                "communes include land that is not vineyard. Elevation and slope records use only outlines drawn on the wine area itself: French parcels, "
+                "German vineyard sites, US AVAs and Australian subregions. Terrain: Mapterhorn. Towns: GeoNames. Coast: Natural Earth.</p>")
+        write("/records/", page("Wine records: the highest, steepest and largest vineyards and appellations | Open Wine Atlas", lead[:158], "/records/", body))
+        urls.append(("/records/", "weekly", "0.9"))
 
     # ---------- id -> page, for the map and the social cards
     json.dump({k: v for k, v in url_of.items() if not k.startswith("g:")}, open(os.path.join(OUT, "ids.json"), "w", encoding="utf-8"),

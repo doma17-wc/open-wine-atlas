@@ -375,6 +375,18 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .dt tr.go { cursor: pointer; } .dt tr.go:hover td { background: #18181c; }
 .dt td.n { font-family: var(--f-mono); text-align: right; white-space: nowrap; }
 .dt .best { color: var(--gold); }
+.rec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+.rec-card { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-width: 0; }
+.rec-card h3 { margin: 0 0 2px; }
+.rec-card ol { margin: 8px 0 0; padding: 0 0 0 22px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; font-size: 13px; }
+.rec-card li { min-width: 0; }
+.rec-card li::marker { color: var(--muted); font: 500 11px var(--f-mono); }
+.rec-card button { all: unset; cursor: pointer; display: flex; justify-content: space-between; gap: 10px; width: 100%; padding: 3px 0; }
+.rec-card button:hover .rn, .rec-card button:focus-visible .rn { color: var(--gold); }
+.rec-card .rn { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rec-card .rn small { color: var(--muted); margin-left: 6px; font-size: 11px; }
+.rec-card .rv { flex: none; font: 500 12px var(--f-mono); color: var(--parchment); white-space: nowrap; }
+.twin-h { font-size: 12px; color: var(--muted); margin: 12px 0 6px; }
 .hbars { display: grid; gap: 5px; }
 .hbar { all: unset; cursor: pointer; display: grid; grid-template-columns: 120px minmax(0, 1fr) 54px; gap: 8px; align-items: center; font-size: 12.5px; }
 .hbar .t { height: 10px; background: #24242a; border-radius: 0 4px 4px 0; overflow: hidden; }
@@ -607,7 +619,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
     <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2>
       <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
-        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button>
+        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button>
       </nav></header>
     <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
     <div class="dash-body" id="dashBody" role="tabpanel"></div>
@@ -837,7 +849,16 @@ const rankColor = ["case",
 
 const LAYERS = []; // [layerId, group] for legend toggles
 const BASEF = {}; // layerId -> its own filter, combined with the legend's rank filter
-function add(layer, group) { map.addLayer(layer); LAYERS.push([layer.id, group]); if (layer.filter) BASEF[layer.id] = layer.filter; }
+// AOCs in the published tiles that are not wine (Taureau de Camargue: beef; Béa du Roussillon: potatoes). The next
+// full build drops them at the source (pipeline/inao.py); until then they are hidden here.
+const NOT_WINE = ["fr-inao-a456", "fr-inao-a593"];
+function add(layer, group) {
+  if (["appellations", "crus", "labels"].includes(layer["source-layer"])) {
+    const keep = ["!", ["in", ["get", "id"], ["literal", NOT_WINE]]];
+    layer.filter = layer.filter ? ["all", keep, layer.filter] : keep;
+  }
+  map.addLayer(layer); LAYERS.push([layer.id, group]); if (layer.filter) BASEF[layer.id] = layer.filter;
+}
 
 function addBase() {
   map.addSource("base", { type: "vector", url: pmUrl("base.pmtiles") });
@@ -1819,6 +1840,13 @@ function terrainSentence(t) {
   return t_("{text}.", { text: s });
 }
 
+// figures measured ahead of time for the whole place (pipeline/terrain_stats.py), in the shape measureTerrain() returns
+function storedTerrain(s) {
+  if (!s || !s.e) return null;
+  const [min, mean, max, p10, p90] = s.e;
+  return { stored: true, z: null, res: s.res, n: s.n, min, max, mean, p10, p90, slope: s.s ? s.s[0] : null, slopeP90: s.s ? s.s[1] : null,
+    flatShare: s.flat ?? 1, dominant: s.dom || "", meanAspect: s.asp ?? null, partial: false, sun: null };
+}
 async function fillTerrain(p, token) {
   const el = () => (token === sheetToken ? $("terrain-sec") : null);
   if (CURRENT && CURRENT.p.id === p.id && CURRENT.d.outline_quality === "point") {
@@ -1826,11 +1854,14 @@ async function fillTerrain(p, token) {
     if (box) box.innerHTML = '<h3>' + t_("Terrain") + '</h3><p class="note">' + t_("This place is a marker without an outline, so there is no area to measure. Climate and soil are read at the marker.") + "</p>";
     return null;
   }
+  const stored = CURRENT && CURRENT.p.id === p.id ? storedTerrain(CURRENT.d.terrain) : null;
   try {
     await nextIdle();
-    const t = await measureTerrain(p.id);
+    let t = await measureTerrain(p.id).catch((e) => { if (stored) return null; throw e; });
     const box = el();
     if (!box) return;
+    // the live measurement covers only what is loaded on screen; the stored one covers the whole place
+    if (stored && (!t || t.partial)) t = stored;
     if (!t) { box.innerHTML = '<h3>' + t_("Terrain") + '</h3><p class="note">' + t_("Zoom in on the place to measure its terrain.") + "</p>"; return null; }
     const pct = (v) => Math.round(v * 100);
     const rows = [
@@ -1842,7 +1873,7 @@ async function fillTerrain(p, token) {
       rows.push([N_("Mean slope"), '<span class="num">' + fmtN(t.slope, 1) + "° · " + fmtN(Math.tan(t.slope * Math.PI / 180) * 100) + " %</span>"]);
       rows.push([N_("Steepest tenth"), '<span class="num">' + t_("above {d}°", { d: fmtN(t.slopeP90, 0) }) + "</span>"]);
       rows.push([N_("Faces"), esc(t.meanAspect != null ? SECTOR_NAME[compass(t.meanAspect)] : t_("mixed")) +
-        ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>"]);
+        (t.sectors ? ' <span class="note">· ' + t.dominant + " " + pct(t.sectors[SECTORS.indexOf(t.dominant)]) + "%</span>" : "")]);
     }
     if (fine && t.sun != null) rows.push([N_("Sun on the ground"), '<span class="num">' + fmtN(t.sun * 100) + " %</span> " + '<span class="note">' +
       t_("of flat ground, {months}, clear sky", { months: t_((byId.get(p.id)?.[6]?.[1] ?? 0) < 0 ? "Oct–Apr" : "Apr–Oct") }) + "</span>"]);
@@ -1850,10 +1881,10 @@ async function fillTerrain(p, token) {
     box.innerHTML = '<h3>' + t_("Terrain") + ' <button class="q" data-gloss="terrain" aria-label="' + t_("About this data") + '">?</button></h3>' +
       '<p class="lede" style="font-size:14px;margin-bottom:10px">' + terrainSentence(t) + "</p>" +
       '<div class="terrain"><dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl>" +
-      (fine ? roseSvg(t) : "") +
-      (fine ? '<div class="bars">' + t.classes.map((v, k) => '<div class="bar"><span class="bl">' + cls[k] + '</span><span class="bt"><i style="width:' + pct(v) + '%"></i></span><span class="num">' + pct(v) + "%</span></div>").join("") + "</div>" : "") +
+      (fine && t.sectors ? roseSvg(t) : "") +
+      (fine && t.classes ? '<div class="bars">' + t.classes.map((v, k) => '<div class="bar"><span class="bl">' + cls[k] + '</span><span class="bt"><i style="width:' + pct(v) + '%"></i></span><span class="num">' + pct(v) + "%</span></div>").join("") + "</div>" : "") +
       "</div>" +
-      '<p class="note">' + t_("Measured in your browser on {n} elevation cells of about {res} m.", { n: fmt(t.n), res: t.res < 10 ? fmtN(t.res, 1) : fmtN(t.res) }) + " " +
+      '<p class="note">' + t_(t.stored ? "Measured over the whole place on {n} elevation cells of about {res} m." : "Measured in your browser on {n} elevation cells of about {res} m.", { n: fmt(t.n), res: t.res < 10 ? fmtN(t.res, 1) : fmtN(t.res) }) + " " +
       (fine ? "" : t_("Zoom into a smaller place for slope and aspect.") + " ") +
       (t.partial ? t_("Only the part of the place on screen was measured.") + " " : "") +
       t_("Elevation: {link}.", { link: '<a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener">Mapterhorn</a>' }) + "</p>";
@@ -2102,7 +2133,49 @@ function summary(p, d, pd) {
     const rock = t_(d.bedrock[0][0].replace(/ \(.*\)/, ""));
     t += " " + t_("Regional bedrock: {rock}.", { rock: esc(UILANG === "en" ? rock.toLowerCase() : rock) });
   }
+  const at = whereSentence(p, d);
+  if (at) t += " " + at;
   return t;
+}
+
+// ---------- where a place lies: towns, sea, rivers, lakes (pipeline/context.py)
+const dir16 = (code) => { const i = SECT16.indexOf(code); return i < 0 ? "" : SECTOR_NAME[SECTORS[Math.round(i / 2) % 8]]; };
+const SECT16 = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+const kmTxt = (km) => km < 10 ? fmtN(Math.round(km * 10) / 10, 1) : fmtN(Math.round(km));
+function fromTown(p, t) {
+  if (!t) return "";
+  const [town, km, dir] = t;
+  if (km < 6 && norm(p.name).includes(norm(town))) return t_("around the town of {town}", { town: esc(town) });
+  if (km < 1.5) return t_("next to {town}", { town: esc(town) });
+  return t_("{km} km {dir} of {town}", { km: kmTxt(km), dir: dir16(dir), town: esc(town) });
+}
+function smallPlace(p) {
+  const b = byId.get(p.id)?.[6];
+  if (!b) return false;
+  const kx = 111.32 * Math.cos((b[1] + b[3]) / 2 * Math.PI / 180);
+  return Math.hypot((b[2] - b[0]) * kx, (b[3] - b[1]) * 110.57) < 25;
+}
+function whereSentence(p, d) {
+  if (!d.near_town || !smallPlace(p)) return "";
+  const a = fromTown(p, d.near_town), c = d.near_city;
+  const b = c && c[1] < 120 ? t_("{km} km {dir} of {town}", { km: kmTxt(c[1]), dir: dir16(c[2]), town: esc(c[0]) }) : "";
+  return b ? t_("It lies {a} and {b}.", { a, b }) : t_("It lies {a}.", { a });
+}
+function whereSection(p, d) {
+  const rows = [];
+  if (d.near_town) rows.push([N_("Nearest town"), fromTown(p, d.near_town) + (smallPlace(p) ? "" : ' <span class="note">' + t_("from the centre") + "</span>")]);
+  if (d.near_city) rows.push([N_("Nearest city"), t_("{km} km {dir} of {town}", { km: kmTxt(d.near_city[1]), dir: dir16(d.near_city[2]), town: esc(d.near_city[0]) }) +
+    ' <span class="note">' + t_("{n} people", { n: fmt(d.near_city[3]) }) + "</span>"]);
+  if (d.sea_km != null) rows.push([N_("To the sea"), '<span class="num">' + kmTxt(d.sea_km) + " km</span>"]);
+  if (d.rivers?.length) rows.push([N_("Rivers nearby"), d.rivers.map(([n, km]) => esc(n) + ' <span class="note">' + kmTxt(km) + " km</span>").join(" · ")]);
+  if (d.lakes?.length) rows.push([N_("Lakes nearby"), d.lakes.map(([n, km]) => esc(n) + ' <span class="note">' + kmTxt(km) + " km</span>").join(" · ")]);
+  const twins = (d.lat_twins || []).map((id) => byId.get(id)).filter(Boolean);
+  if (!rows.length && !twins.length) return "";
+  return '<div class="sec" id="where-sec"><h3>' + t_("Where it is") + '</h3>' +
+    (rows.length ? '<dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl>" : "") +
+    (twins.length ? '<div class="twin-h">' + t_("Same latitude, other continents") + '</div><div class="chips">' +
+      twins.map((r) => '<button data-goto="' + esc(r[1]) + '">' + esc(r[0]) + ' <small>' + esc(cname(r[2])) + "</small></button>").join("") + "</div>" : "") +
+    '<p class="note">' + t_("Distances from the centre of the place. Towns: GeoNames. Sea, rivers and lakes: Natural Earth.") + "</p></div>";
 }
 
 function wineTable(wines) {
@@ -2173,6 +2246,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.petitioner) rows.push([N_("Petitioned by"), esc(d.petitioner)]);
   if (d.cfr) rows.push([N_("Legal text"), d.cfr_url ? '<a href="' + esc(d.cfr_url) + '" target="_blank" rel="noopener">' + esc(d.cfr) + "</a>" : esc(d.cfr)]);
   if (rows.length) html += '<div class="sec"><h3>' + t_("Key facts") + '</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
+  html += whereSection(p, d);
   if (WEB) {
     const wait = (t) => '<div class="note terrain-wait"><i></i>' + t_(t) + "</div>";
     html += '<div class="sec" id="terrain-sec"><h3>' + t_("Terrain") + "</h3>" + wait(N_("Measuring elevation, slope and aspect…")) + "</div>";
@@ -2977,11 +3051,13 @@ $("dash").addEventListener("click", (e) => { if (e.target.id === "dash") closeDa
 document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { dashTab = b.dataset.tab; renderDash(); });
 function goFromDash(id) { const r = recOf(id); if (r) { closeDash(); goTo(r); } }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) { e.preventDefault(); goFromDash(b.dataset.go); } });
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-dtab]"); if (b) { e.preventDefault(); dashTab = b.dataset.dtab; renderDash(); } });
 
 function renderDash() {
   document.querySelectorAll("#dashTabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === dashTab)));
   const body = $("dashBody");
-  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, compare: dashCompare, explore: dashExplore }[dashTab] || dashOverview)();
+  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, compare: dashCompare, explore: dashExplore, records: dashRecords }[dashTab] || dashOverview)();
+  if (dashTab === "records") wireRecords();
   if (dashTab === "journal") wireJournal();
   if (dashTab === "compare") wireCompare();
   if (dashTab === "explore") wireExplore();
@@ -3002,7 +3078,7 @@ function dashOverview() {
     tile(MY.journal.length, t_("tastings logged")) + tile(cc.size, t_("countries you explored")) + "</div>" +
     '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
     '<button class="mini-btn" data-rand="any">' + t_("Surprise me") + '</button><button class="mini-btn" data-rand="grand_cru">' + t_("A grand cru") + '</button><button class="mini-btn" data-rand="premier_cru">' + t_("A premier cru") + '</button>' +
-    '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + '</button></div>' +
+    '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + '</button><button class="mini-btn" data-dtab="records">' + t_("Records") + ' →</button></div>' +
     "<h3 style=\"margin-top:18px\">" + t_("Recently viewed") + "</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">' + t_("Places you open on the map appear here.") + '</div>') +
     "<h3 style=\"margin-top:18px\">" + t_("Best recent vintages") + "</h3>" + '<div id="bestV" class="note">' + t_("Loading…") + '</div></div>' +
     "<div><h3>" + t_("Places per country") + "</h3><div class=\"hbars\">" + top.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-label="' + esc(t_("{country}: {n} places, explore", { country: cname(c), n })) + '"><span>' + esc(cname(c)) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
@@ -3238,6 +3314,47 @@ function wireExplore() {
   document.querySelectorAll("tr.go").forEach((tr) => tr.addEventListener("keydown", (e) => { if (e.key === "Enter") goFromDash(tr.dataset.go); }));
 }
 
+// ---------- records: highest, steepest, largest … (pipeline/records.py → data/records.json)
+let RECORDS = null, recScope = "ALL";
+const REC_TITLE = { highest: N_("Highest"), lowest: N_("Lowest"), steepest: N_("Steepest"), largest: N_("Largest"), smallest: N_("Smallest"),
+  wineries: N_("Most wineries mapped"), inland: N_("Farthest from the sea"), north: N_("Farthest north"), south: N_("Farthest south") };
+const REC_HINT = { highest: N_("mean elevation, outlines drawn on the wine area only"), lowest: N_("mean elevation, outlines drawn on the wine area only"), steepest: N_("mean slope, outlines drawn on the wine area only"),
+  largest: N_("area of the outline"), smallest: N_("measured area"), wineries: N_("OpenStreetMap wineries inside the outline"),
+  inland: N_("from the centre to the nearest sea coast"), north: N_("latitude of the centre"), south: N_("latitude of the centre") };
+function loadRecords() {
+  if (!RECORDS) RECORDS = fetch("data/records.json").then((r) => r.json()).catch(() => null);
+  return RECORDS;
+}
+function recValue(cat, v) {
+  if (cat.key === "north" || cat.key === "south") return Math.abs(v).toFixed(2) + "° " + (v < 0 ? "S" : "N");
+  if (cat.unit === "ha") return v >= 100000 ? fmtN(Math.round(v / 100)) + " km²" : fmtN(v, v < 10 ? 2 : 0) + " ha";
+  if (cat.unit === "°") return fmtN(v, 1) + "°";
+  return fmtN(v) + (cat.unit ? " " + cat.unit : "");
+}
+function dashRecords() {
+  loadRecords().then((R) => {
+    const el = $("recBody"); if (!el || dashTab !== "records") return;
+    if (!R) { el.innerHTML = '<div class="empty">' + t_("The records could not be loaded right now.") + "</div>"; return; }
+    const sc = R.scopes[recScope] || R.scopes.ALL;
+    el.innerHTML = '<div class="rec-grid">' + R.cats.filter((c) => sc[c.key]?.length).map((c) =>
+      '<div class="rec-card"><h3>' + t_(REC_TITLE[c.key] || c.key) + '</h3><div class="note">' + t_(REC_HINT[c.key] || "") + "</div><ol>" +
+      sc[c.key].map(([id, v]) => { const r = recOf(id); if (!r) return ""; return '<li><button data-go="' + esc(id) + '"><span class="rn">' + esc(r[0]) +
+        '<small>' + esc(recScope === "ALL" ? cname(r[2]) : r[5] || kindOf({ rank: r[4], level: r[3], country: r[2] })) + '</small></span><span class="rv">' + recValue(c, v) + "</span></button></li>"; }).join("") +
+      "</ol></div>").join("") + "</div>";
+    const sel = $("rec-cc");
+    if (sel && sel.options.length < 2) sel.insertAdjacentHTML("beforeend", Object.keys(R.scopes).filter((k) => k !== "ALL")
+      .sort((a, b) => cname(a).localeCompare(cname(b), LOCALE)).map((k) => '<option value="' + k + '"' + (k === recScope ? " selected" : "") + ">" + esc(cname(k)) + "</option>").join(""));
+  });
+  return '<p class="lead">' + t_("The extremes of the atlas, measured on the same open data for every place. Click a name to fly there.") + "</p>" +
+    '<div class="fbar"><select id="rec-cc" aria-label="' + t_("Country") + '"><option value="ALL">' + t_("The whole world") + "</option></select></div>" +
+    '<div id="recBody"><div class="note">' + t_("Loading…") + "</div></div>" +
+    '<p class="note">' + t_("Regions are left out, and so are places drawn from the districts that contain them, because their outline is not the wine area. Outlines made of whole communes include land that is not vineyard.") + " " + t_("Elevation and slope records use only outlines drawn on the wine area itself: French parcels, German vineyard sites, US AVAs and Australian subregions.") + "</p>";
+}
+function wireRecords() {
+  const sel = $("rec-cc");
+  if (sel) sel.onchange = (e) => { recScope = e.target.value; renderDash(); };
+}
+
 // ---------- live terrain readout under the cursor
 let roPending = false, roLast = null;
 function readoutAt(lngLat) {
@@ -3324,6 +3441,13 @@ map.on("load", async () => {
     const hid = decodeURIComponent(location.hash.slice(1));
     if (hid && byId.has(hid)) goTo(byId.get(hid));
     else if (hid && tnode(hid)) openGroup(hid);
+    // a link to #<place id> followed inside the open map (or an edited address) flies there too;
+    // the map itself writes the address with replaceState, which does not fire hashchange
+    window.addEventListener("hashchange", () => {
+      const h = decodeURIComponent(location.hash.slice(1));
+      if (h && byId.has(h)) goTo(byId.get(h));
+      else if (h && tnode(h)) openGroup(h);
+    });
   } catch (e) {
     console.error(e);
     $("loading").textContent = t_("The map data could not load. Reload the page to try again.");

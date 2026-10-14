@@ -30,7 +30,29 @@ Live: https://open-wine-atlas.vercel.app
 | France, Italy | Per-wine rules: colour, category, main and secondary grapes, yields, density | EU specifications compiled by Candiago et al. 2022 (via pdo-wine-data) | CC BY 4.0 |
 | All | Regional bedrock per place | GLiM, Hartmann & Moosdorf 2012 | CC BY 3.0 |
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
+| All | Nearest town and city with distance and direction, distance to the sea, rivers and lakes nearby, latitude twins on other continents | GeoNames cities5000; Natural Earth 1:10m coastline, rivers, lakes | CC BY 4.0; public domain |
+| All | Elevation, slope and aspect of every outline, measured ahead of time (for records, pages and when the live measurement cannot run) | Mapterhorn terrain tiles | Open licences, see mapterhorn.com/attribution |
 | All | Relief, 3D terrain, and per place elevation, slope and aspect (measured live in the browser) | Mapterhorn terrain tiles: IGN RGE ALTI, German DGM1, swissALTI3D, IGN MDT, Copernicus GLO-30 | Open licences, see mapterhorn.com/attribution |
+
+## Where it is, terrain and records
+
+`pipeline/context.py` adds to every place the nearest town (5,000 people or more) and city (30,000 or more) with
+distance and compass direction, the distance from its centre to the sea, the named rivers and lakes nearby and up to
+five wine places on other continents at the same latitude (±0.35°). The sheet shows them under *Where it is*, and
+the opening sentence of a small place says where it lies ("It lies 2.7 km north of Nuits-Saint-Georges and 18 km
+south-south-west of Dijon").
+
+`pipeline/terrain_stats.py` measures elevation, slope and aspect for every outline ahead of time, the same way the
+map does live (Mapterhorn tiles, Sobel slope, aspect as the direction the ground faces). The sheet uses these figures
+when the live measurement covers only part of the place or cannot run; the static pages print them.
+
+`pipeline/records.py` turns both into `web/data/records.json`: the ten highest, lowest, steepest, largest and smallest
+places, the ones with the most wineries, farthest from the sea and farthest north and south, for the world and for
+each country. My atlas › Records shows them, and so does the static page `/records/`.
+
+```bash
+python pipeline/context.py && python pipeline/terrain_stats.py && python pipeline/records.py && python web/build_web.py
+```
 
 ## Share images
 

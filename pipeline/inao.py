@@ -81,6 +81,9 @@ def main():
     shp = glob.glob(os.path.join(RAW, "inao", "*delim-parcellaire-aoc-shp.shp"))[0]
     print("reading", os.path.basename(shp))
     gdf = pyogrio.read_dataframe(shp)
+    # the INAO file also delimits a few AOCs that are not wine (Taureau de Camargue: beef; Béa du Roussillon: early
+    # potatoes). Every wine category starts with "Vin"; keep those only
+    gdf = gdf[gdf["categorie"].fillna("").str.startswith("Vin")]
     # simplify each commune record first (1 m, Lambert-93): removes cadastral noise and makes
     # the dissolve below fast
     gdf["geometry"] = shapely.make_valid(shapely.simplify(gdf.geometry.values, 1.0, preserve_topology=True))

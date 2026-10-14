@@ -23,6 +23,9 @@ source, and anyone who reuses it must give the attribution shown here.
 | Satellite base map (read live) | CC BY-NC-SA 4.0 | Sentinel-2 cloudless by EOX IT Services; IGN France, swisstopo, IGN España orthophotos |
 | Topographic base map (read live) | CC BY-SA | OpenTopoMap, © OpenStreetMap contributors |
 | Relief and terrain figures (computed in the browser, not stored) | Open licences of each elevation model | © Mapterhorn and its sources, see https://mapterhorn.com/attribution (IGN, German Länder survey offices, swisstopo, IGN España, Copernicus) |
+| Nearest towns and cities (`near_town`, `near_city` in details) | CC BY 4.0 | GeoNames (geonames.org), cities5000 |
+| Distance to the sea, rivers and lakes nearby | Public domain | Natural Earth 1:10m |
+| Stored terrain figures (`terrain` in details) and records (`web/data/records.json`) | Open licences of each elevation model; the figures CC BY 4.0 | © Mapterhorn and its sources; Open Wine Atlas contributors |
 | Community contributions in `contrib/` | CC BY 4.0 | Open Wine Atlas contributors |
 
 Because the OpenStreetMap layers are under ODbL, a database that combines them with other

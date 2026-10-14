@@ -54,7 +54,7 @@
   "url": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
   "about": "https://mapterhorn.com/attribution",
   "licence": "open licences of each source DEM",
-  "used_for": "hillshade, 3D terrain, per place elevation, slope and aspect (read live, not copied)"
+  "used_for": "hillshade, 3D terrain, per place elevation, slope and aspect (read live), and the stored terrain figures of pipeline/terrain_stats.py"
  },
  "geoboundaries": {
   "name": "geoBoundaries gbOpen, simplified administrative boundaries",
@@ -82,5 +82,20 @@
   "MD": "AGEPI register",
   "GE": "Sakpatenti register of appellations of origin",
   "CA": "O. Reg. 359/24 (VQA Act, Ontario); Wines of Marque Regulation (British Columbia); CARTV IGP Vin du Québec"
+ },
+ "geonames": {
+  "name": "GeoNames cities5000",
+  "license": "CC BY 4.0",
+  "attribution": "GeoNames (www.geonames.org)",
+  "url": "https://download.geonames.org/export/dump/",
+  "download_used": "pip package geonamescache 3.0.2 (geonamescache/data/cities5000.json)",
+  "used_for": "nearest town and city of each place (pipeline/context.py)"
+ },
+ "naturalearth_physical": {
+  "name": "Natural Earth 1:10m coastline, rivers and lake centerlines, lakes",
+  "license": "Public domain",
+  "url": "https://www.naturalearthdata.com",
+  "download_used": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_<layer>.geojson",
+  "used_for": "distance to the sea, rivers and lakes nearby (pipeline/context.py)"
  }
 }

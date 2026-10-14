@@ -34,6 +34,11 @@ Free-form, but use these keys when the source has them:
 `max_yield_kg_ha`, `min_planting_density`, `area_ha`, `outline_area_ha`, `communes` (list),
 `region`, `bereich`, `grosslage`, `register_no`, `eu_register` (URL), `source_date`, `note`.
 
+Computed for every place (`pipeline/context.py`, `pipeline/terrain_stats.py`):
+`near_town` `[name, km, bearing]` and `near_city` `[name, km, bearing, population]` (bearing = 16-point direction of the
+place as seen from the town), `sea_km`, `rivers` and `lakes` (`[[name, km], …]`), `lat_twins` (ids), and
+`terrain` `{e: [min, mean, max, p10, p90], s: [mean, p90 slope °], asp, dom, flat, res, n}`.
+
 Places built by `world.py` also use `basis` (legal basis), `outline` and `outline_quality` (how the outline was
 drawn), `admin_units` (list), `outline_source` (`{name, licence, source}`), `register_ref` (legal act),
 `also_registered` (smaller GIs inside that are not mapped yet), `state`, `lat`, `lon`.

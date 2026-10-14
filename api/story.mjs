@@ -203,6 +203,9 @@ function facts(d) {
   const out = [];
   const area = d.area_ha ?? d.outline_area_ha;
   if (area != null) out.push(["Area", fmt(area, area < 100 ? 1 : 0) + " ha"]);
+  // stored terrain (pipeline/terrain_stats.py): mean elevation, and the mean slope where the cells are fine enough
+  const t = d.terrain;
+  if (t?.e && !d.outline_quality) out.push(["Elevation", fmt(Math.round(t.e[1] / 5) * 5) + " m" + (t.s && t.s[0] >= 3 ? " · slope " + fmt(t.s[0], 0) + "°" : "")]);
   const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
   if (towns?.length) out.push([towns.length === 1 ? "Commune" : "Communes", towns.length <= 1 ? towns[0] : String(towns.length)]);
   const mains = [...new Set((d.wines || []).flatMap((w) => w.main || []))].map((g) => g.replace(/\s+(N|B|G|Rs|Rg)$/, ""));
