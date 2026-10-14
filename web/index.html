@@ -2055,6 +2055,7 @@ async function select(p, feature) {
     fillVintages(p, d, pd, tok);
     fillSoil(p, d, rec, tok);
     fillWiki(p, tok);
+    fillRecordBadges(p, tok);
     try { history.replaceState(null, "", "#" + encodeURIComponent(p.id)); } catch (e) {}
   }
 }
@@ -2247,6 +2248,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.cfr) rows.push([N_("Legal text"), d.cfr_url ? '<a href="' + esc(d.cfr_url) + '" target="_blank" rel="noopener">' + esc(d.cfr) + "</a>" : esc(d.cfr)]);
   if (rows.length) html += '<div class="sec"><h3>' + t_("Key facts") + '</h3><dl class="facts">' + rows.map(([k, v]) => "<dt>" + t_(k) + "</dt><dd>" + v + "</dd>").join("") + "</dl></div>";
   html += whereSection(p, d);
+  if (WEB) html += '<div class="sec" id="rec-sec" hidden></div>';
   if (WEB) {
     const wait = (t) => '<div class="note terrain-wait"><i></i>' + t_(t) + "</div>";
     html += '<div class="sec" id="terrain-sec"><h3>' + t_("Terrain") + "</h3>" + wait(N_("Measuring elevation, slope and aspect…")) + "</div>";
@@ -3349,6 +3351,26 @@ function dashRecords() {
     '<div class="fbar"><select id="rec-cc" aria-label="' + t_("Country") + '"><option value="ALL">' + t_("The whole world") + "</option></select></div>" +
     '<div id="recBody"><div class="note">' + t_("Loading…") + "</div></div>" +
     '<p class="note">' + t_("Regions are left out, and so are places drawn from the districts that contain them, because their outline is not the wine area. Outlines made of whole communes include land that is not vineyard.") + " " + t_("Elevation and slope records use only outlines drawn on the wine area itself: French parcels, German vineyard sites, US AVAs and Australian subregions.") + "</p>";
+}
+// on a sheet: the records this place holds, each a button to the list it is in
+async function fillRecordBadges(p, token) {
+  const R = await loadRecords();
+  const box = token === sheetToken ? $("rec-sec") : null;
+  if (!R || !box) return;
+  const hits = [];
+  for (const scope of ["ALL", p.country]) {
+    const sc = R.scopes[scope] || {};
+    for (const c of R.cats) {
+      const k = (sc[c.key] || []).findIndex(([id]) => id === p.id);
+      if (k >= 0 && !hits.some((h) => h.key === c.key && scope !== "ALL")) hits.push({ key: c.key, scope, rank: k + 1, v: sc[c.key][k][1], cat: c });
+    }
+  }
+  if (!hits.length) return;
+  box.hidden = false;
+  box.innerHTML = "<h3>" + t_("Records") + '</h3><div class="chips">' + hits.slice(0, 6).map((h) =>
+    '<button data-rec-scope="' + esc(h.scope) + '">' + t_("No. {n}", { n: h.rank }) + " · " + esc(t_(REC_TITLE[h.key])) +
+    " <small>" + esc(h.scope === "ALL" ? t_("The whole world") : cname(h.scope)) + " · " + recValue(h.cat, h.v) + "</small></button>").join("") + "</div>";
+  box.querySelectorAll("[data-rec-scope]").forEach((b) => b.onclick = () => { recScope = b.dataset.recScope; openDash("records"); });
 }
 function wireRecords() {
   const sel = $("rec-cc");

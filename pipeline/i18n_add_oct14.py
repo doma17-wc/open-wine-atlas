@@ -9,6 +9,7 @@ I18N = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
 LANGS = ["fr", "it", "de", "es", "pt", "nl", "ja", "zh", "ko"]
 
 T = {
+    "No. {n}": ["N° {n}", "N. {n}", "Nr. {n}", "N.º {n}", "N.º {n}", "Nr. {n}", "第{n}位", "第{n}名", "{n}위"],
     # records: terrain records only for outlines drawn on the wine area
     "mean elevation, outlines drawn on the wine area only": ["altitude moyenne, périmètres tracés sur la zone viticole seulement", "quota media, solo perimetri tracciati sulla zona vitata", "mittlere Höhe, nur auf die Weinbaufläche gezeichnete Umrisse", "altitud media, solo contornos trazados sobre la zona vitícola", "altitude média, só contornos traçados sobre a zona vitícola", "gemiddelde hoogte, alleen omtrekken getekend op het wijngebied", "平均標高（産地そのものを描いた輪郭のみ）", "平均海拔（仅限按产区本身绘制的轮廓）", "평균 고도(산지 자체로 그린 경계만)"],
     "mean slope, outlines drawn on the wine area only": ["pente moyenne, périmètres tracés sur la zone viticole seulement", "pendenza media, solo perimetri tracciati sulla zona vitata", "mittlere Neigung, nur auf die Weinbaufläche gezeichnete Umrisse", "pendiente media, solo contornos trazados sobre la zona vitícola", "declive médio, só contornos traçados sobre a zona vitícola", "gemiddelde helling, alleen omtrekken getekend op het wijngebied", "平均傾斜（産地そのものを描いた輪郭のみ）", "平均坡度（仅限按产区本身绘制的轮廓）", "평균 경사(산지 자체로 그린 경계만)"],
