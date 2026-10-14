@@ -135,6 +135,8 @@ def page(title, desc, path, body, jsonld=None):
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="/places/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/places/style.css">
+<script>window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 {ld}
 </head>
 <body>
