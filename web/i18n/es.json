@@ -1138,5 +1138,20 @@
  "{text}.": "{text}.",
  "Ürziger Würzgarten: spectacularly steep site with an unusual red soil, very different from the grey slate around it. Known for spicy Riesling.": "Ürziger Würzgarten: pago espectacularmente empinado con un insólito suelo rojo, muy distinto de la pizarra gris que lo rodea. Conocido por su Riesling especiado.",
  "ΠΟΠ (PDO)": "ΠΟΠ (DOP)",
- "ЗНП (PDO)": "ЗНП (DOP)"
+ "ЗНП (PDO)": "ЗНП (DOP)",
+ "River": "Río",
+ "Lake": "Lago",
+ "Peak": "Cumbre",
+ "Mountain range": "Cordillera",
+ "Plateau": "Meseta",
+ "Valley": "Valle",
+ "Rivers and lakes": "Ríos y lagos",
+ "Mountains and peaks": "Montañas y cumbres",
+ "Towns and villages": "Ciudades y pueblos",
+ "Towns and cities": "Ciudades",
+ "Remove the highlight": "Quitar el resaltado",
+ "Show all of it": "Verlo entero",
+ "Show it on the map": "Verlo en el mapa",
+ "Rivers, lakes, mountain ranges and peaks": "Ríos, lagos, cordilleras y cumbres",
+ "Close up: small rivers, streams, villages and peaks": "De cerca: ríos pequeños, arroyos, pueblos y cumbres"
 }

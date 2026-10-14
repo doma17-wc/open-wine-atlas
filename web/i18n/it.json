@@ -1138,5 +1138,20 @@
  "{text}.": "{text}.",
  "Ürziger Würzgarten: spectacularly steep site with an unusual red soil, very different from the grey slate around it. Known for spicy Riesling.": "Ürziger Würzgarten: vigneto spettacolarmente ripido con un insolito suolo rosso, molto diverso dall'ardesia grigia circostante. Noto per Riesling speziati.",
  "ΠΟΠ (PDO)": "ΠΟΠ (DOP)",
- "ЗНП (PDO)": "ЗНП (DOP)"
+ "ЗНП (PDO)": "ЗНП (DOP)",
+ "River": "Fiume",
+ "Lake": "Lago",
+ "Peak": "Vetta",
+ "Mountain range": "Catena montuosa",
+ "Plateau": "Altopiano",
+ "Valley": "Valle",
+ "Rivers and lakes": "Fiumi e laghi",
+ "Mountains and peaks": "Montagne e vette",
+ "Towns and villages": "Città e paesi",
+ "Towns and cities": "Città",
+ "Remove the highlight": "Togli l'evidenziazione",
+ "Show all of it": "Mostra tutto",
+ "Show it on the map": "Mostra sulla mappa",
+ "Rivers, lakes, mountain ranges and peaks": "Fiumi, laghi, catene montuose e vette",
+ "Close up: small rivers, streams, villages and peaks": "Da vicino: piccoli fiumi, torrenti, paesi e vette"
 }

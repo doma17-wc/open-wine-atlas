@@ -36,6 +36,8 @@
   --copper: #cf8f5f;       /* premier cru */
   --slate: #9db0c0;        /* German Einzellagen */
   --vine: #7f9b6f;         /* vineyard areas */
+  --river: #6f9cbd;        /* rivers and lakes */
+  --hl: #5fb4e8;           /* a highlighted river, lake, peak or range */
   --focus: #fff8ea;
   --f-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --f-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -70,6 +72,7 @@ button, input { font: inherit; color: inherit; }
 .results .n { font-weight: 500; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .results .m { grid-column: 1; color: var(--muted); font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .results .c { grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 500 11px var(--f-mono); color: var(--muted); }
+.results .c svg { position: static; transform: none; opacity: 1; display: block; }
 
 .legend { padding: 10px 12px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); backdrop-filter: blur(10px);
   display: grid; gap: 7px; font-size: 12.5px; }
@@ -80,6 +83,23 @@ button, input { font: inherit; color: inherit; }
 .legend input:not(:checked) ~ span { color: var(--muted); text-decoration: line-through; text-decoration-color: #555; }
 .legend input:focus-visible + .sw { outline: 2px solid var(--focus); outline-offset: 2px; }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; margin-left: 4px; }
+.sw-line { height: 0; border: 0; border-top: 2px solid currentColor; border-radius: 2px; }
+.sw-peak { width: 0; height: 0; border: 0; border-radius: 0; margin-left: 3px; border-left: 5.5px solid transparent; border-right: 5.5px solid transparent; border-bottom: 9px solid currentColor; }
+/* the river, lake, peak or range being highlighted */
+.geochip { position: absolute; z-index: 4; top: calc(60px + env(safe-area-inset-top, 0px)); transform: translateX(-50%);
+  left: calc(var(--railR, 16px) + (100% - var(--railR, 16px) - var(--topR, 16px)) / 2);
+  display: flex; align-items: center; gap: 8px; padding: 5px 6px 5px 12px; border-radius: 999px; background: var(--panel);
+  border: 1px solid color-mix(in srgb, var(--hl) 55%, var(--line)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--hl) 14%, transparent);
+  backdrop-filter: blur(10px); font-size: 13px; max-width: calc(100% - 32px); }
+.geochip .k { font: 500 10px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--hl); }
+.geochip .n { all: unset; cursor: pointer; color: var(--parchment); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.geochip .n:hover { text-decoration: underline; text-decoration-color: var(--muted); }
+.geochip .x { all: unset; cursor: pointer; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: var(--muted); }
+.geochip .x:hover { background: rgba(255,255,255,.08); color: var(--parchment); }
+.geochip .n:focus-visible, .geochip .x:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.geo-link { all: unset; cursor: pointer; color: var(--parchment); text-decoration: underline dotted; text-decoration-color: color-mix(in srgb, var(--river) 70%, transparent); text-underline-offset: 3px; }
+.geo-link:hover, .geo-link[aria-pressed="true"] { color: var(--hl); }
+.geo-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
 .lg-note { margin: 6px 0 0; font-size: 11px; line-height: 1.6; }
 .lg-note svg { vertical-align: middle; margin-right: 4px; }
 .ol-note { margin: 0 0 12px; padding: 8px 10px; border-left: 2px solid var(--line); font-size: 12.5px; color: var(--muted); }
@@ -517,6 +537,9 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .sheet.open ~ .attrib { right: 16px; }
   .attrib { display: none; }
   .maplibregl-ctrl-bottom-right { display: none; }
+  .geochip { top: auto; left: 16px; transform: none; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); max-width: calc(100% - 96px); }
+  .sheet.open ~ .geochip { bottom: calc(62% + 10px); }
+  .sheet.min.open ~ .geochip { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
 </style>
@@ -577,6 +600,9 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span data-i18n>Einzellagen (Rheinland-Pfalz)</span></label>
     <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span data-i18n>Vineyards (Switzerland, OSM)</span></label>
     <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span data-i18n>Wineries (OSM)</span></label>
+    <label style="color:var(--river)"><input type="checkbox" id="lg-water" checked><span class="sw sw-line"></span><span data-i18n>Rivers and lakes</span></label>
+    <label style="color:#b9a88a"><input type="checkbox" id="lg-mtn" checked><span class="sw sw-peak"></span><span data-i18n>Mountains and peaks</span></label>
+    <label style="color:#a59e93"><input type="checkbox" id="lg-town" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span data-i18n>Towns and villages</span></label>
     <p class="note lg-note"><svg width="18" height="6" aria-hidden="true"><path d="M1 3h16" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg> <span data-i18n>approximate outline, built from administrative units</span><br><svg width="18" height="8" aria-hidden="true"><circle cx="9" cy="4" r="3.2" fill="currentColor"/></svg> <span data-i18n>place without an open boundary, shown at its namesake town</span></p>
   </div>
   </div>
@@ -613,7 +639,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 </div>
 <nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" data-i18n-aria="Where you are" hidden></nav>
 <button class="showpanels" id="showPanels" hidden title="Show the panels again (F)" data-i18n-title="Show the panels again (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3h11v10h-11zM6 3v10"/></svg><span data-i18n>Show panels</span></button>
-<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · © OpenStreetMap <span data-i18n>contributors</span><span class="web-only" hidden> · <span data-i18n>terrain</span> © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore" data-i18n>all sources</button></div>
+<div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · Natural Earth · GeoNames · © OpenStreetMap <span data-i18n>contributors</span><span class="web-only" hidden> · <span data-i18n>terrain</span> © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore" data-i18n>all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
@@ -627,6 +653,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 </section>
 <div class="loading" id="loading" data-i18n>Loading the atlas…</div>
 <div class="tag" id="tag" hidden></div>
+<div class="geochip" id="geoChip" role="status" hidden><span class="k"></span><button class="n" id="geoChipName" title="Show all of it" data-i18n-title="Show all of it"></button><button class="x" id="geoChipX" aria-label="Remove the highlight" data-i18n-aria="Remove the highlight" title="Remove the highlight" data-i18n-title="Remove the highlight"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
 <div class="modal" id="modal" hidden><div class="card" id="modalCard" role="dialog" aria-modal="true"></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
@@ -681,6 +708,9 @@ const SOURCES = {
   wao: { name: "Wine Australia, Wine Geographical Indications Australia (official GI layer)", license: "CC BY 4.0", url: "https://wineaustralia-opendata-wineaustralia.hub.arcgis.com/datasets/2dd4c385f0ed4d109c2e18ae99e819e2" },
   wa: { name: "Wine Australia, Register of Protected GIs (outlines via adynak/WineRegions)", license: "CC BY 4.0 (Wine Australia)", url: "https://www.wineaustralia.com/labelling/register-of-protected-gis-and-other-terms/geographical-indications" },
   marker: { name: "Open Wine Atlas contributors: location of the namesake town", license: "CC BY 4.0", url: "https://github.com/doma17-wc/open-wine-atlas" },
+  ne: { name: "Natural Earth 1:10m rivers, lakes, mountain ranges and peaks", license: "Public domain", url: "https://www.naturalearthdata.com" },
+  geonames: { name: "GeoNames, towns of 5,000 people or more", license: "CC BY 4.0", url: "https://www.geonames.org" },
+  ofm: { name: "OpenFreeMap vector tiles (OpenMapTiles schema, data © OpenStreetMap contributors)", license: "ODbL 1.0 (data), CC BY 4.0 (OpenMapTiles)", url: "https://openfreemap.org" },
   dem: { name: "Mapterhorn terrain tiles: IGN RGE ALTI, DGM1 (German Länder), swissALTI3D, IGN MDT, Copernicus GLO-30 and others", license: "Open licences, see attribution", url: "https://mapterhorn.com/attribution" },
 };
 const LEVEL_LABEL = { region: N_("Wine region"), appellation: N_("Appellation"), subzone: N_("Sub-zone"), vineyard: N_("Vineyard site"), vineyard_area: N_("Vineyard area") };
@@ -1006,6 +1036,277 @@ function addPoi() {
       "text-opacity": ["interpolate", ["linear"], ["zoom"], 10.5, 0, 11, 1] } }, "win");
 }
 
+// ---------- geography: rivers, lakes, peaks, mountain ranges and towns (pipeline/geo.py: Natural Earth, GeoNames)
+// Each river, lake, peak and range has a stable gid ("river:rhone"). A click on it, a search or a link to #river:rhone
+// highlights it. Close up (zoom 9 and more, web only) OpenStreetMap adds small rivers, streams, villages and peaks.
+const GEO_KIND = { river: N_("River"), lake: N_("Lake"), peak: N_("Peak"), range: N_("Mountain range"), plateau: N_("Plateau"), valley: N_("Valley") };
+LOCALIZE.push(GEO_KIND);
+const GEO_GROUPS = ["water", "mtn", "town"];
+const GEO_PICK = ["geo-river-labels", "geo-lake-labels", "geo-peaks", "geo-range-labels", "osm-waterway-labels", "osm-stream-labels", "osm-water-labels",
+  "osm-peaks", "geo-rivers", "osm-waterway", "osm-streams"];
+const OSM_URL = QS.get("osm") || "https://tiles.openfreemap.org/planet"; // ?osm=<TileJSON URL> for testing
+let GEO = null, geoById = new Map(), geoLoading = null, HL = null, osmOk = true;
+function loadGeoIndex() {
+  if (!geoLoading) geoLoading = fetch("data/geo.json").then((r) => r.json()).then((d) => {
+    GEO = d.map((r) => ({ name: r[0], kind: r[1], gid: r[2], bbox: r[3], ele: r[4], alts: r[5] || [], _k: norm(r[0] + " " + (r[5] || []).join(" ")) }));
+    GEO.forEach((g) => geoById.set(g.gid, g));
+    return GEO;
+  }).catch((e) => { console.warn("geo.json", e); GEO = []; return GEO; });
+  return geoLoading;
+}
+// a river or lake named on a place sheet, or picked on the map: the stretch of that name nearest to the point
+function geoNear(name, kind, lon, lat) {
+  const n = norm(name), list = (GEO || []).filter((g) => (!kind || g.kind === kind) && (norm(g.name) === n || g.alts.some((a) => norm(a) === n)));
+  const d = (g) => { const b = g.bbox, x = Math.max(b[0] - lon, 0, lon - b[2]), y = Math.max(b[1] - lat, 0, lat - b[3]); return x * x + y * y; };
+  return list.sort((a, b) => d(a) - d(b))[0] || null;
+}
+function geoImages() {
+  const px = Math.round(devicePixelRatio > 1 ? 2 : 1);
+  const mk = (id, w, h, draw) => {
+    if (map.hasImage(id)) return;
+    const c = document.createElement("canvas"); c.width = w * px; c.height = h * px;
+    const g = c.getContext("2d"); g.scale(px, px); draw(g);
+    map.addImage(id, g.getImageData(0, 0, w * px, h * px), { pixelRatio: px });
+  };
+  mk("owa-peak", 12, 11, (g) => { g.beginPath(); g.moveTo(6, 1.2); g.lineTo(11, 9.8); g.lineTo(1, 9.8); g.closePath();
+    g.fillStyle = "#b9a88a"; g.fill(); g.lineWidth = 1.2; g.strokeStyle = "rgba(11,11,13,.75)"; g.stroke(); });
+  mk("owa-dot", 8, 8, (g) => { g.beginPath(); g.arc(4, 4, 2.4, 0, Math.PI * 2); g.fillStyle = "#a59e93"; g.fill(); g.lineWidth = 1; g.strokeStyle = "rgba(11,11,13,.7)"; g.stroke(); });
+}
+// Natural Earth rivers are drawn at 1:10 million: close up they hand over to OpenStreetMap (zoom 9.5 to 11), unless it cannot load
+const neFade = (far, near) => WEB && osmOk ? ["interpolate", ["linear"], ["zoom"], 3, far, 8, near, 9.5, near, 11, 0] : ["interpolate", ["linear"], ["zoom"], 3, far, 8, near];
+// river widths follow Natural Earth's scale rank: the Rhône and the Danube are drawn wider than a tributary
+const riverW = (a, b, c, d) => ["case", ["<=", ["get", "sr"], 2], a, ["<=", ["get", "sr"], 5], b, ["<=", ["get", "sr"], 8], c, d];
+function addGeo() {
+  map.addSource("geo", { type: "vector", url: pmUrl("geo.pmtiles"),
+    attribution: "Natural Earth · GeoNames" });
+  geoImages();
+  const below = map.getLayer("borders") ? "borders" : undefined, labels = map.getLayer("ov-labels") ? "ov-labels" : undefined;
+  // water first, under borders and outlines
+  add({ id: "geo-lakes", type: "fill", source: "geo", "source-layer": "lakes", paint: { "fill-color": P.water } }, "water");
+  add({ id: "geo-lake-line", type: "line", source: "geo", "source-layer": "lakes", minzoom: 4,
+    paint: { "line-color": P.shore, "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.3, 10, 1] } }, "water");
+  add({ id: "geo-rivers", type: "line", source: "geo", "source-layer": "rivers", minzoom: 3,
+    layout: { "line-cap": "round", "line-join": "round" },
+    paint: { "line-color": P.river,
+      "line-width": ["interpolate", ["linear"], ["zoom"], 3, riverW(0.9, 0.5, 0.3, 0.2), 6, riverW(1.6, 1, 0.6, 0.35), 9, riverW(2.6, 1.8, 1.2, 0.7), 12, riverW(4, 3, 2, 1.2)],
+      "line-opacity": neFade(["case", ["has", "name"], 0.9, 0.5], 1) } }, "water");
+  ["geo-lakes", "geo-lake-line", "geo-rivers"].forEach((l) => below && map.moveLayer(l, below));
+  // highlight: a soft glow and a bright core over the outlines, under the labels
+  const hl = (id, type, sl, paint, extra = {}) => { map.addLayer({ id, type, source: "geo", "source-layer": sl, filter: ["==", ["get", "gid"], "-"], paint, ...extra }, labels); };
+  hl("geo-hl-range", "fill", "ranges", { "fill-color": P.hl, "fill-opacity": 0.1 });
+  hl("geo-hl-range-line", "line", "ranges", { "line-color": P.hl, "line-opacity": 0.7, "line-width": 1.2, "line-dasharray": [3, 2] });
+  hl("geo-hl-lake", "fill", "lakes", { "fill-color": P.hl, "fill-opacity": 0.28 });
+  hl("geo-hl-lake-line", "line", "lakes", { "line-color": P.hlCore, "line-width": ["interpolate", ["linear"], ["zoom"], 4, 1, 12, 2.4] });
+  // close up the soft glow stays (fainter) under the OpenStreetMap line, in case OSM spells the river differently
+  hl("geo-hl-glow", "line", "rivers", { "line-color": P.hl, "line-opacity": WEB && osmOk ? ["interpolate", ["linear"], ["zoom"], 9.5, 0.45, 11, 0.22] : 0.45, "line-blur": 4,
+    "line-width": ["interpolate", ["linear"], ["zoom"], 3, 6, 8, 10, 13, 16] }, { layout: { "line-cap": "round", "line-join": "round" } });
+  hl("geo-hl-river", "line", "rivers", { "line-color": P.hlCore, "line-opacity": neFade(1, 1), "line-width": ["interpolate", ["linear"], ["zoom"], 3, 1.6, 8, 2.6, 13, 4] },
+    { layout: { "line-cap": "round", "line-join": "round" } });
+  hl("geo-hl-peak", "circle", "peaks", { "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 7, 12, 11], "circle-color": "rgba(0,0,0,0)",
+    "circle-stroke-color": P.hlCore, "circle-stroke-width": 2 });
+  // labels sit under the wine labels, so an appellation name always wins a clash
+  const italic = ["literal", ["noto-italic"]];
+  add({ id: "geo-range-labels", type: "symbol", source: "geo", "source-layer": "range_labels", maxzoom: 9,
+    layout: { "text-field": ["get", "name"], "text-font": italic, "text-transform": "uppercase", "text-letter-spacing": 0.3, "text-max-width": 9,
+      "text-size": ["interpolate", ["linear"], ["zoom"], 2, ["case", ["<=", ["get", "sr"], 2], 11, 9.5], 7, ["case", ["<=", ["get", "sr"], 3], 15, 12]],
+      "symbol-sort-key": ["get", "sr"], "text-padding": 8 },
+    paint: { "text-color": P.relief, "text-halo-color": P.halo, "text-halo-width": 1,
+      "text-opacity": ["interpolate", ["linear"], ["zoom"], 8, 1, 9, 0] } }, "mtn");
+  add({ id: "geo-river-labels", type: "symbol", source: "geo", "source-layer": "river_labels", minzoom: 5,
+    layout: { "text-field": ["get", "name"], "text-font": italic, "symbol-placement": "line", "symbol-spacing": 380, "text-max-angle": 40,
+      "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10.5, 9, 12.5, 12, 13.5], "text-letter-spacing": 0.12, "symbol-sort-key": ["get", "sr"], "text-padding": 4 },
+    paint: { "text-color": P.riverLabel, "text-halo-color": P.halo, "text-halo-width": 1.3,
+      "text-opacity": neFade(1, 1) } }, "water");
+  add({ id: "geo-lake-labels", type: "symbol", source: "geo", "source-layer": "lake_labels", minzoom: 4,
+    layout: { "text-field": ["get", "name"], "text-font": italic, "text-size": ["interpolate", ["linear"], ["zoom"], 4, 10.5, 10, 13], "text-max-width": 7,
+      "text-letter-spacing": 0.06, "symbol-sort-key": ["-", 0, ["get", "a"]], "text-padding": 4 },
+    paint: { "text-color": P.riverLabel, "text-halo-color": P.halo, "text-halo-width": 1.3 } }, "water");
+  add({ id: "geo-peaks", type: "symbol", source: "geo", "source-layer": "peaks", minzoom: 5,
+    layout: { "icon-image": "owa-peak", "icon-size": ["interpolate", ["linear"], ["zoom"], 5, 0.8, 10, 1.05],
+      "text-field": ["format", ["get", "name"], {}, "\n", {}, ["concat", ["number-format", ["get", "ele"], { locale: LOCALE }], " m"], { "font-scale": 0.82 }],
+      "text-font": italic, "text-size": ["interpolate", ["linear"], ["zoom"], 5, 10, 10, 12], "text-anchor": "top", "text-offset": [0, 0.75],
+      "text-optional": true, "text-max-width": 8, "symbol-sort-key": ["-", 0, ["get", "ele"]] },
+    paint: { "text-color": P.relief, "text-halo-color": P.halo, "text-halo-width": 1.2 } }, "mtn");
+  // towns: the big ones early, under 25,000 people only close up
+  const town = (id, filter, minzoom, size) => add({ id, type: "symbol", source: "geo", "source-layer": "towns", minzoom, filter,
+    layout: { "icon-image": "owa-dot", "text-field": ["get", "name"], "text-font": ["literal", ["noto-regular"]],
+      "text-size": size, "text-variable-anchor": ["left", "right", "top", "bottom"], "text-radial-offset": 0.55, "text-justify": "auto",
+      "text-max-width": 8, "symbol-sort-key": ["-", 0, ["get", "pop"]], "text-padding": 3 },
+    paint: { "text-color": P.town, "text-halo-color": P.halo, "text-halo-width": 1.2 } }, "town");
+  town("geo-towns", [">=", ["get", "pop"], 25000], 4, ["interpolate", ["linear"], ["zoom"], 4, ["case", [">=", ["get", "pop"], 1e6], 11.5, 10], 10, ["case", [">=", ["get", "pop"], 2e5], 13, 11.5]]);
+  town("geo-towns-small", ["<", ["get", "pop"], 25000], 9.5, ["interpolate", ["linear"], ["zoom"], 9.5, 10, 13, 11.5]);
+  ["geo-range-labels", "geo-towns", "geo-towns-small", "geo-peaks", "geo-lake-labels", "geo-river-labels"].forEach((l) => labels && map.moveLayer(l, labels));
+  // the plain base rivers and lakes give way to the named ones
+  ["rivers", "lakes"].forEach((l) => map.getLayer(l) && map.setLayoutProperty(l, "visibility", "none"));
+  if (WEB) addOsmDetail(below, labels);
+  applyLegend();
+  geoPaint();
+}
+// close up: OpenStreetMap rivers, streams, lakes, villages and peaks (OpenFreeMap vector tiles, OpenMapTiles schema)
+function addOsmDetail(below, labels) {
+  map.addSource("osm", { type: "vector", url: OSM_URL, attribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' });
+  const name = ["coalesce", ["get", "name"], ["get", "name_en"], ""];
+  const notTunnel = ["!=", ["get", "brunnel"], "tunnel"];
+  add({ id: "osm-water", type: "fill", source: "osm", "source-layer": "water", minzoom: 9, filter: ["!=", ["get", "class"], "ocean"],
+    paint: { "fill-color": P.water, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 9, 0, 10, 1] } }, "water");
+  // rivers and canals from zoom 9, streams from zoom 12
+  const ww = (id, classes, minzoom, w0, w1) => add({ id, type: "line", source: "osm", "source-layer": "waterway", minzoom,
+    filter: ["all", notTunnel, ["in", ["get", "class"], ["literal", classes]]], layout: { "line-cap": "round", "line-join": "round" },
+    paint: { "line-color": P.river, "line-opacity": ["interpolate", ["linear"], ["zoom"], minzoom, 0, minzoom + 1, 1],
+      "line-width": ["interpolate", ["linear"], ["zoom"], minzoom, w0, 15, w1] } }, "water");
+  ww("osm-waterway", ["river", "canal"], 9, 1.6, 3.6);
+  ww("osm-streams", ["stream"], 12, 0.6, 1.2);
+  ["osm-water", "osm-streams", "osm-waterway"].forEach((l) => below && map.moveLayer(l, below));
+  map.addLayer({ id: "osm-hl-glow", type: "line", source: "osm", "source-layer": "waterway", minzoom: 9, filter: ["==", ["get", "name"], "-"],
+    layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": P.hl, "line-opacity": 0.45, "line-blur": 4, "line-width": 14 } }, labels);
+  map.addLayer({ id: "osm-hl-river", type: "line", source: "osm", "source-layer": "waterway", minzoom: 9, filter: ["==", ["get", "name"], "-"],
+    layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": P.hlCore, "line-width": 3.2 } }, labels);
+  const wwl = (id, classes, minzoom, size) => add({ id, type: "symbol", source: "osm", "source-layer": "waterway", minzoom,
+    filter: ["all", notTunnel, ["has", "name"], ["in", ["get", "class"], ["literal", classes]]],
+    layout: { "text-field": name, "text-font": ["literal", ["noto-italic"]], "symbol-placement": "line", "symbol-spacing": 320, "text-max-angle": 28,
+      "text-size": size, "text-letter-spacing": 0.1, "text-padding": 4 },
+    paint: { "text-color": P.riverLabel, "text-halo-color": P.halo, "text-halo-width": 1.3, "text-opacity": ["interpolate", ["linear"], ["zoom"], minzoom, 0, minzoom + 1, 1] } }, "water");
+  wwl("osm-waterway-labels", ["river", "canal"], 10, ["interpolate", ["linear"], ["zoom"], 10, 11.5, 14, 13]);
+  wwl("osm-stream-labels", ["stream"], 13, 11);
+  add({ id: "osm-water-labels", type: "symbol", source: "osm", "source-layer": "water_name", minzoom: 10, filter: ["==", ["get", "class"], "lake"],
+    layout: { "text-field": name, "text-font": ["literal", ["noto-italic"]], "text-size": 12, "text-max-width": 7 },
+    paint: { "text-color": P.riverLabel, "text-halo-color": P.halo, "text-halo-width": 1.3, "text-opacity": ["interpolate", ["linear"], ["zoom"], 10, 0, 11, 1] } }, "water");
+  add({ id: "osm-peaks", type: "symbol", source: "osm", "source-layer": "mountain_peak", minzoom: 10, filter: ["all", ["has", "name"], ["match", ["get", "class"], ["peak", "volcano"], true, false]],
+    layout: { "icon-image": "owa-peak", "icon-size": 0.9,
+      "text-field": ["case", ["has", "ele"], ["format", name, {}, "\n", {}, ["concat", ["number-format", ["get", "ele"], { locale: LOCALE }], " m"], { "font-scale": 0.82 }], name],
+      "text-font": ["literal", ["noto-italic"]], "text-size": 11, "text-anchor": "top", "text-offset": [0, 0.7], "text-optional": true, "text-max-width": 8,
+      "symbol-sort-key": ["coalesce", ["get", "rank"], 99] },
+    paint: { "text-color": P.relief, "text-halo-color": P.halo, "text-halo-width": 1.2 } }, "mtn");
+  add({ id: "osm-villages", type: "symbol", source: "osm", "source-layer": "place", minzoom: 11.5, filter: ["match", ["get", "class"], ["village", "hamlet"], true, false],
+    layout: { "text-field": name, "text-font": ["literal", ["noto-regular"]], "text-size": ["interpolate", ["linear"], ["zoom"], 11.5, 10, 15, 12],
+      "text-max-width": 8, "text-padding": 3, "symbol-sort-key": ["match", ["get", "class"], "village", 0, 1] },
+    paint: { "text-color": P.town, "text-halo-color": P.halo, "text-halo-width": 1.2, "text-opacity": ["case", ["==", ["get", "class"], "hamlet"], 0.75, 1] } }, "town");
+  ["osm-villages", "osm-peaks", "osm-water-labels", "osm-stream-labels", "osm-waterway-labels"].forEach((l) => labels && map.moveLayer(l, labels));
+  // if OpenFreeMap cannot be reached, the Natural Earth rivers stay drawn close up
+  // (a single missing tile does not count: only a TileJSON that never arrived)
+  map.on("error", (e) => { if (osmOk && e && e.sourceId === "osm" && !(map.getSource("osm") || {}).tiles) { osmOk = false; osmFallback(); } });
+}
+function osmFallback() {
+  setP("geo-rivers", "line-opacity", neFade(["case", ["has", "name"], 0.9, 0.5], 1));
+  setP("geo-river-labels", "text-opacity", neFade(1, 1));
+  setP("geo-hl-glow", "line-opacity", 0.45); setP("geo-hl-river", "line-opacity", neFade(1, 1));
+}
+// colours of the geography for the current base map, and the name being highlighted
+function geoPaint() {
+  if (!map.getLayer("geo-rivers")) return;
+  const hg = HL ? HL.gid : "-";
+  setP("geo-lakes", "fill-color", P.water); setP("osm-water", "fill-color", P.water);
+  setP("geo-lake-line", "line-color", P.shore);
+  ["geo-rivers", "osm-waterway", "osm-streams"].forEach((l) => setP(l, "line-color", P.river));
+  const lab = ["case", ["==", ["get", "gid"], hg], P.hlCore, P.riverLabel];
+  setP("geo-river-labels", "text-color", lab); setP("geo-lake-labels", "text-color", lab);
+  ["osm-waterway-labels", "osm-stream-labels", "osm-water-labels"].forEach((l) => setP(l, "text-color", HL ? ["case", ["in", ["coalesce", ["get", "name"], ""], ["literal", HL.names]], P.hlCore, P.riverLabel] : P.riverLabel));
+  ["geo-range-labels", "geo-peaks", "osm-peaks"].forEach((l) => setP(l, "text-color", P.relief));
+  ["geo-towns", "geo-towns-small", "osm-villages"].forEach((l) => setP(l, "text-color", P.town));
+  map.getStyle().layers.forEach(({ id, type }) => {
+    if (/^(geo|osm)-/.test(id) && type === "symbol") setP(id, "text-halo-color", P.halo);
+  });
+  ["geo-hl-glow", "osm-hl-glow"].forEach((l) => setP(l, "line-color", P.hl));
+  ["geo-hl-river", "osm-hl-river", "geo-hl-lake-line"].forEach((l) => setP(l, "line-color", P.hlCore));
+  setP("geo-hl-lake", "fill-color", P.hl); setP("geo-hl-range", "fill-color", P.hl); setP("geo-hl-range-line", "line-color", P.hl);
+  setP("geo-hl-peak", "circle-stroke-color", P.hlCore);
+}
+// the geography follows its legend switches; the Topo map draws its own rivers and names, satellite shows the real water
+function geoVis() {
+  LAYERS.forEach(([id, g]) => {
+    if (!GEO_GROUPS.includes(g) || !map.getLayer(id)) return;
+    let on = $(GROUPS[g]).checked && baseMap !== "topo";
+    if ((id === "geo-lakes" || id === "osm-water") && baseMap === "satellite") on = false;
+    map.setLayoutProperty(id, "visibility", on ? "visible" : "none");
+  });
+}
+function geoFilters() {
+  const g = HL ? HL.gid : "-";
+  const on = (kind) => HL && (HL.kind === kind || (kind === "range" && (HL.kind === "plateau" || HL.kind === "valley"))) ? ["==", ["get", "gid"], g] : ["==", ["get", "gid"], "-"];
+  ["geo-hl-glow", "geo-hl-river"].forEach((l) => map.getLayer(l) && map.setFilter(l, on("river")));
+  ["geo-hl-lake", "geo-hl-lake-line"].forEach((l) => map.getLayer(l) && map.setFilter(l, on("lake")));
+  ["geo-hl-range", "geo-hl-range-line"].forEach((l) => map.getLayer(l) && map.setFilter(l, on("range")));
+  if (map.getLayer("geo-hl-peak")) map.setFilter("geo-hl-peak", on("peak"));
+  const osm = HL && HL.kind === "river" ? ["all", ["!=", ["get", "brunnel"], "tunnel"], ["any", ["in", ["coalesce", ["get", "name"], ""], ["literal", HL.names]], ["in", ["coalesce", ["get", "name_en"], ""], ["literal", HL.names]]]] : ["==", ["get", "name"], "-"];
+  ["osm-hl-glow", "osm-hl-river"].forEach((l) => map.getLayer(l) && map.setFilter(l, osm));
+}
+// highlight one river, lake, peak or range; fly: fit the map to it
+function setHL(g, fly) {
+  if (!g) { clearHL(); return; }
+  HL = { gid: g.gid, kind: g.kind, name: g.name, names: osmNames([g.name, ...(g.alts || [])]), bbox: g.bbox, ele: g.ele };
+  geoFilters(); geoPaint();
+  const chip = $("geoChip");
+  chip.querySelector(".k").textContent = t_(GEO_KIND[g.kind] ? GEO_KIND[g.kind] : g.kind);
+  chip.querySelector(".n").textContent = g.name + (g.ele ? " · " + fmt(g.ele) + " m" : "");
+  chip.hidden = false;
+  $("geoChipName").disabled = !g.bbox;
+  markGeoLinks();
+  if (fly && g.bbox) flyToGeo(g);
+  // the address names the river while no place sheet is open (a place keeps its own link)
+  if (WEB && !$("sheet").classList.contains("open")) try { history.replaceState(null, "", "#" + g.gid); } catch (e) {}
+}
+// OpenStreetMap often writes the article or the word river: La Saône, Le Rhône, Río Duero, Rio Douro
+function osmNames(list) {
+  const out = new Set(list);
+  list.forEach((n) => ["Le ", "La ", "L'", "L’", "Les ", "Río ", "Rio ", "Riu ", "Rivière ", "Fiume ", "Lac ", "Lago ", "Lake "].forEach((a) => out.add(a + n)));
+  return [...out];
+}
+function clearHL() {
+  if (!HL) return;
+  HL = null; geoFilters(); geoPaint(); $("geoChip").hidden = true; markGeoLinks();
+  if (WEB && /^#(river|lake|peak|range):/.test(location.hash)) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+}
+function flyToGeo(g) {
+  const b = g.bbox, point = b[0] === b[2] && b[1] === b[3];
+  const maxZoom = point ? 11 : { river: 10, lake: 11, range: 8.5, plateau: 8.5, valley: 9.5 }[g.kind] || 10;
+  const km = map.getCenter().distanceTo(new maplibregl.LngLat((b[0] + b[2]) / 2, (b[1] + b[3]) / 2)) / 1000;
+  // room for the sheet only when it is open; on phones the search bar sits on top
+  const open = $("sheet").classList.contains("open"), wide = innerWidth > 760;
+  const padding = wide ? { top: 90, bottom: 50, left: 30, right: open ? curSheetW() + 50 : 50 }
+    : { top: 150, bottom: open ? innerHeight * 0.62 + 20 : 80, left: 24, right: 24 };
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding, maxZoom, pitch: Math.min(map.getPitch(), pitchCap(maxZoom)),
+    duration: REDUCED ? 0 : map.getZoom() < 4 || km > 2500 ? Math.min(3600, 2200 + km / 10) : 1600, essential: true });
+}
+async function openGeo(gid, fly = true) {
+  await loadGeoIndex();
+  const g = geoById.get(gid);
+  if (g) setHL(g, fly);
+  return g;
+}
+// what is under the pointer: a river line or label, a lake or range name, a peak (Natural Earth or OpenStreetMap)
+function pickGeo(pt) {
+  const layers = GEO_PICK.filter((l) => map.getLayer(l) && map.getLayoutProperty(l, "visibility") !== "none");
+  if (!layers.length) return null;
+  const fs = map.queryRenderedFeatures([[pt.x - 4, pt.y - 4], [pt.x + 4, pt.y + 4]], { layers });
+  const f = fs.find((x) => x.properties.name);
+  if (!f) return null;
+  const p = f.properties, sl = f.sourceLayer;
+  const kind = sl === "rivers" || sl === "river_labels" || sl === "waterway" ? "river" : sl === "lake_labels" ? "lake" : sl === "peaks" || sl === "mountain_peak" ? "peak" : (p.k || "range");
+  return { name: p.name, gid: p.gid || null, kind, ele: p.ele ?? null };
+}
+async function chooseGeoAt(hit, lngLat) {
+  await loadGeoIndex();
+  const g = (hit.gid && geoById.get(hit.gid)) || geoNear(hit.name, hit.kind, lngLat.lng, lngLat.lat) ||
+    { name: hit.name, kind: hit.kind, gid: hit.kind + ":" + norm(hit.name).replace(/ /g, "-"), bbox: null, ele: hit.ele, alts: [] };
+  if (HL && HL.gid === g.gid) clearHL(); else setHL(g, false);
+}
+$("geoChipX").onclick = () => clearHL();
+$("geoChipName").onclick = () => { if (HL && HL.bbox) flyToGeo(HL); };
+// search: rivers, lakes, ranges and peaks next to the places (exact names first)
+function searchGeo(n, words) {
+  if (!GEO) return [];
+  const out = [];
+  for (const g of GEO) {
+    if (!words.every((w) => g._k.includes(w))) continue;
+    const nk = norm(g.name);
+    let sc = nk === n || g.alts.some((a) => norm(a) === n) ? -0.5 : nk.startsWith(n) ? 0.35 : nk.includes(" " + n) ? 1.35 : 2.4;
+    sc += { river: 0.05, lake: 0.1, range: 0.15, plateau: 0.2, valley: 0.2, peak: 0.25 }[g.kind] ?? 0.3;
+    out.push([sc, { geo: g }]);
+    if (out.length > 60) break;
+  }
+  return out;
+}
+
 // ---------- relief: hillshade, 3D terrain
 function addRelief() {
   const dem = { type: "raster-dem", tiles: [DEM_URL], tileSize: DEM_TILE, maxzoom: DEM_MAX, encoding: "terrarium",
@@ -1040,16 +1341,19 @@ if (WEB) { $("btn2d").onclick = () => is3d && set3d(false); $("btn3d").onclick =
 // ---------- map types: base maps (Atlas dark, Paper, Satellite, Topo) and terrain overlays
 const ASPECT_RGB = [[70, 110, 190], [80, 165, 165], [150, 195, 110], [242, 201, 76], [242, 150, 70], [224, 96, 63], [170, 95, 176], [95, 95, 200]];
 const INK = {
-  dark: { bg: "#08090b", land: "#151518", water: "#08090b", river: "#1e2833", border: "#34343c", ctry: "#5f5b55",
+  dark: { bg: "#08090b", land: "#151518", water: "#08090b", river: "#335a78", border: "#34343c", ctry: "#5f5b55",
+    shore: "#22313d", riverLabel: "#7d9fba", relief: "#9a8e78", town: "#9d968b", hl: "#5fb4e8", hlCore: "#d6efff",
     parchment: "#e6dccb", gold: "#e7c06a", copper: "#cf8f5f", slate: "#9db0c0", vine: "#7f9b6f", label: "#cbbfa9",
     halo: "rgba(11,11,13,.9)", winery: "#c9c2b6", wlabel: "#a9a296", night: "#0b0b0d",
     shade: ["rgba(0,0,0,0.6)", "rgba(255,244,222,0.10)", "rgba(0,0,0,0.25)"] },
-  light: { bg: "#c9d3d6", land: "#f1ebdf", water: "#c9d3d6", river: "#a7b9c2", border: "#b5ab9b", ctry: "#8a8073",
+  light: { bg: "#c9d3d6", land: "#f1ebdf", water: "#c9d3d6", river: "#86a9bf", border: "#b5ab9b", ctry: "#8a8073",
+    shore: "#a9bcc6", riverLabel: "#3f6d8c", relief: "#7d6d55", town: "#5c534a", hl: "#2f8fd0", hlCore: "#0b5c94",
     parchment: "#4a3c2e", gold: "#946400", copper: "#a4471f", slate: "#2f5677", vine: "#557d3f", label: "#4a3c2e",
     halo: "rgba(246,242,234,.92)", winery: "#5b5047", wlabel: "#5b5047", night: "#f6f2ea",
     shade: ["rgba(70,50,30,0.38)", "rgba(255,255,255,0.35)", "rgba(70,50,30,0.18)"] },
 };
-INK.satellite = { ...INK.dark, bg: "#000000", halo: "rgba(0,0,0,.82)", label: "#f3ead9", parchment: "#f6eedf", border: "rgba(255,255,255,.35)", ctry: "#e8e2d6" };
+INK.satellite = { ...INK.dark, bg: "#000000", halo: "rgba(0,0,0,.82)", label: "#f3ead9", parchment: "#f6eedf", border: "rgba(255,255,255,.35)", ctry: "#e8e2d6",
+  river: "#6fa9d4", riverLabel: "#cfe5f6", relief: "#e6dccb", town: "#ece6dc" };
 INK.topo = { ...INK.light, halo: "rgba(255,255,255,.92)" };
 let baseMap = "dark", overlay = "relief", P = INK.dark;
 const store = { get(k) { try { return localStorage.getItem("owa." + k); } catch (e) { return null; } },
@@ -1101,8 +1405,8 @@ function applyTheme() {
   const raster = baseMap === "satellite" || baseMap === "topo";
   setP("bg", "background-color", P.bg);
   setP("land", "fill-color", P.land); setVis("land", !raster);
-  setP("lakes", "fill-color", P.water); setVis("lakes", !raster);
-  setP("rivers", "line-color", P.river); setVis("rivers", !raster);
+  setP("lakes", "fill-color", P.water); setVis("lakes", !raster && !map.getLayer("geo-lakes"));
+  setP("rivers", "line-color", P.river); setVis("rivers", !raster && !map.getLayer("geo-rivers"));
   setP("borders", "line-color", P.border); setVis("borders", baseMap !== "topo");
   setP("country-labels", "text-color", P.ctry); setP("country-labels", "text-halo-color", raster ? P.halo : P.land);
   const rc = rankColorP(P);
@@ -1125,6 +1429,7 @@ function applyTheme() {
   // the cadastre is drawn in dark ink: invert it on the dark map
   setP("cadastre", "raster-brightness-min", baseMap === "dark" ? 1 : 0); setP("cadastre", "raster-brightness-max", baseMap === "dark" ? 0 : 1);
   document.documentElement.dataset.base = baseMap;
+  geoPaint(); geoVis();
   applySky();
 }
 const OV_LEGEND = {
@@ -1693,7 +1998,7 @@ function nextIdle() {
 // every outline fragment of the place in the loaded vector tiles (parcel-level files win over the overview)
 function geometryFor(id) {
   const detail = [], ov = [];
-  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi" && k !== "ovlo").map(([k]) => k);
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && !["base", "poi", "ovlo", "geo", "osm"].includes(k)).map(([k]) => k);
   for (const s of srcs) for (const sl of ["appellations", "crus", "grosslagen"]) {
     let fs = [];
     try { fs = map.querySourceFeatures(s, { sourceLayer: sl, filter: ["==", ["get", "id"], id] }); } catch (e) {}
@@ -1985,6 +2290,15 @@ map.on("mousemove", (e) => {
     tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
     return;
   }
+  // a river line or a geography name right under the pointer
+  const gh = pickGeo(e.point);
+  if (gh) {
+    if (hovered) { setState(hovered, "hover", false); hovered = null; }
+    map.getCanvas().style.cursor = "pointer";
+    tag.innerHTML = esc(gh.name) + "<small>" + esc(t_(GEO_KIND[gh.kind] || "")) + "</small>";
+    tag.style.left = e.point.x + "px"; tag.style.top = e.point.y + "px"; tag.hidden = false;
+    return;
+  }
   const f = pick(e.point);
   if (hovered && (!f || f.id !== hovered.id)) { setState(hovered, "hover", false); hovered = null; }
   if (f) {
@@ -1999,8 +2313,10 @@ map.on("mouseout", () => { tag.hidden = true; setWHover(null); });
 map.on("click", (e) => {
   const w = pickWinery(e.point);
   if (w) { openWinery(w); return; }
+  const gh = pickGeo(e.point);
+  if (gh) { chooseGeoAt(gh, e.lngLat); return; }
   const f = pick(e.point);
-  if (!f) { closeSheet(); return; }
+  if (!f) { closeSheet(); clearHL(); return; }
   select(f.properties, f);
   // seen from far away (the globe, a whole country) the click flies in to the place; close up the map stays put
   const rec = byId.get(f.properties.id);
@@ -2013,7 +2329,7 @@ function clearSelected() {
 }
 function markSelected(id) {
   clearSelected();
-  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && k !== "base" && k !== "poi" && k !== "ovlo").map(([k]) => k);
+  const srcs = Object.entries(map.getStyle().sources).filter(([k, v]) => v.type === "vector" && !["base", "poi", "ovlo", "geo", "osm"].includes(k)).map(([k]) => k);
   selected = [];
   srcs.forEach((s) => ["appellations", "crus", "grosslagen"].forEach((sl) => {
     const f = { source: s, sourceLayer: sl, id };
@@ -2168,8 +2484,11 @@ function whereSection(p, d) {
   if (d.near_city) rows.push([N_("Nearest city"), t_("{km} km {dir} of {town}", { km: kmTxt(d.near_city[1]), dir: dir16(d.near_city[2]), town: esc(d.near_city[0]) }) +
     ' <span class="note">' + t_("{n} people", { n: fmt(d.near_city[3]) }) + "</span>"]);
   if (d.sea_km != null) rows.push([N_("To the sea"), '<span class="num">' + kmTxt(d.sea_km) + " km</span>"]);
-  if (d.rivers?.length) rows.push([N_("Rivers nearby"), d.rivers.map(([n, km]) => esc(n) + ' <span class="note">' + kmTxt(km) + " km</span>").join(" · ")]);
-  if (d.lakes?.length) rows.push([N_("Lakes nearby"), d.lakes.map(([n, km]) => esc(n) + ' <span class="note">' + kmTxt(km) + " km</span>").join(" · ")]);
+  // each river and lake is a button: it lights up on the map
+  const gl = (kind) => ([n, km]) => '<button class="geo-link" data-geo-name="' + esc(n) + '" data-geo-kind="' + kind + '" title="' + esc(t_("Show it on the map")) + '">' + esc(n) +
+    '</button> <span class="note">' + kmTxt(km) + " km</span>";
+  if (d.rivers?.length) rows.push([N_("Rivers nearby"), d.rivers.map(gl("river")).join(" · ")]);
+  if (d.lakes?.length) rows.push([N_("Lakes nearby"), d.lakes.map(gl("lake")).join(" · ")]);
   const twins = (d.lat_twins || []).map((id) => byId.get(id)).filter(Boolean);
   if (!rows.length && !twins.length) return "";
   return '<div class="sec" id="where-sec"><h3>' + t_("Where it is") + '</h3>' +
@@ -2203,6 +2522,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
       : p.parent ? '<div class="crumbs">' + t_("Part of") + " " + (parentRec ? '<button data-goto="' + esc(parentRec[1]) + '">' + esc(p.parent) + "</button>" : esc(p.parent)) +
       (d.grosslage ? " · " + t_("Großlage") + " " + esc(d.grosslage) : "") + "</div>" : "");
   CURRENT = { p, d, rec };
+  queueMicrotask(markGeoLinks);
   $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
   let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
   if (d.outline) html += '<p class="ol-note"><b>' + t_({ legal: N_("Outline."), approx: N_("Approximate outline."), point: N_("Location only.") }[d.outline_quality] || "Outline.") + "</b> " + esc(t_(d.outline)) + ' <button class="q" data-gloss="outline" aria-label="' + t_("How outlines are drawn") + '">?</button></p>';
@@ -2337,7 +2657,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
 function closeSheet() {
   $("sheet").classList.remove("open"); clearSelected(); sheetToken++;
   ACTIVE = null; document.querySelectorAll(".tr.on").forEach((r) => r.classList.remove("on")); renderMapCrumbs(null);
-  if (WEB) try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+  if (WEB) try { history.replaceState(null, "", location.pathname + location.search + (HL ? "#" + HL.gid : "")); } catch (e) {}
 }
 $("close").onclick = closeSheet;
 // Esc: close a dialog, else go up one level (Morey-Saint-Denis → Côte de Nuits → Bourgogne → France), else close
@@ -2346,11 +2666,29 @@ document.addEventListener("keydown", (e) => {
   if (!$("modal").hidden) closeModal();
   else if (UI.mapOnly) setMapOnly(false);
   else if ($("sheet").classList.contains("open")) goUp();
+  else if (HL) clearHL();
 });
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-goto]");
   if (b) { const r = byId.get(b.dataset.goto); if (r) goTo(r); }
+  const gb = e.target.closest("[data-geo-name]");
+  if (gb) geoFromSheet(gb);
 });
+// a river or lake named on the sheet: the stretch nearest to the place lights up; the map stays where it is
+async function geoFromSheet(btn) {
+  await loadGeoIndex();
+  const c = CURRENT, b = c && c.rec && c.rec[6];
+  const lon = c && c.d && c.d.lon != null ? c.d.lon : b ? (b[0] + b[2]) / 2 : map.getCenter().lng;
+  const lat = c && c.d && c.d.lat != null ? c.d.lat : b ? (b[1] + b[3]) / 2 : map.getCenter().lat;
+  const kind = btn.dataset.geoKind, name = btn.dataset.geoName;
+  const g = geoNear(name, kind, lon, lat) || { name, kind, gid: kind + ":" + norm(name).replace(/ /g, "-"), bbox: null, ele: null, alts: [] };
+  if (HL && HL.gid === g.gid) { clearHL(); return; }
+  setHL(g, false);
+}
+function markGeoLinks() {
+  const names = HL ? HL.names.map(norm) : [];
+  document.querySelectorAll(".geo-link").forEach((b) => b.setAttribute("aria-pressed", String(!!HL && b.dataset.geoKind === HL.kind && names.includes(norm(b.dataset.geoName)))));
+}
 function goTo(r) {
   const p = { name: r[0], id: r[1], country: r[2], level: r[3], rank: r[4], parent: r[5], src: srcOf(r[1]) };
   select(p, null);
@@ -2376,22 +2714,35 @@ function search(q) {
     out.push([s, r]);
     if (out.length > 600) break;
   }
-  return out.sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
+  const geo = searchGeo(n, words).sort((a, b) => a[0] - b[0]).slice(0, 6);
+  return out.concat(geo).sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
 }
 function renderResults() {
   if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">' + t_("No place found. Try another spelling.") + "</li>" : ""; return; }
-  resEl.innerHTML = current.map((r, i) => '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n">' + esc(r[0]) +
+  resEl.innerHTML = current.map((r, i) => r.geo
+    ? '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n" style="font-style:italic">' + esc(r.geo.name) +
+      '</span><span class="m">' + esc(t_(GEO_KIND[r.geo.kind] || "")) + (r.geo.ele ? " · " + fmt(r.geo.ele) + " m" : "") +
+      (r.geo.alts.length ? " · " + esc(r.geo.alts.slice(0, 2).join(", ")) : "") + '</span><span class="c" style="color:var(--river)">' + geoGlyph(r.geo.kind) + "</span></button></li>"
+    : '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n">' + esc(r[0]) +
     '</span><span class="m">' + esc(RANK_LABEL[r[4]] || LEVEL_LABEL[r[3]]) + (r[7] ? " · " + esc(r[7].split(", ")[0]) : "") + (r[5] ? " · " + esc(r[5]) : "") + '</span><span class="c">' + r[2] + "</span></button></li>").join("");
   resEl.hidden = false;
 }
-qEl.addEventListener("input", () => { current = search(qEl.value); active = -1; renderResults(); });
+const geoGlyph = (k) => '<svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true">' + (k === "peak" || k === "range" ? '<path d="M1 9l4-7 3 4 2-2 3 5z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>'
+  : k === "lake" ? '<ellipse cx="7" cy="5" rx="5.5" ry="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>' : '<path d="M1 3c2 0 2 2 4 2s2-2 4-2 2 2 4 2M1 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2" fill="none" stroke="currentColor" stroke-width="1.3"/>') + "</svg>";
+qEl.addEventListener("focus", () => { loadGeoIndex(); }, { once: true });
+qEl.addEventListener("input", () => { current = search(qEl.value); active = -1; renderResults();
+  if (!GEO) loadGeoIndex().then(() => { if (qEl.value.trim()) { current = search(qEl.value); renderResults(); } }); });
 qEl.addEventListener("keydown", (e) => {
   if (e.key === "ArrowDown") { active = Math.min(active + 1, current.length - 1); renderResults(); e.preventDefault(); }
   else if (e.key === "ArrowUp") { active = Math.max(active - 1, 0); renderResults(); e.preventDefault(); }
   else if (e.key === "Enter" && current.length) { choose(current[Math.max(active, 0)]); }
 });
 resEl.addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (b) choose(current[+b.dataset.i]); });
-function choose(r) { resEl.hidden = true; qEl.value = r[0]; qEl.blur(); goTo(r); }
+function choose(r) {
+  resEl.hidden = true; qEl.blur();
+  if (r.geo) { qEl.value = r.geo.name; setHL(r.geo, true); return; }
+  qEl.value = r[0]; goTo(r);
+}
 document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search")) resEl.hidden = true; });
 
 // ---------- sidebar tabs: Explore regions / Map and layers
@@ -2795,7 +3146,7 @@ document.addEventListener("click", (e) => {
   if (b && !b.closest(".tree")) openNode(b.dataset.open);
 });
 
-const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win" };
+const GROUPS = { app: "lg-app", top: "lg-top", pc: "lg-pc", de: "lg-de", vine: "lg-vine", win: "lg-win", water: "lg-water", mtn: "lg-mtn", town: "lg-town" };
 function applyLegend() {
   const on = (g) => $(GROUPS[g]).checked;
   LAYERS.forEach(([id, g]) => {
@@ -2811,6 +3162,7 @@ function applyLegend() {
     const parts = [BASEF[id], rankFilter].filter(Boolean);
     map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
   });
+  geoVis();
 }
 Object.values(GROUPS).forEach((id) => $(id).addEventListener("change", applyLegend));
 
@@ -2880,7 +3232,9 @@ function openData() {
      [N_("Germany: Einzellagen and Großlagen"), "rlp"], [N_("Switzerland: cantonal AOC outlines"), "bfs"], [N_("Wineries, Swiss vineyards, rivers, lakes"), "osm"]]
       .concat([[N_("United States: AVAs"), "ava"], [N_("Australia: GI zones, regions and subregions"), "wa"],
         [N_("New Zealand, South Africa, Chile, Argentina, Brazil, Canada, Japan and 16 more: outlines from administrative units"), "geob"],
-        [N_("Small GIs without an open boundary: markers"), "marker"]])
+        [N_("Small GIs without an open boundary: markers"), "marker"],
+        [N_("Rivers, lakes, mountain ranges and peaks"), "ne"], [N_("Towns and cities"), "geonames"]])
+      .concat(WEB ? [[N_("Close up: small rivers, streams, villages and peaks"), "ofm"]] : [])
       .concat(WEB ? [[N_("Relief, elevation, slope and aspect"), "dem"], [N_("Climate and vintage weather"), "meteo"], ["Soil", "soil"], [N_("Satellite map"), "eox"], [N_("Topographic map"), "otm"]] : [])
       .map(([l, k]) => "<tr><td>" + t_(l) + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
     "</table></div>" +
@@ -3452,6 +3806,8 @@ map.on("load", async () => {
     showLoading(t_("Loading wineries…"));
     await loadArchive("poi.pmtiles");
     addPoi();
+    // rivers, lakes, mountains and towns: drawn when they arrive, nothing waits for them
+    const geoReady = loadArchive("geo.pmtiles").then(() => { addGeo(); if (WEB) applyTheme(); }).catch((e) => console.warn("geo", e));
     addMine();
     updateDashBadge();
     hideLoading();
@@ -3461,14 +3817,17 @@ map.on("load", async () => {
     if (WEB) { setBase(store.get("base") || "dark"); setOverlay(store.get("overlay") || "relief"); }
     // deep link: #<place id>
     const hid = decodeURIComponent(location.hash.slice(1));
+    const GEO_HASH = /^(river|lake|peak|range):/;
     if (hid && byId.has(hid)) goTo(byId.get(hid));
     else if (hid && tnode(hid)) openGroup(hid);
+    else if (GEO_HASH.test(hid)) geoReady.then(() => openGeo(hid));
     // a link to #<place id> followed inside the open map (or an edited address) flies there too;
     // the map itself writes the address with replaceState, which does not fire hashchange
     window.addEventListener("hashchange", () => {
       const h = decodeURIComponent(location.hash.slice(1));
       if (h && byId.has(h)) goTo(byId.get(h));
       else if (h && tnode(h)) openGroup(h);
+      else if (GEO_HASH.test(h) && (!HL || HL.gid !== h)) geoReady.then(() => openGeo(h));
     });
   } catch (e) {
     console.error(e);

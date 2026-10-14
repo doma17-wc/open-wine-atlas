@@ -89,13 +89,21 @@
   "attribution": "GeoNames (www.geonames.org)",
   "url": "https://download.geonames.org/export/dump/",
   "download_used": "pip package geonamescache 3.0.2 (geonamescache/data/cities5000.json)",
-  "used_for": "nearest town and city of each place (pipeline/context.py)"
+  "used_for": "nearest town and city of each place (pipeline/context.py); towns on the map (pipeline/geo.py)"
  },
  "naturalearth_physical": {
-  "name": "Natural Earth 1:10m coastline, rivers and lake centerlines, lakes",
+  "name": "Natural Earth 1:10m coastline, rivers and lake centerlines (with the Europe and North America supplements), lakes, physical regions, elevation points",
   "license": "Public domain",
   "url": "https://www.naturalearthdata.com",
   "download_used": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_<layer>.geojson",
-  "used_for": "distance to the sea, rivers and lakes nearby (pipeline/context.py)"
+  "used_for": "distance to the sea, rivers and lakes nearby (pipeline/context.py); named rivers, lakes, ranges and peaks on the map and in search (pipeline/geo.py)"
+ },
+ "openfreemap": {
+  "name": "OpenFreeMap planet vector tiles (OpenMapTiles schema)",
+  "license": "ODbL 1.0 (OpenStreetMap data), CC BY 4.0 (OpenMapTiles)",
+  "attribution": "OpenFreeMap © OpenMapTiles, data © OpenStreetMap contributors",
+  "url": "https://openfreemap.org",
+  "tiles": "https://tiles.openfreemap.org/planet",
+  "used_for": "read live by the web page from zoom 9: waterways, water, lake names, peaks, villages"
  }
 }

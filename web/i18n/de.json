@@ -1138,5 +1138,20 @@
  "{text}.": "{text}.",
  "Ürziger Würzgarten: spectacularly steep site with an unusual red soil, very different from the grey slate around it. Known for spicy Riesling.": "Ürziger Würzgarten: spektakulär steile Lage mit einem ungewöhnlichen roten Boden, ganz anders als der graue Schiefer ringsum. Bekannt für würzigen Riesling.",
  "ΠΟΠ (PDO)": "ΠΟΠ (PDO)",
- "ЗНП (PDO)": "ЗНП (PDO)"
+ "ЗНП (PDO)": "ЗНП (PDO)",
+ "River": "Fluss",
+ "Lake": "See",
+ "Peak": "Gipfel",
+ "Mountain range": "Gebirge",
+ "Plateau": "Hochebene",
+ "Valley": "Tal",
+ "Rivers and lakes": "Flüsse und Seen",
+ "Mountains and peaks": "Gebirge und Gipfel",
+ "Towns and villages": "Städte und Dörfer",
+ "Towns and cities": "Städte",
+ "Remove the highlight": "Hervorhebung entfernen",
+ "Show all of it": "Ganz zeigen",
+ "Show it on the map": "Auf der Karte zeigen",
+ "Rivers, lakes, mountain ranges and peaks": "Flüsse, Seen, Gebirge und Gipfel",
+ "Close up: small rivers, streams, villages and peaks": "Aus der Nähe: kleine Flüsse, Bäche, Dörfer und Gipfel"
 }

@@ -1138,5 +1138,20 @@
  "{text}.": "{text}。",
  "Ürziger Würzgarten: spectacularly steep site with an unusual red soil, very different from the grey slate around it. Known for spicy Riesling.": "Ürziger Würzgarten：驚くほど急な斜面の畑で、周囲の灰色の粘板岩とはまったく異なる珍しい赤い土壌です。スパイシーなRieslingで知られます。",
  "ΠΟΠ (PDO)": "ΠΟΠ（PDO）",
- "ЗНП (PDO)": "ЗНП（PDO）"
+ "ЗНП (PDO)": "ЗНП（PDO）",
+ "River": "川",
+ "Lake": "湖",
+ "Peak": "山頂",
+ "Mountain range": "山脈",
+ "Plateau": "高原",
+ "Valley": "谷",
+ "Rivers and lakes": "川と湖",
+ "Mountains and peaks": "山脈と山頂",
+ "Towns and villages": "町と村",
+ "Towns and cities": "都市と町",
+ "Remove the highlight": "ハイライトを解除",
+ "Show all of it": "全体を表示",
+ "Show it on the map": "地図で表示",
+ "Rivers, lakes, mountain ranges and peaks": "川、湖、山脈、山頂",
+ "Close up: small rivers, streams, villages and peaks": "拡大時：小さな川、小川、村、山頂"
 }

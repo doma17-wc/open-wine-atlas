@@ -31,6 +31,9 @@ Live: https://open-wine-atlas.vercel.app
 | All | Regional bedrock per place | GLiM, Hartmann & Moosdorf 2012 | CC BY 3.0 |
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
 | All | Nearest town and city with distance and direction, distance to the sea, rivers and lakes nearby, latitude twins on other continents | GeoNames cities5000; Natural Earth 1:10m coastline, rivers, lakes | CC BY 4.0; public domain |
+| All | Named rivers, lakes, mountain ranges and peaks on the map, each one can be highlighted | Natural Earth 1:10m rivers, lakes and physical regions | Public domain |
+| All | Towns of 5,000 people or more on the map | GeoNames cities5000 | CC BY 4.0 |
+| All | Close up (zoom 9 and more): small rivers, streams, lakes, villages and peaks, read live | OpenStreetMap via OpenFreeMap vector tiles (OpenMapTiles schema) | ODbL; CC BY 4.0 |
 | All | Elevation, slope and aspect of every outline, measured ahead of time (for records, pages and when the live measurement cannot run) | Mapterhorn terrain tiles | Open licences, see mapterhorn.com/attribution |
 | All | Relief, 3D terrain, and per place elevation, slope and aspect (measured live in the browser) | Mapterhorn terrain tiles: IGN RGE ALTI, German DGM1, swissALTI3D, IGN MDT, Copernicus GLO-30 | Open licences, see mapterhorn.com/attribution |
 
@@ -54,6 +57,25 @@ each country. My atlas › Records shows them, and so does the static page `/rec
 python pipeline/context.py && python pipeline/terrain_stats.py && python pipeline/records.py && python web/build_web.py
 ```
 
+## Rivers, lakes, mountains and towns
+
+`pipeline/geo.py` writes `web/data/geo.pmtiles` (zoom 2 to 8, drawn deeper by overzoom) and the search index
+`web/data/geo.json`: named rivers with one smooth label line each, lakes, mountain ranges, plateaus and valleys, peaks with
+their elevation (Natural Earth) and towns of 5,000 people or more (GeoNames). Rivers that Natural Earth names in two
+languages along the way are joined under one name (Rhein and Rhine), and each keeps its other names for search and for
+matching OpenStreetMap (Mosel and Moselle, Duero and Douro).
+
+Every river, lake, peak and range has a stable id such as `river:rhone`, `lake:lake-geneva`, `peak:mont-blanc` or
+`range:alps`. A click on it, a search or a link to `/#river:rhone` lights it up and shows its name above the map; the
+rivers and lakes listed under *Where it is* on a place sheet do the same. From zoom 9 the web page also reads
+OpenStreetMap from OpenFreeMap: small rivers, streams, villages and peaks, and the highlight follows the river there
+(OSM writes La Saône, Río Duero: the article or the word river is allowed for). If OpenFreeMap cannot be reached the
+Natural Earth rivers stay drawn close up. The layers switch on and off under Map and layers.
+
+```bash
+python pipeline/geo.py && python web/build_web.py
+```
+
 ## Share images
 
 `/api/story?id=<place id>` (or `?q=<name>`, or the short form `/story/<place id>`) returns a PNG of one place for
@@ -73,6 +95,7 @@ raw/            downloaded source files (not committed, see sources.json)
 pipeline/       one Python script per source, all writing the same schema
   inao.py         France
   basemap.py      world countries, lakes, rivers (Natural Earth)
+  geo.py          named rivers, lakes, ranges, peaks and towns for the map and the search (Natural Earth, GeoNames)
   eu_pdo.py       all EU PDO outlines outside the INAO file
   us_ava.py       United States AVAs
   fetch_world.py  downloads geoBoundaries, the Australian GI copy and OSM wine POIs for 44 countries
