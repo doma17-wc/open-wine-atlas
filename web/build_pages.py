@@ -363,7 +363,11 @@ def main():
         add("Within", link(prec[1]) if prec else "")
         add("Category", esc(d.get("category", "")))
         add("Protected since", esc(d.get("registered", "")))
-        add("Area", f"{fmt_n(d['area_ha'], 1)} ha" if d.get("area_ha") else (f"{fmt_n(d['outline_area_ha'])} ha registered outline" if d.get("outline_area_ha") else ""))
+        outline_kind = ("outline of the administrative units" if d.get("admin_units") else
+                        "registered outline" if d.get("outline_quality") else "outline of listed communes")
+        add("Area", (f"{fmt_n(d['area_ha'], 1)} ha" if d.get("area_ha") else
+                     (f"{fmt_n(d['outline_area_ha'])} ha {outline_kind}" if d.get("outline_area_ha") else ""))
+            + (f' <span class="note">{esc(d["area_note"])}</span>' if d.get("area_note") else ""))
         add("Vineyard area", f"{fmt_n(d['vine_area_ha'])} ha" if d.get("vine_area_ha") else "")
         add("Separate plots", fmt_n(d["plots"]) if d.get("plots") and d["plots"] > 1 else "")
         add("Extent N–S × E–W", f"{d['extent_km'][0]} × {d['extent_km'][1]} km" if d.get("extent_km") else "")

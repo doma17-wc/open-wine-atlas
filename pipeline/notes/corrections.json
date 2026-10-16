@@ -1,0 +1,34 @@
+{
+  "about": "Corrections applied on top of the computed facts, for places where the open source data does not match the appellation rules. Each entry names its source. Applied by pipeline/corrections.py (called from build_details.py).",
+  "corrections": [
+    {
+      "id": "fr-inao-a148",
+      "name": "Chambertin",
+      "set": {"area_ha": 12.9},
+      "area_note": "INAO's production area for Chambertin also covers Chambertin-Clos de Bèze (15.3 ha), whose wine may be sold as Chambertin. The area shown is Chambertin alone.",
+      "source": "INAO delimitation (28.2 ha including Clos de Bèze) minus Chambertin-Clos de Bèze (15.3 ha); Chambertin 12.9 ha per the appellation rules"
+    },
+    {
+      "id": "fr-inao-a153",
+      "name": "Charmes-Chambertin",
+      "set": {"area_ha": 12.24},
+      "area_note": "Charmes-Chambertin and Mazoyères-Chambertin share one production area of 30.9 ha in the INAO data. Charmes itself covers 12.24 ha; wine from Mazoyères may also be sold as Charmes-Chambertin.",
+      "source": "Appellation rules: Charmes-Chambertin 12.24 ha, Mazoyères-Chambertin 18.58 ha"
+    },
+    {
+      "id": "fr-inao-a202",
+      "name": "Mazoyères-Chambertin",
+      "set": {"area_ha": 18.58},
+      "area_note": "Charmes-Chambertin and Mazoyères-Chambertin share one production area of 30.9 ha in the INAO data. Mazoyères itself covers 18.58 ha.",
+      "source": "Appellation rules: Charmes-Chambertin 12.24 ha, Mazoyères-Chambertin 18.58 ha"
+    },
+    {
+      "id": "fr-inao-a1202",
+      "name": "Alsace grand cru Hengst",
+      "set": {"area_ha": 75.78},
+      "area_note": "The appellation rules give 75.78 ha. The INAO parcel layer of 31 August 2026 maps only 53.6 ha of it, so part of the grand cru is missing from the outline.",
+      "source": "Alsace grand cru Hengst: 75.78 ha in the appellation rules; INAO parcel layer 2026-08-31 covers 53.6 ha"
+    }
+  ],
+  "drop_overlap_plots": "Separate plots are only shown for places of 200 ha or less with parcel-level outlines (INAO, LWK Rheinland-Pfalz), counted after joining pieces less than 20 m apart (roads, paths, tile seams)."
+}

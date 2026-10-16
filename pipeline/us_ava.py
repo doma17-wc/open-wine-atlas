@@ -36,12 +36,30 @@ def main():
         g = shapely.make_valid(shape(ft["geometry"]))
         if g.is_empty:
             continue
+        p = dict(p, name=" ".join(str(p["name"]).split()))  # some names carry stray spaces
         feats.append((p, g))
     area = {p["name"]: transform(TO_M, g).area / 10000 for p, g in feats}
 
+    # The UC Davis metadata leaves "within" empty for some recent AVAs (Crystal Springs of Napa Valley, 2024).
+    # Fall back to geometry: an AVA lies within another when at least 95% of it is inside.
+    metric = {p["name"]: transform(TO_M, g) for p, g in feats}
+    tree_names = list(metric)
+    within_of = {}
+    for p, g in feats:
+        w = [x for x in split(p.get("within")) if x in area]
+        if not w:
+            m = metric[p["name"]]
+            w = [o for o in tree_names if o != p["name"] and area[o] > area[p["name"]]
+                 and m.intersection(metric[o]).area >= 0.95 * m.area]
+        within_of[p["name"]] = w
+    contains_of = {}
+    for name, ws in within_of.items():
+        for w in ws:
+            contains_of.setdefault(w, set()).add(name)
+
     out, details = [], {}
     for p, g in feats:
-        within = [w for w in split(p.get("within")) if w in area]
+        within = within_of[p["name"]]
         parent = min(within, key=lambda w: area[w]) if within else ""
         pid = "us-ava-" + p["ava_id"]
         out.append({"type": "Feature", "geometry": shapely.geometry.mapping(round_geom(g, 5)),
@@ -56,7 +74,7 @@ def main():
             "states": split(p.get("state")),
             "counties": sorted(set(split(p.get("county")))),
             "within": within,
-            "contains": split(p.get("contains")),
+            "contains": sorted(set(split(p.get("contains"))) | contains_of.get(p["name"], set())),
             "aka": p.get("aka") if p.get("aka") not in (None, "None") else None,
             "petitioner": p.get("petitioner") if p.get("petitioner") not in (None, "None") else None,
             "cfr": ("27 CFR " + cfr) if cfr and cfr != "None" else None,
