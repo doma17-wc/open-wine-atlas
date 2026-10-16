@@ -2531,7 +2531,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  if (area != null) rows.push([N_("Area"), '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "")]);
+  if (area != null) rows.push([N_("Area"), '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
+    (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "")]);
   if (d.share_of_parent) rows.push([t_("Share of {name}", { name: esc(p.parent) }), '<span class="num">' + d.share_of_parent + " %</span>"]);
   if (d.share_of_grosslage) rows.push([N_("Share of Großlage"), '<span class="num">' + d.share_of_grosslage + " %</span>"]);
   if (d.plots > 1) rows.push([N_("Separate plots"), '<span class="num">' + d.plots + "</span>"]);

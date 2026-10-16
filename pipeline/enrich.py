@@ -48,6 +48,27 @@ def read(name):
         return [json.loads(l) for l in f]
 
 
+PLOT_GAP_M = 10      # pieces closer than 2 x 10 m (a road, a path) count as one plot
+PLOT_MIN_M2 = 1000   # ignore slivers under 0.1 ha
+PLOT_MAX_HA = 200    # beyond this a plot count says nothing useful
+
+
+def count_plots(g, props):
+    """Separate plots, for parcel-level outlines only (INAO, LWK Rheinland-Pfalz).
+
+    The raw geometry is split by roads, paths and lieu-dit lines, so counting its parts overstates the plots
+    (Romanée-Conti came out as 2, Echezeaux as 11). Commune-based outlines have no plots at all."""
+    if props.get("src") not in ("inao", "rlp"):
+        return None
+    m = transform(TO_M, g)
+    if m.area / 10000 > PLOT_MAX_HA:
+        return None
+    grown = m.buffer(PLOT_GAP_M)
+    parts = getattr(grown, "geoms", [grown])
+    n = sum(1 for p in parts if p.area > PLOT_MIN_M2 + p.length * PLOT_GAP_M)
+    return max(n, 1)
+
+
 def grand_cru_apps():
     """Real (parcel-level) geometry of grand cru appellations, streamed from the big file."""
     out = []
@@ -96,7 +117,7 @@ def main():
         kx = 111.32 * math.cos(math.radians((miny + maxy) / 2))
         out[pid]["lat"], out[pid]["lon"] = round(lp.y, 5), round(lp.x, 5)
         out[pid]["extent_km"] = [round((maxy - miny) * 110.57, 2), round((maxx - minx) * kx, 2)]
-        out[pid]["plots"] = len(getattr(g, "geoms", [g]))
+        out[pid]["plots"] = count_plots(g, props[pid])
 
     # ---- bedrock (GLiM)
     print("bedrock…")

@@ -10,6 +10,7 @@ import os
 from collections import defaultdict
 
 from common import BUILD, ROOT, norm
+from corrections import apply as apply_corrections
 
 WEB = os.path.join(ROOT, "web", "data")
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -47,6 +48,8 @@ def build_details():
         else:
             missing.append(n.get("name") or n.get("id"))
     print(f"  notes matched {len(notes) - len(missing)}/{len(notes)}; unmatched: {missing}")
+
+    print("  corrections:", apply_corrections(merged))
 
     by_cc = defaultdict(dict)
     for k, v in merged.items():
