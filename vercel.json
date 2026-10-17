@@ -47,6 +47,11 @@
       "includeFiles": "{web/data/*.json,web/data/*.pmtiles,api/fonts/*.ttf}",
       "memory": 1024,
       "maxDuration": 30
+    },
+    "api/pair.mjs": {
+      "includeFiles": "{web/data/*.json,web/data/*.pmtiles}",
+      "memory": 1024,
+      "maxDuration": 20
     }
   },
   "rewrites": [

@@ -32,4 +32,11 @@ ul.cols li .k{color:var(--muted);font-size:13px;margin-left:6px}
 details{margin:8px 0}summary{cursor:pointer;color:var(--muted)}
 .legal{white-space:pre-wrap;font-size:14px;color:#cfc6b6;max-height:none}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}footer a{color:var(--muted)}
-@media (max-width:600px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:10px}.vgrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:24px 0}
+.reel{display:grid;gap:8px;align-content:start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);text-decoration:none}
+.reel:hover,.reel:focus-visible{border-color:var(--gold)}.reel[hidden]{display:none}
+.reel b{font:600 22px/1.12 var(--f-display);text-wrap:balance}.reel .eyebrow{font-size:11px}
+.reel ul{margin:0;padding:0;list-style:none;font-size:14px;columns:2 110px;column-gap:14px}.reel li{break-inside:avoid}.reel li .k{color:var(--muted);font:500 12px var(--f-mono)}
+.reel .go{color:var(--gold);font-size:14px;font-weight:600}
+.reel.vs b::after{content:"";display:block;width:34px;height:2px;margin-top:8px;background:var(--gold)}
+@media (max-width:600px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:10px}.vgrid{grid-template-columns:repeat(5,minmax(0,1fr))}.top nav{gap:10px;font-size:13px}}
