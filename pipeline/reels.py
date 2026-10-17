@@ -32,9 +32,9 @@ def norm(s):
     return re.sub(r"[^a-z0-9]+", " ", s.lower().replace("ß", "ss")).strip()
 
 
-def short_name(name, parent):
-    """Les Clos for Chablis Grand Cru Les Clos, as the map labels it."""
-    if parent and name.startswith(parent + " ") and len(name) > len(parent) + 1:
+def short_name(name, parent, cc):
+    """Les Clos for Chablis Grand Cru Les Clos, as the map labels it (French climats only: Barossa Valley stays whole)."""
+    if cc == "FR" and parent and name.startswith(parent + " ") and len(name) > len(parent) + 1:
         return re.sub(r"^(premier|grand) cru ", "", name[len(parent) + 1:])
     return name
 
@@ -48,8 +48,15 @@ def main():
     for f in glob.glob(os.path.join(DATA, "details-*.json")):
         details.update(json.load(open(f, encoding="utf-8")))
 
+    by_id = {r[1]: r for r in rows}
+
     def resolve(item, where):
         spec = {"name": item} if isinstance(item, str) else dict(item)
+        if spec.get("id"):
+            # an explicit atlas id wins (the name is kept for whoever reads the list)
+            if spec["id"] not in by_id:
+                sys.exit(f"{where}: unknown atlas id {spec['id']}")
+            return by_id[spec["id"]], spec.get("label")
         cands = by_name.get(norm(spec["name"]), [])
         if spec.get("in"):
             w = norm(spec["in"])
@@ -85,7 +92,7 @@ def main():
         for item in reel["places"]:
             r, label = resolve(item, where)
             d = details.get(r[1], {})
-            p = {"id": r[1], "name": label or short_name(r[0], r[5]), "cc": r[2]}
+            p = {"id": r[1], "name": label or short_name(r[0], r[5], r[2]), "cc": r[2]}
             # a delimited area is a vineyard figure; an outline made of whole communes is not, so it is kept apart
             if d.get("area_ha") is not None:
                 p["ha"] = d["area_ha"]
