@@ -88,6 +88,33 @@ atlas' own dark land. Sentinel-2 cloudless is not used here because its licence 
 The function reads `web/data` from its own bundle, so previews and production behave the same.
 Fonts: `api/fonts` (SIL OFL 1.1).
 
+## Reels, short links and selections
+
+Every video posted on the atlas' accounts is listed in `pipeline/lists/reels.json` with the places it shows, by
+name. `pipeline/reels.py` resolves the names to atlas ids (it stops on a name it cannot pin down, so a reel never
+links to the wrong vineyard) and writes `web/data/reels.json`; `web/build_pages.py` then writes:
+
+* `/r/<slug>`: the short link for the caption or the link sticker of one reel. It opens the map at `/#r:<slug>`.
+* `/reels/`: every reel, newest first, one tap from the map (the link in the profile bio). A reel scheduled for later
+  is in the build already and shows from its publication time on.
+
+On the map, `#r:<slug>`, `#set:<id>,<id>,…` and `#vs:<id>,<id>` light up a group of places together in gold, with
+their names and areas on the map. The sheet lists them by area, offers the next step (the largest against the
+smallest, the region around them, the other reels) and, for a pair, draws both at the same scale. A place opened
+from the list keeps the group lit and a link back to it.
+
+`/api/pair?ids=<id>,<id>[,…]` returns that same-scale drawing as an SVG, for two to eight places anywhere in the
+world (`&theme=light` for a light background). It reads the outlines from the same PMTiles archives as the map.
+
+```bash
+# after each new reel: add it to pipeline/lists/reels.json, then
+python3 pipeline/reels.py && python3 web/build_web.py
+```
+
+The analytics count each place, region, river or reel the visitor opens as a page view (`/map/place/<id>`,
+`/map/region/<key>`, `/map/geo/<gid>`, `/map/reel/<slug>`), from their first click or key press on. A deep link opened
+on arrival belongs to the landing page view, so a visit that only looks at what it came for still counts as a bounce.
+
 ## How it works
 
 ```

@@ -111,7 +111,14 @@ ul.cols li .k{color:var(--muted);font-size:13px;margin-left:6px}
 details{margin:8px 0}summary{cursor:pointer;color:var(--muted)}
 .legal{white-space:pre-wrap;font-size:14px;color:#cfc6b6;max-height:none}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}footer a{color:var(--muted)}
-@media (max-width:600px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:10px}.vgrid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:24px 0}
+.reel{display:grid;gap:8px;align-content:start;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);text-decoration:none}
+.reel:hover,.reel:focus-visible{border-color:var(--gold)}.reel[hidden]{display:none}
+.reel b{font:600 22px/1.12 var(--f-display);text-wrap:balance}.reel .eyebrow{font-size:11px}
+.reel ul{margin:0;padding:0;list-style:none;font-size:14px;columns:2 110px;column-gap:14px}.reel li{break-inside:avoid}.reel li .k{color:var(--muted);font:500 12px var(--f-mono)}
+.reel .go{color:var(--gold);font-size:14px;font-weight:600}
+.reel.vs b::after{content:"";display:block;width:34px;height:2px;margin-top:8px;background:var(--gold)}
+@media (max-width:600px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:10px}.vgrid{grid-template-columns:repeat(5,minmax(0,1fr))}.top nav{gap:10px;font-size:13px}}
 """
 
 
@@ -600,6 +607,62 @@ def main():
                 "German vineyard sites, US AVAs and Australian subregions. Terrain: Mapterhorn. Towns: GeoNames. Coast: Natural Earth.</p>")
         write("/records/", page("Wine records: the highest, steepest and largest vineyards and appellations | Open Wine Atlas", lead[:158], "/records/", body))
         urls.append(("/records/", "weekly", "0.9"))
+
+    # ---------- reels (pipeline/reels.py): /reels/ lists them, /r/<slug> is the short link a video points to
+    reels_path = os.path.join(DATA, "reels.json")
+    if os.path.exists(reels_path):
+        reels = json.load(open(reels_path, encoding="utf-8"))["reels"]
+        shutil.rmtree(os.path.join(HERE, "r"), ignore_errors=True)
+        kind_word = {"set": "Places together", "vs": "Side by side", "place": "One place"}
+
+        def map_link(r, source):
+            return f"/?utm_source={source}&utm_medium=social&utm_campaign={r['slug']}#r:{r['slug']}"
+
+        for r in reels:
+            to = map_link(r, "reel")
+            desc = ", ".join(p["name"] for p in r["places"])[:150]
+            write(f"/r/{r['slug']}", f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(r['title'])} | Open Wine Atlas</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="{esc(desc)}">
+<meta property="og:site_name" content="Open Wine Atlas">
+<meta property="og:title" content="{esc(r['title'])}">
+<meta property="og:description" content="{esc(desc)} · on the open map of the world's wine places">
+<meta name="theme-color" content="#0b0b0d">
+<meta http-equiv="refresh" content="0;url={esc(to)}">
+<script>location.replace({json.dumps(to)});</script>
+<style>body{{margin:0;background:#0b0b0d;color:#e6dccb;font:16px/1.5 system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}}a{{color:#e7c06a}}</style>
+</head>
+<body><p>Opening <a href="{esc(to)}">{esc(r['title'])}</a> on the map…</p></body>
+</html>
+""")
+
+        def card(r):
+            places = r["places"]
+            def ha(p):
+                return f' <span class="k">{fmt_n(p["ha"], 1 if p["ha"] < 100 else 0)} ha</span>' if p.get("ha") is not None else ""
+            lst = "".join(f"<li>{esc(p['name'])}{ha(p)}</li>" for p in places) if r["kind"] != "place" else ""
+            day = r["at"][:10]
+            return (f'<a class="reel {r["kind"]}" href="{esc(map_link(r, "reels-page"))}" data-at="{esc(r["at"])}">'
+                    f'<span class="eyebrow">{kind_word[r["kind"]]} · <time datetime="{esc(r["at"])}">{esc(day)}</time></span>'
+                    f'<b>{esc(r["title"])}</b>' + (f'<ul>{lst}</ul>' if lst else "") + '<span class="go">Open on the map →</span></a>')
+
+        lead = ("Every place from our videos, one tap from the map. Each outline comes from the official register, "
+                "and the map shows it with its terrain, climate and neighbours.")
+        body = ('<p class="eyebrow">From the reels</p><h1>Seen it in a video? Find it here.</h1><p class="lead">' + esc(lead) + "</p>" +
+                '<div class="reels">' + "".join(card(r) for r in reels) + "</div>" +
+                '<p class="note">New videos every day on Instagram, TikTok and YouTube: @openwineatlas. '
+                'Areas are the delimited areas of the registers, not the vineyard planted.</p>'
+                # a reel scheduled for later is already in the build: it shows from its time on
+                "<script>(function(){var now=Date.now();document.querySelectorAll('.reel[data-at]').forEach(function(a){"
+                "var t=Date.parse(a.dataset.at);if(t>now)a.hidden=true;else{var d=new Date(t);a.querySelector('time').textContent="
+                "d.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short'})}})})();</script>")
+        write("/reels/", page("From the reels: every place from our wine map videos | Open Wine Atlas", lead[:158], "/reels/", body))
+        urls.append(("/reels/", "daily", "0.8"))
 
     # ---------- id -> page, for the map and the social cards
     json.dump({k: v for k, v in url_of.items() if not k.startswith("g:")}, open(os.path.join(OUT, "ids.json"), "w", encoding="utf-8"),

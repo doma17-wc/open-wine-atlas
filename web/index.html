@@ -235,6 +235,22 @@ body.maponly .rail, body.maponly .mcrumbs { display: none !important; }
 .gkids .k { font: 500 10px var(--f-mono); color: var(--muted); letter-spacing: .06em; }
 .gkids .rk { width: 7px; height: 7px; border-radius: 50%; flex: none; }
 .gkids .rk.top { background: var(--gold); } .gkids .rk.pc { background: var(--copper); }
+/* reels and selections */
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.vs button { all: unset; cursor: pointer; display: grid; gap: 3px; align-content: start; padding: 10px; border: 1px solid var(--line); border-radius: 8px; min-width: 0; }
+.vs button:hover, .vs button:focus-visible { border-color: var(--gold); }
+.vs .k { font: 500 10px var(--f-mono); letter-spacing: .06em; color: var(--muted); text-transform: uppercase; overflow-wrap: anywhere; }
+.vs b { font: 600 19px/1.1 var(--f-display); overflow-wrap: anywhere; }
+.vs .num { font: 500 15px var(--f-mono); color: var(--gold); font-variant-numeric: tabular-nums; }
+.vs-ratio { margin: 0; font: italic 500 17px/1.35 var(--f-display); color: var(--parchment); }
+svg.pair, img.pair { width: 100%; height: auto; display: block; border-radius: 6px; }
+svg.pair path { fill: var(--gold); }
+svg.pair .sb line { stroke: var(--muted); stroke-width: 1.5; }
+svg.pair .sb text { fill: var(--muted); font: 500 10px var(--f-mono); }
+.chips a { padding: 4px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; color: var(--gold); text-decoration: none; }
+.chips a:hover, .chips a:focus-visible { border-color: var(--gold); }
+.setback { all: unset; cursor: pointer; justify-self: start; font: 500 11px var(--f-mono); letter-spacing: .04em; color: var(--gold); padding: 3px 0; }
+.setback:hover, .setback:focus-visible { text-decoration: underline; }
 .crumbs .sep { color: #57534a; margin: 0 4px; }
 
 /* ---------- detail sheet */
@@ -949,7 +965,8 @@ function addOverview() {
 }
 
 // gold outline for what the pointer is on in the sidebar or a sheet list (feature-state "thl"), one pair per source
-const THL = ["boolean", ["feature-state", "thl"], false];
+// "rhl" is the same gold for every place of an open reel or selection (#r:, #set:, #vs:), kept while it is open
+const THL = ["any", ["boolean", ["feature-state", "thl"], false], ["boolean", ["feature-state", "rhl"], false]];
 function addTreeHl(src, sourceLayers, zoom, before) {
   sourceLayers.forEach((sl) => {
     const id = src + "-thl-" + sl;
@@ -1015,6 +1032,7 @@ function addDetail(file) {
   bindHover(isDE ? [id + "-cru-fill"] : [id + "-cru-fill", id + "-app-fill", id + "-sub-fill"]);
   applyLegend();
   if (WEB) applyTheme();
+  if (SET) markSet();
 }
 
 function addPoi() {
@@ -1241,6 +1259,7 @@ function setHL(g, fly) {
   chip.hidden = false;
   $("geoChipName").disabled = !g.bbox;
   markGeoLinks();
+  trackView("geo", g.gid);
   if (fly && g.bbox) flyToGeo(g);
   // the address names the river while no place sheet is open (a place keeps its own link)
   if (WEB && !$("sheet").classList.contains("open")) try { history.replaceState(null, "", "#" + g.gid); } catch (e) {}
@@ -2254,6 +2273,7 @@ function setWHover(f) {
 function openWinery(f) {
   sheetToken++;
   CURRENT = null;
+  clearSet();
   const p = f.properties, [lon, lat] = f.geometry.coordinates, pt = map.project([lon, lat]);
   const layers = [...pickLayers].filter((l) => map.getLayer(l) && map.getLayoutProperty(l, "visibility") !== "none");
   const seen = new Set(), inside = map.queryRenderedFeatures(pt, { layers }).map((x) => x.properties)
@@ -2361,8 +2381,11 @@ async function select(p, feature) {
   const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
+  // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
+  if (SET && SET.ids.includes(p.id)) setBackChip(); else clearSet();
   setActive(p.id);
   pushRecent(p);
+  trackView("place", p.id);
   if (MY.saved[p.id]) { const s = snapshot(p, d, rec); MY.saved[p.id] = { ...MY.saved[p.id], lat: s.lat, lon: s.lon, area: s.area }; saveMY("saved"); }
   if (!feature && rec) fitTo(rec[6], p.level);
   if (WEB) {
@@ -2656,7 +2679,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   $("suggestHere").onclick = () => openSuggest(p);
 }
 function closeSheet() {
-  $("sheet").classList.remove("open"); clearSelected(); sheetToken++;
+  $("sheet").classList.remove("open"); clearSelected(); clearSet(); sheetToken++;
   ACTIVE = null; document.querySelectorAll(".tr.on").forEach((r) => r.classList.remove("on")); renderMapCrumbs(null);
   if (WEB) try { history.replaceState(null, "", location.pathname + location.search + (HL ? "#" + HL.gid : "")); } catch (e) {}
 }
@@ -2990,9 +3013,12 @@ function hoverKey(k) {
   hoverMarks = [];
   document.querySelectorAll(".tr.hl").forEach((r) => r.classList.remove("hl"));
   if (!k || (isGroup(k) && tnode(k)[1] === "country")) return;
-  const ids = placesUnder(k, 160);
-  const style = map.getStyle();
-  if (!style) return;
+  featureRefs(placesUnder(k, 160)).forEach((f) => { try { map.setFeatureState(f, { thl: true }); hoverMarks.push(f); } catch (e) {} });
+}
+// every loaded tile source and layer that can hold these places, for feature-state
+function featureRefs(ids) {
+  const out = [], style = map.getStyle();
+  if (!style) return out;
   const srcs = Object.entries(style.sources).filter(([s, v]) => v.type === "vector" && s !== "base" && s !== "poi" && s !== "ovlo").map(([s]) => s);
   const fileBox = new Map(manifest.files.map((f) => [f.file.replace(".pmtiles", ""), f.bounds]));
   ids.forEach((id) => {
@@ -3002,12 +3028,10 @@ function hoverKey(k) {
     srcs.forEach((s) => {
       const fb = fileBox.get(s);
       if (fb && (b[2] < fb[0] || b[0] > fb[2] || b[3] < fb[1] || b[1] > fb[3])) return;
-      (s === "ov" ? ["appellations"] : layers).forEach((sl) => {
-        const f = { source: s, sourceLayer: sl, id };
-        try { map.setFeatureState(f, { thl: true }); hoverMarks.push(f); } catch (e) {}
-      });
+      (s === "ov" ? ["appellations"] : layers).forEach((sl) => out.push({ source: s, sourceLayer: sl, id }));
     });
   });
+  return out;
 }
 
 function openNode(k) {
@@ -3024,10 +3048,12 @@ function flyToNode(k) {
 function openGroup(k, fly = true) {
   if (!tnode(k)) return;
   clearSelected();
+  clearSet();
   if (fly) flyToNode(k);
   renderGroupSheet(k);
   setActive(k);
   if (WEB) try { history.replaceState(null, "", "#" + encodeURIComponent(k)); } catch (e) {}
+  trackView("region", k);
 }
 function goUp() {
   const up = ACTIVE ? TPARENT.get(ACTIVE) : null;
@@ -3110,6 +3136,205 @@ function renderGroupSheet(k) {
   $("sh-body").scrollTop = 0;
   $("sheet").classList.add("open");
   if (WEB && n[1] !== "country") fillWiki({ name: n[0].replace(/^Bereich /, ""), parent: "", country: cc }, sheetToken);
+}
+
+// ---------- reels and selections: several places lit together, as in the atlas' social videos
+// #r:<slug> opens a reel listed in data/reels.json (the short link /r/<slug> leads there), #set:<id>,<id>… any group
+// of places and #vs:<id>,<id> two places side by side. The places stay gold while the reel, or one of its places, is
+// open; the sheet lists them with their area, draws a pair at the same scale and offers a next step.
+let REELS = null, SET = null, setMarks = [];
+const SET_HASH = /^(r|set|vs):/;
+function loadReels() {
+  if (!REELS) REELS = fetch("data/reels.json").then((r) => r.ok ? r.json() : {}).then((j) => j.reels || []).catch(() => []);
+  return REELS;
+}
+async function specOf(h) {
+  if (h.startsWith("r:")) {
+    const r = (await loadReels()).find((x) => x.slug === h.slice(2));
+    if (!r) return null;
+    return { hash: h, slug: r.slug, kind: r.kind, title: r.title, ids: r.places.map((p) => p.id).filter((id) => byId.has(id)),
+      labels: Object.fromEntries(r.places.map((p) => [p.id, p.name])) };
+  }
+  const ids = [...new Set(h.slice(h.indexOf(":") + 1).split(",").map((s) => s.trim()))].filter((id) => byId.has(id)).slice(0, 30);
+  const kind = ids.length < 2 ? "place" : h.startsWith("vs:") ? (ids.length === 2 ? "vs" : "set") : "set";
+  return ids.length ? { hash: h, kind, ids, labels: {} } : null;
+}
+async function openSetHash(h, fly = true) {
+  const spec = await specOf(h);
+  if (!spec || !spec.ids.length) return false;
+  if (spec.kind === "place") goTo(byId.get(spec.ids[0]));
+  else await openSet(spec, fly);
+  return true;
+}
+const LEVEL_ORDER = { country: 0, state: 1, region: 2, subregion: 3, appellation: 4, group: 4, subzone: 5, vineyard: 6 };
+function boxOf(recs) {
+  return recs.reduce((b, r) => [Math.min(b[0], r[6][0]), Math.min(b[1], r[6][1]), Math.max(b[2], r[6][2]), Math.max(b[3], r[6][3])], [180, 90, -180, -90]);
+}
+// the smallest region or appellation of the explorer that holds every place (Chablis Grand Cru for its climats)
+function commonNode(ids) {
+  if (!TREE) return null;
+  const paths = ids.map((id) => pathOf(id));
+  let k = null;
+  for (let i = 0; i < paths[0].length; i++) {
+    if (paths.every((p) => p[i] === paths[0][i])) k = paths[0][i]; else break;
+  }
+  return k && !ids.includes(k) && (tnode(k) || byId.has(k)) ? k : null;
+}
+async function openSet(spec, fly = true) {
+  const recs = spec.ids.map((id) => byId.get(id)).filter(Boolean);
+  if (recs.length < 2) { if (recs.length) goTo(recs[0]); return; }
+  clearSelected();
+  clearSet();
+  const tok = ++sheetToken;
+  CURRENT = null;
+  const ds = await Promise.all(recs.map((r) => getDetails(r[2]).then((all) => all[r[1]] || {})));
+  if (tok !== sheetToken) return;
+  SET = { ...spec, ids: recs.map((r) => r[1]), recs, ds };
+  renderSetSheet();
+  setActive(null);
+  markSet();
+  if (fly) fitTo(boxOf(recs), recs.map((r) => r[3]).sort((a, b) => (LEVEL_ORDER[b] ?? 4) - (LEVEL_ORDER[a] ?? 4))[0]);
+  if (WEB) try { history.replaceState(null, "", "#" + spec.hash); } catch (e) {}
+  trackView(spec.slug ? "reel" : spec.kind, spec.slug || SET.ids.join(","));
+  if (spec.kind === "vs" && !WEB) {
+    // the outlines come from the tiles, so they are drawn once the map has them
+    const tryDraw = (left) => map.once("idle", () => { if (tok === sheetToken && SET && !drawPair() && left) tryDraw(left - 1); });
+    if (!drawPair()) tryDraw(3);
+  }
+}
+function clearSet() {
+  setMarks.forEach((f) => { try { map.setFeatureState(f, { rhl: false }); } catch (e) {} });
+  setMarks = [];
+  SET = null;
+  const src = map.getSource("setlabels");
+  if (src) src.setData({ type: "FeatureCollection", features: [] });
+}
+// called again when the detailed tiles of a region arrive, so their outlines light up too
+function markSet() {
+  if (!SET) return;
+  const have = new Set(setMarks.map((f) => f.source + "|" + f.sourceLayer + "|" + f.id));
+  featureRefs(SET.ids).forEach((f) => {
+    if (have.has(f.source + "|" + f.sourceLayer + "|" + f.id)) return;
+    try { map.setFeatureState(f, { rhl: true }); setMarks.push(f); } catch (e) {}
+  });
+  if (!map.getSource("setlabels")) {
+    map.addSource("setlabels", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+    map.addLayer({ id: "set-labels", type: "symbol", source: "setlabels",
+      layout: { "text-field": ["format", ["get", "name"], {}, ["case", ["==", ["get", "ha"], ""], "", "\n"], {}, ["get", "ha"], { "font-scale": 0.8 }],
+        "text-font": ["noto-medium"], "text-size": ["interpolate", ["linear"], ["zoom"], 3, 11, 12, 13.5], "text-max-width": 9, "text-padding": 3,
+        "symbol-sort-key": ["get", "order"] },
+      paint: { "text-color": C.gold, "text-halo-color": "rgba(11,11,13,.92)", "text-halo-width": 1.5 } });
+  }
+  map.getSource("setlabels").setData({ type: "FeatureCollection", features: SET.recs.map((r, i) => {
+    const d = SET.ds[i], b = r[6];
+    return { type: "Feature", geometry: { type: "Point", coordinates: d.lon != null ? [d.lon, d.lat] : [(b[0] + b[2]) / 2, (b[1] + b[3]) / 2] },
+      properties: { name: setName(r), ha: d.area_ha != null ? haTxt(d.area_ha) : "", order: i } };
+  }) });
+}
+const setName = (r) => (SET && SET.labels[r[1]]) || shortName(r[0], r[5]);
+const haTxt = (ha) => fmtN(ha, ha < 100 ? 1 : 0) + " ha";
+function renderSetSheet() {
+  const S = SET, vs = S.kind === "vs";
+  const items = S.recs.map((r, i) => ({ r, id: r[1], name: setName(r), ha: S.ds[i].area_ha ?? null, communes: S.ds[i].area_ha == null && S.ds[i].outline_area_ha != null }));
+  const allHa = items.every((x) => x.ha != null);
+  const ccs = [...new Set(S.recs.map((r) => r[2]))];
+  const title = S.title || items.map((x) => x.name).join(vs ? " vs " : ", ");
+  $("sh-head").innerHTML =
+    '<div class="eyebrow"><span>' + esc(S.slug ? t_("From the reels") : t_("Selection")) + "</span><span>·</span><span>" +
+    esc(vs ? t_("Side by side") : t_("{n} places", { n: items.length })) + "</span></div>" +
+    "<h2>" + esc(title) + "</h2>" + '<div class="crumbs">' + esc(ccs.map(cname).join(" · ")) + "</div>";
+  let html = "";
+  const hs = items.filter((x) => x.ha != null).map((x) => x.ha), big = Math.max(...hs), small = Math.min(...hs);
+  if (vs) {
+    const [a, b] = items;
+    html += '<div class="vs">' + items.map((x) => '<button data-goto="' + esc(x.id) + '"><span class="k">' + esc(RANK_LABEL[x.r[4]] || t_(LEVEL_LABEL[x.r[3]] || "")) + " · " + esc(cname(x.r[2])) + "</span>" +
+      "<b>" + esc(x.name) + '</b><span class="num">' + (x.ha != null ? haTxt(x.ha) : "–") + "</span></button>").join("") + "</div>";
+    if (allHa && a.ha !== b.ha) {
+      const [lg, sm] = a.ha > b.ha ? [a, b] : [b, a], x = lg.ha / sm.ha;
+      html += '<p class="vs-ratio">' + t_("{big} is {x}× bigger than {small}.", { big: esc(lg.name), small: esc(sm.name), x: x < 100 ? fmtN(Math.round(x * 10) / 10, 1) : fmtN(x) }) + "</p>";
+    }
+    // on the web the outlines come from /api/pair, which reads them from the archives and works for any two places,
+    // however far apart; the claude.ai artifact has no server, so it draws them from the tiles on screen
+    html += WEB ? '<div class="sec" id="set-shapes"><h3>' + t_("Drawn at the same scale") + '</h3><img class="pair" alt="' + esc(items.map((x) => x.name).join(" · ")) +
+      '" src="/api/pair?ids=' + encodeURIComponent(a.id + "," + b.id) + '" onerror="this.parentNode.hidden=true"></div>'
+      : '<div class="sec" id="set-shapes" hidden></div>';
+  } else {
+    const tiles = [[fmt(items.length), t_("places")]];
+    if (allHa) tiles.push([fmtN(hs.reduce((s, v) => s + v, 0)), t_("ha together")]);
+    if (allHa && small > 0) tiles.push([fmtN(Math.round(big / small * 10) / 10, 1) + "×", t_("largest to smallest")]);
+    html += '<div class="gtiles n' + tiles.length + '">' + tiles.map(([v, l]) => "<div><b>" + v + "</b><span>" + l + "</span></div>").join("") + "</div>";
+    html += '<div class="sec"><h3>' + t_("The places · {n}", { n: items.length }) + '</h3><div class="gkids">' + items.map((x) =>
+      '<button data-goto="' + esc(x.id) + '"><span class="n"><i class="rk ' + rankCls(x.r) + '"></i>' + esc(x.name) + '</span><span class="c">' +
+      (x.ha != null ? haTxt(x.ha) : '<span class="k">' + esc(cname(x.r[2])) + "</span>") + "</span>" +
+      (allHa ? '<span class="bar"><i style="width:' + Math.max(2, Math.round(x.ha / big * 100)) + '%"></i></span>' : "") + "</button>").join("") + "</div></div>";
+  }
+  // the next step: a pair to compare, the region around them, the other reels
+  const next = [];
+  if (!vs && allHa && items.length > 2 && big !== small) {
+    const lg = items.find((x) => x.ha === big), sm = items.find((x) => x.ha === small);
+    next.push('<button data-sethash="vs:' + esc(lg.id + "," + sm.id) + '">' + t_("Largest vs smallest") + "</button>");
+  }
+  if (vs) items.forEach((x) => next.push('<button data-goto="' + esc(x.id) + '">' + t_("Open {name}", { name: esc(x.name) }) + "</button>"));
+  const k = commonNode(S.ids);
+  if (k && !(tnode(k) && tnode(k)[1] === "country")) next.push('<button data-open="' + esc(k) + '">' + t_("All of {name}", { name: esc(labelOf(k)) }) + "</button>");
+  else if (ccs.length === 1 && TREE && tnode("g:" + ccs[0])) next.push('<button data-open="g:' + esc(ccs[0]) + '">' + t_("All of {name}", { name: esc(cname(ccs[0])) }) + "</button>");
+  if (WEB) next.push('<a href="/reels">' + t_("More from the reels") + "</a>");
+  if (next.length) html += '<div class="sec"><h3>' + t_("Keep exploring") + '</h3><div class="chips">' + next.join("") + "</div></div>";
+  html += '<div class="source">' + t_("Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.") +
+    (items.some((x) => x.communes) ? " " + t_("Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.") : "") +
+    "<br>" + t_("Hover a name to find it on the map, click to open it.") + "</div>";
+  $("sh-body").innerHTML = html;
+  $("sh-body").scrollTop = 0;
+  $("sheet").classList.add("open");
+}
+// two outlines at the same scale, side by side, as in the comparison reels
+function drawPair() {
+  const box = $("set-shapes");
+  if (!box || !SET) return true;
+  const shapes = SET.ids.map((id) => geometryFor(id));
+  if (shapes.some((g) => !g.length)) return false;
+  const proj = shapes.map((geoms, i) => {
+    const b = SET.recs[i][6], k = Math.cos((b[1] + b[3]) / 2 * Math.PI / 180);
+    const rings = [];
+    geoms.forEach((g) => polysOf(g).forEach((poly) => poly.forEach((ring) => rings.push(ring.map(([x, y]) => [x * k * 111.32, -y * 110.57])))));
+    const xs = rings.flat().map((p) => p[0]), ys = rings.flat().map((p) => p[1]);
+    return { rings, x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys) };
+  });
+  const W = 150, H = 132, GAP = 20;
+  const s = Math.min(...proj.map((p) => Math.min(W / Math.max(p.x1 - p.x0, 1e-6), H / Math.max(p.y1 - p.y0, 1e-6))));
+  const paths = proj.map((p, i) => {
+    const ox = i * (W + GAP) + (W - (p.x1 - p.x0) * s) / 2, oy = (H - (p.y1 - p.y0) * s) / 2;
+    return '<path fill-rule="evenodd" d="' + p.rings.map((r) => "M" + r.map(([x, y]) => ((x - p.x0) * s + ox).toFixed(1) + " " + ((y - p.y0) * s + oy).toFixed(1)).join("L") + "Z").join("") + '"/>';
+  }).join("");
+  // a scale bar of a round length
+  const km = [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200, 500].filter((v) => v * s <= 70).pop() || 0.1;
+  const bar = '<g class="sb"><line x1="0" y1="' + (H + 14) + '" x2="' + (km * s).toFixed(1) + '" y2="' + (H + 14) + '"/><text x="' + (km * s + 6).toFixed(1) + '" y="' + (H + 18) + '">' +
+    (km < 1 ? fmt(km * 1000) + " m" : fmt(km) + " km") + "</text></g>";
+  box.innerHTML = "<h3>" + t_("Drawn at the same scale") + '</h3><svg class="pair" viewBox="0 0 ' + (2 * W + GAP) + " " + (H + 24) + '" role="img" aria-label="' +
+    esc(SET.recs.map(setName).join(" · ")) + '">' + paths + bar + "</svg>";
+  box.hidden = false;
+  return true;
+}
+// inside a place of the reel, a way back to the whole reel
+function setBackChip() {
+  if (!SET) return;
+  $("sh-head").insertAdjacentHTML("beforeend", '<button class="setback" data-sethash="' + esc(SET.hash) + '">← ' + esc(SET.title || t_("Back to the selection")) + "</button>");
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-sethash]");
+  if (b) openSetHash(b.dataset.sethash);
+});
+
+// ---------- analytics: each place, region, river or reel opened by the visitor counts as a page view, so a visit
+// that explores the map is not counted as a bounce. A deep link opened on arrival is part of the landing page view.
+let TRACKING = false, lastView = "";
+["pointerdown", "keydown"].forEach((ev) => addEventListener(ev, () => { TRACKING = true; }, { capture: true, once: true }));
+function trackView(kind, key) {
+  if (!WEB || !TRACKING || typeof window.va !== "function") return;
+  const path = "/map/" + kind + "/" + key;
+  if (path === lastView) return;
+  lastView = path;
+  try { window.va("pageview", { route: "/map/" + kind + "/[id]", path }); } catch (e) {}
 }
 
 // the tree: a click on the name opens the place or region and unfolds it, the arrow only unfolds
@@ -3822,6 +4047,7 @@ map.on("load", async () => {
     if (hid && byId.has(hid)) goTo(byId.get(hid));
     else if (hid && tnode(hid)) openGroup(hid);
     else if (GEO_HASH.test(hid)) geoReady.then(() => openGeo(hid));
+    else if (SET_HASH.test(hid)) openSetHash(hid);
     // a link to #<place id> followed inside the open map (or an edited address) flies there too;
     // the map itself writes the address with replaceState, which does not fire hashchange
     window.addEventListener("hashchange", () => {
@@ -3829,6 +4055,7 @@ map.on("load", async () => {
       if (h && byId.has(h)) goTo(byId.get(h));
       else if (h && tnode(h)) openGroup(h);
       else if (GEO_HASH.test(h) && (!HL || HL.gid !== h)) geoReady.then(() => openGeo(h));
+      else if (SET_HASH.test(h) && (!SET || SET.hash !== h)) openSetHash(h);
     });
   } catch (e) {
     console.error(e);
