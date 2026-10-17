@@ -1,0 +1,5 @@
+node_modules/
+work/
+tilecache/
+package-lock.json
+TASK_PROMPT.md

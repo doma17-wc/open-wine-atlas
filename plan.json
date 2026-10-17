@@ -1,0 +1,145 @@
+{
+ "about": "Upcoming deep dives. The scheduled task takes the first entry with status 'planned' whose 'not_before' date has come, makes it, then marks it 'posted'. Add new entries at the end; keep at least 6 planned. 'why' is the topical hook to use in the title or first card when it is still true on the day.",
+ "slots": [
+  "10:20",
+  "17:50"
+ ],
+ "queue": [
+  {
+   "slug": "deep-yamanashi",
+   "place": "Yamanashi",
+   "atlas_id": "jp-world-yamanashi",
+   "series": "Japan 1/5",
+   "not_before": "2026-10-18",
+   "why": "Koshu harvest season",
+   "status": "posted",
+   "slot": "2026-10-18T10:20+02:00"
+  },
+  {
+   "slug": "deep-nagano",
+   "place": "Nagano",
+   "atlas_id": "jp-world-nagano",
+   "series": "Japan 2/5",
+   "not_before": "2026-10-18",
+   "why": "Japan series: high-altitude Merlot and Chardonnay, Japan Alps",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-hokkaido",
+   "place": "Hokkaido",
+   "atlas_id": "jp-world-hokkaido",
+   "series": "Japan 3/5",
+   "not_before": "2026-10-19",
+   "why": "Japan series: cold north, Pinot Noir, snow",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-yamagata",
+   "place": "Yamagata",
+   "atlas_id": "jp-world-yamagata",
+   "series": "Japan 4/5",
+   "not_before": "2026-10-19",
+   "why": "Japan series: inland basins, snowy winters",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-osaka",
+   "place": "Osaka",
+   "atlas_id": "jp-world-osaka",
+   "series": "Japan 5/5",
+   "not_before": "2026-10-20",
+   "why": "Japan series: vineyards next to a metropolis",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-barolo",
+   "place": "Barolo",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-20",
+   "why": "Alba White Truffle Fair season (check the 2026 dates)",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-mosel",
+   "place": "Mosel",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-21",
+   "why": "late Riesling harvest on the steep slate slopes",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-tokaj",
+   "place": "Tokaj",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-21",
+   "why": "aszú berries are picked one by one in autumn",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-sauternes",
+   "place": "Sauternes",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-22",
+   "why": "noble rot season, autumn mists from the Ciron",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-douro",
+   "place": "Douro",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-22",
+   "why": "after the harvest on the schist terraces",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-champagne",
+   "place": "Champagne",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-23",
+   "why": "chalk, cold and why it sparkles",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-valais",
+   "place": "Valais",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-23",
+   "why": "Switzerland's driest valley, Föhn and steep terraces",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-cote-de-beaune",
+   "place": "Côte de Beaune",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-11-12",
+   "why": "Hospices de Beaune charity auction (third Sunday of November, check the 2026 date)",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-beaujolais",
+   "place": "Beaujolais",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-11-16",
+   "why": "Beaujolais Nouveau day, third Thursday of November",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-niagara",
+   "place": "Niagara Peninsula",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-12-01",
+   "why": "icewine harvest waits for -8 °C",
+   "status": "planned"
+  }
+ ]
+}

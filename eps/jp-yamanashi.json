@@ -1,0 +1,494 @@
+{
+ "slug": "deep-yamanashi",
+ "id": "jp-world-yamanashi",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "japan",
+  7
+ ],
+ "markers": [
+  {
+   "lng": 138.5525,
+   "lat": 35.6658,
+   "label": "Kofu · 273 m",
+   "shots": [
+    2,
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     134.5,
+     33.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     135.4,
+     34.2,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     138.62,
+     35.55,
+     7.5,
+     0,
+     12
+    ]
+   ],
+   "labels": true,
+   "fps": 10
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 420
+   },
+   "cam": [
+    [
+     0,
+     138.65,
+     35.57,
+     8.85,
+     0,
+     0
+    ],
+    [
+     7.5,
+     138.65,
+     35.57,
+     9.2,
+     6,
+     28
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     138.6,
+     35.64,
+     9.85,
+     172,
+     66
+    ],
+    [
+     8.5,
+     138.62,
+     35.63,
+     10.05,
+     162,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": true
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     138.6,
+     35.62,
+     9.55,
+     0,
+     0
+    ],
+    [
+     16.5,
+     138.62,
+     35.62,
+     9.85,
+     -12,
+     22
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     138.71,
+     35.66,
+     10.4,
+     8,
+     28
+    ],
+    [
+     7.5,
+     138.72,
+     35.66,
+     10.6,
+     14,
+     34
+    ]
+   ],
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     138.72,
+     35.665,
+     10.9,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     138.725,
+     35.665,
+     11.15,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Japan · Deep dive",
+   "title": "Yamanashi",
+   "sub": "Japan's first wine GI,<br>layer by layer"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "2013",
+   "c": "Yamanashi became Japan's first wine GI. It covers the whole prefecture, west of Tokyo.",
+   "src": "National Tax Agency · Yamanashi Prefecture"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "273",
+   "u": "m",
+   "c": "Kofu sits on the floor of a basin ringed by mountains. Mount Fuji, 3,776 m, rises 37 km to the south.",
+   "src": "Kofu station height: Japan Meteorological Agency"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "The GI's ground averages <i>994 m</i>. The vines grow lower, on the basin floor and its slopes, many on <i>gravel and volcanic soils</i>.",
+   "src": "Terrain: Open Wine Atlas · Soils: International Wine Challenge"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "1,161",
+   "u": "mm",
+   "count": {
+    "v": 1160.7,
+    "d": 0
+   },
+   "c": "a year in Kofu. Tokyo, 110 km east: 1,598 mm. September, harvest time, is the wettest month.",
+   "chart": {
+    "type": "months",
+    "a": [
+     42.7,
+     44.1,
+     86.2,
+     79.5,
+     85.4,
+     113.4,
+     148.8,
+     133.1,
+     178.7,
+     158.5,
+     52.7,
+     37.6
+    ],
+    "b": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ],
+    "max": 250,
+    "bands": [
+     {
+      "from": 5,
+      "to": 6,
+      "label": "RAINY SEASON"
+     }
+    ],
+    "hot": [
+     8
+    ],
+    "labels": [
+     {
+      "m": 8,
+      "v": 178.7,
+      "text": "179"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Kofu &nbsp; ▢ Tokyo &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "2,226",
+   "u": "h",
+   "count": {
+    "v": 2225.8,
+    "d": 0
+   },
+   "c": "of sunshine a year in Kofu, about 300 hours more than Tokyo.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Kofu",
+      "v": 2225.8
+     },
+     {
+      "label": "Tokyo",
+      "v": 1926.7
+     }
+    ]
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "33.0",
+   "u": "°C",
+   "count": {
+    "v": 33.0,
+    "d": 1
+   },
+   "c": "the average August high in Kofu. August nights average 23.3 °C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     9.1,
+     10.9,
+     15.0,
+     20.7,
+     25.3,
+     27.8,
+     31.6,
+     33.0,
+     28.6,
+     22.5,
+     16.7,
+     11.4
+    ],
+    "min": [
+     -2.1,
+     -0.7,
+     3.1,
+     8.4,
+     13.7,
+     18.3,
+     22.3,
+     23.3,
+     19.4,
+     13.0,
+     5.9,
+     0.3
+    ],
+    "hl": 7,
+    "lo": -5,
+    "hi": 36,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 21.2 °C"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "45",
+   "u": "%",
+   "count": {
+    "v": 45,
+    "d": 0
+   },
+   "c": "of Yamanashi wine is Koshu, a pink-skinned grape grown here for centuries. Registered with the OIV in 2010.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Koshu",
+      "v": 45
+     },
+     {
+      "label": "Muscat Bailey A",
+      "v": 21
+     },
+     {
+      "label": "Delaware",
+      "v": 7
+     },
+     {
+      "label": "Merlot",
+      "v": 6
+     },
+     {
+      "label": "Chardonnay",
+      "v": 4
+     },
+     {
+      "label": "Other",
+      "v": 17
+     }
+    ]
+   },
+   "src": "Wine by grape: National Tax Agency survey 2018 · OIV: Yamanashi Prefecture"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Yamanashi",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Nagano",
+   "srcs": "Sources: Japan Meteorological Agency (normals 1991–2020) · National Tax Agency · Yamanashi Prefecture · International Wine Challenge · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Japan",
+  "title": "Yamanashi",
+  "sub": "Japan's first wine GI,<br>layer by layer"
+ }
+}

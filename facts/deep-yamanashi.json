@@ -1,0 +1,65 @@
+{
+ "slug": "deep-yamanashi",
+ "facts": [
+  {
+   "claim": "Yamanashi: Japan's first wine GI, 2013",
+   "source": "Yamanashi Prefecture, wine_en.pdf",
+   "url": "https://www.pref.yamanashi.jp/documents/96873/wine_en.pdf"
+  },
+  {
+   "claim": "GI covers the whole prefecture; registered 2013-07-16",
+   "source": "Open Wine Atlas details-jp.json (National Tax Agency GI list)"
+  },
+  {
+   "claim": "Kofu station height 273 m; sunshine 2225.8 h (Tokyo 1926.7 h), JMA normals 1991-2020",
+   "source": "time-j.net republishing JMA normals",
+   "url": "https://weather.time-j.net/stations/jp/kofu/"
+  },
+  {
+   "claim": "Kofu annual precip 1160.7 mm, mean 15.1 C; Tokyo 1598.2 mm, 15.8 C",
+   "source": "JMA press appendix, new normals 1991-2020",
+   "url": "https://www.jma.go.jp/jma/press/2103/24a/3_huroku.pdf"
+  },
+  {
+   "claim": "Kofu monthly precip, max, min normals",
+   "source": "time-j.net (JMA)",
+   "url": "https://weather.time-j.net/climate/chart/kofu"
+  },
+  {
+   "claim": "Tokyo monthly precip normals",
+   "source": "time-j.net (JMA)",
+   "url": "https://weather.time-j.net/stations/jp/tokyo/"
+  },
+  {
+   "claim": "Apr-Oct mean 21.21 C (simple mean of monthly means)",
+   "derived": true
+  },
+  {
+   "claim": "Kofu to Fuji summit 37.4 km, Kofu to Tokyo 108.2 km",
+   "derived": true
+  },
+  {
+   "claim": "Sunshine difference 299.1 h",
+   "derived": true
+  },
+  {
+   "claim": "Grapes in Yamanashi Japan Wine output: Koshu 45, MBA 21, Delaware 7, Merlot 6, Chardonnay 4, other 17 (%), 2018 survey",
+   "source": "National Tax Agency wine map",
+   "url": "https://www.nta.go.jp/taxes/sake/sakagura/pdf/wine_map_jp_en.pdf"
+  },
+  {
+   "claim": "Koshu registered with OIV 2010",
+   "source": "Yamanashi Prefecture",
+   "url": "https://www.pref.yamanashi.jp/documents/96873/wine_en.pdf"
+  },
+  {
+   "claim": "Koshu dusty-pink skin; gravel and volcanic soils",
+   "source": "International Wine Challenge, Koshu Rising",
+   "url": "https://www.internationalwinechallenge.com/iwc-insight/amazing-wines/koshu-rising-japans-signature-grape-finds-its-true-voice.html"
+  },
+  {
+   "claim": "GI ground mean 994 m",
+   "source": "Open Wine Atlas terrain stats (details-jp.json terrain.e[1])"
+  }
+ ]
+}
