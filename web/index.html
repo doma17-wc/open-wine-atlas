@@ -368,6 +368,13 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
   border: 1px solid var(--line); background: #1b1b1f; cursor: pointer; font: 500 12px var(--f-body); color: var(--parchment); }
 .dash-btn:hover, .dash-btn:focus-visible { border-color: var(--parchment); }
 .dash-btn .n { font: 600 10.5px var(--f-mono); background: var(--gold); color: var(--night); border-radius: 999px; padding: 1px 6px; }
+.fm-link { color: var(--gold) !important; text-decoration: none; }
+.fm-card { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: center; margin: 0 0 18px; padding: 14px 16px; border: 1px solid #4a3f28;
+  border-radius: var(--r); background: linear-gradient(90deg, rgba(231,192,106,.09), rgba(231,192,106,.02)); color: var(--parchment); text-decoration: none; }
+.fm-card:hover, .fm-card:focus-visible { border-color: var(--gold); }
+.fm-card b { font: 600 19px/1.2 var(--f-display); color: var(--gold); }
+.fm-card span { grid-column: 1; color: #cfc6b6; font-size: 13px; }
+.fm-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
 .dash { position: absolute; inset: 0; z-index: 8; background: rgba(5,5,7,.62); display: grid; place-items: center; padding: 16px; }
 .dash-card { width: min(1120px, 100%); height: min(880px, 100%); background: #121215; border: 1px solid var(--line); border-radius: 14px;
   display: flex; flex-direction: column; overflow: hidden; position: relative; }
@@ -628,6 +635,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button class="link-btn" id="openData" data-i18n>Open data &amp; sources</button>
     <button class="link-btn" id="openSuggest" data-i18n>Suggest a place</button>
     <a class="link-btn web-only" href="/places/" style="color:inherit;text-decoration:none" hidden data-i18n>All places A to Z</a>
+    <a class="link-btn web-only fm-link" href="/founding?from=map" hidden data-i18n>Become a Founding Member</a>
   </div>
   </div>
 </div>
@@ -3656,6 +3664,8 @@ function dashOverview() {
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12), mx = top[0]?.[1] || 1;
   const recent = MY.recent.map(recOf).filter(Boolean);
   return '<p class="lead">' + t_("Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register. Everything here stays on this device.") + '</p>' +
+    (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Keep your atlas on every device") + '</b><span>' +
+      t_("Founding Members get notes on the map, sync and study tools first. The first 1,000 pay CHF 19 for a year.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
     '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
     tile(MY.journal.length, t_("tastings logged")) + tile(cc.size, t_("countries you explored")) + "</div>" +
     '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
