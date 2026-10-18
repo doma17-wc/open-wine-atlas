@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy | Open Wine Atlas</title>
+<meta name="description" content="How Open Wine Atlas handles personal data: the Founding Member list, site analytics and the services the map loads.">
+<link rel="canonical" href="https://openwineatlas.com/privacy">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0d'/%3E%3Cpath d='M7 22l6-9 4 5 3-4 5 8z' fill='none' stroke='%23e7c06a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root { --night: #0b0b0d; --line: #2a2a31; --parchment: #e6dccb; --muted: #8d877c; --gold: #e7c06a;
+  --f-display: "Cormorant Garamond", Georgia, serif; --f-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--night); color: var(--parchment); font: 400 16px/1.65 var(--f-body); -webkit-font-smoothing: antialiased; }
+a { color: var(--gold); text-underline-offset: 3px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0 40px; }
+.wordmark { font: 600 24px/1 var(--f-display); color: var(--parchment); text-decoration: none; }
+.back { color: var(--muted); font-size: 14px; text-decoration: none; }
+h1 { font: 500 clamp(40px, 6vw, 56px)/1.05 var(--f-display); margin: 0 0 8px; }
+.upd { color: var(--muted); font-size: 14px; margin: 0 0 40px; }
+h2 { font: 600 17px/1.35 var(--f-body); margin: 40px 0 10px; padding-top: 24px; border-top: 1px solid var(--line); }
+p, li { color: #cfc6b6; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+.todo { background: #3a2a12; color: #f3d48a; padding: 1px 6px; border-radius: 4px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><a class="wordmark" href="/">Open Wine Atlas</a><a class="back" href="/">Explore the map &rarr;</a></header>
+  <h1>Privacy</h1>
+  <p class="upd">Last updated 18 October 2026</p>
+
+  <p>Open Wine Atlas is a free map of the world's wine places. You can use it without an account and without giving us any personal data. This page explains the few cases where personal data is processed.</p>
+
+  <h2>Who is responsible</h2>
+  <p><span class="todo">[CONTROLLER: name and postal address]</span><br>Email: <a href="mailto:hello@openwineatlas.com">hello@openwineatlas.com</a></p>
+
+  <h2>The Founding Member list</h2>
+  <p>When you reserve a Founding Member spot we store:</p>
+  <ul>
+    <li>your email address</li>
+    <li>the date of your signup, of your confirmation and of your consent, and the version of the consent text</li>
+    <li>where you came from (for example the name of a video campaign) and your browser language</li>
+    <li>a one-way coded version of your IP address, used only to stop automated mass signups</li>
+  </ul>
+  <p>We use this data to confirm your email, to hold your spot and to email you about the Founding membership and its launch. The legal basis is your consent. You can withdraw it at any time with the link in every email, or by writing to us. We never sell or rent the list and never share it with wine sellers or advertisers.</p>
+  <p>Signups that are not confirmed are deleted after 30 days. When you leave the list we keep only your email address and the date you left, so that we do not write to you again. If you want it deleted entirely, write to us.</p>
+
+  <h2>Services we use</h2>
+  <ul>
+    <li><b>Supabase</b> stores the list in a database in Zurich, Switzerland.</li>
+    <li><b>Resend</b> sends our emails. Resend is a company based in the United States. Transfers are covered by the EU Standard Contractual Clauses.</li>
+    <li><b>Vercel</b> hosts the site. Vercel Web Analytics counts page views without cookies and without storing your IP address.</li>
+  </ul>
+
+  <h2>What the map loads</h2>
+  <p>To draw the map, your browser loads fonts from Google Fonts and map and terrain tiles from OpenFreeMap and Mapterhorn. These services receive your IP address, as any website you open does. Places you save, tastings you log and your settings in My atlas stay in your browser and are not sent to us.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask what data we hold about you, have it corrected or deleted, and withdraw your consent. Write to <a href="mailto:hello@openwineatlas.com">hello@openwineatlas.com</a>. If you think we handle your data wrongly, you can complain to the Swiss Federal Data Protection and Information Commissioner (FDPIC) or to the data protection authority in your country.</p>
+</div>
+</body>
+</html>
