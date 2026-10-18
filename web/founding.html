@@ -269,10 +269,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   </div>
 </footer>
 
+<script src="/config.js"></script>
 <script>
 (() => {
   // The waitlist runs as a Supabase Edge Function; the page only talks to it.
-  const API = "https://SUPABASE_REF.supabase.co/functions/v1/founding";
+  const API = (window.OWA_CONFIG?.supabaseUrl || "") + "/functions/v1/founding";
   const LIMIT = 1000, SHOW_COUNT_FROM = 100;
   const $ = (id) => document.getElementById(id);
   const card = $("card");
