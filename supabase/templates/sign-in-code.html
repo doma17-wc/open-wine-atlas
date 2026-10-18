@@ -1,0 +1,13 @@
+<!-- Supabase > Authentication > Emails: paste into BOTH "Magic link" and "Confirm signup".
+     Subject for both: Your Open Wine Atlas sign-in code -->
+<div style="margin:0;background:#0b0b0d;padding:32px 16px;font-family:Helvetica,Arial,sans-serif;color:#e6dccb">
+  <div style="max-width:480px;margin:0 auto;background:#141417;border:1px solid #2a2a31;border-radius:12px;padding:28px">
+    <p style="font-family:Georgia,serif;font-size:22px;margin:0 0 18px;color:#e6dccb">Open Wine Atlas</p>
+    <p style="font-size:15px;line-height:1.6;margin:0 0 12px;color:#cfc6b6">Your sign-in code:</p>
+    <p style="font-family:Menlo,monospace;font-size:32px;letter-spacing:8px;margin:0 0 20px;color:#e7c06a">{{ .Token }}</p>
+    <p style="font-size:14px;line-height:1.6;margin:0 0 20px;color:#cfc6b6">Type it in the atlas, or open this link on the same device:<br>
+      <a href="{{ .ConfirmationURL }}" style="color:#e7c06a">Sign in to Open Wine Atlas</a></p>
+    <p style="font-size:13px;line-height:1.6;margin:0;color:#8d877c">The code works for one hour. If you did not ask for it, ignore this email.</p>
+  </div>
+  <p style="max-width:480px;margin:16px auto 0;font-size:12px;color:#8d877c">Open Wine Atlas &middot; openwineatlas.com</p>
+</div>

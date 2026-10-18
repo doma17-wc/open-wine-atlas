@@ -1,11 +1,11 @@
 -- Founding Member waitlist: one row per email, double opt-in.
 -- Only the `founding` Edge Function (service role) reads or writes these tables. No public access.
 
-create extension if not exists citext;
+create extension if not exists citext with schema extensions;
 
 create table public.founding_waitlist (
   id              uuid primary key default gen_random_uuid(),
-  email           citext not null unique,
+  email           extensions.citext not null unique,
   status          text not null default 'pending' check (status in ('pending', 'confirmed', 'unsubscribed')),
   token_hash      text not null unique,          -- sha256 of the token in the email link; the token itself is never stored
   position        integer unique,                -- order of confirmation; 1..1000 are Founding spots
