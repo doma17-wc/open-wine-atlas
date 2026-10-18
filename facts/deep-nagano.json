@@ -1,0 +1,203 @@
+{
+ "slug": "deep-nagano",
+ "station": {
+  "name": "Matsumoto",
+  "height_m": 610,
+  "lat": 36.2467,
+  "lon": 137.97,
+  "service": "Japan Meteorological Agency",
+  "period": "1991-2020"
+ },
+ "facts": [
+  {
+   "claim": "Nagano GI (National Tax Agency) registered 2021-06-30, covers the whole prefecture",
+   "value": "2021-06-30",
+   "source": "Open Wine Atlas details-jp.json; Nagano GI product specification (protected from 30 June 2021)",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6ab7aa18b1000da19a20/35_Nagano__wine__product_specification.pdf"
+  },
+  {
+   "claim": "GI outline area 1,355,395 ha = 13,554 km2",
+   "value": 13554,
+   "unit": "km2",
+   "source": "Open Wine Atlas details-jp.json outline_area_ha",
+   "derived": "1355395/100"
+  },
+  {
+   "claim": "Nearest sea 105 km",
+   "value": 105,
+   "unit": "km",
+   "source": "Open Wine Atlas details-jp.json sea_km"
+  },
+  {
+   "claim": "GI ground mean elevation 1,136 m (atlas terrain e=[234,1136,3015,581,1796])",
+   "value": 1136,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Prefecture average elevation exceeds 1,000 m; many grape-growing areas above 500 m; mountains over 2,000 and 3,000 m",
+   "source": "Nagano GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6ab7aa18b1000da19a20/35_Nagano__wine__product_specification.pdf"
+  },
+  {
+   "claim": "Soils: alluvial fans at basin edges, pebbly sandy soils, good drainage",
+   "source": "Nagano GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6ab7aa18b1000da19a20/35_Nagano__wine__product_specification.pdf"
+  },
+  {
+   "claim": "Annual rainfall about 1,000 mm, one of the lowest in Japan",
+   "source": "Nagano GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6ab7aa18b1000da19a20/35_Nagano__wine__product_specification.pdf"
+  },
+  {
+   "claim": "Matsumoto station 610 m, monthly normals precip/max/min/mean/sunshine",
+   "value": {
+    "precip": [
+     39.8,
+     38.5,
+     78.0,
+     81.1,
+     94.5,
+     114.9,
+     131.3,
+     101.6,
+     148.0,
+     128.3,
+     56.3,
+     32.7
+    ],
+    "max": [
+     5.1,
+     6.6,
+     11.2,
+     17.9,
+     23.6,
+     26.4,
+     30.0,
+     31.4,
+     26.2,
+     19.8,
+     13.9,
+     8.0
+    ],
+    "min": [
+     -4.9,
+     -4.5,
+     -1.0,
+     4.4,
+     10.4,
+     15.4,
+     19.8,
+     20.5,
+     16.2,
+     9.2,
+     2.6,
+     -2.2
+    ],
+    "mean": [
+     -0.3,
+     0.6,
+     4.6,
+     10.8,
+     16.5,
+     20.2,
+     24.2,
+     25.1,
+     20.4,
+     13.9,
+     7.8,
+     2.5
+    ],
+    "sun": [
+     172.5,
+     171.2,
+     190.9,
+     204.8,
+     215.6,
+     166.3,
+     174.8,
+     202.9,
+     151.0,
+     160.9,
+     163.0,
+     160.9
+    ]
+   },
+   "source": "time-j.net republishing JMA normals 1991-2020",
+   "url": "https://weather.time-j.net/stations/jp/matsumoto/"
+  },
+  {
+   "claim": "Matsumoto annual precip 1045.1 mm, sunshine 2134.7 h (cross-check)",
+   "source": "JMA Nagano Local Meteorological Office, annual report 2021 (normals column)",
+   "url": "https://www.data.jma.go.jp/nagano/shosai/nen/document/nen_2021.pdf"
+  },
+  {
+   "claim": "Tokyo monthly precip normals, annual 1598.2 mm, sunshine 1926.7 h",
+   "value": {
+    "precip": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ]
+   },
+   "source": "time-j.net (JMA normals 1991-2020); annual precip cross-checked in JMA press appendix",
+   "url": "https://weather.time-j.net/stations/jp/tokyo/",
+   "url2": "https://www.jma.go.jp/jma/press/2103/24a/3_huroku.pdf"
+  },
+  {
+   "claim": "Growing season about 1,200 h daylight Apr-Oct (prefecture, GI spec)",
+   "source": "Nagano GI product specification"
+  },
+  {
+   "claim": "Large day-night temperature swings at altitude",
+   "source": "Nagano GI product specification"
+  },
+  {
+   "claim": "Grapes in Nagano Japan Wine: Concord 35, Niagara 22, Merlot 9, Chardonnay 6, other 18 (%); labels sum to 90, rest not labelled; 2018 survey",
+   "source": "National Tax Agency wine map (2018 Fruit Wine Manufacturer survey)",
+   "url": "https://www.nta.go.jp/taxes/sake/sakagura/pdf/wine_map_jp_en.pdf"
+  },
+  {
+   "claim": "Concord and Niagara are labrusca varieties; Merlot, Chardonnay vinifera",
+   "source": "Nagano GI product specification variety list"
+  },
+  {
+   "derived": true,
+   "values": {
+    "sun_apr_oct": 1276.3,
+    "sun_diff_vs_tokyo": 208.0,
+    "rain_diff_vs_tokyo": 553.1,
+    "rain_ratio": 0.654,
+    "diurnal": [
+     10.0,
+     11.1,
+     12.2,
+     13.5,
+     13.2,
+     11.0,
+     10.2,
+     10.9,
+     10.0,
+     10.6,
+     11.3,
+     10.2
+    ],
+    "aug_range": 10.9,
+    "apr_oct_mean": 18.73,
+    "area_km2": 13554,
+    "shares_sum": 72,
+    "wettest": "Sep"
+   },
+   "code": "sun_apr_oct=sum(sun[3:10]); sun_diff=2134.7-1926.7; rain_diff=1598.2-1045.1; diurnal=max-min per month; apr_oct_mean=mean(mean[3:10])"
+  }
+ ]
+}

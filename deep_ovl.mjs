@@ -99,8 +99,14 @@ function chartHTML(ch) {
       s += `<text x="${cx}" y="${H - 12}" text-anchor="middle" font-size="24" fill="${on ? "#f4d27f" : "#b9b0a1"}">${m}</text>`;
     });
     const cx = ch.hl * slot + slot / 2;
+    if (ch.lblPos === "tb") {
+      // labels above and below the highlighted bar, so they never sit on the neighbouring months
+      s += `<text class="lbl" x="${cx}" y="${y(ch.max[ch.hl]) - 10}" text-anchor="middle" font-size="24" fill="#f6e3b4" opacity="0">${ch.max[ch.hl].toFixed(1)}°</text>`;
+      s += `<text class="lbl" x="${cx}" y="${y(ch.min[ch.hl]) + 28}" text-anchor="middle" font-size="24" fill="#f6e3b4" opacity="0">${ch.min[ch.hl].toFixed(1)}°</text>`;
+    } else {
     s += `<text class="lbl" x="${cx + bw / 2 + 10}" y="${y(ch.max[ch.hl]) + 8}" font-size="24" fill="#f6e3b4" opacity="0">${ch.max[ch.hl].toFixed(1)}°</text>`;
     s += `<text class="lbl" x="${cx + bw / 2 + 10}" y="${y(ch.min[ch.hl]) + 8}" font-size="24" fill="#f6e3b4" opacity="0">${ch.min[ch.hl].toFixed(1)}°</text>`;
+    }
     s += `</svg>`;
     if (ch.legend) s += `<div style="font-family:Mono;font-size:23px;color:#b9b0a1;margin-top:10px;letter-spacing:.04em">${ch.legend}</div>`;
     return `<div class="chart">${s}</div>`;

@@ -12,6 +12,18 @@
     "International Wine Challenge",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-nagano",
+   "place": "Nagano",
+   "slot": "2026-10-18T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-1440552549473892855",
+   "sources": [
+    "JMA normals 1991-2020 (Matsumoto, Tokyo)",
+    "National Tax Agency wine map (2018 survey)",
+    "Nagano GI product specification",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

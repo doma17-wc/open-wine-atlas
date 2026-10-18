@@ -1,0 +1,486 @@
+{
+ "slug": "deep-nagano",
+ "id": "jp-world-nagano",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "alpine",
+  11
+ ],
+ "markers": [
+  {
+   "lng": 137.97,
+   "lat": 36.2467,
+   "label": "Matsumoto · 610 m",
+   "shots": [
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     134.5,
+     33.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     135.4,
+     34.2,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     138.03,
+     36.05,
+     6.1,
+     0,
+     10
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     138.03,
+     36.11,
+     6.4,
+     0,
+     0
+    ],
+    [
+     7.5,
+     138.03,
+     36.11,
+     6.65,
+     6,
+     26
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     137.83,
+     36.24,
+     10.0,
+     268,
+     64
+    ],
+    [
+     8.5,
+     137.84,
+     36.235,
+     10.2,
+     256,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     137.97,
+     36.296,
+     8.75,
+     0,
+     0
+    ],
+    [
+     16.5,
+     137.975,
+     36.29,
+     9.0,
+     -10,
+     22
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     137.97,
+     36.28,
+     9.6,
+     8,
+     28
+    ],
+    [
+     7.5,
+     137.975,
+     36.28,
+     9.8,
+     14,
+     34
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     137.93,
+     36.12,
+     10.4,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     137.935,
+     36.12,
+     10.65,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Japan · Deep dive",
+   "title": "Nagano",
+   "sub": "Vines above 500 m,<br>layer by layer"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "2021",
+   "c": "Nagano became a wine GI. It covers the whole prefecture, 13,554 km², 105 km from the nearest sea.",
+   "src": "National Tax Agency GI · Area and sea distance: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "1,136",
+   "u": "m",
+   "c": "the average height of the GI's ground. Mountains here pass 3,000 m.",
+   "src": "Open Wine Atlas terrain · Nagano GI specification"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "Many vineyards sit <i>above 500 m</i>, on <i>alluvial fans</i> at the basin edges: pebbly, sandy, free-draining soils.",
+   "src": "Nagano GI product specification"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "1,045",
+   "u": "mm",
+   "count": {
+    "v": 1045.1,
+    "d": 0
+   },
+   "c": "a year in Matsumoto. Tokyo: 1,598 mm. The GI rules call Nagano's rain one of the lowest in Japan.",
+   "chart": {
+    "type": "months",
+    "a": [
+     39.8,
+     38.5,
+     78.0,
+     81.1,
+     94.5,
+     114.9,
+     131.3,
+     101.6,
+     148.0,
+     128.3,
+     56.3,
+     32.7
+    ],
+    "b": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ],
+    "max": 250,
+    "bands": [],
+    "hot": [
+     8
+    ],
+    "labels": [
+     {
+      "m": 8,
+      "v": 148.0,
+      "text": "148"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Matsumoto &nbsp; ▢ Tokyo &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020 · Nagano GI specification"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "2,135",
+   "u": "h",
+   "count": {
+    "v": 2134.7,
+    "d": 0
+   },
+   "c": "of sunshine a year in Matsumoto, about 200 hours more than Tokyo. 1,276 h fall from April to October.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Matsumoto",
+      "v": 2134.7
+     },
+     {
+      "label": "Tokyo",
+      "v": 1926.7
+     }
+    ]
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "31.4",
+   "u": "°C",
+   "count": {
+    "v": 31.4,
+    "d": 1
+   },
+   "c": "the average August high in Matsumoto. Nights fall to 20.5 °C. In April the daily swing is 13.5 °C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     5.1,
+     6.6,
+     11.2,
+     17.9,
+     23.6,
+     26.4,
+     30.0,
+     31.4,
+     26.2,
+     19.8,
+     13.9,
+     8.0
+    ],
+    "min": [
+     -4.9,
+     -4.5,
+     -1.0,
+     4.4,
+     10.4,
+     15.4,
+     19.8,
+     20.5,
+     16.2,
+     9.2,
+     2.6,
+     -2.2
+    ],
+    "hl": 7,
+    "lo": -8,
+    "hi": 38,
+    "grid": [
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 18.7 °C",
+    "lblPos": "tb"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "35",
+   "u": "%",
+   "count": {
+    "v": 35,
+    "d": 0
+   },
+   "c": "of Nagano wine is Concord, an American labrusca grape. Niagara, also labrusca, makes 22%.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Concord",
+      "v": 35
+     },
+     {
+      "label": "Niagara",
+      "v": 22
+     },
+     {
+      "label": "Merlot",
+      "v": 9
+     },
+     {
+      "label": "Chardonnay",
+      "v": 6
+     }
+    ]
+   },
+   "src": "Wine by grape: National Tax Agency survey 2018 (largest varieties shown) · Nagano GI specification"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Nagano",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Hokkaido",
+   "srcs": "Sources: Japan Meteorological Agency (normals 1991–2020) · National Tax Agency · Nagano GI product specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 5,
+  "at": 0.5,
+  "kicker": "Deep dive · Japan",
+  "title": "Nagano",
+  "sub": "Vines above 500 m,<br>layer by layer"
+ }
+}
