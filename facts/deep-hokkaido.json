@@ -1,0 +1,195 @@
+{
+ "slug": "deep-hokkaido",
+ "station": {
+  "name": "Yoichi",
+  "height_m": 20,
+  "lat": 43.1817,
+  "lon": 140.7583,
+  "service": "Japan Meteorological Agency (AMeDAS)",
+  "period": "1991-2020"
+ },
+ "comparison_station": {
+  "name": "Tokyo",
+  "service": "Japan Meteorological Agency",
+  "period": "1991-2020",
+  "note": "values reused from facts/deep-nagano.json"
+ },
+ "facts": [
+  {
+   "claim": "Hokkaido GI registered 2018-06-28, covers the whole prefecture",
+   "value": "2018-06-28",
+   "source": "Open Wine Atlas details-jp.json; Hokkaido GI product specification (National Tax Agency, UK protected names register)",
+   "url": "https://assets.publishing.service.gov.uk/media/61bb50758fa8f5037d67b96e/32._hokkaido__alcohol__tranche_1.pdf"
+  },
+  {
+   "claim": "GI outline area 7,843,464 ha = 78,435 km2",
+   "value": 78435,
+   "unit": "km2",
+   "source": "Open Wine Atlas details-jp.json outline_area_ha",
+   "derived": "7843464/100"
+  },
+  {
+   "claim": "Terrain e=[-2,303,2128,24,700]: mean 303 m, max 2,128 m",
+   "value": 303,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Main grape areas: Yoichi (Shiribeshi), Iwamizawa (Sorachi), Furano (Kamikawa), Ikeda (Tokachi)",
+   "source": "Hokkaido GI product specification (National Tax Agency, UK protected names register)",
+   "url": "https://assets.publishing.service.gov.uk/media/61bb50758fa8f5037d67b96e/32._hokkaido__alcohol__tranche_1.pdf"
+  },
+  {
+   "claim": "Even at 200 m or lower, grapes with high acid can be grown",
+   "source": "Hokkaido GI product specification (National Tax Agency, UK protected names register)",
+   "url": "https://assets.publishing.service.gov.uk/media/61bb50758fa8f5037d67b96e/32._hokkaido__alcohol__tranche_1.pdf"
+  },
+  {
+   "claim": "Climate Region I (Amerine and Winkler); Apr-Oct average monthly temperature 15 C or lower; Apr-Oct sunshine 1,100 h or more; Apr-Oct precipitation 700 mm or less; winter severe, heavy snow in some areas",
+   "source": "Hokkaido GI product specification (National Tax Agency, UK protected names register)",
+   "url": "https://assets.publishing.service.gov.uk/media/61bb50758fa8f5037d67b96e/32._hokkaido__alcohol__tranche_1.pdf"
+  },
+  {
+   "claim": "Wine history: American grapes to Sapporo 1875, government winery 1876",
+   "source": "Hokkaido GI product specification (National Tax Agency, UK protected names register)",
+   "url": "https://assets.publishing.service.gov.uk/media/61bb50758fa8f5037d67b96e/32._hokkaido__alcohol__tranche_1.pdf"
+  },
+  {
+   "claim": "Yoichi station 20 m, monthly normals",
+   "value": {
+    "precip": [
+     124.5,
+     100.5,
+     83.9,
+     65.1,
+     63.6,
+     51.4,
+     102.5,
+     129.4,
+     153.5,
+     138.4,
+     161.8,
+     150.6
+    ],
+    "max": [
+     -0.5,
+     0.2,
+     4.0,
+     10.8,
+     17.3,
+     21.2,
+     24.8,
+     26.0,
+     22.4,
+     15.9,
+     8.2,
+     1.5
+    ],
+    "min": [
+     -7.9,
+     -7.8,
+     -4.1,
+     1.2,
+     6.7,
+     11.3,
+     15.9,
+     17.0,
+     12.2,
+     5.5,
+     0.0,
+     -5.6
+    ],
+    "mean": [
+     -3.8,
+     -3.3,
+     0.4,
+     6.3,
+     12.1,
+     16.2,
+     20.2,
+     21.3,
+     17.1,
+     10.7,
+     4.2,
+     -1.9
+    ],
+    "sun": [
+     42.1,
+     54.0,
+     115.9,
+     177.4,
+     204.7,
+     173.9,
+     165.5,
+     172.1,
+     165.9,
+     132.6,
+     66.5,
+     37.4
+    ]
+   },
+   "annual": {
+    "precip": 1325.2,
+    "sun": 1508.1,
+    "mean": 8.3
+   },
+   "source": "time-j.net republishing Japan Meteorological Agency normals 1991-2020 (AMeDAS Yoichi)",
+   "url": "https://weather.time-j.net/stations/jp/yoichi/",
+   "cross_check": "https://weather.time-j.net/climate/chart/yoichi (same republisher; monthly sums match annual 1325.2 mm). No second independent page found for the annual values."
+  },
+  {
+   "claim": "Tokyo normals: annual precip 1598.2 mm, sunshine 1926.7 h, monthly precip",
+   "value": {
+    "precip": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ]
+   },
+   "source": "time-j.net (JMA normals 1991-2020); JMA press appendix",
+   "url": "https://weather.time-j.net/stations/jp/tokyo/",
+   "url2": "https://www.jma.go.jp/jma/press/2103/24a/3_huroku.pdf"
+  },
+  {
+   "claim": "Grapes received by Japanese wineries FY2018, total t and Hokkaido t (Hokkaido is the main producing area): Kerner 346/308, Zweigelt 225/195, Muller-Thurgau 79/72, Bacchus 47/46, Yamasachi 85/85, Campbell Early 1116/573, Portland 132/125",
+   "source": "National Tax Agency, Fruit wine manufacturers survey FY2018, reference 6: grapes received by variety and main producing area",
+   "url": "https://www.nta.go.jp/taxes/sake/shiori-gaikyo/seizogaikyo/kajitsu/pdf/h30/30wine09.pdf"
+  },
+  {
+   "derived": true,
+   "values": {
+    "rain_annual": 1325.2,
+    "rain_apr_oct": 703.9,
+    "rain_nov_mar": 621.3,
+    "sun_annual": 1508.0,
+    "sun_apr_oct": 1192.1,
+    "sun_diff_vs_tokyo": 418.7,
+    "rain_diff_vs_tokyo": 273.0,
+    "apr_oct_mean": 14.84,
+    "aug_range": 9.0,
+    "area_km2": 78435,
+    "kerner_share": 89.0,
+    "zweigelt_share": 86.7,
+    "mt_share": 91.1,
+    "bacchus_share": 97.9,
+    "yamasachi_share": 100.0,
+    "campbell_share": 51.3,
+    "wettest": "Nov"
+   },
+   "code": "sums over monthly normals; apr_oct = months 4-10; shares = Hokkaido t / Japan total t * 100"
+  }
+ ],
+ "dropped": [
+  "Snowfall and snow depth normals for Yoichi: not found on a page reachable this run",
+  "Hokkaido grape shares of its own production: NTA wine map chart could not be read reliably; used the NTA FY2018 variety table instead"
+ ]
+}

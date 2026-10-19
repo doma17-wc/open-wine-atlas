@@ -24,6 +24,18 @@
     "Nagano GI product specification",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-hokkaido",
+   "place": "Hokkaido",
+   "slot": "2026-10-19T10:20+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-6356646570959812783",
+   "sources": [
+    "JMA normals 1991-2020 (Yoichi, Tokyo)",
+    "National Tax Agency fruit wine survey FY2018",
+    "Hokkaido GI product specification",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

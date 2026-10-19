@@ -1,0 +1,486 @@
+{
+ "slug": "deep-hokkaido",
+ "id": "jp-world-hokkaido",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  17
+ ],
+ "markers": [
+  {
+   "lng": 140.7583,
+   "lat": 43.1817,
+   "label": "Yoichi · 20 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     134.5,
+     33.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     135.6,
+     34.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     142.58,
+     43.45,
+     5.0,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     142.58,
+     43.45,
+     5.3,
+     0,
+     0
+    ],
+    [
+     7.5,
+     142.58,
+     43.45,
+     5.55,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     140.811,
+     42.86,
+     10.3,
+     186,
+     62
+    ],
+    [
+     8.5,
+     140.812,
+     42.855,
+     10.5,
+     176,
+     62
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     140.77,
+     43.3,
+     8.75,
+     0,
+     0
+    ],
+    [
+     16.5,
+     140.775,
+     43.295,
+     9.0,
+     -10,
+     22
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     140.765,
+     43.24,
+     9.6,
+     8,
+     28
+    ],
+    [
+     7.5,
+     140.77,
+     43.24,
+     9.8,
+     14,
+     34
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     140.75,
+     43.16,
+     10.0,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     140.755,
+     43.16,
+     10.25,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Japan · Deep dive",
+   "title": "Hokkaido",
+   "sub": "Japan's cool north,<br>layer by layer"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "2018",
+   "c": "Hokkaido became a wine GI. It covers the whole prefecture, 78,435 km².",
+   "src": "National Tax Agency GI · Area: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "303",
+   "u": "m",
+   "c": "the average height of the GI's ground. The highest point reaches 2,128 m.",
+   "src": "Open Wine Atlas terrain"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "Even <i>below 200 m</i>, the GI text says, grapes here keep <i>high acidity</i>. Main areas: Yoichi, Iwamizawa, Furano, Ikeda.",
+   "src": "Hokkaido GI product specification"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "1,325",
+   "u": "mm",
+   "count": {
+    "v": 1325.2,
+    "d": 0
+   },
+   "c": "a year in Yoichi, against 1,598 mm in Tokyo. November is the wettest month.",
+   "chart": {
+    "type": "months",
+    "a": [
+     124.5,
+     100.5,
+     83.9,
+     65.1,
+     63.6,
+     51.4,
+     102.5,
+     129.4,
+     153.5,
+     138.4,
+     161.8,
+     150.6
+    ],
+    "b": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ],
+    "max": 250,
+    "bands": [],
+    "hot": [
+     10
+    ],
+    "labels": [
+     {
+      "m": 10,
+      "v": 161.8,
+      "text": "162"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Yoichi &nbsp; ▢ Tokyo &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "1,508",
+   "u": "h",
+   "count": {
+    "v": 1508.1,
+    "d": 0
+   },
+   "c": "of sunshine a year in Yoichi, 419 h less than Tokyo. 1,192 h fall from April to October.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Yoichi",
+      "v": 1508.1
+     },
+     {
+      "label": "Tokyo",
+      "v": 1926.7
+     }
+    ]
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "26.0",
+   "u": "°C",
+   "count": {
+    "v": 26.0,
+    "d": 1
+   },
+   "c": "the average August high in Yoichi. The GI text puts Hokkaido in Region I, the coolest Winkler class.",
+   "chart": {
+    "type": "range",
+    "max": [
+     -0.5,
+     0.2,
+     4.0,
+     10.8,
+     17.3,
+     21.2,
+     24.8,
+     26.0,
+     22.4,
+     15.9,
+     8.2,
+     1.5
+    ],
+    "min": [
+     -7.9,
+     -7.8,
+     -4.1,
+     1.2,
+     6.7,
+     11.3,
+     15.9,
+     17.0,
+     12.2,
+     5.5,
+     0.0,
+     -5.6
+    ],
+    "hl": 7,
+    "lo": -12,
+    "hi": 32,
+    "grid": [
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 14.8 °C",
+    "lblPos": "tb"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020 · Hokkaido GI specification"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "89",
+   "u": "%",
+   "count": {
+    "v": 89,
+    "d": 0
+   },
+   "c": "of the Kerner grapes Japan's wineries used came from Hokkaido. Zweigelt: 87%.",
+   "chart": {
+    "type": "compare",
+    "headroom": 1.0,
+    "rows": [
+     {
+      "label": "Kerner, % from Hokkaido",
+      "v": 89
+     },
+     {
+      "label": "Zweigelt",
+      "v": 87
+     },
+     {
+      "label": "Müller-Thurgau",
+      "v": 91
+     },
+     {
+      "label": "Bacchus",
+      "v": 98
+     }
+    ]
+   },
+   "src": "Share of each grape used by Japan's wineries that came from Hokkaido: National Tax Agency survey FY2018"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Hokkaido",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Yamagata",
+   "srcs": "Sources: Japan Meteorological Agency (normals 1991–2020) · National Tax Agency · Hokkaido GI product specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Japan",
+  "title": "Hokkaido",
+  "sub": "Japan's cool north,<br>layer by layer"
+ }
+}
