@@ -1,0 +1,188 @@
+{
+ "slug": "deep-yamagata",
+ "station": {
+  "name": "Yamagata",
+  "height_m": 153,
+  "lat": 38.255,
+  "lon": 140.345,
+  "service": "Japan Meteorological Agency (Yamagata Local Meteorological Office, WMO 47588)",
+  "period": "1991-2020"
+ },
+ "comparison_station": {
+  "name": "Tokyo",
+  "service": "Japan Meteorological Agency",
+  "period": "1991-2020",
+  "note": "values reused from facts/deep-nagano.json"
+ },
+ "facts": [
+  {
+   "claim": "Yamagata GI (National Tax Agency) protected 2021-06-30, covers the whole prefecture",
+   "value": "2021-06-30",
+   "source": "Open Wine Atlas details-jp.json; Yamagata GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6b17aaae22001356dcae/37_Yamagata_product_specification.pdf"
+  },
+  {
+   "claim": "GI outline area 932,731 ha = 9,327 km2",
+   "value": 9327,
+   "unit": "km2",
+   "source": "Open Wine Atlas outline_area_ha",
+   "derived": "932731/100"
+  },
+  {
+   "claim": "Terrain e=[-2,438,2189,84,904]: mean 438 m, max 2,189 m, 80% of ground between 84 and 904 m",
+   "value": 438,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Mogami River flows from south through the prefecture to the Sea of Japan; tributaries form several inland basins; grapes grown mainly between plains and mountains on land unsuited to rice, concentrated around the Mogami",
+   "source": "Yamagata GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6b17aaae22001356dcae/37_Yamagata_product_specification.pdf"
+  },
+  {
+   "claim": "Sloped well-drained land gives moderate water stress; heavy winter snow; day-night differences help acid",
+   "source": "Yamagata GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6b17aaae22001356dcae/37_Yamagata_product_specification.pdf"
+  },
+  {
+   "claim": "Annual daylight about 1,600 h, about 1,100 h April-October",
+   "source": "Yamagata GI product specification"
+  },
+  {
+   "claim": "Yamagata station 153 m monthly normals",
+   "value": {
+    "precip": [
+     87.8,
+     63.0,
+     72.1,
+     63.9,
+     74.5,
+     104.8,
+     187.2,
+     153.0,
+     123.8,
+     105.1,
+     74.4,
+     97.2
+    ],
+    "max": [
+     3.3,
+     4.4,
+     9.1,
+     16.4,
+     22.6,
+     25.9,
+     29.1,
+     30.5,
+     25.8,
+     19.5,
+     12.6,
+     6.1
+    ],
+    "min": [
+     -3.1,
+     -3.1,
+     -0.3,
+     4.7,
+     10.7,
+     15.7,
+     20.0,
+     20.9,
+     16.6,
+     9.8,
+     3.6,
+     -0.7
+    ],
+    "mean": [
+     -0.1,
+     0.4,
+     4.0,
+     10.2,
+     16.2,
+     20.3,
+     23.9,
+     25.0,
+     20.6,
+     14.1,
+     7.7,
+     2.4
+    ],
+    "sun": [
+     79.6,
+     99.6,
+     140.4,
+     175.9,
+     196.5,
+     165.0,
+     144.5,
+     171.8,
+     136.6,
+     132.1,
+     102.2,
+     73.8
+    ]
+   },
+   "annual": {
+    "precip": 1206.7,
+    "sun": 1617.9,
+    "mean": 12.1
+   },
+   "source": "time-j.net republishing JMA normals 1991-2020",
+   "url": "https://weather.time-j.net/stations/jp/yamagata/"
+  },
+  {
+   "claim": "Cross-check: JMA Yamagata August 2024 report gives mean 27.5 C (+2.5 vs normal => 25.0), precip 84.0 mm = 55% of normal (=> 153), sunshine 159.7 h = 93% (=> 172)",
+   "source": "JMA Yamagata Local Meteorological Office, monthly synopsis Aug 2024",
+   "url": "https://www.data.jma.go.jp/yamagata/pdf/synopsis/2024/08.pdf"
+  },
+  {
+   "claim": "Tokyo annual precip 1598.2 mm, sunshine 1926.7 h, monthly precip",
+   "value": {
+    "precip": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ]
+   },
+   "source": "JMA normals 1991-2020 via facts/deep-nagano.json",
+   "url": "https://weather.time-j.net/stations/jp/tokyo/"
+  },
+  {
+   "claim": "1950: grape area 335 ha, third largest in Japan; 1980: 3,780 ha, 82% Delaware; vinifera (Cabernet Sauvignon, Chardonnay) reintroduced around then; 1930s Muscat Bailey A and Black Queen planted",
+   "source": "Yamagata GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6b17aaae22001356dcae/37_Yamagata_product_specification.pdf"
+  },
+  {
+   "claim": "Dropped: NTA wine map variety shares for Yamagata (English and Japanese text of the PDF disagree)",
+   "source": "https://www.nta.go.jp/taxes/sake/sakagura/pdf/wine_map_jp_en.pdf"
+  },
+  {
+   "derived": true,
+   "values": {
+    "precip_sum": 1206.8,
+    "sun_sum": 1618.0,
+    "sun_apr_oct": 1122.4,
+    "rain_apr_oct": 812.3,
+    "tokyo_precip_sum": 1598.2,
+    "rain_diff_vs_tokyo": 391.5,
+    "sun_diff_vs_tokyo": 308.8,
+    "aug_range": 9.6,
+    "apr_oct_mean": 18.6,
+    "area_km2": 9327,
+    "wettest": "Jul 187.2",
+    "delaware_ha_1980": 3100,
+    "growth_1950_1980": 11.3
+   },
+   "code": "sums of monthly lists above; diffs vs Tokyo annual; 3780*0.82; 3780/335"
+  }
+ ]
+}

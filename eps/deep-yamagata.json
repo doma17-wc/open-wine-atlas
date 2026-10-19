@@ -1,0 +1,481 @@
+{
+ "slug": "deep-yamagata",
+ "id": "jp-world-yamagata",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "japan",
+  23
+ ],
+ "markers": [
+  {
+   "lng": 140.345,
+   "lat": 38.255,
+   "label": "Yamagata · 153 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     134.5,
+     33.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     135.6,
+     34.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     140.09,
+     38.47,
+     6.6,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     140.09,
+     38.47,
+     7.0,
+     0,
+     0
+    ],
+    [
+     7.5,
+     140.09,
+     38.47,
+     7.25,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     140.36,
+     38.2,
+     10.4,
+     105,
+     62
+    ],
+    [
+     8.5,
+     140.362,
+     38.198,
+     10.6,
+     95,
+     62
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     140.33,
+     38.27,
+     9.4,
+     0,
+     0
+    ],
+    [
+     16.5,
+     140.335,
+     38.265,
+     9.65,
+     -10,
+     22
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     140.33,
+     38.285,
+     9.9,
+     8,
+     28
+    ],
+    [
+     7.5,
+     140.335,
+     38.285,
+     10.1,
+     14,
+     34
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     140.24,
+     38.1,
+     10.0,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     140.245,
+     38.1,
+     10.25,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Japan · Deep dive",
+   "title": "Yamagata",
+   "sub": "Snowy basins along<br>the Mogami River"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "2021",
+   "c": "Yamagata became a wine GI. It covers the whole prefecture, 9,327 km².",
+   "src": "National Tax Agency GI · Area: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "438",
+   "u": "m",
+   "c": "the average height of the GI's ground. The highest point reaches 2,189 m.",
+   "src": "Open Wine Atlas terrain"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "The <i>Mogami River</i> runs through the GI. Its tributaries form <i>inland basins</i>, and vines grow where plains meet mountains.",
+   "src": "Yamagata GI product specification"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "1,207",
+   "u": "mm",
+   "count": {
+    "v": 1206.7,
+    "d": 0
+   },
+   "c": "a year in Yamagata, against 1,598 mm in Tokyo. July is the wettest month.",
+   "chart": {
+    "type": "months",
+    "a": [
+     87.8,
+     63.0,
+     72.1,
+     63.9,
+     74.5,
+     104.8,
+     187.2,
+     153.0,
+     123.8,
+     105.1,
+     74.4,
+     97.2
+    ],
+    "b": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ],
+    "max": 250,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 187.2,
+      "text": "187"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Yamagata &nbsp; ▢ Tokyo &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "1,618",
+   "u": "h",
+   "count": {
+    "v": 1617.9,
+    "d": 0
+   },
+   "c": "of sunshine a year in Yamagata, 309 h less than Tokyo. 1,122 h fall from April to October.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Yamagata",
+      "v": 1617.9
+     },
+     {
+      "label": "Tokyo",
+      "v": 1926.7
+     }
+    ]
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "30.5",
+   "u": "°C",
+   "count": {
+    "v": 30.5,
+    "d": 1
+   },
+   "c": "the average August high in Yamagata. August nights still cool to 20.9 °C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     3.3,
+     4.4,
+     9.1,
+     16.4,
+     22.6,
+     25.9,
+     29.1,
+     30.5,
+     25.8,
+     19.5,
+     12.6,
+     6.1
+    ],
+    "min": [
+     -3.1,
+     -3.1,
+     -0.3,
+     4.7,
+     10.7,
+     15.7,
+     20.0,
+     20.9,
+     16.6,
+     9.8,
+     3.6,
+     -0.7
+    ],
+    "hl": 7,
+    "lo": -8,
+    "hi": 36,
+    "grid": [
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 18.6 °C",
+    "lblPos": "tb"
+   },
+   "src": "Japan Meteorological Agency, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "82",
+   "u": "%",
+   "count": {
+    "v": 82,
+    "d": 0
+   },
+   "c": "of Yamagata's 3,780 ha of grapes were Delaware in 1980. In 1950 there were 335 ha.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Grape area 1950, ha",
+      "v": 335
+     },
+     {
+      "label": "Grape area 1980",
+      "v": 3780
+     },
+     {
+      "label": "Delaware 1980",
+      "v": 3100
+     }
+    ]
+   },
+   "src": "Yamagata GI product specification"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Yamagata",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Osaka",
+   "srcs": "Sources: Japan Meteorological Agency (normals 1991–2020) · National Tax Agency · Yamagata GI product specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Japan",
+  "title": "Yamagata",
+  "sub": "Snowy basins along<br>the Mogami River"
+ }
+}

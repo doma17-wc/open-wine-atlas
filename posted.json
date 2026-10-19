@@ -36,6 +36,18 @@
     "Hokkaido GI product specification",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-yamagata",
+   "place": "Yamagata",
+   "slot": "2026-10-19T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=8401950464622152505",
+   "sources": [
+    "JMA normals 1991-2020 (Yamagata, Tokyo)",
+    "Yamagata GI product specification",
+    "National Tax Agency",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
