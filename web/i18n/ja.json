@@ -1193,5 +1193,16 @@
  "Names as Liv-ex publishes them. The atlas places each wine on the site, appellation or region its record names; the number next to a wine is its LWIN.": "名称はLiv-exの公開どおりです。アトラスは各ワインを記録に記された畑・アペラシオン・地域に配置しています。ワインの横の番号はLWINです。",
  "{w} wines in the LWIN database by Liv-ex (CC BY 4.0) name this place or a place inside it. The number is how many.": "Liv-exのLWINデータベース（CC BY 4.0）で、この場所またはその中の場所を記すワインは{w}本。数字は本数です。",
  "Search Barolo, Musigny, Louis Roederer, Cristal…": "Barolo、Musigny、Louis Roederer、Cristalを検索…",
- "Search wine places, producers and wines": "産地・生産者・ワインを検索"
+ "Search wine places, producers and wines": "産地・生産者・ワインを検索",
+ "Vineyards (OSM)": "ブドウ畑（OSM）",
+ "Measuring the vineyards…": "ブドウ畑を計測中…",
+ "Zoom in on the place to measure its vineyards.": "ブドウ畑を計測するには、その場所にズームインしてください。",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "この場所は広すぎるため、ブドウ畑をその場で計測できません。含まれるアペラシオンを開いてください。",
+ "{pct}% of the {ha} ha outline.": "{ha} haの輪郭の{pct}%。",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "広い場所のため粗い縮尺で計測しました。約{ha} ha未満の区画は含まれないため、これは最小値です。",
+ "no vineyards mapped in OpenStreetMap here yet": "OpenStreetMapにはまだここのブドウ畑が描かれていません",
+ "Vineyards cover about {ha} ha of it.": "そのうちブドウ畑は約{ha} haです。",
+ "The vineyard map could not be loaded right now.": "現在、ブドウ畑の地図を読み込めませんでした。",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "輪郭の内側で、OpenStreetMapがブドウ畑として描いている土地を、お使いのブラウザで計測したものです。輪郭は法定または行政上の範囲で、森や集落、畑も含むため、実際に植えられている広さはブドウ畑の面積の方がよく表します。OpenStreetMapはボランティアが作成しており、ヨーロッパの大部分ではとても詳しい一方、他の地域では欠けている所もあるため、小さな数値はまだ描かれていないブドウ畑を意味することがあります。",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "世界のブドウ畑とその面積、拡大時：小さな川、小川、村、山頂"
 }
