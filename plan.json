@@ -56,15 +56,6 @@
    "slot": "2026-10-20T10:20+02:00"
   },
   {
-   "slug": "deep-barolo",
-   "place": "Barolo",
-   "atlas_id": "",
-   "series": "",
-   "not_before": "2026-10-20",
-   "why": "Alba White Truffle Fair season (check the 2026 dates)",
-   "status": "planned"
-  },
-  {
    "slug": "deep-mosel",
    "place": "Mosel",
    "atlas_id": "",
@@ -83,13 +74,25 @@
    "status": "planned"
   },
   {
+   "slug": "deep-barolo",
+   "place": "Barolo",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-20",
+   "why": "Alba White Truffle Fair season (check the 2026 dates)",
+   "status": "planned",
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi."
+  },
+  {
    "slug": "deep-sauternes",
    "place": "Sauternes",
-   "atlas_id": "",
+   "atlas_id": "fr-inao-a75",
    "series": "",
    "not_before": "2026-10-22",
    "why": "noble rot season, autumn mists from the Ciron",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-20T17:50+02:00",
+   "note": "Made on 2026-10-20 in place of Barolo (two days before not_before); hook kept generic (noble rot season), no 2026 harvest claim."
   },
   {
    "slug": "deep-douro",

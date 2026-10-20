@@ -1,0 +1,476 @@
+{
+ "slug": "deep-sauternes",
+ "id": "fr-inao-a75",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  17
+ ],
+ "markers": [
+  {
+   "lng": -0.6911,
+   "lat": 44.8306,
+   "label": "Bordeaux-Mérignac · 47 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -1.6,
+     44.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     -1.3,
+     44.2,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -0.313,
+     44.57,
+     10.9,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -0.313,
+     44.57,
+     10.55,
+     0,
+     0
+    ],
+    [
+     7.5,
+     -0.313,
+     44.57,
+     10.8,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     -0.335,
+     44.555,
+     12.7,
+     215,
+     64
+    ],
+    [
+     8.5,
+     -0.337,
+     44.553,
+     12.9,
+     205,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.5,
+     44.735,
+     8.25,
+     0,
+     0
+    ],
+    [
+     16.5,
+     -0.5,
+     44.735,
+     8.4,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.5,
+     44.735,
+     8.4,
+     6,
+     15
+    ],
+    [
+     7.5,
+     -0.5,
+     44.735,
+     8.5,
+     10,
+     20
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -0.313,
+     44.56,
+     10.15,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     -0.313,
+     44.56,
+     10.35,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Sauternes",
+   "sub": "Where autumn mist<br>makes sweet wine"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "1936",
+   "c": "Sauternes became an appellation. Five communes share 3,057 ha.",
+   "src": "INAO Sauternes specification · Area: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "34",
+   "u": "m",
+   "c": "the average height of the appellation. The highest point reaches only 81 m.",
+   "src": "Open Wine Atlas terrain"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "The <i>Ciron</i> meets the <i>Garonne</i> here. Gravel, clay, sand and limestone alternate in the soils.",
+   "src": "Sauternes AOC specification (INAO)"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "925",
+   "u": "mm",
+   "count": {
+    "v": 924.9,
+    "d": 0
+   },
+   "c": "a year at Bordeaux-Mérignac, 42 km north. Paris gets 634 mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "b": [
+     47.6,
+     41.8,
+     45.2,
+     45.8,
+     69,
+     51.3,
+     59.4,
+     58,
+     44.7,
+     55.2,
+     54.3,
+     62
+    ],
+    "max": 130,
+    "bands": [],
+    "hot": [
+     10
+    ],
+    "labels": [
+     {
+      "m": 10,
+      "v": 114.5,
+      "text": "115"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Bordeaux-Mérignac (47 m) &nbsp; ▢ Paris &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Météo-France, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "2,070",
+   "u": "h",
+   "count": {
+    "v": 2069.8,
+    "d": 0
+   },
+   "c": "of sunshine a year, 353 h more than Paris. 1,508 h fall from April to October.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Bordeaux-Mérignac",
+      "v": 2069.8
+     },
+     {
+      "label": "Paris",
+      "v": 1717.0
+     }
+    ]
+   },
+   "src": "Météo-France, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "27.6",
+   "u": "°C",
+   "count": {
+    "v": 27.6,
+    "d": 1
+   },
+   "c": "the average August high. Moderate summers let the grapes ripen slowly.",
+   "chart": {
+    "type": "range",
+    "max": [
+     10.5,
+     12,
+     15.5,
+     18,
+     21.7,
+     25,
+     27.1,
+     27.6,
+     24.2,
+     19.6,
+     14.1,
+     11
+    ],
+    "min": [
+     3.7,
+     3.6,
+     5.8,
+     8,
+     11.4,
+     14.6,
+     16.2,
+     16.3,
+     13.3,
+     10.7,
+     6.7,
+     4.4
+    ],
+    "hl": 7,
+    "lo": -2,
+    "hi": 32,
+    "grid": [
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 18.1 °C",
+    "lblPos": "tb"
+   },
+   "src": "Météo-France, normals 1991–2020 · INAO"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "221",
+   "u": "g/L",
+   "count": {
+    "v": 221,
+    "d": 0
+   },
+   "c": "minimum sugar in the must. Noble rot grapes are hand-picked in several passes.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Sugar in the must, min.",
+      "v": 221
+     },
+     {
+      "label": "Sugar left in the wine, min.",
+      "v": 45
+     }
+    ]
+   },
+   "src": "Sauternes AOC specification (INAO)"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Sauternes",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Mosel",
+   "srcs": "Sources: Météo-France (normals 1991–2020) · INAO Sauternes specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Sauternes",
+  "sub": "Where autumn mist<br>makes sweet wine"
+ }
+}

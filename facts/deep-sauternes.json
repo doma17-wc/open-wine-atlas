@@ -1,0 +1,224 @@
+{
+ "slug": "deep-sauternes",
+ "station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "lat": 44.830556,
+  "lon": -0.691111,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "Nearest Météo-France reference station with sunshine; 41.9 km NW of the Sauternes appellation centroid. Values read three times from the fiche; monthly sums match the printed annual totals."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf"
+ },
+ "monthly": {
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9,
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ],
+  "merignac_sun_year": 2069.8,
+  "merignac_tmax": [
+   10.5,
+   12,
+   15.5,
+   18,
+   21.7,
+   25,
+   27.1,
+   27.6,
+   24.2,
+   19.6,
+   14.1,
+   11
+  ],
+  "merignac_tmin": [
+   3.7,
+   3.6,
+   5.8,
+   8,
+   11.4,
+   14.6,
+   16.2,
+   16.3,
+   13.3,
+   10.7,
+   6.7,
+   4.4
+  ],
+  "merignac_tmean": [
+   7.1,
+   7.8,
+   10.7,
+   13,
+   16.6,
+   19.8,
+   21.7,
+   21.9,
+   18.8,
+   15.2,
+   10.4,
+   7.7
+  ],
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3,
+  "paris_sun_year": 1717.0
+ },
+ "facts": [
+  {
+   "claim": "Sauternes AOC recognised by decree of 30 September 1936",
+   "value": 1936,
+   "source": "INAO, cahier des charges AOC Sauternes",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Five communes: Barsac, Bommes, Fargues, Preignac, Sauternes",
+   "value": 5,
+   "source": "INAO cahier des charges; Open Wine Atlas details-fr.json",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Appellation area 3,056.7 ha",
+   "value": 3057,
+   "unit": "ha",
+   "source": "Open Wine Atlas area_ha (INAO delimitation)"
+  },
+  {
+   "claim": "Terrain e=[6,34,81,11,71]: mean 34 m, max 81 m",
+   "value": 34,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "The Ciron, a Garonne tributary, forms the boundary of Sauternes, Bommes and Preignac; at the Ciron-Garonne confluence condensation brings abundant humidity; night humidity and fast daytime ventilation give Botrytis cinerea / noble rot",
+   "source": "INAO cahier des charges, lien avec la zone géographique",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Soils diversified: gravelly, clayey, siliceous (sand), limestone, with marked alternations",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Mild wet winters and moderate summer heat allow slow ripening",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Varieties: Muscadelle B, Sauvignon B, Sauvignon gris G, Sémillon B",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Grapes harvested by hand in successive passes (tries successives), overripe with noble rot",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Minimum sugar in the must 221 g/L",
+   "value": 221,
+   "unit": "g/L",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Wine keeps at least 45 g/L fermentable sugars (glucose + fructose)",
+   "value": 45,
+   "unit": "g/L",
+   "source": "INAO cahier des charges",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Min natural ABV 15%, min acquired ABV 12%; yield 25 hl/ha, rendement butoir 28 hl/ha; density 6,500 vines/ha",
+   "source": "INAO cahier des charges; Open Wine Atlas",
+   "url": "https://extranet.inao.gouv.fr/fichier/2.1-CDC-Sauternes.pdf"
+  },
+  {
+   "claim": "Annual precipitation Bordeaux-Mérignac 924.9 mm vs Paris-Montsouris 634.3 mm; wettest month November 114.5 mm",
+   "value": 924.9,
+   "unit": "mm",
+   "source": "Météo-France fiches climatologiques 1991-2020"
+  },
+  {
+   "claim": "Annual sunshine 2,069.8 h vs Paris 1,717.0 h",
+   "value": 2069.8,
+   "unit": "h",
+   "source": "Météo-France fiches climatologiques 1991-2020"
+  },
+  {
+   "claim": "August mean max 27.6 °C, mean min 16.3 °C",
+   "value": 27.6,
+   "unit": "°C",
+   "source": "Météo-France fiche 33281001, 1991-2020"
+  }
+ ],
+ "derived": {
+  "station_to_centroid_km": {
+   "value": 41.9,
+   "code": "haversine(station lat/lon, atlas centroid 44.57035,-0.30809)"
+  },
+  "sun_more_than_paris_h": {
+   "value": 352.8,
+   "code": "2069.8-1717.0"
+  },
+  "sun_apr_oct_h": {
+   "value": 1508.4,
+   "code": "sum(monthly sun Apr..Oct)"
+  },
+  "tmean_apr_oct_c": {
+   "value": 18.1,
+   "code": "mean(monthly mean temp Apr..Oct)"
+  },
+  "precip_month_sum_check": 924.9,
+  "sun_month_sum_check": 2069.9,
+  "area_km2": {
+   "value": 30.6,
+   "code": "3056.7/100"
+  }
+ }
+}
