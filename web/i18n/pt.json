@@ -1204,5 +1204,8 @@
  "Vineyards cover about {ha} ha of it.": "As vinhas ocupam cerca de {ha} ha.",
  "The vineyard map could not be loaded right now.": "Não foi possível carregar o mapa das vinhas neste momento.",
  "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "O terreno dentro do contorno que o OpenStreetMap cartografa como vinha, medido no seu navegador. O contorno é a área legal ou administrativa e inclui também matas, aldeias e campos, por isso a área de vinha mostra melhor quanto está plantado. O OpenStreetMap é mantido por voluntários: muito completo na maior parte da Europa, mais irregular noutros sítios, pelo que um valor baixo pode significar vinhas ainda não cartografadas.",
- "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Vinhas de todo o mundo e a sua área; de perto: pequenos rios, ribeiros, aldeias e picos"
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Vinhas de todo o mundo e a sua área; de perto: pequenos rios, ribeiros, aldeias e picos",
+ "Privacy": "Privacidade",
+ "Terms of Use": "Termos de utilização",
+ "Legal notice": "Aviso legal"
 }

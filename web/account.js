@@ -222,6 +222,9 @@ function render() {
   return '<div class="acct">' + (S.user ? signedIn() : signedOut()) + "</div>";
 }
 
+// the Terms of Use and age the sign-up form asks for; stored with a new account (user metadata)
+const TERMS_VERSION = "2026-10-20";
+const link = (href, text) => '<a href="' + href + '" target="_blank" rel="noopener" style="color:inherit">' + text + "</a>";
 function signedOut() {
   const c = counts(), have = c.saved + c.tastings + c.notes;
   const intro = '<h3>' + t_("Your atlas on every device") + '</h3><p class="lead">' + t_("Sign in with your email. We send you a code, no password needed.") + " " +
@@ -233,8 +236,10 @@ function signedOut() {
     '<p class="note wide" id="acct-msg">' + esc(S.msg || t_("You can also open the link in the email on this device.")) + "</p></form></div>";
   return '<div class="acct-card">' + intro +
     '<form class="jform" id="acct-email-form"><label class="wide">' + t_("Email") + '<input id="acct-email" type="email" autocomplete="email" inputmode="email" maxlength="254" required value="' + esc(S.email) + '" placeholder="you@example.com"></label>' +
+    '<label class="wide acct-agree"><input id="acct-terms" type="checkbox" required' + (S.agreed ? " checked" : "") + "><span>" +
+      t_("I am 18 or older and accept the {terms}. See the {privacy}.", { terms: link("/terms", t_("Terms of Use")), privacy: link("/privacy", t_("privacy policy")) }) + "</span></label>" +
     '<div class="row wide"><button class="primary" type="submit"' + (S.busy ? " disabled" : "") + ">" + t_("Send me a code") + "</button></div>" +
-    '<p class="note wide" id="acct-msg">' + (S.msg ? esc(S.msg) : t_("Signing in creates your account. See the {privacy}.", { privacy: '<a href="/privacy" target="_blank" rel="noopener" style="color:inherit">' + t_("privacy policy") + "</a>" })) + "</p></form></div>";
+    '<p class="note wide" id="acct-msg">' + (S.msg ? esc(S.msg) : t_("Signing in creates your account if you do not have one yet.")) + "</p></form></div>";
 }
 
 function signedIn() {
@@ -271,6 +276,8 @@ function wire() {
     e.preventDefault();
     const email = $("acct-email").value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return msg(t_("Please enter a valid email address."));
+    if (!$("acct-terms").checked) { $("acct-terms").focus(); return msg(t_("Please confirm that you are 18 or older and accept the Terms of Use.")); }
+    S.agreed = true;
     S.email = email; await sendCode();
   };
   const cf = $("acct-code-form");
@@ -339,7 +346,8 @@ function msg(t) { S.msg = t; const el = $("acct-msg"); if (el) el.textContent = 
 function busy(b) { S.busy = b; document.querySelectorAll(".acct button[type=submit]").forEach((x) => { x.disabled = b; }); }
 async function sendCode() {
   busy(true);
-  const { error } = await S.sb.auth.signInWithOtp({ email: S.email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + "/?signin=1" } });
+  const { error } = await S.sb.auth.signInWithOtp({ email: S.email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + "/?signin=1",
+    data: { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true } } });
   busy(false);
   if (error) {
     S.msg = /rate|seconds|too many/i.test(error.message) ? t_("Please wait a minute before asking for another code.") : t_("Could not send the code. Please try again.");

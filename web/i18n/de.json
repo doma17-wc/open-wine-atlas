@@ -1204,5 +1204,8 @@
  "Vineyards cover about {ha} ha of it.": "Reben bedecken davon etwa {ha} ha.",
  "The vineyard map could not be loaded right now.": "Die Rebflächenkarte konnte gerade nicht geladen werden.",
  "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "Die Fläche innerhalb des Umrisses, die OpenStreetMap als Weinberg kartiert, gemessen in Ihrem Browser. Der Umriss ist das rechtliche oder administrative Gebiet und umfasst auch Wälder, Dörfer und Felder, deshalb zeigt die Rebfläche besser, wie viel bestockt ist. OpenStreetMap wird von Freiwilligen gepflegt: in den meisten Teilen Europas sehr vollständig, anderswo lückenhafter. Ein niedriger Wert kann also noch nicht kartierte Weinberge bedeuten.",
- "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Rebflächen weltweit und ihre Fläche; aus der Nähe: kleine Flüsse, Bäche, Dörfer und Gipfel"
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Rebflächen weltweit und ihre Fläche; aus der Nähe: kleine Flüsse, Bäche, Dörfer und Gipfel",
+ "Privacy": "Datenschutz",
+ "Terms of Use": "Nutzungsbedingungen",
+ "Legal notice": "Impressum"
 }

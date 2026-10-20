@@ -152,7 +152,7 @@ def page(title, desc, path, body, jsonld=None):
 <header class="top"><a class="brand" href="/">Open Wine Atlas</a><nav><a href="/">Map</a><a href="/places/">All places</a><a href="/records/">Records</a></nav></header>
 {body}
 <footer>Open Wine Atlas is built only from open official registers and open data. Outlines, rules and facts come from the sources
-named on each page. <a href="/places/">All wine places</a> · <a href="/">Open the map</a></footer>
+named on each page. <a href="/places/">All wine places</a> · <a href="/">Open the map</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms of Use</a> · <a href="/legal">Legal notice</a></footer>
 </div>
 </body>
 </html>

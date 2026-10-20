@@ -1204,5 +1204,8 @@
  "Vineyards cover about {ha} ha of it.": "其中葡萄园约占{ha}公顷。",
  "The vineyard map could not be loaded right now.": "暂时无法加载葡萄园地图。",
  "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "轮廓内被OpenStreetMap标为葡萄园的土地，在您的浏览器中测量。轮廓是法定或行政范围，也包括森林、村庄和农田，因此葡萄园面积更能反映实际种植了多少。OpenStreetMap由志愿者绘制：欧洲大部分地区非常完整，其他地方则有缺漏，所以数值偏低可能意味着葡萄园尚未标绘。",
- "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "全球葡萄园及其面积；放大后：小河、溪流、村庄和山峰"
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "全球葡萄园及其面积；放大后：小河、溪流、村庄和山峰",
+ "Privacy": "隐私",
+ "Terms of Use": "使用条款",
+ "Legal notice": "法律声明"
 }
