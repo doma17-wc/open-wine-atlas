@@ -48,6 +48,18 @@
     "National Tax Agency",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-osaka",
+   "place": "Osaka",
+   "slot": "2026-10-20T10:20+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-5569788202187013008",
+   "sources": [
+    "JMA normals 1991-2020 (Osaka, Tokyo)",
+    "Osaka GI product specification",
+    "National Tax Agency",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

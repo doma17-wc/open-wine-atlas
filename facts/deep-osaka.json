@@ -1,0 +1,197 @@
+{
+ "slug": "deep-osaka",
+ "station": {
+  "name": "Osaka",
+  "height_m": 23,
+  "lat": 34.6817,
+  "lon": 135.5183,
+  "service": "Japan Meteorological Agency (Osaka Regional Headquarters)",
+  "period": "1991-2020"
+ },
+ "comparison_station": {
+  "name": "Tokyo",
+  "service": "Japan Meteorological Agency",
+  "period": "1991-2020",
+  "note": "values reused from facts/deep-nagano.json (time-j.net, JMA press appendix)"
+ },
+ "facts": [
+  {
+   "claim": "Osaka GI (National Tax Agency) protected 2021-06-30, covers the whole prefecture",
+   "value": "2021-06-30",
+   "source": "Open Wine Atlas details-jp.json; Osaka GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6a9eaaae22000d56dcc2/34_Osaka_product_specification.pdf"
+  },
+  {
+   "claim": "GI outline area 191,191 ha = 1,912 km2",
+   "value": 1912,
+   "unit": "km2",
+   "source": "Open Wine Atlas outline_area_ha",
+   "derived": "191191/100 = 1911.9"
+  },
+  {
+   "claim": "Nearest city Osaka, population 2,753,862 (atlas near_city)",
+   "value": 2753862,
+   "source": "Open Wine Atlas details-jp.json near_city"
+  },
+  {
+   "claim": "Terrain e=[-2,139,1017,2,407]: mean 139 m, max 1,017 m, 80% of ground between 2 and 407 m",
+   "value": 139,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Mountains on three sides: Hokusetsu (north, about 800 m), Ikoma and Kongo (east, about 400 to 1,000 m), Izumi (south, about 400 to 900 m); Osaka Plain faces Osaka Bay to the west",
+   "source": "Osaka GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6a9eaaae22000d56dcc2/34_Osaka_product_specification.pdf"
+  },
+  {
+   "claim": "Main grape area: Kawachi region (Habikino, Kashiwara, Taishi) at the foot of the Kongo Mountains; granite base, sandy loam surface with good drainage",
+   "source": "Osaka GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6a9eaaae22000d56dcc2/34_Osaka_product_specification.pdf"
+  },
+  {
+   "claim": "Delaware introduced 1914; around 1930 one of the largest grape growing areas in Japan",
+   "value": 1914,
+   "source": "Osaka GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6a9eaaae22000d56dcc2/34_Osaka_product_specification.pdf"
+  },
+  {
+   "claim": "36 permitted varieties; minimum sugar 16.0%, Delaware 18.0%, Koshu 14.0%",
+   "value": {
+    "varieties": 36,
+    "sugar_general": 16.0,
+    "sugar_delaware": 18.0,
+    "sugar_koshu": 14.0
+   },
+   "unit": "% sugar",
+   "source": "Osaka GI product specification",
+   "url": "https://assets.publishing.service.gov.uk/media/659d6a9eaaae22000d56dcc2/34_Osaka_product_specification.pdf"
+  },
+  {
+   "claim": "Osaka station 23 m monthly normals",
+   "value": {
+    "precip": [
+     47.0,
+     60.5,
+     103.1,
+     101.9,
+     136.5,
+     185.1,
+     174.4,
+     113.0,
+     152.8,
+     136.0,
+     72.5,
+     55.5
+    ],
+    "max": [
+     9.7,
+     10.5,
+     14.2,
+     19.9,
+     24.9,
+     28.0,
+     31.8,
+     33.7,
+     29.5,
+     23.7,
+     17.8,
+     12.3
+    ],
+    "min": [
+     3.0,
+     3.2,
+     6.0,
+     10.9,
+     16.0,
+     20.3,
+     24.6,
+     25.8,
+     21.9,
+     16.0,
+     10.2,
+     5.3
+    ],
+    "mean": [
+     6.2,
+     6.6,
+     9.9,
+     15.2,
+     20.1,
+     23.6,
+     27.7,
+     29.0,
+     25.2,
+     19.5,
+     13.8,
+     8.7
+    ],
+    "sun": [
+     146.5,
+     140.6,
+     172.2,
+     192.6,
+     203.7,
+     154.3,
+     184.0,
+     222.4,
+     161.6,
+     166.1,
+     152.6,
+     152.1
+    ]
+   },
+   "annual": {
+    "precip": 1338.3,
+    "sun": 2048.6,
+    "mean": 17.1
+   },
+   "source": "time-j.net republishing JMA normals 1991-2020",
+   "url": "https://weather.time-j.net/stations/jp/osaka/"
+  },
+  {
+   "claim": "Cross-check: JMA Osaka January 2024 report gives January normals 6.2 C, 47.0 mm, 146.5 h, identical to time-j.net",
+   "source": "JMA Osaka Regional HQ, monthly climate report Jan 2024",
+   "url": "https://www.data.jma.go.jp/osaka/kikou/fuken/osk202401.pdf"
+  },
+  {
+   "claim": "Tokyo annual precip 1598.2 mm, sunshine 1926.7 h, monthly precip",
+   "value": {
+    "precip": [
+     59.7,
+     56.5,
+     116.0,
+     133.7,
+     139.7,
+     167.8,
+     156.2,
+     154.7,
+     224.9,
+     234.8,
+     96.3,
+     57.9
+    ]
+   },
+   "source": "time-j.net (JMA normals 1991-2020)",
+   "url": "https://weather.time-j.net/stations/jp/tokyo/"
+  },
+  {
+   "claim": "Derived values",
+   "value": {
+    "precip_sum_check": 1338.3,
+    "sun_sum_check": 2048.7,
+    "sun_apr_oct": 1284.7,
+    "mean_apr_oct": 22.9,
+    "sun_vs_tokyo": 121.9,
+    "rain_vs_tokyo": 259.9,
+    "area_km2": 1911.9,
+    "tokyo_sum_check": 1598.2
+   },
+   "derived": "python: sums of monthly normals; sun Apr-Oct = sum(S[3:10]); mean Apr-Oct = avg(ME[3:10]); diffs vs Tokyo annual"
+  }
+ ],
+ "dropped": [
+  "Osaka 9th in Japan for grape production (5,140 t) and 3rd for Delaware: Osaka Prefecture page gives no year",
+  "Grape variety shares: NTA wine map does not disclose Osaka"
+ ]
+}
