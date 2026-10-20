@@ -932,7 +932,6 @@
  "Vin tranquille": "Vin tranquille",
  "Vineyard area": "Área de vinha",
  "Vineyard site": "Vinha",
- "Vineyards (Switzerland, OSM)": "Vinhas (Suíça, OSM)",
  "Vineyards along Lake Neuchâtel at the foot of the Jura. Chasselas and Pinot Noir, and the pale rosé Oeil-de-Perdrix.": "Vinhas ao longo do Lago de Neuchâtel, no sopé do Jura. Chasselas e Pinot Noir, e o rosé pálido Oeil-de-Perdrix.",
  "Vineyards around Lake Zürich and in the Weinland north of the city. Blauburgunder (Pinot Noir) and Räuschling, an old local white grape.": "Vinhas em torno do Lago de Zurique e no Weinland, a norte da cidade. Blauburgunder (Pinot Noir) e Räuschling, uma velha casta branca local.",
  "Vineyards on the slopes of Europe's most active volcano in Sicily, up to about 1,000 m. Nerello Mascalese for reds, Carricante for whites. Producers name individual 'contrade'.": "Vinhas nas encostas do vulcão mais ativo da Europa, na Sicília, até cerca de 1000 m. Nerello Mascalese para os tintos, Carricante para os brancos. Os produtores indicam as 'contrade' individuais.",
@@ -1153,7 +1152,6 @@
  "Show all of it": "Ver tudo",
  "Show it on the map": "Ver no mapa",
  "Rivers, lakes, mountain ranges and peaks": "Rios, lagos, cordilheiras e picos",
- "Close up: small rivers, streams, villages and peaks": "De perto: pequenos rios, ribeiros, aldeias e picos",
  "From the reels": "Dos reels",
  "Selection": "Seleção",
  "Side by side": "Lado a lado",
@@ -1171,5 +1169,16 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "Contornos e áreas dos registos oficiais. A área é a área delimitada, não a vinha plantada.",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "Os contornos traçados a partir de concelhos ou distritos inteiros não mostram área aqui, porque incluem terras que não são vinha.",
  "Hover a name to find it on the map, click to open it.": "Passe sobre um nome para o ver no mapa, clique para o abrir.",
- "Back to the selection": "Voltar à seleção"
+ "Back to the selection": "Voltar à seleção",
+ "Vineyards (OSM)": "Vinhas (OSM)",
+ "Measuring the vineyards…": "A medir as vinhas…",
+ "Zoom in on the place to measure its vineyards.": "Aproxime o mapa do lugar para medir as suas vinhas.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Este lugar é demasiado grande para medir as suas vinhas em direto. Abra uma das suas denominações.",
+ "{pct}% of the {ha} ha outline.": "{pct} % do contorno de {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Lugar extenso, medido a uma escala grosseira: as parcelas com menos de cerca de {ha} ha ficam de fora, por isso é um mínimo.",
+ "no vineyards mapped in OpenStreetMap here yet": "ainda não há vinhas cartografadas aqui no OpenStreetMap",
+ "Vineyards cover about {ha} ha of it.": "As vinhas ocupam cerca de {ha} ha.",
+ "The vineyard map could not be loaded right now.": "Não foi possível carregar o mapa das vinhas neste momento.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "O terreno dentro do contorno que o OpenStreetMap cartografa como vinha, medido no seu navegador. O contorno é a área legal ou administrativa e inclui também matas, aldeias e campos, por isso a área de vinha mostra melhor quanto está plantado. O OpenStreetMap é mantido por voluntários: muito completo na maior parte da Europa, mais irregular noutros sítios, pelo que um valor baixo pode significar vinhas ainda não cartografadas.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Vinhas de todo o mundo e a sua área; de perto: pequenos rios, ribeiros, aldeias e picos"
 }

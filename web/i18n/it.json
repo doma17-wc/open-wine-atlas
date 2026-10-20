@@ -932,7 +932,6 @@
  "Vin tranquille": "Vino fermo",
  "Vineyard area": "Area vitata",
  "Vineyard site": "Vigneto",
- "Vineyards (Switzerland, OSM)": "Vigneti (Svizzera, OSM)",
  "Vineyards along Lake Neuchâtel at the foot of the Jura. Chasselas and Pinot Noir, and the pale rosé Oeil-de-Perdrix.": "Vigneti lungo il Lago di Neuchâtel ai piedi del Giura. Chasselas e Pinot Noir, e il rosato chiaro Oeil-de-Perdrix.",
  "Vineyards around Lake Zürich and in the Weinland north of the city. Blauburgunder (Pinot Noir) and Räuschling, an old local white grape.": "Vigneti intorno al Lago di Zurigo e nel Weinland a nord della città. Blauburgunder (Pinot Noir) e Räuschling, un antico vitigno bianco locale.",
  "Vineyards on the slopes of Europe's most active volcano in Sicily, up to about 1,000 m. Nerello Mascalese for reds, Carricante for whites. Producers name individual 'contrade'.": "Vigneti sulle pendici del vulcano più attivo d'Europa, in Sicilia, fino a circa 1.000 m. Nerello Mascalese per i rossi, Carricante per i bianchi. I produttori indicano le singole 'contrade'.",
@@ -1153,7 +1152,6 @@
  "Show all of it": "Mostra tutto",
  "Show it on the map": "Mostra sulla mappa",
  "Rivers, lakes, mountain ranges and peaks": "Fiumi, laghi, catene montuose e vette",
- "Close up: small rivers, streams, villages and peaks": "Da vicino: piccoli fiumi, torrenti, paesi e vette",
  "From the reels": "Dai reel",
  "Selection": "Selezione",
  "Side by side": "A confronto",
@@ -1171,5 +1169,16 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "Contorni e superfici dai registri ufficiali. La superficie è l'area delimitata, non il vigneto piantato.",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "I contorni tracciati da interi comuni o distretti non mostrano qui la superficie, perché includono terreni che non sono vigneto.",
  "Hover a name to find it on the map, click to open it.": "Passa sopra un nome per trovarlo sulla mappa, clicca per aprirlo.",
- "Back to the selection": "Torna alla selezione"
+ "Back to the selection": "Torna alla selezione",
+ "Vineyards (OSM)": "Vigneti (OSM)",
+ "Measuring the vineyards…": "Misurazione dei vigneti…",
+ "Zoom in on the place to measure its vineyards.": "Ingrandisci il luogo per misurarne i vigneti.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Questo luogo è troppo esteso per misurarne i vigneti in tempo reale. Apri una delle sue denominazioni.",
+ "{pct}% of the {ha} ha outline.": "Il {pct}% del perimetro di {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Luogo esteso, misurato a scala grossolana: gli appezzamenti sotto circa {ha} ha restano fuori, quindi è un valore minimo.",
+ "no vineyards mapped in OpenStreetMap here yet": "nessun vigneto ancora mappato qui in OpenStreetMap",
+ "Vineyards cover about {ha} ha of it.": "I vigneti ne coprono circa {ha} ha.",
+ "The vineyard map could not be loaded right now.": "Al momento non è stato possibile caricare la mappa dei vigneti.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "Il terreno all'interno del perimetro che OpenStreetMap mappa come vigneto, misurato nel tuo browser. Il perimetro è l'area legale o amministrativa e comprende anche boschi, paesi e campi, quindi l'area vitata indica meglio quanto è piantato. OpenStreetMap è curato da volontari: molto completo in gran parte d'Europa, più irregolare altrove, quindi un valore basso può voler dire vigneti non ancora mappati.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Vigneti di tutto il mondo e la loro area; da vicino: piccoli fiumi, torrenti, paesi e vette"
 }

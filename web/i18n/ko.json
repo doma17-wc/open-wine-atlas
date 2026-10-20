@@ -932,7 +932,6 @@
  "Vin tranquille": "Vin tranquille",
  "Vineyard area": "포도밭 면적",
  "Vineyard site": "포도밭",
- "Vineyards (Switzerland, OSM)": "포도밭(스위스, OSM)",
  "Vineyards along Lake Neuchâtel at the foot of the Jura. Chasselas and Pinot Noir, and the pale rosé Oeil-de-Perdrix.": "Jura 산맥 기슭 Neuchâtel 호숫가의 포도밭이다. Chasselas와 Pinot Noir, 그리고 옅은 로제 Oeil-de-Perdrix.",
  "Vineyards around Lake Zürich and in the Weinland north of the city. Blauburgunder (Pinot Noir) and Räuschling, an old local white grape.": "Zürich 호수 주변과 도시 북쪽 Weinland의 포도밭이다. Blauburgunder(Pinot Noir)와 오래된 토착 화이트 품종 Räuschling.",
  "Vineyards on the slopes of Europe's most active volcano in Sicily, up to about 1,000 m. Nerello Mascalese for reds, Carricante for whites. Producers name individual 'contrade'.": "Sicilia에 있는 유럽에서 가장 활발한 화산의 경사면, 해발 약 1,000 m까지 펼쳐진 포도밭이다. 레드는 Nerello Mascalese, 화이트는 Carricante로 만든다. 생산자들은 개별 'contrade'를 표기한다.",
@@ -1153,7 +1152,6 @@
  "Show all of it": "전체 보기",
  "Show it on the map": "지도에서 보기",
  "Rivers, lakes, mountain ranges and peaks": "강, 호수, 산맥, 봉우리",
- "Close up: small rivers, streams, villages and peaks": "확대 시: 작은 강, 개울, 마을, 봉우리",
  "From the reels": "릴스에서",
  "Selection": "선택",
  "Side by side": "나란히 비교",
@@ -1171,5 +1169,16 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "윤곽과 면적은 공식 등록부에서 가져왔습니다. 면적은 지정된 구역이며 실제 재배 면적이 아닙니다.",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "행정 구역 전체로 그린 윤곽에는 포도밭이 아닌 땅이 포함되어 여기서는 면적을 표시하지 않습니다.",
  "Hover a name to find it on the map, click to open it.": "이름 위에 마우스를 올리면 지도에서 찾고, 클릭하면 엽니다.",
- "Back to the selection": "선택으로 돌아가기"
+ "Back to the selection": "선택으로 돌아가기",
+ "Vineyards (OSM)": "포도밭(OSM)",
+ "Measuring the vineyards…": "포도밭 측정 중…",
+ "Zoom in on the place to measure its vineyards.": "포도밭을 측정하려면 장소를 확대하세요.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "이곳은 너무 넓어 포도밭을 실시간으로 측정할 수 없습니다. 포함된 아펠라시옹 중 하나를 여세요.",
+ "{pct}% of the {ha} ha outline.": "{ha} ha 경계의 {pct}%.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "넓은 곳이라 개략적인 축척으로 측정했습니다. 약 {ha} ha 미만의 구획은 빠지므로 최솟값입니다.",
+ "no vineyards mapped in OpenStreetMap here yet": "OpenStreetMap에 아직 이곳 포도밭이 표시되지 않음",
+ "Vineyards cover about {ha} ha of it.": "그중 포도밭은 약 {ha} ha입니다.",
+ "The vineyard map could not be loaded right now.": "지금은 포도밭 지도를 불러올 수 없습니다.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "경계 안에서 OpenStreetMap이 포도밭으로 표시한 땅을 브라우저에서 측정한 값입니다. 경계는 법적 또는 행정 구역이라 숲, 마을, 밭도 포함하므로 실제로 얼마나 심어져 있는지는 포도밭 면적이 더 잘 보여 줍니다. OpenStreetMap은 자원봉사자가 만들며 유럽 대부분에서는 매우 상세하지만 다른 곳에서는 빈 곳이 있어, 값이 낮으면 아직 표시되지 않은 포도밭일 수 있습니다.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "전 세계 포도밭과 면적, 확대 시: 작은 강, 개울, 마을, 봉우리"
 }

@@ -932,7 +932,6 @@
  "Vin tranquille": "Vin tranquille",
  "Vineyard area": "Zone de vignes",
  "Vineyard site": "Lieu-dit",
- "Vineyards (Switzerland, OSM)": "Vignes (Suisse, OSM)",
  "Vineyards along Lake Neuchâtel at the foot of the Jura. Chasselas and Pinot Noir, and the pale rosé Oeil-de-Perdrix.": "Vignobles au bord du lac de Neuchâtel, au pied du Jura. Chasselas et Pinot Noir, et l'Œil-de-Perdrix, un rosé pâle.",
  "Vineyards around Lake Zürich and in the Weinland north of the city. Blauburgunder (Pinot Noir) and Räuschling, an old local white grape.": "Vignobles autour du lac de Zurich et dans le Weinland au nord de la ville. Blauburgunder (Pinot Noir) et Räuschling, un ancien cépage blanc local.",
  "Vineyards on the slopes of Europe's most active volcano in Sicily, up to about 1,000 m. Nerello Mascalese for reds, Carricante for whites. Producers name individual 'contrade'.": "Vignobles sur les pentes du volcan le plus actif d'Europe, en Sicile, jusqu'à 1 000 m environ. Nerello Mascalese pour les rouges, Carricante pour les blancs. Les producteurs nomment les « contrade » une à une.",
@@ -1153,7 +1152,6 @@
  "Show all of it": "Tout afficher",
  "Show it on the map": "Afficher sur la carte",
  "Rivers, lakes, mountain ranges and peaks": "Rivières, lacs, massifs et sommets",
- "Close up: small rivers, streams, villages and peaks": "De près : petites rivières, ruisseaux, villages et sommets",
  "From the reels": "Vu dans nos vidéos",
  "Selection": "Sélection",
  "Side by side": "Côte à côte",
@@ -1171,5 +1169,16 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "Contours et surfaces des registres officiels. La surface est l'aire délimitée, pas le vignoble planté.",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "Les contours tracés à partir de communes ou de districts entiers n'indiquent pas de surface ici, car ils incluent des terres qui ne sont pas des vignes.",
  "Hover a name to find it on the map, click to open it.": "Survolez un nom pour le trouver sur la carte, cliquez pour l'ouvrir.",
- "Back to the selection": "Retour à la sélection"
+ "Back to the selection": "Retour à la sélection",
+ "Vineyards (OSM)": "Vignes (OSM)",
+ "Measuring the vineyards…": "Mesure des vignes…",
+ "Zoom in on the place to measure its vineyards.": "Zoomez sur le lieu pour mesurer ses vignes.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Ce lieu est trop vaste pour mesurer ses vignes en direct. Ouvrez l'une de ses appellations.",
+ "{pct}% of the {ha} ha outline.": "{pct} % du périmètre de {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Lieu étendu, mesuré à une échelle grossière : les parcelles de moins d'environ {ha} ha sont omises, c'est donc un minimum.",
+ "no vineyards mapped in OpenStreetMap here yet": "aucune vigne encore cartographiée ici dans OpenStreetMap",
+ "Vineyards cover about {ha} ha of it.": "Les vignes en couvrent environ {ha} ha.",
+ "The vineyard map could not be loaded right now.": "La carte des vignes n'a pas pu être chargée pour le moment.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "La surface à l'intérieur du périmètre qu'OpenStreetMap cartographie comme vigne, mesurée dans votre navigateur. Le périmètre est l'aire légale ou administrative et englobe aussi bois, villages et champs : la surface en vigne dit donc mieux ce qui est planté. OpenStreetMap est tenu par des bénévoles : très complet dans la plupart de l'Europe, plus inégal ailleurs, si bien qu'un chiffre bas peut signifier des vignes pas encore cartographiées.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Vignes du monde entier et leur surface ; de près : petites rivières, ruisseaux, villages et sommets"
 }

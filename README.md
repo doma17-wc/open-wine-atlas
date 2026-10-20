@@ -27,6 +27,7 @@ Live: https://open-wine-atlas.vercel.app
 | Georgia, Moldova, Ukraine, Armenia, Türkiye, Israel, Lebanon, Serbia, North Macedonia, Montenegro, Bosnia and Herzegovina | 98 PDOs, IGPs and regions | Sakpatenti, AGEPI, Ukrainepatent, national wine laws + geoBoundaries | per country |
 | Japan, China, India | 12 GIs and regions | National Tax Agency (JP), EU-China GI agreement, Indian GI registry + geoBoundaries | per country |
 | All | About 9,600 wineries in 44 countries | OpenStreetMap via openwinemap | ODbL |
+| All | Vineyards on the map (zoom 9 and more) and the planted area of each place, measured live inside its outline | OpenStreetMap `landuse=vineyard` via OpenFreeMap vector tiles (OpenMapTiles landcover) | ODbL; CC BY 4.0 |
 | France, Italy | Per-wine rules: colour, category, main and secondary grapes, yields, density | EU specifications compiled by Candiago et al. 2022 (via pdo-wine-data) | CC BY 4.0 |
 | All | Regional bedrock per place | GLiM, Hartmann & Moosdorf 2012 | CC BY 3.0 |
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
@@ -56,6 +57,22 @@ each country. My atlas › Records shows them, and so does the static page `/rec
 ```bash
 python pipeline/context.py && python pipeline/terrain_stats.py && python pipeline/records.py && python web/build_web.py
 ```
+
+## Vineyard area
+
+An outline is the legal or administrative area of a place. In Italy, Spain and most countries it is built from whole
+communes or districts, so it also takes in woods, villages and fields. The sheet therefore shows the **vineyard area**:
+the land inside the outline that OpenStreetMap maps as vineyard. The web page measures it in the browser, like the
+terrain: it reads the OpenFreeMap tiles over the outline (landcover, subclass `vineyard`), draws the outline and the
+vineyards on two canvases and adds up the pixels both cover, each weighted by its true area at that latitude. It uses
+zoom 14, where every vineyard is in the tiles, as long as the outline touches at most 96 tiles, then zoom 13 and 12
+(96 tiles each). Below zoom 14 OpenFreeMap (Planetiler, OpenMapTiles profile) leaves out polygons smaller than a
+square of 8 px of a 256 px tile, about 1 ha at zoom 13 and 4 ha at zoom 12 in Burgundy, so the sheet then says the
+figure is a minimum and from what plot size. Coarser than zoom 12 the figure would mean little: places that large
+(Bordeaux, Bourgogne, a whole region) keep the area of their outline and ask the reader to open one of their
+appellations. The area of the outline stays in the sheet as a note ("24% of the 51 ha outline"). Australia keeps the
+planted area published by Wine Australia. The same tiles draw the vineyards on the map from zoom 9 in every country;
+the Swiss layer from `poi.pmtiles` covers the zooms below and the claude.ai artifact page.
 
 ## Rivers, lakes, mountains and towns
 

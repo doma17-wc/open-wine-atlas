@@ -932,7 +932,6 @@
  "Vin tranquille": "Vin tranquille（静止酒）",
  "Vineyard area": "葡萄园用地",
  "Vineyard site": "葡萄园地块",
- "Vineyards (Switzerland, OSM)": "葡萄园（瑞士，OSM）",
  "Vineyards along Lake Neuchâtel at the foot of the Jura. Chasselas and Pinot Noir, and the pale rosé Oeil-de-Perdrix.": "Jura山脚、纳沙泰尔湖沿岸的葡萄园。出产Chasselas和Pinot Noir，以及淡色桃红Oeil-de-Perdrix。",
  "Vineyards around Lake Zürich and in the Weinland north of the city. Blauburgunder (Pinot Noir) and Räuschling, an old local white grape.": "苏黎世湖周边及城北Weinland一带的葡萄园。出产Blauburgunder（Pinot Noir）和古老的本地白葡萄品种Räuschling。",
  "Vineyards on the slopes of Europe's most active volcano in Sicily, up to about 1,000 m. Nerello Mascalese for reds, Carricante for whites. Producers name individual 'contrade'.": "Sicilia岛上欧洲最活跃火山的山坡葡萄园，海拔最高约1,000 m。红葡萄酒用Nerello Mascalese，白葡萄酒用Carricante。生产商会标注各个“contrade”（地块）。",
@@ -1153,7 +1152,6 @@
  "Show all of it": "显示全部",
  "Show it on the map": "在地图上显示",
  "Rivers, lakes, mountain ranges and peaks": "河流、湖泊、山脉和山峰",
- "Close up: small rivers, streams, villages and peaks": "放大后：小河、溪流、村庄和山峰",
  "From the reels": "来自短视频",
  "Selection": "选择",
  "Side by side": "并排对比",
@@ -1171,5 +1169,16 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "轮廓与面积来自官方登记。面积指划定区域，而非实际种植的葡萄园。",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "由整个市镇或地区构成的轮廓包含非葡萄园土地，因此此处不显示面积。",
  "Hover a name to find it on the map, click to open it.": "将鼠标移到名称上可在地图上找到它，点击即可打开。",
- "Back to the selection": "返回所选内容"
+ "Back to the selection": "返回所选内容",
+ "Vineyards (OSM)": "葡萄园（OSM）",
+ "Measuring the vineyards…": "正在测量葡萄园…",
+ "Zoom in on the place to measure its vineyards.": "放大到该地点以测量其葡萄园。",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "该地点范围过大，无法实时测量葡萄园。请打开其中的某个产区。",
+ "{pct}% of the {ha} ha outline.": "占{ha}公顷轮廓的{pct}%。",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "范围较大，按粗略比例测量：约{ha}公顷以下的地块未计入，因此这是最小值。",
+ "no vineyards mapped in OpenStreetMap here yet": "OpenStreetMap中此处尚未标绘葡萄园",
+ "Vineyards cover about {ha} ha of it.": "其中葡萄园约占{ha}公顷。",
+ "The vineyard map could not be loaded right now.": "暂时无法加载葡萄园地图。",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "轮廓内被OpenStreetMap标为葡萄园的土地，在您的浏览器中测量。轮廓是法定或行政范围，也包括森林、村庄和农田，因此葡萄园面积更能反映实际种植了多少。OpenStreetMap由志愿者绘制：欧洲大部分地区非常完整，其他地方则有缺漏，所以数值偏低可能意味着葡萄园尚未标绘。",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "全球葡萄园及其面积；放大后：小河、溪流、村庄和山峰"
 }

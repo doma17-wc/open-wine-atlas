@@ -597,7 +597,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <label style="color:var(--gold)"><input type="checkbox" id="lg-top" checked><span class="sw"></span><span data-i18n>Grand cru, DOCG, DOCa, Pago</span></label>
     <label style="color:var(--copper)"><input type="checkbox" id="lg-pc" checked><span class="sw"></span><span data-i18n>Premiers crus and climats</span></label>
     <label style="color:var(--slate)"><input type="checkbox" id="lg-de" checked><span class="sw"></span><span data-i18n>Einzellagen (Rheinland-Pfalz)</span></label>
-    <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span data-i18n>Vineyards (Switzerland, OSM)</span></label>
+    <label style="color:var(--vine)"><input type="checkbox" id="lg-vine" checked><span class="sw" style="background:currentColor;opacity:.6"></span><span data-i18n>Vineyards (OSM)</span></label>
     <label style="color:#c9c2b6"><input type="checkbox" id="lg-win" checked><span class="sw" style="border:0;display:grid;place-items:center"><i class="dot"></i></span><span data-i18n>Wineries (OSM)</span></label>
     <label style="color:var(--river)"><input type="checkbox" id="lg-water" checked><span class="sw sw-line"></span><span data-i18n>Rivers and lakes</span></label>
     <label style="color:#b9a88a"><input type="checkbox" id="lg-mtn" checked><span class="sw sw-peak"></span><span data-i18n>Mountains and peaks</span></label>
@@ -1183,11 +1183,21 @@ function addOsmDetail(below, labels) {
       "text-max-width": 8, "text-padding": 3, "symbol-sort-key": ["match", ["get", "class"], "village", 0, 1] },
     paint: { "text-color": P.town, "text-halo-color": P.halo, "text-halo-width": 1.2, "text-opacity": ["case", ["==", ["get", "class"], "hamlet"], 0.75, 1] } }, "town");
   ["osm-villages", "osm-peaks", "osm-water-labels", "osm-stream-labels", "osm-waterway-labels"].forEach((l) => labels && map.moveLayer(l, labels));
+  // vineyards mapped in OpenStreetMap, every country (landuse=vineyard is landcover farmland/vineyard in OpenMapTiles)
+  const vine = ["==", ["get", "subclass"], "vineyard"];
+  add({ id: "osm-vine-fill", type: "fill", source: "osm", "source-layer": "landcover", minzoom: 9, filter: vine,
+    paint: { "fill-color": P.vine, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 9, 0.4, 13, 0.28] } }, "vine");
+  add({ id: "osm-vine-line", type: "line", source: "osm", "source-layer": "landcover", minzoom: 12, filter: vine,
+    paint: { "line-color": P.vine, "line-width": 0.8, "line-opacity": 0.7 } }, "vine");
+  ["osm-vine-fill", "osm-vine-line"].forEach((l) => map.getLayer("vine-fill") && map.moveLayer(l, "vine-fill"));
+  // the Swiss layer from the atlas files stays for the overview zooms (and when OpenFreeMap cannot be reached)
+  ["vine-fill", "vine-line"].forEach((l) => map.getLayer(l) && map.setLayerZoomRange(l, l === "vine-fill" ? 7 : 11, 9));
   // if OpenFreeMap cannot be reached, the Natural Earth rivers stay drawn close up
   // (a single missing tile does not count: only a TileJSON that never arrived)
   map.on("error", (e) => { if (osmOk && e && e.sourceId === "osm" && !(map.getSource("osm") || {}).tiles) { osmOk = false; osmFallback(); } });
 }
 function osmFallback() {
+  ["vine-fill", "vine-line"].forEach((l) => map.getLayer(l) && map.setLayerZoomRange(l, l === "vine-fill" ? 7 : 11, 24));
   setP("geo-rivers", "line-opacity", neFade(["case", ["has", "name"], 0.9, 0.5], 1));
   setP("geo-river-labels", "text-opacity", neFade(1, 1));
   setP("geo-hl-glow", "line-opacity", 0.45); setP("geo-hl-river", "line-opacity", neFade(1, 1));
@@ -1423,6 +1433,7 @@ function applyTheme() {
     else if (/-labels$/.test(id)) { setP(id, "text-color", rc); setP(id, "text-halo-color", P.halo); }
   });
   setP("vine-fill", "fill-color", P.vine); setP("vine-line", "line-color", P.vine);
+  setP("osm-vine-fill", "fill-color", P.vine); setP("osm-vine-line", "line-color", P.vine);
   setP("wineries", "circle-color", P.winery); setP("wineries", "circle-stroke-color", P.night);
   setP("winery-labels", "text-color", P.wlabel); setP("winery-labels", "text-halo-color", P.night);
   setP("relief", "hillshade-shadow-color", P.shade[0]); setP("relief", "hillshade-highlight-color", P.shade[1]); setP("relief", "hillshade-accent-color", P.shade[2]);
@@ -2122,6 +2133,193 @@ function geomInView(x0, y0, x1, y1) {
 }
 const compass = (deg) => SECTORS[Math.round(deg / 45) % 8];
 
+// ---------- vineyard area: the land inside the outline that OpenStreetMap maps as vineyard, measured in the browser
+// from the OpenFreeMap tiles (OpenMapTiles landcover, subclass vineyard). Below zoom 14 OpenMapTiles leaves out
+// small polygons (gen zN keeps areas over zres(N-1)², Web Mercator), so a big place gives a minimum.
+const VINES = new Map(); // id -> result
+// tiles fetched at most per zoom (only tiles the outline touches count). Zoom 14 holds every vineyard; below it
+// OpenFreeMap (Planetiler, OpenMapTiles profile) drops polygons smaller than a square of 8 px of a 256 px tile
+// (about 1 ha at zoom 13 and 4 ha at zoom 12 in Burgundy). Coarser than zoom 12 the figure would mean little.
+const VINE_BUDGET = { 14: 96, 13: 96, 12: 96 };
+const VINE_MIN_PX = { 14: 0, 13: 8, 12: 8 };
+const UTF8 = new TextDecoder();
+// a small Mapbox Vector Tile reader: [field, wire type, value] for each field of one message
+function* pbfFields(buf) {
+  let pos = 0;
+  const varint = () => { let r = 0, m = 1, b; do { b = buf[pos++]; r += (b & 0x7f) * m; m *= 128; } while (b & 0x80); return r; };
+  while (pos < buf.length) {
+    const key = varint(), f = Math.floor(key / 8), t = key & 7;
+    if (t === 0) yield [f, t, varint()];
+    else if (t === 2) { const n = varint(); yield [f, t, buf.subarray(pos, pos + n)]; pos += n; }
+    else if (t === 1) pos += 8;
+    else if (t === 5) pos += 4;
+    else throw new Error("bad vector tile");
+  }
+}
+function pbfPacked(buf) {
+  const out = [];
+  for (let pos = 0; pos < buf.length;) { let r = 0, m = 1, b; do { b = buf[pos++]; r += (b & 0x7f) * m; m *= 128; } while (b & 0x80); out.push(r); }
+  return out;
+}
+// the vineyard polygons of the landcover layer: { extent, feats: [[ring as flat x,y list, …], …] }
+function vineFeatures(buf) {
+  for (const [f, t, layer] of pbfFields(buf)) {
+    if (f !== 3 || t !== 2) continue;
+    let name = "", extent = 4096;
+    const feats = [], keys = [], vals = [];
+    for (const [lf, lt, v] of pbfFields(layer)) {
+      if (lf === 1) name = UTF8.decode(v);
+      else if (lf === 2) feats.push(v);
+      else if (lf === 3) keys.push(UTF8.decode(v));
+      else if (lf === 4) { let x = null; for (const [vf, vt, vv] of pbfFields(v)) if (vf === 1 && vt === 2) x = UTF8.decode(vv); vals.push(x); }
+      else if (lf === 5) extent = v;
+    }
+    if (name !== "landcover") continue;
+    const ki = keys.indexOf("subclass"), vi = vals.indexOf("vineyard"), out = [];
+    if (ki < 0 || vi < 0) return { extent, feats: out };
+    for (const fb of feats) {
+      let tags = [], type = 0, geom = null;
+      for (const [ff, ft, fv] of pbfFields(fb)) {
+        if (ff === 2 && ft === 2) tags = pbfPacked(fv); else if (ff === 3) type = fv; else if (ff === 4 && ft === 2) geom = pbfPacked(fv);
+      }
+      if (type !== 3 || !geom) continue;
+      let hit = false;
+      for (let k = 0; k + 1 < tags.length; k += 2) if (tags[k] === ki && tags[k + 1] === vi) { hit = true; break; }
+      if (!hit) continue;
+      const rings = [];
+      let x = 0, y = 0, ring = null;
+      const zz = (n) => (n % 2 ? -(n + 1) / 2 : n / 2);
+      for (let i = 0; i < geom.length;) {
+        const c = geom[i++], id = c & 7, cnt = Math.floor(c / 8);
+        if (id === 1 || id === 2) for (let k = 0; k < cnt; k++) {
+          x += zz(geom[i++]); y += zz(geom[i++]);
+          if (id === 1) { ring = [x, y]; rings.push(ring); } else ring.push(x, y);
+        }
+      }
+      if (rings.length) out.push(rings);
+    }
+    return { extent, feats: out };
+  }
+  return { extent: 4096, feats: [] };
+}
+async function measureVines(id) {
+  if (VINES.has(id)) return VINES.get(id);
+  const src = map.getSource("osm"), tpl = src && src.tiles && src.tiles[0];
+  if (!tpl) throw new Error("no OpenStreetMap tiles");
+  const geoms = geometryFor(id);
+  if (!geoms.length) return null;
+  let x0 = 1, y0 = 1, x1 = 0, y1 = 0;
+  geoms.forEach((g) => polysOf(g).forEach((poly) => poly[0].forEach(([lon, lat]) => {
+    const x = mercX(lon), y = mercY(lat);
+    if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+  })));
+  // the outline drawn small, 4 px per tile: which tiles of the box it touches
+  const touched = (z, tx0, ty0, nx, ny) => {
+    const S = 4, cv = typeof OffscreenCanvas !== "undefined" ? new OffscreenCanvas(nx * S, ny * S) : Object.assign(document.createElement("canvas"), { width: nx * S, height: ny * S });
+    const c = cv.getContext("2d", { willReadFrequently: true }), sc = 2 ** z * S;
+    c.fillStyle = "#fff"; c.strokeStyle = "#fff"; c.lineWidth = 1;
+    geoms.forEach((g) => polysOf(g).forEach((poly) => {
+      c.beginPath();
+      poly.forEach((r) => { r.forEach(([lon, lat], k) => { const X = mercX(lon) * sc - tx0 * S, Y = mercY(lat) * sc - ty0 * S; k ? c.lineTo(X, Y) : c.moveTo(X, Y); }); c.closePath(); });
+      c.fill("evenodd"); c.stroke();
+    }));
+    const a = c.getImageData(0, 0, nx * S, ny * S).data, on = new Uint8Array(nx * ny);
+    for (let y = 0; y < ny * S; y++) for (let x = 0; x < nx * S; x++) if (a[(y * nx * S + x) * 4 + 3]) on[Math.floor(y / S) * nx + Math.floor(x / S)] = 1;
+    return on;
+  };
+  // the finest zoom whose tiles under the outline stay within its budget
+  let z = 14, tx0, ty0, nx, ny, want = null;
+  for (; z >= 12; z--) {
+    const n = 2 ** z;
+    tx0 = Math.floor(x0 * n); ty0 = Math.floor(y0 * n); nx = Math.floor(x1 * n) - tx0 + 1; ny = Math.floor(y1 * n) - ty0 + 1;
+    if (nx * ny > VINE_BUDGET[z] * 4) continue;
+    want = nx * ny <= VINE_BUDGET[z] ? null : touched(z, tx0, ty0, nx, ny);
+    if (!want || want.reduce((s, v) => s + v, 0) <= VINE_BUDGET[z]) break;
+  }
+  if (z < 12) { const out = { tooLarge: true }; VINES.set(id, out); return out; }
+  const tiles = await Promise.all(Array.from({ length: nx * ny }, (_, k) => {
+    if (want && !want[k]) return null;
+    const url = tpl.replace("{z}", z).replace("{x}", tx0 + (k % nx)).replace("{y}", ty0 + Math.floor(k / nx));
+    return fetch(url).then((r) => r.ok ? r.arrayBuffer() : null).then((b) => b ? vineFeatures(new Uint8Array(b)) : null).catch(() => null);
+  }));
+  if (!tiles.some(Boolean)) throw new Error("no OpenStreetMap tiles");
+  // draw the outline and the vineyards on two canvases of R px per tile, then count the pixels both cover
+  const R = Math.max(64, Math.min(1024, Math.floor(Math.sqrt(4e6 / (nx * ny)))));
+  const W = nx * R, H = ny * R, scale = 2 ** z * R, ox = tx0 * R, oy = ty0 * R;
+  const canvas = () => { const cv = typeof OffscreenCanvas !== "undefined" ? new OffscreenCanvas(W, H) : Object.assign(document.createElement("canvas"), { width: W, height: H });
+    const ctx = cv.getContext("2d", { willReadFrequently: true }); ctx.fillStyle = "#fff"; return ctx; };
+  const oc = canvas();
+  geoms.forEach((g) => polysOf(g).forEach((poly) => {
+    oc.beginPath();
+    poly.forEach((r) => { r.forEach(([lon, lat], k) => { const X = mercX(lon) * scale - ox, Y = mercY(lat) * scale - oy; k ? oc.lineTo(X, Y) : oc.moveTo(X, Y); }); oc.closePath(); });
+    oc.fill("evenodd");
+  }));
+  const vc = canvas();
+  let nFeat = 0;
+  tiles.forEach((t, k) => {
+    if (!t || !t.feats.length) return;
+    const i = k % nx, j = Math.floor(k / nx), s = R / t.extent, bx = i * R, by = j * R;
+    vc.save(); vc.beginPath(); vc.rect(bx, by, R, R); vc.clip();
+    t.feats.forEach((rings) => {
+      vc.beginPath();
+      rings.forEach((r) => { vc.moveTo(bx + r[0] * s, by + r[1] * s); for (let q = 2; q < r.length; q += 2) vc.lineTo(bx + r[q] * s, by + r[q + 1] * s); vc.closePath(); });
+      vc.fill("evenodd");
+    });
+    vc.restore(); nFeat += t.feats.length;
+  });
+  const om = oc.getImageData(0, 0, W, H).data, vm = vc.getImageData(0, 0, W, H).data;
+  let outA = 0, vineA = 0;
+  for (let row = 0; row < H; row++) {
+    const lat = latOfY((oy + row + 0.5) / scale), side = 40075016.686 * Math.cos(lat * Math.PI / 180) / scale, pa = side * side;
+    // anti-aliased edges count by the share of the pixel they cover
+    let no = 0, nv = 0;
+    for (let x = 0, k = row * W * 4 + 3; x < W; x++, k += 4) if (om[k]) { no += om[k]; nv += om[k] * vm[k]; }
+    outA += no / 255 * pa; vineA += nv / 65025 * pa;
+  }
+  const mid = Math.cos(latOfY((y0 + y1) / 2) * Math.PI / 180), side = VINE_MIN_PX[z] * 40075016.686 / (256 * 2 ** z) * mid;
+  const out = { z, ha: vineA / 1e4, outlineHa: outA / 1e4, feats: nFeat, tiles: tiles.filter(Boolean).length,
+    partial: !geomInView(x0, y0, x1, y1), minPlotHa: side * side / 1e4 };
+  VINES.set(id, out);
+  return out;
+}
+const vineHa = (ha) => fmtN(ha, ha < 10 ? 1 : 0);
+async function fillVines(p, d, token, areaHtml) {
+  const el = () => (token === sheetToken ? $("vine-ha") : null);
+  if (!el()) return;
+  // back to the area of the outline when the vineyards cannot be measured
+  const fallback = (msg) => {
+    const box = el(); if (!box) return;
+    const dt = box.closest("dd")?.previousElementSibling;
+    if (areaHtml) { if (dt) dt.textContent = t_("Area"); box.innerHTML = areaHtml + '<div class="note">' + t_(msg) + "</div>"; }
+    else box.innerHTML = '<span class="note">' + t_(msg) + "</span>";
+  };
+  try {
+    await nextIdle();
+    const v = await measureVines(p.id);
+    const box = el(); if (!box) return;
+    if (!v) return fallback(N_("Zoom in on the place to measure its vineyards."));
+    if (v.tooLarge) return fallback(N_("This place is too large to measure its vineyards live. Open one of its appellations."));
+    const q = ' <button class="q" data-gloss="vinearea" aria-label="' + t_("About this data") + '">?</button>';
+    const outline = v.partial ? v.outlineHa : (d.area_ha ?? d.outline_area_ha ?? v.outlineHa);
+    const notes = [];
+    if (v.ha >= 0.05 && v.outlineHa > 0) notes.push(t_("{pct}% of the {ha} ha outline.", { pct: fmtN(Math.min(100, v.ha / v.outlineHa * 100), v.ha / v.outlineHa < 0.01 ? 1 : 0), ha: fmtN(outline, 0) }));
+    if (v.partial) notes.push(t_("Only the part of the place on screen was measured."));
+    if (v.minPlotHa >= 0.5) notes.push(t_("Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.", { ha: vineHa(v.minPlotHa) }));
+    box.innerHTML = (v.ha < 0.05
+      ? '<span class="num">0 ha</span> <span class="note">' + t_("no vineyards mapped in OpenStreetMap here yet") + "</span>"
+      : '<span class="num">' + vineHa(v.ha) + ' ha</span> <span class="note">OpenStreetMap</span>') + q +
+      (notes.length ? '<div class="note">' + notes.join(" ") + "</div>" : "");
+    const lede = token === sheetToken ? $("vine-lede") : null;
+    if (lede && v.ha >= 0.05 && !v.partial) lede.textContent = " " + t_("Vineyards cover about {ha} ha of it.", { ha: vineHa(v.ha) });
+    noteFacts(p.id, "vines", v);
+    return v;
+  } catch (e) {
+    console.warn("vines", e);
+    fallback(N_("The vineyard map could not be loaded right now."));
+    return null;
+  }
+}
+
 function roseSvg(t) {
   const c = 56, r0 = 9, rmax = 44, mx = Math.max(...t.sectors) || 1;
   let s = '<svg viewBox="0 0 112 112" role="img" aria-label="' + t_("Aspect: share of the ground facing each direction") + '">';
@@ -2374,6 +2572,7 @@ async function select(p, feature) {
   if (WEB) {
     const tok = sheetToken;
     fillTerrain(p, tok).then((t) => fillClimate(p, d, rec, tok, t));
+    fillVines(p, d, tok, CURRENT && CURRENT.areaHtml);
     fillVintages(p, d, pd, tok);
     fillSoil(p, d, rec, tok);
     fillWiki(p, tok);
@@ -2430,11 +2629,13 @@ const WHAT = { region: N_("a wine region"), appellation: N_("an appellation"), s
   "premier_cru appellation": N_("a premier cru appellation"), "premier_cru subzone": N_("a premier cru sub-zone"), "premier_cru vineyard": N_("a premier cru climat"),
   "docg appellation": N_("a DOCG appellation"), "doca appellation": N_("a DOCa appellation"), "pago appellation": N_("a Vino de Pago appellation"),
   "docg subzone": N_("a DOCG sub-zone"), "doca subzone": N_("a DOCa sub-zone") };
+// the sheet shows the planted area, measured live, instead of the area of the outline
+const liveVines = (d) => WEB && !d.vine_area_ha && d.outline_quality !== "point";
 function summary(p, d, pd) {
   const wt = worldType(p, d);
   const lvlKey = p.level === "vineyard" && p.country === "DE" ? "vineyard_DE" : p.level;
   const what = wt ? t_("a {type}", { type: t_(wt) }) : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
-  const area = d.area_ha ?? null;
+  const area = liveVines(d) ? null : d.area_ha ?? null;
   const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
   let t = t_("{name} is {what}{of} in {country}{area}{towns}.", {
     name: esc(p.name), what,
@@ -2530,15 +2731,18 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   CURRENT = { p, d, rec };
   queueMicrotask(markGeoLinks);
   $("sh-head").insertAdjacentHTML("beforeend", sheetActs(p));
-  let html = '<p class="lede">' + summary(p, d, pd) + "</p>";
+  let html = '<p class="lede">' + summary(p, d, pd) + '<span id="vine-lede"></span></p>';
   if (d.outline) html += '<p class="ol-note"><b>' + t_({ legal: N_("Outline."), approx: N_("Approximate outline."), point: N_("Location only.") }[d.outline_quality] || "Outline.") + "</b> " + esc(t_(d.outline)) + ' <button class="q" data-gloss="outline" aria-label="' + t_("How outlines are drawn") + '">?</button></p>';
   if (d.atlas_note) html += '<div class="atlas-note"><div class="an-h">' + t_("Atlas note") + '</div><p>' + esc(t_(d.atlas_note)) + '</p><div class="an-f">' + t_("Editorial summary. Check the official specification before you rely on it.") + "</div></div>";
 
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  if (area != null) rows.push([N_("Area"), '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
-    (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "")]);
+  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
+    (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "");
+  if (liveVines(d)) rows.push([N_("Vineyard area"), '<span id="vine-ha"><span class="note">' + t_("Measuring the vineyards…") + "</span></span>"]);
+  else if (areaHtml) rows.push([N_("Area"), areaHtml]);
+  CURRENT.areaHtml = areaHtml;
   if (d.share_of_parent) rows.push([t_("Share of {name}", { name: esc(p.parent) }), '<span class="num">' + d.share_of_parent + " %</span>"]);
   if (d.share_of_grosslage) rows.push([N_("Share of Großlage"), '<span class="num">' + d.share_of_grosslage + " %</span>"]);
   if (d.plots > 1) rows.push([N_("Separate plots"), '<span class="num">' + d.plots + "</span>"]);
@@ -3383,6 +3587,7 @@ const GLOSS = {
   subzone: [N_("Sub-zone"), N_("A named part of an appellation that may appear on the label. Examples: the premier cru area of a Burgundy village, Côtes de Bordeaux Blaye, a Muscadet cru communal, or a German Großlage.")],
   vineyard: [N_("Climat or vineyard site"), N_("A precisely delimited, named vineyard. In Burgundy these are climats, recorded in many cases since the Middle Ages and inscribed as UNESCO World Heritage in 2015. In Germany they are Einzellagen in the official register.")],
   vineyard_area: [N_("Vineyard area"), N_("Land mapped as vineyard in OpenStreetMap. It shows where vines grow, not a legal boundary.")],
+  vinearea: [N_("Vineyard area"), N_("The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.")],
   grand_cru: [N_("Grand cru"), N_("In Burgundy the top of four levels: regional, village, premier cru, grand cru. Each Burgundy grand cru is its own appellation, so the label shows only the vineyard name, such as Chambertin. Alsace has 51 grand cru appellations. In Chablis one grand cru appellation covers seven climats. In Champagne the term applies to whole villages.")],
   premier_cru: [N_("Premier cru"), N_("Burgundy's second tier. A premier cru sits inside a village appellation and is written after it: Gevrey-Chambertin premier cru Clos Saint-Jacques. Wine from several premier cru climats of one village may be blended and sold simply as premier cru.")],
   docg: [N_("DOCG"), N_("Denominazione di Origine Controllata e Garantita, Italy's top tier above DOC. Rules are stricter and every wine is tasted and approved before release.")],
@@ -3443,7 +3648,7 @@ function openData() {
         [N_("New Zealand, South Africa, Chile, Argentina, Brazil, Canada, Japan and 16 more: outlines from administrative units"), "geob"],
         [N_("Small GIs without an open boundary: markers"), "marker"],
         [N_("Rivers, lakes, mountain ranges and peaks"), "ne"], [N_("Towns and cities"), "geonames"]])
-      .concat(WEB ? [[N_("Close up: small rivers, streams, villages and peaks"), "ofm"]] : [])
+      .concat(WEB ? [[N_("Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks"), "ofm"]] : [])
       .concat(WEB ? [[N_("Relief, elevation, slope and aspect"), "dem"], [N_("Climate and vintage weather"), "meteo"], ["Soil", "soil"], [N_("Satellite map"), "eox"], [N_("Topographic map"), "otm"]] : [])
       .map(([l, k]) => "<tr><td>" + t_(l) + '</td><td><a href="' + SOURCES[k].url + '" target="_blank" rel="noopener">' + esc(SOURCES[k].name) + "</a></td><td>" + esc(SOURCES[k].license) + "</td></tr>").join("") +
     "</table></div>" +
@@ -3518,6 +3723,7 @@ function snapFacts(id) {
       frost: +N.frost.toFixed(1), trend: c.trend != null ? +c.trend.toFixed(2) : null, series: c.years.map((y) => [y.year, +y.gst.toFixed(2)]) };
   }
   if (f.soil) o.soil = f.soil;
+  if (f.vines && !f.vines.tooLarge && !f.vines.partial) o.vines = +f.vines.ha.toFixed(1);
   return o;
 }
 function noteFacts(id, part, val) {
@@ -3762,6 +3968,7 @@ function dashCompare() {
     '<div class="empty">' + t_("Add places here, or press + Compare in any place sheet. A place gets its terrain and climate once you have opened it on the map.") + '</div>';
   const rows = [
     [N_("Country"), (s) => esc(cname(s.country))], [N_("Classification"), (s) => esc(kindOf(s))],
+    [N_("Vineyard area"), (s) => s.vines != null ? vineHa(s.vines) + " ha" : null, (s) => s.vines],
     [N_("Area"), (s) => s.area != null ? fmtN(s.area, 1) + " ha" : null, (s) => s.area],
     [N_("Mean elevation"), (s) => s.terrain ? fmtN(s.terrain.mean) + " m" : null, (s) => s.terrain?.mean],
     [N_("Elevation range"), (s) => s.terrain ? fmtN(s.terrain.min) + "–" + fmtN(s.terrain.max) + " m" : null],
