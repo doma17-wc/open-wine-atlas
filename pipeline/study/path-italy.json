@@ -1,0 +1,1036 @@
+{
+  "id": "italy",
+  "title": "Italy",
+  "level": "WSET 3 to Diploma",
+  "summary": "Italian wine law and climate, then the five regions students meet most: Piemonte, Toscana, Veneto, the north-east and the south with the islands. Grapes, styles, key appellations and legal ageing rules.",
+  "lessons": [
+    {
+      "id": "italy-law-climate",
+      "title": "Italian wine law and climate",
+      "minutes": 7,
+      "intro": "This lesson sets out the quality categories on an Italian label and the terms Classico, Superiore and Riserva. It then shows how the Alps, the Apennines, altitude and the sea shape a climate that grows warmer from north to south.",
+      "sections": [
+        {
+          "h": "The quality pyramid",
+          "p": [
+            "Italy's modern wine law began with a 1963 law that created the DOC, Denominazione di Origine Controllata. The first DOCs were approved in 1966, and Vernaccia di San Gimignano was the very first. The same law also provided for a higher category, DOCG (Denominazione di Origine Controllata e Garantita), but none was granted until 1980. The first DOCGs, approved in 1980, were Brunello di Montalcino, Vino Nobile di Montepulciano, Barolo and Barbaresco.",
+            "IGT (Indicazione Geografica Tipica) came with a 1992 law. It covers broad areas, such as IGT Toscana, with looser rules on grapes and yields. At the base is Vino, wine with no geographical indication. Under EU law, DOC and DOCG are both PDO (DOP in Italian) and IGT is PGI (IGP)."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1292",
+            "it-eupdo-PDO-IT-A1389",
+            "it-eupdo-PDO-IT-A1199",
+            "it-eupdo-PDO-IT-A1308"
+          ]
+        },
+        {
+          "h": "DOCG and IGT in practice",
+          "p": [
+            "Each DOC and DOCG has its own production rules: the grapes allowed, maximum yields, minimum alcohol and often minimum ageing. DOCG rules are usually stricter than DOC rules, and every bottle of DOCG wine carries a numbered government strip on the neck or capsule.",
+            "IGT gave a legal home to wines that broke the DOC rules of their time. The best known are the Super Tuscans of the 1970s and 1980s, which used Cabernet Sauvignon or left out the white grapes that Chianti then required. Many top wines are still sold as IGT by choice, so IGT is not a ceiling on quality."
+          ]
+        },
+        {
+          "h": "Label terms: Classico, Superiore, Riserva",
+          "p": [
+            "Classico marks the historic heart of an appellation, the original zone before its borders were widened. Chianti Classico, Valpolicella Classico and Soave Classico are examples.",
+            "Superiore usually means a higher minimum alcohol, and in some appellations lower yields or longer ageing. Riserva means a longer legal minimum ageing than the standard wine of the same appellation. Each appellation sets its own figures, so the terms do not mean the same number of months everywhere."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1235",
+            "it-eupdo-PDO-IT-A0442",
+            "it-eupdo-PDO-IT-A0472"
+          ]
+        },
+        {
+          "h": "Climate from the Alps to Sicily",
+          "p": [
+            "The Alps shelter the far north, where Alto Adige and Trentino have warm days and cool nights. Below them the wide Po Valley is flat and fertile, with cold winters, hot summers and frequent fog. The Apennines run down the length of the peninsula and offer hill sites at many altitudes.",
+            "Central and southern Italy and the islands have a warm Mediterranean climate with dry summers. Here quality depends on what cools the vines: altitude, sea breezes and slope aspect. Etna in Sicily and Irpinia in Campania grow grapes high up, which keeps acidity in the wines despite the southern latitude."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0293",
+            "it-eupdo-PDO-IT-A0780",
+            "it-eupdo-PDO-IT-A0279"
+          ]
+        }
+      ],
+      "key": [
+        "A 1963 law created the DOC; the first DOCs came in 1966, starting with Vernaccia di San Gimignano.",
+        "DOCG is the top category, and every DOCG bottle carries a numbered government strip.",
+        "IGT dates from 1992; many famous Super Tuscans are sold as IGT Toscana.",
+        "Under EU law, DOC and DOCG are PDO (DOP) and IGT is PGI (IGP).",
+        "Classico is the historic original zone, Superiore usually means higher minimum alcohol, Riserva means longer minimum ageing.",
+        "Altitude, slopes and the sea moderate a climate that warms from north to south."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "In which year was the IGT category created?",
+          "options": [
+            "1963",
+            "1980",
+            "1992",
+            "2010"
+          ],
+          "answer": 2,
+          "explain": "IGT came with a 1992 law. The DOC dates from a 1963 law and the first DOCGs from 1980."
+        },
+        {
+          "id": "q2",
+          "q": "Which wine was the first Italian DOC, approved in 1966?",
+          "options": [
+            "Barolo",
+            "Chianti",
+            "Soave",
+            "Vernaccia di San Gimignano"
+          ],
+          "answer": 3,
+          "explain": "Vernaccia di San Gimignano, a white from Toscana, was the first DOC in 1966.",
+          "place": "it-eupdo-PDO-IT-A1292"
+        },
+        {
+          "id": "q3",
+          "q": "What does Classico mean on an Italian label?",
+          "options": [
+            "The historic original zone of the appellation",
+            "A wine aged at least two years",
+            "A wine made from a single grape variety",
+            "A wine with a higher minimum alcohol"
+          ],
+          "answer": 0,
+          "explain": "Classico marks the historic heart of an appellation, the zone before its borders were widened.",
+          "place": "it-eupdo-PDO-IT-A1235"
+        },
+        {
+          "id": "q4",
+          "q": "Under EU law, which category corresponds to Italian IGT?",
+          "options": [
+            "PDO (DOP)",
+            "Wine without a geographical indication",
+            "PGI (IGP)",
+            "DOCG"
+          ],
+          "answer": 2,
+          "explain": "IGT is a PGI (IGP). DOC and DOCG are both PDO (DOP)."
+        },
+        {
+          "id": "q5",
+          "q": "What does Riserva indicate on an Italian label?",
+          "options": [
+            "Grapes from the historic zone",
+            "Lower yields and nothing else",
+            "A sweet wine from dried grapes",
+            "A longer legal minimum ageing than the standard wine"
+          ],
+          "answer": 3,
+          "explain": "Riserva means a longer minimum ageing period than the standard wine of the same appellation. Each appellation sets its own figure."
+        },
+        {
+          "id": "q6",
+          "q": "What must every bottle of DOCG wine carry?",
+          "options": [
+            "A numbered government strip",
+            "The name of a single vineyard",
+            "A statement of oak ageing",
+            "The word Riserva"
+          ],
+          "answer": 0,
+          "explain": "DOCG wines carry a numbered government strip on the neck or capsule."
+        },
+        {
+          "id": "q7",
+          "q": "What keeps acidity in the wines of Etna and Irpinia despite their southern latitude?",
+          "options": [
+            "Very high yields",
+            "High-altitude vineyards",
+            "Planting on flat valley floors",
+            "Harvesting as late as possible"
+          ],
+          "answer": 1,
+          "explain": "Both areas grow grapes at altitude, where cooler temperatures preserve acidity.",
+          "place": "it-eupdo-PDO-IT-A0780"
+        },
+        {
+          "id": "q8",
+          "q": "Why were the first Super Tuscans sold outside the DOC system?",
+          "options": [
+            "They came from outside Toscana",
+            "Their grapes or blends did not fit the DOC rules of the time",
+            "They were made from dried grapes",
+            "They were sparkling wines"
+          ],
+          "answer": 1,
+          "explain": "They used Cabernet Sauvignon or left out the white grapes Chianti then required, so they did not fit the rules. IGT later gave them a legal home."
+        }
+      ]
+    },
+    {
+      "id": "italy-piemonte",
+      "title": "Piemonte",
+      "minutes": 8,
+      "intro": "Piemonte (Piedmont), in the north-west at the foot of the Alps, is the home of Nebbiolo. This lesson covers the Langhe and Roero, the two great Nebbiolo DOCGs Barolo and Barbaresco, and the region's Barbera, Dolcetto, Moscato and Cortese.",
+      "sections": [
+        {
+          "h": "Nebbiolo, the Langhe and Roero",
+          "p": [
+            "Piemonte means foot of the mountains. The Alps rise to the west and north and the Apennines to the south, giving a continental climate with cold winters, warm summers and autumn fog. Nebbiolo is said to take its name from nebbia, fog. It buds early and ripens late, so it needs the warmest slopes.",
+            "Nebbiolo wines are pale in colour but high in acidity and tannin. Young wines smell of roses and red cherry; with age come tar, dried herbs and leather.",
+            "The Langhe are the hills south of the Tanaro river around the town of Alba. Langhe DOC is a broad appellation for many grapes, and Langhe Nebbiolo often holds younger or declassified wine. North of the Tanaro lies Roero, with sandier soils. Roero DOCG covers Nebbiolo reds and whites from Arneis."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1189",
+            "it-eupdo-PDO-IT-A1261"
+          ]
+        },
+        {
+          "h": "Barolo",
+          "p": [
+            "Barolo DOCG is 100% Nebbiolo from hills south-west of Alba. The main communes are Barolo, La Morra, Castiglione Falletto, Monforte d'Alba and Serralunga d'Alba. In the west, around La Morra and Barolo, younger Tortonian marls give more perfumed, open wines. In the east, around Serralunga and Monforte, older Helvetian soils with more sandstone give firmer, more structured wines.",
+            "Barolo must age at least 38 months, 18 of them in wood, counted from 1 November of the harvest year. Riserva needs 62 months, also with 18 in wood. Traditional producers use long maceration and large old casks (botti). Modernists use shorter maceration and small new French barriques for a fruitier, oak-marked style."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1389"
+          ]
+        },
+        {
+          "h": "Barbaresco",
+          "p": [
+            "Barbaresco DOCG is also 100% Nebbiolo, from hills north-east of Alba around the communes of Barbaresco, Neive and Treiso. The zone is lower and closer to the Tanaro, so it is a little warmer and Nebbiolo ripens slightly earlier. The wines are often more approachable young than Barolo, though the best age for decades.",
+            "Barbaresco must age at least 26 months, 9 in wood; Riserva needs 50 months, also with 9 in wood. Both Barolo and Barbaresco now have official named vineyard areas, the MGA (Menzioni Geografiche Aggiuntive), which may appear on the label, such as Rabajà in Barbaresco or Cannubi in Barolo."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1399"
+          ]
+        },
+        {
+          "h": "Barbera, Dolcetto and northern Nebbiolo",
+          "p": [
+            "Barbera has high acidity, low tannin and deep colour, so many producers age it in barrique to add structure. Barbera d'Asti DOCG, from the Monferrato hills around Asti, and Barbera d'Alba DOC are its main appellations. Nizza DOCG, inside the Barbera d'Asti zone, is 100% Barbera.",
+            "Dolcetto ripens early and gives soft, fruity reds with lower acidity, for drinking young. Dogliani DOCG is its leading appellation. In northern Piemonte, Nebbiolo, locally called Spanna, makes Gattinara and Ghemme DOCG, often with small amounts of other local grapes."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1398",
+            "it-eupdo-PDO-IT-A1068",
+            "it-eupdo-PDO-IT-01896",
+            "it-eupdo-PDO-IT-A1330",
+            "it-eupdo-PDO-IT-A1311",
+            "it-eupdo-PDO-IT-A1263"
+          ]
+        },
+        {
+          "h": "Moscato d'Asti, Asti and Gavi",
+          "p": [
+            "Moscato Bianco grows in the hills south of Asti, and Asti DOCG covers two main styles, both usually sweet. Asti, once called Asti Spumante, is fully sparkling. Moscato d'Asti is only lightly sparkling (frizzante), closed with a normal cork, and low in alcohol at around 5%. Most are made in pressurised tanks, with fermentation stopped while plenty of grape sugar remains. They smell of grapes, peach and orange blossom.",
+            "Gavi DOCG, in the south-east near Liguria, is a dry white from Cortese: light, crisp, with citrus and green apple. Wine from the commune of Gavi itself may be labelled Gavi del Comune di Gavi. Alta Langa DOCG is Piemonte's traditional method sparkling wine, from Pinot Nero and Chardonnay."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1396",
+            "it-eupdo-PDO-IT-A1310",
+            "it-eupdo-PDO-IT-A1252"
+          ]
+        }
+      ],
+      "key": [
+        "Nebbiolo buds early, ripens late, and gives pale wines with high acidity and tannin, rose and tar aromas.",
+        "Barolo: at least 38 months with 18 in wood; Riserva 62 months.",
+        "Barbaresco: at least 26 months with 9 in wood; Riserva 50 months.",
+        "La Morra and Barolo give more perfumed wines; Serralunga d'Alba and Monforte d'Alba more structured ones.",
+        "The Langhe lie south of the Tanaro, Roero north; Roero DOCG covers Nebbiolo and Arneis.",
+        "Moscato d'Asti is sweet, frizzante and about 5% alcohol; Gavi is a dry white from Cortese."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the legal minimum ageing for Barolo (not Riserva)?",
+          "options": [
+            "26 months, 9 in wood",
+            "38 months, 18 in wood",
+            "50 months, 9 in wood",
+            "62 months, 24 in wood"
+          ],
+          "answer": 1,
+          "explain": "Barolo needs at least 38 months, 18 of them in wood. 26 months with 9 in wood is the rule for Barbaresco.",
+          "place": "it-eupdo-PDO-IT-A1389"
+        },
+        {
+          "id": "q2",
+          "q": "Which of these communes lies in the Barbaresco zone?",
+          "options": [
+            "Serralunga d'Alba",
+            "La Morra",
+            "Neive",
+            "Monforte d'Alba"
+          ],
+          "answer": 2,
+          "explain": "Barbaresco's communes are Barbaresco, Neive and Treiso. The other three are Barolo communes.",
+          "place": "it-eupdo-PDO-IT-A1399"
+        },
+        {
+          "id": "q3",
+          "q": "Which grape is Gavi made from?",
+          "options": [
+            "Arneis",
+            "Moscato Bianco",
+            "Erbaluce",
+            "Cortese"
+          ],
+          "answer": 3,
+          "explain": "Gavi DOCG is a dry white from Cortese, grown in south-east Piemonte near Liguria.",
+          "place": "it-eupdo-PDO-IT-A1310"
+        },
+        {
+          "id": "q4",
+          "q": "Where does Roero lie in relation to the Langhe?",
+          "options": [
+            "North of the Tanaro river",
+            "South of the Tanaro river",
+            "In the Monferrato hills east of Asti",
+            "In northern Piemonte near Gattinara"
+          ],
+          "answer": 0,
+          "explain": "The Langhe are south of the Tanaro around Alba; Roero is across the river to the north, with sandier soils.",
+          "place": "it-eupdo-PDO-IT-A1261"
+        },
+        {
+          "id": "q5",
+          "q": "Which Barolo communes are known for firmer, more structured wines on older Helvetian soils?",
+          "options": [
+            "La Morra and Barolo",
+            "Serralunga d'Alba and Monforte d'Alba",
+            "Neive and Treiso",
+            "Alba and Asti"
+          ],
+          "answer": 1,
+          "explain": "The eastern communes of Serralunga d'Alba and Monforte d'Alba give structured wines. La Morra and Barolo, on Tortonian marls, are more perfumed.",
+          "place": "it-eupdo-PDO-IT-A1389"
+        },
+        {
+          "id": "q6",
+          "q": "What is the MGA in Barolo and Barbaresco?",
+          "options": [
+            "A system of official named vineyard areas",
+            "The minimum ageing rule for Riserva",
+            "The regional IGT for Piemonte",
+            "A traditional method sparkling style"
+          ],
+          "answer": 0,
+          "explain": "The MGA (Menzioni Geografiche Aggiuntive) are official named vineyard areas, such as Cannubi or Rabajà, that may appear on the label."
+        },
+        {
+          "id": "q7",
+          "q": "Which description fits Moscato d'Asti?",
+          "options": [
+            "Dry, still and high in alcohol",
+            "Fully sparkling and bone dry",
+            "Lightly sparkling, sweet and around 5% alcohol",
+            "Traditional method sparkling from Pinot Nero"
+          ],
+          "answer": 2,
+          "explain": "Moscato d'Asti is frizzante, sweet and low in alcohol. Fully sparkling Asti is the other style of the same DOCG.",
+          "place": "it-eupdo-PDO-IT-A1396"
+        },
+        {
+          "id": "q8",
+          "q": "What is the typical structure of Barbera?",
+          "options": [
+            "Low acidity and high tannin",
+            "Pale colour and high tannin",
+            "Low acidity and pale colour",
+            "High acidity and low tannin"
+          ],
+          "answer": 3,
+          "explain": "Barbera has high acidity, low tannin and deep colour, which is why oak is often used to add structure.",
+          "place": "it-eupdo-PDO-IT-A1398"
+        }
+      ]
+    },
+    {
+      "id": "italy-toscana",
+      "title": "Toscana",
+      "minutes": 8,
+      "intro": "Toscana (Tuscany) is the home of Sangiovese. This lesson covers Chianti and Chianti Classico, the two great Sangiovese DOCGs of the south, Brunello di Montalcino and Vino Nobile di Montepulciano, and the coast of Bolgheri where the Super Tuscans began.",
+      "sections": [
+        {
+          "h": "Sangiovese",
+          "p": [
+            "Sangiovese is Italy's most widely planted red grape. It buds early and ripens late, and gives wines with high acidity and firm tannin, red cherry, plum and dried herb flavours, and earthy, leathery notes with age. It is sensitive to site: in hot places it loses freshness, in cool ones it may not ripen fully.",
+            "Sangiovese has local names. It is Brunello in Montalcino, Prugnolo Gentile in Montepulciano and Morellino in Scansano, in the southern Maremma."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1260"
+          ]
+        },
+        {
+          "h": "Chianti and Chianti Classico",
+          "p": [
+            "Chianti DOCG covers a large area of central Toscana. Its rules ask for at least 70% Sangiovese; a change proposed in 2026 would lower this to 60%. It has subzones that may appear on the label, among them Rufina and Colli Senesi. Chianti Classico is the historic zone between Florence and Siena. It has been a separate DOCG since 1996, and its symbol is the black rooster (Gallo Nero).",
+            "Chianti Classico needs at least 80% Sangiovese, and white grapes are no longer allowed. Riserva must age at least 24 months, including 3 in bottle. Gran Selezione, introduced in 2014, is the top tier: estate-grown grapes, at least 90% Sangiovese since 2023, and at least 30 months of ageing, including 3 in bottle. Eleven village areas, the UGA (Unità Geografiche Aggiuntive), were later approved for Gran Selezione labels."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1228",
+            "it-eupdo-PDO-IT-A1235"
+          ]
+        },
+        {
+          "h": "Brunello di Montalcino and Vino Nobile di Montepulciano",
+          "p": [
+            "Montalcino is a hill town south of Siena, warmer and drier than Chianti Classico. Brunello di Montalcino DOCG is 100% Sangiovese. It may not be released before 1 January of the fifth year after the harvest and must spend at least two years in wood. Riserva is released a year later. Rosso di Montalcino DOC, also 100% Sangiovese, is a fresher, earlier-released wine from the same zone.",
+            "Montepulciano is a hill town east of Montalcino. Vino Nobile di Montepulciano DOCG needs at least 70% Sangiovese, here called Prugnolo Gentile, and at least two years of ageing, three for Riserva. Rosso di Montepulciano DOC is the younger version. The town has nothing to do with the Montepulciano grape, which is grown mainly in Abruzzo."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1199",
+            "it-eupdo-PDO-IT-A1456",
+            "it-eupdo-PDO-IT-A1308",
+            "it-eupdo-PDO-IT-A1458"
+          ]
+        },
+        {
+          "h": "Bolgheri and the coast",
+          "p": [
+            "Sassicaia, a Cabernet Sauvignon-based wine from Tenuta San Guido at Bolgheri on the coast, was first sold with the 1968 vintage, as a simple table wine. Inland, Antinori's Tignanello, first made in 1970, dropped the white grapes then required in Chianti from the 1975 vintage and added Cabernet Sauvignon to Sangiovese. Wines like these did not fit the rules and became known as Super Tuscans.",
+            "Bolgheri later became a DOC, and in 2013 Bolgheri Sassicaia became the first Italian DOC dedicated to a single estate. Bolgheri reds are mostly based on Cabernet Sauvignon, Merlot and Cabernet Franc, grown on the warm coastal plain and low hills, with breezes from the sea."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1348",
+            "it-eupdo-PDO-IT-A1671"
+          ]
+        }
+      ],
+      "key": [
+        "Chianti DOCG needs at least 70% Sangiovese (a 2026 proposal would lower it to 60%); Chianti Classico DOCG at least 80%, and it has been a separate DOCG since 1996.",
+        "Chianti Classico Riserva needs 24 months; Gran Selezione (2014) needs 30 months and estate grapes.",
+        "Brunello di Montalcino is 100% Sangiovese, released no earlier than 1 January of the fifth year after harvest, with at least two years in wood.",
+        "Vino Nobile di Montepulciano needs at least 70% Sangiovese (Prugnolo Gentile); Montepulciano here is a town, not the grape.",
+        "Sassicaia (first vintage 1968) has had its own DOC, Bolgheri Sassicaia, since 2013."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the minimum share of Sangiovese in Chianti Classico?",
+          "options": [
+            "70%",
+            "75%",
+            "80%",
+            "100%"
+          ],
+          "answer": 2,
+          "explain": "Chianti Classico requires at least 80% Sangiovese. Chianti DOCG asks for less.",
+          "place": "it-eupdo-PDO-IT-A1235"
+        },
+        {
+          "id": "q2",
+          "q": "When may Brunello di Montalcino (not Riserva) first be released?",
+          "options": [
+            "1 January of the fifth year after the harvest",
+            "1 September of the year after the harvest",
+            "1 January of the third year after the harvest",
+            "After 18 months in bottle"
+          ],
+          "answer": 0,
+          "explain": "Brunello may not be released before 1 January of the fifth year after the harvest. Riserva waits a further year.",
+          "place": "it-eupdo-PDO-IT-A1199"
+        },
+        {
+          "id": "q3",
+          "q": "What is the minimum ageing for Chianti Classico Gran Selezione?",
+          "options": [
+            "24 months, including 3 in bottle",
+            "30 months, including 3 in bottle",
+            "12 months",
+            "62 months, including 18 in wood"
+          ],
+          "answer": 1,
+          "explain": "Gran Selezione needs at least 30 months, including 3 in bottle. 24 months is the rule for Chianti Classico Riserva.",
+          "place": "it-eupdo-PDO-IT-A1235"
+        },
+        {
+          "id": "q4",
+          "q": "What is Prugnolo Gentile?",
+          "options": [
+            "A white grape used for Vin Santo",
+            "The local name for Sangiovese in Montepulciano",
+            "A clone of Cabernet Sauvignon at Bolgheri",
+            "The Montepulciano grape of Abruzzo"
+          ],
+          "answer": 1,
+          "explain": "In Montepulciano, Sangiovese is called Prugnolo Gentile. The Montepulciano grape of Abruzzo is a different variety.",
+          "place": "it-eupdo-PDO-IT-A1308"
+        },
+        {
+          "id": "q5",
+          "q": "What made Bolgheri Sassicaia DOC notable in 2013?",
+          "options": [
+            "It was the first Italian DOC dedicated to a single estate",
+            "It was the first DOCG in Toscana",
+            "It was the first IGT in Italy",
+            "It was the first DOC for white wine in Toscana"
+          ],
+          "answer": 0,
+          "explain": "Bolgheri Sassicaia was the first Italian DOC for a single estate, Tenuta San Guido.",
+          "place": "it-eupdo-PDO-IT-A1671"
+        },
+        {
+          "id": "q6",
+          "q": "Which symbol identifies Chianti Classico?",
+          "options": [
+            "A red lion",
+            "A white horse",
+            "A golden eagle",
+            "A black rooster"
+          ],
+          "answer": 3,
+          "explain": "The black rooster (Gallo Nero) is the symbol of Chianti Classico.",
+          "place": "it-eupdo-PDO-IT-A1235"
+        },
+        {
+          "id": "q7",
+          "q": "Which grape is Sassicaia mainly made from?",
+          "options": [
+            "Sangiovese",
+            "Merlot",
+            "Syrah",
+            "Cabernet Sauvignon"
+          ],
+          "answer": 3,
+          "explain": "Sassicaia is a Cabernet Sauvignon-based wine from Bolgheri, first sold with the 1968 vintage.",
+          "place": "it-eupdo-PDO-IT-A1671"
+        },
+        {
+          "id": "q8",
+          "q": "Which appellation gives a fresher, earlier-released 100% Sangiovese from the Brunello zone?",
+          "options": [
+            "Rosso di Montepulciano",
+            "Morellino di Scansano",
+            "Rosso di Montalcino",
+            "Bolgheri"
+          ],
+          "answer": 2,
+          "explain": "Rosso di Montalcino DOC comes from the same zone as Brunello and is also 100% Sangiovese.",
+          "place": "it-eupdo-PDO-IT-A1456"
+        }
+      ]
+    },
+    {
+      "id": "italy-veneto",
+      "title": "Veneto",
+      "minutes": 7,
+      "intro": "Veneto, in the north-east around Verona and Venice, makes Valpolicella and Amarone, Soave and Prosecco. This lesson covers the drying of grapes (appassimento), the Valpolicella family of styles, Soave, and the difference between Prosecco DOC and the hill DOCGs.",
+      "sections": [
+        {
+          "h": "Valpolicella and its grapes",
+          "p": [
+            "Valpolicella lies in the hills north of Verona, between Lake Garda and the Lessini mountains. The Classico zone covers the western valleys around Fumane, Marano and Negrar. The main grape is Corvina, with Corvinone and Rondinella. Basic Valpolicella is a light, fresh red with cherry fruit.",
+            "Nearby, on the eastern shore of Lake Garda, Bardolino uses the same grapes for an even lighter red and a rosé called Chiaretto."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0442",
+            "it-eupdo-PDO-IT-A0436"
+          ]
+        },
+        {
+          "h": "Appassimento: Amarone and Recioto",
+          "p": [
+            "Appassimento is the drying of grapes after harvest. Bunches are laid on racks or in crates in airy lofts called fruttai and left for some months. They lose water, so sugar, acid and flavour become concentrated.",
+            "Amarone della Valpolicella DOCG ferments the dried grapes to dryness or near dryness. The wine is full-bodied, with at least 14% alcohol, and flavours of dried cherry, plum, chocolate and spice. Recioto della Valpolicella DOCG is the older, sweet style: fermentation stops while much sugar remains."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0435",
+            "it-eupdo-PDO-IT-A0441"
+          ]
+        },
+        {
+          "h": "Ripasso",
+          "p": [
+            "Valpolicella Ripasso DOC sits between basic Valpolicella and Amarone. Young Valpolicella is passed over (ripassato) the pomace, the skins left after Amarone or Recioto has fermented, and goes through a short second fermentation. This adds alcohol, body, colour and tannin, and gives a richer wine at a lower price than Amarone."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0446"
+          ]
+        },
+        {
+          "h": "Soave",
+          "p": [
+            "Soave lies east of Verona. The main grape is Garganega, at least 70% of the blend, with Trebbiano di Soave or Chardonnay as partners. The Classico zone, in the hills around Soave and Monteforte d'Alpone, has volcanic basalt and limestone soils and gives more concentrated wines than the flatter land to the south. Good Soave shows almond, pear and citrus.",
+            "Soave Superiore DOCG is a separate, stricter appellation. Recioto di Soave DOCG is a sweet wine from dried Garganega."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0472",
+            "it-eupdo-PDO-IT-A0473",
+            "it-eupdo-PDO-IT-A0465"
+          ]
+        },
+        {
+          "h": "Prosecco DOC and the DOCGs",
+          "p": [
+            "Prosecco is made mainly from Glera, almost always by the tank method, which keeps fresh pear, apple and white flower aromas. Prosecco DOC, created in 2009, is a large area across nine provinces of Veneto and Friuli Venezia Giulia. The two DOCGs are smaller hill zones: Conegliano Valdobbiadene Prosecco Superiore and Asolo Prosecco (Colli Asolani).",
+            "Within Conegliano Valdobbiadene, Rive marks wine from a single commune or village area, and Superiore di Cartizze comes from a small, famous hill near Valdobbiadene. Sweetness terms can confuse: Extra Dry is sweeter than Brut, and Dry is sweeter still."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0516",
+            "it-eupdo-PDO-IT-A0515",
+            "it-eupdo-PDO-IT-A0514"
+          ]
+        }
+      ],
+      "key": [
+        "Corvina is the main grape of Valpolicella, with Corvinone and Rondinella.",
+        "Appassimento dries grapes for some months after harvest to concentrate sugar and flavour.",
+        "Amarone is dry with at least 14% alcohol; Recioto is sweet; both are DOCG.",
+        "Ripasso is Valpolicella refermented on Amarone or Recioto pomace.",
+        "Soave is at least 70% Garganega; the Classico hills have volcanic and limestone soils.",
+        "Prosecco is Glera, mostly tank method; the DOC dates from 2009, the DOCGs are Conegliano Valdobbiadene and Asolo."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which is the main grape of Valpolicella?",
+          "options": [
+            "Garganega",
+            "Corvina",
+            "Glera",
+            "Lagrein"
+          ],
+          "answer": 1,
+          "explain": "Corvina is the main grape, blended with Corvinone and Rondinella.",
+          "place": "it-eupdo-PDO-IT-A0442"
+        },
+        {
+          "id": "q2",
+          "q": "What is appassimento?",
+          "options": [
+            "Fermenting whole bunches under carbon dioxide",
+            "Ageing wine under a layer of yeast",
+            "Drying grapes after harvest to concentrate sugar and flavour",
+            "Adding grape spirit to stop fermentation"
+          ],
+          "answer": 2,
+          "explain": "Appassimento dries the grapes in airy lofts for some months, concentrating sugar, acid and flavour."
+        },
+        {
+          "id": "q3",
+          "q": "How does Amarone differ from Recioto della Valpolicella?",
+          "options": [
+            "Amarone is dry, Recioto is sweet",
+            "Amarone is sweet, Recioto is dry",
+            "Amarone is white, Recioto is red",
+            "Amarone uses fresh grapes, Recioto uses dried grapes"
+          ],
+          "answer": 0,
+          "explain": "Both use dried grapes. Amarone ferments to dryness or near dryness; Recioto stops fermentation with much sugar left.",
+          "place": "it-eupdo-PDO-IT-A0435"
+        },
+        {
+          "id": "q4",
+          "q": "How is Valpolicella Ripasso made?",
+          "options": [
+            "By blending Valpolicella with finished Amarone",
+            "By drying grapes on the vine",
+            "By ageing in new barrique for three years",
+            "By refermenting Valpolicella on the pomace left from Amarone or Recioto"
+          ],
+          "answer": 3,
+          "explain": "Young Valpolicella is passed over Amarone or Recioto skins and goes through a short second fermentation.",
+          "place": "it-eupdo-PDO-IT-A0446"
+        },
+        {
+          "id": "q5",
+          "q": "Which grape must make up at least 70% of Soave?",
+          "options": [
+            "Trebbiano di Soave",
+            "Chardonnay",
+            "Garganega",
+            "Glera"
+          ],
+          "answer": 2,
+          "explain": "Soave is at least 70% Garganega, with Trebbiano di Soave or Chardonnay as partners.",
+          "place": "it-eupdo-PDO-IT-A0472"
+        },
+        {
+          "id": "q6",
+          "q": "Which Prosecco sweetness term is sweeter than Brut?",
+          "options": [
+            "Extra Dry",
+            "Extra Brut",
+            "Brut Nature",
+            "Pas Dosé"
+          ],
+          "answer": 0,
+          "explain": "Extra Dry is sweeter than Brut, and Dry is sweeter still. The other three terms are drier than Brut."
+        },
+        {
+          "id": "q7",
+          "q": "Which of these is a Prosecco DOCG?",
+          "options": [
+            "Delle Venezie",
+            "Conegliano Valdobbiadene Prosecco Superiore",
+            "Lison-Pramaggiore",
+            "Piave"
+          ],
+          "answer": 1,
+          "explain": "Conegliano Valdobbiadene Prosecco Superiore and Asolo Prosecco are the two hill DOCGs. The large Prosecco DOC sits below them.",
+          "place": "it-eupdo-PDO-IT-A0515"
+        },
+        {
+          "id": "q8",
+          "q": "What is the minimum alcohol for Amarone della Valpolicella?",
+          "options": [
+            "11%",
+            "12.5%",
+            "13%",
+            "14%"
+          ],
+          "answer": 3,
+          "explain": "Amarone must reach at least 14% alcohol, reflecting the concentrated sugar of dried grapes.",
+          "place": "it-eupdo-PDO-IT-A0435"
+        }
+      ]
+    },
+    {
+      "id": "italy-north-east",
+      "title": "The north-east: Alto Adige, Trentino and Friuli",
+      "minutes": 7,
+      "intro": "Italy's north-east, from the Alpine valleys of Alto Adige and Trentino to the hills of Friuli on the Slovenian border, makes many of Italy's best whites. This lesson covers the climate, grapes and key appellations of each area.",
+      "sections": [
+        {
+          "h": "Alto Adige",
+          "p": [
+            "Alto Adige, Südtirol in German, is Italy's northernmost wine region, around Bolzano in the Adige valley. It was part of Austria until after the First World War, so most people speak German and labels are often bilingual. Vineyards climb steep slopes above the valley floor. Strong sunshine, warm days and cool nights give ripe fruit with fresh acidity. Cooperative wineries make a large share of the wine.",
+            "Whites include Pinot Grigio, Pinot Bianco, Sauvignon Blanc, Chardonnay and Gewürztraminer, which is said to take its name from the village of Tramin (Termeno). Reds include Schiava (Vernatsch), which gives light, pale reds, the deeper Lagrein, and Pinot Nero. Lago di Caldaro (Kalterersee) DOC is a Schiava-based red."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0293",
+            "it-eupdo-PDO-IT-A0294"
+          ]
+        },
+        {
+          "h": "Trentino",
+          "p": [
+            "Trentino lies south of Alto Adige in the same Adige valley, but is Italian-speaking and a little warmer. Trento DOC is a traditional method sparkling wine, mainly from Chardonnay, with Pinot Nero, Pinot Bianco and Pinot Meunier also allowed. It is marketed as Trentodoc.",
+            "Teroldego Rotaliano DOC is a deep-coloured red from the Teroldego grape, grown on the Campo Rotaliano, a flat gravel plain north of Trento."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0754",
+            "it-eupdo-PDO-IT-A0752",
+            "it-eupdo-PDO-IT-A0749"
+          ]
+        },
+        {
+          "h": "Friuli: Colli Orientali and Collio",
+          "p": [
+            "Friuli Venezia Giulia lies in the far north-east, between the Alps and the Adriatic, on the border with Slovenia. The best hill sites are Friuli Colli Orientali, east of Udine, and Collio (Collio Goriziano) near Gorizia, which continues across the border as Brda in Slovenia. Their soil, called ponca, is layered marl and sandstone. The Alps shelter the hills from the north and the sea moderates temperatures.",
+            "Friulano is the signature white grape. It was called Tocai Friulano until an EU ruling protecting Hungary's Tokaji forced a new name from 2007. Ribolla Gialla is another native white. Collio producers such as Gravner and Radikon led the revival of skin-contact white, or orange, wines. On the flat plain, Friuli Grave makes larger volumes of lighter wine."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0953",
+            "it-eupdo-PDO-IT-A0908",
+            "it-eupdo-PDO-IT-A0954"
+          ]
+        },
+        {
+          "h": "Friuli's native specialities",
+          "p": [
+            "Picolit is a white grape that sets few berries per bunch, which makes it scarce. It gives sweet wines, often from dried grapes, with their own DOCG, Colli Orientali del Friuli Picolit. Ramandolo DOCG is a sweet white from Verduzzo, grown in the north of the Colli Orientali. Rosazzo DOCG is a dry white blend based on Friulano.",
+            "Native red grapes include Refosco dal Peduncolo Rosso, Schioppettino and Pignolo."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0938",
+            "it-eupdo-PDO-IT-A0939",
+            "it-eupdo-PDO-IT-A0367"
+          ]
+        }
+      ],
+      "key": [
+        "Alto Adige (Südtirol) is bilingual and Alpine, with sunny days and cool nights; cooperatives matter.",
+        "Schiava (Vernatsch) gives light reds, Lagrein deeper ones; Lago di Caldaro is Schiava-based.",
+        "Trento DOC is traditional method sparkling, mainly Chardonnay.",
+        "Teroldego Rotaliano is a deep red from the Campo Rotaliano gravel plain.",
+        "Friuli Colli Orientali and Collio are hill zones on ponca soils by the Slovenian border.",
+        "Friulano was Tocai Friulano until 2007; Picolit and Ramandolo (Verduzzo) are sweet DOCGs."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is Alto Adige called in German?",
+          "options": [
+            "Wachau",
+            "Südtirol",
+            "Steiermark",
+            "Franken"
+          ],
+          "answer": 1,
+          "explain": "Alto Adige is Südtirol in German. The region was Austrian until after the First World War and is largely German-speaking.",
+          "place": "it-eupdo-PDO-IT-A0293"
+        },
+        {
+          "id": "q2",
+          "q": "Which red grape gives the light, pale reds of Lago di Caldaro?",
+          "options": [
+            "Lagrein",
+            "Teroldego",
+            "Schiava",
+            "Refosco dal Peduncolo Rosso"
+          ],
+          "answer": 2,
+          "explain": "Schiava (Vernatsch) makes light, pale reds, including Lago di Caldaro. Lagrein and Teroldego give deeper wines.",
+          "place": "it-eupdo-PDO-IT-A0294"
+        },
+        {
+          "id": "q3",
+          "q": "Which grape is the main base of Trento DOC sparkling wine?",
+          "options": [
+            "Chardonnay",
+            "Garganega",
+            "Glera",
+            "Ribolla Gialla"
+          ],
+          "answer": 0,
+          "explain": "Trento DOC is traditional method sparkling wine made mainly from Chardonnay.",
+          "place": "it-eupdo-PDO-IT-A0752"
+        },
+        {
+          "id": "q4",
+          "q": "What is ponca?",
+          "options": [
+            "A sweet wine from dried grapes",
+            "A type of cooperative winery",
+            "A cold wind from the Alps",
+            "The layered marl and sandstone soil of Collio and Colli Orientali"
+          ],
+          "answer": 3,
+          "explain": "Ponca is the layered marl and sandstone soil of Friuli's best hill sites.",
+          "place": "it-eupdo-PDO-IT-A0908"
+        },
+        {
+          "id": "q5",
+          "q": "What was Friulano called before 2007?",
+          "options": [
+            "Ribolla",
+            "Tocai Friulano",
+            "Verduzzo",
+            "Picolit"
+          ],
+          "answer": 1,
+          "explain": "An EU ruling protecting Hungary's Tokaji ended the use of the name Tocai Friulano from 2007."
+        },
+        {
+          "id": "q6",
+          "q": "Which grape makes Ramandolo DOCG?",
+          "options": [
+            "Verduzzo",
+            "Picolit",
+            "Friulano",
+            "Schioppettino"
+          ],
+          "answer": 0,
+          "explain": "Ramandolo is a sweet white from Verduzzo, grown in the north of the Colli Orientali.",
+          "place": "it-eupdo-PDO-IT-A0939"
+        },
+        {
+          "id": "q7",
+          "q": "Where is Teroldego Rotaliano grown?",
+          "options": [
+            "On steep terraces above Bolzano",
+            "In the Collio hills near Gorizia",
+            "On the Campo Rotaliano, a gravel plain north of Trento",
+            "On the flat Grave plain of Friuli"
+          ],
+          "answer": 2,
+          "explain": "Teroldego Rotaliano comes from the Campo Rotaliano, a flat gravel plain north of Trento.",
+          "place": "it-eupdo-PDO-IT-A0749"
+        },
+        {
+          "id": "q8",
+          "q": "Why is Picolit wine scarce?",
+          "options": [
+            "It is grown only in Trentino",
+            "It may only be sold as Riserva",
+            "It ripens too early in Friuli",
+            "The vine sets few berries per bunch"
+          ],
+          "answer": 3,
+          "explain": "Picolit sets few berries per bunch, so yields are tiny. It makes sweet wines with their own DOCG.",
+          "place": "it-eupdo-PDO-IT-A0938"
+        }
+      ]
+    },
+    {
+      "id": "italy-south-islands",
+      "title": "The south and the islands",
+      "minutes": 8,
+      "intro": "Southern Italy and the islands are warm and sunny, and quality comes from altitude, volcanic soils and old native grapes. This lesson covers Campania's Taurasi, Fiano and Greco, Sicily's Etna and Nero d'Avola, Primitivo in Puglia and Cannonau in Sardegna.",
+      "sections": [
+        {
+          "h": "Campania: Taurasi and Aglianico",
+          "p": [
+            "Irpinia, the hilly inland area around Avellino in Campania, is cooler than its latitude suggests, with vineyards at altitude and volcanic soils. Its great red is Taurasi DOCG, made from at least 85% Aglianico. In 1993 it became the first DOCG of southern Italy.",
+            "Aglianico ripens late, often in late October or November, and gives deep-coloured wines with high acidity and high tannin, black fruit, and earthy, smoky notes with age. Taurasi must age at least three years, one of them in wood. Riserva needs four years, eighteen months of them in wood. Aglianico del Taburno DOCG, in the province of Benevento, is another Campanian Aglianico."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0237",
+            "it-eupdo-PDO-IT-A0279",
+            "it-eupdo-PDO-IT-A0277"
+          ]
+        },
+        {
+          "h": "Campania's white DOCGs: Fiano and Greco",
+          "p": [
+            "Two white DOCGs come from the same Irpinia hills. Fiano di Avellino makes medium-bodied whites with pear, hazelnut and honeyed notes that can age well. Greco di Tufo takes its name from the Greco grape and the village of Tufo; its wines are firmer, with high acidity and a mineral character. The Mastroberardino family did much to save these grapes after the Second World War."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0232",
+            "it-eupdo-PDO-IT-A0236"
+          ]
+        },
+        {
+          "h": "Sicilia: Etna",
+          "p": [
+            "Etna DOC, created in 1968, was the first DOC in Sicilia (Sicily). Vineyards on the slopes of the volcano rise to around 1,000 metres, far higher than most Sicilian vineyards, on black volcanic soils. Old bush vines (alberello) are common. Single districts called contrade may appear on the label.",
+            "The red grape is Nerello Mascalese, often with Nerello Cappuccio. It gives pale, high-acid reds with firm tannin, often compared to Pinot Noir or Nebbiolo. The white grape is Carricante, and Etna Bianco Superiore comes from the commune of Milo on the eastern slope."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0780"
+          ]
+        },
+        {
+          "h": "Sicilia beyond Etna",
+          "p": [
+            "Nero d'Avola, named after the town of Avola in the south-east, is Sicily's most important red grape. It gives deep-coloured reds with ripe dark fruit and good acidity. Sicily's only DOCG, Cerasuolo di Vittoria, blends Nero d'Avola with the lighter, fragrant Frappato. Sicilia DOC covers the whole island.",
+            "Marsala, in the west, is a fortified wine. The island of Pantelleria makes sweet wines from Zibibbo (Muscat of Alexandria), often from dried grapes."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0773",
+            "it-eupdo-PDO-IT-A0801",
+            "it-eupdo-PDO-IT-A0785",
+            "it-eupdo-PDO-IT-A0792"
+          ]
+        },
+        {
+          "h": "Puglia and Sardegna",
+          "p": [
+            "Puglia, the heel of Italy, is largely flat, hot and sunny. Primitivo gives ripe, high-alcohol reds with jammy black fruit, notably in Primitivo di Manduria and Gioia del Colle. DNA studies show it is the same variety as Zinfandel in California and Tribidrag (Crljenak Kaštelanski) in Croatia. Negroamaro is the other key red, mostly in the Salento peninsula.",
+            "In Sardegna (Sardinia), Cannonau is the main red grape. It is the same variety as Grenache (Garnacha in Spain) and makes warm, full-bodied reds under Cannonau di Sardegna DOC. The leading white is Vermentino, and Vermentino di Gallura in the north-east is the island's only DOCG."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0565",
+            "it-eupdo-PDO-IT-A0549",
+            "it-eupdo-PDO-IT-A1099",
+            "it-eupdo-PDO-IT-A0903"
+          ]
+        }
+      ],
+      "key": [
+        "Taurasi: at least 85% Aglianico, the first DOCG of southern Italy (1993); at least 3 years ageing, 4 for Riserva.",
+        "Fiano di Avellino and Greco di Tufo are the white DOCGs of Irpinia.",
+        "Etna DOC (1968): Nerello Mascalese reds and Carricante whites from high volcanic slopes.",
+        "Cerasuolo di Vittoria, Sicily's only DOCG, blends Nero d'Avola and Frappato.",
+        "Primitivo is the same variety as Zinfandel; Cannonau is the same as Grenache."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape is the main variety of Taurasi?",
+          "options": [
+            "Nerello Mascalese",
+            "Aglianico",
+            "Primitivo",
+            "Negroamaro"
+          ],
+          "answer": 1,
+          "explain": "Taurasi DOCG is made from at least 85% Aglianico.",
+          "place": "it-eupdo-PDO-IT-A0237"
+        },
+        {
+          "id": "q2",
+          "q": "What is the minimum ageing for Taurasi (not Riserva)?",
+          "options": [
+            "One year",
+            "Two years, none required in wood",
+            "Three years, one of them in wood",
+            "Five years, three of them in wood"
+          ],
+          "answer": 2,
+          "explain": "Taurasi needs at least three years, one in wood. Riserva needs four years, eighteen months in wood.",
+          "place": "it-eupdo-PDO-IT-A0237"
+        },
+        {
+          "id": "q3",
+          "q": "Greco di Tufo takes its name from the Greco grape and from what?",
+          "options": [
+            "A family of producers",
+            "A river in Puglia",
+            "A volcano in Sicilia",
+            "A village in Irpinia"
+          ],
+          "answer": 3,
+          "explain": "Tufo is a village in the Irpinia hills of Campania.",
+          "place": "it-eupdo-PDO-IT-A0236"
+        },
+        {
+          "id": "q4",
+          "q": "Which is the main red grape of Etna?",
+          "options": [
+            "Nerello Mascalese",
+            "Nero d'Avola",
+            "Frappato",
+            "Cannonau"
+          ],
+          "answer": 0,
+          "explain": "Etna reds are based on Nerello Mascalese, often with Nerello Cappuccio.",
+          "place": "it-eupdo-PDO-IT-A0780"
+        },
+        {
+          "id": "q5",
+          "q": "Which is the only DOCG in Sicilia?",
+          "options": [
+            "Etna",
+            "Marsala",
+            "Cerasuolo di Vittoria",
+            "Sicilia"
+          ],
+          "answer": 2,
+          "explain": "Cerasuolo di Vittoria, a blend of Nero d'Avola and Frappato, is Sicily's only DOCG. Etna, Marsala and Sicilia are DOCs.",
+          "place": "it-eupdo-PDO-IT-A0773"
+        },
+        {
+          "id": "q6",
+          "q": "Primitivo is the same variety as which grape?",
+          "options": [
+            "Grenache",
+            "Zinfandel",
+            "Syrah",
+            "Tempranillo"
+          ],
+          "answer": 1,
+          "explain": "DNA studies show Primitivo, Zinfandel and Tribidrag are the same variety."
+        },
+        {
+          "id": "q7",
+          "q": "Cannonau, the main red grape of Sardegna, is the same variety as which grape?",
+          "options": [
+            "Grenache",
+            "Carignan",
+            "Mourvèdre",
+            "Cinsault"
+          ],
+          "answer": 0,
+          "explain": "Cannonau is Grenache, known as Garnacha in Spain.",
+          "place": "it-eupdo-PDO-IT-A1099"
+        },
+        {
+          "id": "q8",
+          "q": "Which white grape is used for Etna Bianco?",
+          "options": [
+            "Fiano",
+            "Grillo",
+            "Vermentino",
+            "Carricante"
+          ],
+          "answer": 3,
+          "explain": "Carricante is the white grape of Etna. Etna Bianco Superiore comes from Milo on the eastern slope.",
+          "place": "it-eupdo-PDO-IT-A0780"
+        }
+      ]
+    }
+  ]
+}

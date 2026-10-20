@@ -1,0 +1,190 @@
+"""One-off: translations for the study section (web/study.js) and the notebook and account texts added in October 2026.
+
+Merges into web/i18n/<lang>.json without touching existing entries. Safe to rerun.
+Order of each list: fr, it, de, es, pt, nl, ja, zh, ko.
+"""
+import json
+import os
+
+I18N = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "web", "i18n")
+LANGS = ["fr", "it", "de", "es", "pt", "nl", "ja", "zh", "ko"]
+
+T = {
+    # My atlas, notebook, account
+    "Account": ["Compte", "Account", "Konto", "Cuenta", "Conta", "Account", "アカウント", "账户", "계정"],
+    "Add a note": ["Ajouter une note", "Aggiungi una nota", "Notiz hinzufügen", "Añadir una nota", "Adicionar uma nota", "Notitie toevoegen", "メモを追加", "添加笔记", "메모 추가"],
+    "Become a Founding Member": ["Devenir membre fondateur", "Diventa Founding Member", "Gründungsmitglied werden", "Hazte miembro fundador", "Torne-se membro fundador", "Word Founding Member", "創設メンバーになる", "成为创始会员", "창립 회원 되기"],
+    "Chablis grand crus: soils and exposures": ["Grands crus de Chablis : sols et expositions", "Grand cru di Chablis: suoli ed esposizioni", "Chablis Grands Crus: Böden und Lagen", "Grands crus de Chablis: suelos y orientaciones", "Grands crus de Chablis: solos e exposições", "Chablis grands crus: bodems en ligging", "シャブリのグラン・クリュ：土壌と向き", "夏布利特级园：土壤与朝向", "샤블리 그랑 크뤼: 토양과 방향"],
+    "Click again to delete": ["Cliquez encore pour supprimer", "Clicca di nuovo per eliminare", "Zum Löschen erneut klicken", "Vuelve a pulsar para borrar", "Clique de novo para apagar", "Klik nogmaals om te verwijderen", "もう一度クリックで削除", "再次点击以删除", "한 번 더 누르면 삭제"],
+    "Edited {date}": ["Modifiée le {date}", "Modificata il {date}", "Bearbeitet am {date}", "Editada el {date}", "Editada em {date}", "Bewerkt op {date}", "{date} に編集", "编辑于 {date}", "{date} 수정"],
+    "Everything here is synced to your account.": ["Tout ici est synchronisé avec votre compte.", "Tutto qui è sincronizzato con il tuo account.", "Alles hier ist mit Ihrem Konto synchronisiert.", "Todo lo de aquí se sincroniza con tu cuenta.", "Tudo aqui está sincronizado com a sua conta.", "Alles hier is gesynchroniseerd met je account.", "ここにあるものはすべてアカウントと同期されています。", "这里的一切都已同步到你的账户。", "여기 있는 모든 것이 계정과 동기화됩니다."],
+    "Everything here stays on this device.": ["Tout ici reste sur cet appareil.", "Tutto qui resta su questo dispositivo.", "Alles hier bleibt auf diesem Gerät.", "Todo lo de aquí se queda en este dispositivo.", "Tudo aqui fica neste dispositivo.", "Alles hier blijft op dit apparaat.", "ここにあるものはすべてこの端末に残ります。", "这里的一切都只保存在本设备上。", "여기 있는 모든 것은 이 기기에만 남습니다."],
+    "New note": ["Nouvelle note", "Nuova nota", "Neue Notiz", "Nueva nota", "Nova nota", "Nieuwe notitie", "新しいメモ", "新笔记", "새 메모"],
+    "No notes match.": ["Aucune note ne correspond.", "Nessuna nota corrisponde.", "Keine passende Notiz.", "Ninguna nota coincide.", "Nenhuma nota corresponde.", "Geen notities gevonden.", "一致するメモはありません。", "没有匹配的笔记。", "일치하는 메모가 없습니다."],
+    "No notes yet. Write about a region, a cru, a producer or a wine. Pin a note to a place and it shows on the map.": [
+        "Aucune note pour l'instant. Écrivez sur une région, un cru, un producteur ou un vin. Épinglez une note à un lieu et elle apparaît sur la carte.",
+        "Ancora nessuna nota. Scrivi di una regione, un cru, un produttore o un vino. Collega una nota a un luogo e apparirà sulla mappa.",
+        "Noch keine Notizen. Schreiben Sie über eine Region, eine Lage, einen Erzeuger oder einen Wein. Heften Sie eine Notiz an einen Ort, dann erscheint sie auf der Karte.",
+        "Aún no hay notas. Escribe sobre una región, un cru, un productor o un vino. Fija una nota a un lugar y aparecerá en el mapa.",
+        "Ainda não há notas. Escreva sobre uma região, um cru, um produtor ou um vinho. Fixe uma nota a um lugar e ela aparece no mapa.",
+        "Nog geen notities. Schrijf over een streek, een cru, een producent of een wijn. Koppel een notitie aan een plek en ze verschijnt op de kaart.",
+        "まだメモはありません。産地、クリュ、生産者、ワインについて書きましょう。場所に結びつけたメモは地図に表示されます。",
+        "还没有笔记。写下关于产区、园、生产商或某款酒的内容。把笔记钉到一个地点，它就会显示在地图上。",
+        "아직 메모가 없습니다. 산지, 크뤼, 생산자, 와인에 대해 써 보세요. 메모를 장소에 고정하면 지도에 나타납니다."],
+    "Note": ["Note", "Nota", "Notiz", "Nota", "Nota", "Notitie", "メモ", "笔记", "메모"],
+    "Note deleted.": ["Note supprimée.", "Nota eliminata.", "Notiz gelöscht.", "Nota borrada.", "Nota apagada.", "Notitie verwijderd.", "メモを削除しました。", "笔记已删除。", "메모를 삭제했습니다."],
+    "Note saved.": ["Note enregistrée.", "Nota salvata.", "Notiz gespeichert.", "Nota guardada.", "Nota guardada.", "Notitie opgeslagen.", "メモを保存しました。", "笔记已保存。", "메모를 저장했습니다."],
+    "Notebook": ["Carnet", "Taccuino", "Notizbuch", "Cuaderno", "Caderno", "Notitieboek", "ノート", "笔记本", "노트"],
+    "notes": ["notes", "note", "Notizen", "notas", "notas", "notities", "メモ", "笔记", "메모"],
+    "Pin it to a place: Les Clos, Barolo…": ["L'épingler à un lieu : Les Clos, Barolo…", "Collegala a un luogo: Les Clos, Barolo…", "An einen Ort heften: Les Clos, Barolo…", "Fíjala a un lugar: Les Clos, Barolo…", "Fixe-a a um lugar: Les Clos, Barolo…", "Koppel aan een plek: Les Clos, Barolo…", "場所に結びつける：Les Clos、Barolo…", "钉到地点：Les Clos、Barolo…", "장소에 고정: Les Clos, Barolo…"],
+    "Place (optional)": ["Lieu (facultatif)", "Luogo (facoltativo)", "Ort (optional)", "Lugar (opcional)", "Lugar (opcional)", "Plek (optioneel)", "場所（任意）", "地点（可选）", "장소(선택)"],
+    "Reserve a spot": ["Réserver une place", "Riserva un posto", "Platz reservieren", "Reservar una plaza", "Reservar um lugar", "Plek reserveren", "枠を予約", "预留名额", "자리 예약"],
+    "Save note": ["Enregistrer la note", "Salva la nota", "Notiz speichern", "Guardar nota", "Guardar nota", "Notitie opslaan", "メモを保存", "保存笔记", "메모 저장"],
+    "Search your notes": ["Chercher dans vos notes", "Cerca nelle tue note", "Notizen durchsuchen", "Buscar en tus notas", "Pesquisar nas suas notas", "Zoek in je notities", "メモを検索", "搜索笔记", "메모 검색"],
+    "Study tools for wine students are coming. The first 1,000 members get a full year for CHF 19.": [
+        "Des outils d'étude pour les étudiants en vin arrivent. Les 1 000 premiers membres ont une année entière pour 19 CHF.",
+        "Arrivano strumenti di studio per chi studia il vino. I primi 1.000 membri hanno un anno intero a 19 CHF.",
+        "Lernwerkzeuge für Weinstudierende kommen. Die ersten 1'000 Mitglieder erhalten ein ganzes Jahr für CHF 19.",
+        "Llegan herramientas de estudio para estudiantes de vino. Los 1.000 primeros miembros tienen un año entero por 19 CHF.",
+        "Estão a chegar ferramentas de estudo para estudantes de vinho. Os primeiros 1.000 membros têm um ano inteiro por 19 CHF.",
+        "Er komen studietools voor wijnstudenten. De eerste 1.000 leden krijgen een heel jaar voor CHF 19.",
+        "ワインを学ぶ人のための学習ツールが登場します。最初の1,000人のメンバーは1年間19スイスフランです。",
+        "面向葡萄酒学习者的学习工具即将推出。前1,000名会员一整年只需19瑞士法郎。",
+        "와인을 공부하는 사람을 위한 학습 도구가 곧 나옵니다. 첫 1,000명의 회원은 1년에 19스위스 프랑입니다."],
+    "Tags": ["Étiquettes", "Tag", "Schlagwörter", "Etiquetas", "Etiquetas", "Tags", "タグ", "标签", "태그"],
+    "Title": ["Titre", "Titolo", "Titel", "Título", "Título", "Titel", "タイトル", "标题", "제목"],
+    "Untitled note": ["Note sans titre", "Nota senza titolo", "Notiz ohne Titel", "Nota sin título", "Nota sem título", "Notitie zonder titel", "無題のメモ", "无标题笔记", "제목 없는 메모"],
+    "What you learned, what to remember, what to taste next": ["Ce que vous avez appris, ce qu'il faut retenir, ce qu'il faut goûter ensuite", "Cosa hai imparato, cosa ricordare, cosa assaggiare dopo", "Was Sie gelernt haben, was Sie sich merken wollen, was Sie als Nächstes probieren", "Lo que aprendiste, lo que recordar, lo que probar después", "O que aprendeu, o que lembrar, o que provar a seguir", "Wat je leerde, wat je wilt onthouden, wat je hierna wilt proeven", "学んだこと、覚えておくこと、次に味わうもの", "学到了什么，要记住什么，接下来品尝什么", "배운 것, 기억할 것, 다음에 맛볼 것"],
+    "Write a title or a note first.": ["Écrivez d'abord un titre ou une note.", "Scrivi prima un titolo o una nota.", "Schreiben Sie zuerst einen Titel oder eine Notiz.", "Escribe primero un título o una nota.", "Escreva primeiro um título ou uma nota.", "Schrijf eerst een titel of een notitie.", "先にタイトルかメモを書いてください。", "请先写标题或内容。", "먼저 제목이나 메모를 쓰세요."],
+    "wset3, burgundy, to taste": ["wset3, bourgogne, à goûter", "wset3, borgogna, da assaggiare", "wset3, burgund, probieren", "wset3, borgoña, por probar", "wset3, borgonha, para provar", "wset3, bourgogne, proeven", "wset3、ブルゴーニュ、試飲予定", "wset3、勃艮第、待品尝", "wset3, 부르고뉴, 시음 예정"],
+    "Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register.": [
+        "Votre coin de l'atlas. Enregistrez des lieux, notez vos dégustations, comparez des vignobles côte à côte et explorez chaque appellation du registre.",
+        "Il tuo angolo dell'atlante. Salva luoghi, annota le degustazioni, confronta vigneti fianco a fianco ed esplora ogni denominazione del registro.",
+        "Ihre Ecke des Atlas. Orte speichern, Verkostungen festhalten, Weinberge nebeneinander vergleichen und jede Appellation im Register erkunden.",
+        "Tu rincón del atlas. Guarda lugares, anota lo que catas, compara viñedos lado a lado y explora cada denominación del registro.",
+        "O seu canto do atlas. Guarde lugares, registe o que prova, compare vinhas lado a lado e explore cada denominação do registo.",
+        "Jouw hoek van de atlas. Bewaar plekken, noteer wat je proeft, vergelijk wijngaarden naast elkaar en verken elke herkomstbenaming in het register.",
+        "あなただけのアトラス。場所を保存し、テイスティングを記録し、畑を並べて比べ、登録されたすべてのアペラシオンを探りましょう。",
+        "你的地图角落。保存地点，记录品鉴，并排比较葡萄园，浏览登记册中的每个产区。",
+        "나만의 아틀라스. 장소를 저장하고, 시음을 기록하고, 포도밭을 나란히 비교하고, 등록된 모든 아펠라시옹을 살펴보세요."],
+    # study
+    "Study": ["Étudier", "Studio", "Lernen", "Estudiar", "Estudar", "Studeren", "学習", "学习", "학습"],
+    "Study and quiz": ["Étudier et quiz", "Studio e quiz", "Lernen und Quiz", "Estudio y quiz", "Estudo e quiz", "Studeren en quiz", "学習とクイズ", "学习与测验", "학습과 퀴즈"],
+    "All paths": ["Tous les parcours", "Tutti i percorsi", "Alle Lernpfade", "Todos los itinerarios", "Todos os percursos", "Alle leerpaden", "すべてのコース", "全部路线", "모든 과정"],
+    "Back to Study": ["Retour à Étudier", "Torna allo studio", "Zurück zum Lernen", "Volver a Estudiar", "Voltar a Estudar", "Terug naar Studeren", "学習に戻る", "返回学习", "학습으로 돌아가기"],
+    "Close the quiz": ["Fermer le quiz", "Chiudi il quiz", "Quiz schließen", "Cerrar el quiz", "Fechar o quiz", "Quiz sluiten", "クイズを閉じる", "关闭测验", "퀴즈 닫기"],
+    "day in a row": ["jour d'affilée", "giorno di fila", "Tag in Folge", "día seguido", "dia seguido", "dag op rij", "日連続", "天连续", "일 연속"],
+    "days in a row": ["jours d'affilée", "giorni di fila", "Tage in Folge", "días seguidos", "dias seguidos", "dagen op rij", "日連続", "天连续", "일 연속"],
+    "done": ["fait", "fatto", "erledigt", "hecho", "feito", "klaar", "完了", "已完成", "완료"],
+    "Every question you answer becomes a card here.": ["Chaque question à laquelle vous répondez devient ici une carte.", "Ogni domanda a cui rispondi diventa qui una scheda.", "Jede beantwortete Frage wird hier zu einer Karte.", "Cada pregunta que respondes se convierte aquí en una tarjeta.", "Cada pergunta que responde torna-se aqui um cartão.", "Elke vraag die je beantwoordt wordt hier een kaart.", "答えた問題はすべてここでカードになります。", "你回答的每道题都会在这里变成一张卡片。", "답한 모든 문제가 여기서 카드가 됩니다."],
+    "Excellent.": ["Excellent.", "Eccellente.", "Ausgezeichnet.", "Excelente.", "Excelente.", "Uitstekend.", "素晴らしい。", "非常好。", "훌륭합니다."],
+    "Find {name} on the map.": ["Trouvez {name} sur la carte.", "Trova {name} sulla mappa.", "Finden Sie {name} auf der Karte.", "Encuentra {name} en el mapa.", "Encontre {name} no mapa.", "Zoek {name} op de kaart.", "地図で{name}を見つけてください。", "在地图上找到{name}。", "지도에서 {name}을(를) 찾으세요."],
+    "free questions left today": ["questions gratuites restantes aujourd'hui", "domande gratuite rimaste oggi", "kostenlose Fragen heute übrig", "preguntas gratis que quedan hoy", "perguntas grátis restantes hoje", "gratis vragen over vandaag", "今日の残り無料問題", "今天剩余免费题", "오늘 남은 무료 문제"],
+    "Good start. The misses come back in your review.": ["Bon début. Les erreurs reviennent dans votre révision.", "Buon inizio. Gli errori tornano nel tuo ripasso.", "Guter Anfang. Die Fehler kommen in Ihrer Wiederholung zurück.", "Buen comienzo. Los fallos vuelven en tu repaso.", "Bom começo. Os erros voltam na sua revisão.", "Goed begin. De fouten komen terug in je herhaling.", "良いスタートです。間違えた問題は復習に戻ってきます。", "开局不错。答错的题会回到你的复习中。", "좋은 출발입니다. 틀린 문제는 복습에 다시 나옵니다."],
+    "Here it is.": ["Le voici.", "Eccolo.", "Hier ist es.", "Aquí está.", "Aqui está.", "Hier is het.", "ここです。", "就在这里。", "여기입니다."],
+    "How is {name} classified?": ["Quel est le classement de {name} ?", "Come è classificato {name}?", "Wie ist {name} eingestuft?", "¿Cómo está clasificado {name}?", "Como está classificado {name}?", "Hoe is {name} ingedeeld?", "{name}の格付けは？", "{name}属于哪一级？", "{name}의 등급은?"],
+    "In which commune does {name} lie?": ["Dans quelle commune se trouve {name} ?", "In quale comune si trova {name}?", "In welcher Gemeinde liegt {name}?", "¿En qué municipio está {name}?", "Em que concelho fica {name}?", "In welke gemeente ligt {name}?", "{name}はどの村にありますか？", "{name}位于哪个村镇？", "{name}은(는) 어느 마을에 있나요?"],
+    "In which state is the {name} AVA?": ["Dans quel État se trouve l'AVA {name} ?", "In quale stato si trova l'AVA {name}?", "In welchem Bundesstaat liegt die AVA {name}?", "¿En qué estado está la AVA {name}?", "Em que estado fica a AVA {name}?", "In welke staat ligt de AVA {name}?", "AVA {name}はどの州にありますか？", "{name} AVA位于哪个州？", "{name} AVA는 어느 주에 있나요?"],
+    "Keep going. The misses come back in your review.": ["Continuez. Les erreurs reviennent dans votre révision.", "Continua così. Gli errori tornano nel tuo ripasso.", "Weiter so. Die Fehler kommen in Ihrer Wiederholung zurück.", "Sigue así. Los fallos vuelven en tu repaso.", "Continue. Os erros voltam na sua revisão.", "Ga zo door. De fouten komen terug in je herhaling.", "その調子で。間違えた問題は復習に戻ってきます。", "继续加油。答错的题会回到你的复习中。", "계속하세요. 틀린 문제는 복습에 다시 나옵니다."],
+    "Learn the wine regions of the world on the map. Read a lesson, then test yourself: where a place is, its grapes, its rank, its neighbours. What you miss comes back until you know it.": [
+        "Apprenez les régions viticoles du monde sur la carte. Lisez une leçon, puis testez-vous : où se trouve un lieu, ses cépages, son rang, ses voisins. Ce que vous manquez revient jusqu'à ce que vous le sachiez.",
+        "Impara le regioni del vino del mondo sulla mappa. Leggi una lezione, poi mettiti alla prova: dove si trova un luogo, i suoi vitigni, il suo rango, i suoi vicini. Quello che sbagli torna finché non lo sai.",
+        "Lernen Sie die Weinregionen der Welt auf der Karte. Lesen Sie eine Lektion und testen Sie sich: wo ein Ort liegt, seine Rebsorten, sein Rang, seine Nachbarn. Was Sie verpassen, kommt wieder, bis Sie es wissen.",
+        "Aprende las regiones vinícolas del mundo en el mapa. Lee una lección y ponte a prueba: dónde está un lugar, sus uvas, su rango, sus vecinos. Lo que falles vuelve hasta que lo sepas.",
+        "Aprenda as regiões vinícolas do mundo no mapa. Leia uma lição e teste-se: onde fica um lugar, as suas castas, a sua categoria, os seus vizinhos. O que errar volta até o saber.",
+        "Leer de wijnstreken van de wereld op de kaart. Lees een les en test jezelf: waar een plek ligt, de druiven, de rang, de buren. Wat je mist komt terug tot je het weet.",
+        "世界のワイン産地を地図で学びましょう。レッスンを読んだら自分を試します：場所、ブドウ品種、格付け、隣接地。間違えたものは覚えるまで戻ってきます。",
+        "在地图上学习世界葡萄酒产区。读一课，然后自测：一个地方在哪里、它的葡萄、等级、邻近产区。答错的会一直回来，直到你记住。",
+        "지도에서 세계의 와인 산지를 배우세요. 레슨을 읽고 스스로 시험해 보세요: 장소의 위치, 품종, 등급, 이웃. 틀린 것은 알 때까지 다시 나옵니다."],
+    "Lesson {n}": ["Leçon {n}", "Lezione {n}", "Lektion {n}", "Lección {n}", "Lição {n}", "Les {n}", "レッスン{n}", "第{n}课", "레슨 {n}"],
+    "Lessons are written by the atlas editors and checked against the official rules. Drills are built from the atlas data.": [
+        "Les leçons sont écrites par la rédaction de l'atlas et vérifiées d'après les règles officielles. Les exercices sont tirés des données de l'atlas.",
+        "Le lezioni sono scritte dalla redazione dell'atlante e verificate sulle regole ufficiali. Gli esercizi sono costruiti dai dati dell'atlante.",
+        "Die Lektionen schreibt die Redaktion des Atlas und prüft sie an den offiziellen Regeln. Die Übungen entstehen aus den Daten des Atlas.",
+        "Las lecciones las escribe la redacción del atlas y se comprueban con las normas oficiales. Los ejercicios se crean con los datos del atlas.",
+        "As lições são escritas pela redação do atlas e verificadas com as regras oficiais. Os exercícios são criados com os dados do atlas.",
+        "De lessen zijn geschreven door de redactie van de atlas en gecontroleerd aan de officiële regels. De oefeningen komen uit de gegevens van de atlas.",
+        "レッスンはアトラスの編集者が書き、公式の規則で確認しています。ドリルはアトラスのデータから作られます。",
+        "课程由地图编辑撰写，并依据官方规定核对。练习题由地图数据生成。",
+        "레슨은 아틀라스 편집진이 쓰고 공식 규정으로 확인합니다. 연습 문제는 아틀라스 데이터로 만듭니다."],
+    "Map quiz": ["Quiz sur la carte", "Quiz sulla mappa", "Kartenquiz", "Quiz en el mapa", "Quiz no mapa", "Kaartquiz", "地図クイズ", "地图测验", "지도 퀴즈"],
+    "Mark as read": ["Marquer comme lue", "Segna come letta", "Als gelesen markieren", "Marcar como leída", "Marcar como lida", "Markeren als gelezen", "読了にする", "标记为已读", "읽음으로 표시"],
+    "members": ["membres", "membri", "Mitglieder", "miembros", "membros", "leden", "メンバー", "会员", "회원"],
+    "Members study without limits: every lesson, every quiz and the full review. Free questions come back tomorrow.": [
+        "Les membres étudient sans limite : chaque leçon, chaque quiz et toute la révision. Les questions gratuites reviennent demain.",
+        "I membri studiano senza limiti: ogni lezione, ogni quiz e tutto il ripasso. Le domande gratuite tornano domani.",
+        "Mitglieder lernen ohne Grenzen: jede Lektion, jedes Quiz und die ganze Wiederholung. Die kostenlosen Fragen kommen morgen wieder.",
+        "Los miembros estudian sin límites: cada lección, cada quiz y todo el repaso. Las preguntas gratis vuelven mañana.",
+        "Os membros estudam sem limites: cada lição, cada quiz e toda a revisão. As perguntas grátis voltam amanhã.",
+        "Leden studeren zonder grenzen: elke les, elke quiz en de volledige herhaling. De gratis vragen komen morgen terug.",
+        "メンバーは制限なく学べます：すべてのレッスン、すべてのクイズ、復習のすべて。無料の問題は明日また使えます。",
+        "会员学习不受限制：所有课程、所有测验和全部复习。免费题明天恢复。",
+        "회원은 제한 없이 공부합니다: 모든 레슨, 모든 퀴즈, 전체 복습. 무료 문제는 내일 다시 생깁니다."],
+    "Next": ["Suivante", "Avanti", "Weiter", "Siguiente", "Seguinte", "Volgende", "次へ", "下一题", "다음"],
+    "Next lesson": ["Leçon suivante", "Lezione successiva", "Nächste Lektion", "Lección siguiente", "Lição seguinte", "Volgende les", "次のレッスン", "下一课", "다음 레슨"],
+    "Not enough data here for a quiz yet. Try a larger region.": ["Pas encore assez de données ici pour un quiz. Essayez une région plus vaste.", "Qui non ci sono ancora abbastanza dati per un quiz. Prova una regione più ampia.", "Hier gibt es noch nicht genug Daten für ein Quiz. Versuchen Sie eine größere Region.", "Aún no hay datos suficientes aquí para un quiz. Prueba una región más grande.", "Ainda não há dados suficientes aqui para um quiz. Experimente uma região maior.", "Hier zijn nog niet genoeg gegevens voor een quiz. Probeer een grotere streek.", "ここにはまだクイズに十分なデータがありません。もっと広い産地を試してください。", "这里的数据还不够出题。请换一个更大的产区。", "여기에는 아직 퀴즈를 만들 데이터가 부족합니다. 더 넓은 산지를 시도하세요."],
+    "Not quite.": ["Pas tout à fait.", "Non proprio.", "Nicht ganz.", "No exactamente.", "Não exatamente.", "Niet helemaal.", "惜しい。", "不太对。", "아쉽네요."],
+    "Preparing your questions…": ["Préparation de vos questions…", "Preparazione delle domande…", "Ihre Fragen werden vorbereitet…", "Preparando tus preguntas…", "A preparar as suas perguntas…", "Je vragen worden voorbereid…", "問題を準備中…", "正在准备题目…", "문제를 준비하는 중…"],
+    "questions answered": ["questions répondues", "domande risposte", "beantwortete Fragen", "preguntas respondidas", "perguntas respondidas", "beantwoorde vragen", "回答した問題", "已答题数", "답한 문제"],
+    "questions today, member": ["questions aujourd'hui, membre", "domande oggi, membro", "Fragen heute, Mitglied", "preguntas hoy, miembro", "perguntas hoje, membro", "vragen vandaag, lid", "今日の問題（メンバー）", "今日题数（会员）", "오늘 문제(회원)"],
+    "Quiz": ["Quiz", "Quiz", "Quiz", "Quiz", "Quiz", "Quiz", "クイズ", "测验", "퀴즈"],
+    "Quiz on this lesson": ["Quiz sur cette leçon", "Quiz su questa lezione", "Quiz zu dieser Lektion", "Quiz de esta lección", "Quiz desta lição", "Quiz over deze les", "このレッスンのクイズ", "本课测验", "이 레슨 퀴즈"],
+    "Read": ["Lue", "Letta", "Gelesen", "Leída", "Lida", "Gelezen", "読了", "已读", "읽음"],
+    "Region drill": ["Exercice de la région", "Esercizio sulla regione", "Regionsübung", "Ejercicio de la región", "Exercício da região", "Streekoefening", "産地ドリル", "产区练习", "산지 연습"],
+    "Regional appellation": ["Appellation régionale", "Denominazione regionale", "Regionale Appellation", "Denominación regional", "Denominação regional", "Regionale herkomstbenaming", "地方名アペラシオン", "大区级产区", "지방 아펠라시옹"],
+    "Remember": ["À retenir", "Da ricordare", "Merken", "Para recordar", "A reter", "Onthoud", "覚えておくこと", "要点", "기억할 것"],
+    "Review": ["Révision", "Ripasso", "Wiederholung", "Repaso", "Revisão", "Herhaling", "復習", "复习", "복습"],
+    "right": ["justes", "giuste", "richtig", "aciertos", "certas", "goed", "正解", "正确", "정답"],
+    "Right.": ["Juste.", "Giusto.", "Richtig.", "Correcto.", "Certo.", "Goed.", "正解。", "正确。", "정답."],
+    "See your score": ["Voir votre score", "Vedi il punteggio", "Ergebnis ansehen", "Ver tu puntuación", "Ver a pontuação", "Bekijk je score", "スコアを見る", "查看得分", "점수 보기"],
+    "Show me": ["Montrez-moi", "Mostramelo", "Zeigen Sie es mir", "Muéstramelo", "Mostre-me", "Laat zien", "答えを見る", "告诉我", "알려 주세요"],
+    "Start review": ["Commencer la révision", "Inizia il ripasso", "Wiederholung starten", "Empezar el repaso", "Começar a revisão", "Herhaling starten", "復習を始める", "开始复习", "복습 시작"],
+    "Study paths": ["Parcours d'étude", "Percorsi di studio", "Lernpfade", "Itinerarios de estudio", "Percursos de estudo", "Leerpaden", "学習コース", "学习路线", "학습 과정"],
+    "Tap inside an outline.": ["Touchez l'intérieur d'un contour.", "Tocca dentro un perimetro.", "Tippen Sie in einen Umriss.", "Toca dentro de un contorno.", "Toque dentro de um contorno.", "Tik binnen een omtrek.", "輪郭の内側をタップしてください。", "请点击轮廓内部。", "경계 안쪽을 누르세요."],
+    "Tap the place on the map.": ["Touchez le lieu sur la carte.", "Tocca il luogo sulla mappa.", "Tippen Sie auf den Ort auf der Karte.", "Toca el lugar en el mapa.", "Toque no lugar no mapa.", "Tik op de plek op de kaart.", "地図でその場所をタップしてください。", "在地图上点击该地点。", "지도에서 그 장소를 누르세요."],
+    "Ten questions built from the atlas data of this path.": ["Dix questions tirées des données de l'atlas pour ce parcours.", "Dieci domande costruite dai dati dell'atlante per questo percorso.", "Zehn Fragen aus den Atlasdaten dieses Lernpfads.", "Diez preguntas creadas con los datos del atlas de este itinerario.", "Dez perguntas criadas com os dados do atlas deste percurso.", "Tien vragen uit de atlasgegevens van dit leerpad.", "このコースのアトラスデータから作る10問。", "根据本路线的地图数据生成的十道题。", "이 과정의 아틀라스 데이터로 만든 10문제."],
+    "That was today's {n} free questions.": ["Ce sont vos {n} questions gratuites du jour.", "Erano le {n} domande gratuite di oggi.", "Das waren die {n} kostenlosen Fragen von heute.", "Esas eran las {n} preguntas gratis de hoy.", "Eram as {n} perguntas grátis de hoje.", "Dat waren de {n} gratis vragen van vandaag.", "今日の無料問題{n}問が終わりました。", "今天的{n}道免费题已用完。", "오늘의 무료 문제 {n}개를 모두 풀었습니다."],
+    "The first lesson of every path is free. Members read every lesson and study without limits.": [
+        "La première leçon de chaque parcours est gratuite. Les membres lisent toutes les leçons et étudient sans limite.",
+        "La prima lezione di ogni percorso è gratuita. I membri leggono tutte le lezioni e studiano senza limiti.",
+        "Die erste Lektion jedes Lernpfads ist kostenlos. Mitglieder lesen alle Lektionen und lernen ohne Grenzen.",
+        "La primera lección de cada itinerario es gratis. Los miembros leen todas las lecciones y estudian sin límites.",
+        "A primeira lição de cada percurso é grátis. Os membros leem todas as lições e estudam sem limites.",
+        "De eerste les van elk leerpad is gratis. Leden lezen elke les en studeren zonder grenzen.",
+        "各コースの最初のレッスンは無料です。メンバーはすべてのレッスンを読み、制限なく学べます。",
+        "每条路线的第一课免费。会员可阅读所有课程，学习不受限制。",
+        "각 과정의 첫 레슨은 무료입니다. 회원은 모든 레슨을 읽고 제한 없이 공부합니다."],
+    "The lessons could not be loaded right now.": ["Les leçons n'ont pas pu être chargées pour le moment.", "Al momento non è stato possibile caricare le lezioni.", "Die Lektionen konnten gerade nicht geladen werden.", "No se han podido cargar las lecciones en este momento.", "Não foi possível carregar as lições neste momento.", "De lessen konden nu niet worden geladen.", "現在、レッスンを読み込めませんでした。", "暂时无法加载课程。", "지금은 레슨을 불러올 수 없습니다."],
+    "The questions could not be loaded right now.": ["Les questions n'ont pas pu être chargées pour le moment.", "Al momento non è stato possibile caricare le domande.", "Die Fragen konnten gerade nicht geladen werden.", "No se han podido cargar las preguntas en este momento.", "Não foi possível carregar as perguntas neste momento.", "De vragen konden nu niet worden geladen.", "現在、問題を読み込めませんでした。", "暂时无法加载题目。", "지금은 문제를 불러올 수 없습니다."],
+    "The rest of this lesson is for members.": ["La suite de cette leçon est réservée aux membres.", "Il resto di questa lezione è per i membri.", "Der Rest dieser Lektion ist für Mitglieder.", "El resto de esta lección es para miembros.", "O resto desta lição é para membros.", "De rest van deze les is voor leden.", "このレッスンの続きはメンバー向けです。", "本课其余部分仅限会员。", "이 레슨의 나머지는 회원 전용입니다."],
+    "The rules of {name} are built on {grape}.": ["Les règles de {name} reposent sur {grape}.", "Le regole di {name} si basano su {grape}.", "Die Regeln von {name} beruhen auf {grape}.", "Las normas de {name} se basan en {grape}.", "As regras de {name} assentam em {grape}.", "De regels van {name} zijn gebouwd op {grape}.", "{name}の規則は{grape}を主体にしています。", "{name}的规定以{grape}为主。", "{name}의 규정은 {grape}을(를) 중심으로 합니다."],
+    "Try the {n} misses again": ["Refaire les {n} erreurs", "Riprova i {n} errori", "Die {n} Fehler wiederholen", "Repetir los {n} fallos", "Repetir os {n} erros", "De {n} fouten opnieuw", "間違えた{n}問をもう一度", "重做答错的{n}题", "틀린 {n}문제 다시 풀기"],
+    "Village appellation": ["Appellation communale", "Denominazione comunale", "Ortsappellation", "Denominación de pueblo", "Denominação de aldeia", "Dorpsherkomstbenaming", "村名アペラシオン", "村庄级产区", "마을 아펠라시옹"],
+    "Well done.": ["Bien joué.", "Ben fatto.", "Gut gemacht.", "Bien hecho.", "Muito bem.", "Goed gedaan.", "よくできました。", "做得好。", "잘했습니다."],
+    "What is the main grape of {name}?": ["Quel est le cépage principal de {name} ?", "Qual è il vitigno principale di {name}?", "Was ist die Hauptrebsorte von {name}?", "¿Cuál es la uva principal de {name}?", "Qual é a casta principal de {name}?", "Wat is de hoofddruif van {name}?", "{name}の主要品種は？", "{name}的主要葡萄是什么？", "{name}의 주요 품종은?"],
+    "What is the status of {name}?": ["Quel est le statut de {name} ?", "Qual è lo status di {name}?", "Welchen Status hat {name}?", "¿Qué categoría tiene {name}?", "Qual é o estatuto de {name}?", "Wat is de status van {name}?", "{name}の格付けは？", "{name}是什么级别？", "{name}의 등급은?"],
+    "Which of these lies highest, on average?": ["Lequel est le plus haut, en moyenne ?", "Quale si trova più in alto, in media?", "Welcher liegt im Mittel am höchsten?", "¿Cuál está más alto, de media?", "Qual fica mais alto, em média?", "Welke ligt gemiddeld het hoogst?", "平均で最も標高が高いのは？", "平均而言哪一个海拔最高？", "평균적으로 가장 높은 곳은?"],
+    "Which place is outlined on the map?": ["Quel lieu est entouré sur la carte ?", "Quale luogo è evidenziato sulla mappa?", "Welcher Ort ist auf der Karte umrandet?", "¿Qué lugar está marcado en el mapa?", "Que lugar está contornado no mapa?", "Welke plek is op de kaart omlijnd?", "地図で囲まれている場所は？", "地图上圈出的是哪里？", "지도에 표시된 곳은 어디인가요?"],
+    "{name} is a {rank}.": ["{name} est un {rank}.", "{name} è un {rank}.", "{name} ist ein {rank}.", "{name} es un {rank}.", "{name} é um {rank}.", "{name} is een {rank}.", "{name}は{rank}です。", "{name}是{rank}。", "{name}은(는) {rank}입니다."],
+    "{name} is part of…": ["{name} fait partie de…", "{name} fa parte di…", "{name} gehört zu…", "{name} forma parte de…", "{name} faz parte de…", "{name} hoort bij…", "{name}が属するのは…", "{name}属于…", "{name}이(가) 속한 곳은…"],
+    "{name} lies in {parent}.": ["{name} se trouve dans {parent}.", "{name} si trova in {parent}.", "{name} liegt in {parent}.", "{name} está en {parent}.", "{name} fica em {parent}.", "{name} ligt in {parent}.", "{name}は{parent}にあります。", "{name}位于{parent}。", "{name}은(는) {parent}에 있습니다."],
+    "{n} cards due today, out of {all}": ["{n} cartes à revoir aujourd'hui, sur {all}", "{n} schede da ripassare oggi, su {all}", "{n} Karten heute fällig, von {all}", "{n} tarjetas para hoy, de {all}", "{n} cartões para hoje, de {all}", "{n} kaarten vandaag aan de beurt, van {all}", "今日の復習{n}枚（全{all}枚）", "今天待复习{n}张，共{all}张", "오늘 복습 {n}장 / 전체 {all}장"],
+    "{n} lessons": ["{n} leçons", "{n} lezioni", "{n} Lektionen", "{n} lecciones", "{n} lições", "{n} lessen", "{n}レッスン", "{n}课", "레슨 {n}개"],
+    "{n} min": ["{n} min", "{n} min", "{n} Min.", "{n} min", "{n} min", "{n} min", "{n}分", "{n}分钟", "{n}분"],
+    "{n} questions": ["{n} questions", "{n} domande", "{n} Fragen", "{n} preguntas", "{n} perguntas", "{n} vragen", "{n}問", "{n}题", "{n}문제"],
+}
+
+
+def main():
+    for i, lang in enumerate(LANGS):
+        path = os.path.join(I18N, lang + ".json")
+        d = json.load(open(path, encoding="utf-8"))
+        for en, tr in T.items():
+            assert len(tr) == len(LANGS), en
+            d.setdefault(en, tr[i])
+        json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print("added", len(T), "texts to", len(LANGS), "languages")
+
+
+if __name__ == "__main__":
+    main()

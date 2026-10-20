@@ -1,0 +1,376 @@
+{
+  "id": "germany-austria",
+  "title": "Germany and Austria",
+  "level": "WSET 3 to Diploma",
+  "summary": "How German and Austrian wine law works and how to read the labels, then the key regions: the Mosel, the Rhine regions, Germany's red wine and outer regions, and Austria from the Wachau to the Neusiedlersee.",
+  "lessons": [
+    {
+      "id": "germany-austria-law",
+      "title": "German wine law and labels",
+      "minutes": 8,
+      "intro": "German labels carry a lot of information once you know the code. This lesson covers the quality categories, the six Prädikat levels, the sweetness terms, the place hierarchy of the 1971 wine law and the VDP's private classification, which sits outside the law.",
+      "sections": [
+        {
+          "h": "Four quality tiers",
+          "p": [
+            "German wine law sorts wine into four tiers. Deutscher Wein (once called Tafelwein) and Landwein are the basic levels, Landwein being Germany's protected geographical indication. Above them come the two protected designations of origin: Qualitätswein and Prädikatswein.",
+            "Qualitätswein must come from one of the 13 Anbaugebiete, the official wine-growing regions, and the label must name that region. The must may be enriched with sugar before fermentation (chaptalisation). Every Qualitätswein and Prädikatswein passes an official analysis and tasting and carries an AP number, the Amtliche Prüfungsnummer.",
+            "Prädikatswein was called Qualitätswein mit Prädikat (QmP) until 2007. It must reach a set ripeness at harvest and may not be enriched. Its sugar and alcohol come from the grapes alone."
+          ],
+          "places": ["de-eupdo-PDO-DE-A0867", "de-eupdo-PDO-DE-A1264", "de-eupdo-PDO-DE-A1267", "de-eupdo-PDO-DE-A1268", "de-eupdo-PDO-DE-A1269", "de-eupdo-PDO-DE-A1270", "de-eupdo-PDO-DE-A1271", "de-eupdo-PDO-DE-A1272", "de-eupdo-PDO-DE-A1273", "de-eupdo-PDO-DE-A1274", "de-eupdo-PDO-DE-A1275", "de-eupdo-PDO-DE-A1277", "de-eupdo-PDO-DE-A1276"]
+        },
+        {
+          "h": "The six Prädikat levels",
+          "p": [
+            "The six Prädikate are set by must weight, the sugar content of the grape juice at harvest. In rising order: Kabinett, Spätlese, Auslese, Beerenauslese and Trockenbeerenauslese, with Eiswein sharing the Beerenauslese minimum. The level tells you how ripe the grapes were, not how sweet the finished wine is.",
+            "Kabinett is the lightest. Spätlese means late harvest. Auslese is made from selected bunches. Beerenauslese (BA) uses individually selected overripe berries, usually affected by noble rot. Trockenbeerenauslese (TBA) uses shrivelled, botrytised berries and gives very sweet, concentrated wine. Eiswein is pressed from grapes frozen on the vine and must reach the same minimum must weight as a Beerenauslese."
+          ]
+        },
+        {
+          "h": "Sweetness on the label",
+          "p": [
+            "Because a Prädikat measures ripeness, a Spätlese or Auslese can be fermented dry. The label then adds a sweetness term. Trocken means dry and halbtrocken means off-dry; both are defined in law. Lieblich and süß describe clearly sweet wines.",
+            "Feinherb is widely used for off-dry wines but has no legal definition, so its meaning varies by producer. A Kabinett or Spätlese with no sweetness term on the label is often made in a fruity style with residual sugar, especially in the Mosel, but you cannot assume it."
+          ]
+        },
+        {
+          "h": "Bereich, Großlage and Einzellage",
+          "p": [
+            "The 1971 wine law divides each Anbaugebiet into Bereiche (districts), Großlagen (collective sites) and Einzellagen (single vineyards). Place names are usually written as the village plus the suffix -er, then the site: Wehlener Sonnenuhr means the Sonnenuhr vineyard of Wehlen.",
+            "A Großlage groups many single vineyards, sometimes across several villages, and is named in exactly the same village plus site style. Piesporter Michelsberg is a large Großlage, while Piesporter Goldtröpfchen is a famous Einzellage. Niersteiner Gutes Domtal in Rheinhessen is another Großlage known for simple bulk wine. Under the 1971 rules nothing on the label told the drinker which kind of site was meant. From the 2026 vintage, a Großlage or Bereich name on the label must be preceded by the word Region."
+          ],
+          "places": ["de-rlp-gl-mosel-michelsberg", "de-rlp-gl-rheinhessen-gutes-domtal", "de-rlp-410506", "de-rlp-410416"]
+        },
+        {
+          "h": "The VDP: a private classification",
+          "p": [
+            "The VDP (Verband Deutscher Prädikatsweingüter) is an association of leading estates whose roots go back to 1910. Members put an eagle with a grape cluster on the capsule. Its classification is private: it binds only members and is not part of German wine law.",
+            "The VDP pyramid has four levels: VDP.Gutswein, VDP.Ortswein, VDP.Erste Lage and VDP.Große Lage. A dry wine from a Große Lage is called Großes Gewächs (GG). VDP members generally keep Prädikat names for wines with natural residual sugar. Do not confuse the VDP's Große Lage, its top sites, with the legal Großlage, a collective site.",
+            "In 2021 the wine law itself was amended to give origin more weight, a change that is being phased in."
+          ]
+        }
+      ],
+      "key": [
+        "Germany has 13 Anbaugebiete for Qualitätswein and Prädikatswein.",
+        "Prädikatswein may not be chaptalised; Qualitätswein may.",
+        "The Prädikate, in rising order of must weight: Kabinett, Spätlese, Auslese, Beerenauslese, Trockenbeerenauslese; Eiswein has the same minimum as Beerenauslese.",
+        "Trocken and halbtrocken are legally defined; feinherb is not.",
+        "A Großlage is a collective site under the 1971 law; until the 2026 vintage it was labelled like a single vineyard.",
+        "The VDP classification (Gutswein, Ortswein, Erste Lage, Große Lage) is private; Großes Gewächs is a dry wine from a Große Lage."
+      ],
+      "questions": [
+        { "id": "q1", "q": "How many Anbaugebiete can produce German Qualitätswein?", "options": ["11", "13", "15", "9"], "answer": 1,
+          "explain": "German Qualitätswein and Prädikatswein must come from one of the 13 Anbaugebiete, the official quality wine regions." },
+        { "id": "q2", "q": "Which German category may not be enriched with sugar before fermentation?", "options": ["Landwein", "Qualitätswein", "Deutscher Wein", "Prädikatswein"], "answer": 3,
+          "explain": "Prädikatswein must reach its ripeness naturally and may not be chaptalised. Qualitätswein may be enriched." },
+        { "id": "q3", "q": "What do the German Prädikat levels measure?", "options": ["Residual sugar in the finished wine", "Alcohol in the finished wine", "Must weight of the grapes at harvest", "Time spent ageing before release"], "answer": 2,
+          "explain": "Prädikate are based on the sugar content of the must at harvest, so a Spätlese can still be fermented fully dry." },
+        { "id": "q4", "q": "Which Prädikat is pressed from grapes frozen on the vine?", "options": ["Eiswein", "Trockenbeerenauslese", "Auslese", "Spätlese"], "answer": 0,
+          "explain": "Eiswein is made from grapes frozen on the vine and must reach the same minimum must weight as a Beerenauslese." },
+        { "id": "q5", "q": "What does feinherb on a German label mean?", "options": ["A legally defined term for bone-dry wine", "An unregulated term usually used for off-dry wine", "A Prädikat level between Kabinett and Spätlese", "The VDP name for its top vineyards"], "answer": 1,
+          "explain": "Feinherb is widely used for off-dry wines but has no legal definition, unlike trocken and halbtrocken." },
+        { "id": "q6", "q": "Under the 1971 wine law, what is Piesporter Michelsberg?", "options": ["An Einzellage", "A Bereich", "A Großlage", "A VDP Große Lage"], "answer": 2,
+          "explain": "Michelsberg is a Großlage, a collective site that groups many vineyards. Piesporter Goldtröpfchen is the famous single vineyard.", "place": "de-rlp-gl-mosel-michelsberg" },
+        { "id": "q7", "q": "What is a Großes Gewächs (GG)?", "options": ["A dry wine from a VDP Große Lage", "A sweet wine from a legal Großlage", "A legal level above Trockenbeerenauslese", "Any wine from a Bereich"], "answer": 0,
+          "explain": "In the VDP's private classification, GG is the name for a dry wine from one of its top sites, a Große Lage." },
+        { "id": "q8", "q": "Which statement about the VDP classification is correct?", "options": ["It was set out in the 1971 wine law", "It was introduced by the EU in 2009", "It applies to every producer in a region", "It is a private classification that binds only member estates"], "answer": 3,
+          "explain": "The VDP is an association of estates. Its four-level classification is private and separate from German wine law." }
+      ]
+    },
+    {
+      "id": "germany-austria-mosel",
+      "title": "The Mosel",
+      "minutes": 7,
+      "intro": "The Mosel is the home of light, racy Riesling grown on slate. This lesson covers the river's landscape and soils, the Mosel style, the great villages of the Middle Mosel, the cooler Saar and Ruwer, and the Großlage names to watch for.",
+      "sections": [
+        {
+          "h": "River, slate and slope",
+          "p": [
+            "The Mosel rises in the Vosges in France, forms part of the border with Luxembourg and joins the Rhine at Koblenz. The region was called Mosel-Saar-Ruwer until 2007, when it was renamed Mosel. It is cool and northerly, so site is everything.",
+            "The best vineyards sit on steep slopes above the river's tight meanders, facing south or south-west. Devonian slate dominates. The dark stone absorbs heat by day and the river reflects light onto the vines. Many slopes can only be worked by hand. The Calmont at Bremm is often called one of the steepest vineyards in Europe."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1270"]
+        },
+        {
+          "h": "The Mosel style",
+          "p": [
+            "Riesling dominates the quality vineyards. Classic Mosel Riesling is light in body and alcohol, with high acidity and aromas of green apple, citrus and peach, often with a stony or smoky note. Many Kabinett and Spätlese wines keep residual sugar that balances the acidity, though dry wines are now common too.",
+            "The Upper Mosel (Obermosel), near Luxembourg, lies on limestone rather than slate. Here the old Elbling grape is still grown, often for sparkling wine."
+          ]
+        },
+        {
+          "h": "Middle Mosel: Bernkastel, Wehlen, Piesport",
+          "p": [
+            "The Middle Mosel (Mittelmosel) is the heart of the region. Bernkastel is known for the Doctor vineyard, among the most famous in Germany. Wehlen's Sonnenuhr takes its name from a sundial in the vineyard. Graach, Zeltingen, Ürzig, with its red soils in the Würzgarten, and Brauneberg are other great names.",
+            "Upriver, Piesport's Goldtröpfchen is a south-facing slope shaped like an amphitheatre. These villages also give their names to Großlagen: Bernkasteler Badstube and Kurfürstlay, Graacher Münzlay for Wehlen, Graach and Zeltingen, and Piesporter Michelsberg."
+          ],
+          "places": ["de-rlp-gl-mosel-badstube", "de-rlp-gl-mosel-kurfürstlay", "de-rlp-gl-mosel-münzlay", "de-rlp-gl-mosel-michelsberg", "de-rlp-410102", "de-rlp-410506", "de-rlp-410947", "de-rlp-410416"]
+        },
+        {
+          "h": "Saar and Ruwer",
+          "p": [
+            "The Saar and the Ruwer are tributaries that join the Mosel near Trier. Both valleys are cooler than the Middle Mosel. In cool years the grapes struggle to ripen; in warm years the wines are some of the most finely etched Rieslings in the world, with steely acidity.",
+            "The Scharzhofberg at Wiltingen is the Saar's most famous vineyard; the whole Saar falls in the Großlage Scharzberg. On the Ruwer, Maximin Grünhaus and the Karthäuserhofberg at Eitelsbach are the best-known estates and sites. Trier and the Ruwer share the Großlage Römerlay."
+          ],
+          "places": ["de-rlp-gl-mosel-scharzberg", "de-rlp-gl-mosel-römerlay"]
+        },
+        {
+          "h": "Lower Mosel and famous Großlagen",
+          "p": [
+            "Downstream towards Koblenz, the Lower Mosel is also called the Terrassenmosel for its terraced slopes. The Calmont lies here.",
+            "Some Mosel Großlagen are better known than any vineyard in them because they were used for large volumes of simple wine. Zeller Schwarze Katz, with its black cat label, and Kröver Nacktarsch are the classic examples. They show why reading the site name alone can mislead."
+          ],
+          "places": ["de-rlp-gl-mosel-schwarze-katz", "de-rlp-gl-mosel-nacktarsch"]
+        }
+      ],
+      "key": [
+        "The region was named Mosel-Saar-Ruwer until 2007.",
+        "Steep south-facing slopes of Devonian slate above the river give the best sites.",
+        "Classic Mosel Riesling: low alcohol, high acidity, often balanced by residual sugar.",
+        "Great Middle Mosel sites: Bernkasteler Doctor, Wehlener Sonnenuhr, Piesporter Goldtröpfchen.",
+        "The Saar and Ruwer are cooler side valleys; Scharzhofberg is the Saar's top vineyard.",
+        "The Upper Mosel lies on limestone and grows Elbling."
+      ],
+      "questions": [
+        { "id": "q1", "q": "What was the Mosel region called until 2007?", "options": ["Mosel-Saar-Ruwer", "Moselland", "Mosel-Mittelrhein", "Obermosel"], "answer": 0,
+          "explain": "The Anbaugebiet was renamed from Mosel-Saar-Ruwer to Mosel in 2007." },
+        { "id": "q2", "q": "Which soil dominates the best Middle Mosel vineyards?", "options": ["Loess", "Shell limestone", "Devonian slate", "Granite"], "answer": 2,
+          "explain": "Devonian slate is the classic Mosel soil. It warms quickly and drains well on the steep slopes.", "place": "de-eupdo-PDO-DE-A1270" },
+        { "id": "q3", "q": "Which famous vineyard lies in the village of Wehlen?", "options": ["Doctor", "Sonnenuhr", "Goldtröpfchen", "Scharzhofberg"], "answer": 1,
+          "explain": "The Wehlener Sonnenuhr is named after the sundial set in the vineyard.", "place": "de-rlp-410506" },
+        { "id": "q4", "q": "How is the Piesporter Goldtröpfchen vineyard best described?", "options": ["A flat site on the river bank", "A limestone slope near Luxembourg", "A red-soil site at Ürzig", "A south-facing slope shaped like an amphitheatre"], "answer": 3,
+          "explain": "Goldtröpfchen is a curved, south-facing amphitheatre of slate above Piesport.", "place": "de-rlp-410416" },
+        { "id": "q5", "q": "How do the Saar and Ruwer differ from the Middle Mosel?", "options": ["They are warmer and give fuller wines", "They are cooler, with harder ripening in cool years and steely acidity", "They are planted mainly to red grapes", "They lie on limestone rather than slate"], "answer": 1,
+          "explain": "Both side valleys are cooler. In good years they give very fine Riesling with steely acidity.", "place": "de-rlp-gl-mosel-scharzberg" },
+        { "id": "q6", "q": "Where in the Mosel is Elbling still grown on limestone?", "options": ["The Ruwer", "The Saar", "The Middle Mosel", "The Upper Mosel"], "answer": 3,
+          "explain": "The Upper Mosel near Luxembourg lies on limestone, and the old Elbling grape survives there." },
+        { "id": "q7", "q": "Zeller Schwarze Katz and Kröver Nacktarsch are examples of what?", "options": ["Großlagen widely used for simple wine", "VDP Große Lage sites", "Single vineyards in the Saar", "Bereiche of the Mosel"], "answer": 0,
+          "explain": "Both are Großlagen whose names became famous through large volumes of simple wine.", "place": "de-rlp-gl-mosel-schwarze-katz" },
+        { "id": "q8", "q": "Which description fits a classic Mosel Riesling Kabinett?", "options": ["Full body, high alcohol, low acidity", "Oaked and buttery", "Light body, low alcohol, high acidity, often with some residual sugar", "Deeply coloured and tannic"], "answer": 2,
+          "explain": "Mosel Kabinett is light and racy, and residual sugar often balances its high acidity." }
+      ]
+    },
+    {
+      "id": "germany-austria-rhine",
+      "title": "The Rhine regions",
+      "minutes": 8,
+      "intro": "This lesson covers five Anbaugebiete on the Rhine and its tributary the Nahe. It covers the Rheingau, Rheinhessen and its Roter Hang, the Pfalz, the Nahe and the Mittelrhein gorge.",
+      "sections": [
+        {
+          "h": "Rheingau",
+          "p": [
+            "Between Wiesbaden and Rüdesheim the Rhine flows from east to west, so the vineyards on its north bank face south. The Taunus hills shelter them from cold north winds. Riesling is the main grape, with Spätburgunder (Pinot Noir) second, famously at Assmannshausen on the bend of the river.",
+            "The Rheingau has a long history. Tradition says the value of late-harvested grapes was discovered at Schloss Johannisberg in 1775, when the courier bringing permission to pick arrived late. The Cistercians of Kloster Eberbach shaped its vineyards. Hochheim, on the Main, gave the English word hock for Rhine wine."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1273"]
+        },
+        {
+          "h": "Rheinhessen and the Roter Hang",
+          "p": [
+            "Rheinhessen is Germany's largest Anbaugebiet by vineyard area, a gentle landscape of rolling hills inside the bend of the Rhine. It was long known for bulk wine such as Liebfraumilch and for Müller-Thurgau and Silvaner. Since the 1990s, a new generation of growers has transformed its reputation.",
+            "The Rheinterrasse is a band of slopes along the river at Nackenheim, Nierstein and Oppenheim. Its heart is the Roter Hang, the red slope, where red Permian clay-slate and sandstone give rich, spicy Riesling. Pettenthal and Hipping, two Roter Hang sites, lie in the Großlage Rehbach. In the south, the Wonnegau around Westhofen has become a source of top dry Riesling from limestone."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1274", "de-rlp-gl-rheinhessen-rehbach", "de-rlp-720705", "de-rlp-720704"]
+        },
+        {
+          "h": "Pfalz",
+          "p": [
+            "The Pfalz lies west of the Rhine and north of Alsace. The Haardt mountains, the northern continuation of the Vosges, put it in a rain shadow, so it is one of Germany's warmest and driest regions. Almonds and figs grow along the Deutsche Weinstraße, the wine road.",
+            "The Mittelhaardt, with Forst, Deidesheim, Wachenheim and Bad Dürkheim, is the Riesling heartland. Forst has patches of basalt, notably in the Pechstein vineyard. The Südliche Weinstraße to the south grows much Weißburgunder, Grauburgunder and Spätburgunder. The red crossing Dornfelder is also widely planted."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1272", "de-rlp-gl-pfalz-mariengarten", "de-rlp-820815"]
+        },
+        {
+          "h": "Nahe",
+          "p": [
+            "The Nahe flows from the west and joins the Rhine at Bingen. Its soils are unusually varied for a small region: volcanic rock, porphyry, slate, sandstone and quartzite all occur, sometimes within one village. The Rotenfels cliff near Bad Münster is a landmark.",
+            "Riesling is the leading grape. Nahe Riesling is often said to sit between the mineral delicacy of the Mosel and the weight of the Rheingau. Some of its finest sites lie in the middle Nahe: the Kupfergrube and Felsenberg at Schlossböckelheim and the Hermannshöhle at Niederhausen."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1271", "de-rlp-gl-nahe-burgweg", "de-rlp-511151", "de-rlp-511147", "de-rlp-511124"]
+        },
+        {
+          "h": "Mittelrhein",
+          "p": [
+            "Below Bingen the Rhine cuts a narrow gorge through slate hills. This landscape of castles and terraces, including the Lorelei rock, has been a UNESCO World Heritage Site since 2002 as the Upper Middle Rhine Valley.",
+            "The Mittelrhein is small. Its steep slate slopes grow mostly Riesling, with Bacharach and Boppard among the best-known villages. Steep slopes and hand work mean many vineyards have been abandoned over time."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1269", "de-rlp-gl-mittelrhein-loreleyfelsen", "de-rlp-gl-mittelrhein-schloß-stahleck", "de-rlp-gl-mittelrhein-gedeonseck"]
+        }
+      ],
+      "key": [
+        "In the Rheingau the Rhine flows east to west, so the main slopes face south; the Taunus shelters them.",
+        "Assmannshausen in the Rheingau is known for Spätburgunder.",
+        "Rheinhessen is Germany's largest Anbaugebiet; the Roter Hang at Nierstein has red Permian soils.",
+        "The Pfalz lies in the rain shadow of the Haardt, the continuation of the Vosges; the Mittelhaardt is its Riesling heart.",
+        "The Nahe is known for very varied soils, including volcanic rock and slate.",
+        "The Mittelrhein gorge is a UNESCO World Heritage Site with steep slate vineyards."
+      ],
+      "questions": [
+        { "id": "q1", "q": "Why do most Rheingau vineyards face south?", "options": ["The Rhine flows from east to west along this stretch", "The vineyards lie on the west bank of a north-flowing river", "They are planted on terraces cut into a gorge", "The Haardt mountains block the morning sun"], "answer": 0,
+          "explain": "Between Wiesbaden and Rüdesheim the Rhine runs east to west, so the north bank faces south.", "place": "de-eupdo-PDO-DE-A1273" },
+        { "id": "q2", "q": "Which Rheingau village is best known for Spätburgunder?", "options": ["Hochheim", "Johannisberg", "Assmannshausen", "Rüdesheim"], "answer": 2,
+          "explain": "Assmannshausen, on the bend of the Rhine, is the Rheingau's classic source of red Spätburgunder." },
+        { "id": "q3", "q": "What is the Roter Hang?", "options": ["A Großlage in the Pfalz", "A cliff on the Nahe", "A red-slate site in the Ahr", "A slope of red Permian soils at Nierstein in Rheinhessen"], "answer": 3,
+          "explain": "The Roter Hang, the red slope, is the heart of Rheinhessen's Rheinterrasse, with red clay-slate and sandstone.", "place": "de-eupdo-PDO-DE-A1274" },
+        { "id": "q4", "q": "Which is Germany's largest Anbaugebiet by vineyard area?", "options": ["Mosel", "Rheinhessen", "Baden", "Rheingau"], "answer": 1,
+          "explain": "Rheinhessen has the largest vineyard area of the 13 regions, with the Pfalz second." },
+        { "id": "q5", "q": "What makes the Pfalz one of Germany's warmest and driest regions?", "options": ["The rain shadow of the Haardt mountains", "The reflection of the Rhine", "Its position on the Danube", "Warm winds from the Baltic"], "answer": 0,
+          "explain": "The Haardt, the northern continuation of the Vosges, shelters the Pfalz from rain coming from the west.", "place": "de-eupdo-PDO-DE-A1272" },
+        { "id": "q6", "q": "Which group of villages belongs to the Mittelhaardt in the Pfalz?", "options": ["Bacharach, Boppard, Oberwesel", "Wehlen, Graach, Zeltingen", "Forst, Deidesheim, Wachenheim", "Nierstein, Nackenheim, Oppenheim"], "answer": 2,
+          "explain": "Forst, Deidesheim, Wachenheim and Bad Dürkheim make up the Riesling heartland of the Mittelhaardt.", "place": "de-rlp-gl-pfalz-mariengarten" },
+        { "id": "q7", "q": "What is the Nahe best known for in terms of terroir?", "options": ["Uniform loess soils", "A wide variety of soils, including volcanic rock, porphyry and slate", "Shell limestone like Franken", "Flat, fertile alluvial plains"], "answer": 1,
+          "explain": "The Nahe packs volcanic rock, porphyry, slate, sandstone and quartzite into a small area.", "place": "de-eupdo-PDO-DE-A1271" },
+        { "id": "q8", "q": "Which region is a gorge with steep slate vineyards inside a UNESCO World Heritage Site?", "options": ["Rheingau", "Pfalz", "Rheinhessen", "Mittelrhein"], "answer": 3,
+          "explain": "The Upper Middle Rhine Valley has been a World Heritage Site since 2002. Its slate slopes grow mostly Riesling.", "place": "de-eupdo-PDO-DE-A1269" }
+      ]
+    },
+    {
+      "id": "germany-austria-reds-and-beyond",
+      "title": "Spätburgunder and Germany beyond the Rhine",
+      "minutes": 7,
+      "intro": "Germany is not only Riesling. This lesson covers the red wines of the Ahr and Baden, Silvaner in Franken, the red grapes of Württemberg, and the small northern regions of Saale-Unstrut and Sachsen.",
+      "sections": [
+        {
+          "h": "Ahr: red wine in the north",
+          "p": [
+            "The Ahr is a narrow, steep valley that joins the Rhine south of Bonn. Although it is one of Germany's most northerly regions, it is planted mainly to red grapes. Slate and greywacke on steep slopes store heat and help ripening.",
+            "Spätburgunder (Pinot Noir) is the main grape, joined by Frühburgunder, an early-ripening form of Pinot. The region has a single Großlage, Klosterberg. In July 2021 a severe flood caused great damage to the valley and its wineries."
+          ],
+          "places": ["de-eupdo-PDO-DE-A0867", "de-rlp-gl-ahr-klosterberg"]
+        },
+        {
+          "h": "Baden: the warm south",
+          "p": [
+            "Baden is Germany's most southerly region, stretching from the Tauberfranken in the north to Lake Constance (Bodensee). It is the only German region in EU wine-growing zone B, the same zone as Alsace, while the rest of Germany is in zone A.",
+            "The Burgunder family leads: Spätburgunder, Grauburgunder and Weißburgunder. The Kaiserstuhl, an extinct volcano covered in loess, is one of Germany's warmest spots. The Markgräflerland grows Gutedel (Chasselas), and the Ortenau, on granite, is known for Riesling, locally called Klingelberger."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1264"]
+        },
+        {
+          "h": "Franken: Silvaner and the Bocksbeutel",
+          "p": [
+            "Franken follows the river Main around Würzburg. The climate is continental, with cold winters and a risk of spring frost. Shell limestone (Muschelkalk) around Würzburg and Keuper further east are the main soils. The Würzburger Stein is the best-known vineyard.",
+            "Silvaner is the signature grape, giving dry, earthy, savoury wines; Müller-Thurgau is also widely planted. Franken wine is traditionally bottled in the Bocksbeutel, a flat, round flask."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1267"]
+        },
+        {
+          "h": "Württemberg: a red-wine region",
+          "p": [
+            "Württemberg follows the Neckar and its tributaries around Stuttgart. It is unusual in Germany because red grapes dominate. Trollinger (the Schiava of Alto Adige) gives light, pale reds drunk locally. Lemberger (Blaufränkisch) gives deeper, firmer wines, and Schwarzriesling is Pinot Meunier.",
+            "Riesling is the main white grape. Cooperatives make a large share of the wine."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1276"]
+        },
+        {
+          "h": "Saale-Unstrut, Sachsen and Hessische Bergstraße",
+          "p": [
+            "Saale-Unstrut and Sachsen lie in the former East Germany and are Germany's most north-easterly regions. Sachsen follows the Elbe around Dresden and Meissen. Both have a continental climate with frost risk, and both mostly make dry whites from grapes such as Müller-Thurgau, Weißburgunder and Riesling.",
+            "Hessische Bergstraße is a small region on the east side of the Rhine plain, south of Darmstadt, known mainly for Riesling."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1275", "de-eupdo-PDO-DE-A1277", "de-eupdo-PDO-DE-A1268"]
+        }
+      ],
+      "key": [
+        "The Ahr is a northerly region planted mainly to Spätburgunder on slate and greywacke.",
+        "Baden is Germany's only region in EU wine zone B; the Kaiserstuhl is an extinct volcano covered in loess.",
+        "Gutedel is Chasselas; Klingelberger is the Ortenau name for Riesling.",
+        "Franken: Silvaner on shell limestone, bottled in the Bocksbeutel.",
+        "Württemberg is red-dominated: Trollinger (Schiava), Lemberger (Blaufränkisch), Schwarzriesling (Pinot Meunier).",
+        "Sachsen lies on the Elbe around Dresden and Meissen."
+      ],
+      "questions": [
+        { "id": "q1", "q": "Which grape dominates the Ahr?", "options": ["Riesling", "Silvaner", "Spätburgunder", "Trollinger"], "answer": 2,
+          "explain": "Despite its northern position, the Ahr is planted mainly to Spätburgunder, helped by heat-storing slate slopes.", "place": "de-eupdo-PDO-DE-A0867" },
+        { "id": "q2", "q": "Which German region lies in EU wine-growing zone B?", "options": ["Baden", "Pfalz", "Franken", "Mosel"], "answer": 0,
+          "explain": "Baden is the only German region in zone B, the same zone as Alsace. The rest of Germany is zone A.", "place": "de-eupdo-PDO-DE-A1264" },
+        { "id": "q3", "q": "What is the Kaiserstuhl?", "options": ["A slate gorge in the Mittelrhein", "An extinct volcano covered in loess in Baden", "A shell limestone vineyard in Würzburg", "A Großlage in the Ahr"], "answer": 1,
+          "explain": "The Kaiserstuhl is an extinct volcano in Baden, one of Germany's warmest spots, known for Burgunder varieties." },
+        { "id": "q4", "q": "Which grape and bottle are traditional in Franken?", "options": ["Riesling in a tall flute", "Trollinger in a litre bottle", "Spätburgunder in a Burgundy bottle", "Silvaner in a Bocksbeutel"], "answer": 3,
+          "explain": "Franken's signature grape is Silvaner, traditionally bottled in the flat, round Bocksbeutel.", "place": "de-eupdo-PDO-DE-A1267" },
+        { "id": "q5", "q": "Lemberger, widely grown in Württemberg, is the same grape as which variety?", "options": ["Pinot Meunier", "Blaufränkisch", "Schiava", "Zweigelt"], "answer": 1,
+          "explain": "Lemberger is the German name for Blaufränkisch. Trollinger is Schiava and Schwarzriesling is Pinot Meunier.", "place": "de-eupdo-PDO-DE-A1276" },
+        { "id": "q6", "q": "Gutedel, grown in Baden's Markgräflerland, is known elsewhere as what?", "options": ["Chasselas", "Pinot Blanc", "Silvaner", "Müller-Thurgau"], "answer": 0,
+          "explain": "Gutedel is Chasselas, the grape best known in Switzerland." },
+        { "id": "q7", "q": "Which region follows the Elbe around Dresden and Meissen?", "options": ["Saale-Unstrut", "Franken", "Hessische Bergstraße", "Sachsen"], "answer": 3,
+          "explain": "Sachsen lies along the Elbe around Dresden and Meissen in the former East Germany.", "place": "de-eupdo-PDO-DE-A1277" },
+        { "id": "q8", "q": "What is the soil most associated with Würzburg in Franken?", "options": ["Devonian slate", "Volcanic basalt", "Shell limestone (Muschelkalk)", "Red Permian sandstone"], "answer": 2,
+          "explain": "Shell limestone around Würzburg, including the famous Würzburger Stein, gives Franken Silvaner its savoury character." }
+      ]
+    },
+    {
+      "id": "germany-austria-austria",
+      "title": "Austria",
+      "minutes": 9,
+      "intro": "Austria makes dry whites of great precision from Grüner Veltliner and Riesling, serious reds from Blaufränkisch and Zweigelt, and some of the world's great sweet wines. This lesson covers the DAC system, the Wachau and its three categories, Kamptal and Kremstal, and Burgenland.",
+      "sections": [
+        {
+          "h": "Austria in outline",
+          "p": [
+            "Austria's vineyards lie in the east of the country, in four broad wine areas: Niederösterreich (Lower Austria), Burgenland, Steiermark (Styria) and Wien (Vienna). The climate is continental, with warm Pannonian influence from the east. Grüner Veltliner is the most planted grape and Zweigelt the most planted red.",
+            "A scandal in 1985, when some producers added diethylene glycol to wine, led to one of Europe's strictest wine laws. Austria uses Prädikat names like Germany, with differences: Kabinett counts as Qualitätswein, and Austria adds Ausbruch and Strohwein. Wien is known for Gemischter Satz, a field blend, and Südsteiermark for Sauvignon Blanc on steep hills near Slovenia."
+          ],
+          "places": ["at-eupdo-PDO-AT-A0221", "at-eupdo-PDO-AT-A0207", "at-eupdo-PDO-AT-A0225", "at-eupdo-PDO-AT-A0235", "at-eupdo-PDO-AT-A0228"]
+        },
+        {
+          "h": "The DAC system",
+          "p": [
+            "DAC stands for Districtus Austriae Controllatus. A DAC links a region to its typical grapes and style, much like an appellation. Weinviertel DAC, for Grüner Veltliner only, was the first, introduced in 2002.",
+            "Other DACs followed. Kamptal, Kremstal and Traisental are for Grüner Veltliner and Riesling. Mittelburgenland and Eisenberg are for Blaufränkisch, Neusiedlersee for Zweigelt, and Leithaberg for both whites and Blaufränkisch. Most DACs use a three-level origin pyramid: Gebietswein (regional wine), Ortswein (village wine) and Riedenwein (single-vineyard wine). Ried means single vineyard."
+          ],
+          "places": ["at-eupdo-PDO-AT-A0206", "at-eupdo-PDO-AT-A0209", "at-eupdo-PDO-AT-A0208", "at-eupdo-PDO-AT-A0210"]
+        },
+        {
+          "h": "Wachau: Steinfeder, Federspiel, Smaragd",
+          "p": [
+            "The Wachau is a short stretch of the Danube west of Krems. Terraces with dry-stone walls climb steep slopes of gneiss and other primary rock, often favoured for Riesling, while loess lower down suits Grüner Veltliner. Cool air from the Waldviertel to the north-west meets warm Pannonian air from the east, giving cool nights and slow ripening.",
+            "Vinea Wachau, a growers' association founded in 1983, uses three categories of dry wine. Steinfeder, named after a feather grass, is the lightest, at no more than 11.5% alcohol. Federspiel, named after falconry, sits between 11.5% and 12.5%. Smaragd, named after an emerald-green lizard, is the ripest and fullest, at 12.5% or more. Wachau DAC was added in 2020."
+          ],
+          "places": ["at-eupdo-PDO-AT-A0205"]
+        },
+        {
+          "h": "Kamptal, Kremstal and Traisental",
+          "p": [
+            "East of the Wachau the valleys open out. Kremstal surrounds the town of Krems, with primary rock near Stein and deep loess terraces to the east. Kamptal follows the Kamp river around Langenlois; its Zöbinger Heiligenstein is a famous steep hill for Riesling. Traisental, south of the Danube, is the smallest of the three.",
+            "All three are DACs for Grüner Veltliner and Riesling. The Österreichische Traditionsweingüter (ÖTW), an association of estates, began classifying top Rieden as Erste Lage privately, much like the VDP in Germany. Since 2023 Austrian law allows official Erste Lage and Große Lage classification, which is being phased in."
+          ],
+          "places": ["at-eupdo-PDO-AT-A0209", "at-eupdo-PDO-AT-A0208", "at-eupdo-PDO-AT-A0210"]
+        },
+        {
+          "h": "Burgenland: reds and the Neusiedlersee",
+          "p": [
+            "Burgenland, on the Hungarian border, is warm and the home of Austrian red wine. Blaufränkisch is the star of Mittelburgenland, of Eisenberg in the south, with its iron-rich soils, and of the Leithaberg hills north-west of the lake. Zweigelt, a crossing of St. Laurent and Blaufränkisch made in 1922 by Fritz Zweigelt, is the grape of Neusiedlersee DAC.",
+            "The Neusiedlersee is a large, shallow lake. In autumn its humidity and morning mists encourage noble rot, especially in the Seewinkel on the eastern shore around Illmitz. This makes the area a centre for Beerenauslese and Trockenbeerenauslese. Rust, on the western shore, is famous for Ruster Ausbruch, a botrytis sweet wine with a long history."
+          ],
+          "places": ["at-eupdo-PDO-AT-A0219", "at-eupdo-PDO-AT-A0214", "at-eupdo-PDO-AT-A0215", "at-eupdo-PDO-AT-A0216"]
+        }
+      ],
+      "key": [
+        "Grüner Veltliner is Austria's most planted grape; Zweigelt is the most planted red.",
+        "DAC means Districtus Austriae Controllatus; Weinviertel DAC (Grüner Veltliner) was the first, in 2002.",
+        "Most DACs use the pyramid Gebietswein, Ortswein, Riedenwein.",
+        "Vinea Wachau's dry categories, lightest to fullest: Steinfeder, Federspiel, Smaragd.",
+        "Blaufränkisch leads in Mittelburgenland, Eisenberg and Leithaberg; Zweigelt in Neusiedlersee DAC.",
+        "Mists from the shallow Neusiedlersee favour noble rot; Rust is known for Ausbruch."
+      ],
+      "questions": [
+        { "id": "q1", "q": "What was Austria's first DAC?", "options": ["Wachau", "Kamptal", "Mittelburgenland", "Weinviertel"], "answer": 3,
+          "explain": "Weinviertel DAC, for Grüner Veltliner only, was introduced in 2002.", "place": "at-eupdo-PDO-AT-A0206" },
+        { "id": "q2", "q": "In the Wachau, which category names the ripest and fullest dry wines?", "options": ["Steinfeder", "Smaragd", "Federspiel", "Ausbruch"], "answer": 1,
+          "explain": "Smaragd, named after an emerald-green lizard, is the fullest of Vinea Wachau's three dry categories.", "place": "at-eupdo-PDO-AT-A0205" },
+        { "id": "q3", "q": "What does Riedenwein mean on an Austrian DAC label?", "options": ["A regional wine", "A sweet wine from botrytised grapes", "A wine from a single vineyard", "A field blend"], "answer": 2,
+          "explain": "Ried means single vineyard. Riedenwein is the top level of the Gebietswein, Ortswein, Riedenwein pyramid." },
+        { "id": "q4", "q": "Which grapes are permitted for Kamptal DAC?", "options": ["Grüner Veltliner and Riesling", "Blaufränkisch and Zweigelt", "Sauvignon Blanc and Chardonnay", "Grüner Veltliner only"], "answer": 0,
+          "explain": "Kamptal, Kremstal and Traisental are DACs for Grüner Veltliner and Riesling. Weinviertel DAC is Grüner Veltliner only.", "place": "at-eupdo-PDO-AT-A0209" },
+        { "id": "q5", "q": "Which climatic effect shapes the Wachau?", "options": ["Fog from the Adriatic", "Cool air from the Waldviertel meeting warm Pannonian air from the east", "Föhn winds from the Alps", "Warmth reflected from the Neusiedlersee"], "answer": 1,
+          "explain": "Cool air from the north-west and warm air from the east give the Wachau cool nights and slow ripening.", "place": "at-eupdo-PDO-AT-A0205" },
+        { "id": "q6", "q": "Which red grape is the focus of Mittelburgenland DAC?", "options": ["Zweigelt", "St. Laurent", "Pinot Noir", "Blaufränkisch"], "answer": 3,
+          "explain": "Mittelburgenland, like Eisenberg, is a DAC for Blaufränkisch.", "place": "at-eupdo-PDO-AT-A0214" },
+        { "id": "q7", "q": "Why is the area around the Neusiedlersee a centre for sweet wine?", "options": ["Its humid autumns and morning mists encourage noble rot", "Grapes are dried on straw in high mountain huts", "Winter frosts allow Eiswein every year", "Its limestone soils raise sugar levels"], "answer": 0,
+          "explain": "The large, shallow lake creates humidity and mist in autumn, ideal for botrytis, especially in the Seewinkel.", "place": "at-eupdo-PDO-AT-A0219" },
+        { "id": "q8", "q": "How does Austrian law treat Kabinett, compared with Germany?", "options": ["It is the highest Prädikat", "It must be sweet", "It counts as Qualitätswein, not Prädikatswein", "It is not allowed in Austria"], "answer": 2,
+          "explain": "In Austria Kabinett is a Qualitätswein category, while Austria adds Ausbruch and Strohwein to its Prädikat levels." }
+      ]
+    }
+  ]
+}
