@@ -1171,5 +1171,8 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "輪郭と面積は公式の登録簿によります。面積は区画された範囲で、植栽された畑の面積ではありません。",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "市町村や郡全体から描いた輪郭はブドウ畑以外の土地を含むため、ここでは面積を表示しません。",
  "Hover a name to find it on the map, click to open it.": "名前にカーソルを合わせると地図上で示し、クリックで開きます。",
- "Back to the selection": "選択に戻る"
+ "Back to the selection": "選択に戻る",
+ "Privacy": "プライバシー",
+ "Terms of Use": "利用規約",
+ "Legal notice": "運営者情報"
 }

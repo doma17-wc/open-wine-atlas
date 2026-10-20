@@ -1171,5 +1171,8 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "Contours et surfaces des registres officiels. La surface est l'aire délimitée, pas le vignoble planté.",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "Les contours tracés à partir de communes ou de districts entiers n'indiquent pas de surface ici, car ils incluent des terres qui ne sont pas des vignes.",
  "Hover a name to find it on the map, click to open it.": "Survolez un nom pour le trouver sur la carte, cliquez pour l'ouvrir.",
- "Back to the selection": "Retour à la sélection"
+ "Back to the selection": "Retour à la sélection",
+ "Privacy": "Confidentialité",
+ "Terms of Use": "Conditions d'utilisation",
+ "Legal notice": "Mentions légales"
 }

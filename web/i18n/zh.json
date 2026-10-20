@@ -1171,5 +1171,8 @@
  "Outlines and areas from the official registers. An area is the delimited area, not the vineyard planted.": "轮廓与面积来自官方登记。面积指划定区域，而非实际种植的葡萄园。",
  "Outlines drawn from whole communes or districts show no area here, because they include land that is not vineyard.": "由整个市镇或地区构成的轮廓包含非葡萄园土地，因此此处不显示面积。",
  "Hover a name to find it on the map, click to open it.": "将鼠标移到名称上可在地图上找到它，点击即可打开。",
- "Back to the selection": "返回所选内容"
+ "Back to the selection": "返回所选内容",
+ "Privacy": "隐私",
+ "Terms of Use": "使用条款",
+ "Legal notice": "法律声明"
 }
