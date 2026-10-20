@@ -1,0 +1,602 @@
+{
+  "id": "usa",
+  "title": "United States",
+  "level": "WSET 3 to Diploma",
+  "summary": "How American wine law works, then the main regions: Napa Valley, Sonoma County, the Central Coast and Lodi in California, and the Willamette Valley, the Columbia Valley and the Finger Lakes further north.",
+  "lessons": [
+    {
+      "id": "usa-law",
+      "title": "How American wine law works",
+      "minutes": 6,
+      "intro": "This lesson explains what an American Viticultural Area is, why it controls only geography, and the percentages that govern origin, variety and vintage on a US wine label.",
+      "sections": [
+        {
+          "h": "AVAs: places, not rules",
+          "p": [
+            "An American Viticultural Area (AVA) is a grape-growing region with a legal boundary. The federal Alcohol and Tobacco Tax and Trade Bureau (TTB), part of the US Treasury, approves AVAs and controls wine labels. The system dates from regulations of 1978. The first AVA was Augusta, Missouri, in 1980. Napa Valley followed in 1981 as the first in California.",
+            "An AVA defines geography only. It sets no rules on grape varieties, yields, vine training, alcohol, ageing or wine style. This is the main difference from a French AOC or an Italian DOC. A producer in Napa Valley may plant any variety, make any style, and still use the name."
+          ],
+          "places": ["us-ava-napa_valley"]
+        },
+        {
+          "h": "How an AVA is created",
+          "p": [
+            "Anyone can petition the TTB for a new AVA. The petition must show that the name is known locally for that area and that the area has features that set it apart, such as climate, soils, elevation or landforms. The boundary is drawn on official maps. Nothing in the process judges quality, so an AVA is not a quality ranking.",
+            "AVAs can be nested. Oakville lies inside Napa Valley, which lies inside the multi-county North Coast AVA. AVAs can also cross state lines: Columbia Valley and Walla Walla Valley both reach from Washington into Oregon."
+          ],
+          "places": ["us-ava-north_coast", "us-ava-napa_valley", "us-ava-oakville", "us-ava-columbia_valley", "us-ava-walla_walla_valley"]
+        },
+        {
+          "h": "Origin, variety and vintage",
+          "p": [
+            "An AVA on the label means at least 85% of the grapes come from that AVA. A state name needs at least 75% from that state under federal law, but several states ask for more. California requires 100% California grapes. A county name needs at least 75% from that county.",
+            "A varietal name, such as Cabernet Sauvignon, needs at least 75% of that variety. Some native labrusca varieties such as Concord have a lower limit. Oregon is stricter: it asks for 90%, for example for Pinot Noir. A listed group, such as Cabernet Sauvignon, Merlot and Syrah, keeps 75%. A vintage date needs 95% of the wine from that year when an AVA is named, and 85% with a state or county name."
+          ],
+          "places": ["us-ava-willamette_valley"]
+        },
+        {
+          "h": "Other label terms",
+          "p": [
+            "A named vineyard requires 95% of the grapes from that vineyard. Estate Bottled is stricter: the winery must be in the AVA named, must grow all the grapes on vineyards it owns or controls in that AVA, and must make and bottle the whole wine on its own premises. Terms such as Reserve and Old Vine have no federal definition.",
+            "Many top wines are blends with no single variety at 75%. They are sold under a brand name or as Red Wine. Meritage is a registered term for blends of Bordeaux varieties made by members of the Meritage Alliance. A California state law also requires a wine labelled with a Napa sub-AVA, such as Rutherford, to show Napa Valley on the label."
+          ],
+          "places": ["us-ava-rutherford"]
+        }
+      ],
+      "key": [
+        "An AVA is a geographic boundary approved by the TTB. It has no rules on grapes, yields, ageing or style.",
+        "AVA on the label: at least 85% of the grapes from that AVA.",
+        "State name: 75% federal minimum, but California requires 100%. County name: 75%.",
+        "Varietal name: at least 75% of the variety. Oregon asks for 90%, except for a listed group such as Cabernet Sauvignon and Syrah.",
+        "Vintage: 95% from that year with an AVA, 85% with a state or county name.",
+        "The first AVA was Augusta, Missouri (1980). Napa Valley (1981) was the first in California."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which body approves new AVAs?",
+          "options": ["The California Wine Institute", "The Alcohol and Tobacco Tax and Trade Bureau (TTB)", "The US Department of Agriculture", "Each state's wine commission"],
+          "answer": 1,
+          "explain": "AVAs are federal. The TTB, part of the US Treasury, approves them and controls wine labels."
+        },
+        {
+          "id": "q2",
+          "q": "What does an AVA regulate?",
+          "options": ["The grape varieties that may be planted", "The maximum yield per hectare", "The minimum ageing before release", "Only the geographic origin of the grapes"],
+          "answer": 3,
+          "explain": "An AVA is purely geographic. Unlike an AOC or DOC, it sets no rules on varieties, yields, ageing or style.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "id": "q3",
+          "q": "A wine labelled with an AVA must contain at least what share of grapes from that AVA?",
+          "options": ["85%", "75%", "95%", "100%"],
+          "answer": 0,
+          "explain": "The AVA rule is 85%. The 75% figure applies to state and county names and to varietal labelling."
+        },
+        {
+          "id": "q4",
+          "q": "A wine labelled California must contain what share of California grapes?",
+          "options": ["75%", "85%", "95%", "100%"],
+          "answer": 3,
+          "explain": "Federal law asks for 75% for a state name, but California requires 100% of its own grapes."
+        },
+        {
+          "id": "q5",
+          "q": "Under federal law, a wine labelled Cabernet Sauvignon must contain at least how much Cabernet Sauvignon?",
+          "options": ["51%", "90%", "75%", "85%"],
+          "answer": 2,
+          "explain": "The federal varietal minimum is 75%. The lower limit applies only to some labrusca varieties, and 90% is Oregon's stricter rule for varieties such as Pinot Noir."
+        },
+        {
+          "id": "q6",
+          "q": "A vintage-dated wine labelled with an AVA must contain what share of wine from that vintage?",
+          "options": ["85%", "95%", "75%", "100%"],
+          "answer": 1,
+          "explain": "With an AVA the vintage rule is 95%. With a state or county name it is 85%."
+        },
+        {
+          "id": "q7",
+          "q": "Which was the first AVA to be approved?",
+          "options": ["Napa Valley, California", "Willamette Valley, Oregon", "Finger Lakes, New York", "Augusta, Missouri"],
+          "answer": 3,
+          "explain": "Augusta in Missouri became the first AVA in 1980. Napa Valley followed in 1981 as California's first."
+        },
+        {
+          "id": "q8",
+          "q": "Which of these AVAs crosses a state line?",
+          "options": ["Walla Walla Valley", "Russian River Valley", "Paso Robles", "Finger Lakes"],
+          "answer": 0,
+          "explain": "Walla Walla Valley, like Columbia Valley, reaches from Washington into Oregon. AVAs are not bound by state borders.",
+          "place": "us-ava-walla_walla_valley"
+        }
+      ]
+    },
+    {
+      "id": "usa-napa",
+      "title": "Napa Valley",
+      "minutes": 7,
+      "intro": "This lesson covers the geography and climate of Napa Valley, its Cabernet Sauvignon, the 1976 Judgment of Paris, and the main sub-AVAs on the valley floor and in the mountains.",
+      "sections": [
+        {
+          "h": "The valley and its mountains",
+          "p": [
+            "Napa Valley runs about 30 miles (50 km) from the town of Calistoga in the north to the city of Napa in the south. The Mayacamas Mountains form its western side and separate it from Sonoma. The Vaca Range forms the eastern side. The Napa Valley AVA covers most of Napa County, including the hills, not only the valley floor."
+          ],
+          "places": ["us-ava-napa_valley", "us-ava-calistoga"]
+        },
+        {
+          "h": "Fog and the north to south gradient",
+          "p": [
+            "San Pablo Bay, the northern arm of San Francisco Bay, lies at the southern end. Cool air and fog move up the valley from the bay in the evening and often stay until late morning. The south is therefore the coolest part and the north, around Calistoga, the warmest. Wide swings between day and night help the grapes keep acidity as they ripen.",
+            "Fog rarely reaches the higher slopes. Mountain vineyards sit above the fog line: they get more morning sun but stay cooler at the hottest time of day. Thin soils and wind give small berries and firm tannins. Valley floor sites have deeper alluvial soils, washed down from the hills in fans and benches."
+          ],
+          "places": ["us-ava-calistoga", "us-ava-los_carneros"]
+        },
+        {
+          "h": "Cabernet Sauvignon and the Judgment of Paris",
+          "p": [
+            "Cabernet Sauvignon is Napa's leading grape. Typical wines are full bodied, with ripe black fruit, ripe but firm tannins and often new French oak. Merlot, Cabernet Franc and Petit Verdot go into Bordeaux-style blends. Chardonnay and Sauvignon Blanc are the main whites, and Chardonnay does best in the cooler south.",
+            "At the 1976 Judgment of Paris, a blind tasting organised by Steven Spurrier, French judges placed two Napa wines first: Stag's Leap Wine Cellars 1973 Cabernet Sauvignon among the reds and Chateau Montelena 1973 Chardonnay among the whites. The result brought California world attention."
+          ],
+          "places": ["us-ava-stags_leap_district", "us-ava-calistoga"]
+        },
+        {
+          "h": "The valley floor AVAs",
+          "p": [
+            "Oakville and Rutherford, in the middle of the valley, are famous for Cabernet Sauvignon. Oakville holds the To Kalon vineyard and Opus One, the joint venture of Robert Mondavi and Baron Philippe de Rothschild whose first vintage was 1979. Rutherford's gravelly western bench gave rise to the phrase Rutherford dust, a dusty tannin texture linked to winemaker André Tchelistcheff.",
+            "Stags Leap District lies on the east side, below rocky cliffs of the Vaca Range. Afternoon breezes from the bay cool its vineyards, and its Cabernet is known for soft, silky tannins. St. Helena, Yountville, Oak Knoll District and Calistoga are also valley AVAs. Coombsville, east of the city of Napa, is one of the coolest."
+          ],
+          "places": ["us-ava-oakville", "us-ava-rutherford", "us-ava-stags_leap_district", "us-ava-st__helena", "us-ava-yountville", "us-ava-oak_knoll_district_of_napa_valley", "us-ava-coombsville"]
+        },
+        {
+          "h": "Mountain AVAs and Los Carneros",
+          "p": [
+            "On the Mayacamas side are Mt. Veeder, Spring Mountain District and Diamond Mountain District. On the Vaca side are Howell Mountain and Atlas Peak. Howell Mountain starts at 1,400 feet (about 425 m), above the fog, and its volcanic and red clay soils give powerful, tannic Cabernet Sauvignon.",
+            "Los Carneros lies at the southern end, on the shore of San Pablo Bay, and crosses into Sonoma County. It is cool and windy, with shallow clay soils. It is known for Chardonnay, Pinot Noir and sparkling wine, and has drawn investment from Champagne and Cava houses."
+          ],
+          "places": ["us-ava-mt__veeder", "us-ava-spring_mountain_district", "us-ava-diamond_mountain_district", "us-ava-howell_mountain", "us-ava-atlas_peak", "us-ava-los_carneros"]
+        }
+      ],
+      "key": [
+        "Mayacamas Mountains to the west, Vaca Range to the east, San Pablo Bay to the south.",
+        "Fog and cool air come up from the bay: the south is coolest, Calistoga in the north is warmest.",
+        "Cabernet Sauvignon is the leading grape, alone or in Bordeaux-style blends.",
+        "1976 Judgment of Paris: Stag's Leap Wine Cellars 1973 Cabernet and Chateau Montelena 1973 Chardonnay came first.",
+        "Mountain AVAs such as Howell Mountain lie above the fog and give firmer tannins.",
+        "Los Carneros straddles Napa and Sonoma and is known for Chardonnay, Pinot Noir and sparkling wine."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which mountains form the western side of Napa Valley?",
+          "options": ["The Vaca Range", "The Mayacamas Mountains", "The Santa Cruz Mountains", "The Santa Lucia Range"],
+          "answer": 1,
+          "explain": "The Mayacamas Mountains form the western side and separate Napa from Sonoma. The Vaca Range is on the east.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "id": "q2",
+          "q": "Where do the cooling fog and air in Napa Valley come from?",
+          "options": ["Monterey Bay", "Lake Berryessa", "San Pablo Bay", "The Sacramento River delta"],
+          "answer": 2,
+          "explain": "Fog and cool air move up the valley from San Pablo Bay at the southern end, the northern arm of San Francisco Bay."
+        },
+        {
+          "id": "q3",
+          "q": "Which part of Napa Valley is generally the warmest?",
+          "options": ["Los Carneros", "Coombsville", "Oak Knoll District", "Calistoga"],
+          "answer": 3,
+          "explain": "Calistoga is at the northern end, furthest from the bay. Los Carneros and Coombsville in the south are the coolest.",
+          "place": "us-ava-calistoga"
+        },
+        {
+          "id": "q4",
+          "q": "Which wine was placed first among the reds at the 1976 Judgment of Paris?",
+          "options": ["Stag's Leap Wine Cellars 1973 Cabernet Sauvignon", "Chateau Montelena 1973 Cabernet Sauvignon", "Opus One 1979", "Robert Mondavi 1973 Cabernet Sauvignon"],
+          "answer": 0,
+          "explain": "Stag's Leap Wine Cellars 1973 won the reds. Chateau Montelena won the whites, with its 1973 Chardonnay.",
+          "place": "us-ava-stags_leap_district"
+        },
+        {
+          "id": "q5",
+          "q": "In which AVA is the To Kalon vineyard?",
+          "options": ["Stags Leap District", "Rutherford", "Oakville", "Calistoga"],
+          "answer": 2,
+          "explain": "To Kalon is in Oakville, home also to Opus One. Rutherford is known for its western bench and Rutherford dust.",
+          "place": "us-ava-oakville"
+        },
+        {
+          "id": "q6",
+          "q": "Which statement about Howell Mountain is correct?",
+          "options": ["It lies on the Mayacamas side next to Sonoma", "Its lower boundary is 1,400 feet, above the fog", "It is a cool AVA on the shore of San Pablo Bay", "It is best known for sparkling wine"],
+          "answer": 1,
+          "explain": "Howell Mountain is on the Vaca side and starts at 1,400 feet, above the fog. It gives powerful, tannic Cabernet Sauvignon.",
+          "place": "us-ava-howell_mountain"
+        },
+        {
+          "id": "q7",
+          "q": "Which AVA straddles Napa and Sonoma counties and is known for Chardonnay, Pinot Noir and sparkling wine?",
+          "options": ["Coombsville", "Yountville", "Spring Mountain District", "Los Carneros"],
+          "answer": 3,
+          "explain": "Los Carneros lies on San Pablo Bay across both counties. Its cool, windy climate suits Burgundy varieties and sparkling wine.",
+          "place": "us-ava-los_carneros"
+        },
+        {
+          "id": "q8",
+          "q": "Cabernet Sauvignon from Stags Leap District is best known for which feature?",
+          "options": ["Very light body and high acidity", "Herbaceous, unripe flavours", "Soft, silky tannins", "Sweetness from late harvest"],
+          "answer": 2,
+          "explain": "Cooled by afternoon breezes from the bay, Stags Leap District is known for Cabernet with soft, silky tannins.",
+          "place": "us-ava-stags_leap_district"
+        }
+      ]
+    },
+    {
+      "id": "usa-sonoma",
+      "title": "Sonoma County and the North Coast",
+      "minutes": 7,
+      "intro": "This lesson covers Sonoma County, from the foggy Russian River Valley and the true Sonoma Coast to the warmer Dry Creek, Alexander and Sonoma valleys, with Zinfandel and a look north to Mendocino.",
+      "sections": [
+        {
+          "h": "Ocean, fog and wind gaps",
+          "p": [
+            "Sonoma County lies west of Napa, across the Mayacamas Mountains, and reaches the Pacific Ocean. It is cooler and more varied than Napa. The cold ocean creates fog that flows inland through gaps in the coastal hills. The Petaluma Gap, an AVA defined by its wind, funnels marine air from the coast towards San Pablo Bay.",
+            "The broad North Coast AVA takes in Sonoma, Napa, Mendocino and Lake counties, with parts of others. Within Sonoma, the Northern Sonoma AVA groups the valleys around the town of Healdsburg."
+          ],
+          "places": ["us-ava-petaluma_gap", "us-ava-north_coast", "us-ava-northern_sonoma"]
+        },
+        {
+          "h": "Russian River Valley",
+          "p": [
+            "The Russian River flows to the Pacific, and fog follows it inland most evenings. Russian River Valley is one of California's leading areas for Pinot Noir and Chardonnay. Many vineyards are on Goldridge, a fine sandy loam that drains well. Cool nights keep acidity in the grapes.",
+            "Green Valley of Russian River Valley, in the south-west, is among the coolest and foggiest parts. Chalk Hill, in the east, is warmer. Despite its name, its soils are volcanic, not chalk."
+          ],
+          "places": ["us-ava-russian_river_valley", "us-ava-green_valley_of_russian_river_valley", "us-ava-chalk_hill"]
+        },
+        {
+          "h": "Sonoma Coast and the true coast",
+          "p": [
+            "Sonoma Coast is a very large AVA that runs from the Mendocino border to San Pablo Bay. It was criticised for including warmer inland sites, so smaller AVAs now define the true coast. Fort Ross-Seaview takes in ridges close to the ocean, many above the fog. The more recent West Sonoma Coast AVA covers the coastal strip.",
+            "These cool, windy sites give Pinot Noir and Chardonnay with high acidity and moderate alcohol, and cool-climate Syrah with peppery notes."
+          ],
+          "places": ["us-ava-sonoma_coast", "us-ava-fort_ross_seaview", "us-ava-west_sonoma_coast"]
+        },
+        {
+          "h": "Warmer valleys",
+          "p": [
+            "Dry Creek Valley, north-west of Healdsburg, is warm and known for Zinfandel, often from old vines on the benches, and for Sauvignon Blanc. Alexander Valley, along the upper Russian River north-east of Healdsburg, is also warm and best known for ripe, round Cabernet Sauvignon. Knights Valley, next to Napa's Calistoga, also grows Cabernet.",
+            "Sonoma Valley, called the Valley of the Moon, lies between the Mayacamas and the Sonoma Mountains. In 1857 Agoston Haraszthy founded Buena Vista Winery here, one of California's oldest commercial wineries. Moon Mountain District and Sonoma Mountain are hillside AVAs within it."
+          ],
+          "places": ["us-ava-dry_creek_valley", "us-ava-alexander_valley", "us-ava-knights_valley", "us-ava-sonoma_valley", "us-ava-moon_mountain_district_sonoma_county", "us-ava-sonoma_mountain"]
+        },
+        {
+          "h": "Zinfandel, and Mendocino to the north",
+          "p": [
+            "Zinfandel is DNA-identical to Italy's Primitivo and to the Croatian variety Crljenak Kaštelanski, also called Tribidrag. Its berries ripen unevenly in the bunch, so wines can show fresh and raisined fruit together, often with high alcohol. Old vineyards are often field blends with Petite Sirah and Carignan.",
+            "North of Sonoma, much of Mendocino County is warm and inland. The exception is Anderson Valley, close to the ocean and cool, which makes Pinot Noir, Gewürztraminer, Riesling and traditional-method sparkling wine."
+          ],
+          "places": ["us-ava-mendocino", "us-ava-anderson_valley"]
+        }
+      ],
+      "key": [
+        "Sonoma is cooler and more varied than Napa because of Pacific fog and wind gaps such as the Petaluma Gap.",
+        "Russian River Valley: Pinot Noir and Chardonnay, fog along the river, Goldridge sandy loam.",
+        "Sonoma Coast is very large. Fort Ross-Seaview and West Sonoma Coast mark the true coast.",
+        "Dry Creek Valley: Zinfandel and Sauvignon Blanc. Alexander Valley: Cabernet Sauvignon.",
+        "Zinfandel is DNA-identical to Primitivo and Crljenak Kaštelanski (Tribidrag).",
+        "Anderson Valley in Mendocino is cool: Pinot Noir, aromatic whites and sparkling wine."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which Sonoma AVA is defined by the wind that carries marine air from the coast towards San Pablo Bay?",
+          "options": ["Petaluma Gap", "Alexander Valley", "Knights Valley", "Sonoma Valley"],
+          "answer": 0,
+          "explain": "The Petaluma Gap is a break in the coastal hills that funnels cool marine air inland.",
+          "place": "us-ava-petaluma_gap"
+        },
+        {
+          "id": "q2",
+          "q": "Which grapes is Russian River Valley best known for?",
+          "options": ["Cabernet Sauvignon and Merlot", "Zinfandel and Petite Sirah", "Pinot Noir and Chardonnay", "Syrah and Grenache"],
+          "answer": 2,
+          "explain": "Fog along the Russian River gives cool nights that suit Pinot Noir and Chardonnay.",
+          "place": "us-ava-russian_river_valley"
+        },
+        {
+          "id": "q3",
+          "q": "What are the soils of Chalk Hill?",
+          "options": ["Limestone", "Chalk", "Granite", "Volcanic"],
+          "answer": 3,
+          "explain": "Despite its name, Chalk Hill has volcanic soils, not chalk.",
+          "place": "us-ava-chalk_hill"
+        },
+        {
+          "id": "q4",
+          "q": "Why were smaller AVAs such as Fort Ross-Seaview created within Sonoma Coast?",
+          "options": ["Sonoma Coast was too small to be known abroad", "Sonoma Coast included warmer inland sites as well as the true coast", "Sonoma Coast crossed into Oregon", "Sonoma Coast did not allow Pinot Noir"],
+          "answer": 1,
+          "explain": "Sonoma Coast is very large and includes warmer inland areas. Fort Ross-Seaview and West Sonoma Coast define the cool coastal sites.",
+          "place": "us-ava-fort_ross_seaview"
+        },
+        {
+          "id": "q5",
+          "q": "Dry Creek Valley is best known for which grapes?",
+          "options": ["Pinot Noir and sparkling wine", "Riesling and Gewürztraminer", "Cabernet Franc and Chenin Blanc", "Zinfandel and Sauvignon Blanc"],
+          "answer": 3,
+          "explain": "Dry Creek Valley is warm, with old-vine Zinfandel on the benches and Sauvignon Blanc.",
+          "place": "us-ava-dry_creek_valley"
+        },
+        {
+          "id": "q6",
+          "q": "Zinfandel is DNA-identical to which Italian variety?",
+          "options": ["Primitivo", "Negroamaro", "Aglianico", "Nero d'Avola"],
+          "answer": 0,
+          "explain": "Zinfandel, Primitivo and the Croatian Crljenak Kaštelanski (Tribidrag) are the same variety."
+        },
+        {
+          "id": "q7",
+          "q": "In which AVA did Agoston Haraszthy found Buena Vista Winery in 1857?",
+          "options": ["Russian River Valley", "Sonoma Valley", "Alexander Valley", "Anderson Valley"],
+          "answer": 1,
+          "explain": "Buena Vista is in Sonoma Valley, the Valley of the Moon, between the Mayacamas and the Sonoma Mountains.",
+          "place": "us-ava-sonoma_valley"
+        },
+        {
+          "id": "q8",
+          "q": "Which Mendocino AVA is cool and known for Pinot Noir, Gewürztraminer and sparkling wine?",
+          "options": ["Redwood Valley", "Potter Valley", "Anderson Valley", "McDowell Valley"],
+          "answer": 2,
+          "explain": "Anderson Valley lies close to the ocean and is the cool exception in a mostly warm county.",
+          "place": "us-ava-anderson_valley"
+        }
+      ]
+    },
+    {
+      "id": "usa-central-coast",
+      "title": "The Central Coast and inland California",
+      "minutes": 7,
+      "intro": "This lesson covers the long Central Coast, from Monterey and the Santa Lucia Highlands to Paso Robles and Santa Barbara County, then the warm interior with Lodi.",
+      "sections": [
+        {
+          "h": "A long coast cooled by the Pacific",
+          "p": [
+            "The Central Coast AVA runs from San Francisco Bay south to Santa Barbara County. The ocean here is cold, and marine air reaches inland wherever valleys open to the sea. The result is a long growing season with cool nights, so grapes can hang late into autumn and keep their acidity.",
+            "The Santa Cruz Mountains AVA, south of San Francisco, is defined by mountain terrain. Ridge Vineyards' Monte Bello Cabernet Sauvignon comes from here, and cooler sites make fine Pinot Noir and Chardonnay."
+          ],
+          "places": ["us-ava-central_coast", "us-ava-santa_cruz_mountains"]
+        },
+        {
+          "h": "Monterey and the Santa Lucia Highlands",
+          "p": [
+            "Monterey's Salinas Valley opens north onto Monterey Bay. Each afternoon cold, strong winds blow up the valley from the bay. Budbreak is early and harvest is late, so the growing season is one of the longest in California. Arroyo Seco, known for its stony soils, lies further south in the valley.",
+            "The Santa Lucia Highlands sit on terraces on the eastern flank of the Santa Lucia Range, above the valley floor. Wind and cool air make it a leading area for Pinot Noir and Chardonnay, with some Syrah. Across the valley, in the Gabilan Mountains, Chalone and Mt. Harlan have rare limestone soils."
+          ],
+          "places": ["us-ava-monterey", "us-ava-santa_lucia_highlands", "us-ava-arroyo_seco", "us-ava-chalone", "us-ava-mt__harlan"]
+        },
+        {
+          "h": "Paso Robles",
+          "p": [
+            "Paso Robles, in San Luis Obispo County, is warm by day and has some of the widest day to night temperature swings in California. Marine air enters through the Templeton Gap. The west side is hillier and wetter, with calcareous soils. The east side is flatter, warmer and drier. In 2014 the AVA was divided into 11 sub-AVAs.",
+            "Paso Robles is known for Zinfandel, Cabernet Sauvignon and Rhône varieties. Tablas Creek, a partnership between the Perrin family of Château de Beaucastel and importer Robert Haas, imported Rhône vine cuttings and helped spread Syrah, Grenache, Mourvèdre and Roussanne in the region."
+          ],
+          "places": ["us-ava-paso_robles", "us-ava-adelaida_district", "us-ava-templeton_gap_district", "us-ava-paso_robles_willow_creek_district", "us-ava-paso_robles_estrella_district", "us-ava-creston_district"]
+        },
+        {
+          "h": "Santa Barbara County and the Sta. Rita Hills",
+          "p": [
+            "In Santa Barbara County the mountain ranges run east to west, not north to south as on most of the coast. The valleys open straight onto the Pacific, so fog and wind travel far inland, and sites get warmer the further east they are. Santa Maria Valley, in the north of the county, is cool and known for Chardonnay and Pinot Noir.",
+            "Sta. Rita Hills lies at the cool western end of the Santa Ynez Valley, between Lompoc and Buellton. It makes Pinot Noir and Chardonnay with high acidity. The short form Sta. was agreed after an objection from the Chilean producer Viña Santa Rita. Further east, Ballard Canyon focuses on Syrah, and warm Happy Canyon of Santa Barbara on Bordeaux varieties."
+          ],
+          "places": ["us-ava-santa_maria_valley", "us-ava-santa_ynez_valley", "us-ava-sta__rita_hills", "us-ava-ballard_canyon", "us-ava-happy_canyon_of_santa_barbara"]
+        },
+        {
+          "h": "Inland: Lodi and the Central Valley",
+          "p": [
+            "The Central Valley is California's hot, flat interior. Irrigated vineyards here produce most of the state's wine by volume, much of it for inexpensive brands. Lodi, at the northern end, is cooled in the afternoon by breezes from the delta where the Sacramento and San Joaquin rivers meet.",
+            "Lodi is famous for old-vine Zinfandel. In the Mokelumne River sub-AVA, many old vines grow on their own roots in deep sandy soils, which resist phylloxera. Lodi has seven sub-AVAs, approved in 2006. To the east, the Sierra Foothills also have old Zinfandel vines, a legacy of the Gold Rush."
+          ],
+          "places": ["us-ava-lodi", "us-ava-mokelumne_river", "us-ava-sierra_foothills"]
+        }
+      ],
+      "key": [
+        "The Central Coast AVA runs from San Francisco Bay to Santa Barbara County, with a long, cool growing season.",
+        "Monterey: strong afternoon winds from Monterey Bay. Santa Lucia Highlands: Pinot Noir and Chardonnay on terraces.",
+        "Paso Robles: warm days, wide diurnal range, Zinfandel, Cabernet and Rhône varieties. 11 sub-AVAs since 2014.",
+        "Santa Barbara's east to west ranges let ocean air far inland. Sta. Rita Hills: cool, Pinot Noir and Chardonnay.",
+        "Lodi: delta breezes, old-vine Zinfandel, own-rooted vines on sandy soils in Mokelumne River."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What cools the vineyards of Monterey's Salinas Valley?",
+          "options": ["Snowmelt from the Sierra Nevada", "Fog from San Pablo Bay", "Strong afternoon winds from Monterey Bay", "Breezes from the Sacramento and San Joaquin delta"],
+          "answer": 2,
+          "explain": "The Salinas Valley opens north onto Monterey Bay, and cold winds blow up the valley each afternoon.",
+          "place": "us-ava-monterey"
+        },
+        {
+          "id": "q2",
+          "q": "Which grapes are the Santa Lucia Highlands best known for?",
+          "options": ["Zinfandel and Petite Sirah", "Cabernet Sauvignon and Merlot", "Grenache and Mourvèdre", "Pinot Noir and Chardonnay"],
+          "answer": 3,
+          "explain": "Its windy, cool terraces above the Salinas Valley make it a leading area for Pinot Noir and Chardonnay.",
+          "place": "us-ava-santa_lucia_highlands"
+        },
+        {
+          "id": "q3",
+          "q": "In which year was Paso Robles divided into 11 sub-AVAs?",
+          "options": ["2006", "2014", "1983", "1976"],
+          "answer": 1,
+          "explain": "The 11 Paso Robles sub-AVAs, such as Adelaida District, were approved in 2014. 2006 is the year of Lodi's seven sub-AVAs.",
+          "place": "us-ava-paso_robles"
+        },
+        {
+          "id": "q4",
+          "q": "Tablas Creek in Paso Robles is a partnership with the family behind which estate?",
+          "options": ["Château de Beaucastel", "Château Mouton Rothschild", "Domaine de la Romanée-Conti", "Viña Santa Rita"],
+          "answer": 0,
+          "explain": "The Perrin family of Château de Beaucastel founded Tablas Creek with Robert Haas and brought in Rhône vine cuttings.",
+          "place": "us-ava-adelaida_district"
+        },
+        {
+          "id": "q5",
+          "q": "Why can ocean air travel far inland in Santa Barbara County?",
+          "options": ["The vineyards are at very high altitude", "Large lakes cool the valleys", "The mountain ranges run east to west and the valleys open onto the Pacific", "The county lies further north than Napa"],
+          "answer": 2,
+          "explain": "Unlike most of the coast, Santa Barbara's ranges run east to west, so fog and wind flow straight up the valleys.",
+          "place": "us-ava-santa_ynez_valley"
+        },
+        {
+          "id": "q6",
+          "q": "Where is the Sta. Rita Hills AVA?",
+          "options": ["At the warm eastern end of the Santa Ynez Valley", "At the cool western end of the Santa Ynez Valley, between Lompoc and Buellton", "Within the Paso Robles AVA", "On the terraces of the Santa Lucia Range"],
+          "answer": 1,
+          "explain": "Sta. Rita Hills is at the cool western end of the Santa Ynez Valley. Happy Canyon is at the warm eastern end.",
+          "place": "us-ava-sta__rita_hills"
+        },
+        {
+          "id": "q7",
+          "q": "What cools Lodi in the afternoon?",
+          "options": ["Fog from Monterey Bay", "Winds through the Templeton Gap", "Its high altitude in the Sierra Nevada", "Breezes from the delta of the Sacramento and San Joaquin rivers"],
+          "answer": 3,
+          "explain": "Lodi, at the northern end of the Central Valley, gets cooling afternoon breezes from the delta.",
+          "place": "us-ava-lodi"
+        },
+        {
+          "id": "q8",
+          "q": "Which Santa Barbara County AVA is the warmest and focuses on Bordeaux varieties?",
+          "options": ["Happy Canyon of Santa Barbara", "Sta. Rita Hills", "Santa Maria Valley", "Ballard Canyon"],
+          "answer": 0,
+          "explain": "Happy Canyon lies at the warm eastern end of the Santa Ynez Valley. Ballard Canyon focuses on Syrah.",
+          "place": "us-ava-happy_canyon_of_santa_barbara"
+        }
+      ]
+    },
+    {
+      "id": "usa-north",
+      "title": "Oregon, Washington and New York",
+      "minutes": 8,
+      "intro": "This lesson covers the Willamette Valley and its soil-based sub-AVAs in Oregon, the Columbia Valley and Walla Walla in Washington, and the Finger Lakes and Long Island in New York.",
+      "sections": [
+        {
+          "h": "Willamette Valley",
+          "p": [
+            "The Willamette Valley runs south from Portland towards Eugene, between the Coast Range to the west and the Cascade Mountains to the east. The Coast Range shields it from the worst Pacific weather. Summers are warm and dry, winters mild and wet, and autumn rain can threaten the harvest. Vintages vary more than in California.",
+            "Pinot Noir is the leading grape, followed by Pinot Gris and Chardonnay. In 1965 David Lett planted Pinot Noir in the valley, and he later founded The Eyrie Vineyards in the Dundee Hills. Burgundy took note: the Drouhin family founded Domaine Drouhin Oregon in the Dundee Hills in 1987."
+          ],
+          "places": ["us-ava-willamette_valley", "us-ava-dundee_hills"]
+        },
+        {
+          "h": "Willamette sub-AVAs and their soils",
+          "p": [
+            "Soil type defines many sub-AVAs. Dundee Hills is known for red volcanic Jory soil, formed from basalt. Yamhill-Carlton has marine sedimentary soils such as Willakenzie. Ribbon Ridge, a small ridge within the Chehalem Mountains, is also sedimentary. Chehalem Mountains mixes volcanic, sedimentary and windblown loess soils, and its Laurelwood District takes its name from the loess-based Laurelwood soil.",
+            "The Van Duzer Corridor is a gap in the Coast Range. Cold ocean air flows through it in the afternoon and over the Eola-Amity Hills, cooling the vines and helping keep acidity. Other sub-AVAs include McMinnville and Tualatin Hills.",
+            "Southern Oregon, with the Umpqua and Rogue valleys, is warmer and drier. It grows a wider range of grapes, including Syrah, Tempranillo and Bordeaux varieties."
+          ],
+          "places": ["us-ava-dundee_hills", "us-ava-yamhill_carlton", "us-ava-ribbon_ridge", "us-ava-chehalem_mountains", "us-ava-laurelwood_district", "us-ava-van_duzer_corridor", "us-ava-eola_amity_hills", "us-ava-mcminnville", "us-ava-tualatin_hills", "us-ava-southern_oregon", "us-ava-umpqua_valley", "us-ava-rogue_valley"]
+        },
+        {
+          "h": "Washington and the Columbia Valley",
+          "p": [
+            "Most of Washington's vineyards lie east of the Cascade Mountains, in their rain shadow. The Columbia Valley AVA is semi-desert, so vines need irrigation from the Columbia River and its tributaries. Summer days are long and sunny at this northern latitude, nights are cool and acidity stays fresh. Winters are cold, and hard freezes can kill vines.",
+            "Soils are mostly sand and silt over basalt, left by the Missoula Floods at the end of the last ice age. Sandy soils and cold winters keep phylloxera rare, so many vines grow on their own roots. Columbia Valley is a huge AVA that crosses into Oregon. Within it, Yakima Valley became Washington's first AVA in 1983.",
+            "Cabernet Sauvignon, Merlot, Syrah, Chardonnay and Riesling are the main grapes. Red Mountain, a small, warm AVA within Yakima Valley, is known for powerful, tannic Cabernet Sauvignon. West of the Cascades, the Puget Sound AVA is cool and wet."
+          ],
+          "places": ["us-ava-columbia_valley", "us-ava-yakima_valley", "us-ava-red_mountain", "us-ava-puget_sound"]
+        },
+        {
+          "h": "Walla Walla Valley and The Rocks",
+          "p": [
+            "Walla Walla Valley, in the south-east of the Columbia Valley, crosses the state line into Oregon. It makes Cabernet Sauvignon, Merlot and Syrah. Within it, The Rocks District of Milton-Freewater lies entirely in Oregon. Its soils are a bed of basalt cobblestones, and it is best known for savoury, earthy Syrah."
+          ],
+          "places": ["us-ava-walla_walla_valley", "us-ava-the_rocks_district_of_milton_freewater"]
+        },
+        {
+          "h": "New York: the Finger Lakes and Long Island",
+          "p": [
+            "The Finger Lakes are long, narrow, deep lakes in upstate New York, carved by glaciers. The largest, Seneca and Cayuga, have their own AVAs. The deep water stores heat: it softens winter cold, holds back budbreak in spring until frost risk has passed, and extends the autumn. Vineyards sit on slopes above the lakes, where cold air drains away.",
+            "Riesling is the signature grape, made from dry to sweet, alongside Cabernet Franc, Chardonnay and Pinot Noir. In the 1950s and 1960s Dr. Konstantin Frank showed that European vinifera vines could survive the winters when grafted onto suitable rootstocks. Native varieties such as Concord and French-American hybrids are still widely grown.",
+            "On Long Island, the North Fork has a maritime climate moderated by the Atlantic and the surrounding bays. It is known for Merlot, Cabernet Franc and Chardonnay."
+          ],
+          "places": ["us-ava-finger_lakes", "us-ava-seneca_lake", "us-ava-cayuga_lake", "us-ava-long_island", "us-ava-north_fork_of_long_island"]
+        }
+      ],
+      "key": [
+        "Willamette Valley lies between the Coast Range and the Cascades. Pinot Noir leads, with Pinot Gris and Chardonnay.",
+        "Dundee Hills: red volcanic Jory soil. Yamhill-Carlton: marine sedimentary soils. Laurelwood District: loess.",
+        "Columbia Valley is semi-desert in the Cascades rain shadow: irrigation, long summer days, cold winters, many own-rooted vines.",
+        "Yakima Valley (1983) was Washington's first AVA. Red Mountain is known for powerful Cabernet Sauvignon.",
+        "The Rocks District of Milton-Freewater, within Walla Walla Valley, lies in Oregon and is known for Syrah on basalt cobbles.",
+        "Finger Lakes: deep glacial lakes moderate the climate. Riesling is the signature grape."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Between which mountain ranges does the Willamette Valley lie?",
+          "options": ["The Coast Range and the Cascade Mountains", "The Mayacamas Mountains and the Vaca Range", "The Cascade Mountains and the Rocky Mountains", "The Santa Lucia Range and the Gabilan Mountains"],
+          "answer": 0,
+          "explain": "The Coast Range lies to the west and shields the valley from Pacific weather. The Cascades lie to the east.",
+          "place": "us-ava-willamette_valley"
+        },
+        {
+          "id": "q2",
+          "q": "What is the Jory soil of the Dundee Hills?",
+          "options": ["Marine sedimentary soil", "Red volcanic soil formed from basalt", "Windblown loess", "Limestone"],
+          "answer": 1,
+          "explain": "Jory is a red volcanic soil from basalt. Willakenzie in Yamhill-Carlton is sedimentary, and Laurelwood is loess.",
+          "place": "us-ava-dundee_hills"
+        },
+        {
+          "id": "q3",
+          "q": "Who planted Pinot Noir in the Willamette Valley in 1965 and founded The Eyrie Vineyards?",
+          "options": ["Robert Drouhin", "Konstantin Frank", "David Lett", "Robert Mondavi"],
+          "answer": 2,
+          "explain": "David Lett was the Willamette pioneer. The Drouhin family arrived later, founding Domaine Drouhin Oregon in 1987.",
+          "place": "us-ava-dundee_hills"
+        },
+        {
+          "id": "q4",
+          "q": "What is the Van Duzer Corridor?",
+          "options": ["A river valley that brings warm southern winds", "A volcanic ridge with Jory soil", "A gap in the Coast Range that lets cold ocean air in", "A lake that moderates winter temperatures"],
+          "answer": 2,
+          "explain": "Cold Pacific air flows through this gap in the afternoon and over the Eola-Amity Hills, helping keep acidity.",
+          "place": "us-ava-van_duzer_corridor"
+        },
+        {
+          "id": "q5",
+          "q": "Why do vines in the Columbia Valley need irrigation?",
+          "options": ["Autumn rain washes the soils away", "The sandy soils hold too much water", "Fog from the Pacific blocks the sun", "The region lies in the rain shadow of the Cascades"],
+          "answer": 3,
+          "explain": "The Cascade Mountains block Pacific rain, leaving the Columbia Valley semi-desert. Water comes from the Columbia River and its tributaries.",
+          "place": "us-ava-columbia_valley"
+        },
+        {
+          "id": "q6",
+          "q": "Why do many Washington vines grow on their own roots?",
+          "options": ["Sandy soils and cold winters keep phylloxera rare", "State law forbids grafted vines", "Rootstocks cannot grow in basalt", "All the vines are French-American hybrids"],
+          "answer": 0,
+          "explain": "Phylloxera struggles in sandy soils and cold winters, so grafting is less needed in eastern Washington.",
+          "place": "us-ava-yakima_valley"
+        },
+        {
+          "id": "q7",
+          "q": "The Rocks District of Milton-Freewater lies in which state, and which grape is it best known for?",
+          "options": ["Washington, Riesling", "Oregon, Syrah", "Oregon, Pinot Noir", "Washington, Merlot"],
+          "answer": 1,
+          "explain": "It sits within Walla Walla Valley but entirely in Oregon, and its basalt cobblestones give savoury, earthy Syrah.",
+          "place": "us-ava-the_rocks_district_of_milton_freewater"
+        },
+        {
+          "id": "q8",
+          "q": "Which grape is the signature of the Finger Lakes?",
+          "options": ["Cabernet Sauvignon", "Zinfandel", "Merlot", "Riesling"],
+          "answer": 3,
+          "explain": "Riesling, made from dry to sweet, is the flagship of the Finger Lakes. Merlot is more typical of Long Island's North Fork.",
+          "place": "us-ava-finger_lakes"
+        }
+      ]
+    }
+  ]
+}

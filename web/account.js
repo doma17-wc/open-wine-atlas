@@ -26,7 +26,15 @@ const KINDS = {
              items: () => [["recent", { v: MY.recent }], ["compare", { v: MY.compare }]],
              apply: (m) => { if (m.get("recent")) MY.recent = m.get("recent").v || []; if (m.get("compare")) MY.compare = m.get("compare").v || []; } },
 };
-const KIND_OF = { saved: "saved", journal: "tasting", notes: "note", recent: "state", compare: "state" };
+// study progress (study.js): one row per review card, plus the lessons read and the totals
+KINDS.study = { keys: ["study"], keep: true,
+  items: () => { const s = MY.study || {};
+    return [...Object.entries(s.cards || {}).map(([k, v]) => ["c:" + k, v]), ["done", { v: s.done || {} }], ["stats", { v: s.stats || {}, today: s.today || {} }]]; },
+  apply: (m) => { const s = MY.study && typeof MY.study === "object" ? MY.study : (MY.study = {});
+    s.cards = {}; for (const [id, v] of m) if (id.startsWith("c:")) s.cards[id.slice(2)] = v;
+    if (m.get("done")) s.done = m.get("done").v || {};
+    if (m.get("stats")) { s.stats = m.get("stats").v || s.stats; s.today = m.get("stats").today || s.today; } } };
+const KIND_OF = { saved: "saved", journal: "tasting", notes: "note", recent: "state", compare: "state", study: "study" };
 
 // a fingerprint that does not depend on key order (the database stores JSON keys in its own order)
 const canon = (v) => Array.isArray(v) ? "[" + v.map(canon).join(",") + "]"

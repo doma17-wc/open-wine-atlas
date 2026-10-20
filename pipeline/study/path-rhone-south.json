@@ -1,0 +1,596 @@
+{
+  "id": "rhone-south",
+  "title": "Rhône and the French South",
+  "level": "WSET 3 to Diploma",
+  "summary": "The Rhône valley from the granite slopes of the north to the Grenache blends of the south, then Provence, Languedoc and Roussillon with their rosés, red blends, sparkling wines and vins doux naturels.",
+  "lessons": [
+    {
+      "id": "rhone-south-northern-rhone",
+      "title": "The Northern Rhône",
+      "minutes": 8,
+      "intro": "This lesson covers the narrow, steep northern part of the Rhône valley, where Syrah is the only red grape and Viognier, Marsanne and Roussanne make the whites. You will learn each appellation, its bank of the river and its grape rules.",
+      "sections": [
+        {
+          "h": "A narrow valley of steep slopes",
+          "p": [
+            "The Northern Rhône (Rhône septentrional) runs south from Vienne to just below Valence. The vineyards sit on steep slopes above the river, many of them terraced and worked by hand. The climate is moderately continental: warm summers, cold winters and rain spread more evenly through the year than in the south.",
+            "Soils are mostly granite and related rocks such as gneiss and schist, with patches of loess and river deposits. On the steepest sites vines are often tied to individual wooden stakes (échalas) to cope with the slope and the wind."
+          ],
+          "places": ["fr-inao-a272", "fr-inao-a282"]
+        },
+        {
+          "h": "Syrah and the white trio",
+          "p": [
+            "Syrah is the only red variety. Here it gives deep colour, black fruit, black pepper, violet and olive notes, firm tannins and fresh acidity. The best wines need years in bottle.",
+            "Three white grapes are used: Viognier, Marsanne and Roussanne. Several red appellations allow a small share of these white grapes in the blend. The amount differs by appellation, so learn each rule separately."
+          ]
+        },
+        {
+          "h": "Côte-Rôtie, Condrieu and Château-Grillet",
+          "p": [
+            "Côte-Rôtie lies on the west bank around Ampuis, the northernmost appellation. It makes red only, from Syrah with up to 20% Viognier. The Viognier is traditionally co-fermented with the Syrah, which can lift the perfume and help fix colour. Two famous slopes are the Côte Brune and the Côte Blonde.",
+            "Condrieu, just to the south, makes white wine only, from 100% Viognier. The wines are full-bodied and aromatic, with apricot, peach and blossom, and fairly low acidity. Most are drunk young. Château-Grillet is a small appellation inside the Condrieu area, also Viognier, and owned by a single estate."
+          ],
+          "places": ["fr-inao-a272", "fr-inao-a270", "fr-inao-a266"]
+        },
+        {
+          "h": "Hermitage and Crozes-Hermitage",
+          "p": [
+            "Hermitage is a south-facing hill on the east bank above the town of Tain-l'Hermitage. The western end is granite. Famous plots include Les Bessards, Le Méal and L'Hermite. Red Hermitage is Syrah, with up to 15% Marsanne and Roussanne allowed. White Hermitage is made from Marsanne and Roussanne and can age for decades. A sweet vin de paille from dried grapes is also permitted.",
+            "Crozes-Hermitage surrounds the hill and is the largest Northern Rhône appellation. It includes flatter land in the south that is easier to work by machine. The wines follow the same grape rules as Hermitage but are usually lighter and ready sooner."
+          ],
+          "places": ["fr-inao-a282", "fr-inao-a280"]
+        },
+        {
+          "h": "Saint-Joseph, Cornas and Saint-Péray",
+          "p": [
+            "Saint-Joseph is a long, narrow appellation on the west bank between the Condrieu area and Cornas. Reds are Syrah with up to 10% Marsanne and Roussanne. Whites are Marsanne and Roussanne. Quality and style vary along its length.",
+            "Cornas, further south on the west bank, makes red only and must be 100% Syrah. Its granite slopes form a sheltered, warm amphitheatre, and the wines are dark and tannic in youth. Saint-Péray, the southernmost appellation, makes white only, from Marsanne and Roussanne, both still and traditional-method sparkling.",
+            "East of the main valley, along the Drôme river, the Diois makes sparkling wines. The best known is Clairette de Die Méthode Ancestrale (also called méthode dioise), at least 75% Muscat à Petits Grains, which finishes its only fermentation in bottle. Plain Clairette de Die is a traditional-method wine from Clairette alone, and Crémant de Die is made mainly from Clairette."
+          ],
+          "places": ["fr-inao-a284", "fr-inao-a271", "fr-inao-a285", "fr-inao-a269", "fr-inao-a279"]
+        }
+      ],
+      "key": [
+        "Syrah is the only red grape of the Northern Rhône; the whites are Viognier, Marsanne and Roussanne.",
+        "Côte-Rôtie allows up to 20% Viognier, Hermitage and Crozes-Hermitage up to 15% Marsanne and Roussanne, Saint-Joseph up to 10%.",
+        "Cornas is red only and 100% Syrah.",
+        "Condrieu and Château-Grillet are white only, from 100% Viognier; Château-Grillet belongs to a single estate.",
+        "Hermitage is on the east bank at Tain-l'Hermitage; Côte-Rôtie, Condrieu, Saint-Joseph, Cornas and Saint-Péray are on the west bank.",
+        "Saint-Péray makes white wine only, still and sparkling, from Marsanne and Roussanne."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which white grape may be co-fermented with Syrah in Côte-Rôtie, up to 20% of the blend?",
+          "options": ["Marsanne", "Viognier", "Roussanne", "Clairette"],
+          "answer": 1,
+          "explain": "Côte-Rôtie allows up to 20% Viognier, traditionally co-fermented with the Syrah.",
+          "place": "fr-inao-a272"
+        },
+        {
+          "id": "q2",
+          "q": "Which Northern Rhône appellation makes red wine only and must be 100% Syrah?",
+          "options": ["Cornas", "Saint-Joseph", "Crozes-Hermitage", "Hermitage"],
+          "answer": 0,
+          "explain": "Cornas permits no white grapes in its reds. Saint-Joseph, Hermitage and Crozes-Hermitage all allow a share of Marsanne and Roussanne.",
+          "place": "fr-inao-a271"
+        },
+        {
+          "id": "q3",
+          "q": "What makes Château-Grillet unusual among French appellations?",
+          "options": ["It is the only Rhône appellation for sweet wine", "It is planted only with Marsanne", "It is on the east bank opposite Hermitage", "It is a small Viognier appellation owned by a single estate"],
+          "answer": 3,
+          "explain": "Château-Grillet lies inside the Condrieu area, grows Viognier and belongs to one estate.",
+          "place": "fr-inao-a266"
+        },
+        {
+          "id": "q4",
+          "q": "Above which town is the hill of Hermitage?",
+          "options": ["Ampuis", "Vienne", "Tain-l'Hermitage", "Cornas"],
+          "answer": 2,
+          "explain": "Hermitage is a south-facing hill on the east bank above Tain-l'Hermitage. Ampuis is the home of Côte-Rôtie.",
+          "place": "fr-inao-a282"
+        },
+        {
+          "id": "q5",
+          "q": "What style of wine does Saint-Péray produce?",
+          "options": ["Red only, from Syrah", "White only, still and sparkling, from Marsanne and Roussanne", "Rosé only, from Syrah", "Sweet white only, from Viognier"],
+          "answer": 1,
+          "explain": "Saint-Péray, the southernmost Northern Rhône appellation, makes only white wine, both still and traditional-method sparkling.",
+          "place": "fr-inao-a285"
+        },
+        {
+          "id": "q6",
+          "q": "Which is the largest Northern Rhône appellation, including flatter land that can be worked by machine?",
+          "options": ["Côte-Rôtie", "Saint-Joseph", "Condrieu", "Crozes-Hermitage"],
+          "answer": 3,
+          "explain": "Crozes-Hermitage surrounds the Hermitage hill and includes flatter land in the south.",
+          "place": "fr-inao-a280"
+        },
+        {
+          "id": "q7",
+          "q": "How is the climate of the Northern Rhône best described?",
+          "options": ["Moderately continental", "Hot Mediterranean", "Cool maritime", "Hot and arid"],
+          "answer": 0,
+          "explain": "The north has a moderately continental climate with cold winters; the south is Mediterranean."
+        },
+        {
+          "id": "q8",
+          "q": "Clairette de Die Méthode Ancestrale, from the Diois east of the Rhône, is made mainly from which grape?",
+          "options": ["Clairette", "Viognier", "Muscat à Petits Grains", "Mauzac"],
+          "answer": 2,
+          "explain": "The méthode ancestrale version must be at least 75% Muscat à Petits Grains. Plain Clairette de Die and Crémant de Die are the traditional-method wines based on Clairette.",
+          "place": "fr-inao-a269"
+        }
+      ]
+    },
+    {
+      "id": "rhone-south-southern-rhone",
+      "title": "The Southern Rhône",
+      "minutes": 8,
+      "intro": "This lesson covers the wide, warm southern Rhône, where Grenache leads blended wines. You will learn the climate, the Côtes du Rhône pyramid, Châteauneuf-du-Pape and the other crus, including the sweet Muscat and Grenache wines.",
+      "sections": [
+        {
+          "h": "Sun, drought and the mistral",
+          "p": [
+            "South of Montélimar the valley opens into a wide plain. The Southern Rhône (Rhône méridional) has a Mediterranean climate: hot, dry summers, mild winters and a risk of drought. Much of the rain falls in autumn and can arrive as storms at harvest.",
+            "The mistral is a cold, dry wind that blows from the north down the valley. It dries the vines after rain and so limits rot and mildew, but it can also break shoots. Many vines are grown as low bush vines (gobelet), which stand up well to the wind."
+          ]
+        },
+        {
+          "h": "Grenache and its partners",
+          "p": [
+            "Grenache is the main red grape. It ripens to high sugar levels, so the wines are often high in alcohol, with red fruit and spice, moderate colour and soft tannins. It is prone to oxidation, so it is usually blended.",
+            "Syrah adds colour, structure and black fruit. Mourvèdre adds tannin, dark fruit and gamey notes, but needs a lot of heat to ripen. Cinsault and Carignan are also common. White blends use Grenache Blanc, Clairette, Bourboulenc, Roussanne, Marsanne and Viognier."
+          ]
+        },
+        {
+          "h": "The Côtes du Rhône pyramid",
+          "p": [
+            "Côtes du Rhône is the regional appellation for the whole valley, north and south, though most of it is made in the south. Above it, Côtes du Rhône Villages has stricter rules, such as lower yields and a higher minimum alcohol.",
+            "Some villages, and a few named areas, may add their name to the label, for example Côtes du Rhône Villages Séguret, Sablet, Valréas or Plan de Dieu, a plateau that spans several communes. At the top are the crus, which have their own appellations and do not use the Côtes du Rhône name. Over time several villages have been promoted to cru, among them Rasteau, Vinsobres and Cairanne.",
+            "Around the edges lie separate appellations that follow similar Grenache-based styles, such as Ventoux, Luberon, Grignan-les-Adhémar and Costières de Nîmes."
+          ],
+          "places": ["fr-inao-a275", "fr-inao-a276", "fr-inao-d1709", "fr-inao-d1358", "fr-inao-d1354", "fr-inao-d1359", "fr-inao-a313", "fr-inao-a1130", "fr-inao-a819", "fr-inao-a278", "fr-inao-a854", "fr-inao-a1013", "fr-inao-a256"]
+        },
+        {
+          "h": "Châteauneuf-du-Pape",
+          "p": [
+            "Châteauneuf-du-Pape lies on the east bank between Orange and Avignon. Its name recalls the popes who lived at Avignon in the 14th century. In 1923 Baron Le Roy of Château Fortia led local growers to draw up production rules, and these became a model for the French AOC system. The appellation was created in 1936.",
+            "Thirteen grape varieties are permitted, or eighteen if colour variants such as Grenache Blanc and Grenache Gris are counted separately. Reds are usually Grenache-led. White Châteauneuf is also made, but no rosé. Parts of the area are covered in galets roulés, large rounded stones that store heat by day and release it at night. Other sectors have sand or limestone."
+          ],
+          "places": ["fr-inao-a267"]
+        },
+        {
+          "h": "The other crus and the sweet wines",
+          "p": [
+            "Gigondas sits below the limestone peaks of the Dentelles de Montmirail and makes powerful Grenache-led reds, some rosé and, since the 2023 vintage, white wine based on Clairette. Neighbouring Vacqueyras makes red, white and rosé. On the west bank, in the Gard, Tavel makes only rosé, Grenache-based and deeper in colour and fuller in body than most rosés. Lirac, next door, makes all three colours.",
+            "The south also makes vins doux naturels, sweet wines fortified during fermentation. Muscat de Beaumes-de-Venise is made from Muscat à Petits Grains. Rasteau makes a Grenache-based sweet wine as well as dry red cru wine. The village of Beaumes de Venise also has a cru for dry red."
+          ],
+          "places": ["fr-inao-a281", "fr-inao-a288", "fr-inao-a287", "fr-inao-a283", "fr-inao-a308", "fr-inao-a313", "fr-inao-a1097"]
+        }
+      ],
+      "key": [
+        "The Southern Rhône has a Mediterranean climate; the cold, dry mistral wind limits disease but can damage vines.",
+        "Grenache leads most red blends, supported by Syrah, Mourvèdre, Cinsault and Carignan.",
+        "The pyramid runs from Côtes du Rhône to Côtes du Rhône Villages, then Villages with a named village, then the crus.",
+        "Châteauneuf-du-Pape permits thirteen varieties, makes red and white but no rosé, and is known for its galets roulés.",
+        "Baron Le Roy's 1923 rules at Châteauneuf-du-Pape were a model for the French AOC system.",
+        "Tavel makes rosé only; Muscat de Beaumes-de-Venise and Rasteau make vins doux naturels."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the mistral?",
+          "options": ["A warm, humid wind from the sea", "A cold, dry wind blowing from the north down the valley", "An autumn rain pattern", "A local name for bush-trained vines"],
+          "answer": 1,
+          "explain": "The mistral is a cold, dry northerly wind. It limits rot and mildew but can break shoots."
+        },
+        {
+          "id": "q2",
+          "q": "What are galets roulés?",
+          "options": ["Terraces built on steep granite slopes", "Wooden stakes used to train vines", "Large rounded stones that store heat by day and release it at night", "Clay pots used for ageing wine"],
+          "answer": 2,
+          "explain": "Galets roulés are large rounded stones found in parts of Châteauneuf-du-Pape that hold the day's heat.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "id": "q3",
+          "q": "Which wine style is not permitted under the Châteauneuf-du-Pape appellation?",
+          "options": ["Red", "White", "Grenache-led red", "Rosé"],
+          "answer": 3,
+          "explain": "Châteauneuf-du-Pape makes red and white wine only, with no rosé.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "id": "q4",
+          "q": "Who led the 1923 production rules at Châteauneuf-du-Pape that became a model for the AOC system?",
+          "options": ["Baron Le Roy of Château Fortia", "The popes of Avignon", "The monks of Saint-Hilaire", "The INAO in its first year"],
+          "answer": 0,
+          "explain": "Baron Le Roy of Château Fortia led local growers in drawing up rules in 1923. The appellation itself followed in 1936.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "id": "q5",
+          "q": "Which Southern Rhône appellation makes only rosé?",
+          "options": ["Lirac", "Vacqueyras", "Tavel", "Gigondas"],
+          "answer": 2,
+          "explain": "Tavel, on the west bank in the Gard, makes only rosé. Lirac next door makes all three colours.",
+          "place": "fr-inao-a287"
+        },
+        {
+          "id": "q6",
+          "q": "On a label, what sits directly above plain Côtes du Rhône Villages in the pyramid?",
+          "options": ["IGP Méditerranée", "Côtes du Rhône Villages with a geographical name, such as Plan de Dieu", "Côtes du Rhône", "Vin de France"],
+          "answer": 1,
+          "explain": "Some villages and named areas may add their name, such as Plan de Dieu, Séguret or Sablet. The crus sit above them.",
+          "place": "fr-inao-d1709"
+        },
+        {
+          "id": "q7",
+          "q": "Muscat de Beaumes-de-Venise is best described as:",
+          "options": ["A dry white from Viognier", "A traditional-method sparkling wine", "A dry red cru from Grenache", "A vin doux naturel from Muscat à Petits Grains"],
+          "answer": 3,
+          "explain": "It is a sweet wine fortified during fermentation, made from Muscat à Petits Grains. The dry red of the village is sold as Beaumes de Venise.",
+          "place": "fr-inao-a308"
+        },
+        {
+          "id": "q8",
+          "q": "Which cru sits below the limestone peaks of the Dentelles de Montmirail and is known for powerful Grenache-led reds?",
+          "options": ["Gigondas", "Tavel", "Lirac", "Costières de Nîmes"],
+          "answer": 0,
+          "explain": "Gigondas lies below the Dentelles de Montmirail, next to Vacqueyras.",
+          "place": "fr-inao-a281"
+        }
+      ]
+    },
+    {
+      "id": "rhone-south-provence",
+      "title": "Provence",
+      "minutes": 7,
+      "intro": "This lesson covers Provence, France's great rosé region, and its small historic appellations. You will learn how Provence rosé is made, the main regional appellations, and the special cases of Bandol, Cassis, Palette and Bellet.",
+      "sections": [
+        {
+          "h": "An old vineyard by the sea",
+          "p": [
+            "Provence has one of the oldest vineyards in France. Greek settlers founded Massalia, today's Marseille, around 600 BC and planted vines. The climate is Mediterranean, with long sunny summers, little summer rain and the mistral in the west.",
+            "Soils change from west to east. The west is mostly limestone. In the east, around the Maures hills, the rocks are crystalline, such as schist and granite."
+          ]
+        },
+        {
+          "h": "Provence rosé",
+          "p": [
+            "Rosé makes up most of the region's production. The typical style is pale, dry and delicate, with red fruit, citrus and herbal notes. Common grapes are Grenache, Cinsault, Syrah and Mourvèdre, plus the local Tibouren.",
+            "To keep the colour pale, grapes are pressed directly or given only a short skin contact. Picking early in the day and cool fermentation help keep fresh aromas. The main white grape is Rolle, known in Italy as Vermentino."
+          ]
+        },
+        {
+          "h": "The regional appellations",
+          "p": [
+            "Côtes de Provence is the largest appellation and stretches across much of the region. Some areas may add their name, such as Sainte-Victoire, near the mountain painted by Cézanne, and La Londe, close to the coast.",
+            "Coteaux d'Aix-en-Provence lies in the west around Aix and allows Cabernet Sauvignon alongside the Mediterranean grapes. Coteaux Varois en Provence sits in the centre, higher and cooler. Les Baux de Provence, in the Alpilles hills, is known for its many organic and biodynamic estates."
+          ],
+          "places": ["fr-inao-a297", "fr-inao-d1702", "fr-inao-d1839", "fr-inao-a295", "fr-inao-a582", "fr-inao-a301"]
+        },
+        {
+          "h": "Bandol and Mourvèdre",
+          "p": [
+            "Bandol lies on the coast west of Toulon. Its vines grow on terraces, called restanques, on limestone and sandy soils facing the sea. Mourvèdre needs a lot of warmth to ripen, and this sheltered, sunny site suits it well.",
+            "Red Bandol must contain at least 50% Mourvèdre and spend at least 18 months in oak before release. The wines have dark fruit, firm tannins and notes of herbs and leather with age, and they can age for many years. Bandol also makes rosé and white."
+          ],
+          "places": ["fr-inao-a292"]
+        },
+        {
+          "h": "Cassis, Palette and Bellet",
+          "p": [
+            "Cassis, on the coast east of Marseille, makes mainly white wine, from Marsanne and Clairette above all. Its vines grow below steep limestone cliffs. It was among the first French appellations, created in 1936.",
+            "Palette is a tiny appellation just outside Aix on limestone soils, dominated by one estate, Château Simone. Its wines use many old local varieties. Bellet, in the hills above Nice, grows the local Braquet and Folle Noire for reds and Rolle for whites."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A0396", "fr-inao-a298", "fr-eupdo-PDO-FR-A0663"]
+        }
+      ],
+      "key": [
+        "Greek settlers at Massalia (Marseille) planted vines in Provence around 600 BC.",
+        "Rosé is most of Provence's production: pale, dry, from Grenache, Cinsault, Syrah, Mourvèdre and Tibouren.",
+        "Côtes de Provence is the largest appellation, with named areas such as Sainte-Victoire and La Londe.",
+        "Red Bandol needs at least 50% Mourvèdre and at least 18 months in oak.",
+        "Cassis makes mainly white wine from Marsanne and Clairette; Palette is dominated by Château Simone.",
+        "Rolle (Vermentino) is the main white grape of Provence."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Who first planted vines in Provence, around 600 BC?",
+          "options": ["Roman legions", "Greek settlers at Massalia", "Cistercian monks", "The popes of Avignon"],
+          "answer": 1,
+          "explain": "Greek settlers founded Massalia, today's Marseille, around 600 BC and brought vines with them."
+        },
+        {
+          "id": "q2",
+          "q": "Which grape must make up at least 50% of red Bandol?",
+          "options": ["Grenache", "Syrah", "Cinsault", "Mourvèdre"],
+          "answer": 3,
+          "explain": "Red Bandol must contain at least 50% Mourvèdre, a late-ripening grape that suits this warm coastal site.",
+          "place": "fr-inao-a292"
+        },
+        {
+          "id": "q3",
+          "q": "What is the minimum time red Bandol must spend in oak before release?",
+          "options": ["6 months", "12 months", "18 months", "36 months"],
+          "answer": 2,
+          "explain": "Red Bandol must spend at least 18 months in oak.",
+          "place": "fr-inao-a292"
+        },
+        {
+          "id": "q4",
+          "q": "Which estate dominates the tiny appellation of Palette?",
+          "options": ["Château Simone", "Château Fortia", "Château-Grillet", "Château Rayas"],
+          "answer": 0,
+          "explain": "Palette, just outside Aix, is dominated by Château Simone. Château Fortia is in Châteauneuf-du-Pape.",
+          "place": "fr-inao-a298"
+        },
+        {
+          "id": "q5",
+          "q": "What does the coastal appellation of Cassis mainly produce?",
+          "options": ["Red wine from Mourvèdre", "Sweet Muscat", "White wine from Marsanne and Clairette", "Sparkling wine from Mauzac"],
+          "answer": 2,
+          "explain": "Cassis makes mainly white wine, with Marsanne and Clairette as the leading grapes.",
+          "place": "fr-eupdo-PDO-FR-A0396"
+        },
+        {
+          "id": "q6",
+          "q": "Rolle, the main white grape of Provence, is known in Italy as:",
+          "options": ["Trebbiano", "Vermentino", "Fiano", "Garganega"],
+          "answer": 1,
+          "explain": "Rolle and Vermentino are the same grape."
+        },
+        {
+          "id": "q7",
+          "q": "Which Provence appellation lies in the west around Aix and allows Cabernet Sauvignon?",
+          "options": ["Bellet", "Bandol", "Coteaux Varois en Provence", "Coteaux d'Aix-en-Provence"],
+          "answer": 3,
+          "explain": "Coteaux d'Aix-en-Provence allows Cabernet Sauvignon alongside the Mediterranean grapes.",
+          "place": "fr-inao-a295"
+        }
+      ]
+    },
+    {
+      "id": "rhone-south-languedoc",
+      "title": "Languedoc",
+      "minutes": 8,
+      "intro": "This lesson covers Languedoc, the large arc of vineyards from Nîmes towards Spain. You will learn its hierarchy, the main red appellations and their soils, the sparkling wines of Limoux and the Muscats of the Hérault.",
+      "sections": [
+        {
+          "h": "From bulk wine to quality",
+          "p": [
+            "Languedoc stretches along the Mediterranean from near Nîmes to the borders of Roussillon. For much of the 20th century it made large volumes of cheap wine from high-yielding vines. Since the 1980s many of these vineyards have been pulled up, and growers have turned to quality, often working old bush vines on the hills.",
+            "The climate is Mediterranean, hot and dry, with wild herb scrub called garrigue on the hillsides. The main red grapes are Carignan, Grenache, Syrah, Mourvèdre and Cinsault."
+          ]
+        },
+        {
+          "h": "The hierarchy",
+          "p": [
+            "Many varietal wines, including Chardonnay, Merlot and Cabernet Sauvignon, are sold as IGP Pays d'Oc. The regional appellation is Languedoc, which replaced the old Coteaux du Languedoc name and covers Roussillon too.",
+            "Within Languedoc, some areas may add their name to the label, such as Montpeyroux, Saint-Saturnin and Cabrières. Above these are the sub-regional appellations and crus, such as Pic Saint-Loup, Faugères, Saint-Chinian, Minervois and Corbières."
+          ],
+          "places": ["fr-inao-a257", "fr-inao-d1313", "fr-inao-d1320", "fr-inao-d1310"]
+        },
+        {
+          "h": "Around Montpellier",
+          "p": [
+            "Pic Saint-Loup lies north of Montpellier beneath a limestone peak of the same name. Its climate is cooler and wetter than most of Languedoc, and Syrah does well there, blended with Grenache and Mourvèdre. Terrasses du Larzac, further north-west towards the Larzac plateau, is also cooler, with large differences between day and night temperatures.",
+            "Near the coast, Picpoul de Pinet makes crisp white wine from Piquepoul, grown beside the Étang de Thau lagoon and often matched with its oysters."
+          ],
+          "places": ["fr-inao-a833", "fr-inao-a1042", "fr-inao-a733"]
+        },
+        {
+          "h": "Schist hills and the Aude",
+          "p": [
+            "Faugères and Saint-Chinian lie in the hills of the Hérault. Faugères is on schist. Saint-Chinian has schist in the north, where Berlou and Roquebrun may add their names, and clay and limestone in the south. Both make Syrah, Grenache, Mourvèdre and Carignan blends.",
+            "In the Aude, Minervois lies on the slopes of the Montagne Noire, with La Livinière as its cru. Corbières is large and rugged, with many soils and a strong Carignan tradition; Boutenac is its cru. These two crus were called Minervois-La Livinière and Corbières-Boutenac until they were renamed in 2024. Fitou, enclosed by Corbières, became in 1948 the first Languedoc-Roussillon appellation for red table wine. La Clape is a limestone massif by the sea near Narbonne.",
+            "Near Carcassonne in the west, Cabardès and Malepère feel some Atlantic influence and blend Bordeaux grapes such as Merlot and Cabernet with Mediterranean ones."
+          ],
+          "places": ["fr-inao-a260", "fr-inao-a263", "fr-inao-d1332", "fr-inao-d1700", "fr-inao-a262", "fr-inao-a265", "fr-inao-a255", "fr-inao-a1098", "fr-inao-a261", "fr-inao-a831", "fr-inao-a264", "fr-inao-a608"]
+        },
+        {
+          "h": "Limoux and the Muscats",
+          "p": [
+            "Limoux lies in the upper Aude valley, higher and cooler than the rest of Languedoc, with some Atlantic influence. Records from the abbey of Saint-Hilaire in 1531 mention sparkling wine there. Blanquette de Limoux is a traditional-method sparkling wine made mostly from the local Mauzac. Blanquette méthode ancestrale is pure Mauzac, bottled before the first fermentation ends so that it finishes in bottle.",
+            "Crémant de Limoux is a traditional-method wine based on Chardonnay and Chenin Blanc, with some Mauzac and Pinot Noir. Still white Limoux must be fermented in oak. The Hérault also makes sweet vins doux naturels from Muscat à Petits Grains: Muscat de Frontignan, Muscat de Lunel, Muscat de Mireval and Muscat de Saint-Jean-de-Minervois."
+          ],
+          "places": ["fr-inao-a251", "fr-inao-a250", "fr-inao-a304", "fr-inao-a309", "fr-inao-a310", "fr-inao-a311"]
+        }
+      ],
+      "key": [
+        "Languedoc is the regional appellation for Languedoc and Roussillon; varietal wines are often sold as IGP Pays d'Oc.",
+        "Faugères is on schist; Saint-Chinian has schist in the north (Berlou, Roquebrun) and clay-limestone in the south.",
+        "Pic Saint-Loup, north of Montpellier, is cooler than most of Languedoc and Syrah does well there.",
+        "La Livinière and Boutenac (until 2024 Minervois-La Livinière and Corbières-Boutenac) are the crus of Minervois and Corbières.",
+        "Blanquette de Limoux is based on Mauzac; Crémant de Limoux is based on Chardonnay and Chenin Blanc.",
+        "Frontignan, Lunel, Mireval and Saint-Jean-de-Minervois make Muscat vins doux naturels."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape is the base of Blanquette de Limoux?",
+          "options": ["Chardonnay", "Chenin Blanc", "Mauzac", "Clairette"],
+          "answer": 2,
+          "explain": "Blanquette de Limoux is made mostly from Mauzac. Crémant de Limoux is based on Chardonnay and Chenin Blanc."
+        },
+        {
+          "id": "q2",
+          "q": "What is the soil of Faugères?",
+          "options": ["Schist", "Chalk", "Volcanic basalt", "Sand"],
+          "answer": 0,
+          "explain": "Faugères is known for its schist soils.",
+          "place": "fr-inao-a260"
+        },
+        {
+          "id": "q3",
+          "q": "Which appellation lies north of Montpellier, under a limestone peak, with a cooler climate that suits Syrah?",
+          "options": ["Corbières", "Fitou", "La Clape", "Pic Saint-Loup"],
+          "answer": 3,
+          "explain": "Pic Saint-Loup is named after its limestone peak and is cooler and wetter than most of Languedoc.",
+          "place": "fr-inao-a833"
+        },
+        {
+          "id": "q4",
+          "q": "Picpoul de Pinet is:",
+          "options": ["A sweet Muscat", "A crisp white from Piquepoul grown near the Étang de Thau", "A red from Carignan", "A sparkling wine from Mauzac"],
+          "answer": 1,
+          "explain": "Picpoul de Pinet is a white wine from Piquepoul, grown beside the Étang de Thau lagoon.",
+          "place": "fr-inao-a733"
+        },
+        {
+          "id": "q5",
+          "q": "Which cru sits within the Minervois appellation?",
+          "options": ["Boutenac", "Berlou", "Montpeyroux", "La Livinière"],
+          "answer": 3,
+          "explain": "La Livinière, called Minervois-La Livinière until 2024, is the cru of Minervois. Boutenac belongs to Corbières.",
+          "place": "fr-inao-a265"
+        },
+        {
+          "id": "q6",
+          "q": "In 1948 which appellation became the first in Languedoc-Roussillon for red table wine?",
+          "options": ["Fitou", "Faugères", "Saint-Chinian", "Pic Saint-Loup"],
+          "answer": 0,
+          "explain": "Fitou, enclosed by Corbières, was the first Languedoc-Roussillon appellation for red table wine, in 1948.",
+          "place": "fr-inao-a261"
+        },
+        {
+          "id": "q7",
+          "q": "Which rule applies to still white Limoux?",
+          "options": ["It must be made from Muscat", "It must be sweet", "It must be fermented in oak", "It must contain Viognier"],
+          "answer": 2,
+          "explain": "Still white Limoux must be fermented in oak.",
+          "place": "fr-inao-a251"
+        },
+        {
+          "id": "q8",
+          "q": "How is Blanquette méthode ancestrale made?",
+          "options": ["By a second fermentation in tank", "From pure Mauzac, bottled before the first fermentation ends", "By adding grape spirit during fermentation", "By blending still wine with Champagne"],
+          "answer": 1,
+          "explain": "It is pure Mauzac, bottled while still fermenting so that the fermentation finishes in bottle."
+        }
+      ]
+    },
+    {
+      "id": "rhone-south-roussillon-vdn",
+      "title": "Roussillon and the vins doux naturels",
+      "minutes": 8,
+      "intro": "This lesson covers Roussillon, France's southernmost mainland region, and the vins doux naturels made there and elsewhere in the south. You will learn the dry appellations, how mutage works, and the styles of Banyuls, Maury and Rivesaltes.",
+      "sections": [
+        {
+          "h": "A hot Catalan corner",
+          "p": [
+            "Roussillon covers the Pyrénées-Orientales, next to Spain. It has a Catalan culture and was part of Spain until the Treaty of the Pyrenees in 1659. The climate is hot, dry and very sunny, and the strong north-west wind, the tramontane, keeps the vines healthy.",
+            "Soils are varied, with schist, granite, gneiss and limestone. Grenache is grown in its three colours, Noir, Gris and Blanc, alongside Carignan, Syrah, Mourvèdre, Macabeu and Muscat."
+          ]
+        },
+        {
+          "h": "The dry wines",
+          "p": [
+            "Côtes du Roussillon makes red, white and rosé. Côtes du Roussillon Villages covers a smaller area, mostly in the north around the Agly valley, and makes red only. Some villages may add their name, such as Caramany, Lesquerde and Tautavel, and Les Aspres, south of Perpignan, is a named area too.",
+            "Collioure makes dry red, rosé and white wine from the same steep, terraced schist slopes on the coast as Banyuls. Many producers make both: dry Collioure and sweet Banyuls from the same vineyards."
+          ],
+          "places": ["fr-inao-a258", "fr-inao-a259", "fr-inao-d1325", "fr-inao-d1327", "fr-inao-d1328", "fr-inao-d2844", "fr-inao-a254"]
+        },
+        {
+          "h": "How a vin doux naturel is made",
+          "p": [
+            "A vin doux naturel (VDN) is made by mutage: neutral grape spirit of high strength is added during fermentation. The yeasts stop working, so natural grape sugar stays in the wine. The finished wine is usually between 15% and 18% abv.",
+            "For red VDNs the spirit is often added while the juice is still on the skins, to extract more colour and tannin. After that the wine can be aged in two ways. Reductive ageing, with little contact with air, keeps fresh fruit. Oxidative ageing in barrels or in glass demijohns (bonbonnes) left in the sun gives dried fruit, nuts and the savoury taste called rancio."
+          ]
+        },
+        {
+          "h": "Banyuls and Maury",
+          "p": [
+            "Banyuls lies on the coast by the Spanish border, on steep terraced schist. It is made mainly from Grenache Noir. Banyuls Grand Cru must contain at least 75% Grenache Noir and be aged at least 30 months in wood. Rimage is a vintage style, bottled young to keep its fruit.",
+            "Maury lies inland in the Agly valley, on dark schist soils, and also makes Grenache-based VDNs in both fruity and oxidative styles. Red Banyuls and Maury are classic matches for chocolate desserts."
+          ],
+          "places": ["fr-inao-a302", "fr-inao-a303", "fr-inao-a306"]
+        },
+        {
+          "h": "Rivesaltes and the Muscats",
+          "p": [
+            "Rivesaltes is the largest VDN appellation. It uses Grenache in its three colours, Macabeu and other grapes. Its styles include Grenat, a red kept from air to stay fruity; Tuilé, a red aged oxidatively that turns tawny; and Ambré, from white grapes aged oxidatively. Hors d'âge wines are aged for at least five years.",
+            "Muscat de Rivesaltes is made from Muscat à Petits Grains and Muscat of Alexandria and is usually drunk young and fresh. Elsewhere in the south, VDNs include Muscat de Beaumes-de-Venise and Rasteau in the Rhône and the Hérault Muscats such as Frontignan."
+          ],
+          "places": ["fr-inao-a314", "fr-inao-a307", "fr-inao-a308", "fr-inao-a304"]
+        }
+      ],
+      "key": [
+        "Roussillon (Pyrénées-Orientales) is hot, dry and sunny, with the tramontane wind and a Catalan heritage.",
+        "Côtes du Roussillon Villages makes red only; Collioure makes the dry wines of the Banyuls slopes.",
+        "VDNs are made by mutage: grape spirit added during fermentation keeps natural sugar; most reach 15–18% abv.",
+        "Banyuls Grand Cru needs at least 75% Grenache Noir and at least 30 months in wood.",
+        "Grenat is a reductive red style; Tuilé and Ambré are oxidative styles; rancio is the savoury taste of long oxidative ageing.",
+        "Muscat de Rivesaltes uses Muscat à Petits Grains and Muscat of Alexandria."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is mutage?",
+          "options": ["Drying grapes on straw mats", "Adding grape spirit during fermentation to keep natural sugar", "A second fermentation in bottle", "Adding sugar to the must before fermentation"],
+          "answer": 1,
+          "explain": "Mutage stops fermentation with high-strength grape spirit, leaving natural grape sugar in the wine."
+        },
+        {
+          "id": "q2",
+          "q": "What are the minimum rules for Banyuls Grand Cru?",
+          "options": ["50% Grenache Noir and 12 months in wood", "100% Muscat and no wood ageing", "75% Grenache Noir and 30 months in wood", "75% Carignan and 18 months in wood"],
+          "answer": 2,
+          "explain": "Banyuls Grand Cru must contain at least 75% Grenache Noir and spend at least 30 months in wood.",
+          "place": "fr-inao-a303"
+        },
+        {
+          "id": "q3",
+          "q": "Which appellation makes the dry wines from the same coastal schist slopes as Banyuls?",
+          "options": ["Maury", "Fitou", "Rivesaltes", "Collioure"],
+          "answer": 3,
+          "explain": "Collioure covers dry red, rosé and white wines from the Banyuls area.",
+          "place": "fr-inao-a254"
+        },
+        {
+          "id": "q4",
+          "q": "In Rivesaltes, which style is a red VDN kept away from air to stay fruity?",
+          "options": ["Grenat", "Tuilé", "Ambré", "Rancio"],
+          "answer": 0,
+          "explain": "Grenat is the reductive red style. Tuilé is red aged oxidatively, and Ambré is from white grapes aged oxidatively.",
+          "place": "fr-inao-a314"
+        },
+        {
+          "id": "q5",
+          "q": "What is the typical alcohol level of a vin doux naturel?",
+          "options": ["8–10% abv", "11–13% abv", "15–18% abv", "20–22% abv"],
+          "answer": 2,
+          "explain": "Most vins doux naturels finish between 15% and 18% abv."
+        },
+        {
+          "id": "q6",
+          "q": "Which grapes are used for Muscat de Rivesaltes?",
+          "options": ["Muscat Ottonel and Muscat Blanc", "Muscat à Petits Grains and Muscat of Alexandria", "Grenache Blanc and Macabeu", "Muscadelle and Muscat Ottonel"],
+          "answer": 1,
+          "explain": "Muscat de Rivesaltes is made from Muscat à Petits Grains and Muscat of Alexandria.",
+          "place": "fr-inao-a307"
+        },
+        {
+          "id": "q7",
+          "q": "What is the tramontane?",
+          "options": ["A style of oxidative VDN", "A glass demijohn used for ageing", "The schist soil of Maury", "A strong north-west wind in Roussillon"],
+          "answer": 3,
+          "explain": "The tramontane is the strong, dry north-west wind that keeps Roussillon's vines healthy."
+        },
+        {
+          "id": "q8",
+          "q": "Where is Maury?",
+          "options": ["Inland in the Agly valley, on dark schist", "On the coast at the Spanish border", "In the Hérault near Montpellier", "Below the Dentelles de Montmirail"],
+          "answer": 0,
+          "explain": "Maury lies inland in the Agly valley. Banyuls is the one on the coast by the Spanish border.",
+          "place": "fr-inao-a306"
+        }
+      ]
+    }
+  ]
+}

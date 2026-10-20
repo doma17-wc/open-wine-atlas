@@ -401,6 +401,8 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .jform label.acct-agree { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; color: #c9c0b1; line-height: 1.45; }
 .jform label.acct-agree input { width: auto; flex: none; margin: 2px 0 0; accent-color: var(--gold); }
 .legal-links { margin: 10px 2px 0; font-size: 11.5px; color: var(--muted); }
+.study-link { border-color: #5a4a2a; color: var(--gold); }
+body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing .dash-btn, body.quizzing .showpanels { display: none !important; }
 .legal-links a { color: inherit; }
 .chips-edit { display: flex; flex-wrap: wrap; gap: 6px; }
 @media (max-width: 760px) { .nb { grid-template-columns: minmax(0, 1fr); } .nb-items { max-height: 36vh; } }
@@ -663,6 +665,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button class="link-btn" id="openSuggest" data-i18n>Suggest a place</button>
     <a class="link-btn web-only" href="/places/" style="color:inherit;text-decoration:none" hidden data-i18n>All places A to Z</a>
     <a class="link-btn web-only fm-link" href="/founding?from=map" hidden data-i18n>Become a Founding Member</a>
+    <button class="link-btn web-only study-link" id="openStudy" hidden data-i18n>Study and quiz</button>
   </div>
   <p class="legal-links web-only" hidden><a href="/privacy" data-i18n>Privacy</a> · <a href="/terms" data-i18n>Terms of Use</a> · <a href="/legal" data-i18n>Legal notice</a></p>
   </div>
@@ -697,7 +700,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
     <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2>
       <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
-        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="notebook" aria-selected="false" data-i18n>Notebook</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button><button role="tab" data-tab="account" aria-selected="false" class="web-only" id="tabAccount" hidden data-i18n>Account</button>
+        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="notebook" aria-selected="false" data-i18n>Notebook</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button><button role="tab" data-tab="study" aria-selected="false" class="web-only" id="tabStudy" hidden data-i18n>Study</button><button role="tab" data-tab="account" aria-selected="false" class="web-only" id="tabAccount" hidden data-i18n>Account</button>
       </nav></header>
     <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
     <div class="dash-body" id="dashBody" role="tabpanel"></div>
@@ -931,6 +934,7 @@ const rankColor = ["case",
 
 const LAYERS = []; // [layerId, group] for legend toggles
 const BASEF = {}; // layerId -> its own filter, combined with the legend's rank filter
+let QUIZ_ON = false, QUIZ_VIS = null, QUIZ_PREV = null; // quiz mode (study.js), see quizMode()
 // AOCs in the published tiles that are not wine (Taureau de Camargue: beef; Béa du Roussillon: potatoes). The next
 // full build drops them at the source (pipeline/inao.py); until then they are hidden here.
 const NOT_WINE = ["fr-inao-a456", "fr-inao-a593"];
@@ -940,6 +944,7 @@ function add(layer, group) {
     layer.filter = layer.filter ? ["all", keep, layer.filter] : keep;
   }
   map.addLayer(layer); LAYERS.push([layer.id, group]); if (layer.filter) BASEF[layer.id] = layer.filter;
+  if (QUIZ_ON && layer.type === "symbol") quizHide();
 }
 
 function addBase() {
@@ -1283,6 +1288,7 @@ function geoVis() {
     if ((id === "geo-lakes" || id === "osm-water") && baseMap === "satellite") on = false;
     map.setLayoutProperty(id, "visibility", on ? "visible" : "none");
   });
+  if (QUIZ_ON) quizHide();
 }
 function geoFilters() {
   const g = HL ? HL.gid : "-";
@@ -2535,6 +2541,15 @@ function openWinery(f) {
   if (home) { setActive(home); ACTIVE = null; renderMapCrumbs(home, p.name); }
 }
 map.on("mousemove", (e) => {
+  if (QUIZ_ON) {
+    // names would give the answer away: outlines light up, no label
+    tag.hidden = true;
+    const f = pick(e.point);
+    if (hovered && (!f || f.id !== hovered.id)) { setState(hovered, "hover", false); hovered = null; }
+    if (f && !hovered) { hovered = f; setState(f, "hover", true); }
+    map.getCanvas().style.cursor = QUIZ_ON === "find" ? "crosshair" : "";
+    return;
+  }
   const w = pickWinery(e.point);
   setWHover(w);
   if (w) {
@@ -2565,6 +2580,7 @@ map.on("mousemove", (e) => {
 });
 map.on("mouseout", () => { tag.hidden = true; setWHover(null); });
 map.on("click", (e) => {
+  if (QUIZ_ON) { if (window.OWA_QUIZ_CLICK) window.OWA_QUIZ_CLICK(e); return; }
   const w = pickWinery(e.point);
   if (w) { openWinery(w); return; }
   const gh = pickGeo(e.point);
@@ -2635,6 +2651,8 @@ async function select(p, feature) {
 }
 const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9, subregion: 11.5, state: 8, country: 6.5, group: 11.5 }[level] || 13;
 const fitPad = () => { const wide = innerWidth > 760, small = UI.mapOnly || UI.sheet === "min";
+  if (QUIZ_ON) { const q = $("quiz"), h = q ? q.offsetHeight : 0, w = q ? q.offsetWidth : 0;
+    return wide ? { top: 70, bottom: 50, left: 40, right: w + 60 } : { top: 70, bottom: h + 24, left: 24, right: 24 }; }
   return { top: small ? 110 : 60, bottom: wide ? 60 : small ? 120 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? (small ? 40 : curSheetW() + 40) : 30 }; };
 // the zoom fitTo would land on
 function fitZoom(b, level) {
@@ -3823,6 +3841,7 @@ function applyLegend() {
     map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
   });
   geoVis();
+  if (QUIZ_ON) quizHide();
 }
 Object.values(GROUPS).forEach((id) => $(id).addEventListener("change", applyLegend));
 
@@ -3952,7 +3971,7 @@ $("openSuggest").onclick = () => openSuggest(null);
 
 // ---------- My atlas: saved places, tasting journal, compare, explore (kept on this device)
 const loadJSON = (k, def) => { try { const v = JSON.parse(store.get(k)); return v ?? def; } catch (e) { return def; } };
-const MY = { saved: loadJSON("saved", {}), journal: loadJSON("journal", []), recent: loadJSON("recent", []), compare: loadJSON("compare", []), notes: loadJSON("notes", []) };
+const MY = { saved: loadJSON("saved", {}), journal: loadJSON("journal", []), recent: loadJSON("recent", []), compare: loadJSON("compare", []), notes: loadJSON("notes", []), study: loadJSON("study", {}) };
 const SAVE_HOOKS = []; // sync (web): called after every local save
 const FACTS = new Map(); // id -> measured terrain / climate / soil from this visit
 let CURRENT = null;      // the place open in the sheet
@@ -4064,6 +4083,41 @@ function updateDashBadge() {
   if (el) { el.textContent = n; el.hidden = !n; }
 }
 
+// ---------- quiz mode (study.js): no names on the map, clicks go to the quiz, the panels step aside
+// QUIZ_ON is false, true, or "find" (the reader answers by clicking the map)
+function quizHide() {
+  QUIZ_VIS = QUIZ_VIS || {};
+  map.getStyle().layers.forEach((l) => {
+    if (l.type !== "symbol") return;
+    const v = map.getLayoutProperty(l.id, "visibility") || "visible";
+    if (!(l.id in QUIZ_VIS)) QUIZ_VIS[l.id] = v;
+    if (v !== "none") map.setLayoutProperty(l.id, "visibility", "none");
+  });
+}
+function quizMode(on) {
+  if (!!on === !!QUIZ_ON) { QUIZ_ON = on || false; return; }
+  QUIZ_ON = on || false;
+  if (on) {
+    QUIZ_PREV = { mapOnly: UI.mapOnly };
+    closeSheet(); clearSelected(); tag.hidden = true;
+    document.body.classList.add("quizzing");
+    UI.mapOnly = true; applyLayout();
+    quizHide();
+  } else {
+    const vis = QUIZ_VIS || {}; QUIZ_VIS = null;
+    Object.entries(vis).forEach(([id, v]) => { if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", v); });
+    document.body.classList.remove("quizzing");
+    clearSelected();
+    UI.mapOnly = QUIZ_PREV ? QUIZ_PREV.mapOnly : false; QUIZ_PREV = null; applyLayout();
+    applyLegend();
+  }
+}
+// every place id under the point, outlines only
+function placesAt(point) {
+  const layers = [...pickLayers].filter((l) => map.getLayer(l));
+  return [...new Set(map.queryRenderedFeatures(point, { layers }).map((f) => f.properties.id).filter(Boolean))];
+}
+
 // ---------- the dashboard
 let dashTab = "overview", dashPrefill = null;
 const EXP = { q: "", cc: "", level: "", top: false, sort: "name", dir: 1, limit: 150 };
@@ -4074,6 +4128,7 @@ function openDash(tab, prefillId) {
 }
 function closeDash() { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); $("dash").hidden = true; }
 $("openDash").onclick = () => openDash();
+$("openStudy").onclick = () => openDash("study");
 $("dashClose").onclick = closeDash;
 $("dash").addEventListener("click", (e) => { if (e.target.id === "dash") closeDash(); });
 document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); dashTab = b.dataset.tab; renderDash(); });
@@ -4084,7 +4139,8 @@ document.addEventListener("click", (e) => { const b = e.target.closest("[data-dt
 function renderDash() {
   document.querySelectorAll("#dashTabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === dashTab)));
   const body = $("dashBody");
-  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, notebook: dashNotebook, compare: dashCompare, explore: dashExplore, records: dashRecords, account: dashAccount }[dashTab] || dashOverview)();
+  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, notebook: dashNotebook, compare: dashCompare, explore: dashExplore, records: dashRecords, account: dashAccount, study: dashStudy }[dashTab] || dashOverview)();
+  if (dashTab === "study" && window.OWA_STUDY) window.OWA_STUDY.wire();
   if (dashTab === "records") wireRecords();
   if (dashTab === "journal") wireJournal();
   if (dashTab === "notebook") wireNotebook();
@@ -4533,6 +4589,20 @@ function loadAccount() {
     const sc = document.createElement("script"); sc.src = "/account.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
   }));
 }
+// the study section lives in /study.js, loaded the first time it is opened
+let studyLoading = null;
+function loadStudy() {
+  if (window.OWA_STUDY) return Promise.resolve();
+  if (!studyLoading) studyLoading = new Promise((ok) => {
+    const sc = document.createElement("script"); sc.src = "/study.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
+  });
+  return studyLoading;
+}
+function dashStudy() {
+  if (window.OWA_STUDY) return window.OWA_STUDY.render();
+  loadStudy().then(() => { if (dashTab === "study" && !$("dash").hidden) renderDash(); });
+  return '<p class="lead">' + t_("Loading…") + "</p>";
+}
 function dashAccount() {
   if (window.OWA_ACCOUNT) return window.OWA_ACCOUNT.render();
   loadAccount().then(() => { if (dashTab === "account" && !$("dash").hidden) renderDash(); });
@@ -4540,7 +4610,11 @@ function dashAccount() {
 }
 if (WEB) {
   window.OWA = { MY, saveMY, myChanged, onSave: (f) => SAVE_HOOKS.push(f), openDash, get tab() { return dashTab; },
-    renderDash: () => { if (!$("dash").hidden) renderDash(); }, toast, esc, t_, search, placeOf, recOf, kindOf, cname, store, LOCALE };
+    renderDash: () => { if (!$("dash").hidden) renderDash(); }, toast, esc, t_, search, placeOf, recOf, kindOf, cname, store, LOCALE,
+    // for study.js
+    get INDEX() { return INDEX; }, byId, getDetails, fitTo, markSelected, clearSelected, quizMode, placesAt, closeDash, goTo,
+    tnode: (k) => tnode(k), kidsOf: (k) => kidsOf(k), pathOf: (k) => pathOf(k), get TREE() { return TREE; },
+    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy };
   loadAccount();
 }
 

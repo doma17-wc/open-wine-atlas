@@ -1,0 +1,711 @@
+{
+  "id": "foundations",
+  "title": "Foundations",
+  "level": "WSET 2 to 3",
+  "summary": "The theory every other path builds on: how wine law and labels work, how climate, site and the vine's year shape the grapes, and how still, sparkling, sweet and fortified wines are made. Each idea is tied to a famous region you can open on the map.",
+  "lessons": [
+    {
+      "id": "foundations-labels-law",
+      "title": "Reading a label and wine law",
+      "minutes": 9,
+      "intro": "This lesson explains how the EU protects place names with PDO and PGI, how national terms such as AOC, DOCG and DOCa fit inside that system, how New World systems such as the US AVA differ, and what a label does and does not tell you.",
+      "sections": [
+        {
+          "h": "Two tiers of origin in the EU",
+          "p": [
+            "Since the EU wine reform that took effect in 2009, wine made in the European Union falls into three groups: wine with a Protected Designation of Origin (PDO), wine with a Protected Geographical Indication (PGI), and wine without a geographical indication. A PDO or PGI name is protected across the EU, so only wine from that place, made to its rules, may use it.",
+            "A PDO is the stricter tier. All the grapes must come from the named area, and the rules (the product specification) usually fix the permitted grape varieties, maximum yields, minimum alcohol and winemaking methods. A PGI covers a larger area with looser rules: at least 85% of the grapes must come from the named area, and producers have more freedom with varieties.",
+            "Wine without a GI is the most flexible group. It may show a grape variety and a vintage, but no place smaller than the country."
+          ]
+        },
+        {
+          "h": "National terms inside the EU system",
+          "p": [
+            "Each country keeps its own traditional terms and places them inside the two EU tiers. In France, Appellation d'Origine Contrôlée (AOC, now also written AOP) is the PDO level, overseen by the INAO. Indication Géographique Protégée (IGP) is the PGI level, and Vin de France is wine without a GI. Bandol, Sancerre and Pauillac are all AOCs.",
+            "Italy has two PDO levels: Denominazione di Origine Controllata (DOC) and the higher Denominazione di Origine Controllata e Garantita (DOCG). IGT is the Italian PGI level. Barolo, Barbaresco, Brunello di Montalcino and Chianti Classico are DOCGs, and Brunello, Barolo and Barbaresco were among the first wines raised to DOCG, in 1980. Prosecco is a DOC.",
+            "Spain's PDO wines include Denominación de Origen (DO) and the higher Denominación de Origen Calificada (DOCa). Only two regions hold DOCa status: Rioja and Priorat (DOQ in Catalan). Vino de la Tierra is the Spanish PGI. In Germany, Qualitätswein and Prädikatswein are PDO wines and Landwein is PGI. Portugal uses DOC for PDO and Vinho Regional for PGI."
+          ],
+          "places": ["fr-inao-a292", "fr-inao-a109", "fr-inao-a59", "it-eupdo-PDO-IT-A1389", "it-eupdo-PDO-IT-A1399", "it-eupdo-PDO-IT-A1199", "it-eupdo-PDO-IT-A1235", "it-eupdo-PDO-IT-A0516", "es-eupdo-PDO-ES-A0117", "es-eupdo-PDO-ES-A1560"]
+        },
+        {
+          "h": "Origin rules outside Europe",
+          "p": [
+            "Most New World systems define place only. In the United States, an American Viticultural Area (AVA) is a delimited grape-growing area approved by the federal Alcohol and Tobacco Tax and Trade Bureau (TTB). If an AVA appears on the label, at least 85% of the grapes must come from it. An AVA sets no rules on grape varieties, yields or winemaking. Napa Valley and Willamette Valley are AVAs.",
+            "Australia uses Geographical Indications (GIs) arranged as zones, regions and subregions. Barossa Valley and Coonawarra are regions. If a GI, variety or vintage is stated, at least 85% of the wine must match it. South Africa has the Wine of Origin scheme, in which Stellenbosch is a district. Chile, Argentina and New Zealand register their own origins, such as Valle de Casablanca, Mendoza and Marlborough."
+          ],
+          "places": ["us-ava-napa_valley", "us-ava-willamette_valley", "au-world-barossa-valley", "au-world-coonawarra", "za-world-stellenbosch", "cl-world-valle-de-casablanca", "ar-world-mendoza", "nz-world-marlborough"]
+        },
+        {
+          "h": "What a label tells you",
+          "p": [
+            "European PDO labels lead with the place, because the rules already imply the grape. Chablis is Chardonnay, white Sancerre is Sauvignon Blanc, Barolo is Nebbiolo and Brunello di Montalcino is Sangiovese. New World labels usually lead with the grape. In the United States a varietal label needs at least 75% of the named grape.",
+            "Some PDOs add quality tiers based on site. In Bourgogne (Burgundy) the pyramid runs from regional wines to village wines, premier cru and grand cru. In the Côte d'Or each grand cru, such as Montrachet or Musigny, is an AOC in its own right. In Bordeaux the 1855 Classification ranks châteaux, not vineyards. Pauillac is the commune AOC that holds three of the five first growths.",
+            "Ageing terms also carry legal meaning. Under Spanish national rules a red Reserva must be aged at least three years, with at least one in oak, and a red Gran Reserva at least five years, with at least 18 months in oak. Rioja is stricter for some categories: its red Crianza needs a full year in oak and its Gran Reserva two years."
+          ],
+          "places": ["fr-inao-a146", "fr-inao-a109", "it-eupdo-PDO-IT-A1389", "it-eupdo-PDO-IT-A1199", "fr-inao-a207", "fr-inao-a211", "fr-inao-a59", "es-eupdo-PDO-ES-A0117"]
+        }
+      ],
+      "key": [
+        "PDO: all grapes from the named area and strict rules. PGI: at least 85% from the area and looser rules.",
+        "AOC/AOP (France), DOC and DOCG (Italy), DO and DOCa (Spain), Qualitätswein and Prädikatswein (Germany) are all PDO levels.",
+        "Only Rioja and Priorat hold Spain's DOCa status.",
+        "A US AVA is purely geographic: 85% of the grapes from the area, no rules on varieties or yields.",
+        "Côte d'Or grand crus such as Montrachet and Musigny are AOCs in their own right. The 1855 Classification ranks châteaux, not land."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What share of the grapes must come from the named area for an EU PGI wine?",
+          "options": ["At least 75%", "100%", "At least 85%", "At least 95%"],
+          "answer": 2,
+          "explain": "A PGI needs at least 85% of the grapes from its area. A PDO needs all of them."
+        },
+        {
+          "id": "q2",
+          "q": "Which two Spanish regions hold DOCa status?",
+          "options": ["Rioja and Priorat", "Rioja and Cava", "Priorat and Jerez", "Rioja and Douro"],
+          "answer": 0,
+          "explain": "Rioja and Priorat (DOQ in Catalan) are the only DOCa regions in Spain.",
+          "place": "es-eupdo-PDO-ES-A1560"
+        },
+        {
+          "id": "q3",
+          "q": "Which Italian term sits at the PGI level?",
+          "options": ["DOC", "DOCG", "Riserva", "IGT"],
+          "answer": 3,
+          "explain": "IGT is Italy's PGI level. DOC and DOCG are both PDO levels, and Riserva is an ageing term."
+        },
+        {
+          "id": "q4",
+          "q": "What does a US AVA such as Napa Valley regulate?",
+          "options": ["The grape varieties that may be planted", "Only the area, with at least 85% of the grapes from it", "Maximum yields per hectare", "Minimum time in oak"],
+          "answer": 1,
+          "explain": "An AVA is purely geographic. It sets no rules on varieties, yields or winemaking.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "id": "q5",
+          "q": "What does the 1855 Classification of Bordeaux rank?",
+          "options": ["Châteaux", "Vineyard plots", "Communes", "Soil types"],
+          "answer": 0,
+          "explain": "The 1855 Classification ranks châteaux, not vineyards. Pauillac holds three of the five first growths.",
+          "place": "fr-inao-a59"
+        },
+        {
+          "id": "q6",
+          "q": "Under Spanish national rules, what is the minimum ageing for a red Gran Reserva?",
+          "options": ["Two years, with six months in oak", "Three years, with one year in oak", "Five years, with at least 18 months in oak", "Ten years, with five years in oak"],
+          "answer": 2,
+          "explain": "A red Gran Reserva needs at least five years of ageing with at least 18 months in oak. Rioja asks for two years in oak.",
+          "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "id": "q7",
+          "q": "A bottle labelled Chablis is made from which grape?",
+          "options": ["Sauvignon Blanc", "Pinot Noir", "Riesling", "Chardonnay"],
+          "answer": 3,
+          "explain": "European PDO labels lead with the place. The rules for Chablis imply Chardonnay.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "id": "q8",
+          "q": "In Australia's GI system, what are Barossa Valley and Coonawarra?",
+          "options": ["Zones", "Regions", "States", "Subregions"],
+          "answer": 1,
+          "explain": "Australian GIs are arranged as zones, regions and subregions. Barossa Valley and Coonawarra are regions.",
+          "place": "au-world-coonawarra"
+        }
+      ]
+    },
+    {
+      "id": "foundations-climate",
+      "title": "Climate and weather",
+      "minutes": 9,
+      "intro": "This lesson explains how climate decides what a region can grow and how weather shapes each vintage. It covers latitude, the three main climate types, altitude, diurnal range, the effect of water and wind, and how growing degree days measure heat.",
+      "sections": [
+        {
+          "h": "Climate, weather and where vines grow",
+          "p": [
+            "Climate is the long-term pattern of temperature, sunshine and rainfall in a place. Weather is what happens in a single year. Climate decides which grapes and styles suit a region; weather explains why one vintage differs from the next. Vintage variation is usually greatest in cool, marginal regions such as Champagne and the Mosel.",
+            "Most of the world's vineyards lie between about 30° and 50° latitude in both hemispheres. Nearer the equator it is too hot and the vine gets no winter rest. Further from it, summers are too short and cool for grapes to ripen. The vine starts to grow when average temperatures rise above about 10°C.",
+            "WSET groups climates by average growing season temperature: cool (up to about 16.5°C), moderate (16.5 to 18.5°C), warm (18.5 to 21°C) and hot (above 21°C). Cool climates give lighter wines with high acidity and citrus or green fruit. Hot climates give riper, fuller wines with more alcohol and lower acidity."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A1359", "de-eupdo-PDO-DE-A1270"]
+        },
+        {
+          "h": "Continental, maritime and Mediterranean",
+          "p": [
+            "A continental climate has a large gap between summer and winter temperatures. Summers are warm but short, autumn cools quickly and spring frost is a real risk. These conditions are found away from the moderating effect of the sea, as in Chablis, Central Otago and Mendoza.",
+            "A maritime climate lies close to the ocean. The sea keeps winters mild and summers moderate, so the annual temperature range is small, but rain can fall at any time of year, including harvest. Bordeaux is the classic example: the Atlantic and the Gulf Stream moderate Pauillac and the rest of the Médoc.",
+            "A Mediterranean climate has long, warm, dry summers and mild winters, with most rain in winter. Ripening is reliable and vintages vary less. Châteauneuf-du-Pape, Bandol, Priorat and Napa Valley all have Mediterranean climates. Summer drought can stress the vines, so irrigation is used where the rules allow it."
+          ],
+          "places": ["fr-inao-a146", "nz-world-central-otago", "ar-world-mendoza", "fr-inao-a59", "fr-inao-a267", "fr-inao-a292", "es-eupdo-PDO-ES-A1560", "us-ava-napa_valley"]
+        },
+        {
+          "h": "Altitude and diurnal range",
+          "p": [
+            "Temperature falls by roughly 0.6°C for every 100 metres of altitude. Height lets growers make fresh wines in hot or low-latitude regions. Mendoza's vineyards sit high at the foot of the Andes, and in the Valle de Uco many lie above 1,000 metres. On Etna in Sicily, vines grow on the slopes of the volcano at up to about 1,100 metres.",
+            "Diurnal range is the difference between day and night temperatures. Warm days build sugar and colour; cool nights slow the loss of acidity and keep aromas fresh. Large diurnal ranges are typical of high and inland sites such as Mendoza and Central Otago, and of Marlborough in New Zealand."
+          ],
+          "places": ["ar-world-mendoza", "ar-world-valle-de-uco", "it-eupdo-PDO-IT-A0780", "nz-world-central-otago", "nz-world-marlborough"]
+        },
+        {
+          "h": "Water, wind and ocean currents",
+          "p": [
+            "Large bodies of water moderate temperature: they warm slowly in spring and give back heat in autumn. Rivers such as the Mosel and the Danube in the Wachau also reflect light onto steep vineyards. In the Wachau, cold air from the Waldviertel to the north cools the vines at night, which helps keep acidity.",
+            "Cold ocean currents cool coastal regions. The Humboldt Current chills the Pacific off Chile, and sea breezes and morning fog make Valle de Casablanca a cool-climate region. In Stellenbosch, breezes from False Bay cool the vineyards. In Napa Valley, fog and wind from San Pablo Bay cool the southern end, which is cooler than the north.",
+            "Winds matter too. The mistral, a cold, dry wind from the north, blows down the Rhône valley. It cools Châteauneuf-du-Pape and dries the grapes after rain, which reduces disease, but strong gusts can also damage shoots."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1270", "at-eupdo-PDO-AT-A0205", "cl-world-valle-de-casablanca", "za-world-stellenbosch", "us-ava-napa_valley", "fr-inao-a267"]
+        },
+        {
+          "h": "Measuring heat: growing degree days",
+          "p": [
+            "Growing degree days measure heat across a season. For each day, take the mean temperature, subtract 10°C (the point at which the vine grows) and add up the positive results from April to October in the Northern Hemisphere, or October to April in the Southern. The total ranks regions by warmth.",
+            "Amerine and Winkler of the University of California, Davis used this method to divide California into five regions, from Region I (coolest) to Region V (hottest). The Winkler index is still used to compare regions worldwide, though it leaves out sunshine, rainfall and diurnal range."
+          ]
+        }
+      ],
+      "key": [
+        "Climate is the long-term pattern; weather is a single year and drives vintage variation.",
+        "Most vineyards lie between 30° and 50° latitude. The vine grows above about 10°C.",
+        "Continental: large summer to winter range and spring frost (Chablis, Central Otago, Mendoza). Maritime: small range, rain at any time (Bordeaux). Mediterranean: warm dry summers, winter rain (Châteauneuf-du-Pape, Napa Valley).",
+        "Temperature falls about 0.6°C per 100 metres of altitude.",
+        "Cold currents (the Humboldt off Chile) and bays (False Bay, San Pablo Bay) cool coastal vineyards.",
+        "Growing degree days add up daily mean temperatures above 10°C. The Winkler index has five regions."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which description fits a continental climate?",
+          "options": ["Small annual temperature range and rain all year", "Large gap between summer and winter, short summers and spring frost risk", "Long dry summers with most rain in winter", "Warm temperatures with no winter at all"],
+          "answer": 1,
+          "explain": "Continental climates have a large summer to winter range, short summers, quick autumn cooling and frost risk, as in Chablis.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "id": "q2",
+          "q": "Which climate type does Bordeaux, including Pauillac, have?",
+          "options": ["Continental", "Mediterranean", "Desert", "Maritime"],
+          "answer": 3,
+          "explain": "Bordeaux is the classic maritime climate, moderated by the Atlantic and the Gulf Stream.",
+          "place": "fr-inao-a59"
+        },
+        {
+          "id": "q3",
+          "q": "Roughly how much does temperature fall for every 100 metres of altitude?",
+          "options": ["About 0.6°C", "About 2°C", "About 0.1°C", "About 5°C"],
+          "answer": 0,
+          "explain": "The usual figure is about 0.6°C per 100 metres, which is why high sites such as the Valle de Uco stay fresh.",
+          "place": "ar-world-valle-de-uco"
+        },
+        {
+          "id": "q4",
+          "q": "Why is a large diurnal range good for quality?",
+          "options": ["Warm nights raise alcohol", "It shortens the growing season", "Cool nights slow the loss of acidity and keep aromas fresh", "It removes the risk of spring frost"],
+          "answer": 2,
+          "explain": "Warm days build sugar and colour while cool nights preserve acidity and aroma, as in Mendoza.",
+          "place": "ar-world-mendoza"
+        },
+        {
+          "id": "q5",
+          "q": "What makes Valle de Casablanca a cool-climate region?",
+          "options": ["The Humboldt Current with Pacific breezes and fog", "The mistral", "The Gulf Stream", "Shelter from a pine forest"],
+          "answer": 0,
+          "explain": "The cold Humboldt Current, sea breezes and morning fog cool Casablanca.",
+          "place": "cl-world-valle-de-casablanca"
+        },
+        {
+          "id": "q6",
+          "q": "Which base temperature is used to calculate growing degree days?",
+          "options": ["0°C", "10°C", "15°C", "20°C"],
+          "answer": 1,
+          "explain": "Each day's mean temperature minus 10°C is added up, because the vine grows above about 10°C."
+        },
+        {
+          "id": "q7",
+          "q": "Which of these regions has a Mediterranean climate?",
+          "options": ["Chablis", "Mosel", "Napa Valley", "Central Otago"],
+          "answer": 2,
+          "explain": "Napa Valley has warm dry summers and winter rain. The other three are cool or continental.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "id": "q8",
+          "q": "Which wind cools Châteauneuf-du-Pape and dries the grapes after rain?",
+          "options": ["Sirocco", "Föhn", "Zonda", "Mistral"],
+          "answer": 3,
+          "explain": "The mistral is a cold, dry north wind that blows down the Rhône valley.",
+          "place": "fr-inao-a267"
+        }
+      ]
+    },
+    {
+      "id": "foundations-site",
+      "title": "The site",
+      "minutes": 8,
+      "intro": "Within one climate, some vineyards make far better wine than others. This lesson covers why: slope and aspect, how soil handles water, the famous soils of the wine world, and how elevation and cold air decide frost risk.",
+      "sections": [
+        {
+          "h": "Slope and aspect",
+          "p": [
+            "A slope drains water and cold air away from the vines and, when it faces the sun, catches more light and heat. In the Northern Hemisphere the warmest slopes face south; in the Southern Hemisphere they face north. These gains matter most in cool regions, where every degree helps ripening.",
+            "The Mosel shows this clearly. Its best vineyards are steep slate slopes facing south or southwest above the river, where Riesling ripens at around 50° north. The hill of Hermitage in the northern Rhône is another south-facing slope, with largely granite soils that suit Syrah. In Bourgogne, the Côte d'Or faces east to southeast and catches the morning sun.",
+            "Steep slopes are costly to work. Machines often cannot be used, so pruning and harvest are done by hand. Terraces hold the soil on the slopes of the Douro, the Wachau and parts of Priorat."
+          ],
+          "places": ["de-eupdo-PDO-DE-A1270", "fr-inao-a282", "pt-eupdo-PDO-PT-A1539", "at-eupdo-PDO-AT-A0205", "es-eupdo-PDO-ES-A1560"]
+        },
+        {
+          "h": "Soil: drainage first",
+          "p": [
+            "For quality, how a soil handles water matters more than its minerals. Free-draining soils push roots deep and limit vigour, so the vine puts its energy into small, concentrated berries. Soils that hold some water carry vines through dry summers. Poor soils are prized, because rich soils encourage leafy growth and high yields.",
+            "Gravel drains well and warms quickly. The deep gravel banks of Pauillac help Cabernet Sauvignon, a late-ripening grape, to ripen in a maritime climate. In parts of Châteauneuf-du-Pape, large rounded stones called galets roulés store the day's heat and release it at night. The chalk of Champagne drains well yet holds enough water to supply the vines.",
+            "Limestone and clay lie under many great white wine sites. The best Chablis vineyards are on Kimmeridgian marl, rich in fossil oyster shells. Sancerre has three main soils: terres blanches (Kimmeridgian marl), caillottes (stony limestone) and silex (flint)."
+          ],
+          "places": ["fr-inao-a59", "fr-inao-a267", "fr-eupdo-PDO-FR-A1359", "fr-inao-a146", "fr-inao-a109"]
+        },
+        {
+          "h": "Famous soils to know",
+          "p": [
+            "Some soils are part of a region's identity. Coonawarra is known for terra rossa, a red clay loam over limestone, on a narrow strip that suits Cabernet Sauvignon. Priorat has llicorella, a dark slate with quartz that forces roots deep. The Douro is mostly schist, which splits into vertical layers that roots can follow down to water.",
+            "Jerez has albariza, a white chalky soil that soaks up winter rain and then bakes into a crust that slows evaporation in summer. Etna has volcanic soils that are sandy and free-draining. In the Willamette Valley, Pinot Noir grows both on volcanic Jory soils and on marine sedimentary soils."
+          ],
+          "places": ["au-world-coonawarra", "es-eupdo-PDO-ES-A1560", "pt-eupdo-PDO-PT-A1539", "es-eupdo-PDO-ES-A1483", "it-eupdo-PDO-IT-A0780", "us-ava-willamette_valley"]
+        },
+        {
+          "h": "Elevation, frost and cold air",
+          "p": [
+            "Cold air is heavier than warm air and flows downhill at night, collecting in valley floors and hollows. These frost pockets are risky in spring, when one cold night can kill young shoots. Mid-slope sites avoid both the cold air below and the exposed hilltop above. In the Côte d'Or, grand crus such as Montrachet and Musigny lie mostly on the mid-slope.",
+            "Chablis is the textbook frost region. Growers protect the vines with heaters (chaufferettes) set in the rows, with wind machines that mix warmer air down to the vines, and with sprinklers. Sprinklers coat the buds in water, which gives off heat as it freezes and holds the bud near 0°C. Central Otago and Casablanca also face spring frost."
+          ],
+          "places": ["fr-inao-a207", "fr-inao-a211", "fr-inao-a146", "nz-world-central-otago", "cl-world-valle-de-casablanca"]
+        }
+      ],
+      "key": [
+        "Slopes drain water and cold air. A sun-facing aspect (south in the north, north in the south) adds warmth.",
+        "Drainage matters more than soil minerals. Poor, free-draining soils limit vigour.",
+        "Gravel (Pauillac) and galets roulés (Châteauneuf-du-Pape) store heat. Chalk (Champagne) drains but holds water.",
+        "Kimmeridgian marl: Chablis and Sancerre. Terra rossa: Coonawarra. Llicorella: Priorat. Albariza: Jerez. Schist: Douro.",
+        "Cold air pools on valley floors, so mid-slope sites avoid frost. Chablis uses heaters, wind machines and sprinklers."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "In the Southern Hemisphere, which aspect gives the warmest slopes?",
+          "options": ["South-facing", "East-facing", "North-facing", "West-facing"],
+          "answer": 2,
+          "explain": "The sun is to the north in the Southern Hemisphere, so north-facing slopes catch the most heat."
+        },
+        {
+          "id": "q2",
+          "q": "Which soil is Coonawarra known for?",
+          "options": ["Terra rossa over limestone", "Llicorella slate", "Albariza", "Granite"],
+          "answer": 0,
+          "explain": "Coonawarra's narrow strip of red terra rossa over limestone suits Cabernet Sauvignon.",
+          "place": "au-world-coonawarra"
+        },
+        {
+          "id": "q3",
+          "q": "How do the galets roulés of Châteauneuf-du-Pape help the vines?",
+          "options": ["They add minerals to the wine", "They store heat by day and release it at night", "They hold large amounts of water", "They shelter the vines from the mistral"],
+          "answer": 1,
+          "explain": "The large rounded stones store the day's heat and give it back at night.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "id": "q4",
+          "q": "How do sprinklers protect buds from spring frost in Chablis?",
+          "options": ["They wash the frost off the buds", "They warm the soil with heated water", "They blow warm air down into the rows", "Water gives off heat as it freezes, holding the bud near 0°C"],
+          "answer": 3,
+          "explain": "As the water freezes it releases heat, and the ice coat keeps the bud near 0°C.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "id": "q5",
+          "q": "Why are mid-slope sites often the best in frost-prone areas?",
+          "options": ["They receive the most rain", "Cold air drains past them to the valley floor, and they are less exposed than the hilltop", "They have the richest soils", "They are easiest to harvest by machine"],
+          "answer": 1,
+          "explain": "Cold air flows downhill and pools below, while the hilltop is exposed. Montrachet and Musigny lie mostly mid-slope.",
+          "place": "fr-inao-a207"
+        },
+        {
+          "id": "q6",
+          "q": "What is llicorella, the soil of Priorat?",
+          "options": ["A white chalky soil", "A red clay over limestone", "A marl full of fossil oyster shells", "A dark slate with quartz"],
+          "answer": 3,
+          "explain": "Llicorella is a dark slate with quartz that forces roots deep.",
+          "place": "es-eupdo-PDO-ES-A1560"
+        },
+        {
+          "id": "q7",
+          "q": "Which soil dominates the south-facing hill of Hermitage?",
+          "options": ["Granite", "Chalk", "Gravel", "Volcanic sand"],
+          "answer": 0,
+          "explain": "Hermitage is a south-facing hill with largely granite soils, planted to Syrah.",
+          "place": "fr-inao-a282"
+        },
+        {
+          "id": "q8",
+          "q": "Why does albariza suit vines in the hot climate of Jerez?",
+          "options": ["It is dark and absorbs heat", "It is pure gravel and drains instantly", "It soaks up winter rain and forms a crust that slows evaporation", "It is volcanic and very fertile"],
+          "answer": 2,
+          "explain": "Albariza stores winter rain and its baked crust limits water loss in summer.",
+          "place": "es-eupdo-PDO-ES-A1483"
+        }
+      ]
+    },
+    {
+      "id": "foundations-vine-year",
+      "title": "The vine through the year",
+      "minutes": 9,
+      "intro": "This lesson follows the vine from winter rest to harvest and explains the main hazards along the way: frost, poor fruit set, hail, fungal disease and phylloxera. It ends with the choices growers make to steer quality.",
+      "sections": [
+        {
+          "h": "The annual cycle",
+          "p": [
+            "The vine follows the same cycle each year. In the Northern Hemisphere it rests through winter (December to February), when growers prune. Budburst comes in March or April, once temperatures pass about 10°C, and shoots and leaves then grow fast. In the Southern Hemisphere every stage comes about six months later, so harvest there falls in February to April.",
+            "Flowering follows in May or June. Each flower that is fertilised becomes a berry, a stage called fruit set. Warm, dry, calm weather at flowering gives a good set and a full crop. In July or August comes véraison: the berries soften and change colour, and black grapes turn from green to purple.",
+            "During ripening, sugar rises, acidity falls (malic acid most of all) and tannins, colour and aromas develop. Growers choose the picking date by sugar, acidity and the taste of skins and seeds. Harvest in the Northern Hemisphere usually runs from September to October, later for some sweet wines."
+          ]
+        },
+        {
+          "h": "Spring frost and winter cold",
+          "p": [
+            "Spring frost after budburst is one of the most damaging hazards. Frozen young shoots die, and the secondary buds that replace them carry less fruit. Early-budding varieties such as Chardonnay are most exposed, which is why frost is a constant worry in Chablis. Heaters, wind machines and sprinklers are used to protect the buds.",
+            "Winter freeze is a separate danger. In very cold continental regions, temperatures far below zero can kill buds, canes or whole vines. In inland regions such as Central Otago, growers also watch for autumn frost, which can end ripening before the harvest."
+          ],
+          "places": ["fr-inao-a146", "nz-world-central-otago"]
+        },
+        {
+          "h": "Flowering problems and hail",
+          "p": [
+            "Cold, wet or windy weather at flowering causes poor fruit set. Coulure is when many flowers fail to become berries, so bunches are sparse and the crop is small. Grenache and Merlot are prone to it. Millerandage is when a bunch sets berries of very different sizes, including small seedless ones. It lowers the yield but can raise concentration.",
+            "Hail is sudden and local. A few minutes can shred leaves, break shoots and split berries, which then rot. It may ruin part of a vintage in one village and miss the next. Bourgogne suffers regular hail storms, and in Mendoza many growers cover their vines with hail nets."
+          ],
+          "places": ["ar-world-mendoza"]
+        },
+        {
+          "h": "Pests and diseases",
+          "p": [
+            "Fungal diseases thrive in warm, humid weather. Powdery mildew (oidium) and downy mildew both reached Europe from North America in the 19th century. Growers control powdery mildew with sulphur and downy mildew with copper sprays such as Bordeaux mixture. Open canopies that let air and sun reach the grapes reduce the risk.",
+            "Botrytis cinerea causes grey rot in wet weather, spoiling flavour and colour, especially in black grapes. The same fungus becomes noble rot when humid, misty mornings are followed by dry, sunny afternoons on ripe white grapes. Noble rot concentrates sugar and acidity and is the basis of Sauternes and Tokaj.",
+            "Phylloxera is a louse that feeds on vine roots. It spread through Europe from the 1860s and destroyed most vineyards. The answer was to graft European vines onto resistant American rootstocks. A few places escaped: South Australia, home of the Barossa Valley, keeps very old ungrafted vines, and many Etna vines grow on their own roots in volcanic sand."
+          ],
+          "places": ["fr-inao-a75", "hu-eupdo-PDO-HU-A1254", "au-world-barossa-valley", "it-eupdo-PDO-IT-A0780"]
+        },
+        {
+          "h": "Choices in the vineyard",
+          "p": [
+            "Growers shape quality through the year. Pruning and green harvesting (cutting off bunches in summer) control yield. Canopy management balances leaves and fruit and keeps the bunches healthy. Hand picking allows careful selection and keeps bunches whole. It is required in Champagne, and in Sauternes pickers pass through the vineyard several times to take only the nobly rotten grapes."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A1359", "fr-inao-a75"]
+        }
+      ],
+      "key": [
+        "The order: dormancy and pruning, budburst, flowering and fruit set, véraison, ripening, harvest.",
+        "Southern Hemisphere stages come about six months after Northern Hemisphere ones.",
+        "Spring frost kills young shoots. Early budders such as Chardonnay in Chablis are most at risk.",
+        "Coulure: flowers fail to set (Grenache, Merlot). Millerandage: berries of uneven size.",
+        "Botrytis is grey rot in wet weather and noble rot with misty mornings and dry afternoons.",
+        "Phylloxera is beaten by grafting onto American rootstock. Barossa and Etna keep old ungrafted vines."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What happens at véraison?",
+          "options": ["The buds open", "The flowers become berries", "The berries soften and change colour", "The grapes are picked"],
+          "answer": 2,
+          "explain": "Véraison, in July or August in the north, is when berries soften and change colour."
+        },
+        {
+          "id": "q2",
+          "q": "What is coulure?",
+          "options": ["Many flowers fail to set into berries", "Berries split after a hail storm", "Grapes freeze on the vine", "Roots are attacked by a louse"],
+          "answer": 0,
+          "explain": "Coulure is poor fruit set after bad weather at flowering. Grenache and Merlot are prone to it."
+        },
+        {
+          "id": "q3",
+          "q": "How did growers overcome phylloxera?",
+          "options": ["By spraying sulphur", "By grafting onto American rootstocks", "By covering vines with nets", "By planting on north-facing slopes"],
+          "answer": 1,
+          "explain": "Grafting onto resistant American rootstock was the answer. South Australia escaped, so the Barossa keeps old ungrafted vines.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "id": "q4",
+          "q": "Which weather turns Botrytis cinerea into noble rot?",
+          "options": ["Constant heavy rain", "Hot, dry wind all day", "Frost soon after budburst", "Misty mornings followed by dry, sunny afternoons"],
+          "answer": 3,
+          "explain": "Humid mornings let the fungus grow and dry afternoons stop it turning into grey rot, as in Sauternes.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "id": "q5",
+          "q": "When is the harvest in the Southern Hemisphere?",
+          "options": ["September to October", "June to July", "December to January", "February to April"],
+          "answer": 3,
+          "explain": "Every stage comes about six months after the Northern Hemisphere, so harvest falls in February to April."
+        },
+        {
+          "id": "q6",
+          "q": "What happens to sugar and acidity as grapes ripen?",
+          "options": ["Sugar falls and acidity rises", "Both rise", "Sugar rises and acidity falls", "Neither changes"],
+          "answer": 2,
+          "explain": "Sugar builds while acidity, especially malic acid, falls."
+        },
+        {
+          "id": "q7",
+          "q": "Which treatment controls downy mildew?",
+          "options": ["Copper sprays such as Bordeaux mixture", "Sulphur dust", "Grafting onto rootstock", "Sprinklers"],
+          "answer": 0,
+          "explain": "Downy mildew is controlled with copper. Sulphur is used against powdery mildew."
+        },
+        {
+          "id": "q8",
+          "q": "In which region do many growers protect vines with hail nets?",
+          "options": ["Mosel", "Mendoza", "Champagne", "Chablis"],
+          "answer": 1,
+          "explain": "Hail is a regular threat in Mendoza, where many vineyards are covered with nets.",
+          "place": "ar-world-mendoza"
+        }
+      ]
+    },
+    {
+      "id": "foundations-winemaking",
+      "title": "Making red, white and rosé wine",
+      "minutes": 10,
+      "intro": "This lesson explains how still wines are made: what yeast does, how white and red winemaking differ, the role of malolactic conversion and oak, some legal ageing rules, and the three ways to make rosé.",
+      "sections": [
+        {
+          "h": "Fermentation basics",
+          "p": [
+            "Alcoholic fermentation is the work of yeast. It turns grape sugar into alcohol and carbon dioxide and gives off heat. Winemakers may rely on the yeasts already present (ambient yeast) or add selected cultured yeasts for a more predictable result. Sulphur dioxide is added at several stages to protect the wine from oxygen and microbes.",
+            "Where grapes struggle to ripen, some cool regions allow chaptalisation: adding sugar before or during fermentation to raise the alcohol. It does not make the wine sweet. In warm regions, adding tartaric acid (acidification) is more common. Both are regulated region by region."
+          ]
+        },
+        {
+          "h": "White wine",
+          "p": [
+            "For white wine, the grapes are crushed and pressed before fermentation, so only the juice ferments. Skin contact is kept short to avoid bitterness. Fermentation is usually cool, about 12 to 22°C, to keep fresh fruit aromas. Marlborough Sauvignon Blanc is a classic case: cool fermentation in stainless steel keeps its pungent, fruity style.",
+            "Other whites gain texture from oak and lees. In the Côte de Beaune, grand cru Chardonnay such as Montrachet is traditionally fermented and aged in oak barrels and stirred on its lees (bâtonnage), which adds body and creamy notes. Chablis is often made in steel or older oak, which keeps its high acidity and citrus fruit to the fore.",
+            "Malolactic conversion is carried out by lactic acid bacteria, not yeast. It turns sharp malic acid into softer lactic acid and can add buttery notes. Winemakers often allow it for full-bodied Chardonnay and block it for crisp, aromatic whites such as Sauvignon Blanc or Riesling."
+          ],
+          "places": ["nz-world-marlborough", "fr-inao-a207", "fr-inao-a146"]
+        },
+        {
+          "h": "Red wine",
+          "p": [
+            "Red wine is fermented with the skins, because colour, tannin and much of the flavour sit in the skins. Fermentation is warmer, about 20 to 32°C, to help extraction. The skins float up to form a cap, which is kept wet by punching down (pigeage), pumping over (remontage) or rack and return (délestage). Afterwards the wine is drained off and the skins pressed.",
+            "Almost all reds go through malolactic conversion before maturation. Small new oak barrels, such as the 225-litre Bordeaux barrique used in Pauillac, add vanilla, toast and tannin. Large old casks add little oak flavour and allow slow oxidation. Traditional Barolo and Brunello di Montalcino are aged in large casks called botti.",
+            "Laws often set minimum ageing. Barolo is made only from Nebbiolo and must be aged at least 38 months, 18 of them in wood. Brunello di Montalcino is 100% Sangiovese, spends at least two years in oak and cannot be released until 1 January of the fifth year after harvest.",
+            "Some reds are made from dried grapes. For Amarone della Valpolicella, grapes (mainly Corvina) are dried for several months after harvest, a process called appassimento, and then fermented to dryness. The result is a full-bodied red with high alcohol."
+          ],
+          "places": ["fr-inao-a59", "it-eupdo-PDO-IT-A1389", "it-eupdo-PDO-IT-A1199", "it-eupdo-PDO-IT-A0435"]
+        },
+        {
+          "h": "Rosé",
+          "p": [
+            "Rosé takes its colour from brief contact with the skins of black grapes. In direct pressing, black grapes are pressed straight away, giving very pale wines. In short maceration, juice and skins stay together for a few hours to about two days, then the juice is drained off and fermented like a white. In saignée, some juice is bled from a red wine tank and made into rosé.",
+            "In the EU, blending red and white wine to make rosé is generally not allowed. Rosé Champagne, usually made by adding some still red wine to the white base, is the classic exception. Bandol, on the Provence coast, makes rosé mainly from Mourvèdre, Grenache and Cinsault. Bandol red must contain at least 50% Mourvèdre and spend at least 18 months in wood."
+          ],
+          "places": ["fr-inao-a292", "fr-eupdo-PDO-FR-A1359"]
+        }
+      ],
+      "key": [
+        "Yeast turns sugar into alcohol, carbon dioxide and heat. Chaptalisation raises alcohol, not sweetness.",
+        "White: press before fermentation and ferment cool (about 12 to 22°C).",
+        "Red: ferment on the skins and warmer (about 20 to 32°C). The cap is managed by pigeage, remontage or délestage.",
+        "Malolactic conversion turns malic into lactic acid. It is almost universal in reds and optional in whites.",
+        "Barolo: 100% Nebbiolo, at least 38 months with 18 in wood. Brunello: 100% Sangiovese, released 1 January of the fifth year after harvest.",
+        "Rosé: direct pressing, short maceration or saignée. Blending red and white is generally banned in the EU, but allowed for rosé Champagne."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is chaptalisation?",
+          "options": ["Adding sugar to make the wine sweeter", "Adding sugar before or during fermentation to raise alcohol", "Adding tartaric acid in hot regions", "Adding sulphur dioxide to protect the wine"],
+          "answer": 1,
+          "explain": "The added sugar is fermented into alcohol, so the wine gains strength but not sweetness."
+        },
+        {
+          "id": "q2",
+          "q": "At what temperature is white wine usually fermented?",
+          "options": ["About 30 to 40°C", "About 20 to 32°C", "About 2 to 8°C", "About 12 to 22°C"],
+          "answer": 3,
+          "explain": "Cool fermentation keeps fresh fruit aromas, as in Marlborough Sauvignon Blanc.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "id": "q3",
+          "q": "What carries out malolactic conversion?",
+          "options": ["Lactic acid bacteria", "Yeast", "Oxygen", "Oak tannins"],
+          "answer": 0,
+          "explain": "Lactic acid bacteria turn malic acid into softer lactic acid."
+        },
+        {
+          "id": "q4",
+          "q": "What is pigeage?",
+          "options": ["Pumping wine over the cap", "Draining the tank and returning the wine", "Punching down the cap of skins", "Stirring the lees in barrel"],
+          "answer": 2,
+          "explain": "Pigeage is punching down. Remontage is pumping over and délestage is rack and return."
+        },
+        {
+          "id": "q5",
+          "q": "What is the minimum ageing for Barolo?",
+          "options": ["18 months, 6 of them in wood", "38 months, 18 of them in wood", "5 years, 3 of them in wood", "24 months, all in steel"],
+          "answer": 1,
+          "explain": "Barolo needs at least 38 months of ageing, with 18 months in wood.",
+          "place": "it-eupdo-PDO-IT-A1389"
+        },
+        {
+          "id": "q6",
+          "q": "How is Amarone della Valpolicella made?",
+          "options": ["From grapes frozen on the vine", "From nobly rotten grapes", "From grapes dried after harvest, then fermented to dryness", "By adding grape spirit during fermentation"],
+          "answer": 2,
+          "explain": "Amarone uses appassimento: grapes dried for months, then fermented dry for a full, high-alcohol red.",
+          "place": "it-eupdo-PDO-IT-A0435"
+        },
+        {
+          "id": "q7",
+          "q": "Which rosé may be made by blending red and white wine?",
+          "options": ["Bandol rosé", "Rioja rosado", "Sancerre rosé", "Rosé Champagne"],
+          "answer": 3,
+          "explain": "Blending red and white is generally banned for EU rosé. Rosé Champagne is the classic exception.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q8",
+          "q": "Which grape must make up at least half of red Bandol?",
+          "options": ["Mourvèdre", "Grenache", "Cinsault", "Syrah"],
+          "answer": 0,
+          "explain": "Red Bandol needs at least 50% Mourvèdre and at least 18 months in wood.",
+          "place": "fr-inao-a292"
+        }
+      ]
+    },
+    {
+      "id": "foundations-special-wines",
+      "title": "Sparkling, sweet and fortified wines",
+      "minutes": 10,
+      "intro": "This lesson covers the wines made with an extra step: the traditional and tank methods for sparkling wine, the ways to keep sugar in sweet wine, and how Port and Sherry are fortified.",
+      "sections": [
+        {
+          "h": "Sparkling wine: the traditional method",
+          "p": [
+            "Most fine sparkling wine gets its bubbles from a second fermentation in the bottle. A still base wine is bottled with yeast and sugar (the liqueur de tirage). The yeast ferments the sugar, and the carbon dioxide stays dissolved in the wine. The dead yeast cells (lees) then break down slowly, a process called autolysis, which gives notes of bread, brioche and biscuit.",
+            "The lees are moved into the neck by riddling (remuage), turning and tilting the bottle by hand or machine. At disgorgement the neck is frozen and the plug of yeast removed. A small dose of sweetened wine (the dosage) sets the style, from Brut Nature with no added sugar to Doux, the sweetest. Brut has up to 12 g/L of sugar.",
+            "Champagne uses mainly Chardonnay, Pinot Noir and Meunier. Non-vintage Champagne must stay at least 15 months in the cellar after bottling, 12 of them on the lees; vintage Champagne at least three years. Cava, mostly from Penedès in Catalonia, uses Macabeo, Xarel·lo and Parellada and needs at least 9 months on the lees. Franciacorta in Lombardy uses mainly Chardonnay and Pinot Nero."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A1359", "es-eupdo-PDO-ES-A0735", "it-eupdo-PDO-IT-A1034"]
+        },
+        {
+          "h": "Sparkling wine: the tank method",
+          "p": [
+            "In the tank method (Charmat), the second fermentation takes place in a sealed pressure tank. The wine is then filtered and bottled under pressure. It is quicker and cheaper, with little or no autolysis, so it keeps the fresh, fruity aromas of the grape. Prosecco, from Glera grapes grown in the Veneto and Friuli Venezia Giulia, is the best-known example."
+          ],
+          "places": ["it-eupdo-PDO-IT-A0516"]
+        },
+        {
+          "h": "Sweet wines",
+          "p": [
+            "A wine is sweet when sugar is left after fermentation. Winemakers keep sugar in two ways: by concentrating it in the grapes so the yeast cannot ferment it all, or by stopping fermentation early with chilling, filtering, sulphur or added spirit. Sugar is concentrated by noble rot, by leaving grapes to shrivel on the vine, by drying them after harvest or by freezing them on the vine.",
+            "Sauternes is the classic noble rot wine, made mainly from Sémillon with Sauvignon Blanc and some Muscadelle. Autumn mists form where the cool Ciron river meets the warmer Garonne, encouraging botrytis. Pickers make several passes, taking only the affected berries. In the 1855 Classification, Château d'Yquem was ranked alone as Premier Cru Supérieur.",
+            "Tokaj in north-east Hungary makes Tokaji Aszú mainly from Furmint and Hárslevelű. Nobly rotten aszú berries are picked one by one and soaked in fermenting must or wine. In Germany, the Prädikat levels from Kabinett to Trockenbeerenauslese are set by the sugar in the grapes at harvest. They measure ripeness, not final sweetness. Eiswein is pressed from grapes frozen on the vine, so the water stays behind as ice."
+          ],
+          "places": ["fr-inao-a75", "hu-eupdo-PDO-HU-A1254", "de-eupdo-PDO-DE-A1270"]
+        },
+        {
+          "h": "Port",
+          "p": [
+            "Fortified wines have grape spirit added. For Port, made in the Douro valley of northern Portugal, fermentation is stopped part way by adding grape spirit of about 77% abv. This keeps natural grape sugar in the wine and brings it to about 19 to 22% abv. Because fermentation is short, colour and tannin must be extracted fast, by foot treading in stone lagares or by machine.",
+            "Port grapes include Touriga Nacional, Touriga Franca and Tinta Roriz (Tempranillo). Ruby styles age in large vessels with little oxygen to keep fruit and colour. Tawny styles age in small casks and turn pale and nutty. Vintage Port comes from declared years, is bottled after about two years in wood and matures in bottle. Porto is the PDO for the fortified wine; Douro is the PDO for the region's unfortified wines."
+          ],
+          "places": ["pt-eupdo-PDO-PT-A1540", "pt-eupdo-PDO-PT-A1539"]
+        },
+        {
+          "h": "Sherry",
+          "p": [
+            "Sherry comes from the area around Jerez de la Frontera, Sanlúcar de Barrameda and El Puerto de Santa María in Andalucía, and is made mostly from Palomino. Unlike Port, the base wine is fermented to dryness first and fortified afterwards. Any sweetness is added later, for example from wine made with Pedro Ximénez grapes.",
+            "Fino and Manzanilla are fortified to about 15% and age under flor, a layer of yeast that protects the wine from oxygen and gives a tangy, bready character. Oloroso is fortified to about 17%, which stops flor growing, and ages with oxygen, gaining colour and nutty flavours. Sherry is aged in a solera, a system of fractional blending: wine is drawn from the oldest casks, which are topped up from younger ones."
+          ],
+          "places": ["es-eupdo-PDO-ES-A1483"]
+        }
+      ],
+      "key": [
+        "Traditional method: second fermentation in bottle, lees ageing (autolysis), riddling, disgorgement, dosage.",
+        "Non-vintage Champagne: at least 15 months after bottling, 12 on the lees. Cava: at least 9 months on the lees.",
+        "The tank method keeps primary fruit. Prosecco is made from Glera.",
+        "Sauternes and Tokaji Aszú rely on noble rot. Eiswein uses grapes frozen on the vine.",
+        "Port is fortified during fermentation and is sweet, at 19 to 22% abv. Sherry is fortified after fermentation from a dry base.",
+        "Fino ages under flor at about 15%. Oloroso ages with oxygen at about 17%."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which aromas does autolysis give a traditional method sparkling wine?",
+          "options": ["Fresh citrus and green apple", "Bread, brioche and biscuit", "Vanilla and toast from new oak", "Raisin and fig from dried grapes"],
+          "answer": 1,
+          "explain": "As the dead yeast cells break down on the lees, they give bread, brioche and biscuit notes.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q2",
+          "q": "How does Prosecco get its bubbles?",
+          "options": ["From noble rot", "From a second fermentation in the bottle", "From added grape spirit", "From a second fermentation in a pressure tank"],
+          "answer": 3,
+          "explain": "Prosecco uses the tank (Charmat) method, which keeps the fresh fruit of the Glera grape.",
+          "place": "it-eupdo-PDO-IT-A0516"
+        },
+        {
+          "id": "q3",
+          "q": "What is the minimum cellar time for non-vintage Champagne?",
+          "options": ["9 months on the lees", "Three years after bottling", "15 months after bottling, 12 of them on the lees", "6 months on the lees"],
+          "answer": 2,
+          "explain": "Non-vintage Champagne needs at least 15 months, 12 on the lees. Nine months is the Cava minimum.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q4",
+          "q": "What creates the autumn mists that bring noble rot to Sauternes?",
+          "options": ["The cool Ciron river meeting the warmer Garonne", "The Gulf Stream along the Atlantic coast", "Snowmelt from the Pyrenees", "Fog from the Bay of Biscay"],
+          "answer": 0,
+          "explain": "The cool Ciron meets the warmer Garonne, and the mists that form encourage botrytis.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "id": "q5",
+          "q": "When is grape spirit added in Port making?",
+          "options": ["After fermentation is complete", "During fermentation, leaving natural grape sugar", "Before fermentation begins", "Only once the wine reaches the solera"],
+          "answer": 1,
+          "explain": "Port is fortified part way through fermentation, which keeps natural sugar. Sherry is fortified after fermentation.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q6",
+          "q": "What does flor do to Fino and Manzanilla?",
+          "options": ["It adds sweetness", "It raises the alcohol to 17%", "It protects the wine from oxygen and gives a tangy, bready character", "It gives a deep brown colour"],
+          "answer": 2,
+          "explain": "Flor is a layer of yeast that shields the wine from oxygen. Oloroso is fortified to 17% to stop flor.",
+          "place": "es-eupdo-PDO-ES-A1483"
+        },
+        {
+          "id": "q7",
+          "q": "What sets the German Prädikat levels, from Kabinett to Trockenbeerenauslese?",
+          "options": ["The sugar in the grapes at harvest", "The sweetness of the finished wine", "The years of ageing before release", "The rank of the vineyard"],
+          "answer": 0,
+          "explain": "Prädikat levels measure ripeness at harvest, not final sweetness.",
+          "place": "de-eupdo-PDO-DE-A1270"
+        },
+        {
+          "id": "q8",
+          "q": "Which grapes are used for Tokaji Aszú?",
+          "options": ["Sémillon and Muscadelle", "Glera and Pinot Bianco", "Palomino and Pedro Ximénez", "Furmint and Hárslevelű"],
+          "answer": 3,
+          "explain": "Tokaji Aszú is made mainly from Furmint and Hárslevelű, with nobly rotten aszú berries.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        }
+      ]
+    }
+  ]
+}

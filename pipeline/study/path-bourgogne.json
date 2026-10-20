@@ -1,0 +1,595 @@
+{
+  "id": "bourgogne",
+  "title": "Burgundy",
+  "level": "WSET 3 to Diploma",
+  "summary": "Burgundy from Chablis to the Mâconnais: how the hierarchy of regional, village, premier cru and grand cru works, and the villages and climats of the Côte de Nuits, Côte de Beaune, Côte Chalonnaise and Mâconnais.",
+  "lessons": [
+    {
+      "id": "bourgogne-overview",
+      "title": "The shape of Burgundy",
+      "minutes": 8,
+      "intro": "This lesson sets out the map of Bourgogne, the French name for Burgundy, its grapes, and the four-level hierarchy of appellations that runs through every later lesson.",
+      "sections": [
+        {
+          "h": "One region, several parts",
+          "p": [
+            "Bourgogne runs from Chablis in the north-west to the Mâconnais in the south. Between them lie the Côte d'Or, split into the Côte de Nuits in the north and the Côte de Beaune in the south, and then the Côte Chalonnaise. Beaujolais lies further south and is studied as a separate region.",
+            "Each part has its own regional appellations, such as Bourgogne Côte d'Or and Bourgogne Côte Chalonnaise, which add a geographic name to the basic Bourgogne appellation."
+          ],
+          "places": ["fr-inao-a138", "fr-inao-a146", "fr-inao-d2840", "fr-inao-d365", "fr-inao-a583"]
+        },
+        {
+          "h": "The Côte d'Or escarpment",
+          "p": [
+            "The Côte d'Or is a narrow escarpment of roughly 50 km, running from just south of Dijon to the Maranges. The vines face east and south-east. Soils are limestone and marl from the Jurassic period, often mixed with clay.",
+            "The best sites usually sit at mid-slope, where drainage and sunlight are best. The top of the slope is cooler with thin soils near the woods. The flat land at the bottom has deeper, richer soils and is more prone to frost. Behind the Côte rise the cooler Hautes Côtes de Nuits and Hautes Côtes de Beaune.",
+            "The climate is continental, with cold winters. Spring frost, summer hail and rain at harvest are the main risks, so vintages vary a great deal."
+          ],
+          "places": ["fr-inao-d2840", "fr-inao-d364", "fr-inao-d363"]
+        },
+        {
+          "h": "The grapes",
+          "p": [
+            "Pinot Noir makes the red wines and Chardonnay the whites. Aligoté is the third grape, used for Bourgogne Aligoté and for Bouzeron, a village appellation for Aligoté only.",
+            "Gamay appears in Coteaux Bourguignons and in Bourgogne Passe-tout-grains, a red or rosé blend of Pinot Noir and Gamay. Saint-Bris in the Yonne is the one Burgundy appellation for Sauvignon. Crémant de Bourgogne is sparkling wine made by the traditional method."
+          ],
+          "places": ["fr-inao-a140", "fr-inao-a245", "fr-inao-a144", "fr-inao-a1027", "fr-inao-a175"]
+        },
+        {
+          "h": "Four levels of quality",
+          "p": [
+            "The hierarchy has four levels. Regional appellations can come from anywhere in the region. Village appellations, also called communal, take the name of a village, such as Gevrey-Chambertin. Premier cru vineyards sit inside a village appellation. Grands crus are appellations in their own right.",
+            "A premier cru label shows the village, the words Premier Cru and usually the climat, as in Gevrey-Chambertin Premier Cru Clos Saint-Jacques. A wine blended from several premiers crus of one village is labelled with the village name and Premier Cru only. A grand cru label needs only the vineyard name, such as Chambertin.",
+            "There are 33 grands crus: 32 in the Côte d'Or and Chablis Grand Cru. In the 19th century many villages added the name of their most famous vineyard to their own. Gevrey became Gevrey-Chambertin in 1847."
+          ],
+          "places": ["fr-inao-a182", "fr-inao-d597", "fr-inao-a148", "fr-inao-a147"]
+        },
+        {
+          "h": "Climats, clos and history",
+          "p": [
+            "A climat is a named, precisely bounded plot whose character has been recognised over centuries. The Climats of Burgundy were listed by UNESCO as World Heritage in 2015. A clos is a vineyard enclosed by a wall. A monopole is a vineyard owned by a single estate.",
+            "Monks shaped the map. The Cistercians of Cîteaux, founded in 1098, built the wall of the Clos de Vougeot. After the French Revolution church land was sold, and Napoleonic inheritance law split estates equally among children. Most vineyards now have many owners.",
+            "This explains the two kinds of producer. A domaine grows and bottles its own wine. A négociant buys grapes, must or wine and sells under its own name. The Hospices de Beaune, a charity hospital founded in 1443, holds a famous wine auction each November."
+          ],
+          "places": ["fr-inao-a162", "fr-inao-a134"]
+        }
+      ],
+      "key": [
+        "Bourgogne runs from Chablis to the Mâconnais; the Côte d'Or is split into Côte de Nuits (north) and Côte de Beaune (south).",
+        "The best Côte d'Or sites are usually mid-slope, on east and south-east facing Jurassic limestone and marl.",
+        "Four levels: regional, village, premier cru, grand cru. Grands crus are appellations in their own right.",
+        "33 grands crus: 32 in the Côte d'Or plus Chablis Grand Cru.",
+        "Pinot Noir and Chardonnay dominate; Aligoté has its own village appellation at Bouzeron.",
+        "Napoleonic inheritance law divided vineyards among many owners, which gave négociants their role."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which vineyard name did the village of Gevrey add to its own name in 1847?",
+          "options": ["Musigny", "Chambertin", "Montrachet", "Corton"],
+          "answer": 1,
+          "explain": "Gevrey became Gevrey-Chambertin, borrowing the name of its most famous grand cru, as many Côte d'Or villages did in the 19th century.",
+          "place": "fr-inao-a182"
+        },
+        {
+          "id": "q2",
+          "q": "How is a wine blended from several premier cru vineyards of the same village labelled?",
+          "options": ["Village name plus Premier Cru", "Grand Cru", "Village name plus Villages", "Bourgogne plus the village name"],
+          "answer": 0,
+          "explain": "When several premiers crus of one village are blended, the label shows the village and Premier Cru without a climat name."
+        },
+        {
+          "id": "q3",
+          "q": "Bouzeron is a village appellation for which single grape?",
+          "options": ["Chardonnay", "Gamay", "Pinot Noir", "Aligoté"],
+          "answer": 3,
+          "explain": "Bouzeron is the village appellation for Aligoté only.",
+          "place": "fr-inao-a245"
+        },
+        {
+          "id": "q4",
+          "q": "Where on the Côte d'Or slope do the best vineyards usually lie?",
+          "options": ["At the top, next to the woods", "On the flat land at the foot of the slope", "At mid-slope", "On the plateau behind the slope"],
+          "answer": 2,
+          "explain": "Mid-slope sites combine good drainage and good sun exposure. The top is cooler and the foot has richer soils and more frost."
+        },
+        {
+          "id": "q5",
+          "q": "What does the word clos mean on a Burgundy label?",
+          "options": ["A vineyard with a single owner", "A cellar where the wine is aged", "A blend of several crus", "A vineyard enclosed by a wall"],
+          "answer": 3,
+          "explain": "A clos is a walled vineyard, such as the Clos de Vougeot. A vineyard with a single owner is a monopole.",
+          "place": "fr-inao-a162"
+        },
+        {
+          "id": "q6",
+          "q": "Why do most Burgundy vineyards have many different owners?",
+          "options": ["Napoleonic inheritance law split estates among heirs", "Phylloxera forced owners to sell small plots", "INAO rules limit the size of each holding", "The vineyards were divided by a classification in 1855"],
+          "answer": 0,
+          "explain": "After the Revolution church land was sold, and inheritance law divided estates equally among children, fragmenting the vineyards."
+        },
+        {
+          "id": "q7",
+          "q": "How many grands crus are there in Burgundy, counting Chablis Grand Cru as one?",
+          "options": ["24", "32", "33", "40"],
+          "answer": 2,
+          "explain": "There are 32 grands crus in the Côte d'Or, and Chablis Grand Cru makes 33.",
+          "place": "fr-inao-a147"
+        }
+      ]
+    },
+    {
+      "id": "bourgogne-chablis",
+      "title": "Chablis and the Grand Auxerrois",
+      "minutes": 8,
+      "intro": "This lesson covers Chablis, its Kimmeridgian soils and its four levels from Petit Chablis to Chablis Grand Cru, and the smaller appellations around Auxerre in the Yonne.",
+      "sections": [
+        {
+          "h": "Chablis in the north",
+          "p": [
+            "Chablis lies in the Yonne department, around the small town of Chablis on the Serein river. It is far north-west of the Côte d'Or and closer to the Aube vineyards of Champagne than to Beaune.",
+            "The climate is cool and continental. Chardonnay ripens here only just. Spring frost is the great threat. Growers protect the buds with heaters among the vines or with sprinklers that coat the buds in ice, which shields them from colder air."
+          ],
+          "places": ["fr-inao-a146"]
+        },
+        {
+          "h": "Kimmeridgian and Portlandian",
+          "p": [
+            "The classic soil is Kimmeridgian: marl and limestone from the Upper Jurassic, full of the fossils of a small oyster, Exogyra virgula. The same layer appears in the Aube and in Sancerre.",
+            "Chablis, Chablis Premier Cru and Chablis Grand Cru come mainly from Kimmeridgian slopes. Petit Chablis comes mostly from the younger, harder Portlandian limestone on the plateaux. As the vineyard expanded from the 1970s, growers argued over whether Portlandian sites deserved the name Chablis."
+          ],
+          "places": ["fr-inao-a214", "fr-inao-a146"]
+        },
+        {
+          "h": "Four levels and the premiers crus",
+          "p": [
+            "Chablis has four levels: Petit Chablis, Chablis, Chablis Premier Cru and Chablis Grand Cru. All are Chardonnay only. The wines are pale, with high acidity, green apple and citrus fruit, often described as flinty or saline. Most Petit Chablis and Chablis are made without new oak.",
+            "Premiers crus lie on both banks of the Serein. On the right bank are Fourchaume, Mont de Milieu and Montée de Tonnerre. On the left bank are Vaillons, Montmains and Côte de Léchet. Many smaller climats may be sold under the name of a larger, better known one."
+          ],
+          "places": ["fr-inao-d438", "fr-inao-d414", "fr-inao-d420"]
+        },
+        {
+          "h": "The grand cru slope",
+          "p": [
+            "Chablis Grand Cru is one appellation with seven climats: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur and Vaudésir. They share a single hillside on the right bank of the Serein, facing south-west over the town.",
+            "Les Clos is the largest and often the most powerful, slow to open. La Moutonne is not an official climat but a monopole lying across Vaudésir and Preuses. Grand cru wines are richer and longer lived than other Chablis, and some producers age them in oak barrels."
+          ],
+          "places": ["fr-inao-a147", "fr-inao-d443", "fr-inao-d446", "fr-inao-d444", "fr-inao-d440", "fr-inao-d441", "fr-inao-d442", "fr-inao-d445"]
+        },
+        {
+          "h": "The Grand Auxerrois",
+          "p": [
+            "Around Auxerre lie smaller appellations. Irancy is a village appellation for red wine from Pinot Noir, with a little César allowed. Saint-Bris makes white from Sauvignon Blanc and Sauvignon Gris, the only Sauvignon appellation in Burgundy. Vézelay makes white from Chardonnay.",
+            "Several regional Bourgogne names add a local place: Côtes d'Auxerre, Chitry, Coulanges-la-Vineuse, Epineuil and Tonnerre near the town of Tonnerre, and Côte Saint-Jacques near Joigny."
+          ],
+          "places": ["fr-inao-a247", "fr-inao-a478", "fr-inao-a1170", "fr-inao-d366", "fr-inao-d367", "fr-inao-d368", "fr-inao-d369", "fr-inao-d1751", "fr-inao-d374"]
+        }
+      ],
+      "key": [
+        "Chablis lies in the Yonne on the Serein river, closer to Champagne's Aube than to the Côte d'Or.",
+        "Kimmeridgian marl and limestone (Upper Jurassic, fossil oyster Exogyra virgula) underlie the best sites; Petit Chablis is mostly on Portlandian.",
+        "Four levels, all Chardonnay: Petit Chablis, Chablis, Chablis Premier Cru, Chablis Grand Cru.",
+        "Seven grand cru climats on one south-west facing slope on the right bank: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur, Vaudésir.",
+        "Spring frost is the main hazard, fought with heaters and water sprinklers.",
+        "Saint-Bris is Burgundy's only Sauvignon appellation; Irancy is red from Pinot Noir."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "On which river does the town of Chablis stand?",
+          "options": ["Saône", "Serein", "Loire", "Seine"],
+          "answer": 1,
+          "explain": "Chablis lies on the Serein, and its grand crus face the town from the right bank.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "id": "q2",
+          "q": "From which geological period does Kimmeridgian marl and limestone come?",
+          "options": ["Upper Jurassic", "Triassic", "Cretaceous", "Tertiary"],
+          "answer": 0,
+          "explain": "Kimmeridgian is an Upper Jurassic layer, rich in fossilised small oysters."
+        },
+        {
+          "id": "q3",
+          "q": "Petit Chablis comes mostly from which soil?",
+          "options": ["Kimmeridgian marl", "Granite", "Portlandian limestone", "Schist"],
+          "answer": 2,
+          "explain": "Petit Chablis vineyards lie mainly on the younger, harder Portlandian limestone of the plateaux.",
+          "place": "fr-inao-a214"
+        },
+        {
+          "id": "q4",
+          "q": "How many climats make up the Chablis Grand Cru appellation?",
+          "options": ["Nine", "Eleven", "Five", "Seven"],
+          "answer": 3,
+          "explain": "Chablis Grand Cru has seven climats: Blanchot, Bougros, Les Clos, Grenouilles, Preuses, Valmur and Vaudésir.",
+          "place": "fr-inao-a147"
+        },
+        {
+          "id": "q5",
+          "q": "Where do the Chablis grands crus lie?",
+          "options": ["On one south-west facing slope on the right bank of the Serein", "On the plateaux above the left bank", "Scattered across both banks", "On flat land beside the river"],
+          "answer": 0,
+          "explain": "All seven climats share a single hillside on the right bank, facing south-west over the town."
+        },
+        {
+          "id": "q6",
+          "q": "Which is the largest Chablis grand cru climat?",
+          "options": ["Grenouilles", "Blanchot", "Les Clos", "Bougros"],
+          "answer": 2,
+          "explain": "Les Clos is the largest grand cru and often the most powerful.",
+          "place": "fr-inao-d443"
+        },
+        {
+          "id": "q7",
+          "q": "Which grape is the main variety of Saint-Bris?",
+          "options": ["Chardonnay", "Aligoté", "Pinot Noir", "Sauvignon Blanc"],
+          "answer": 3,
+          "explain": "Saint-Bris is the only Sauvignon appellation in Burgundy, made from Sauvignon Blanc and Sauvignon Gris.",
+          "place": "fr-inao-a478"
+        },
+        {
+          "id": "q8",
+          "q": "What is La Moutonne?",
+          "options": ["A monopole lying across Vaudésir and Preuses", "A premier cru on the left bank", "The eighth official grand cru climat", "A red wine appellation near Auxerre"],
+          "answer": 0,
+          "explain": "La Moutonne is not an official climat. It is a monopole that lies across the Vaudésir and Preuses grands crus.",
+          "place": "fr-inao-d446"
+        }
+      ]
+    },
+    {
+      "id": "bourgogne-cote-de-nuits",
+      "title": "The Côte de Nuits",
+      "minutes": 10,
+      "intro": "This lesson walks the Côte de Nuits village by village from Marsannay in the north to Nuits-Saint-Georges in the south, with the grands crus of each.",
+      "sections": [
+        {
+          "h": "The northern villages",
+          "p": [
+            "The Côte de Nuits runs from Marsannay, just south of Dijon, to Corgoloin. The slope is narrow and the wine is almost all red Pinot Noir. Of the 32 Côte d'Or grands crus, 24 lie here.",
+            "Marsannay is the only village appellation of the Côte d'Or for red, white and rosé. Fixin makes firm reds, with premiers crus such as Clos de la Perrière and Clos Napoléon. Côte de Nuits-Villages comes from the villages at either end: Fixin and Brochon in the north, Premeaux-Prissey, Comblanchien and Corgoloin in the south."
+          ],
+          "places": ["fr-inao-a199", "fr-inao-a180", "fr-inao-d571", "fr-inao-d570", "fr-inao-a171"]
+        },
+        {
+          "h": "Gevrey-Chambertin",
+          "p": [
+            "Gevrey-Chambertin is the largest village of the Côte de Nuits and has nine grands crus. Chambertin and Chambertin-Clos de Bèze are the most famous, and Clos de Bèze may also be sold as Chambertin. Most grands crus lie south of the village, towards Morey.",
+            "The others are Chapelle, Charmes, Griotte, Latricières, Mazis, Mazoyères and Ruchottes, each followed by -Chambertin. Mazoyères-Chambertin may be sold as Charmes-Chambertin. The premier cru Clos Saint-Jacques, on the slope north-west of the village, is often priced like a grand cru. Gevrey reds are powerful and structured, with dark fruit."
+          ],
+          "places": ["fr-inao-a182", "fr-inao-a148", "fr-inao-a149", "fr-inao-a151", "fr-inao-a153", "fr-inao-a185", "fr-inao-a193", "fr-inao-a201", "fr-inao-a202", "fr-inao-a224", "fr-inao-d597"]
+        },
+        {
+          "h": "Morey-Saint-Denis and Chambolle-Musigny",
+          "p": [
+            "Morey-Saint-Denis has four grands crus of its own: Clos de la Roche, Clos Saint-Denis, Clos de Tart, a monopole, and Clos des Lambrays, raised to grand cru in 1981. A small part of Bonnes-Mares also lies in Morey.",
+            "Chambolle-Musigny has two grands crus. Bonnes-Mares lies at the northern end, next to Morey. Musigny lies at the southern end, next to the Clos de Vougeot, and is also known for a rare white wine. The premier cru Les Amoureuses sits just below Musigny. Chambolle reds are known for perfume and a silky texture."
+          ],
+          "places": ["fr-inao-a208", "fr-inao-a160", "fr-inao-a164", "fr-inao-a161", "fr-inao-a163", "fr-inao-a137", "fr-inao-a150", "fr-inao-a211", "fr-inao-d455"]
+        },
+        {
+          "h": "Vougeot and Vosne-Romanée",
+          "p": [
+            "The Clos de Vougeot is a walled grand cru of about 50 ha, built by the Cistercians. It runs from the upper slope down to the main road and is split among many owners, so quality depends on position and producer. Its château is home to the Confrérie des Chevaliers du Tastevin. Vougeot village wines include a white premier cru, Le Clos Blanc.",
+            "Vosne-Romanée has six grands crus. Romanée-Conti and La Tâche are monopoles of the Domaine de la Romanée-Conti. La Romanée and La Grande Rue are also monopoles, and La Grande Rue became grand cru in 1992. Richebourg and Romanée-Saint-Vivant complete the group.",
+            "Echezeaux and Grands-Echezeaux lie in the commune of Flagey-Echezeaux, whose village wine is sold as Vosne-Romanée. Leading premiers crus include Cros Parantoux, Les Suchots, Les Beaux Monts and Aux Malconsorts."
+          ],
+          "places": ["fr-inao-a242", "fr-inao-a162", "fr-inao-d1280", "fr-inao-a241", "fr-inao-a222", "fr-inao-a191", "fr-inao-a190", "fr-inao-a189", "fr-inao-a221", "fr-inao-a223", "fr-inao-a179", "fr-inao-a184", "fr-inao-d1267", "fr-inao-d1276", "fr-inao-d1271", "fr-inao-d1265"]
+        },
+        {
+          "h": "Nuits-Saint-Georges",
+          "p": [
+            "The town of Nuits-Saint-Georges gives the Côte de Nuits its name and is a centre for négociants. The appellation has no grands crus but many premiers crus. The most famous, Les Saint-Georges, Les Vaucrains and Les Cailles, lie south of the town.",
+            "The appellation continues into Premeaux-Prissey, with premiers crus such as Clos de la Maréchale, Clos Arlot and Clos des Forêts Saint-Georges. The reds are firm, dense and earthy, and need time in bottle."
+          ],
+          "places": ["fr-inao-a212", "fr-inao-d1010", "fr-inao-d1013", "fr-inao-d999", "fr-inao-d989", "fr-inao-d987", "fr-inao-d993"]
+        }
+      ],
+      "key": [
+        "The Côte de Nuits runs from Marsannay to Corgoloin and holds 24 of the 32 Côte d'Or grands crus, almost all red.",
+        "Marsannay is the only Côte d'Or village appellation for red, white and rosé.",
+        "Gevrey-Chambertin has nine grands crus; Clos de Bèze may be sold as Chambertin and Mazoyères as Charmes-Chambertin.",
+        "Morey-Saint-Denis: Clos de la Roche, Clos Saint-Denis, Clos de Tart, Clos des Lambrays (1981) and part of Bonnes-Mares.",
+        "Chambolle-Musigny: Musigny and Bonnes-Mares; Les Amoureuses is its most famous premier cru.",
+        "Vosne-Romanée has six grands crus; Echezeaux and Grands-Echezeaux lie in Flagey-Echezeaux. Nuits-Saint-Georges has none."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What makes Marsannay unique among Côte d'Or village appellations?",
+          "options": ["It has the most grands crus", "It covers red, white and rosé", "It is for white wine only", "It is for Aligoté only"],
+          "answer": 1,
+          "explain": "Marsannay is the only village appellation of the Côte d'Or that includes rosé as well as red and white.",
+          "place": "fr-inao-a199"
+        },
+        {
+          "id": "q2",
+          "q": "Which Gevrey grand cru may be sold under the name Charmes-Chambertin?",
+          "options": ["Griotte-Chambertin", "Latricières-Chambertin", "Ruchottes-Chambertin", "Mazoyères-Chambertin"],
+          "answer": 3,
+          "explain": "Mazoyères-Chambertin may be labelled as Charmes-Chambertin, its neighbour.",
+          "place": "fr-inao-a202"
+        },
+        {
+          "id": "q3",
+          "q": "Which Morey-Saint-Denis vineyard was raised to grand cru in 1981?",
+          "options": ["Clos de Tart", "Clos de la Roche", "Clos des Lambrays", "Clos Saint-Denis"],
+          "answer": 2,
+          "explain": "Clos des Lambrays became a grand cru in 1981.",
+          "place": "fr-inao-a163"
+        },
+        {
+          "id": "q4",
+          "q": "Which famous premier cru lies just below Musigny in Chambolle-Musigny?",
+          "options": ["Les Amoureuses", "Clos Saint-Jacques", "Cros Parantoux", "Les Saint-Georges"],
+          "answer": 0,
+          "explain": "Les Amoureuses sits just below Musigny. The other three belong to Gevrey, Vosne and Nuits.",
+          "place": "fr-inao-d455"
+        },
+        {
+          "id": "q5",
+          "q": "In which commune do Echezeaux and Grands-Echezeaux lie?",
+          "options": ["Vougeot", "Flagey-Echezeaux", "Nuits-Saint-Georges", "Chambolle-Musigny"],
+          "answer": 1,
+          "explain": "Both lie in Flagey-Echezeaux, whose village wine is sold as Vosne-Romanée.",
+          "place": "fr-inao-a179"
+        },
+        {
+          "id": "q6",
+          "q": "How many grands crus does Nuits-Saint-Georges have?",
+          "options": ["One", "Three", "Five", "None"],
+          "answer": 3,
+          "explain": "Nuits-Saint-Georges has no grands crus, only many premiers crus such as Les Saint-Georges.",
+          "place": "fr-inao-a212"
+        },
+        {
+          "id": "q7",
+          "q": "Who built the wall around the Clos de Vougeot?",
+          "options": ["Cistercian monks", "The Dukes of Burgundy", "The Hospices de Beaune", "The Domaine de la Romanée-Conti"],
+          "answer": 0,
+          "explain": "The Cistercians walled the Clos de Vougeot. Today it is divided among many owners.",
+          "place": "fr-inao-a162"
+        }
+      ]
+    },
+    {
+      "id": "bourgogne-cote-de-beaune",
+      "title": "The Côte de Beaune",
+      "minutes": 10,
+      "intro": "This lesson covers the Côte de Beaune from the hill of Corton to the Maranges: Beaune, the red villages of Pommard and Volnay, and the great white villages of Meursault, Puligny and Chassagne.",
+      "sections": [
+        {
+          "h": "The hill of Corton",
+          "p": [
+            "The Côte de Beaune starts at Ladoix-Serrigny. The slope is broader and gentler than in the Côte de Nuits, and much more white wine is made. The hill of Corton is shared by Ladoix, Aloxe-Corton and Pernand-Vergelesses.",
+            "Corton is the only red grand cru of the Côte de Beaune and the largest grand cru in Burgundy. Some white Corton is also made. The label may add a climat name, such as Le Clos du Roi, Les Bressandes, Les Renardes or Le Corton.",
+            "Corton-Charlemagne is the white grand cru, from Chardonnay on the upper part of the hill, named after the emperor Charlemagne. A separate Charlemagne appellation exists but is almost never used."
+          ],
+          "places": ["fr-inao-a192", "fr-inao-a126", "fr-inao-a213", "fr-inao-a165", "fr-inao-d2353", "fr-inao-d2357", "fr-inao-d2370", "fr-inao-d2354", "fr-inao-a166", "fr-inao-a152"]
+        },
+        {
+          "h": "Beaune and its neighbours",
+          "p": [
+            "Savigny-lès-Beaune and Chorey-lès-Beaune make supple, fruity reds that are often good value. Beaune itself has no grands crus but a large area of premiers crus, including Les Grèves, Les Bressandes, Les Teurons, Clos du Roi and Le Clos des Mouches, which makes both red and white.",
+            "The town is the trading heart of Burgundy and home to many négociant houses. The Hospices de Beaune was founded in 1443 by Nicolas Rolin, chancellor to the Duke of Burgundy. Wine from its vineyards is sold at a charity auction each November."
+          ],
+          "places": ["fr-inao-a231", "fr-inao-a159", "fr-inao-a134", "fr-inao-d334", "fr-inao-d329", "fr-inao-d342", "fr-inao-d320", "fr-inao-d325"]
+        },
+        {
+          "h": "Pommard and Volnay",
+          "p": [
+            "Pommard and Volnay are both red-only village appellations with no grands crus. Pommard is sturdier and more tannic, with more clay in the soil. Its best premiers crus are Les Rugiens, named after its reddish, iron-rich soil, and Les Grands Epenots and Les Petits Epenots.",
+            "Volnay, next door, is lighter and more perfumed, on soils with more limestone. Leading premiers crus are Les Caillerets, Clos des Ducs, Taille Pieds and Clos des Chênes. Red wine from Santenots, which lies in Meursault, is usually sold as Volnay Premier Cru Santenots.",
+            "Up a side valley, Monthélie, Auxey-Duresses and Saint-Romain make lighter wines that often offer value."
+          ],
+          "places": ["fr-inao-a215", "fr-inao-d1051", "fr-inao-d1052", "fr-inao-d1046", "fr-inao-d1048", "fr-inao-a240", "fr-inao-d1251", "fr-inao-d1237", "fr-inao-d1260", "fr-inao-d1236", "fr-inao-d1259", "fr-inao-a206", "fr-inao-a129", "fr-inao-a228"]
+        },
+        {
+          "h": "Meursault and Blagny",
+          "p": [
+            "Meursault is mostly white and has no grands crus. Its wines are rich and rounded, often with hazelnut and butter notes from barrel fermentation and lees ageing. The best premiers crus are Perrières, Genevrières and Charmes, with Les Gouttes d'Or and Le Porusot also well known.",
+            "The hamlet of Blagny sits above Meursault and Puligny. The Blagny appellation is for red wine. White wine from Blagny is sold as Meursault Premier Cru Blagny or as Puligny-Montrachet Premier Cru."
+          ],
+          "places": ["fr-inao-a204", "fr-inao-d858", "fr-inao-d847", "fr-inao-d845", "fr-inao-d854", "fr-inao-d850", "fr-inao-a136", "fr-inao-d2373", "fr-inao-d1067"]
+        },
+        {
+          "h": "Puligny, Chassagne and the south",
+          "p": [
+            "Montrachet straddles Puligny-Montrachet and Chassagne-Montrachet. Chevalier-Montrachet lies above it on thinner, stonier soil, and Bâtard-Montrachet below it on deeper soil. Bienvenues-Bâtard-Montrachet lies wholly in Puligny, Criots-Bâtard-Montrachet wholly in Chassagne.",
+            "Puligny has a high water table, so few cellars are dug deep. Its whites are precise and fine. Top premiers crus include Les Pucelles, Les Combettes, Les Folatières and Le Cailleret. Chassagne makes both white and red, with premiers crus such as Morgeot, Cailleret, La Romanée and Les Grandes Ruchottes.",
+            "Saint-Aubin, behind Puligny and Chassagne, is mostly white. Santenay and Maranges at the southern end are mostly red. Côte de Beaune-Villages is a red wine from the village appellations of the Côte de Beaune except Beaune, Aloxe-Corton, Pommard and Volnay."
+          ],
+          "places": ["fr-inao-a207", "fr-inao-a219", "fr-inao-a154", "fr-inao-a157", "fr-inao-a130", "fr-inao-a135", "fr-inao-a178", "fr-inao-d1076", "fr-inao-d1072", "fr-inao-d1074", "fr-inao-d1070", "fr-inao-d527", "fr-inao-d482", "fr-inao-d503", "fr-inao-d517", "fr-inao-a227", "fr-inao-a230", "fr-inao-a198", "fr-inao-a168"]
+        }
+      ],
+      "key": [
+        "Corton is the only red grand cru of the Côte de Beaune and the largest grand cru in Burgundy; Corton-Charlemagne is its white partner.",
+        "Beaune has no grands crus but many premiers crus; the Hospices de Beaune was founded in 1443.",
+        "Pommard and Volnay are red only: Pommard sturdier and more tannic, Volnay lighter and more perfumed.",
+        "Meursault has no grands crus; Perrières, Genevrières and Charmes are its leading premiers crus.",
+        "Five white grands crus around Montrachet: Montrachet and Bâtard shared, Chevalier and Bienvenues in Puligny, Criots in Chassagne.",
+        "Côte de Beaune-Villages is red and excludes Beaune, Aloxe-Corton, Pommard and Volnay."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which is the only red grand cru of the Côte de Beaune?",
+          "options": ["Corton-Charlemagne", "Montrachet", "Corton", "Bâtard-Montrachet"],
+          "answer": 2,
+          "explain": "Corton is the only red grand cru of the Côte de Beaune. The others named are white.",
+          "place": "fr-inao-a165"
+        },
+        {
+          "id": "q2",
+          "q": "Red wine from the Santenots climat, which lies in Meursault, is usually sold under which name?",
+          "options": ["Monthélie Premier Cru", "Volnay Premier Cru Santenots", "Côte de Beaune-Villages", "Pommard Premier Cru"],
+          "answer": 1,
+          "explain": "Red wine from Santenots is sold as Volnay Premier Cru Santenots.",
+          "place": "fr-inao-d1259"
+        },
+        {
+          "id": "q3",
+          "q": "Which grand cru lies wholly within Chassagne-Montrachet?",
+          "options": ["Chevalier-Montrachet", "Bienvenues-Bâtard-Montrachet", "Montrachet", "Criots-Bâtard-Montrachet"],
+          "answer": 3,
+          "explain": "Criots-Bâtard-Montrachet lies wholly in Chassagne. Montrachet is shared, and Chevalier and Bienvenues lie in Puligny.",
+          "place": "fr-inao-a178"
+        },
+        {
+          "id": "q4",
+          "q": "In which year was the Hospices de Beaune founded?",
+          "options": ["1443", "1098", "1789", "1855"],
+          "answer": 0,
+          "explain": "Nicolas Rolin founded the Hospices de Beaune in 1443.",
+          "place": "fr-inao-a134"
+        },
+        {
+          "id": "q5",
+          "q": "How do Pommard and Volnay usually differ in style?",
+          "options": ["Pommard is white and Volnay is red", "Both are light and made for early drinking", "Volnay is the more tannic of the two", "Pommard is sturdier and more tannic, Volnay lighter and more perfumed"],
+          "answer": 3,
+          "explain": "Pommard, with more clay, gives sturdier reds. Volnay, with more limestone, gives lighter, perfumed reds.",
+          "place": "fr-inao-a215"
+        },
+        {
+          "id": "q6",
+          "q": "Where does Chevalier-Montrachet lie in relation to Montrachet?",
+          "options": ["Above it, on thinner and stonier soil", "Below it, on deeper soil", "Across the main road on flat land", "In the village of Saint-Aubin"],
+          "answer": 0,
+          "explain": "Chevalier-Montrachet lies upslope from Montrachet on thin, stony soil. Bâtard-Montrachet lies below.",
+          "place": "fr-inao-a157"
+        },
+        {
+          "id": "q7",
+          "q": "Which of these villages cannot contribute to Côte de Beaune-Villages?",
+          "options": ["Santenay", "Pommard", "Maranges", "Saint-Aubin"],
+          "answer": 1,
+          "explain": "Côte de Beaune-Villages excludes Beaune, Aloxe-Corton, Pommard and Volnay.",
+          "place": "fr-inao-a168"
+        }
+      ]
+    },
+    {
+      "id": "bourgogne-chalonnaise-maconnais",
+      "title": "Côte Chalonnaise and Mâconnais",
+      "minutes": 8,
+      "intro": "This lesson covers the two southern parts of Burgundy: the five village appellations of the Côte Chalonnaise, and the Mâconnais with Pouilly-Fuissé and its premiers crus, created in 2020.",
+      "sections": [
+        {
+          "h": "The Côte Chalonnaise",
+          "p": [
+            "The Côte Chalonnaise lies south of the Maranges and takes its name from the town of Chalon-sur-Saône. Unlike the Côte d'Or it is not one continuous slope. The vineyards sit on scattered hillsides among other farmland.",
+            "There are no grands crus, but four of the five village appellations have premiers crus. Bouzeron has none. The wines are usually lighter and ready sooner than those of the Côte d'Or, and often good value. The regional appellations are Bourgogne Côte Chalonnaise and, to the west, Bourgogne Côtes du Couchois."
+          ],
+          "places": ["fr-inao-d365", "fr-inao-d1586"]
+        },
+        {
+          "h": "Five villages from north to south",
+          "p": [
+            "Bouzeron is the village appellation for Aligoté only. Rully makes more white than red and has a long history of sparkling wine production. Mercurey is the largest village and makes mainly red Pinot Noir.",
+            "Givry is also mainly red; tradition says it was a favourite of King Henri IV. Montagny, in the south, is for white wine from Chardonnay only, and a large part of it is classified as premier cru."
+          ],
+          "places": ["fr-inao-a245", "fr-inao-a225", "fr-inao-a203", "fr-inao-a183", "fr-inao-a205"]
+        },
+        {
+          "h": "The Mâconnais",
+          "p": [
+            "The Mâconnais lies further south, around the town of Mâcon on the Saône. It is warmer and sunnier than the Côte d'Or. Most of the wine is white Chardonnay, rounder and riper in fruit than wines further north. Reds are made mostly from Gamay. The village of Chardonnay lies here.",
+            "The base appellation is Mâcon. Mâcon followed by a village name, such as Mâcon Davayé or Mâcon Chardonnay, is a step up. Mâcon-Villages is for white wine only. Viré-Clessé and Saint-Véran are village appellations for white wine."
+          ],
+          "places": ["fr-inao-a583", "fr-inao-d1720", "fr-inao-d1723", "fr-inao-d2893", "fr-inao-a246", "fr-inao-a229"]
+        },
+        {
+          "h": "Pouilly-Fuissé and its rocks",
+          "p": [
+            "Pouilly-Fuissé lies in the south of the Mâconnais, below the limestone outcrops of the Roche de Solutré and the Roche de Vergisson. It covers four communes: Chaintré, Fuissé, Solutré-Pouilly and Vergisson. It is white only, from Chardonnay, and has more weight and structure than most Mâcon, often with oak ageing.",
+            "Its neighbours Pouilly-Loché and Pouilly-Vinzelles make similar whites in smaller amounts."
+          ],
+          "places": ["fr-inao-a216", "fr-inao-a217", "fr-inao-a218"]
+        },
+        {
+          "h": "Premiers crus since 2020",
+          "p": [
+            "In 2020 Pouilly-Fuissé gained 22 premiers crus, from the 2020 vintage. They were the first premiers crus of the Mâconnais. Among them are Le Clos de Monsieur Noly, Les Crays, Vers Cras, Sur la Roche, Les Perrières, Le Clos Reyssier and Aux Quarts.",
+            "The label shows Pouilly-Fuissé Premier Cru with the climat name. Pouilly-Loché and Pouilly-Vinzelles also have a small number of premiers crus, from the 2024 vintage."
+          ],
+          "places": ["fr-inao-d2865", "fr-inao-d2868", "fr-inao-d2886", "fr-inao-d2876", "fr-inao-d2887", "fr-inao-d2873", "fr-inao-d2867", "fr-inao-d2866", "fr-inao-d2931", "fr-inao-d2927"]
+        }
+      ],
+      "key": [
+        "The Côte Chalonnaise is a broken line of hillsides, not a continuous escarpment; it has premiers crus but no grands crus.",
+        "Bouzeron is Aligoté only, Mercurey and Givry are mainly red, Rully more white, Montagny white only.",
+        "The Mâconnais is warmer; whites are Chardonnay and reds mostly Gamay. Mâcon-Villages is white only.",
+        "Pouilly-Fuissé covers Chaintré, Fuissé, Solutré-Pouilly and Vergisson, below the rocks of Solutré and Vergisson.",
+        "Pouilly-Fuissé gained 22 premiers crus in 2020, the first in the Mâconnais."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which Côte Chalonnaise village appellation is for white wine only?",
+          "options": ["Montagny", "Mercurey", "Givry", "Rully"],
+          "answer": 0,
+          "explain": "Montagny is white only, from Chardonnay. Mercurey and Givry are mainly red, and Rully makes both.",
+          "place": "fr-inao-a205"
+        },
+        {
+          "id": "q2",
+          "q": "What does Mercurey mainly produce?",
+          "options": ["White wine from Chardonnay", "Red wine from Pinot Noir", "White wine from Aligoté", "Sparkling wine"],
+          "answer": 1,
+          "explain": "Mercurey, the largest village of the Côte Chalonnaise, makes mainly red Pinot Noir.",
+          "place": "fr-inao-a203"
+        },
+        {
+          "id": "q3",
+          "q": "In which year did Pouilly-Fuissé gain its premiers crus?",
+          "options": ["1937", "1971", "2011", "2020"],
+          "answer": 3,
+          "explain": "The 22 premiers crus of Pouilly-Fuissé were created in 2020, applying from the 2020 vintage.",
+          "place": "fr-inao-d2865"
+        },
+        {
+          "id": "q4",
+          "q": "How many premiers crus does Pouilly-Fuissé have?",
+          "options": ["7", "12", "22", "33"],
+          "answer": 2,
+          "explain": "Pouilly-Fuissé has 22 premier cru climats.",
+          "place": "fr-inao-a216"
+        },
+        {
+          "id": "q5",
+          "q": "Which two limestone outcrops rise above Pouilly-Fuissé?",
+          "options": ["The hills of Corton and Montrachet", "The Roche de Solutré and the Roche de Vergisson", "The Montagne de Reims and the Côte des Blancs", "Mont de Milieu and Fourchaume"],
+          "answer": 1,
+          "explain": "The rocks of Solutré and Vergisson dominate the Pouilly-Fuissé landscape.",
+          "place": "fr-inao-a216"
+        },
+        {
+          "id": "q6",
+          "q": "Which grape makes most red wine in the Mâconnais?",
+          "options": ["Pinot Noir", "César", "Syrah", "Gamay"],
+          "answer": 3,
+          "explain": "Mâconnais reds are made mostly from Gamay.",
+          "place": "fr-inao-a583"
+        },
+        {
+          "id": "q7",
+          "q": "What colour is Mâcon-Villages?",
+          "options": ["White only", "Red only", "Rosé only", "Red and white"],
+          "answer": 0,
+          "explain": "Mâcon-Villages is an appellation for white wine only.",
+          "place": "fr-inao-d2893"
+        },
+        {
+          "id": "q8",
+          "q": "How does the landscape of the Côte Chalonnaise differ from the Côte d'Or?",
+          "options": ["It is one longer and steeper continuous slope", "It is a flat river plain", "Its vineyards sit on scattered hillsides among other farmland", "It is a high plateau of Portlandian limestone"],
+          "answer": 2,
+          "explain": "The Côte Chalonnaise is not a continuous escarpment. Its vineyards are spread over separate hillsides.",
+          "place": "fr-inao-d365"
+        }
+      ]
+    }
+  ]
+}
