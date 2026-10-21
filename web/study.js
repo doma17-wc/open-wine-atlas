@@ -14,6 +14,9 @@
 const O = window.OWA;
 if (!O || window.OWA_STUDY) return;
 const { MY, esc, t_, store } = O;
+// Path levels come from web/data/study.json; listed here so pipeline/i18n_extract.py keeps their translations.
+const N_ = (x) => x;
+const LEVELS = [N_("Intermediate"), N_("Advanced")];
 const $ = (id) => document.getElementById(id);
 const FREE_PER_DAY = 10;
 const BOX_DAYS = [0, 1, 3, 7, 16, 35];
@@ -447,10 +450,11 @@ function hub() {
     '<button class="primary" data-st="review"' + (due ? "" : " disabled") + ">" + t_("Start review") + "</button></div>" +
     "<h3>" + t_("Study paths") + '</h3><div class="st-paths">' + DATA.paths.map((p) => {
       const done = p.lessons.filter((l) => ST().done[l.id]).length;
-      return '<button class="st-path" data-st-path="' + esc(p.id) + '"><b>' + esc(p.title) + "</b><span>" + esc(p.level) + " · " + t_("{n} lessons", { n: p.lessons.length }) + "</span>" +
+      return '<button class="st-path" data-st-path="' + esc(p.id) + '"><b>' + esc(p.title) + "</b><span>" + esc(t_(p.level)) + " · " + t_("{n} lessons", { n: p.lessons.length }) + "</span>" +
         '<span class="st-prog"><i style="width:' + (100 * done / p.lessons.length).toFixed(0) + '%"></i></span><small>' + esc(p.summary) + "</small></button>";
     }).join("") + "</div>" +
-    '<p class="note">' + t_("Lessons are written by the atlas editors and checked against the official rules. Drills are built from the atlas data.") + "</p>";
+    '<p class="note">' + t_("Lessons are written by the atlas editors and checked against the official rules. Drills are built from the atlas data.") + "</p>" +
+    '<p class="note">' + t_("The levels are our own. As a guide, Intermediate suits students between WSET Level 2 and 3, Advanced suits Level 3 to Diploma. Open Wine Atlas is independent and is not affiliated with or endorsed by WSET, the Court of Master Sommeliers or the Institute of Masters of Wine.") + "</p>";
 }
 function pathView(p) {
   const scope = p.scope && p.scope.length;
