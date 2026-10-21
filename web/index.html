@@ -470,6 +470,11 @@ body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing 
 .acct-danger label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); max-width: 340px; margin-bottom: 8px; }
 .acct-danger input { background: #1b1b1f; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--parchment); font: 13px var(--f-body); width: 100%; box-sizing: border-box; }
 .mini-btn:disabled { opacity: .45; cursor: not-allowed; }
+.fm-reserve { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding: 14px 16px; border: 1px solid #4a3f28; border-radius: 10px;
+  background: linear-gradient(90deg, rgba(231,192,106,.09), rgba(231,192,106,.02)); }
+.fm-reserve b { display: block; font: 600 18px/1.2 var(--f-display); color: var(--gold); }
+.fm-reserve span { display: block; color: #cfc6b6; font-size: 13px; margin-top: 4px; }
+@media (max-width: 560px) { .fm-reserve { grid-template-columns: minmax(0, 1fr); } }
 .acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
 .empty { border: 1px dashed var(--line); border-radius: 10px; padding: 18px; color: var(--muted); font-size: 13px; }
 .fbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
@@ -4237,7 +4242,7 @@ function dashOverview() {
     (synced ? t_("Everything here is synced to your account.") : t_("Everything here stays on this device.")) + '</p>' +
     (window.OWA_ACCOUNT ? window.OWA_ACCOUNT.line() : "") +
     (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Become a Founding Member") + '</b><span>' +
-      t_("Study tools for wine students are coming. The first 1,000 members get a full year for CHF 19.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
+      t_("Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
     '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
     tile(MY.journal.length, t_("tastings logged")) + tile(MY.notes.length, t_("notes")) + tile(cc.size, t_("countries you explored")) + "</div>" +
     '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +

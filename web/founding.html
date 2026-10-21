@@ -83,11 +83,18 @@ button.go[disabled] { opacity: .6; cursor: progress; }
 .fine { margin: 12px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
 .msg { margin: 12px 0 0; font-size: 13.5px; min-height: 1px; }
 .msg.err { color: var(--err); }
+.who { margin: 0 0 14px; font-size: 14px; color: #cfc6b6; }
+.who b { color: var(--parchment); }
+input.code { width: 100%; padding: 13px 14px; background: var(--night); color: var(--gold); border: 1px solid #3a3a42; border-radius: var(--r);
+  font: 500 26px var(--f-mono); letter-spacing: .35em; text-align: center; outline: none; margin: 4px 0 14px; }
+input.code:focus { border-color: var(--gold); }
+.small { color: var(--muted); font-size: 13.5px; }
 
 /* card states */
 .state { display: none; }
 .card[data-state=form] .s-form, .card[data-state=sent] .s-sent, .card[data-state=confirmed] .s-confirmed,
-.card[data-state=unsub] .s-unsub, .card[data-state=invalid] .s-invalid, .card[data-state=full] .s-full, .card[data-state=soon] .s-soon { display: block; }
+.card[data-state=unsub] .s-unsub, .card[data-state=invalid] .s-invalid, .card[data-state=full] .s-full, .card[data-state=soon] .s-soon,
+.card[data-state=code] .s-code { display: block; }
 .card[data-state=full] .s-form { display: block; }
 .card[data-state=full] .s-form h2, .card[data-state=full] .price, .card[data-state=full] .terms { display: none; }
 .state h3 { font: 500 34px/1.1 var(--f-display); margin: 4px 0 12px; }
@@ -184,28 +191,37 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
             <p><b id="meterN">0</b> of 1,000 spots reserved</p>
           </div>
           <form id="form" novalidate>
-            <label class="f" for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254">
-            <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
-            <label class="check"><input id="consent" type="checkbox" required><span>Email me about the Founding membership and the launch. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</span></label>
+            <p class="who" id="who" hidden>Signed in as <b id="whoEmail"></b>. Your spot goes with this account.</p>
+            <div id="emailBox">
+              <label class="f" for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254">
+            </div>
+            <label class="check"><input id="consent" type="checkbox" required><span>Email me when membership opens and about the launch. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</span></label>
+            <label class="check" id="termsBox" hidden><input id="terms" type="checkbox"><span>New here: I am 18 or older and accept the <a href="/terms" target="_blank" rel="noopener">Terms of Use</a>. This creates your free atlas account.</span></label>
             <button class="go" id="go" type="submit">Reserve my spot</button>
             <p class="msg" id="msg" role="status"></p>
-            <p class="fine">Nothing to pay now. We will ask you to confirm your email.</p>
+            <p class="fine" id="fine">Nothing to pay now. Membership opens soon. We send you a code to sign in, and your spot stays with your account.</p>
           </form>
         </div>
 
-        <div class="state s-sent">
+        <div class="state s-code">
           <p class="spot">Almost there</p>
-          <h3>Check your inbox.</h3>
-          <p>We sent a link to <b id="sentTo"></b>. Open it to confirm your email and hold your Founding spot.</p>
-          <p style="color:var(--muted);font-size:13.5px">Nothing after a few minutes? Look in your spam folder, or <a href="#" id="again">try another address</a>.</p>
+          <h3>Enter your code.</h3>
+          <p>We sent a 6-digit code to <b id="codeTo"></b>. Type it here, or open the link in the email on this device.</p>
+          <form id="codeForm" novalidate autocomplete="off">
+            <label class="f" for="code">Code</label>
+            <input id="code" class="code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="••••••">
+            <button class="go" id="codeGo" type="submit">Confirm and reserve my spot</button>
+            <p class="msg" id="codeMsg" role="status"></p>
+          </form>
+          <p class="small">Nothing after a few minutes? Look in your spam folder, <a href="#" id="resend">send a new code</a> or <a href="#" id="again">use another email</a>.</p>
         </div>
 
         <div class="state s-confirmed">
           <p class="spot" id="spotNo">Founding Member</p>
           <h3>You are on the list.</h3>
           <p id="confirmedText">Your Founding spot is held. When membership opens you will hear from us first, at the founding price: CHF 19 for the first year, then CHF 39 a year for as long as you stay.</p>
-          <p><a href="/">Back to the map &rarr;</a></p>
+          <p><a href="/">Back to the map &rarr;</a> &nbsp; <a href="/#account">Your account</a></p>
         </div>
 
         <div class="state s-unsub">
@@ -218,7 +234,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
         <div class="state s-invalid">
           <p class="spot">Link expired</p>
           <h3>This link no longer works.</h3>
-          <p>It may be old or already replaced by a newer one. Enter your email again and we will send a fresh link.</p>
+          <p>It may be old or already replaced by a newer one. Reserve your spot again with your email: we send you a sign-in code.</p>
           <p><a href="/founding">Start again</a></p>
         </div>
 
@@ -323,29 +339,121 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     fetch(API + "?action=count").then((r) => r.json()).then((j) => showCount(j.confirmed || 0)).catch(() => {});
   }
 
-  const form = $("form"), email = $("email"), consent = $("consent"), go = $("go"), msg = $("msg");
+  // ---------- one path: the spot belongs to an atlas account. Sign in with a code (new people accept the Terms once),
+  // then the spot is reserved with the account's email, already verified by the code, so no second email.
+  const C = window.OWA_CONFIG || {};
+  const SB_JS = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js";
+  const CONSENT_VERSION = "2026-10-21", TERMS_VERSION = "2026-10-20", PENDING = "owa.founding.pending";
+  const lang = (navigator.language || "").slice(0, 12);
+  let sb = null, user = null, newUser = false;
+  const form = $("form"), email = $("email"), consent = $("consent"), terms = $("terms"), go = $("go"), msg = $("msg");
   const say = (t, err) => { msg.textContent = t; msg.className = "msg" + (err ? " err" : ""); };
+  const codeSay = (t, err) => { $("codeMsg").textContent = t; $("codeMsg").className = "msg" + (err ? " err" : ""); };
+  const store = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} }, del: (k) => { try { localStorage.removeItem(k); } catch (e) {} } };
   email.addEventListener("input", () => { email.removeAttribute("aria-invalid"); say(""); });
 
-  form.addEventListener("submit", (e) => {
+  function client() {
+    if (sb) return Promise.resolve(sb);
+    return new Promise((ok, fail) => {
+      if (window.supabase) return ok();
+      const sc = document.createElement("script"); sc.src = SB_JS; sc.onload = ok; sc.onerror = fail; document.head.appendChild(sc);
+    }).then(() => {
+      sb = window.supabase.createClient(C.supabaseUrl, C.supabaseKey, {
+        auth: { flowType: "pkce", persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, storageKey: "owa.auth" } });
+      return sb;
+    });
+  }
+  function showSpot(r) {
+    if (r.founding) $("spotNo").textContent = "Founding Member · spot " + Number(r.spot).toLocaleString("en-US") + " of 1,000";
+    else {
+      $("spotNo").textContent = "On the list";
+      $("confirmedText").textContent = "All Founding spots were taken. You are on the list and will hear first when membership opens.";
+    }
+    setState("confirmed");
+  }
+  async function reserve() {
+    const { data, error } = await sb.rpc("founding_reserve", { p_consent_version: CONSENT_VERSION, p_source: source, p_lang: lang });
+    if (error) throw error;
+    store.del(PENDING);
+    const r = Array.isArray(data) ? data[0] : data;
+    showSpot(r);
+    track("founding_reserved", { founding: !!r.founding, source });
+  }
+  function signedInView() {
+    $("who").hidden = false; $("whoEmail").textContent = user.email;
+    $("emailBox").hidden = true; $("termsBox").hidden = true;
+    $("fine").textContent = "Nothing to pay now. Membership opens soon, and you hear from us first.";
+  }
+  async function sendCode() {
+    const opts = { shouldCreateUser: newUser, emailRedirectTo: location.origin + "/founding" };
+    if (newUser) opts.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true };
+    const { error } = await sb.auth.signInWithOtp({ email: email.value.trim(), options: opts });
+    return error;
+  }
+
+  // the page is open with a session (or the email link was just opened here): reserve or show the spot
+  async function boot() {
+    try {
+      await client();
+      const { data } = await sb.auth.getSession();
+      user = data.session?.user || null;
+      if (!user) return;
+      signedInView();
+      const { data: f } = await sb.rpc("my_founding");
+      const mine = Array.isArray(f) && f[0];
+      if (mine) return showSpot(mine);
+      if (store.get(PENDING)) await reserve();
+    } catch (e) { console.warn("founding", e); }
+  }
+  if (!confirmTok && !unsubTok && window.OWA_CONFIG?.foundingOpen) boot();
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const v = email.value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { email.setAttribute("aria-invalid", "true"); email.focus(); return say("Please enter a valid email address.", true); }
-    if (!consent.checked) { consent.focus(); return say("Please tick the box so we can email you.", true); }
+    if (!consent.checked) { consent.focus(); return say("Please tick the box so we can email you when membership opens.", true); }
     go.disabled = true; say("");
-    post({ action: "signup", email: v, consent: true, website: $("website").value, source, lang: (navigator.language || "").slice(0, 12) })
-      .then((r) => {
-        go.disabled = false;
-        if (r.status === 429) return say("Too many tries from here. Please wait a little and try again.", true);
-        if (!r.ok) return say(r.error === "invalid_email" ? "Please enter a valid email address." : "Something went wrong. Please try again in a moment.", true);
-        $("sentTo").textContent = v;
-        setState("sent");
-        track("founding_signup", { source });
-      })
-      .catch(() => { go.disabled = false; say("Could not reach the server. Please check your connection and try again.", true); });
+    try {
+      await client();
+      if (user) { await reserve(); return; }
+      const v = email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) { email.setAttribute("aria-invalid", "true"); email.focus(); return say("Please enter a valid email address.", true); }
+      if (newUser && !terms.checked) { terms.focus(); return say("Please confirm that you are 18 or older and accept the Terms of Use.", true); }
+      const err = await sendCode();
+      if (err && (err.code === "otp_disabled" || /signups not allowed/i.test(err.message))) {
+        // no account with this email yet: one more tick, then the same button creates it
+        newUser = true; $("termsBox").hidden = false; terms.focus();
+        return say("Welcome. Tick the box above to create your free account, then press the button again.");
+      }
+      if (err) return say(/rate|seconds|too many/i.test(err.message) ? "Please wait a minute before asking for another code." : "Could not send the code. Please try again.", true);
+      store.set(PENDING, "1");
+      $("codeTo").textContent = v;
+      setState("code");
+      $("code").focus();
+      track("founding_code_sent", { source, new_user: newUser });
+    } catch (x) {
+      say("Something went wrong. Please try again in a moment.", true);
+    } finally { go.disabled = false; }
   });
 
-  $("again").addEventListener("click", (e) => { e.preventDefault(); setState("form"); email.select(); });
+  $("codeForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const token = $("code").value.replace(/\D/g, "");
+    if (token.length < 6) return codeSay("Enter the code from the email.", true);
+    $("codeGo").disabled = true; codeSay("");
+    try {
+      const { data, error } = await sb.auth.verifyOtp({ email: email.value.trim(), token, type: "email" });
+      if (error) return codeSay(/expired|invalid/i.test(error.message) ? "That code is wrong or has expired. Ask for a new one." : "Could not sign in. Please try again.", true);
+      user = data.user; signedInView();
+      await reserve();
+    } catch (x) { codeSay("Something went wrong. Please try again in a moment.", true); }
+    finally { $("codeGo").disabled = false; }
+  });
+  $("resend").addEventListener("click", async (e) => {
+    e.preventDefault();
+    const err = await sendCode();
+    codeSay(err ? "Please wait a minute before asking for another code." : "A new code is on its way.", !!err);
+  });
+  $("again").addEventListener("click", (e) => { e.preventDefault(); store.del(PENDING); setState("form"); email.select(); });
 })();
 </script>
 </body>
