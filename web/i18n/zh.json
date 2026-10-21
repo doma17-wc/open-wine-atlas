@@ -1304,5 +1304,12 @@
  "{n} cards due today, out of {all}": "今天待复习{n}张，共{all}张",
  "{n} lessons": "{n}课",
  "{n} min": "{n}分钟",
- "{n} questions": "{n}题"
+ "{n} questions": "{n}题",
+ "Search in": "搜索范围",
+ "Choose what the search looks for": "选择搜索的内容",
+ "Places and regions": "产地与地区",
+ "Producers": "生产商",
+ "Wines": "葡萄酒",
+ "Nothing found. Some kinds are switched off under the filter button.": "未找到。筛选按钮中关闭了部分类型。",
+ "Loading the wines…": "正在加载葡萄酒…"
 }

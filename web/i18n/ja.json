@@ -1304,5 +1304,12 @@
  "{n} cards due today, out of {all}": "今日の復習{n}枚（全{all}枚）",
  "{n} lessons": "{n}レッスン",
  "{n} min": "{n}分",
- "{n} questions": "{n}問"
+ "{n} questions": "{n}問",
+ "Search in": "検索対象",
+ "Choose what the search looks for": "検索する対象を選ぶ",
+ "Places and regions": "産地と地域",
+ "Producers": "生産者",
+ "Wines": "ワイン",
+ "Nothing found. Some kinds are switched off under the filter button.": "見つかりません。フィルターボタンで一部の種類がオフになっています。",
+ "Loading the wines…": "ワインを読み込み中…"
 }
