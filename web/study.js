@@ -652,6 +652,8 @@ function isGeo(k) {
   const sibs = up ? (O.kidsOf(up) || []).filter((x) => x !== k && O.tnode(x) && O.tnode(x)[2]) : [];
   return sibs.every((x) => overlap(n[2], O.tnode(x)[2]) < 0.5);
 }
+// grands crus that cross village lines sit under one village in the atlas tree; AVAs can span states: no "lies in"
+const oneHome = (r) => !(r[2] === "FR" && r[4] === "grand_cru") && (det(r[1]).states || []).length <= 1;
 const related = (a, b) => a === b || O.pathOf(a).includes(b) || O.pathOf(b).includes(a);
 // four names for "which place is it?": siblings first, never an outline that covers the same ground
 function placeOptions(r, pool) {
@@ -676,7 +678,7 @@ function clueList(r) {
   if (d.sea_km != null) add(d.sea_km < 5 ? t_("The sea is right there.") : t_("The sea is {km} km away.", { km: O.fmtN(sig2(d.sea_km)) }));
   const rv = (d.rivers || [])[0]; if (rv) add(t_("A river nearby: the {river}.", { river: rv[0] }), rv[0]);
   const g = mainGrapes(d); if (g.length && g.length <= 3) add(t_("Main grapes: {list}.", { list: g.join(", ") }), ...g);
-  const par = parentKey(r[1]); if (par && isGeo(par)) add(t_("It lies in {parent}.", { parent: nameOf(par) }), nameOf(par));
+  const par = parentKey(r[1]); if (par && isGeo(par) && oneHome(r)) add(t_("It lies in {parent}.", { parent: nameOf(par) }), nameOf(par));
   const tw = d.near_town; if (tw) add(t_("The nearest town: {town}, {km} km away.", { town: tw[0], km: O.fmtN(Math.max(1, Math.round(tw[1]))) }), tw[0]);
   return c;
 }
@@ -738,7 +740,7 @@ function dataOdd(ctx) {
       const r = pickTarget(ctx, (x) => isArea(x)); if (!r) continue;
       const P = parentKey(r[1]); if (!P || !isGeo(P)) continue;
       const G = parentKey(P); if (!G) continue;
-      const kidsIn = (k2) => (O.kidsOf(k2) || []).map((id) => O.byId.get(id)).filter((x) => x && isArea(x) && !givesAway(x[0], nameOf(P)));
+      const kidsIn = (k2) => (O.kidsOf(k2) || []).map((id) => O.byId.get(id)).filter((x) => x && isArea(x) && oneHome(x) && !givesAway(x[0], nameOf(P)));
       const same = shuffle(kidsIn(P)).slice(0, 3);
       const others = (O.kidsOf(G) || []).filter((k2) => k2 !== P && (O.kidsOf(k2) || []).length);
       if (same.length < 3 || !others.length) continue;
@@ -788,7 +790,7 @@ function dataPairs(ctx) {
       if (pairs.length >= 5) break;
       let right = null;
       if (k === "grape") { const g = mainGrapes(det(r[1])); if (g.length === 1 && !givesAway(r[0], g[0])) right = g[0]; }
-      else { const P = parentKey(r[1]); if (P && isGeo(P) && !givesAway(r[0], nameOf(P))) right = nameOf(P); }
+      else { const P = parentKey(r[1]); if (P && isGeo(P) && oneHome(r) && !givesAway(r[0], nameOf(P))) right = nameOf(P); }
       if (ctx.grape && k === "grape" && pairs.length === 0 && !grapeIs(ctx.grape, mainGrapes(det(r[1])))) continue;
       if (!right || seen.has(right) || names.has(nm(r))) continue;
       seen.add(right); names.add(nm(r)); pairs.push([nm(r), right]);
