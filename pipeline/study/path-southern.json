@@ -140,7 +140,7 @@
           "q": "An Australian label names three GIs. What share of the wine must they make up together?",
           "options": ["At least 95%", "At least 85%", "At least 75%", "100%"],
           "answer": 0,
-          "explain": "Up to three GIs may be claimed, in descending order. Together they must reach 95%, and each must be more than 5%."
+          "explain": "Up to three GIs may be claimed, in descending order. Together they must reach 95%, and each must be at least 5%."
         },
         {
           "id": "q11",
@@ -195,7 +195,7 @@
         {"f": "What is an Australian GI?", "b": "A Geographical Indication registered by Wine Australia. It sets a boundary but no rules on varieties, yields or winemaking."},
         {"f": "Australian GI hierarchy, largest to smallest", "b": "State, zone, region, subregion. Example: South Australia, Barossa, Eden Valley, High Eden.", "place": "au-world-high-eden"},
         {"f": "Australian 85% rule", "b": "A stated GI, grape variety or vintage must make up at least 85% of the wine."},
-        {"f": "Claiming several GIs on one label", "b": "Up to three GIs, in descending order, together at least 95% of the wine and each more than 5%."},
+        {"f": "Claiming several GIs on one label", "b": "Up to three GIs, in descending order, together at least 95% of the wine and each at least 5%."},
         {"f": "Who settled the Barossa Valley?", "b": "German-speaking Lutherans from Silesia, in the 1840s.", "place": "au-world-barossa-valley"},
         {"f": "Barossa Valley style", "b": "Warm, dry valley floor. Full-bodied Shiraz with ripe black fruit, plus Grenache and Mourvèdre.", "place": "au-world-barossa-valley"},
         {"f": "Why does South Australia have so many old own-rooted vines?", "b": "Strict quarantine has kept phylloxera out, so the state has never had it."},
