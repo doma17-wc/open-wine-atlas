@@ -115,7 +115,86 @@
           "answer": 3,
           "explain": "Clairet is a deeper coloured rosé made with a longer maceration than most rosé, and is part of the generic Bordeaux appellation.",
           "place": "fr-inao-a14"
+        },
+        {
+          "id": "q9",
+          "q": "In which direction does the Gironde estuary run to the Atlantic?",
+          "options": ["South-east", "North-east", "North-west", "Due south"],
+          "answer": 2,
+          "explain": "The Garonne and Dordogne meet north of the city, and the Gironde runs north-west to the ocean."
+        },
+        {
+          "id": "q10",
+          "q": "Which grape is the most planted in Bordeaux?",
+          "options": ["Merlot", "Cabernet Sauvignon", "Sémillon", "Cabernet Franc"],
+          "answer": 0,
+          "explain": "Merlot is the most planted variety. It ripens early and gives soft, full wines."
+        },
+        {
+          "id": "q11",
+          "q": "What causes coulure and millerandage in Bordeaux?",
+          "options": ["Hail in summer", "Botrytis at harvest", "Drought in August", "Cool, wet weather at flowering"],
+          "answer": 3,
+          "explain": "Cool, wet weather at flowering leads to poor fruit set, known as coulure and millerandage."
+        },
+        {
+          "id": "q12",
+          "q": "Which grape ripens very late and adds colour and spice in small amounts?",
+          "options": ["Merlot", "Petit Verdot", "Muscadelle", "Sémillon"],
+          "answer": 1,
+          "explain": "Petit Verdot ripens very late and is used in small amounts for colour and spice."
+        },
+        {
+          "id": "q13",
+          "q": "Which white grape gives body and ageing potential to white Bordeaux?",
+          "options": ["Sauvignon Blanc", "Sémillon", "Muscadelle", "Chardonnay"],
+          "answer": 1,
+          "explain": "Sémillon gives body and ages well. Sauvignon Blanc gives aroma and acidity, and Muscadelle is a minor floral partner."
+        },
+        {
+          "id": "q14",
+          "q": "Until which year did Bordeaux belong to the English crown?",
+          "options": ["1152", "1855", "1789", "1453"],
+          "answer": 3,
+          "explain": "Bordeaux came under the English crown after the marriage of 1152 and stayed English until 1453."
+        },
+        {
+          "id": "q15",
+          "q": "What does 'en primeur' mean in Bordeaux?",
+          "options": ["Wine from the first pressing", "A château's leading wine", "Wine sold as futures in the spring after the harvest", "A tasting held after bottling"],
+          "answer": 2,
+          "explain": "Many leading wines are first offered en primeur, as futures, in the spring after the harvest and long before bottling."
+        },
+        {
+          "id": "q16",
+          "q": "Who drained the marshes of the Médoc in the 17th century?",
+          "options": ["Dutch engineers", "English merchants", "Cistercian monks", "Roman legions"],
+          "answer": 0,
+          "explain": "Dutch engineers drained the Médoc marshes in the 17th century, opening land where many great estates now stand.",
+          "place": "fr-inao-a53"
         }
+      ],
+      "cards": [
+        {"f": "Which two rivers form the Gironde estuary?", "b": "The Garonne and the Dordogne, which meet north of the city of Bordeaux."},
+        {"f": "Left Bank", "b": "West of the Garonne and the Gironde: the Médoc and the Graves.", "place": "fr-inao-a53"},
+        {"f": "Right Bank", "b": "North and east of the Dordogne and the Gironde: the Libournais, then Bourg and Blaye downstream.", "place": "fr-inao-a67"},
+        {"f": "Entre-deux-Mers", "b": "'Between two seas': the land between the tidal Garonne and Dordogne. The appellation is for dry white only.", "place": "fr-inao-a32"},
+        {"f": "What is the climate of Bordeaux?", "b": "Moderate and maritime, tempered by the Atlantic and the Gulf Stream. Rain can fall in any season."},
+        {"f": "What shelters Bordeaux from Atlantic winds?", "b": "The pine forest of the Landes, to the west of the vineyards."},
+        {"f": "Coulure and millerandage", "b": "Poor fruit set, caused in Bordeaux by cool, wet weather at flowering."},
+        {"f": "Why are several grape varieties blended in Bordeaux?", "b": "They flower and ripen at different times, which spreads the weather risk of a maritime climate."},
+        {"f": "Merlot in Bordeaux", "b": "The most planted grape. It ripens early and gives soft, plummy, full wines."},
+        {"f": "Cabernet Sauvignon in Bordeaux", "b": "Ripens late and gives blackcurrant fruit, firm tannin and acidity, so it needs warm, well-drained sites."},
+        {"f": "Cabernet Franc in Bordeaux", "b": "Adds fresh red fruit and fragrance to the blend."},
+        {"f": "Petit Verdot", "b": "A very late ripening red grape, used in small amounts for colour and spice. Malbec and Carmenère are also allowed but rare."},
+        {"f": "What are the white grapes of Bordeaux?", "b": "Sémillon for body and ageing, Sauvignon Blanc for aroma and acidity, and a little Muscadelle."},
+        {"f": "Which six grapes were approved for Bordeaux and Bordeaux Supérieur in 2021?", "b": "Arinarnoa, Castets, Marselan and Touriga Nacional (red), Alvarinho and Liliorila (white). At most 10% of a blend.", "place": "fr-inao-a14"},
+        {"f": "Clairet", "b": "A darker, fuller rosé from a maceration of a day or two, allowed under Bordeaux AOC.", "place": "fr-inao-a14"},
+        {"f": "Bordeaux Supérieur", "b": "Mostly red generic appellation with stricter rules than Bordeaux, such as lower maximum yields and higher minimum alcohol.", "place": "fr-inao-a585"},
+        {"f": "Côtes de Bordeaux", "b": "Umbrella appellation for hillside areas, mostly on the right banks. Blaye, Cadillac, Castillon and Francs may add their name.", "place": "fr-inao-a685"},
+        {"f": "Why did England become the main market for Bordeaux?", "b": "Eleanor of Aquitaine married Henry Plantagenet in 1152. Bordeaux was English until 1453, and England bought its claret."},
+        {"f": "La Place de Bordeaux", "b": "The trade system in which châteaux sell to négociants through brokers (courtiers), and négociants sell on to the world."},
+        {"f": "En primeur", "b": "Sale of wine as futures in the spring after the harvest, long before it is bottled."}
       ]
     },
     {
@@ -233,7 +312,89 @@
           "answer": 1,
           "explain": "The Cru Bourgeois classification, with three levels, is revised every five years, while the 1855 ranking has barely changed.",
           "place": "fr-inao-a53"
+        },
+        {
+          "id": "q9",
+          "q": "Which commune has more classified growths than any other in the Médoc?",
+          "options": ["Pauillac", "Margaux", "Saint-Julien", "Saint-Estèphe"],
+          "answer": 1,
+          "explain": "Margaux, spread over five villages, has the most classified growths of any commune.",
+          "place": "fr-inao-a52"
+        },
+        {
+          "id": "q10",
+          "q": "How many tiers does the 1855 classification of red wines have?",
+          "options": ["Three", "One", "Four", "Five"],
+          "answer": 3,
+          "explain": "There are five tiers, from Premiers Crus (first growths) to Cinquièmes Crus (fifth growths)."
+        },
+        {
+          "id": "q11",
+          "q": "Which château was added to the 1855 Classification in 1856?",
+          "options": ["Cantemerle", "Mouton Rothschild", "Haut-Brion", "Latour"],
+          "answer": 0,
+          "explain": "Cantemerle was added as a fifth growth in 1856. Mouton Rothschild was promoted in 1973."
+        },
+        {
+          "id": "q12",
+          "q": "Under which appellation is a dry white wine from a Margaux estate sold?",
+          "options": ["Margaux Blanc", "Haut-Médoc", "Bordeaux AOC", "Médoc"],
+          "answer": 2,
+          "explain": "Margaux, Haut-Médoc and the other Médoc appellations are red only, so Médoc whites are sold as Bordeaux AOC.",
+          "place": "fr-inao-a14"
+        },
+        {
+          "id": "q13",
+          "q": "Which commune lies between Pauillac and Margaux?",
+          "options": ["Saint-Estèphe", "Moulis", "Listrac-Médoc", "Saint-Julien"],
+          "answer": 3,
+          "explain": "From north to south the order is Saint-Estèphe, Pauillac, Saint-Julien and Margaux.",
+          "place": "fr-inao-a71"
+        },
+        {
+          "id": "q14",
+          "q": "Which of these was NOT one of the original first growths of 1855?",
+          "options": ["Château Latour", "Château Mouton Rothschild", "Château Margaux", "Château Haut-Brion"],
+          "answer": 1,
+          "explain": "Mouton Rothschild was a second growth in 1855 and became a first growth in 1973."
+        },
+        {
+          "id": "q15",
+          "q": "Why do the finest Médoc sites tend to lie close to the estuary?",
+          "options": ["They are higher and cooler", "The soil there is richer in clay", "The estuary softens temperature swings, on gravel sloping gently to the water", "Only there may vines be irrigated"],
+          "answer": 2,
+          "explain": "Gravel slopes near the water drain well, and the estuary softens temperature swings."
+        },
+        {
+          "id": "q16",
+          "q": "How many levels does the Cru Bourgeois classification have?",
+          "options": ["Three", "Five", "Two", "One"],
+          "answer": 0,
+          "explain": "Cru Bourgeois, Cru Bourgeois Supérieur and Cru Bourgeois Exceptionnel.",
+          "place": "fr-inao-a53"
         }
+      ],
+      "cards": [
+        {"f": "Médoc", "b": "Peninsula north-west of the city, between the Gironde estuary and the Atlantic pine forest. Vines run in a strip along the estuary.", "place": "fr-inao-a53"},
+        {"f": "How do the Médoc and Haut-Médoc appellations differ?", "b": "Médoc covers the northern, lower part, with more clay. Haut-Médoc is the southern part; 'haut' means upstream.", "place": "fr-inao-a39"},
+        {"f": "Name the six communal appellations of the Haut-Médoc.", "b": "Saint-Estèphe, Pauillac, Saint-Julien and Margaux on the estuary, Listrac-Médoc and Moulis inland."},
+        {"f": "What colour are Haut-Médoc and its communal appellations?", "b": "Red only. White wines from Médoc estates are sold as Bordeaux AOC.", "place": "fr-inao-a39"},
+        {"f": "Croupes", "b": "Low mounds of deep river gravel in the Médoc. They drain freely and warm up, which suits Cabernet Sauvignon."},
+        {"f": "Why do Médoc growers plant more Merlot where there is more clay?", "b": "Merlot copes better with cooler, wetter soils, as in parts of Saint-Estèphe and the northern Médoc."},
+        {"f": "List the four great Médoc communes from north to south.", "b": "Saint-Estèphe, Pauillac, Saint-Julien, Margaux."},
+        {"f": "Saint-Estèphe", "b": "The most northerly of the great communes. More clay, and firm, sturdy wines.", "place": "fr-inao-a69"},
+        {"f": "Pauillac", "b": "Home of three first growths: Lafite Rothschild, Latour and Mouton Rothschild. Powerful wines with blackcurrant and cedar.", "place": "fr-inao-a59"},
+        {"f": "Saint-Julien", "b": "Between Pauillac and Margaux. Balanced, consistent wines and no first growth.", "place": "fr-inao-a71"},
+        {"f": "Margaux (appellation)", "b": "Southernmost great commune, spread over five villages. Thinner gravel, fragrant wines and the most classified growths.", "place": "fr-inao-a52"},
+        {"f": "Listrac-Médoc and Moulis", "b": "The two inland communal appellations, with more clay and limestone and no 1855 classified growths.", "place": "fr-inao-a45"},
+        {"f": "Why was the 1855 Classification made?", "b": "For the Exposition Universelle in Paris. Brokers ranked the wines by the prices they had fetched over many years."},
+        {"f": "Does the 1855 Classification rank vineyards or châteaux?", "b": "Châteaux, not plots of land."},
+        {"f": "How many red wines are in the 1855 Classification today?", "b": "61: 5 first, 14 second, 14 third, 10 fourth and 18 fifth growths."},
+        {"f": "Name the four original first growths of 1855.", "b": "Lafite, Latour, Margaux and Haut-Brion."},
+        {"f": "Which 1855 red is not from the Médoc?", "b": "Château Haut-Brion, in Pessac in the Graves.", "place": "fr-inao-a61"},
+        {"f": "What changes have been made to the 1855 red classification?", "b": "Cantemerle was added as a fifth growth in 1856. Mouton Rothschild was promoted from second to first growth in 1973.", "place": "fr-inao-a59"},
+        {"f": "Cru Bourgeois", "b": "Classification of Médoc estates outside 1855, in three levels: Cru Bourgeois, Supérieur and Exceptionnel. Reviewed every five years.", "place": "fr-inao-a53"},
+        {"f": "Second wine", "b": "A wine a château makes from younger vines or lots not used in its main blend."}
       ]
     },
     {
@@ -354,7 +515,91 @@
           "answer": 1,
           "explain": "Cadillac, Loupiac and Sainte-Croix-du-Mont lie across the Garonne from Sauternes. Cérons is on the same side as Sauternes.",
           "place": "fr-inao-a72"
+        },
+        {
+          "id": "q9",
+          "q": "Which grape varieties may be used in Sauternes?",
+          "options": ["Chardonnay, Sémillon and Sauvignon Blanc", "Sémillon, Sauvignon Blanc and Petit Manseng", "Sémillon, Sauvignon Blanc, Sauvignon Gris and Muscadelle", "Sémillon and Muscadelle only"],
+          "answer": 2,
+          "explain": "The Sauternes specification allows Sémillon, Sauvignon Blanc, Sauvignon Gris and Muscadelle. Sémillon leads the blend.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "id": "q10",
+          "q": "Which of these is NOT one of the five communes of the Sauternes appellation?",
+          "options": ["Bommes", "Fargues", "Preignac", "Cérons"],
+          "answer": 3,
+          "explain": "Sauternes covers Sauternes, Bommes, Fargues, Preignac and Barsac. Cérons is a separate appellation to the north.",
+          "place": "fr-inao-a23"
+        },
+        {
+          "id": "q11",
+          "q": "How many châteaux are in the Graves Classification?",
+          "options": ["16", "61", "27", "5"],
+          "answer": 0,
+          "explain": "The Graves Classification lists 16 châteaux, all now in Pessac-Léognan. 61 is the 1855 red list and 27 the 1855 sweet list.",
+          "place": "fr-inao-a61"
+        },
+        {
+          "id": "q12",
+          "q": "What does noble rot do to the grapes?",
+          "options": ["It adds colour to the skins", "It turns the whole bunch to grey rot", "It pierces the skins, so water evaporates and sugar, acidity and flavour concentrate", "It stops the grapes ripening early"],
+          "answer": 2,
+          "explain": "In its noble form Botrytis pierces the skins. Water evaporates and sugar, acidity and flavour are concentrated."
+        },
+        {
+          "id": "q13",
+          "q": "When was the Graves Classification drawn up?",
+          "options": ["In 1953, revised in 1959", "In 1855", "In 1987", "In 1973"],
+          "answer": 0,
+          "explain": "The Graves Classification dates from 1953 and was revised in 1959. Pessac-Léognan was created in 1987."
+        },
+        {
+          "id": "q14",
+          "q": "Graves Supérieures is an appellation for which style?",
+          "options": ["Dry red", "Sweet white", "Dry white", "Rosé"],
+          "answer": 1,
+          "explain": "Graves covers red and dry white. Graves Supérieures is a separate appellation for sweet white wine.",
+          "place": "fr-inao-a855"
+        },
+        {
+          "id": "q15",
+          "q": "Where does Cérons lie?",
+          "options": ["On the right bank of the Garonne, next to Loupiac", "Inside the Graves, just north of Barsac", "In the Haut-Médoc", "In Entre-deux-Mers"],
+          "answer": 1,
+          "explain": "Cérons lies inside the Graves on the left bank, just north of Barsac.",
+          "place": "fr-inao-a23"
+        },
+        {
+          "id": "q16",
+          "q": "Why do some vintages give little or no Sauternes?",
+          "options": ["The rules allow it only one year in three", "The vines are replanted every few years", "Noble rot may not develop well, and yields are very low", "Growers must sell the grapes for dry white"],
+          "answer": 2,
+          "explain": "Noble rot spreads unevenly and depends on the weather. Yields are very low, so poor autumns give little sweet wine.",
+          "place": "fr-inao-a75"
         }
+      ],
+      "cards": [
+        {"f": "Graves", "b": "South-east of the city on the left bank of the Garonne, named after its gravel. Makes red and dry white.", "place": "fr-inao-a37"},
+        {"f": "What are the usual blends in the Graves?", "b": "Reds blend Cabernet Sauvignon and Merlot. Whites blend Sauvignon Blanc and Sémillon.", "place": "fr-inao-a37"},
+        {"f": "Graves Supérieures", "b": "A separate appellation for sweet white wine from the Graves.", "place": "fr-inao-a855"},
+        {"f": "Pessac-Léognan", "b": "Appellation created in 1987 for the northern Graves, partly in the suburbs of Bordeaux. Red and dry white.", "place": "fr-inao-a61"},
+        {"f": "Graves Classification", "b": "Drawn up in 1953 and revised in 1959. One rank, Cru Classé de Graves, given for red, white or both."},
+        {"f": "How many châteaux are in the Graves Classification?", "b": "16, all within what is now Pessac-Léognan.", "place": "fr-inao-a61"},
+        {"f": "Which estate is in both the 1855 and the Graves classifications?", "b": "Château Haut-Brion, in Pessac.", "place": "fr-inao-a61"},
+        {"f": "Ciron", "b": "Small, cool river that joins the warmer Garonne at Sauternes, causing the autumn mists that favour noble rot.", "place": "fr-inao-a75"},
+        {"f": "Noble rot (Botrytis cinerea)", "b": "A fungus that pierces grape skins after misty mornings and dry afternoons, concentrating sugar, acidity and flavour."},
+        {"f": "Tries", "b": "Successive passes through the vineyard to pick only botrytised grapes. Sauternes must be picked by hand.", "place": "fr-inao-a75"},
+        {"f": "Why is Sémillon the main grape of Sauternes?", "b": "Its thin skin is prone to noble rot. Sauvignon Blanc adds freshness, with a little Muscadelle."},
+        {"f": "Name the five communes of the Sauternes appellation.", "b": "Sauternes, Bommes, Fargues, Preignac and Barsac.", "place": "fr-inao-a75"},
+        {"f": "Barsac", "b": "Commune with its own appellation inside the Sauternes area. Its sweet wines may be labelled Barsac or Sauternes.", "place": "fr-inao-a8"},
+        {"f": "What is the maximum yield for Sauternes?", "b": "25 hl/ha. Some years give little or no sweet wine.", "place": "fr-inao-a75"},
+        {"f": "What sugar levels does Sauternes require?", "b": "Grapes with at least 221 g/l of sugar, and at least 45 g/l of sugar left in the finished wine.", "place": "fr-inao-a75"},
+        {"f": "What does good Sauternes taste of?", "b": "Honey, apricot and marmalade, with acidity that keeps it fresh for decades."},
+        {"f": "Château d'Yquem", "b": "In Sauternes, the only Premier Cru Supérieur in the 1855 classification of sweet wines.", "place": "fr-inao-a75"},
+        {"f": "How is the 1855 sweet wine classification structured today?", "b": "1 Premier Cru Supérieur, 11 Premiers Crus and 15 Deuxièmes Crus, from Sauternes and Barsac."},
+        {"f": "Cérons", "b": "Sweet white appellation inside the Graves, just north of Barsac.", "place": "fr-inao-a23"},
+        {"f": "Cadillac, Loupiac and Sainte-Croix-du-Mont", "b": "Sweet whites from the right bank of the Garonne, facing Sauternes. Usually lighter and less concentrated.", "place": "fr-inao-a46"}
       ]
     },
     {
@@ -473,7 +718,91 @@
           "answer": 3,
           "explain": "Fronsac and Canon Fronsac sit on hills west of Libourne, where the Isle meets the Dordogne.",
           "place": "fr-inao-a33"
+        },
+        {
+          "id": "q9",
+          "q": "Which river port gives the Libournais its name?",
+          "options": ["Bourg", "Blaye", "Castillon", "Libourne"],
+          "answer": 3,
+          "explain": "Libourne is the river port where the Isle joins the Dordogne."
+        },
+        {
+          "id": "q10",
+          "q": "Where are Bourg and Blaye?",
+          "options": ["Facing the Médoc across the Gironde", "East of Saint-Émilion", "Inside the Graves", "North of Pomerol across the Barbanne"],
+          "answer": 0,
+          "explain": "Bourg and Blaye lie downstream on the Right Bank, facing the Médoc across the Gironde.",
+          "place": "fr-inao-a18"
+        },
+        {
+          "id": "q11",
+          "q": "What soil lies in the north-west of Saint-Émilion, by the Pomerol border?",
+          "options": ["Granite", "Chalk", "A zone of gravel", "Volcanic basalt"],
+          "answer": 2,
+          "explain": "The north-west of Saint-Émilion, next to Pomerol, has a zone of gravel.",
+          "place": "fr-inao-a67"
+        },
+        {
+          "id": "q12",
+          "q": "Which of these is NOT a Saint-Émilion satellite?",
+          "options": ["Lussac", "Lalande-de-Pomerol", "Puisseguin", "Montagne"],
+          "answer": 1,
+          "explain": "The satellites are Montagne, Lussac, Puisseguin and Saint-Georges. Lalande-de-Pomerol is Pomerol's northern neighbour.",
+          "place": "fr-inao-a44"
+        },
+        {
+          "id": "q13",
+          "q": "Which wines may the Pomerol appellation produce?",
+          "options": ["Red only", "Red and dry white", "White only", "Red, white and rosé"],
+          "answer": 0,
+          "explain": "Pomerol is an appellation for red wine only.",
+          "place": "fr-inao-a62"
+        },
+        {
+          "id": "q14",
+          "q": "In which year was the Saint-Émilion classification first published?",
+          "options": ["1855", "1959", "1987", "1955"],
+          "answer": 3,
+          "explain": "The first Saint-Émilion classification was published in 1955.",
+          "place": "fr-inao-a68"
+        },
+        {
+          "id": "q15",
+          "q": "Why are Right Bank reds often softer and rounder in youth than Left Bank reds?",
+          "options": ["They are aged without oak", "They are led by Merlot rather than Cabernet Sauvignon", "They contain white grapes", "The law requires younger vines"],
+          "answer": 1,
+          "explain": "Right Bank blends are Merlot-led. Merlot gives softer, rounder wines than Cabernet Sauvignon."
+        },
+        {
+          "id": "q16",
+          "q": "What are the côtes of Saint-Émilion?",
+          "options": ["Sandy flats by the Dordogne", "Gravel mounds near Pomerol", "Steep clay-limestone slopes edging the plateau", "Terraces on the banks of the Garonne"],
+          "answer": 2,
+          "explain": "The côtes are the steep clay-limestone slopes around the limestone plateau of Saint-Émilion.",
+          "place": "fr-inao-a67"
         }
+      ],
+      "cards": [
+        {"f": "Libournais", "b": "Right Bank area named after Libourne, the port where the Isle joins the Dordogne: Saint-Émilion, Pomerol and Fronsac."},
+        {"f": "Why does Merlot suit the Right Bank?", "b": "It ripens early and thrives on cool, water-retaining clay."},
+        {"f": "Bouchet", "b": "The Right Bank name for Cabernet Franc, which does well on limestone and gives freshness and fragrance.", "place": "fr-inao-a67"},
+        {"f": "Why does Cabernet Sauvignon play a small role on the Right Bank?", "b": "It ripens late and struggles on the cool clay and limestone soils."},
+        {"f": "What are the main soils of Saint-Émilion?", "b": "A limestone plateau edged by clay-limestone côtes, sandier soils towards the Dordogne, and gravel by Pomerol.", "place": "fr-inao-a67"},
+        {"f": "Côtes of Saint-Émilion", "b": "The steep clay-limestone slopes around the edge of the limestone plateau.", "place": "fr-inao-a67"},
+        {"f": "When was the Jurisdiction of Saint-Émilion listed by UNESCO?", "b": "In 1999, the first vineyard landscape on the World Heritage list. It covers eight villages.", "place": "fr-inao-a67"},
+        {"f": "Saint-Émilion or Saint-Émilion Grand Cru?", "b": "Two appellations over the same area. Grand Cru has stricter rules, such as lower yields. It is not a rank.", "place": "fr-inao-a68"},
+        {"f": "Saint-Émilion classification", "b": "First published in 1955 and revised about every ten years. Only Saint-Émilion Grand Cru wines can be classified.", "place": "fr-inao-a68"},
+        {"f": "What are the ranks of the Saint-Émilion classification?", "b": "Premier Grand Cru Classé A, Premier Grand Cru Classé B and Grand Cru Classé.", "place": "fr-inao-a68"},
+        {"f": "How are châteaux judged for the Saint-Émilion classification?", "b": "On tastings of several vintages and other criteria. Estates can be promoted or demoted, and some have left."},
+        {"f": "Name the four Saint-Émilion satellites.", "b": "Montagne, Lussac, Puisseguin and Saint-Georges, north of the Barbanne stream.", "place": "fr-inao-a55"},
+        {"f": "Barbanne", "b": "Stream north of Saint-Émilion and Pomerol, with the satellites and Lalande-de-Pomerol beyond it."},
+        {"f": "Pomerol", "b": "Small, gently sloping plateau north-east of Libourne, on gravel, sand and clay. Merlot dominates. Red only.", "place": "fr-inao-a62"},
+        {"f": "What lies beneath Petrus, at the highest point of Pomerol?", "b": "A dense clay subsoil.", "place": "fr-inao-a62"},
+        {"f": "Does Pomerol have an official classification?", "b": "No. Its prestige rests on reputation and price alone.", "place": "fr-inao-a62"},
+        {"f": "Lalande-de-Pomerol", "b": "Just north of Pomerol across the Barbanne, making similar Merlot-based reds.", "place": "fr-inao-a44"},
+        {"f": "Fronsac and Canon Fronsac", "b": "West of Libourne, on clay-limestone hills above the Dordogne and the Isle. Canon Fronsac is a smaller area on the slopes.", "place": "fr-inao-a33"},
+        {"f": "Bourg and Blaye", "b": "Right Bank areas facing the Médoc across the Gironde, making mainly Merlot-based reds.", "place": "fr-inao-a18"},
+        {"f": "Castillon and Francs", "b": "Côtes de Bordeaux areas east of Saint-Émilion, on similar clay and limestone.", "place": "fr-inao-d2078"}
       ]
     },
     {
@@ -595,7 +924,93 @@
           "answer": 2,
           "explain": "Fronton is based on Négrette. Mansois is Fer Servadou in Marcillac, and Len de l'El is a white grape of Gaillac.",
           "place": "fr-inao-a29"
+        },
+        {
+          "id": "q9",
+          "q": "On which river does Cahors lie?",
+          "options": ["The Tarn", "The Lot", "The Dordogne", "The Garonne"],
+          "answer": 1,
+          "explain": "Cahors lies in the valley of the Lot, with vines on terraces and on the causse above.",
+          "place": "fr-inao-a21"
+        },
+        {
+          "id": "q10",
+          "q": "Which South-West appellation lies in the French Basque Country?",
+          "options": ["Madiran", "Fronton", "Gaillac", "Irouléguy"],
+          "answer": 3,
+          "explain": "Irouléguy makes mostly Tannat-based reds on steep mountain slopes in the Basque Country.",
+          "place": "fr-inao-a41"
+        },
+        {
+          "id": "q11",
+          "q": "Which grapes make Jurançon?",
+          "options": ["Petit Manseng and Gros Manseng", "Sémillon and Sauvignon Blanc", "Mauzac and Len de l'El", "Négrette and Tannat"],
+          "answer": 0,
+          "explain": "Jurançon is made from Petit and Gros Manseng.",
+          "place": "fr-inao-a42"
+        },
+        {
+          "id": "q12",
+          "q": "Which appellation near Bergerac makes red wine on slopes north-east of the town?",
+          "options": ["Rosette", "Saussignac", "Pécharmant", "Montravel"],
+          "answer": 2,
+          "explain": "Pécharmant makes reds. Rosette makes lightly sweet whites, Saussignac sweet whites and Montravel mostly dry whites.",
+          "place": "fr-inao-a60"
+        },
+        {
+          "id": "q13",
+          "q": "On which river does Gaillac lie?",
+          "options": ["The Lot", "The Dordogne", "The Tarn", "The Adour"],
+          "answer": 2,
+          "explain": "Gaillac lies on the Tarn, east of the Bordeaux-influenced areas.",
+          "place": "fr-inao-a34"
+        },
+        {
+          "id": "q14",
+          "q": "Why does sweet Jurançon taste fresh in spite of its sugar?",
+          "options": ["The Mansengs keep high acidity", "It is fortified with grape spirit", "It is made from noble-rotted Sémillon", "It is chilled during fermentation"],
+          "answer": 0,
+          "explain": "Petit and Gros Manseng keep high acidity, so sweet Jurançon tastes fresh and lively.",
+          "place": "fr-inao-a42"
+        },
+        {
+          "id": "q15",
+          "q": "Which method is used for some sparkling Gaillac?",
+          "options": ["Tank method", "Transfer method", "Carbonation", "Méthode ancestrale"],
+          "answer": 3,
+          "explain": "Gaillac makes sparkling wine by the méthode ancestrale, among its many styles.",
+          "place": "fr-inao-a34"
+        },
+        {
+          "id": "q16",
+          "q": "Which wines may the Cahors appellation produce?",
+          "options": ["White only", "Red only", "Red and rosé", "Red, white and rosé"],
+          "answer": 1,
+          "explain": "Cahors is an appellation for red wine only.",
+          "place": "fr-inao-a21"
         }
+      ],
+      "cards": [
+        {"f": "Why was the South-West wine trade long held back?", "b": "Upriver wines had to wait until Bordeaux had sold its own before they could be shipped from its port."},
+        {"f": "Which South-West areas mainly use the Bordeaux grapes?", "b": "Bergerac, Côtes de Duras, Côtes du Marmandais and Buzet.", "place": "fr-inao-a10"},
+        {"f": "Bergerac", "b": "On the Dordogne, upstream of Saint-Émilion. Red, rosé and white from Bordeaux varieties.", "place": "fr-inao-a10"},
+        {"f": "Pécharmant", "b": "Red wine appellation on slopes north-east of Bergerac.", "place": "fr-inao-a60"},
+        {"f": "What do Montravel, Côtes de Montravel and Haut-Montravel make?", "b": "Montravel is known for dry whites. Côtes de Montravel and Haut-Montravel make sweet whites.", "place": "fr-inao-a56"},
+        {"f": "Monbazillac", "b": "On the south bank of the Dordogne opposite Bergerac. Sweet whites from noble-rotted Sémillon, Sauvignon Blanc and Muscadelle.", "place": "fr-inao-a54"},
+        {"f": "Saussignac", "b": "Sweet white appellation to the west of Monbazillac.", "place": "fr-inao-a74"},
+        {"f": "Cahors", "b": "Red only, in the Lot valley. At least 70% Malbec, called Côt or Auxerrois, with Merlot and Tannat.", "place": "fr-inao-a21"},
+        {"f": "Where are the Cahors vineyards?", "b": "On terraces along the Lot and on the limestone plateau above it, the causse.", "place": "fr-inao-a21"},
+        {"f": "Why was Cahors called the black wine?", "b": "Because of its very deep colour.", "place": "fr-inao-a21"},
+        {"f": "Gaillac", "b": "On the Tarn. Local grapes such as Mauzac, Len de l'El, Braucol (Fer Servadou) and Duras, in many styles.", "place": "fr-inao-a34"},
+        {"f": "Négrette", "b": "The main red grape of Fronton, north of Toulouse.", "place": "fr-inao-a29"},
+        {"f": "Mansois", "b": "The name for Fer Servadou in Marcillac, where it makes most of the red wine.", "place": "fr-inao-a51"},
+        {"f": "Madiran", "b": "Red only, in Gascony. Based on Tannat, often blended with Cabernet Franc, Cabernet Sauvignon or Fer.", "place": "fr-inao-a48"},
+        {"f": "Tannat", "b": "Very tannic, deeply coloured grape. Besides Madiran it is used in Saint-Mont and in Basque Irouléguy.", "place": "fr-inao-a48"},
+        {"f": "Micro-oxygenation", "b": "Controlled addition of small amounts of oxygen to wine, developed in Madiran in the 1990s to soften Tannat.", "place": "fr-inao-a48"},
+        {"f": "Pacherenc du Vic-Bilh", "b": "White wine, dry or sweet, from the Madiran area: Gros and Petit Manseng, Petit Courbu and Arrufiac.", "place": "fr-inao-a49"},
+        {"f": "Jurançon", "b": "In the Pyrenean foothills near Pau. Sweet and dry whites from Petit and Gros Manseng. Jurançon sec is usually Gros Manseng led.", "place": "fr-inao-a42"},
+        {"f": "Passerillage", "b": "Grapes left on the vine to shrivel in dry autumn weather. It, not noble rot, makes most sweet Jurançon.", "place": "fr-inao-a42"},
+        {"f": "Why does Petit Manseng suit sweet Jurançon?", "b": "Its small, thick-skinned berries shrivel well on the vine and keep high acidity.", "place": "fr-inao-a42"}
       ]
     }
   ]

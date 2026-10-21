@@ -126,7 +126,92 @@
           "answer": 1,
           "explain": "Margaret River is maritime, bordered by the Indian Ocean to the west and the Southern Ocean to the south.",
           "place": "au-world-margaret-river"
+        },
+        {
+          "id": "q9",
+          "q": "In which zone is Coonawarra?",
+          "options": ["Fleurieu", "Barossa", "Limestone Coast", "Mount Lofty Ranges"],
+          "answer": 2,
+          "explain": "Coonawarra lies in the Limestone Coast zone. McLaren Vale is in Fleurieu and Clare Valley in Mount Lofty Ranges.",
+          "place": "au-world-coonawarra"
+        },
+        {
+          "id": "q10",
+          "q": "An Australian label names three GIs. What share of the wine must they make up together?",
+          "options": ["At least 95%", "At least 85%", "At least 75%", "100%"],
+          "answer": 0,
+          "explain": "Up to three GIs may be claimed, in descending order. Together they must reach 95%, and each must be more than 5%."
+        },
+        {
+          "id": "q11",
+          "q": "Which of these is NOT a subregion of the Hunter?",
+          "options": ["Pokolbin", "Broke Fordwich", "Upper Hunter Valley", "High Eden"],
+          "answer": 3,
+          "explain": "High Eden is a subregion of Eden Valley in South Australia.",
+          "place": "au-world-hunter"
+        },
+        {
+          "id": "q12",
+          "q": "Why is Hunter Valley Semillon picked early?",
+          "options": ["To raise the alcohol", "To avoid rain at harvest", "To encourage botrytis", "Because the law sets a harvest date"],
+          "answer": 1,
+          "explain": "Much of the Hunter's rain falls in summer and often at harvest, so Semillon is picked early at low sugar.",
+          "place": "au-world-hunter"
+        },
+        {
+          "id": "q13",
+          "q": "What cools McLaren Vale?",
+          "options": ["The Southern Ocean", "Port Phillip Bay", "The Indian Ocean", "Breezes from Gulf St Vincent"],
+          "answer": 3,
+          "explain": "McLaren Vale, south of Adelaide, is warm and Mediterranean, cooled by breezes from Gulf St Vincent.",
+          "place": "au-world-mclaren-vale"
+        },
+        {
+          "id": "q14",
+          "q": "Who settled the Barossa Valley in the 1840s?",
+          "options": ["German-speaking Lutherans from Silesia", "French Huguenots", "Scottish Presbyterians", "Italian settlers from Piedmont"],
+          "answer": 0,
+          "explain": "German-speaking Lutherans from Silesia settled the Barossa in the 1840s.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "id": "q15",
+          "q": "Under the Barossa Old Vine Charter, a Centenarian Vine is at least how old?",
+          "options": ["35 years", "70 years", "100 years", "125 years"],
+          "answer": 2,
+          "explain": "The charter has four steps: Old Vine 35 years, Survivor 70, Centenarian 100 and Ancestor 125.",
+          "place": "au-world-barossa"
+        },
+        {
+          "id": "q16",
+          "q": "Which cool region near Melbourne is known for Pinot Noir, Chardonnay and sparkling wine?",
+          "options": ["Hunter", "Yarra Valley", "Barossa Valley", "McLaren Vale"],
+          "answer": 1,
+          "explain": "The Yarra Valley in Victoria is cool. The Hunter is hot and humid, and the Barossa and McLaren Vale are warm.",
+          "place": "au-world-yarra-valley"
         }
+      ],
+      "cards": [
+        {"f": "What is an Australian GI?", "b": "A Geographical Indication registered by Wine Australia. It sets a boundary but no rules on varieties, yields or winemaking."},
+        {"f": "Australian GI hierarchy, largest to smallest", "b": "State, zone, region, subregion. Example: South Australia, Barossa, Eden Valley, High Eden.", "place": "au-world-high-eden"},
+        {"f": "Australian 85% rule", "b": "A stated GI, grape variety or vintage must make up at least 85% of the wine."},
+        {"f": "Claiming several GIs on one label", "b": "Up to three GIs, in descending order, together at least 95% of the wine and each more than 5%."},
+        {"f": "Who settled the Barossa Valley?", "b": "German-speaking Lutherans from Silesia, in the 1840s.", "place": "au-world-barossa-valley"},
+        {"f": "Barossa Valley style", "b": "Warm, dry valley floor. Full-bodied Shiraz with ripe black fruit, plus Grenache and Mourvèdre.", "place": "au-world-barossa-valley"},
+        {"f": "Why does South Australia have so many old own-rooted vines?", "b": "Strict quarantine has kept phylloxera out, so the state has never had it."},
+        {"f": "Barossa Old Vine Charter", "b": "Old Vine 35 years or more, Survivor 70, Centenarian 100, Ancestor 125.", "place": "au-world-barossa"},
+        {"f": "Eden Valley", "b": "Higher, cooler hills east of the Barossa Valley in the same zone. Dry, lime-scented Riesling and elegant Shiraz.", "place": "au-world-eden-valley"},
+        {"f": "McLaren Vale", "b": "Fleurieu zone, south of Adelaide. Warm, cooled by Gulf St Vincent. Shiraz, Grenache and Cabernet Sauvignon.", "place": "au-world-mclaren-vale"},
+        {"f": "Clare Valley Riesling", "b": "Bone-dry, high in acid, with lime flavours that turn toasty with age.", "place": "au-world-clare-valley"},
+        {"f": "Clare Valley, 2000", "b": "A group of Riesling producers moved to screwcaps together, which helped the closure spread across Australia.", "place": "au-world-clare-valley"},
+        {"f": "Terra rossa", "b": "Red clay loam over limestone. In Coonawarra it forms a narrow strip.", "place": "au-world-coonawarra"},
+        {"f": "Coonawarra Cabernet Sauvignon", "b": "Cool climate in the Limestone Coast zone. Blackcurrant with a typical mint or eucalyptus note.", "place": "au-world-coonawarra"},
+        {"f": "Hunter subregions", "b": "Pokolbin, Broke Fordwich and Upper Hunter Valley.", "place": "au-world-pokolbin"},
+        {"f": "How is Hunter Semillon made?", "b": "Picked early at low sugar to avoid rain, fermented in stainless steel without oak, often 11% alcohol or less.", "place": "au-world-hunter"},
+        {"f": "Aged Hunter Semillon", "b": "Lean and citrusy when young. With years in bottle it gains toast, honey and nut aromas without any oak.", "place": "au-world-hunter"},
+        {"f": "Margaret River", "b": "Maritime: Indian Ocean west, Southern Ocean south. Cabernet, Bordeaux blends, Chardonnay, Semillon-Sauvignon Blanc.", "place": "au-world-margaret-river"},
+        {"f": "Yarra Valley", "b": "Cool region near Melbourne: Pinot Noir, Chardonnay and traditional method sparkling, also Cabernet and Shiraz.", "place": "au-world-yarra-valley"},
+        {"f": "Tasmania", "b": "The coolest part of Australia: traditional method sparkling wine, Pinot Noir, Chardonnay and Riesling.", "place": "au-world-tasmania"}
       ]
     },
     {
@@ -246,7 +331,93 @@
           "options": ["The east has volcanic soils", "The east is warmed by a tropical current", "Mountains shelter the east from westerly rain", "The east has a continental climate"],
           "answer": 2,
           "explain": "Westerly winds drop their rain on the west coast; the east lies in the rain shadow and is sunnier and drier."
+        },
+        {
+          "id": "q9",
+          "q": "Which part of Marlborough is cooler and drier than the Wairau Valley?",
+          "options": ["The Southern Valleys", "Gibbston", "The Awatere Valley", "Bannockburn"],
+          "answer": 2,
+          "explain": "The Awatere Valley is Marlborough's cooler, drier area. Gibbston and Bannockburn are in Central Otago.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "id": "q10",
+          "q": "When did commercial planting begin in Marlborough?",
+          "options": ["1985", "1973", "1950", "1999"],
+          "answer": 1,
+          "explain": "Planting began in 1973. 1985 is the first vintage of Cloudy Bay.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "id": "q11",
+          "q": "Which Central Otago subregion is one of the warmest and earliest ripening?",
+          "options": ["Gibbston", "Martinborough", "Waipara Valley", "Bannockburn"],
+          "answer": 3,
+          "explain": "Bannockburn is warm and early. Gibbston is higher and cooler, and the other two lie outside Central Otago.",
+          "place": "nz-world-bannockburn"
+        },
+        {
+          "id": "q12",
+          "q": "What is the legal status of the name Gimblett Gravels?",
+          "options": ["A trademark managed by local winegrowers", "A registered geographical indication", "A subregion of Martinborough", "A wine law classification of Hawke's Bay estates"],
+          "answer": 0,
+          "explain": "Gimblett Gravels is a trademark, not an official GI.",
+          "place": "nz-world-hawke-s-bay"
+        },
+        {
+          "id": "q13",
+          "q": "Which region on the east coast of the North Island is New Zealand's main source of Bordeaux-style reds?",
+          "options": ["Marlborough", "Central Otago", "Hawke's Bay", "Nelson"],
+          "answer": 2,
+          "explain": "Hawke's Bay is warm and sunny, and its reds are mostly based on Merlot and Cabernet Sauvignon.",
+          "place": "nz-world-hawke-s-bay"
+        },
+        {
+          "id": "q14",
+          "q": "Which is NOT a typical feature of Central Otago?",
+          "options": ["Frost risk", "Schist-derived soils", "Hot, dry summers", "A humid climate moderated by the sea"],
+          "answer": 3,
+          "explain": "Central Otago lies inland among mountains. It is the only New Zealand region with a continental climate.",
+          "place": "nz-world-central-otago"
+        },
+        {
+          "id": "q15",
+          "q": "Which grapes is the Waipara Valley best known for?",
+          "options": ["Riesling and Pinot Noir", "Merlot and Cabernet Sauvignon", "Chenin Blanc and Pinotage", "Malbec and Torrontés"],
+          "answer": 0,
+          "explain": "Waipara Valley, in North Canterbury, is known for Riesling and Pinot Noir.",
+          "place": "nz-world-waipara-valley"
+        },
+        {
+          "id": "q16",
+          "q": "Why do the Gimblett Gravels help late-ripening varieties ripen fully?",
+          "options": ["They hold a lot of water", "They are rich in volcanic minerals", "The stones drain freely and store heat", "They are cooled by sea fog"],
+          "answer": 2,
+          "explain": "Deep, stony, infertile soils drain freely and store heat, which suits Bordeaux varieties and Syrah.",
+          "place": "nz-world-hawke-s-bay"
         }
+      ],
+      "cards": [
+        {"f": "New Zealand's climate in one line", "b": "Cool and maritime. Two long, narrow islands, and no vineyard is far from the sea."},
+        {"f": "Why are most New Zealand regions on the east side?", "b": "Mountains block the westerly rain, so the east is in a rain shadow, sunnier and drier."},
+        {"f": "New Zealand 85% rule", "b": "A stated region, variety or vintage must make up at least 85% of the wine."},
+        {"f": "New Zealand's most planted grape", "b": "Sauvignon Blanc, most of it in Marlborough.", "place": "nz-world-marlborough"},
+        {"f": "Marlborough: location and climate", "b": "North-east tip of the South Island. Sunny and fairly dry, with cool nights and a long, cool ripening season.", "place": "nz-world-marlborough"},
+        {"f": "Marlborough's main areas", "b": "The Wairau Valley, the Southern Valleys and the cooler, drier Awatere Valley.", "place": "nz-world-marlborough"},
+        {"f": "When did commercial planting start in Marlborough?", "b": "In 1973.", "place": "nz-world-marlborough"},
+        {"f": "Cloudy Bay", "b": "First made in 1985. It brought Marlborough Sauvignon Blanc world fame.", "place": "nz-world-marlborough"},
+        {"f": "Classic Marlborough Sauvignon Blanc", "b": "Pungent and high in acid: passion fruit, gooseberry, green bell pepper, cut grass. Stainless steel, drunk young.", "place": "nz-world-marlborough"},
+        {"f": "Central Otago climate", "b": "New Zealand's only continental region: hot, dry summers, cold winters, frost risk, low rain, often irrigated.", "place": "nz-world-central-otago"},
+        {"f": "Central Otago soils", "b": "Mainly schist-derived, with windblown loess.", "place": "nz-world-central-otago"},
+        {"f": "Central Otago Pinot Noir", "b": "Ripe and fruit-forward, with red and dark cherry flavours and fresh acidity.", "place": "nz-world-central-otago"},
+        {"f": "Bannockburn", "b": "One of the warmest and earliest-ripening subregions of Central Otago.", "place": "nz-world-bannockburn"},
+        {"f": "Hawke's Bay", "b": "Warm, sunny east coast of the North Island. Main source of Bordeaux-style reds, plus Syrah and Chardonnay.", "place": "nz-world-hawke-s-bay"},
+        {"f": "Gimblett Gravels", "b": "Deep, stony, infertile soils on a former bed of the Ngaruroro River. They drain freely and store heat.", "place": "nz-world-hawke-s-bay"},
+        {"f": "Is Gimblett Gravels a GI?", "b": "No. It is a trademark managed by a local winegrowers' association.", "place": "nz-world-hawke-s-bay"},
+        {"f": "Martinborough", "b": "Subregion of Wairarapa near Wellington. Cool, dry, very windy. Structured Pinot Noir on free-draining gravel terraces.", "place": "nz-world-martinborough"},
+        {"f": "Gisborne", "b": "North Island region known for Chardonnay.", "place": "nz-world-gisborne"},
+        {"f": "Waipara Valley", "b": "North Canterbury area known for Riesling and Pinot Noir.", "place": "nz-world-waipara-valley"},
+        {"f": "Waiheke Island", "b": "Island near Auckland known for Bordeaux blends and Syrah.", "place": "nz-world-waiheke-island"}
       ]
     },
     {
@@ -365,7 +536,91 @@
           "options": ["Hermitage", "Pinotage", "Steen", "Hanepoot"],
           "answer": 2,
           "explain": "Chenin Blanc, the most planted grape in South Africa, was known locally as Steen. Hermitage was the old name for Cinsaut."
+        },
+        {
+          "id": "q9",
+          "q": "From which direction does the Cape Doctor blow?",
+          "options": ["North-west", "North-east", "South-east", "West"],
+          "answer": 2,
+          "explain": "The Cape Doctor is a strong, dry south-easterly wind that blows in summer.",
+          "place": "za-world-stellenbosch"
+        },
+        {
+          "id": "q10",
+          "q": "Who founded the Constantia estate in 1685?",
+          "options": ["Abraham Perold", "Jan van Riebeeck", "Cecil Rhodes", "Simon van der Stel"],
+          "answer": 3,
+          "explain": "Governor Simon van der Stel founded Constantia in 1685. Perold created Pinotage in 1925.",
+          "place": "za-world-constantia"
+        },
+        {
+          "id": "q11",
+          "q": "In which district is the Constantia ward today?",
+          "options": ["Stellenbosch", "Cape Town", "Paarl", "Swartland"],
+          "answer": 1,
+          "explain": "Constantia is a ward in the Cape Town district.",
+          "place": "za-world-cape-town"
+        },
+        {
+          "id": "q12",
+          "q": "Which soils dominate the slopes of Stellenbosch?",
+          "options": ["Granite-derived soils", "Limestone", "Volcanic basalt", "Schist"],
+          "answer": 0,
+          "explain": "Stellenbosch slopes are mostly granite-derived, with sandstone elsewhere.",
+          "place": "za-world-stellenbosch"
+        },
+        {
+          "id": "q13",
+          "q": "The Hemel-en-Aarde wards, suited to Pinot Noir and Chardonnay, lie in which district?",
+          "options": ["Swartland", "Robertson", "Walker Bay", "Paarl"],
+          "answer": 2,
+          "explain": "The three Hemel-en-Aarde wards are in Walker Bay, near the cool south coast.",
+          "place": "za-world-walker-bay"
+        },
+        {
+          "id": "q14",
+          "q": "Which is NOT true of Swartland?",
+          "options": ["It is warm and dry", "Many old bush vines are dry-farmed", "Granite and shale soils are common", "Its cool, foggy south-coast climate is ideal for Pinot Noir"],
+          "answer": 3,
+          "explain": "Swartland lies north of Cape Town and is warm and dry. The cool south-coast areas are Elgin and Walker Bay.",
+          "place": "za-world-swartland"
+        },
+        {
+          "id": "q15",
+          "q": "A South African label states a WO area. What share of the grapes must come from it?",
+          "options": ["85%", "100%", "75%", "95%"],
+          "answer": 1,
+          "explain": "A stated WO area needs all the grapes. A stated variety or vintage needs at least 85%."
+        },
+        {
+          "id": "q16",
+          "q": "How old must a vineyard be for the Old Vine Project's Certified Heritage Vineyards seal?",
+          "options": ["25 years", "50 years", "35 years", "100 years"],
+          "answer": 2,
+          "explain": "The Old Vine Project certifies vineyards that are 35 years old or older."
         }
+      ],
+      "cards": [
+        {"f": "When was Wine of Origin introduced?", "b": "In 1973."},
+        {"f": "Wine of Origin units, largest to smallest", "b": "Geographical unit, region, district, ward. Estates and single vineyards can also be registered.", "place": "za-world-western-cape"},
+        {"f": "A WO area is stated on the label. What share must come from it?", "b": "All of the grapes, 100%."},
+        {"f": "Stated variety or vintage in South Africa", "b": "At least 85% of the wine."},
+        {"f": "Benguela Current", "b": "A cold current flowing north from the Antarctic along the west coast. It cools the land near the sea."},
+        {"f": "Cape Doctor", "b": "A strong, dry south-easterly summer wind. It cools vines and dries the canopy, but can damage leaves and cut yields."},
+        {"f": "Cool Cape areas for Pinot Noir and Chardonnay", "b": "Elgin and the Hemel-en-Aarde wards of Walker Bay, near the south coast.", "place": "za-world-elgin"},
+        {"f": "Robertson and Worcester", "b": "Hot inland areas of the Breede River Valley that rely on irrigation.", "place": "za-world-breede-river-valley"},
+        {"f": "Stellenbosch soils", "b": "Mostly granite-derived on the slopes, with sandstone elsewhere.", "place": "za-world-stellenbosch"},
+        {"f": "Stellenbosch's best-known wines", "b": "Cabernet Sauvignon and Bordeaux-style blends, plus Pinotage, Shiraz and Chenin Blanc.", "place": "za-world-stellenbosch"},
+        {"f": "Who founded Constantia, and when?", "b": "Governor Simon van der Stel, in 1685.", "place": "za-world-constantia"},
+        {"f": "Vin de Constance", "b": "The sweet, unfortified Muscat wine of Constantia, famous in Europe in the 18th and 19th centuries.", "place": "za-world-constantia"},
+        {"f": "Constantia today", "b": "A cool ward in the Cape Town district, known for Sauvignon Blanc.", "place": "za-world-constantia"},
+        {"f": "Swartland viticulture", "b": "Warm and dry, north of Cape Town. Many old bush vines, often dry-farmed, on granite and shale.", "place": "za-world-swartland"},
+        {"f": "Swartland's new wave", "b": "From around 2000: old-vine Chenin Blanc, white blends and Rhône-style reds, often with minimal intervention.", "place": "za-world-swartland"},
+        {"f": "Steen", "b": "The old South African name for Chenin Blanc, the country's most planted grape."},
+        {"f": "Méthode Cap Classique", "b": "The South African name for traditional method sparkling wine."},
+        {"f": "Pinotage", "b": "Pinot Noir crossed with Cinsaut, then called Hermitage, by Abraham Perold at Stellenbosch University in 1925."},
+        {"f": "Cape Blend", "b": "A red blend that includes Pinotage. The term has no legal definition."},
+        {"f": "Old Vine Project heritage seal", "b": "The Certified Heritage Vineyards seal is for vineyards 35 years old or older."}
       ]
     },
     {
@@ -485,7 +740,90 @@
           "answer": 1,
           "explain": "These southern areas hold old, unirrigated bush vines of País, Carignan and Cinsault.",
           "place": "cl-world-valle-del-maule"
+        },
+        {
+          "id": "q9",
+          "q": "Which Chilean region contains the Casablanca and San Antonio valleys?",
+          "options": ["Valle Central", "Coquimbo", "Aconcagua", "Sur"],
+          "answer": 2,
+          "explain": "The Aconcagua region holds the Aconcagua Valley and the coastal valleys of Casablanca and San Antonio.",
+          "place": "cl-world-aconcagua"
+        },
+        {
+          "id": "q10",
+          "q": "Into which two parts is the Rapel Valley divided?",
+          "options": ["Cachapoal and Colchagua", "Maipo and Curicó", "Elqui and Limarí", "Itata and Biobío"],
+          "answer": 0,
+          "explain": "Rapel is divided into Cachapoal in the north and Colchagua in the south.",
+          "place": "cl-world-valle-del-rapel"
+        },
+        {
+          "id": "q11",
+          "q": "Puente Alto and Pirque are classic Cabernet Sauvignon sites in which area?",
+          "options": ["Limarí", "Leyda", "Itata", "Alto Maipo"],
+          "answer": 3,
+          "explain": "Alto Maipo, near the Andes, is home of Chile's classic Cabernet Sauvignon.",
+          "place": "cl-world-puente-alto"
+        },
+        {
+          "id": "q12",
+          "q": "What does underripe Carmenère taste of?",
+          "options": ["Honey", "Green pepper", "Raisins", "Banana"],
+          "answer": 1,
+          "explain": "Carmenère ripens late. Picked too early, it shows green pepper flavours."
+        },
+        {
+          "id": "q13",
+          "q": "Who identified Carmenère in Chilean vineyards in 1994?",
+          "options": ["Abraham Perold", "Michel Aimé Pouget", "Jean-Michel Boursiquot", "Konstantin Frank"],
+          "answer": 2,
+          "explain": "The French ampelographer Jean-Michel Boursiquot showed that much Chilean Merlot was really Carmenère."
+        },
+        {
+          "id": "q14",
+          "q": "Which list gives Chile's wine regions in order from north to south?",
+          "options": ["Atacama, Coquimbo, Aconcagua, Valle Central, Sur, Austral", "Coquimbo, Atacama, Valle Central, Aconcagua, Sur, Austral", "Atacama, Aconcagua, Coquimbo, Sur, Valle Central, Austral", "Aconcagua, Atacama, Coquimbo, Valle Central, Austral, Sur"],
+          "answer": 0,
+          "explain": "The regions run Atacama, Coquimbo, Aconcagua, Valle Central, Sur and Austral."
+        },
+        {
+          "id": "q15",
+          "q": "Which is NOT a main feature of the Casablanca Valley?",
+          "options": ["Frost risk", "Scarce water", "Morning fog and sea breezes", "The heat of the Central Valley floor"],
+          "answer": 3,
+          "explain": "Casablanca is a cool coastal valley. Its main problems are frost and scarce water.",
+          "place": "cl-world-valle-de-casablanca"
+        },
+        {
+          "id": "q16",
+          "q": "Apalta, a well-known source of Carmenère, lies in which valley?",
+          "options": ["Cachapoal", "Colchagua", "Maipo", "Casablanca"],
+          "answer": 1,
+          "explain": "Apalta is in Colchagua. Peumo, another Carmenère source, is in Cachapoal.",
+          "place": "cl-world-apalta"
         }
+      ],
+      "cards": [
+        {"f": "Chile's natural barriers", "b": "The Andes to the east, the Pacific to the west, the Atacama Desert to the north and Patagonian ice fields to the south."},
+        {"f": "Why are most Chilean vines ungrafted?", "b": "Its natural barriers have kept phylloxera out of the country."},
+        {"f": "How are most central Chilean vineyards watered?", "b": "By irrigation with snowmelt from the Andes. Rain falls mostly in winter, and summers are dry."},
+        {"f": "Humboldt Current", "b": "A cold current flowing north along the coast. It cools the land and brings morning fog and cloud."},
+        {"f": "What is the Coastal Range's effect?", "b": "It runs parallel to the shore and blocks ocean cooling, except where valleys open towards the sea."},
+        {"f": "Chile's Central Valley floor", "b": "The warmest, flattest land between the Coastal Range and the Andes, long used for high-yield production.", "place": "cl-world-valle-central"},
+        {"f": "Costa, Entre Cordilleras, Andes", "b": "Label terms allowed since 2011 for the coast, the land between the ranges, and the mountain side."},
+        {"f": "Chile's wine regions, north to south", "b": "Atacama, Coquimbo, Aconcagua, Valle Central, Sur and Austral."},
+        {"f": "Which region holds Elqui and Limarí?", "b": "Coquimbo, in the dry, bright north.", "place": "cl-world-coquimbo"},
+        {"f": "Limarí", "b": "A Coquimbo valley with limestone soils, known for Chardonnay.", "place": "cl-world-valle-del-limari"},
+        {"f": "Valleys of the Aconcagua region", "b": "The Aconcagua Valley itself and the coastal valleys of Casablanca and San Antonio.", "place": "cl-world-aconcagua"},
+        {"f": "Alto Maipo", "b": "Home of Chile's classic Cabernet Sauvignon, at sites such as Puente Alto and Pirque.", "place": "cl-world-puente-alto"},
+        {"f": "Rapel's two parts", "b": "Cachapoal and Colchagua.", "place": "cl-world-valle-del-rapel"},
+        {"f": "Maule and Itata", "b": "Southern areas with old, dry-farmed bush vines of País, Carignan and Cinsault.", "place": "cl-world-valle-del-maule"},
+        {"f": "Carmenère's story", "b": "An old Bordeaux variety that reached Chile in the 19th century. It was long mixed up with Merlot."},
+        {"f": "Who identified Carmenère in Chile, and when?", "b": "The French ampelographer Jean-Michel Boursiquot, in 1994."},
+        {"f": "Carmenère ripeness", "b": "It ripens late and needs warmth. Underripe it tastes of green pepper; ripe it gives deep colour, black fruit and spice."},
+        {"f": "Two well-known sources of Carmenère", "b": "Peumo in Cachapoal and Apalta in Colchagua.", "place": "cl-world-apalta"},
+        {"f": "Casablanca", "b": "Between Santiago and Valparaíso, developed from the 1980s. Fog and breezes cool it; frost and scarce water are its problems.", "place": "cl-world-valle-de-casablanca"},
+        {"f": "San Antonio and Leyda", "b": "Just south of Casablanca and closer to the sea, planted from the late 1990s. Leyda is its best-known zone.", "place": "cl-world-valle-de-leyda"}
       ]
     },
     {
@@ -604,7 +942,90 @@
           "answer": 1,
           "explain": "Cafayate is the hub of the high Calchaquí Valleys in Salta, home of Argentina's best Torrontés.",
           "place": "ar-world-cafayate-valle-de-cafayate"
+        },
+        {
+          "id": "q9",
+          "q": "Which three tiers of origin did Argentina's 1999 law create?",
+          "options": ["DO, DOCa and VP", "IGT, DOC and DOCG", "IP, IG and DOC", "AVA, GI and WO"],
+          "answer": 2,
+          "explain": "The law set Indicación de Procedencia, Indicación Geográfica and Denominación de Origen Controlada."
+        },
+        {
+          "id": "q10",
+          "q": "Which are Argentina's two DOCs?",
+          "options": ["Luján de Cuyo and San Rafael", "Valle de Uco and Cafayate", "Maipú and Tupungato", "Río Negro and Neuquén"],
+          "answer": 0,
+          "explain": "Luján de Cuyo and San Rafael, both in Mendoza, are the DOCs.",
+          "place": "ar-world-lujan-de-cuyo-doc"
+        },
+        {
+          "id": "q11",
+          "q": "Who brought French varieties, Malbec among them, to Mendoza in the mid-19th century?",
+          "options": ["Jean-Michel Boursiquot", "Michel Aimé Pouget", "Abraham Perold", "Agoston Haraszthy"],
+          "answer": 1,
+          "explain": "The French agronomist Michel Aimé Pouget brought the cuttings. Boursiquot identified Carmenère in Chile.",
+          "place": "ar-world-mendoza"
+        },
+        {
+          "id": "q12",
+          "q": "Which areas belong to Mendoza's Primera Zona?",
+          "options": ["Paraje Altamira and La Consulta", "Cafayate and Cachi", "Los Chacayes and Vista Flores", "Agrelo, Vistalba, Las Compuertas and Lunlunta"],
+          "answer": 3,
+          "explain": "These areas lie in Luján de Cuyo and Maipú. The others are in the Valle de Uco or Salta.",
+          "place": "ar-world-lujan-de-cuyo"
+        },
+        {
+          "id": "q13",
+          "q": "An Argentine wine is labelled with one grape variety. What share must come from that variety?",
+          "options": ["75%", "85%", "90%", "100%"],
+          "answer": 1,
+          "explain": "Argentine rules require at least 85% of the named variety, and 85% for a stated vintage."
+        },
+        {
+          "id": "q14",
+          "q": "How does Valle de Uco Malbec usually differ from Primera Zona Malbec?",
+          "options": ["It is sweeter, with less colour", "It has higher alcohol and lower acidity", "It has fresher acidity, more floral notes and finer tannins", "It is always made without oak"],
+          "answer": 2,
+          "explain": "Uco's higher, cooler vineyards give Malbec more freshness and finer tannins.",
+          "place": "ar-world-valle-de-uco"
+        },
+        {
+          "id": "q15",
+          "q": "Which is NOT a typical problem for Argentine vineyards?",
+          "options": ["Hail", "The hot, dry Zonda wind", "High fungal disease pressure from humid air", "Very low rainfall"],
+          "answer": 2,
+          "explain": "Dry air keeps disease pressure low. Hail, the Zonda and scarce rain, met by irrigation, are the real challenges."
+        },
+        {
+          "id": "q16",
+          "q": "Which province, near the tropics in the far north, has vineyards above 3,000 m?",
+          "options": ["Mendoza", "San Juan", "Neuquén", "Salta"],
+          "answer": 3,
+          "explain": "In Salta only altitude makes quality wine possible. Its Calchaquí Valleys hold some of the world's highest vineyards.",
+          "place": "ar-world-salta"
         }
+      ],
+      "cards": [
+        {"f": "Why do Argentine vineyards need irrigation?", "b": "They lie in the Andean rain shadow. The climate is continental and very dry, so vines use Andean snowmelt."},
+        {"f": "The key factor for Argentine wine quality", "b": "Altitude. Higher sites are cooler, with a wide day to night range and intense sunlight."},
+        {"f": "Effect of intense sunlight at altitude", "b": "Thick-skinned grapes with deep colour, while acidity is kept."},
+        {"f": "Zonda", "b": "A hot, dry wind from the Andes that can damage flowering in spring."},
+        {"f": "Hail in Argentina", "b": "A major hazard, so many vineyards are covered with nets."},
+        {"f": "Argentina's three tiers of origin (1999 law)", "b": "Indicación de Procedencia (IP), Indicación Geográfica (IG) and Denominación de Origen Controlada (DOC)."},
+        {"f": "Argentina's two DOCs", "b": "Luján de Cuyo and San Rafael.", "place": "ar-world-lujan-de-cuyo-doc"},
+        {"f": "Argentine varietal and vintage minimum", "b": "At least 85% of the named variety, and at least 85% from the stated vintage."},
+        {"f": "Primera Zona", "b": "Mendoza's traditional heart for fine wine, just south of the city: Luján de Cuyo and Maipú.", "place": "ar-world-lujan-de-cuyo"},
+        {"f": "Areas of the Primera Zona", "b": "Agrelo, Vistalba, Las Compuertas and Lunlunta.", "place": "ar-world-agrelo"},
+        {"f": "Michel Aimé Pouget", "b": "French agronomist who brought French varieties, Malbec among them, to Mendoza in the mid-19th century.", "place": "ar-world-mendoza"},
+        {"f": "Argentine Malbec style", "b": "Deep colour, plum, blackberry and violet aromas, soft ripe tannins. Malbec came from south-west France."},
+        {"f": "Valle de Uco departments", "b": "Tupungato, Tunuyán and San Carlos, south-west of Mendoza city at the foot of the Andes.", "place": "ar-world-valle-de-uco"},
+        {"f": "Uco Malbec versus Primera Zona Malbec", "b": "Higher, cooler, stony sites give fresher acidity, more floral notes and finer tannins.", "place": "ar-world-valle-de-uco"},
+        {"f": "Paraje Altamira and La Consulta", "b": "Geographical indications in San Carlos, Valle de Uco.", "place": "ar-world-paraje-altamira"},
+        {"f": "Los Chacayes, Vista Flores and San Pablo", "b": "Geographical indications in Tunuyán, Valle de Uco.", "place": "ar-world-los-chacayes"},
+        {"f": "Salta", "b": "Far north, near the tropics, where only altitude allows quality wine. Some vineyards lie above 3,000 m.", "place": "ar-world-salta"},
+        {"f": "Cafayate", "b": "Main centre of the Calchaquí Valleys in Salta, and the best-known source of Torrontés.", "place": "ar-world-cafayate-valle-de-cafayate"},
+        {"f": "Torrontés Riojano", "b": "The most planted and finest of the three Torrontés types. A crossing of Muscat of Alexandria and Criolla Chica."},
+        {"f": "Why is Patagonia cool?", "b": "Latitude, not altitude. Its vineyards are lower than Mendoza's, in a dry, windy climate with wide day to night swings.", "place": "ar-world-patagonia-patagonia-argentina"}
       ]
     }
   ]

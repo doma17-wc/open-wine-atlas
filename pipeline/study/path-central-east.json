@@ -1,0 +1,1982 @@
+{
+  "id": "central-east",
+  "title": "Switzerland, Hungary, Greece and the Caucasus",
+  "level": "WSET 3 to Diploma",
+  "summary": "Wine beyond the classic western regions: Switzerland's cantonal AOCs and Alpine grapes, Tokaj and the reds of Hungary, Greece's native grapes and PDOs, the Adriatic from Brda to Dalmatia and North Macedonia, and Georgia's qvevri and Armenia's ancient winery.",
+  "lessons": [
+    {
+      "id": "central-east-switzerland",
+      "title": "Switzerland",
+      "minutes": 9,
+      "intro": "Switzerland has about 14,600 ha of vines, most of them on steep slopes above lakes and rivers. This lesson covers how the cantons run the AOC system, then the six wine regions: Valais, Vaud, Geneva, the Three Lakes, German-speaking Switzerland and Ticino.",
+      "sections": [
+        {
+          "h": "Cantonal AOCs and the six regions",
+          "p": [
+            "Switzerland is not in the EU, so its wine law is its own. The federal wine ordinance (Weinverordnung) sets three categories: AOC wines, Landwein (vin de pays) and Swiss Tafelwein. An AOC wine is named after a canton or a place inside a canton.",
+            "The cantons, not the federal state, set the rules for their AOCs. Each canton must delimit the area and list the permitted grapes, a natural minimum sugar for each grape, a maximum yield and a tasting and analysis check. The federal ordinance only sets the limits the cantons must respect, for example a maximum AOC yield of 1.3 kg/m² for white grapes and 1.2 kg/m² for red in western Switzerland. Geneva was the first canton to create an AOC, in 1988.",
+            "The vineyards are grouped into six regions: Valais, Vaud, Geneva, the Three Lakes, German-speaking Switzerland and Ticino. Pinot Noir is the most planted grape and Chasselas the second. Swiss research also bred red crossings such as Gamaret and Garanoir, both from Gamay and Reichensteiner."
+          ],
+          "places": [
+            "ch-canton-23",
+            "ch-canton-22",
+            "ch-canton-25",
+            "ch-canton-24",
+            "ch-canton-21",
+            "ch-canton-1",
+            "ch-canton-18",
+            "ch-canton-14",
+            "ch-canton-20",
+            "ch-canton-19",
+            "ch-canton-17",
+            "ch-canton-13",
+            "ch-canton-3"
+          ]
+        },
+        {
+          "h": "Valais: the Alpine Rhône",
+          "p": [
+            "Valais is the largest region, with almost a third of Swiss vineyards. The vines follow the upper Rhône valley from the German-speaking Upper Valais down towards Lake Geneva. Most lie on the south-facing slopes of the right bank, often on narrow terraces held up by dry stone walls.",
+            "High mountains on both sides keep rain out, so the valley is one of the driest and sunniest parts of Switzerland. The warm, dry Föhn wind helps ripen the grapes. Growers once brought water to the slopes through bisses, long irrigation channels cut along the mountainside. At Visperterminen in the Upper Valais, vines grow at about 1,100 m, among the highest in Europe."
+          ],
+          "places": [
+            "ch-canton-23"
+          ]
+        },
+        {
+          "h": "Valais grapes and names",
+          "p": [
+            "Valais uses its own names for several grapes. Fendant is Chasselas from Valais. Johannisberg is Sylvaner, Heida is Savagnin Blanc and Malvoisie is Pinot Gris, often made sweet from late-picked or shrivelled grapes. Dôle is a red blend based on Pinot Noir with Gamay.",
+            "The region is also home to old local grapes. Petite Arvine gives fresh whites with a salty finish, dry or sweet. Amigne is grown mainly around Vétroz. Cornalin, also called Rouge du Pays, gives deep, fresh reds. Humagne Blanche and Humagne Rouge share a name but are two unrelated varieties."
+          ],
+          "places": [
+            "ch-canton-23"
+          ]
+        },
+        {
+          "h": "Vaud, Geneva and the Three Lakes",
+          "p": [
+            "Vaud is the home ground of Chasselas. The canton has six regional AOCs and two grand cru AOCs. La Côte runs along Lake Geneva between Geneva and Lausanne. Lavaux, east of Lausanne, is a steep amphitheatre of terraces above the lake, inscribed by UNESCO in 2007. The Chablais lies upstream of the lake along the Rhône, with villages such as Aigle and Yvorne. Côtes de l'Orbe, Bonvillars and Vully lie further north.",
+            "Inside Lavaux, Dézaley and Calamin became AOCs of their own in 2013, and their wines must be grands crus. Both are known for Chasselas, and Calamin lies at Epesses. Vaud labels often name the village or the cru rather than the grape.",
+            "Geneva is the third region. Its largest commune, Satigny, has the biggest vineyard area of any commune in Switzerland. Chasselas, Gamay and Pinot Noir lead, with Gamaret and other crossings. The Three Lakes region joins the vineyards of Lake Neuchâtel, Lake Biel and Vully. Neuchâtel is known for Chasselas, Pinot Noir and Oeil de Perdrix, a pale rosé from Pinot Noir."
+          ],
+          "places": [
+            "ch-canton-22",
+            "ch-canton-25",
+            "ch-canton-24"
+          ]
+        },
+        {
+          "h": "German-speaking Switzerland and Ticino",
+          "p": [
+            "German-speaking Switzerland spreads its vines over many small areas from Basel to Graubünden. Pinot Noir, called Blauburgunder, and Müller-Thurgau dominate. Müller-Thurgau was bred in 1882 at Geisenheim by Hermann Müller, who came from the canton of Thurgau, and is often sold in Switzerland as Riesling-Silvaner. In the Bündner Herrschaft of Graubünden, around Fläsch, Maienfeld, Jenins and Malans, the Föhn helps ripen Pinot Noir. Zürich keeps the old white grape Räuschling, and Graubünden the rare Completer.",
+            "Ticino lies south of the Alps and speaks Italian, so its wines are labelled DOC. Merlot arrived in 1906, when the vineyards were replanted after phylloxera, and today covers more than 80% of the vineyard. Ticino is wetter than most of Switzerland but also very sunny. The Monte Ceneri pass splits it into the Sopraceneri to the north and the Sottoceneri to the south. Merlot is also made as a white wine, Bianco di Merlot."
+          ],
+          "places": [
+            "ch-canton-1",
+            "ch-canton-18",
+            "ch-canton-14",
+            "ch-canton-20",
+            "ch-canton-19",
+            "ch-canton-17",
+            "ch-canton-13",
+            "ch-canton-3",
+            "ch-canton-21"
+          ]
+        }
+      ],
+      "key": [
+        "Swiss AOC rules are set by the cantons under the federal wine ordinance; Geneva created the first AOC in 1988.",
+        "Six regions: Valais, Vaud, Geneva, the Three Lakes, German-speaking Switzerland and Ticino. Pinot Noir is the most planted grape, Chasselas second.",
+        "Valais is the largest and driest region: Fendant is Chasselas, Johannisberg is Sylvaner, Heida is Savagnin; Petite Arvine, Amigne, Humagne and Cornalin are local grapes.",
+        "Vaud is the heart of Chasselas: La Côte, Lavaux (UNESCO 2007) and the Chablais; Dézaley and Calamin are grand cru AOCs inside Lavaux.",
+        "German-speaking Switzerland grows mostly Pinot Noir (Blauburgunder) and Müller-Thurgau.",
+        "Ticino is labelled DOC and is more than 80% Merlot, planted from 1906 after phylloxera."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is Fendant?",
+          "options": [
+            "Pinot Noir from Valais",
+            "Chasselas from Valais",
+            "A red blend of Pinot Noir and Gamay",
+            "Sylvaner from Valais"
+          ],
+          "answer": 1,
+          "explain": "Fendant is the Valais name for Chasselas. Johannisberg is Sylvaner and Dôle is the Pinot Noir and Gamay blend.",
+          "place": "ch-canton-23"
+        },
+        {
+          "id": "q2",
+          "q": "Who sets the detailed rules for Swiss AOC wines?",
+          "options": [
+            "The European Commission",
+            "A single national appellation body",
+            "The producers of each village",
+            "The cantons"
+          ],
+          "answer": 3,
+          "explain": "Under the federal wine ordinance, each canton sets its own AOC rules: area, grapes, minimum sugar and yields."
+        },
+        {
+          "id": "q3",
+          "q": "Which canton was the first to create an AOC, in 1988?",
+          "options": [
+            "Valais",
+            "Vaud",
+            "Geneva",
+            "Ticino"
+          ],
+          "answer": 2,
+          "explain": "Geneva introduced the first Swiss AOC in 1988. The other cantons followed.",
+          "place": "ch-canton-25"
+        },
+        {
+          "id": "q4",
+          "q": "Which grape covers more than 80% of Ticino's vineyard?",
+          "options": [
+            "Merlot",
+            "Nebbiolo",
+            "Pinot Noir",
+            "Bondola"
+          ],
+          "answer": 0,
+          "explain": "Merlot was planted in Ticino from 1906 after phylloxera and now dominates. Bondola is an old local grape.",
+          "place": "ch-canton-21"
+        },
+        {
+          "id": "q5",
+          "q": "Dézaley and Calamin are grand cru AOCs inside which Vaud area?",
+          "options": [
+            "La Côte",
+            "Chablais",
+            "Lavaux",
+            "Côtes de l'Orbe"
+          ],
+          "answer": 2,
+          "explain": "Both lie within the Lavaux terraces east of Lausanne and became AOCs of their own in 2013.",
+          "place": "ch-canton-22"
+        },
+        {
+          "id": "q6",
+          "q": "What is Johannisberg in Valais?",
+          "options": [
+            "Sylvaner",
+            "Savagnin Blanc",
+            "Riesling",
+            "Pinot Gris"
+          ],
+          "answer": 0,
+          "explain": "In Valais, Johannisberg is the name for Sylvaner. Heida is Savagnin Blanc and Malvoisie is Pinot Gris.",
+          "place": "ch-canton-23"
+        },
+        {
+          "id": "q7",
+          "q": "Which region holds almost a third of Swiss vineyards?",
+          "options": [
+            "Vaud",
+            "Geneva",
+            "Ticino",
+            "Valais"
+          ],
+          "answer": 3,
+          "explain": "Valais, along the upper Rhône valley, is the largest Swiss wine region.",
+          "place": "ch-canton-23"
+        },
+        {
+          "id": "q8",
+          "q": "Where does the name Müller-Thurgau come from?",
+          "options": [
+            "A village on Lake Zürich",
+            "Its breeder Hermann Müller, from the canton of Thurgau",
+            "A monastery in Thurgau",
+            "Two grapes called Müller and Thurgau"
+          ],
+          "answer": 1,
+          "explain": "Hermann Müller from Thurgau bred the grape at Geisenheim in 1882."
+        },
+        {
+          "id": "q9",
+          "q": "What is Oeil de Perdrix?",
+          "options": [
+            "A pale rosé from Pinot Noir, linked to Neuchâtel",
+            "A sweet wine from dried Chasselas",
+            "A red blend from Ticino",
+            "A sparkling wine from Valais"
+          ],
+          "answer": 0,
+          "explain": "Oeil de Perdrix, partridge eye, is a pale Pinot Noir rosé that began in Neuchâtel.",
+          "place": "ch-canton-24"
+        },
+        {
+          "id": "q10",
+          "q": "Which of these is NOT part of the Three Lakes region?",
+          "options": [
+            "Lake Neuchâtel",
+            "Lake Biel",
+            "Lake Zürich",
+            "Vully"
+          ],
+          "answer": 2,
+          "explain": "The Three Lakes region joins Lake Neuchâtel, Lake Biel and Vully. Lake Zürich is in German-speaking Switzerland.",
+          "place": "ch-canton-24"
+        },
+        {
+          "id": "q11",
+          "q": "Why did Valais growers build bisses?",
+          "options": [
+            "To drain heavy rain off the terraces",
+            "The valley is very dry, sheltered from rain by high mountains",
+            "To protect vines from spring frost",
+            "To carry grapes down to the cellars"
+          ],
+          "answer": 1,
+          "explain": "Bisses are irrigation channels. The Alps keep rain out of the Valais, one of the driest parts of Switzerland.",
+          "place": "ch-canton-23"
+        },
+        {
+          "id": "q12",
+          "q": "Which grape is the most planted in Switzerland?",
+          "options": [
+            "Chasselas",
+            "Gamay",
+            "Merlot",
+            "Pinot Noir"
+          ],
+          "answer": 3,
+          "explain": "Pinot Noir is the most planted Swiss grape, ahead of Chasselas."
+        },
+        {
+          "id": "q13",
+          "q": "At about 1,100 m, Visperterminen is known for which grape?",
+          "options": [
+            "Merlot",
+            "Chasselas",
+            "Gamay",
+            "Heida (Savagnin Blanc)"
+          ],
+          "answer": 3,
+          "explain": "The Upper Valais village of Visperterminen has some of Europe's highest vines, known for Heida.",
+          "place": "ch-canton-23"
+        },
+        {
+          "id": "q14",
+          "q": "Which commune has the largest vineyard area in Switzerland?",
+          "options": [
+            "Chamoson",
+            "Satigny",
+            "Sion",
+            "Maienfeld"
+          ],
+          "answer": 1,
+          "explain": "Satigny in the canton of Geneva has the largest vineyard area of any Swiss commune.",
+          "place": "ch-canton-25"
+        },
+        {
+          "id": "q15",
+          "q": "Gamaret and Garanoir are crossings of which two grapes?",
+          "options": [
+            "Gamay and Reichensteiner",
+            "Pinot Noir and Gamay",
+            "Merlot and Gamay",
+            "Chasselas and Pinot Noir"
+          ],
+          "answer": 0,
+          "explain": "Both were bred in Switzerland from Gamay and Reichensteiner."
+        },
+        {
+          "id": "q16",
+          "q": "The Bündner Herrschaft, around Maienfeld and Malans, is in which canton?",
+          "options": [
+            "Zürich",
+            "Valais",
+            "Graubünden",
+            "Ticino"
+          ],
+          "answer": 2,
+          "explain": "The Bündner Herrschaft is in Graubünden, where the Föhn helps ripen Pinot Noir.",
+          "place": "ch-canton-18"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Fendant",
+          "b": "The Valais name for Chasselas, sold as AOC Valais.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Johannisberg (Valais)",
+          "b": "The Valais name for Sylvaner.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Heida",
+          "b": "Savagnin Blanc in the Upper Valais, grown at Visperterminen at about 1,100 m.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Petite Arvine",
+          "b": "A local Valais white grape. Fresh acidity, often a salty finish; made dry or sweet.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Cornalin (Valais)",
+          "b": "A local red grape of Valais, also called Rouge du Pays. Deep colour, fresh acidity.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Are Humagne Blanche and Humagne Rouge related?",
+          "b": "No. They share a name but are two unrelated Valais varieties.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Dôle",
+          "b": "A Valais red blend based on Pinot Noir with Gamay.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Malvoisie (Valais)",
+          "b": "Pinot Gris in Valais, often made sweet from late-picked or shrivelled grapes.",
+          "place": "ch-canton-23"
+        },
+        {
+          "f": "Who sets the rules for Swiss AOCs?",
+          "b": "The cantons, within limits set by the federal wine ordinance."
+        },
+        {
+          "f": "Three categories of Swiss wine",
+          "b": "AOC wine, Landwein (vin de pays) and Swiss Tafelwein."
+        },
+        {
+          "f": "First Swiss AOC",
+          "b": "Geneva, in 1988.",
+          "place": "ch-canton-25"
+        },
+        {
+          "f": "Lavaux",
+          "b": "Steep terraces above Lake Geneva east of Lausanne, mostly Chasselas. A UNESCO World Heritage site since 2007.",
+          "place": "ch-canton-22"
+        },
+        {
+          "f": "Dézaley and Calamin",
+          "b": "Two Lavaux AOCs since 2013 whose wines must be grands crus; known for Chasselas. Calamin lies at Epesses.",
+          "place": "ch-canton-22"
+        },
+        {
+          "f": "Chablais (Vaud)",
+          "b": "Vaud AOC along the Rhône upstream of Lake Geneva, with villages such as Aigle and Yvorne.",
+          "place": "ch-canton-22"
+        },
+        {
+          "f": "Satigny",
+          "b": "Geneva commune with the largest vineyard area of any commune in Switzerland.",
+          "place": "ch-canton-25"
+        },
+        {
+          "f": "Oeil de Perdrix",
+          "b": "A pale rosé from Pinot Noir that began in Neuchâtel.",
+          "place": "ch-canton-24"
+        },
+        {
+          "f": "The Three Lakes region",
+          "b": "The vineyards of Lake Neuchâtel, Lake Biel and Vully.",
+          "place": "ch-canton-24"
+        },
+        {
+          "f": "Blauburgunder",
+          "b": "The German-Swiss name for Pinot Noir, the main grape of German-speaking Switzerland."
+        },
+        {
+          "f": "Müller-Thurgau",
+          "b": "Bred in 1882 at Geisenheim by Hermann Müller of Thurgau. Often sold in Switzerland as Riesling-Silvaner.",
+          "place": "ch-canton-20"
+        },
+        {
+          "f": "Merlot in Ticino",
+          "b": "Planted from 1906 after phylloxera; now more than 80% of the vineyard. Ticino labels say DOC.",
+          "place": "ch-canton-21"
+        }
+      ]
+    },
+    {
+      "id": "central-east-hungary",
+      "title": "Hungary: Tokaj, Eger and Villány",
+      "minutes": 9,
+      "intro": "Hungary has 22 wine regions and a long list of native grapes. This lesson covers Tokaj in depth, with its grapes, the aszú berries, the puttonyos and the current rules for Aszú, Eszencia and Szamorodni, then the red wines of Eger and Villány.",
+      "sections": [
+        {
+          "h": "Hungary at a glance",
+          "p": [
+            "Hungary lies in the Carpathian Basin and has a continental climate with hot summers and cold winters. It has 22 wine regions, and its protected designations of origin are called OEM in Hungarian. Key grapes include Furmint, Hárslevelű and Olaszrizling (Welschriesling) for white, and Kékfrankos (Blaufränkisch) and Kadarka for red.",
+            "Around Lake Balaton the lake softens the climate, and Badacsony grows its vines on an old volcanic hill. Somló, a single volcanic butte, makes firm white wines. Eger and Bükk lie in the north, while Szekszárd and Villány in the south make Hungary's fullest reds."
+          ],
+          "places": [
+            "hu-eupdo-PDO-HU-A1254",
+            "hu-eupdo-PDO-HU-A1328",
+            "hu-eupdo-PDO-HU-A1381",
+            "hu-eupdo-PDO-HU-A1349",
+            "hu-eupdo-PDO-HU-A1506",
+            "hu-eupdo-PDO-HU-A1501",
+            "hu-eupdo-PDO-HU-A1507",
+            "hu-eupdo-PDO-HU-A1500",
+            "hu-eupdo-PDO-HU-A1368"
+          ]
+        },
+        {
+          "h": "Tokaj: place and grapes",
+          "p": [
+            "Tokaj lies in north-east Hungary, in the Zemplén hills where the Bodrog river meets the Tisza. In autumn, mists rise from the rivers in the morning and warm, dry afternoons follow. These conditions favour noble rot, Botrytis cinerea, which shrivels the berries and concentrates their sugar. The soils are volcanic, often covered with loess.",
+            "A royal decree of 1737 fixed the boundaries of the region, one of the first closed wine regions in the world. The Tokaj Wine Region Historic Cultural Landscape was inscribed by UNESCO in 2002. The appellation covers 27 settlements, among them Tokaj, Tarcal, Mád, Tállya, Tolcsva and Sárospatak.",
+            "Six grapes are allowed: Furmint, Hárslevelű, Sárgamuskotály (Muscat Blanc à Petits Grains), Zéta, Kövérszőlő and Kabar. Furmint is the main grape. It keeps high acidity, ripens late and is prone to noble rot. Hárslevelű, whose name means linden leaf, adds perfume. Tokaj also makes dry wines, above all from Furmint."
+          ],
+          "places": [
+            "hu-eupdo-PDO-HU-A1254"
+          ]
+        },
+        {
+          "h": "Aszú and the puttonyos",
+          "p": [
+            "Aszú berries are shrivelled, botrytised berries picked one by one. They are collected apart, crushed to a paste and soaked in fermenting must or wine. The mix is then pressed, and the wine ferments slowly and is aged in cask.",
+            "Sweetness was once shown by the number of puttonyos. A puttony is a hod that holds about 25 kg of aszú berries. The number of puttonyos, usually 3 to 6, told how many hods were added to a Gönc cask of 136 litres, so more puttonyos meant a sweeter wine.",
+            "The rules have changed. Today every Tokaji Aszú must have at least 120 g/l of residual sugar. A puttonyos number may still appear on the label, and 6 puttonyos is allowed only for wines with at least 150 g/l. Aszú must age at least 18 months in wooden casks and may not be released before 1 January of the third year after the harvest."
+          ],
+          "places": [
+            "hu-eupdo-PDO-HU-A1254"
+          ]
+        },
+        {
+          "h": "Eszencia, Szamorodni and the other styles",
+          "p": [
+            "Eszencia is the juice that runs from aszú berries under their own weight, before any pressing. It holds at least 450 g/l of sugar and ferments so slowly that it ends with only 1.2% to 8% alcohol. It is rare and lasts for decades.",
+            "Szamorodni, from a Polish word meaning as it comes, is made from whole bunches picked with their botrytised berries. It is made sweet (édes, at least 45 g/l of sugar) or dry (száraz, at most 9 g/l). Dry Szamorodni is traditionally aged in casks that are not topped up, under a film of yeast, which gives it a nutty, oxidative style.",
+            "Fordítás is made by pouring must or wine over the pressed aszú paste, and Máslás by ageing wine on the lees of Aszú. Late harvest wines (késői szüretelésű) are lighter sweet wines from hand-picked, late-picked grapes."
+          ],
+          "places": [
+            "hu-eupdo-PDO-HU-A1254"
+          ]
+        },
+        {
+          "h": "Eger and Villány",
+          "p": [
+            "Eger lies in northern Hungary, in the foothills of the Bükk hills. Its most famous wine is Egri Bikavér, Bull's Blood, a red blend. Legend ties the name to the Ottoman siege of Eger in 1552, when the defenders were said to drink red wine. A Classicus Bikavér must blend at least three grapes, with Kékfrankos the largest share. Superior and Grand Superior need at least five grapes and longer ageing. Egri Csillag, Star of Eger, is the white blend of the region. Szekszárd makes a Bikavér too.",
+            "Villány lies in the far south, near the Croatian border. It is one of the warmest parts of Hungary, and most vineyards face south on the limestone and loess of the Villány hills. It makes ripe, full reds from Cabernet Franc, Cabernet Sauvignon, Merlot and Portugieser. Villányi Franc is a category for pure Cabernet Franc with at least a year in oak and no chaptalisation."
+          ],
+          "places": [
+            "hu-eupdo-PDO-HU-A1328",
+            "hu-eupdo-PDO-HU-A1500",
+            "hu-eupdo-PDO-HU-A1381",
+            "hu-eupdo-PDO-HU-A1349"
+          ]
+        }
+      ],
+      "key": [
+        "Hungary has 22 wine regions; key grapes are Furmint, Hárslevelű, Olaszrizling, Kékfrankos and Kadarka.",
+        "Tokaj: Zemplén hills where the Bodrog meets the Tisza; volcanic soils; boundary fixed in 1737; UNESCO since 2002; 27 settlements.",
+        "Six Tokaj grapes: Furmint (main), Hárslevelű, Sárgamuskotály, Zéta, Kövérszőlő and Kabar.",
+        "Tokaji Aszú today: at least 120 g/l sugar, 6 puttonyos needs 150 g/l, at least 18 months in wood, released from 1 January of the third year.",
+        "Eszencia: free-run aszú juice, at least 450 g/l sugar, 1.2% to 8% alcohol. Szamorodni: whole bunches, dry or sweet.",
+        "Egri Bikavér is a Kékfrankos-led blend of at least three grapes; Villány in the south is known for Cabernet Franc."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which is the main grape of Tokaj?",
+          "options": [
+            "Kékfrankos",
+            "Olaszrizling",
+            "Furmint",
+            "Kadarka"
+          ],
+          "answer": 2,
+          "explain": "Furmint is the main Tokaj grape: late ripening, high in acid and prone to noble rot.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q2",
+          "q": "What is the current legal minimum residual sugar for every Tokaji Aszú?",
+          "options": [
+            "120 g/l",
+            "60 g/l",
+            "90 g/l",
+            "45 g/l"
+          ],
+          "answer": 0,
+          "explain": "Every Tokaji Aszú must now have at least 120 g/l of residual sugar.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q3",
+          "q": "What was a puttony?",
+          "options": [
+            "A cask of 136 litres",
+            "A hod holding about 25 kg of aszú berries",
+            "A cellar dug into the volcanic rock",
+            "A measure of alcohol"
+          ],
+          "answer": 1,
+          "explain": "The number of puttonyos told how many hods of aszú berries were added to a 136-litre Gönc cask.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q4",
+          "q": "Which two rivers meet at Tokaj and bring the autumn mists?",
+          "options": [
+            "The Danube and the Drava",
+            "The Danube and the Tisza",
+            "The Mur and the Drava",
+            "The Bodrog and the Tisza"
+          ],
+          "answer": 3,
+          "explain": "The Bodrog joins the Tisza at the town of Tokaj. Their morning mists help noble rot develop.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q5",
+          "q": "What is Tokaji Eszencia?",
+          "options": [
+            "Free-run juice from aszú berries, with at least 450 g/l of sugar",
+            "Aszú with a puttonyos number of 6",
+            "A dry wine aged under a film of yeast",
+            "Wine poured over pressed aszú paste"
+          ],
+          "answer": 0,
+          "explain": "Eszencia is the juice that runs from aszú berries under their own weight. It ends with only 1.2% to 8% alcohol.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q6",
+          "q": "Which statement about Szamorodni is correct?",
+          "options": [
+            "It is made only from individually picked aszú berries",
+            "It must always be sweet",
+            "It is a sparkling wine from Furmint",
+            "It is made from whole bunches with their botrytised berries, dry or sweet"
+          ],
+          "answer": 3,
+          "explain": "Szamorodni means as it comes: the bunches are not sorted. It can be száraz (dry) or édes (sweet).",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q7",
+          "q": "Which grape must have the largest share in Egri Bikavér?",
+          "options": [
+            "Kadarka",
+            "Cabernet Franc",
+            "Kékfrankos",
+            "Merlot"
+          ],
+          "answer": 2,
+          "explain": "Bikavér is a blend led by Kékfrankos (Blaufränkisch).",
+          "place": "hu-eupdo-PDO-HU-A1328"
+        },
+        {
+          "id": "q8",
+          "q": "Which Hungarian region has a category for pure Cabernet Franc, called Franc?",
+          "options": [
+            "Eger",
+            "Villány",
+            "Tokaj",
+            "Somló"
+          ],
+          "answer": 1,
+          "explain": "Villányi Franc is pure Cabernet Franc with at least a year in oak and no chaptalisation.",
+          "place": "hu-eupdo-PDO-HU-A1381"
+        },
+        {
+          "id": "q9",
+          "q": "How long must Tokaji Aszú age in wooden casks at least?",
+          "options": [
+            "6 months",
+            "3 years",
+            "No cask ageing is required",
+            "18 months"
+          ],
+          "answer": 3,
+          "explain": "Aszú must age at least 18 months in wood and cannot be released before 1 January of the third year after harvest.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q10",
+          "q": "Which of these grapes is NOT permitted in Tokaj?",
+          "options": [
+            "Hárslevelű",
+            "Kékfrankos",
+            "Zéta",
+            "Kövérszőlő"
+          ],
+          "answer": 1,
+          "explain": "The six Tokaj grapes are Furmint, Hárslevelű, Sárgamuskotály, Zéta, Kövérszőlő and Kabar. Kékfrankos is red.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q11",
+          "q": "What must a Tokaji Aszú labelled 6 puttonyos have?",
+          "options": [
+            "At least 150 g/l of residual sugar",
+            "At least 6 years in cask",
+            "Grapes from six villages",
+            "At least 60 g/l of residual sugar"
+          ],
+          "answer": 0,
+          "explain": "The 6 puttonyos term is allowed only on Aszú with at least 150 g/l of residual sugar.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q12",
+          "q": "In which year did a royal decree fix the boundaries of the Tokaj region?",
+          "options": [
+            "1855",
+            "1935",
+            "1737",
+            "1971"
+          ],
+          "answer": 2,
+          "explain": "The 1737 decree made Tokaj one of the first closed wine regions in the world.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q13",
+          "q": "Why does noble rot develop so regularly in Tokaj?",
+          "options": [
+            "The region is cooled by the sea",
+            "Morning mists from the rivers are followed by warm, dry afternoons",
+            "The grapes are picked very early",
+            "The cellars are humid"
+          ],
+          "answer": 1,
+          "explain": "Moisture lets Botrytis start; dry, warm afternoons stop grey rot and shrivel the berries.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q14",
+          "q": "What is Egri Csillag?",
+          "options": [
+            "A sweet wine from Tokaj",
+            "A Kadarka rosé from Szekszárd",
+            "A white blend from Eger",
+            "A sparkling wine from Lake Balaton"
+          ],
+          "answer": 2,
+          "explain": "Egri Csillag, Star of Eger, is the white counterpart of Egri Bikavér.",
+          "place": "hu-eupdo-PDO-HU-A1328"
+        },
+        {
+          "id": "q15",
+          "q": "How many grape varieties must an Egri Bikavér Superior blend at least?",
+          "options": [
+            "Two",
+            "Three",
+            "Seven",
+            "Five"
+          ],
+          "answer": 3,
+          "explain": "Classicus needs at least three grapes; Superior and Grand Superior need at least five.",
+          "place": "hu-eupdo-PDO-HU-A1328"
+        },
+        {
+          "id": "q16",
+          "q": "Which Tokaj wine is made by pouring must or wine over pressed aszú paste?",
+          "options": [
+            "Fordítás",
+            "Máslás",
+            "Eszencia",
+            "Szamorodni"
+          ],
+          "answer": 0,
+          "explain": "Fordítás means turning over. Máslás is wine aged on the lees of Aszú.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Aszú berries",
+          "b": "Shrivelled, botrytised berries picked one by one, crushed to a paste and soaked in must or wine.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Puttony",
+          "b": "A hod holding about 25 kg of aszú berries. The number added to a cask set the old sweetness levels.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Gönc cask",
+          "b": "The traditional Tokaj cask of 136 litres, the base for counting puttonyos.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Tokaji Aszú: minimum sugar today",
+          "b": "At least 120 g/l of residual sugar for every Aszú.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "6 puttonyos today",
+          "b": "Allowed on the label only for Aszú with at least 150 g/l of residual sugar.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Tokaji Aszú: ageing",
+          "b": "At least 18 months in wooden casks; release from 1 January of the third year after harvest.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Tokaji Eszencia",
+          "b": "Free-run juice from aszú berries. At least 450 g/l of sugar; ends with only 1.2% to 8% alcohol.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Szamorodni",
+          "b": "Polish for as it comes. Whole bunches with botrytised berries; made dry (száraz) or sweet (édes).",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Száraz Szamorodni",
+          "b": "Dry Szamorodni, at most 9 g/l sugar, traditionally aged under a film of yeast in casks not topped up.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Fordítás",
+          "b": "Tokaj wine made by pouring must or wine over the pressed aszú paste.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Máslás",
+          "b": "Tokaj wine made by ageing wine on the lees of Aszú.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "The six Tokaj grapes",
+          "b": "Furmint, Hárslevelű, Sárgamuskotály, Zéta, Kövérszőlő and Kabar.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Hárslevelű",
+          "b": "Tokaj's second grape; the name means linden leaf. Adds perfume to blends.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Rivers of Tokaj",
+          "b": "The Bodrog meets the Tisza at Tokaj; their autumn mists favour noble rot.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "1737 in Tokaj",
+          "b": "A royal decree fixed the boundary of the region, one of the first closed wine regions.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Tokaj and UNESCO",
+          "b": "The Tokaj Wine Region Historic Cultural Landscape was inscribed in 2002.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "f": "Kékfrankos",
+          "b": "Hungarian name for Blaufränkisch, the lead grape of Egri Bikavér.",
+          "place": "hu-eupdo-PDO-HU-A1328"
+        },
+        {
+          "f": "Egri Bikavér",
+          "b": "Bull's Blood of Eger: a red blend of at least three grapes led by Kékfrankos.",
+          "place": "hu-eupdo-PDO-HU-A1328"
+        },
+        {
+          "f": "Villányi Franc",
+          "b": "Villány category for pure Cabernet Franc, at least a year in oak, no chaptalisation.",
+          "place": "hu-eupdo-PDO-HU-A1381"
+        },
+        {
+          "f": "Olaszrizling",
+          "b": "Hungarian name for Welschriesling, widely grown around Lake Balaton.",
+          "place": "hu-eupdo-PDO-HU-A1507"
+        }
+      ]
+    },
+    {
+      "id": "central-east-greece",
+      "title": "Greece",
+      "minutes": 9,
+      "intro": "Greece is a land of native grapes grown in a hot climate cooled by altitude and sea. This lesson covers the PDO system, Assyrtiko on Santorini, Xinomavro in Naoussa and Amyndeon, Agiorgitiko in Nemea and Moschofilero in Mantinia.",
+      "sections": [
+        {
+          "h": "Greek wine law",
+          "p": [
+            "Greece follows the EU system of protected designations of origin (PDO) and protected geographical indications (PGI). The PDOs replaced two older Greek categories: OPAP, appellations of superior quality used mostly for dry wines, and OPE, controlled appellations used for sweet wines. There are more than 30 wine PDOs, many of them created in 1971 and 1972.",
+            "Most of Greece is mountainous. The climate is Mediterranean, but altitude and sea winds keep many vineyards fresher than the latitude suggests. Retsina, a white wine flavoured with Aleppo pine resin, is a traditional designation rather than a PDO."
+          ],
+          "places": [
+            "gr-eupdo-PDO-GR-A1065",
+            "gr-eupdo-PDO-GR-A1610",
+            "gr-eupdo-PDO-GR-A1395",
+            "gr-eupdo-PDO-GR-A1573",
+            "gr-eupdo-PDO-GR-A1554"
+          ]
+        },
+        {
+          "h": "Santorini and Assyrtiko",
+          "p": [
+            "Santorini is a volcanic island in the Cyclades. The PDO covers Thira and the small island of Thirasia. The soil is almost pure volcanic sand, 93% to 97% sand, with very little clay and organic matter. Phylloxera never reached the island, so the vines are own-rooted and many are very old.",
+            "Growers train the vines in the kouloura: the canes are woven into a basket-shaped crown that sits low on the ground. The grapes hang inside, sheltered from strong winds and blowing sand. Yields are low, at most 50 hl/ha by law and often far less.",
+            "Dry Santorini is a white wine of at least 85% Assyrtiko, with Athiri and Aidani. Assyrtiko keeps high acidity even in the hot, dry island summer. Vinsanto is the sweet wine: the grapes, at least 51% Assyrtiko, are dried in the sun and the wine is aged at least 24 months in oak."
+          ],
+          "places": [
+            "gr-eupdo-PDO-GR-A1065"
+          ]
+        },
+        {
+          "h": "Xinomavro: Naoussa, Amyndeon and the north",
+          "p": [
+            "Xinomavro means acid black. It is the great red grape of northern Greece, with high acidity and firm tannins but a fairly pale colour. Young wines can be austere; with age they develop notes of tomato, olive and dried fruit.",
+            "Naoussa, created in 1971, is red wine from 100% Xinomavro. The vineyards lie on the south-east slopes of Mount Vermio in Imathia, mostly at 150 to 400 m. Amyndeon, created in 1972, lies higher, on a plateau at 570 to 750 m near the lakes Vegoritida and Petron. It is the highest of the Xinomavro PDOs, has sandy soils and old own-rooted vines, and makes red, rosé and sparkling rosé from 100% Xinomavro.",
+            "Goumenissa blends Xinomavro with at least 20% Negoska. Rapsani, in Thessaly near Mount Olympus, blends Xinomavro with the local Krassato and Stavroto."
+          ],
+          "places": [
+            "gr-eupdo-PDO-GR-A1610",
+            "gr-eupdo-PDO-GR-A1395",
+            "gr-eupdo-PDO-GR-A1251",
+            "gr-eupdo-PDO-GR-A0116"
+          ]
+        },
+        {
+          "h": "Nemea and Agiorgitiko",
+          "p": [
+            "Nemea, in the north-east Peloponnese, is the largest red PDO of Greece. It lies mostly in Corinthia, with a small part in Argolida. Created in 1971, it makes red wine only, from 100% Agiorgitiko, the grape of Saint George. Styles range from dry to semi-sweet and sweet.",
+            "The vineyards climb from about 200 m to 850 m. Growers speak of three altitude zones, though they are not official: the valley floor gives soft, fruity wines and the higher slopes fresher, more structured ones. Agiorgitiko gives deep colour, soft tannins and red fruit. Further west, Patras is known for Mavrodaphne of Patras, a sweet fortified red."
+          ],
+          "places": [
+            "gr-eupdo-PDO-GR-A1573",
+            "gr-eupdo-PDO-GR-A1048",
+            "gr-eupdo-PDO-GR-A1239"
+          ]
+        },
+        {
+          "h": "Mantinia and Moschofilero",
+          "p": [
+            "Mantinia lies on a high plateau in Arcadia, in the central Peloponnese. The plateau averages about 660 m, and vineyards on the slopes reach 800 m. It is one of the coldest Greek PDOs, with rain, snow and a late harvest.",
+            "The wine must contain at least 85% Moschofilero, a pink-skinned grape with a floral, rose-like aroma, high acidity and moderate alcohol. Most Mantinia is in fact 100% Moschofilero. It is made as a dry still white or as a sparkling wine.",
+            "Other island PDOs to know include Robola of Kefalonia, a dry white, and Samos, famous for sweet Muscat."
+          ],
+          "places": [
+            "gr-eupdo-PDO-GR-A1554",
+            "gr-eupdo-PDO-GR-A1240",
+            "gr-eupdo-PDO-GR-A1564"
+          ]
+        }
+      ],
+      "key": [
+        "Greek PDOs replaced the older OPAP and OPE categories; many date from 1971 and 1972.",
+        "Santorini: volcanic sand, no phylloxera, own-rooted vines in kouloura baskets; dry white at least 85% Assyrtiko.",
+        "Vinsanto: sun-dried grapes, at least 51% Assyrtiko, at least 24 months in oak.",
+        "Xinomavro: high acid and tannin, pale colour. Naoussa (Mount Vermio) and Amyndeon (high plateau, also rosé and sparkling) are 100% Xinomavro.",
+        "Nemea: 100% Agiorgitiko, red only, vineyards from about 200 m to 850 m in Corinthia.",
+        "Mantinia: high Arcadian plateau, at least 85% Moschofilero, still or sparkling white."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape is the backbone of dry Santorini?",
+          "options": [
+            "Assyrtiko",
+            "Moschofilero",
+            "Savatiano",
+            "Malagousia"
+          ],
+          "answer": 0,
+          "explain": "Dry Santorini must contain at least 85% Assyrtiko, with Athiri and Aidani.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "id": "q2",
+          "q": "What is the kouloura on Santorini?",
+          "options": [
+            "A volcanic soil type",
+            "A terrace wall built of pumice",
+            "A vine trained into a low basket of woven canes",
+            "A clay jar for ageing Vinsanto"
+          ],
+          "answer": 2,
+          "explain": "The kouloura shelters the grapes inside a crown of canes, out of the wind and blowing sand.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "id": "q3",
+          "q": "What is the minimum share of Assyrtiko in dry white Santorini PDO?",
+          "options": [
+            "51%",
+            "70%",
+            "100%",
+            "85%"
+          ],
+          "answer": 3,
+          "explain": "The current specification requires at least 85% Assyrtiko for the dry white. The 51% minimum applies to Vinsanto.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "id": "q4",
+          "q": "Why are Santorini's vines own-rooted?",
+          "options": [
+            "Grafting is forbidden by EU law",
+            "Phylloxera never reached the island's sandy volcanic soil",
+            "American rootstocks cannot survive the heat",
+            "The vines are replanted from seed"
+          ],
+          "answer": 1,
+          "explain": "The louse never established itself on Santorini, so vines grow on their own roots.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "id": "q5",
+          "q": "Which grape makes Naoussa PDO?",
+          "options": [
+            "Agiorgitiko",
+            "Xinomavro with at least 20% Negoska",
+            "Limnio",
+            "100% Xinomavro"
+          ],
+          "answer": 3,
+          "explain": "Naoussa is red wine from Xinomavro alone. Goumenissa is the PDO that adds Negoska.",
+          "place": "gr-eupdo-PDO-GR-A1610"
+        },
+        {
+          "id": "q6",
+          "q": "Which Xinomavro PDO lies on a high plateau near lakes and also makes rosé and sparkling wine?",
+          "options": [
+            "Naoussa",
+            "Amyndeon",
+            "Rapsani",
+            "Goumenissa"
+          ],
+          "answer": 1,
+          "explain": "Amyndeon, at 570 to 750 m, is the highest Xinomavro PDO and makes red, rosé and sparkling rosé.",
+          "place": "gr-eupdo-PDO-GR-A1395"
+        },
+        {
+          "id": "q7",
+          "q": "Which grape makes Nemea?",
+          "options": [
+            "Agiorgitiko",
+            "Xinomavro",
+            "Mavrodaphne",
+            "Mandilaria"
+          ],
+          "answer": 0,
+          "explain": "Nemea is red wine from 100% Agiorgitiko, the grape of Saint George.",
+          "place": "gr-eupdo-PDO-GR-A1573"
+        },
+        {
+          "id": "q8",
+          "q": "What is the minimum share of Moschofilero in Mantinia PDO?",
+          "options": [
+            "51%",
+            "60%",
+            "85%",
+            "100%"
+          ],
+          "answer": 2,
+          "explain": "Mantinia must contain at least 85% Moschofilero, though most wines are pure Moschofilero.",
+          "place": "gr-eupdo-PDO-GR-A1554"
+        },
+        {
+          "id": "q9",
+          "q": "Which of these PDOs is NOT based on Xinomavro?",
+          "options": [
+            "Naoussa",
+            "Amyndeon",
+            "Nemea",
+            "Rapsani"
+          ],
+          "answer": 2,
+          "explain": "Nemea is made from Agiorgitiko. The other three are Xinomavro PDOs of northern Greece.",
+          "place": "gr-eupdo-PDO-GR-A1573"
+        },
+        {
+          "id": "q10",
+          "q": "How long must Santorini Vinsanto age in oak at least?",
+          "options": [
+            "24 months",
+            "6 months",
+            "12 months",
+            "5 years"
+          ],
+          "answer": 0,
+          "explain": "Vinsanto, from sun-dried grapes, must age at least 24 months in oak.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "id": "q11",
+          "q": "Naoussa's vineyards lie on the slopes of which mountain?",
+          "options": [
+            "Mount Olympus",
+            "Mount Parnassus",
+            "Mount Athos",
+            "Mount Vermio"
+          ],
+          "answer": 3,
+          "explain": "Naoussa lies on the south-east slopes of Mount Vermio in Imathia. Rapsani lies near Olympus.",
+          "place": "gr-eupdo-PDO-GR-A1610"
+        },
+        {
+          "id": "q12",
+          "q": "What is Goumenissa made from?",
+          "options": [
+            "Agiorgitiko with Mavrodaphne",
+            "Xinomavro with at least 20% Negoska",
+            "100% Xinomavro",
+            "Xinomavro with Krassato and Stavroto"
+          ],
+          "answer": 1,
+          "explain": "Goumenissa blends Xinomavro with Negoska. Krassato and Stavroto belong to Rapsani.",
+          "place": "gr-eupdo-PDO-GR-A1251"
+        },
+        {
+          "id": "q13",
+          "q": "Rapsani lies close to which landmark?",
+          "options": [
+            "Mount Olympus",
+            "Lake Vegoritida",
+            "The Corinth Canal",
+            "Mount Vermio"
+          ],
+          "answer": 0,
+          "explain": "Rapsani is in Thessaly, near Mount Olympus, and blends Xinomavro, Krassato and Stavroto.",
+          "place": "gr-eupdo-PDO-GR-A0116"
+        },
+        {
+          "id": "q14",
+          "q": "Which older Greek categories did the PDO replace?",
+          "options": [
+            "DOC and DOCG",
+            "VQPRD and VdT only",
+            "Topikos Oinos and Epitrapezios",
+            "OPAP and OPE"
+          ],
+          "answer": 3,
+          "explain": "OPAP covered superior quality dry wines and OPE controlled appellations of sweet wines. Both became PDO."
+        },
+        {
+          "id": "q15",
+          "q": "Why is Mantinia so fresh for a Greek wine?",
+          "options": [
+            "It is cooled by the Atlantic",
+            "Its vineyards lie on a plateau at about 660 m, one of the coldest Greek PDOs",
+            "It lies on a small island in the Aegean",
+            "The grapes are picked in July"
+          ],
+          "answer": 1,
+          "explain": "Altitude gives Mantinia a cool climate with a late harvest, so Moschofilero keeps its acidity.",
+          "place": "gr-eupdo-PDO-GR-A1554"
+        },
+        {
+          "id": "q16",
+          "q": "Which description fits Xinomavro best?",
+          "options": [
+            "Low acidity and very deep colour",
+            "An aromatic pink-skinned white grape",
+            "High acidity and firm tannins with a fairly pale colour",
+            "A sweet grape used for fortified wine"
+          ],
+          "answer": 2,
+          "explain": "Xinomavro means acid black. It is pale but structured and ages to tomato and olive notes.",
+          "place": "gr-eupdo-PDO-GR-A1610"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Assyrtiko",
+          "b": "Santorini's white grape. Keeps high acidity in a hot, dry climate.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Kouloura",
+          "b": "Santorini training: canes woven into a low basket that shelters the grapes from wind and sand.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Santorini PDO: area",
+          "b": "The islands of Thira and Thirasia.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Dry Santorini: grapes",
+          "b": "At least 85% Assyrtiko, with Athiri and Aidani.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Vinsanto (Santorini)",
+          "b": "Sweet wine from sun-dried grapes, at least 51% Assyrtiko, aged at least 24 months in oak.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Santorini soil and phylloxera",
+          "b": "Volcanic sand with little clay. Phylloxera never arrived, so vines are own-rooted.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Santorini: maximum yield",
+          "b": "50 hl/ha (6,500 kg/ha), and real yields are often much lower.",
+          "place": "gr-eupdo-PDO-GR-A1065"
+        },
+        {
+          "f": "Xinomavro",
+          "b": "Acid black: the red grape of northern Greece. High acid and tannin, fairly pale colour.",
+          "place": "gr-eupdo-PDO-GR-A1610"
+        },
+        {
+          "f": "Naoussa PDO",
+          "b": "Red wine from 100% Xinomavro on the slopes of Mount Vermio. Created in 1971.",
+          "place": "gr-eupdo-PDO-GR-A1610"
+        },
+        {
+          "f": "Amyndeon PDO",
+          "b": "100% Xinomavro on a plateau at 570 to 750 m near two lakes. Red, rosé and sparkling rosé.",
+          "place": "gr-eupdo-PDO-GR-A1395"
+        },
+        {
+          "f": "Goumenissa PDO",
+          "b": "Xinomavro blended with at least 20% Negoska.",
+          "place": "gr-eupdo-PDO-GR-A1251"
+        },
+        {
+          "f": "Rapsani PDO",
+          "b": "Xinomavro, Krassato and Stavroto from the foothills of Mount Olympus in Thessaly.",
+          "place": "gr-eupdo-PDO-GR-A0116"
+        },
+        {
+          "f": "Agiorgitiko",
+          "b": "The grape of Saint George. Deep colour, soft tannins, red fruit; the grape of Nemea.",
+          "place": "gr-eupdo-PDO-GR-A1573"
+        },
+        {
+          "f": "Nemea PDO",
+          "b": "Red wine only, from 100% Agiorgitiko, mostly in Corinthia. Vines from about 200 m to 850 m.",
+          "place": "gr-eupdo-PDO-GR-A1573"
+        },
+        {
+          "f": "Moschofilero",
+          "b": "Pink-skinned, aromatic white grape with floral notes and high acidity.",
+          "place": "gr-eupdo-PDO-GR-A1554"
+        },
+        {
+          "f": "Mantinia PDO",
+          "b": "Arcadian plateau at about 660 m. At least 85% Moschofilero; still or sparkling white.",
+          "place": "gr-eupdo-PDO-GR-A1554"
+        },
+        {
+          "f": "OPAP and OPE",
+          "b": "Old Greek appellation categories, for dry and sweet wines, now replaced by PDO."
+        },
+        {
+          "f": "Retsina",
+          "b": "A traditional Greek wine flavoured with Aleppo pine resin. A traditional designation, not a PDO."
+        },
+        {
+          "f": "Mavrodaphne of Patras",
+          "b": "A sweet fortified red from the Mavrodaphne grape, made around Patras.",
+          "place": "gr-eupdo-PDO-GR-A1048"
+        },
+        {
+          "f": "Samos PDO",
+          "b": "Aegean island PDO famous for sweet Muscat wines.",
+          "place": "gr-eupdo-PDO-GR-A1564"
+        }
+      ]
+    },
+    {
+      "id": "central-east-balkans",
+      "title": "Slovenia, Croatia and the Balkans",
+      "minutes": 9,
+      "intro": "Along the Adriatic and inland into the Balkans, borders cross old wine regions. This lesson covers Goriška Brda and its link to the Collio, Istria and Malvazija, Plavac Mali and Dingač in Dalmatia, and Tikveš and Vranec in North Macedonia.",
+      "sections": [
+        {
+          "h": "Slovenia's three regions",
+          "p": [
+            "Slovenia has three wine regions. Primorska in the west lies close to the Adriatic and the Italian border. Podravje in the north-east, along the Drava river, includes Štajerska Slovenija and Prekmurje and is known for crisp, aromatic whites; Furmint is grown there under the name Šipon. Posavje in the south-east, along the Sava, is home to Cviček from Dolenjska, a light, low-alcohol blend of red and white grapes."
+          ],
+          "places": [
+            "si-eupdo-PDO-SI-A0270",
+            "si-eupdo-PDO-SI-A0448",
+            "si-eupdo-PDO-SI-A0616",
+            "si-eupdo-PDO-SI-A0609",
+            "si-eupdo-PDO-SI-A0639",
+            "si-eupdo-PDO-SI-A0769",
+            "si-eupdo-PDO-SI-A0871"
+          ]
+        },
+        {
+          "h": "Goriška Brda and the Collio",
+          "p": [
+            "Goriška Brda is a hill zone in Primorska that continues the Italian Collio. The two were one district until the border drawn after the Second World War split the hills, and many growers own vines on both sides. The soils are the same layers of marl and sandstone, called opoka in Slovenian and ponca in Italian.",
+            "Rebula, the Ribolla Gialla of Friuli, is the signature white grape. Friulano, Sauvignon Blanc, Chardonnay and Merlot are also grown. On both sides of the border some producers macerate white grapes on their skins for weeks or months, making amber or orange wines.",
+            "Nearby, the Vipava valley is swept by the cold bora wind. On the Kras plateau, Refošk grown on red terra rossa soil gives Teran, a deep-coloured, high-acid red with its own protected name."
+          ],
+          "places": [
+            "si-eupdo-PDO-SI-A0270",
+            "it-eupdo-PDO-IT-A0908",
+            "si-eupdo-PDO-SI-A0448",
+            "si-eupdo-PDO-SI-A0616",
+            "si-eupdo-PDO-SI-A1581"
+          ]
+        },
+        {
+          "h": "Istria and the Croatian regions",
+          "p": [
+            "Istria is a peninsula shared by Croatia, Slovenia and Italy. Its main white grape is Malvazija Istarska, which gives fresh whites with notes of pear and almond, from light and young to skin-macerated and aged styles. Teran is the leading red, and Muscat from Momjan is a local speciality. The soils change quickly between red terra rossa, white limestone and grey flysch.",
+            "Croatia's vineyards fall into a coastal zone, Primorska Hrvatska, and continental zones inland. The most planted grape in the country is Graševina (Welschriesling), the white wine of Slavonia and the Danube."
+          ],
+          "places": [
+            "hr-eupdo-PDO-HR-A1652",
+            "si-eupdo-PDO-SI-A0609",
+            "hr-eupdo-PDO-HR-02109",
+            "hr-eupdo-PDO-HR-A1658",
+            "hr-eupdo-PDO-HR-A1660",
+            "hr-eupdo-PDO-HR-A1655"
+          ]
+        },
+        {
+          "h": "Dalmatia, Plavac Mali and Dingač",
+          "p": [
+            "Plavac Mali is the great red grape of Dalmatia. DNA work by Carole Meredith at UC Davis and the University of Zagreb showed that it is the offspring of Crljenak Kaštelanski, the grape known in California as Zinfandel, and Dobričić. It is grown along the coast and on islands such as Hvar and Brač, and gives powerful, tannic, high-alcohol reds.",
+            "Its most famous site is Dingač, on the south-west slopes of the Pelješac peninsula. The vines grow on karst with very little topsoil, on slopes of about 45 degrees running from the sea up to 300 m. They get strong sun plus light reflected from the sea and the white rock. Dingač was protected in 1961, the first protected wine region of Croatia. Its neighbour Postup is another famous Plavac Mali site."
+          ],
+          "places": [
+            "hr-eupdo-PDO-HR-A1649",
+            "hr-eupdo-PDO-HR-A1661"
+          ]
+        },
+        {
+          "h": "North Macedonia and the wider Balkans",
+          "p": [
+            "North Macedonia has three wine regions. Povardarie, the Vardar river valley, makes about 85% of the wine. At its heart lies Tikveš, around Kavadarci and Negotino, with a climate where Mediterranean and continental influences meet.",
+            "Vranec is the leading grape and covers about a third of the vineyard. It gives deeply coloured, full reds. Smederevka (Dimyat) is the main white, and Kratošija, the same grape as Tribidrag and Zinfandel, is also grown.",
+            "In Montenegro, Vranac is the main red, grown around Lake Skadar. Herzegovina, in Bosnia and Herzegovina, is known for the white Žilavka and the red Blatina. In Serbia, the native Prokupac is the red grape of the Župa district."
+          ],
+          "places": [
+            "mk-world-tikves",
+            "mk-world-povardarie",
+            "mk-world-pelagonija-polog",
+            "mk-world-pcinja-osogovo",
+            "me-world-skadar-lake-basin",
+            "ba-world-herzegovina",
+            "rs-world-zupa"
+          ]
+        }
+      ],
+      "key": [
+        "Slovenia has three regions: Primorska, Podravje and Posavje.",
+        "Goriška Brda continues the Italian Collio across the border; marl and sandstone soils (opoka, ponca); Rebula is Ribolla Gialla.",
+        "Teran is Refošk from the red soils of the Kras; Istria's main white is Malvazija Istarska.",
+        "Graševina (Welschriesling) is Croatia's most planted grape.",
+        "Plavac Mali is the offspring of Crljenak Kaštelanski (Zinfandel) and Dobričić; Dingač on Pelješac was protected in 1961.",
+        "Tikveš in the Vardar valley is North Macedonia's heartland; Vranec is the leading red."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Goriška Brda continues which Italian wine zone across the border?",
+          "options": [
+            "Valpolicella",
+            "Soave",
+            "Franciacorta",
+            "Collio"
+          ],
+          "answer": 3,
+          "explain": "Brda and the Collio Goriziano are the same hills, split by the border after the Second World War.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "id": "q2",
+          "q": "What is Rebula?",
+          "options": [
+            "A red grape of the Kras",
+            "The Slovenian name for Ribolla Gialla",
+            "A dessert wine from Podravje",
+            "A clay amphora"
+          ],
+          "answer": 1,
+          "explain": "Rebula is Ribolla Gialla, the signature white of Brda and the Collio.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "id": "q3",
+          "q": "Which is the main white grape of Istria?",
+          "options": [
+            "Malvazija Istarska",
+            "Graševina",
+            "Pošip",
+            "Žilavka"
+          ],
+          "answer": 0,
+          "explain": "Malvazija Istarska is Istria's white grape. Graševina belongs to the continental regions, Žilavka to Herzegovina.",
+          "place": "hr-eupdo-PDO-HR-A1652"
+        },
+        {
+          "id": "q4",
+          "q": "Which two grapes are the parents of Plavac Mali?",
+          "options": [
+            "Zinfandel and Primitivo",
+            "Refošk and Teran",
+            "Crljenak Kaštelanski and Dobričić",
+            "Vranec and Kratošija"
+          ],
+          "answer": 2,
+          "explain": "DNA showed Plavac Mali is a cross of Crljenak Kaštelanski (Zinfandel) and Dobričić.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "id": "q5",
+          "q": "On which peninsula does Dingač lie?",
+          "options": [
+            "Istria",
+            "Pelješac",
+            "Kvarner",
+            "Gallipoli"
+          ],
+          "answer": 1,
+          "explain": "Dingač lies on the south-west slopes of the Pelješac peninsula in southern Dalmatia.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "id": "q6",
+          "q": "In which year was Dingač protected, the first protected wine region of Croatia?",
+          "options": [
+            "1931",
+            "1991",
+            "1961",
+            "2013"
+          ],
+          "answer": 2,
+          "explain": "Dingač was protected in 1961. Postup, its neighbour, followed later.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "id": "q7",
+          "q": "Tikveš is the heartland of which country, and of which grape?",
+          "options": [
+            "Croatia, Plavac Mali",
+            "Slovenia, Rebula",
+            "Serbia, Prokupac",
+            "North Macedonia, Vranec"
+          ],
+          "answer": 3,
+          "explain": "Tikveš lies in the Vardar valley of North Macedonia, where Vranec is the leading red.",
+          "place": "mk-world-tikves"
+        },
+        {
+          "id": "q8",
+          "q": "What is Teran?",
+          "options": [
+            "A red wine from Refošk grown on the red soils of the Kras",
+            "A white wine from the Vipava valley",
+            "An orange wine from Brda",
+            "A sweet wine from Prekmurje"
+          ],
+          "answer": 0,
+          "explain": "Teran is made from Refošk on the terra rossa of the Kras plateau and has its own protected name.",
+          "place": "si-eupdo-PDO-SI-A1581"
+        },
+        {
+          "id": "q9",
+          "q": "Which grape is the most planted in Croatia?",
+          "options": [
+            "Plavac Mali",
+            "Graševina",
+            "Malvazija Istarska",
+            "Pošip"
+          ],
+          "answer": 1,
+          "explain": "Graševina (Welschriesling) is Croatia's most planted grape, grown mainly in Slavonia and the Danube region.",
+          "place": "hr-eupdo-PDO-HR-A1660"
+        },
+        {
+          "id": "q10",
+          "q": "Which of these is NOT one of Slovenia's three wine regions?",
+          "options": [
+            "Primorska",
+            "Podravje",
+            "Posavje",
+            "Dalmacija"
+          ],
+          "answer": 3,
+          "explain": "Slovenia's regions are Primorska, Podravje and Posavje. Dalmatia is in Croatia.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "id": "q11",
+          "q": "Why does Plavac Mali on Dingač ripen to such power?",
+          "options": [
+            "The vines are irrigated by the bora wind",
+            "The grapes are dried on mats after picking",
+            "Steep slopes face the sea and get strong direct and reflected sun",
+            "The vineyards are on cool, deep clay"
+          ],
+          "answer": 2,
+          "explain": "Dingač's slopes of about 45 degrees on bare karst catch sun plus light reflected from the sea and rock.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "id": "q12",
+          "q": "What soil do Brda and the Collio share?",
+          "options": [
+            "Layers of marl and sandstone, called opoka and ponca",
+            "Red terra rossa over limestone",
+            "Volcanic sand",
+            "Granite and gneiss"
+          ],
+          "answer": 0,
+          "explain": "The flysch of marl and sandstone is called opoka in Slovenian and ponca in Italian.",
+          "place": "it-eupdo-PDO-IT-A0908"
+        },
+        {
+          "id": "q13",
+          "q": "What is Šipon in Slovenia?",
+          "options": [
+            "Welschriesling",
+            "Sauvignonasse",
+            "Furmint",
+            "Refošk"
+          ],
+          "answer": 2,
+          "explain": "Šipon is the Slovenian name for Furmint, grown in Podravje.",
+          "place": "si-eupdo-PDO-SI-A0639"
+        },
+        {
+          "id": "q14",
+          "q": "Which white grape is the speciality of Herzegovina?",
+          "options": [
+            "Žilavka",
+            "Malvazija Istarska",
+            "Rebula",
+            "Smederevka"
+          ],
+          "answer": 0,
+          "explain": "Herzegovina is known for the white Žilavka and the red Blatina.",
+          "place": "ba-world-herzegovina"
+        },
+        {
+          "id": "q15",
+          "q": "Which North Macedonian region makes about 85% of the country's wine?",
+          "options": [
+            "Pelagonija-Polog",
+            "Povardarie, the Vardar valley",
+            "Pčinja-Osogovo",
+            "Skadar Lake basin"
+          ],
+          "answer": 1,
+          "explain": "Povardarie, along the Vardar river, includes Tikveš and makes most of the wine.",
+          "place": "mk-world-povardarie"
+        },
+        {
+          "id": "q16",
+          "q": "What is Cviček?",
+          "options": [
+            "A sparkling Rebula from Brda",
+            "A sweet Furmint from Prekmurje",
+            "A Teran aged in oak",
+            "A light Slovenian blend of red and white grapes from Dolenjska"
+          ],
+          "answer": 3,
+          "explain": "Cviček is a light, low-alcohol blend from Dolenjska in the Posavje region.",
+          "place": "si-eupdo-PDO-SI-A0871"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Slovenia's three wine regions",
+          "b": "Primorska (west), Podravje (north-east, Drava) and Posavje (south-east, Sava)."
+        },
+        {
+          "f": "Goriška Brda",
+          "b": "Slovenian hills in Primorska that continue the Italian Collio; split by the border after the Second World War.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "f": "Opoka / ponca",
+          "b": "Layers of marl and sandstone in Brda (opoka) and the Collio (ponca).",
+          "place": "it-eupdo-PDO-IT-A0908"
+        },
+        {
+          "f": "Rebula",
+          "b": "Slovenian name for Ribolla Gialla, the signature white of Brda.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "f": "Orange wine in Brda and the Collio",
+          "b": "White grapes macerated on their skins for weeks or months, giving amber, tannic wines.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "f": "Vipava valley",
+          "b": "Primorska valley in Slovenia swept by the cold bora wind.",
+          "place": "si-eupdo-PDO-SI-A0448"
+        },
+        {
+          "f": "Teran",
+          "b": "Red wine from Refošk grown on the terra rossa of the Kras plateau; deep colour, high acid.",
+          "place": "si-eupdo-PDO-SI-A1581"
+        },
+        {
+          "f": "Šipon",
+          "b": "Slovenian name for Furmint, grown in Podravje.",
+          "place": "si-eupdo-PDO-SI-A0639"
+        },
+        {
+          "f": "Cviček",
+          "b": "Light, low-alcohol Slovenian blend of red and white grapes from Dolenjska in Posavje.",
+          "place": "si-eupdo-PDO-SI-A0871"
+        },
+        {
+          "f": "Malvazija Istarska",
+          "b": "Istria's main white grape; fresh, with pear and almond notes, or skin-macerated.",
+          "place": "hr-eupdo-PDO-HR-A1652"
+        },
+        {
+          "f": "Istria: three soils",
+          "b": "Red terra rossa, white limestone and grey flysch.",
+          "place": "hr-eupdo-PDO-HR-A1652"
+        },
+        {
+          "f": "Graševina",
+          "b": "Croatian name for Welschriesling, the country's most planted grape, grown in Slavonia.",
+          "place": "hr-eupdo-PDO-HR-A1660"
+        },
+        {
+          "f": "Plavac Mali",
+          "b": "Dalmatia's main red; offspring of Crljenak Kaštelanski (Zinfandel) and Dobričić.",
+          "place": "hr-eupdo-PDO-HR-A1661"
+        },
+        {
+          "f": "Crljenak Kaštelanski",
+          "b": "Dalmatian name for the grape known as Zinfandel, Primitivo and Tribidrag.",
+          "place": "hr-eupdo-PDO-HR-A1661"
+        },
+        {
+          "f": "Dingač",
+          "b": "Steep south-west slopes of Pelješac for Plavac Mali; Croatia's first protected wine region, 1961.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "f": "Postup",
+          "b": "Famous Plavac Mali site on Pelješac, the neighbour of Dingač.",
+          "place": "hr-eupdo-PDO-HR-A1649"
+        },
+        {
+          "f": "Tikveš",
+          "b": "North Macedonia's best-known wine area, around Kavadarci and Negotino in the Vardar valley.",
+          "place": "mk-world-tikves"
+        },
+        {
+          "f": "Vranec (Vranac)",
+          "b": "Leading red of North Macedonia and Montenegro; deep colour, full body.",
+          "place": "mk-world-tikves"
+        },
+        {
+          "f": "Žilavka and Blatina",
+          "b": "The white and red grapes of Herzegovina.",
+          "place": "ba-world-herzegovina"
+        },
+        {
+          "f": "Prokupac",
+          "b": "Native Serbian red grape, typical of the Župa district.",
+          "place": "rs-world-zupa"
+        }
+      ]
+    },
+    {
+      "id": "central-east-caucasus",
+      "title": "Georgia and the Caucasus",
+      "minutes": 8,
+      "intro": "Georgia and Armenia hold some of the oldest evidence of winemaking in the world. This lesson covers qvevri winemaking, Kakheti and its grapes Saperavi and Rkatsiteli, the appellations Tsinandali, Mukuzani, Kindzmarauli and Khvanchkara, and Armenia's Areni.",
+      "sections": [
+        {
+          "h": "The oldest wine country",
+          "p": [
+            "Georgia lies south of the Greater Caucasus, between the Black Sea and the Caspian. Grape residues in pottery from Neolithic villages such as Gadachrili Gora and Shulaveris Gora show that wine was made here around 6000 BC, among the oldest evidence known.",
+            "The country grows hundreds of native grape varieties. The main wine regions are Kakheti in the east, Kartli in the centre, and Imereti and Racha-Lechkhumi in the west. Georgian appellations of origin are registered with Sakpatenti, the national intellectual property centre, and the National Wine Agency oversees the wine sector."
+          ],
+          "places": [
+            "ge-world-kakheti",
+            "ge-world-racha",
+            "ge-world-sviri",
+            "ge-world-bolnisi",
+            "ge-world-atenuri"
+          ]
+        },
+        {
+          "h": "Qvevri winemaking",
+          "p": [
+            "A qvevri is a large, egg-shaped clay vessel, lined inside with beeswax and buried up to its neck in the ground. The earth keeps the temperature cool and steady, so the wine can ferment and age in the same vessel. The ancient Georgian traditional qvevri winemaking method was inscribed on UNESCO's list of Intangible Cultural Heritage in 2013.",
+            "In the Kakhetian method, white grapes ferment with their skins, seeds and often stems, called chacha, and stay in the qvevri for months. The result is amber wine, deep in colour and firm in tannin. In the Imeretian method of western Georgia, only part of the skins is used, so the wines are lighter. The wine cellar is called a marani. Georgia also makes wines in steel tanks and oak barrels in a European style."
+          ],
+          "places": [
+            "ge-world-kakheti",
+            "ge-world-sviri"
+          ]
+        },
+        {
+          "h": "Kakheti: Saperavi and Rkatsiteli",
+          "p": [
+            "Kakheti, in the far east, makes most Georgian wine. Its vineyards fill the Alazani valley between the Greater Caucasus and the Gombori range. The climate is continental, with hot summers.",
+            "Rkatsiteli is Georgia's most planted grape. It is a white grape that keeps high acidity, whether it is made fresh or as amber qvevri wine. Kakhuri Mtsvane is an aromatic white partner. Saperavi is the great red grape. It is a teinturier, with red flesh as well as dark skin, and gives deeply coloured, high-acid wines that can age.",
+            "Tsinandali, near Telavi, is a dry white blend of Rkatsiteli and Mtsvane. Mukuzani, on the right bank of the Alazani, is a dry red from Saperavi. Napareuli makes both a Rkatsiteli white and a Saperavi red. Teliani is a dry red from Cabernet Sauvignon, and Kardenakhi a fortified white."
+          ],
+          "places": [
+            "ge-world-kakheti",
+            "ge-world-tsinandali",
+            "ge-world-mukuzani",
+            "ge-world-napareuli",
+            "ge-world-teliani",
+            "ge-world-gurjaani",
+            "ge-world-vazisubani",
+            "ge-world-manavi",
+            "ge-world-kardenakhi"
+          ]
+        },
+        {
+          "h": "Semi-sweet reds: Kindzmarauli and Khvanchkara",
+          "p": [
+            "Georgia has a tradition of naturally semi-sweet wines. The fermentation is stopped by cooling, so the sweetness comes from the grape's own sugar and nothing is added.",
+            "Kindzmarauli is a naturally semi-sweet red from Saperavi, grown around Kvareli on the left bank of the Alazani, under the Caucasus. Akhasheni is another semi-sweet Saperavi appellation in Kakheti. In the west, Khvanchkara in Racha is a naturally semi-sweet red from Aleksandrouli and Mujuretuli. Tvishi in Lechkhumi is a semi-sweet white from Tsolikouri, and Sviri in Imereti a dry white from Tsolikouri, Tsitska and Krakhuna."
+          ],
+          "places": [
+            "ge-world-kindzmarauli",
+            "ge-world-kvareli",
+            "ge-world-akhasheni",
+            "ge-world-khvanchkara",
+            "ge-world-racha",
+            "ge-world-tvishi",
+            "ge-world-sviri"
+          ]
+        },
+        {
+          "h": "Armenia and Areni",
+          "p": [
+            "Armenia lies south of Georgia on a high, dry plateau, and many vineyards grow at 1,000 m or more. In the Areni-1 cave near the village of Areni, in Vayots Dzor province, archaeologists found a clay wine press, a fermentation vat and storage jars dated to about 4100 to 4000 BC. Found in 2007 and published in 2011, it is the oldest known winery.",
+            "Areni is also the name of Armenia's best-known native red grape, grown in Vayots Dzor. Voskehat is a leading native white. Armenian winemakers also use the karas, a traditional clay jar. The warm Ararat valley grows many grapes for brandy as well as wine."
+          ],
+          "places": [
+            "am-world-vayots-dzor",
+            "am-world-ararat"
+          ]
+        }
+      ],
+      "key": [
+        "Georgia shows wine residues from around 6000 BC; Armenia's Areni-1 cave held a winery from about 4100 BC.",
+        "Qvevri: buried, beeswax-lined clay vessels; on UNESCO's Intangible Cultural Heritage list since 2013.",
+        "Kakhetian method: white grapes with skins, seeds and stems (chacha) for months, giving amber wine; Imeretian method uses fewer skins.",
+        "Kakheti, in the Alazani valley, makes most Georgian wine; Rkatsiteli is the most planted grape and Saperavi a red-fleshed teinturier.",
+        "Tsinandali: dry white (Rkatsiteli, Mtsvane). Mukuzani: dry red Saperavi. Kindzmarauli: naturally semi-sweet Saperavi.",
+        "Khvanchkara (Racha): naturally semi-sweet red from Aleksandrouli and Mujuretuli."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is a qvevri?",
+          "options": [
+            "An oak cask of 225 litres",
+            "A large clay vessel buried in the ground for fermenting and ageing wine",
+            "A Georgian red grape",
+            "A stone press used in the vineyard"
+          ],
+          "answer": 1,
+          "explain": "The egg-shaped, beeswax-lined qvevri is buried up to its neck so the wine stays cool.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q2",
+          "q": "In which year was qvevri winemaking inscribed by UNESCO as Intangible Cultural Heritage?",
+          "options": [
+            "1999",
+            "2007",
+            "2013",
+            "2021"
+          ],
+          "answer": 2,
+          "explain": "The ancient Georgian traditional qvevri winemaking method was inscribed in 2013.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q3",
+          "q": "Which region makes most Georgian wine?",
+          "options": [
+            "Kakheti",
+            "Imereti",
+            "Racha",
+            "Kartli"
+          ],
+          "answer": 0,
+          "explain": "Kakheti, in the Alazani valley of eastern Georgia, makes most of the country's wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q4",
+          "q": "What makes Saperavi unusual among red grapes?",
+          "options": [
+            "It has a white skin and red flesh",
+            "It can only be made sweet",
+            "It is a crossing bred in the 20th century",
+            "It is a teinturier, with red flesh as well as dark skin"
+          ],
+          "answer": 3,
+          "explain": "Saperavi has coloured flesh, so its wines are very deep in colour, with high acidity.",
+          "place": "ge-world-mukuzani"
+        },
+        {
+          "id": "q5",
+          "q": "What is Mukuzani?",
+          "options": [
+            "A naturally semi-sweet red from Saperavi",
+            "A dry white blend of Rkatsiteli and Mtsvane",
+            "A dry red from Saperavi",
+            "A fortified white"
+          ],
+          "answer": 2,
+          "explain": "Mukuzani, on the right bank of the Alazani in Kakheti, is a dry Saperavi red.",
+          "place": "ge-world-mukuzani"
+        },
+        {
+          "id": "q6",
+          "q": "What is Kindzmarauli?",
+          "options": [
+            "A dry red from Cabernet Sauvignon",
+            "An amber wine from Rkatsiteli",
+            "A sparkling white from Kartli",
+            "A naturally semi-sweet red from Saperavi"
+          ],
+          "answer": 3,
+          "explain": "Kindzmarauli, near Kvareli, is semi-sweet because the fermentation is stopped by cooling.",
+          "place": "ge-world-kindzmarauli"
+        },
+        {
+          "id": "q7",
+          "q": "Which grapes make Tsinandali?",
+          "options": [
+            "Saperavi and Rkatsiteli",
+            "Rkatsiteli and Mtsvane",
+            "Aleksandrouli and Mujuretuli",
+            "Tsolikouri and Tsitska"
+          ],
+          "answer": 1,
+          "explain": "Tsinandali, near Telavi in Kakheti, is a dry white blend of Rkatsiteli and Mtsvane.",
+          "place": "ge-world-tsinandali"
+        },
+        {
+          "id": "q8",
+          "q": "Which grapes make Khvanchkara?",
+          "options": [
+            "Aleksandrouli and Mujuretuli",
+            "Saperavi and Cabernet Sauvignon",
+            "Rkatsiteli and Kisi",
+            "Ojaleshi and Usakhelouri"
+          ],
+          "answer": 0,
+          "explain": "Khvanchkara, in Racha in western Georgia, is a naturally semi-sweet red from these two grapes.",
+          "place": "ge-world-khvanchkara"
+        },
+        {
+          "id": "q9",
+          "q": "Where was the oldest known winery, dated to about 4100 BC, found?",
+          "options": [
+            "In Gadachrili Gora, Georgia",
+            "On Santorini, Greece",
+            "In Tokaj, Hungary",
+            "In the Areni-1 cave in Vayots Dzor, Armenia"
+          ],
+          "answer": 3,
+          "explain": "Areni-1 held a wine press, a fermentation vat and storage jars. Georgian sites show older wine residues but no winery.",
+          "place": "am-world-vayots-dzor"
+        },
+        {
+          "id": "q10",
+          "q": "How does the Kakhetian method differ from the Imeretian method?",
+          "options": [
+            "Kakhetian uses all the skins, seeds and often stems for months; Imeretian uses only part of the skins",
+            "Kakhetian uses oak barrels; Imeretian uses qvevri",
+            "Kakhetian is for red wine only",
+            "Imeretian ferments in steel and adds sugar"
+          ],
+          "answer": 0,
+          "explain": "Long contact with the full chacha gives Kakhetian whites their amber colour and tannin.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q11",
+          "q": "Which of these appellations is NOT in Kakheti?",
+          "options": [
+            "Tsinandali",
+            "Mukuzani",
+            "Khvanchkara",
+            "Kindzmarauli"
+          ],
+          "answer": 2,
+          "explain": "Khvanchkara is in Racha, in western Georgia. The other three lie in Kakheti.",
+          "place": "ge-world-khvanchkara"
+        },
+        {
+          "id": "q12",
+          "q": "Around when do Georgian Neolithic sites show the first evidence of wine?",
+          "options": [
+            "About 1000 BC",
+            "About 6000 BC",
+            "About 500 AD",
+            "About 15,000 BC"
+          ],
+          "answer": 1,
+          "explain": "Residues in pottery from sites such as Gadachrili Gora date to around 6000 BC.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q13",
+          "q": "Teliani is a dry red made from which grape?",
+          "options": [
+            "Saperavi",
+            "Cabernet Sauvignon",
+            "Aleksandrouli",
+            "Areni"
+          ],
+          "answer": 1,
+          "explain": "Teliani in Kakheti is the appellation for dry red Cabernet Sauvignon.",
+          "place": "ge-world-teliani"
+        },
+        {
+          "id": "q14",
+          "q": "What is a marani?",
+          "options": [
+            "A clay jar from Armenia",
+            "The skins and stems left after pressing",
+            "A semi-sweet white wine",
+            "A Georgian wine cellar"
+          ],
+          "answer": 3,
+          "explain": "The marani is the cellar where qvevri are buried. Chacha is the name for the skins, seeds and stems.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q15",
+          "q": "Why are Kakhetian qvevri whites amber and tannic?",
+          "options": [
+            "They are aged in new oak barrels",
+            "They are blended with Saperavi",
+            "They ferment and rest for months with their skins, seeds and stems",
+            "They are made from red-skinned grapes"
+          ],
+          "answer": 2,
+          "explain": "Months of skin contact extract colour and tannin from white grapes, as in a red wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q16",
+          "q": "Which appellation is a semi-sweet white from Tsolikouri?",
+          "options": [
+            "Tvishi",
+            "Sviri",
+            "Tsinandali",
+            "Kardenakhi"
+          ],
+          "answer": 0,
+          "explain": "Tvishi in Lechkhumi is semi-sweet Tsolikouri. Sviri is a dry white blend from Imereti.",
+          "place": "ge-world-tvishi"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Qvevri",
+          "b": "Large, egg-shaped clay vessel lined with beeswax and buried to its neck; used to ferment and age wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Qvevri and UNESCO",
+          "b": "Georgian qvevri winemaking joined UNESCO's Intangible Cultural Heritage list in 2013.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Chacha",
+          "b": "The skins, seeds and stems fermented with the juice in qvevri; also the name of Georgian pomace brandy.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Kakhetian method",
+          "b": "White grapes ferment with all their chacha and stay in qvevri for months: amber, tannic wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Imeretian method",
+          "b": "Western Georgian qvevri method using only part of the skins, giving lighter wines.",
+          "place": "ge-world-sviri"
+        },
+        {
+          "f": "Marani",
+          "b": "A Georgian wine cellar, where the qvevri are buried.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Earliest wine in Georgia",
+          "b": "Residues in pottery from Neolithic sites such as Gadachrili Gora, about 6000 BC."
+        },
+        {
+          "f": "Kakheti",
+          "b": "Eastern Georgia, the Alazani valley between the Caucasus and the Gombori range; makes most Georgian wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Rkatsiteli",
+          "b": "Georgia's most planted grape; a white that keeps high acidity, fresh or as amber wine.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Saperavi",
+          "b": "Georgia's great red grape; a teinturier with red flesh, deep colour and high acidity.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Tsinandali",
+          "b": "Kakheti appellation for dry white wine from Rkatsiteli and Mtsvane, near Telavi.",
+          "place": "ge-world-tsinandali"
+        },
+        {
+          "f": "Mukuzani",
+          "b": "Kakheti appellation for dry red Saperavi, on the right bank of the Alazani.",
+          "place": "ge-world-mukuzani"
+        },
+        {
+          "f": "Kindzmarauli",
+          "b": "Naturally semi-sweet red from Saperavi, around Kvareli on the left bank of the Alazani.",
+          "place": "ge-world-kindzmarauli"
+        },
+        {
+          "f": "Naturally semi-sweet (Georgia)",
+          "b": "Fermentation stopped by cooling, so sweetness comes from the grape's own sugar.",
+          "place": "ge-world-kindzmarauli"
+        },
+        {
+          "f": "Akhasheni",
+          "b": "Kakheti appellation for naturally semi-sweet red Saperavi.",
+          "place": "ge-world-akhasheni"
+        },
+        {
+          "f": "Khvanchkara",
+          "b": "Naturally semi-sweet red from Aleksandrouli and Mujuretuli, in Racha in western Georgia.",
+          "place": "ge-world-khvanchkara"
+        },
+        {
+          "f": "Teliani",
+          "b": "Kakheti appellation for dry red Cabernet Sauvignon.",
+          "place": "ge-world-teliani"
+        },
+        {
+          "f": "Areni-1 cave",
+          "b": "Cave near Areni, Vayots Dzor, Armenia: press, vat and jars from about 4100 BC, the oldest known winery.",
+          "place": "am-world-vayots-dzor"
+        },
+        {
+          "f": "Areni (grape)",
+          "b": "Armenia's best-known native red grape, grown in Vayots Dzor.",
+          "place": "am-world-vayots-dzor"
+        },
+        {
+          "f": "Karas",
+          "b": "Traditional Armenian clay jar for making and storing wine.",
+          "place": "am-world-vayots-dzor"
+        }
+      ]
+    }
+  ]
+}
