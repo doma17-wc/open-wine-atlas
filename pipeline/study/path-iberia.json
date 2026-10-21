@@ -109,7 +109,87 @@
           "answer": 3,
           "explain": "Rioja requires at least 12 months in oak for a red Crianza, double the national minimum of 6 months.",
           "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "id": "q8",
+          "q": "Under the 2003 wine law, how many years must a region hold DO status before it can become a DOCa?",
+          "options": ["Five", "Ten", "Fifteen", "Twenty"],
+          "answer": 1,
+          "explain": "A DOCa needs at least ten years as a DO. Five years is the wait for a Vino de Calidad con Indicación Geográfica before it can become a DO."
+        },
+        {
+          "id": "q9",
+          "q": "Which of these is NOT a PDO category in Spanish wine law?",
+          "options": ["Vino de Pago", "Denominación de Origen Calificada", "Vino de Calidad con Indicación Geográfica", "Vino de la Tierra"],
+          "answer": 3,
+          "explain": "Vino de la Tierra is Spain's PGI category. The other three are protected designations of origin."
+        },
+        {
+          "id": "q10",
+          "q": "What may a Vino de Pago that lies wholly within a DOCa call itself?",
+          "options": ["Vino de Pago Calificado", "Gran Vino de Pago", "Viñedo Singular", "Pago Reserva"],
+          "answer": 0,
+          "explain": "The 2003 wine law lets a pago inside a DOCa use the name Vino de Pago Calificado."
+        },
+        {
+          "id": "q11",
+          "q": "Under national Spanish law, what is the minimum total ageing for a white Reserva?",
+          "options": ["18 months", "36 months", "24 months", "48 months"],
+          "answer": 2,
+          "explain": "A white or rosé Reserva needs 24 months, with at least 6 in oak. 18 months is the white Crianza minimum and 48 the white Gran Reserva minimum."
+        },
+        {
+          "id": "q12",
+          "q": "Besides 36 months of ageing, what must a wine labelled Viejo show?",
+          "options": ["Residual sugar above 45 g/l", "A marked oxidative character", "Fermentation in new oak", "Grapes from a single estate"],
+          "answer": 1,
+          "explain": "Viejo requires at least 36 months of ageing and a marked oxidative character from light, oxygen, heat or a mix of them."
+        },
+        {
+          "id": "q13",
+          "q": "How long must a red Ribera del Duero Gran Reserva spend in oak at minimum?",
+          "options": ["12 months", "18 months", "36 months", "24 months"],
+          "answer": 3,
+          "explain": "Ribera del Duero requires 24 months in oak within 60 months in total, more than the national minimum of 18.",
+          "place": "es-eupdo-PDO-ES-A0626"
+        },
+        {
+          "id": "q14",
+          "q": "In which Spanish region is Dominio de Valdepusa, the first Vino de Pago?",
+          "options": ["Castilla-La Mancha", "Navarra", "Castilla y León", "Catalunya"],
+          "answer": 0,
+          "explain": "Dominio de Valdepusa, the Marqués de Griñón's estate, is in Castilla-La Mancha, where many pagos are found.",
+          "place": "es-eupdo-PDO-ES-A0052"
+        },
+        {
+          "id": "q15",
+          "q": "Can a wine made with the help of oak chips be labelled Crianza?",
+          "options": ["Yes, if it is aged for 24 months", "Yes, but only white wines", "No, the ageing terms are barred for wines made with oak pieces", "Only as a Vino de la Tierra"],
+          "answer": 2,
+          "explain": "Spanish rules do not allow Crianza, Reserva or Gran Reserva on wines made with pieces of oak wood. These terms require ageing in barrel."
         }
+      ],
+      "cards": [
+        { "f": "Vino de la Tierra", "b": "Spain's term for a protected geographical indication (PGI). It covers wide areas with flexible rules on grapes and yields." },
+        { "f": "Which Spanish categories are PDOs?", "b": "Vino de Calidad con Indicación Geográfica, Denominación de Origen (DO), DO Calificada (DOCa) and Vino de Pago." },
+        { "f": "Consejo Regulador", "b": "The regulatory council that runs a DO. It sets and enforces the rules and may be stricter than national law." },
+        { "f": "How long must an area be a Vino de Calidad before it can become a DO?", "b": "At least five years, under the 2003 wine law (Ley 24/2003 de la Viña y del Vino)." },
+        { "f": "How long must a region hold DO status before it can become a DOCa?", "b": "At least ten years. All its wine must also be bottled by registered wineries within the region." },
+        { "f": "Which are Spain's two DOCa regions?", "b": "Rioja, the first in 1991, and Priorat, called DOQ in Catalan." },
+        { "f": "DOQ", "b": "Denominació d'Origen Qualificada, the Catalan form of DOCa, used by Priorat.", "place": "es-eupdo-PDO-ES-A1560" },
+        { "f": "Vino de Pago", "b": "A single estate with its own soil, microclimate and reputation. It holds PDO status in its own right and need not lie within a DO." },
+        { "f": "Which estate was Spain's first Vino de Pago?", "b": "Dominio de Valdepusa, the estate of the Marqués de Griñón in Castilla-La Mancha.", "place": "es-eupdo-PDO-ES-A0052" },
+        { "f": "Vino de Pago Calificado", "b": "Under the 2003 wine law, a pago that lies wholly within a DOCa may use this name." },
+        { "f": "Joven", "b": "A young wine released with little or no oak ageing." },
+        { "f": "Red Crianza: national minimum", "b": "24 months of ageing, with at least 6 months in oak." },
+        { "f": "Red Reserva: national minimum", "b": "36 months of ageing, with at least 12 in oak and the rest in bottle." },
+        { "f": "Red Gran Reserva: national minimum", "b": "60 months of ageing, with at least 18 in oak and the rest in bottle." },
+        { "f": "White and rosé Crianza, Reserva and Gran Reserva: national minimums", "b": "18, 24 and 48 months in total, each with at least 6 months in oak." },
+        { "f": "Noble, Añejo and Viejo", "b": "Other legal ageing terms: 18, 24 and 36 months in total. Viejo also needs a marked oxidative character." },
+        { "f": "Maximum barrel size for Crianza, Reserva and Gran Reserva", "b": "330 litres." },
+        { "f": "Can a wine made with oak chips be labelled Crianza or Reserva?", "b": "No. Spanish rules bar the ageing terms for wines made with pieces of oak wood." },
+        { "f": "Red Rioja Gran Reserva: oak and bottle", "b": "At least two years in oak and two in bottle, within five years in total.", "place": "es-eupdo-PDO-ES-A0117" },
+        { "f": "Viñedo Singular", "b": "Rioja's single-vineyard category, created by the 2017 reform along with rules for village and zone wines.", "place": "es-eupdo-PDO-ES-A0117" }
       ]
     },
     {
@@ -222,7 +302,89 @@
           "answer": 1,
           "explain": "Navarra built its name on fresh Garnacha rosado, though today it makes mostly red wine.",
           "place": "es-eupdo-PDO-ES-A0127"
+        },
+        {
+          "id": "q9",
+          "q": "Which grape is called Mazuelo in Rioja?",
+          "options": ["Grenache", "Cinsault", "Carignan", "Mourvèdre"],
+          "answer": 2,
+          "explain": "Mazuelo is Rioja's name for Carignan, which adds acidity and tannin to the blend."
+        },
+        {
+          "id": "q10",
+          "q": "Which Rioja zone is the warmest and driest?",
+          "options": ["Rioja Oriental", "Rioja Alta", "Rioja Alavesa", "Tierra Estella"],
+          "answer": 0,
+          "explain": "Rioja Oriental in the east has the most Mediterranean climate. Tierra Estella is a subzone of Navarra, not of Rioja.",
+          "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "id": "q11",
+          "q": "Which of these is NOT an authorised white grape in Rioja?",
+          "options": ["Tempranillo Blanco", "Verdejo", "Malvasía", "Albariño"],
+          "answer": 3,
+          "explain": "Albariño is the grape of Rías Baixas. Tempranillo Blanco, Verdejo and Malvasía are all authorised in Rioja.",
+          "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "id": "q12",
+          "q": "What is the minimum ageing for a red Rioja Reserva?",
+          "options": ["Two years, one of them in oak", "Three years, with at least one in oak and six months in bottle", "Five years, two in oak and two in bottle", "18 months, six of them in oak"],
+          "answer": 1,
+          "explain": "A red Rioja Reserva needs three years, including at least a year in oak and six months in bottle. Five years is the Gran Reserva rule.",
+          "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "id": "q13",
+          "q": "Why does Rioja grow warmer and drier towards the east?",
+          "options": ["The vineyards rise in altitude", "The Ebro widens into a delta", "Snowmelt from the Pyrenees cools the west", "Atlantic influence fades and Mediterranean influence grows"],
+          "answer": 3,
+          "explain": "Moving east down the Ebro, Atlantic influence weakens and the Mediterranean takes over, so the climate is warmer and drier."
+        },
+        {
+          "id": "q14",
+          "q": "Which Navarra subzone lies in the hot, dry south along the Ebro?",
+          "options": ["Baja Montaña", "Ribera Baja", "Valdizarbe", "Tierra Estella"],
+          "answer": 1,
+          "explain": "Ribera Baja is in the south of Navarra along the Ebro. The northern subzones are cooler and wetter.",
+          "place": "es-eupdo-PDO-ES-A0127"
+        },
+        {
+          "id": "q15",
+          "q": "What brought French merchants to Rioja in the late 19th century?",
+          "options": ["A ban on Bordeaux exports", "The founding of the DOCa", "Phylloxera in French vineyards", "A new tax on French wine"],
+          "answer": 2,
+          "explain": "When phylloxera destroyed French vineyards, merchants came to Rioja to buy wine, shaping its style and trade. The DOCa came only in 1991."
+        },
+        {
+          "id": "q16",
+          "q": "Which statement about Chardonnay in white Rioja is correct?",
+          "options": ["It may be used but may not be the main grape", "It is banned", "It must make up at least half of the blend", "It is allowed only in Rioja Alavesa"],
+          "answer": 0,
+          "explain": "Chardonnay, Sauvignon Blanc and Verdejo are authorised, but they may not be the predominant grapes in the wine."
         }
+      ],
+      "cards": [
+        { "f": "On which river does Rioja lie?", "b": "The upper Ebro, in northern Spain.", "place": "es-eupdo-PDO-ES-A0117" },
+        { "f": "Which range shelters Rioja to the north?", "b": "The Sierra de Cantabria, which blocks cold, wet Atlantic winds.", "place": "es-eupdo-PDO-ES-A0117" },
+        { "f": "Rioja's three zones", "b": "Rioja Alta, Rioja Alavesa and Rioja Oriental." },
+        { "f": "Rioja Alavesa", "b": "The zone north of the Ebro in the Basque province of Álava, on clay-limestone soils below the Sierra de Cantabria." },
+        { "f": "Rioja Oriental", "b": "The warmest and driest zone, in the east. It was called Rioja Baja until 2018. Garnacha does well here." },
+        { "f": "Haro", "b": "A town in Rioja Alta, home to many historic bodegas." },
+        { "f": "Where does Rioja lie administratively?", "b": "Mostly in La Rioja, Álava (Basque Country) and Navarra, with a tiny enclave in Burgos." },
+        { "f": "How does Rioja's climate change from west to east?", "b": "It gets warmer and drier as Atlantic influence gives way to Mediterranean influence." },
+        { "f": "Main soils of Rioja", "b": "Clay-limestone, ferrous clay and alluvial deposits near the rivers." },
+        { "f": "Why is it called Tempranillo?", "b": "From temprano, early, because the grape ripens early." },
+        { "f": "Graciano", "b": "A Rioja red grape used in small amounts for acidity, colour and aroma." },
+        { "f": "Mazuelo", "b": "Rioja's name for Carignan. It adds acidity and tannin." },
+        { "f": "White grapes of Rioja", "b": "Viura (Macabeo) leads, with Malvasía and Garnacha Blanca. Later additions include Tempranillo Blanco, Chardonnay, Sauvignon Blanc and Verdejo." },
+        { "f": "Can Chardonnay, Sauvignon Blanc or Verdejo dominate a white Rioja?", "b": "No. These newer, non-local grapes are allowed but may not be the main variety in the wine." },
+        { "f": "Barrica", "b": "The 225-litre barrel brought to Rioja from Bordeaux in the 19th century." },
+        { "f": "Why did French merchants buy wine in Rioja in the late 19th century?", "b": "Phylloxera had destroyed French vineyards." },
+        { "f": "Classic aromas of traditional Rioja", "b": "Vanilla, coconut, dill and dried fruit, from long ageing in American oak." },
+        { "f": "Red Rioja Reserva: minimum ageing", "b": "At least three years, with at least one year in oak and six months in bottle.", "place": "es-eupdo-PDO-ES-A0117" },
+        { "f": "Navarra's traditional style", "b": "Fresh Garnacha rosado. Today Navarra makes mostly red wine.", "place": "es-eupdo-PDO-ES-A0127" },
+        { "f": "Navarra's five subzones", "b": "Baja Montaña, Valdizarbe, Tierra Estella, Ribera Alta and Ribera Baja.", "place": "es-eupdo-PDO-ES-A0127" }
       ]
     },
     {
@@ -235,7 +397,7 @@
           "h": "Ribera del Duero",
           "p": [
             "Ribera del Duero follows the Duero river across the high plateau of Castilla y León. Many vineyards are at 750 metres or more, among the highest in Spain. Summers are hot, winters cold and nights cool, which helps keep acidity and colour. Spring frost is a real risk.",
-            "The main grape is Tempranillo, known here as Tinto Fino or Tinta del País, and it must make up most of the blend. Cabernet Sauvignon, Merlot and Malbec are allowed in smaller amounts. The reds are deep in colour and structured, with dark fruit and firm tannins.",
+            "The main grape is Tempranillo, known here as Tinto Fino or Tinta del País, and it must make up most of the blend. Cabernet Sauvignon, Merlot, Malbec and Garnacha Tinta are allowed in smaller amounts. Since 2019 the DO also covers white wine, from at least 75% Albillo Mayor. The reds are deep in colour and structured, with dark fruit and firm tannins.",
             "Vega Sicilia, founded in 1864, made the region's name with its Único. The DO was created in 1982, and producers such as Alejandro Fernández of Pesquera brought it wide fame in the years that followed."
           ],
           "places": ["es-eupdo-PDO-ES-A0626"]
@@ -334,7 +496,92 @@
           "options": ["Albariza", "Llicorella", "Granite", "Clay-limestone"],
           "answer": 2,
           "explain": "Rías Baixas soils are mostly granite. Albariza is the soil of Jerez and llicorella that of Priorat."
+        },
+        {
+          "id": "q9",
+          "q": "What is the minimum share of Tempranillo in a red Ribera del Duero?",
+          "options": ["50%", "75%", "85%", "100%"],
+          "answer": 1,
+          "explain": "Red Ribera del Duero must be at least 75% Tempranillo (Tinto Fino). Cabernet Sauvignon, Merlot, Malbec, Garnacha Tinta and Albillo Mayor may make up the rest.",
+          "place": "es-eupdo-PDO-ES-A0626"
+        },
+        {
+          "id": "q10",
+          "q": "Which grape must make up at least 75% of a white Ribera del Duero?",
+          "options": ["Verdejo", "Viura", "Godello", "Albillo Mayor"],
+          "answer": 3,
+          "explain": "White Ribera del Duero, approved in 2019, is based on Albillo Mayor. Verdejo is the grape of neighbouring Rueda.",
+          "place": "es-eupdo-PDO-ES-A0626"
+        },
+        {
+          "id": "q11",
+          "q": "Which province is NOT part of the Ribera del Duero DO?",
+          "options": ["Zamora", "Burgos", "Soria", "Segovia"],
+          "answer": 0,
+          "explain": "Ribera del Duero covers parts of Burgos, Segovia, Soria and Valladolid. Zamora is home to Toro, further downstream.",
+          "place": "es-eupdo-PDO-ES-A0626"
+        },
+        {
+          "id": "q12",
+          "q": "What share of Albariño must a wine labelled Rías Baixas Albariño contain?",
+          "options": ["70%", "85%", "100%", "At least 50%"],
+          "answer": 2,
+          "explain": "Rías Baixas Albariño is a single-variety wine made from 100% Albariño. Subzone blends such as O Rosal or Condado do Tea need only 70% of Albariño and a partner grape together.",
+          "place": "es-eupdo-PDO-ES-A1119"
+        },
+        {
+          "id": "q13",
+          "q": "Which white grape partners Albariño in the O Rosal subzone?",
+          "options": ["Loureira", "Treixadura", "Godello", "Verdejo"],
+          "answer": 0,
+          "explain": "O Rosal wines need at least 70% Albariño and Loureira together. Treixadura is the partner grape in Condado do Tea.",
+          "place": "es-eupdo-PDO-ES-A1119"
+        },
+        {
+          "id": "q14",
+          "q": "Which river forms the border between Galicia and Portugal near O Rosal and Condado do Tea?",
+          "options": ["Duero", "Sil", "Ebro", "Miño"],
+          "answer": 3,
+          "explain": "The Miño, Minho in Portuguese, runs along the border. Across from Condado do Tea lies Monção e Melgaço in Vinho Verde."
+        },
+        {
+          "id": "q15",
+          "q": "Which is the top tier of Bierzo's origin classification?",
+          "options": ["Vino de Villa", "Gran Viña Clasificada", "Vino de Paraje", "Viña Clasificada"],
+          "answer": 1,
+          "explain": "Gran Viña Clasificada is the top tier and has the lowest maximum yield. Below it come Viña Clasificada, Vino de Paraje and Vino de Villa.",
+          "place": "es-eupdo-PDO-ES-A0615"
+        },
+        {
+          "id": "q16",
+          "q": "Why does Toro make more powerful reds than Ribera del Duero?",
+          "options": ["It uses only Garnacha", "It has an Atlantic climate", "It is lower and hotter, so the grapes ripen to higher sugar", "Its wines are fortified"],
+          "answer": 2,
+          "explain": "Toro is lower and hotter than Ribera del Duero. Riper Tinta de Toro grapes give full-bodied, high-alcohol reds.",
+          "place": "es-eupdo-PDO-ES-A0886"
         }
+      ],
+      "cards": [
+        { "f": "Tinto Fino and Tinta del País", "b": "Local names for Tempranillo in Ribera del Duero.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Minimum Tempranillo in red Ribera del Duero", "b": "At least 75%. Cabernet Sauvignon, Merlot, Malbec, Garnacha Tinta and the white Albillo Mayor may make up the rest.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "White Ribera del Duero", "b": "Approved in 2019. It must be made from at least 75% Albillo Mayor.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Ribera del Duero provinces", "b": "Burgos, Segovia, Soria and Valladolid, all in Castilla y León.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Altitude in Ribera del Duero", "b": "Valleys at about 750 to 850 metres, with higher ground above 1,000 metres.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Red Ribera del Duero Gran Reserva: oak", "b": "At least 24 months in oak within 60 months in total, more than the national 18.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "When was the Ribera del Duero DO created?", "b": "In 1982.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Tinta de Toro", "b": "Toro's local Tempranillo. It gives powerful, full-bodied, high-alcohol reds.", "place": "es-eupdo-PDO-ES-A0886" },
+        { "f": "Toro's province", "b": "Zamora, downstream from Ribera del Duero on the Duero. A few villages lie in Valladolid.", "place": "es-eupdo-PDO-ES-A0886" },
+        { "f": "Rueda's key grape", "b": "Verdejo, often blended with Sauvignon Blanc or Viura.", "place": "es-eupdo-PDO-ES-A0889" },
+        { "f": "What does the Duero become in Portugal?", "b": "The Douro, which reaches the sea at Porto." },
+        { "f": "Rías", "b": "Drowned river valleys that cut inland along the Galician coast and give Rías Baixas its name.", "place": "es-eupdo-PDO-ES-A1119" },
+        { "f": "Rías Baixas soils and training", "b": "Mostly granite soils. Vines are often trained on high pergolas for airflow, against rot." },
+        { "f": "Rías Baixas subzones", "b": "Five: Val do Salnés, Condado do Tea, O Rosal, Soutomaior and Ribeira do Ulla.", "place": "es-eupdo-PDO-ES-A1119" },
+        { "f": "Rías Baixas Albariño", "b": "A wine labelled this way must be 100% Albariño.", "place": "es-eupdo-PDO-ES-A1119" },
+        { "f": "O Rosal and Condado do Tea blends", "b": "O Rosal: Albariño and Loureira together at least 70%. Condado do Tea: Albariño and Treixadura together at least 70%.", "place": "es-eupdo-PDO-ES-A1119" },
+        { "f": "Mencía", "b": "The red grape of Bierzo and Ribeira Sacra. It gives fresh, fragrant reds with red fruit and floral notes." },
+        { "f": "Bierzo's origin tiers", "b": "Vino de Villa, Vino de Paraje, Viña Clasificada and Gran Viña Clasificada, each with lower maximum yields.", "place": "es-eupdo-PDO-ES-A0615" },
+        { "f": "Godello", "b": "The leading white grape of Bierzo and Valdeorras.", "place": "es-eupdo-PDO-ES-A1132" },
+        { "f": "Ribeira Sacra", "b": "Galician DO with steep terraces above the Sil and Miño rivers. Mencía is its key red.", "place": "es-eupdo-PDO-ES-A1128" }
       ]
     },
     {
@@ -455,7 +702,93 @@
           "answer": 0,
           "explain": "Monastrell is the Spanish name for Mourvèdre.",
           "place": "es-eupdo-PDO-ES-A0109"
+        },
+        {
+          "id": "q9",
+          "q": "Which village was at the heart of Priorat's revival in the late 1980s?",
+          "options": ["Gratallops", "Falset", "Sant Sadurní d'Anoia", "Vilafranca del Penedès"],
+          "answer": 0,
+          "explain": "René Barbier, Álvaro Palacios and others settled around Gratallops. Their first wines came from the 1989 vintage.",
+          "place": "es-eupdo-PDO-ES-A1560"
+        },
+        {
+          "id": "q10",
+          "q": "Which tier sits at the top of Priorat's origin classification?",
+          "options": ["Vi de Vila", "Vi de Paratge", "Vinya Classificada", "Gran Vinya Classificada"],
+          "answer": 3,
+          "explain": "The pyramid rises from DOQ Priorat through Vi de Vila, Vi de Paratge and Vinya Classificada to Gran Vinya Classificada.",
+          "place": "es-eupdo-PDO-ES-A1560"
+        },
+        {
+          "id": "q11",
+          "q": "What is the minimum lees ageing for Cava Reserva?",
+          "options": ["9 months", "12 months", "18 months", "30 months"],
+          "answer": 2,
+          "explain": "Cava Reserva needs at least 18 months on its lees. 9 months is the minimum for all Cava and 30 for Gran Reserva.",
+          "place": "es-eupdo-PDO-ES-A0735"
+        },
+        {
+          "id": "q12",
+          "q": "Which is NOT a requirement for Cava de Guarda Superior?",
+          "options": ["Vines at least 10 years old", "Organic grapes", "A vintage on the label", "Grapes grown only in Penedès"],
+          "answer": 3,
+          "explain": "Guarda Superior Cava can come from any part of the DO. It needs organic grapes from vines at least 10 years old and shows the vintage.",
+          "place": "es-eupdo-PDO-ES-A0735"
+        },
+        {
+          "id": "q13",
+          "q": "Why do Priorat vines root deeply and give very low yields?",
+          "options": ["Heavy irrigation draws the roots down", "Llicorella slate holds little water", "The soils are fertile and alluvial", "Summer rain is frequent"],
+          "answer": 1,
+          "explain": "Llicorella is brittle slate that holds little water, so the roots must go deep and the vines give little fruit.",
+          "place": "es-eupdo-PDO-ES-A1560"
+        },
+        {
+          "id": "q14",
+          "q": "In which two provinces does Jumilla lie?",
+          "options": ["Valencia and Alicante", "Tarragona and Lleida", "Murcia and Albacete", "Almería and Granada"],
+          "answer": 2,
+          "explain": "Jumilla lies inland in Murcia and Albacete, in the hot, dry south-east where Monastrell thrives.",
+          "place": "es-eupdo-PDO-ES-A0109"
+        },
+        {
+          "id": "q15",
+          "q": "Fondillón is a long-aged wine from which grape and DO?",
+          "options": ["Garnacha from Priorat", "Monastrell from Alicante", "Xarel·lo from Penedès", "Pedro Ximénez from Montilla-Moriles"],
+          "answer": 1,
+          "explain": "Fondillón is made in Alicante from overripe Monastrell and must age at least 10 years in oak.",
+          "place": "es-eupdo-PDO-ES-A1526"
+        },
+        {
+          "id": "q16",
+          "q": "Which Catalan DO is best known for Garnacha Blanca?",
+          "options": ["Terra Alta", "Penedès", "Empordà", "Conca de Barberà"],
+          "answer": 0,
+          "explain": "Terra Alta, inland in the south of Catalunya, is the classic source of Garnacha Blanca.",
+          "place": "es-eupdo-PDO-ES-A1556"
         }
+      ],
+      "cards": [
+        { "f": "Llicorella", "b": "Priorat's dark, brittle slate. It splits into thin layers, holds little water and forces roots deep.", "place": "es-eupdo-PDO-ES-A1560" },
+        { "f": "Priorat's traditional grapes", "b": "Garnacha and Cariñena (Carignan), often from old bush vines.", "place": "es-eupdo-PDO-ES-A1560" },
+        { "f": "Which village was the centre of Priorat's revival?", "b": "Gratallops, where a group including René Barbier and Álvaro Palacios settled in the late 1980s.", "place": "es-eupdo-PDO-ES-A1560" },
+        { "f": "Scala Dei", "b": "A Carthusian monastery founded in Priorat in the 12th century. Its monks planted vines there." },
+        { "f": "Priorat's origin tiers", "b": "DOQ Priorat, Vi de Vila (village), Vi de Paratge, Vinya Classificada and Gran Vinya Classificada.", "place": "es-eupdo-PDO-ES-A1560" },
+        { "f": "Montsant", "b": "DO that almost surrounds Priorat. Once a subzone of Tarragona, it became a DO in 2001.", "place": "es-eupdo-PDO-ES-A1550" },
+        { "f": "How does Montsant differ from Priorat?", "b": "Same main grapes, but more varied soils with less llicorella. The wines are usually softer.", "place": "es-eupdo-PDO-ES-A1550" },
+        { "f": "Penedès", "b": "DO south-west of Barcelona, rising from warm Baix Penedès near the sea to cooler, higher Alt Penedès.", "place": "es-eupdo-PDO-ES-A1551" },
+        { "f": "Sant Sadurní d'Anoia", "b": "The town in Penedès at the heart of Cava production." },
+        { "f": "Cava's traditional grapes", "b": "Macabeo, Xarel·lo and Parellada. Chardonnay and Pinot Noir are also allowed." },
+        { "f": "Why is Cava unusual as a DO?", "b": "It is not one continuous area but a list of municipalities in several parts of Spain.", "place": "es-eupdo-PDO-ES-A0735" },
+        { "f": "Comtats de Barcelona", "b": "The Cava zone covering the Cava areas of Catalunya, created in the 2021 zoning reform.", "place": "es-eupdo-PDO-ES-A0735" },
+        { "f": "Cava de Guarda", "b": "The basic Cava category, with at least 9 months on the lees.", "place": "es-eupdo-PDO-ES-A0735" },
+        { "f": "Cava de Guarda Superior", "b": "Reserva (18 months), Gran Reserva (30) and Paraje Calificado (36). Organic grapes from vines at least 10 years old.", "place": "es-eupdo-PDO-ES-A0735" },
+        { "f": "Cava de Paraje Calificado", "b": "A Cava from a single qualified site, with at least 36 months on the lees.", "place": "es-eupdo-PDO-ES-A0735" },
+        { "f": "Who made the first Cava, and when?", "b": "Josep Raventós of Codorníu, in 1872." },
+        { "f": "Monastrell", "b": "Spain's name for Mourvèdre. It needs plenty of heat and gives deep, tannic, high-alcohol reds.", "place": "es-eupdo-PDO-ES-A0109" },
+        { "f": "Where is Jumilla?", "b": "Inland in the hot, dry south-east, across the provinces of Murcia and Albacete.", "place": "es-eupdo-PDO-ES-A0109" },
+        { "f": "Fondillón", "b": "A rare Alicante wine from overripe Monastrell, aged at least 10 years in oak, with at least 16% natural alcohol.", "place": "es-eupdo-PDO-ES-A1526" },
+        { "f": "Terra Alta", "b": "A Catalan DO in the south-west of Tarragona province, known for Garnacha Blanca.", "place": "es-eupdo-PDO-ES-A1556" }
       ]
     },
     {
@@ -467,7 +800,7 @@
         {
           "h": "The sherry triangle",
           "p": [
-            "Sherry comes mainly from the province of Cádiz in Andalucía, in the far south-west of Spain. The DO is Jerez-Xérès-Sherry, its name in Spanish, French and English. Traditionally the wine is aged in three towns that form the sherry triangle: Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda.",
+            "Sherry comes mainly from the province of Cádiz in Andalucía, in the far south-west of Spain. The DO is Jerez-Xérès-Sherry, its name in Spanish, French and English. Traditionally the wine is aged in three towns that form the sherry triangle: Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda. Since 2022 it may also be aged in the other towns of the production zone, but under the current rules fino may no longer be aged in Sanlúcar, the home of manzanilla.",
             "The climate is hot and sunny. Two winds matter. The poniente blows in from the Atlantic and brings humidity. The levante blows from the east and is hot and dry."
           ],
           "places": ["es-eupdo-PDO-ES-A1483", "es-eupdo-PDO-ES-A1482"]
@@ -483,8 +816,8 @@
         {
           "h": "Flor and fortification",
           "p": [
-            "The base wine is fermented dry and then classified. Wines chosen for fino and manzanilla are fortified to about 15 to 15.5% abv. In butts that are not filled to the top, a film of yeast called flor grows on the surface. Flor shields the wine from oxygen and feeds on alcohol and glycerol. This is called biological ageing.",
-            "Flor gives a pale wine with sharp, pungent aromas of bread dough and almond. Wines chosen for oloroso are fortified to about 17% or more. At this strength flor cannot survive, so the wine ages in contact with oxygen. This oxidative ageing darkens the colour and gives nutty, toasty, dried fruit flavours."
+            "The base wine is fermented dry and then classified. Wines chosen for fino and manzanilla are usually fortified to about 15 to 15.5% abv. Since 2025 fortification is optional, and the legal minimum for both is now 14%. In butts that are not filled to the top, a film of yeast called flor grows on the surface. Flor shields the wine from oxygen and feeds on alcohol and glycerol. This is called biological ageing.",
+            "Flor gives a pale wine with sharp, pungent aromas of bread dough and almond. Wines chosen for oloroso are usually fortified to about 17% or more. At this strength flor cannot survive, so the wine ages in contact with oxygen. This oxidative ageing darkens the colour and gives nutty, toasty, dried fruit flavours."
           ]
         },
         {
@@ -508,7 +841,7 @@
         "Sherry is traditionally aged in Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda.",
         "Albariza is a white soil rich in calcium carbonate that stores winter rain.",
         "Palomino makes the dry styles. PX and Moscatel make the sweet ones, PX often from sun-dried grapes.",
-        "Fino and manzanilla are fortified to about 15 to 15.5% and age under flor. Oloroso is fortified to about 17% or more and ages oxidatively.",
+        "Fino and manzanilla are usually fortified to about 15 to 15.5% (fortification is now optional) and age under flor. Oloroso is usually fortified to about 17% or more and ages oxidatively.",
         "In a solera, wine is drawn from the oldest tier and topped up from the criaderas, so most sherry has no vintage.",
         "Manzanilla must be aged in Sanlúcar de Barrameda. Amontillado starts under flor and finishes oxidatively."
       ],
@@ -570,7 +903,87 @@
           "options": ["Drying grapes in the sun to concentrate sugar", "Adding grape spirit to the base wine", "Drawing wine from the oldest tier", "Fermenting wine in clay jars"],
           "answer": 0,
           "explain": "Asoleo is the practice of laying grapes, usually Pedro Ximénez, in the sun to dry before pressing."
+        },
+        {
+          "id": "q9",
+          "q": "Which wind brings humidity to Jerez from the Atlantic?",
+          "options": ["Levante", "Poniente", "Tramontana", "Mistral"],
+          "answer": 1,
+          "explain": "The poniente blows in from the Atlantic and brings humidity. The levante is hot and dry, from the east."
+        },
+        {
+          "id": "q10",
+          "q": "What is the minimum sugar content of a Pedro Ximénez sherry?",
+          "options": ["45 g/l", "115 g/l", "160 g/l", "212 g/l"],
+          "answer": 3,
+          "explain": "PX must have at least 212 g/l of sugar. 160 g/l is the minimum for Moscatel and 115 g/l the floor for Cream."
+        },
+        {
+          "id": "q11",
+          "q": "What minimum average age does VORS on a sherry label certify?",
+          "options": ["30 years", "12 years", "15 years", "20 years"],
+          "answer": 0,
+          "explain": "VORS, Very Old Rare Sherry, certifies an average age of over 30 years. VOS certifies over 20."
+        },
+        {
+          "id": "q12",
+          "q": "Which style combines the aroma of an amontillado with the body of an oloroso?",
+          "options": ["Manzanilla", "Cream", "Palo cortado", "Pale Cream"],
+          "answer": 2,
+          "explain": "Palo cortado is a dry generoso that sits between amontillado and oloroso in style."
+        },
+        {
+          "id": "q13",
+          "q": "Why does flor stay thick in Sanlúcar de Barrameda?",
+          "options": ["Higher fortification", "Cool, humid sea air", "The hot levante wind", "Very old butts"],
+          "answer": 1,
+          "explain": "Sanlúcar sits at the mouth of the Guadalquivir. Its cool, humid sea air keeps the flor thick, giving light, salty manzanilla.",
+          "place": "es-eupdo-PDO-ES-A1482"
+        },
+        {
+          "id": "q14",
+          "q": "Which of these is NOT a dry generoso style?",
+          "options": ["Fino", "Amontillado", "Oloroso", "Cream"],
+          "answer": 3,
+          "explain": "Cream is a sweetened vino generoso de licor. Fino, amontillado and oloroso have at most 4 g/l of sugar."
+        },
+        {
+          "id": "q15",
+          "q": "What does en rama mean on a sherry label?",
+          "options": ["Aged in a single butt", "Made from sun-dried grapes", "No stabilisation other than filtration", "Fortified to 17% or more"],
+          "answer": 2,
+          "explain": "En rama sherry is bottled with minimal treatment: the only stabilisation allowed is filtration."
+        },
+        {
+          "id": "q16",
+          "q": "Which DO in the province of Córdoba makes sherry-like wines mainly from Pedro Ximénez?",
+          "options": ["Montilla-Moriles", "Málaga", "Condado de Huelva", "Jumilla"],
+          "answer": 0,
+          "explain": "Montilla-Moriles is in Córdoba. Its warm climate lets Pedro Ximénez reach high natural strength.",
+          "place": "es-eupdo-PDO-ES-A1479"
         }
+      ],
+      "cards": [
+        { "f": "Jerez-Xérès-Sherry", "b": "The sherry DO, named in Spanish, French and English. Its vineyards are in the province of Cádiz.", "place": "es-eupdo-PDO-ES-A1483" },
+        { "f": "The sherry triangle", "b": "Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda." },
+        { "f": "Can sherry be aged outside the triangle today?", "b": "Yes. Since 2022 ageing may also take place in the other municipalities of the production zone.", "place": "es-eupdo-PDO-ES-A1483" },
+        { "f": "Poniente and levante", "b": "The poniente is a humid wind from the Atlantic. The levante is a hot, dry wind from the east." },
+        { "f": "Albariza", "b": "Bright white soil rich in calcium carbonate. It stores winter rain and forms a summer crust that slows evaporation.", "place": "es-eupdo-PDO-ES-A1483" },
+        { "f": "Palomino", "b": "The main grape for dry sherry. It gives a neutral, low-acid base wine." },
+        { "f": "Asoleo", "b": "Laying grapes in the sun to dry and concentrate their sugar, above all for Pedro Ximénez." },
+        { "f": "Flor", "b": "A film of yeast on wine in part-filled butts. It shields the wine from oxygen and feeds on alcohol and glycerol." },
+        { "f": "Solera and criaderas", "b": "The solera is the oldest tier of butts. The criaderas are the younger tiers that top it up." },
+        { "f": "Minimum average age of sherry", "b": "Two years under the DO rules." },
+        { "f": "Maximum butt size for sherry ageing", "b": "1,000 litres, though larger historic vessels can be recognized by the Consejo Regulador." },
+        { "f": "VOS and VORS", "b": "Certified average ages of over 20 years (VOS) and over 30 years (VORS). 12 and 15 year statements also exist." },
+        { "f": "Fino Viejo and Manzanilla Pasada", "b": "Biologically aged wines with an average age of at least seven years." },
+        { "f": "Manzanilla", "b": "Fino-style sherry aged in Sanlúcar de Barrameda, under its own DO. Sea air keeps the flor thick.", "place": "es-eupdo-PDO-ES-A1482" },
+        { "f": "Palo Cortado", "b": "A dry generoso with the delicate aroma of an amontillado and the body of an oloroso." },
+        { "f": "Dry generoso sugar limit", "b": "Fino, amontillado, palo cortado and oloroso have at most 4 g/l of sugar." },
+        { "f": "Pedro Ximénez sherry", "b": "Intensely sweet, dark and raisined, with at least 212 g/l of sugar." },
+        { "f": "Cream sherry", "b": "A sweetened blend, often oloroso with PX, with 115 to 140 g/l of sugar." },
+        { "f": "En rama", "b": "A sherry bottled with no stabilisation other than filtration." },
+        { "f": "Montilla-Moriles", "b": "DO in Córdoba making sherry-like wines mainly from Pedro Ximénez. Its finos often need no fortification.", "place": "es-eupdo-PDO-ES-A1479" }
       ]
     },
     {
@@ -693,7 +1106,92 @@
           "answer": 1,
           "explain": "Sercial is the driest, followed by Verdelho, Boal and Malvasia (Malmsey), the sweetest.",
           "place": "pt-eupdo-PDO-PT-A0038"
+        },
+        {
+          "id": "q9",
+          "q": "What strength of grape spirit is used to fortify Port?",
+          "options": ["About 40% abv", "About 60% abv", "About 77% abv", "About 96% abv"],
+          "answer": 2,
+          "explain": "Port is fortified with aguardente at about 77% abv, which stops fermentation and leaves a wine of about 19 to 22%.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q10",
+          "q": "What is a Crusted Port?",
+          "options": ["A single-harvest tawny", "A blend of years kept at least three years in bottle before sale", "A white Port aged in cask", "A Vintage Port from one quinta"],
+          "answer": 1,
+          "explain": "Crusted Port is a blend of years that ages in bottle, where it throws a crust of sediment. A single-harvest tawny is a Colheita.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q11",
+          "q": "Until 1986, from where did all Port for export have to be shipped?",
+          "options": ["Pinhão", "Peso da Régua", "Lisbon", "The Vila Nova de Gaia entrepôt"],
+          "answer": 3,
+          "explain": "All export Port had to leave from the Gaia entrepôt. Since 1986 it can be shipped from anywhere in the Douro demarcation."
+        },
+        {
+          "id": "q12",
+          "q": "Which Madeira category must spend at least 20 years in cask?",
+          "options": ["Frasqueira", "Colheita", "Rainwater", "Seleccionado"],
+          "answer": 0,
+          "explain": "Frasqueira is a single-vintage Madeira with at least 20 years in wood. A Madeira Colheita needs at least five.",
+          "place": "pt-eupdo-PDO-PT-A0038"
+        },
+        {
+          "id": "q13",
+          "q": "Which of these is NOT an age indication used for tawny Port?",
+          "options": ["10 years", "20 years", "25 years", "40 years"],
+          "answer": 2,
+          "explain": "Tawnies with an indication of age are labelled 10, 20, 30, 40 or, since 2022, 50 years. There is no 25-year category.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q14",
+          "q": "Which grape is the leading white of Dão?",
+          "options": ["Alvarinho", "Encruzado", "Antão Vaz", "Loureiro"],
+          "answer": 1,
+          "explain": "Encruzado is Dão's key white. Alvarinho and Loureiro belong to Vinho Verde, and Antão Vaz to Alentejo.",
+          "place": "pt-eupdo-PDO-PT-A1534"
+        },
+        {
+          "id": "q15",
+          "q": "Why must colour and tannin be extracted fast when making Port?",
+          "options": ["The grapes have thin skins", "The must is heated in estufas", "The wine goes straight into bottle", "Fortification stops the fermentation early"],
+          "answer": 3,
+          "explain": "Grape spirit is added part way through fermentation, so there is little time on the skins. Treading in lagares speeds up extraction.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q16",
+          "q": "In which region does fermenting in large clay jars survive as Vinho de Talha?",
+          "options": ["Alentejo", "Dão", "Vinho Verde", "Douro"],
+          "answer": 0,
+          "explain": "Vinho de Talha is an Alentejo wine made in clay jars, an old practice kept alive within the DO.",
+          "place": "pt-eupdo-PDO-PT-A1542"
         }
+      ],
+      "cards": [
+        { "f": "When was the Douro demarcated?", "b": "In 1756, under the Marquês de Pombal, one of the first demarcated wine regions in the world.", "place": "pt-eupdo-PDO-PT-A1539" },
+        { "f": "Douro soils", "b": "Schist on steep slopes, often terraced.", "place": "pt-eupdo-PDO-PT-A1539" },
+        { "f": "Douro subregions, west to east", "b": "Baixo Corgo, Cima Corgo and Douro Superior. They get hotter and drier towards the east.", "place": "pt-eupdo-PDO-PT-A1539" },
+        { "f": "Pinhão", "b": "Town at the heart of Cima Corgo, the core of fine Port production." },
+        { "f": "DO Porto and DO Douro", "b": "Port is made under DO Porto. Unfortified wines from the same region use DO Douro.", "place": "pt-eupdo-PDO-PT-A1540" },
+        { "f": "Five well-known Port grapes", "b": "Touriga Nacional, Touriga Franca, Tinta Roriz (Tempranillo), Tinta Barroca and Tinto Cão." },
+        { "f": "Aguardente", "b": "Grape spirit of about 77% abv, added during fermentation to make Port." },
+        { "f": "Lagar", "b": "A shallow stone trough where grapes are trodden to extract colour and tannin quickly." },
+        { "f": "Vila Nova de Gaia", "b": "Town across the Douro from Porto, where Port has traditionally aged in the shippers' lodges." },
+        { "f": "What changed for Port exports in 1986?", "b": "Port no longer had to be shipped from the Gaia entrepôt, so Douro estates could export directly." },
+        { "f": "Late Bottled Vintage (LBV)", "b": "A single-year ruby, bottled after four to six years in wood.", "place": "pt-eupdo-PDO-PT-A1540" },
+        { "f": "Crusted Port", "b": "A blend of years, kept at least three years in bottle before sale. It throws a sediment.", "place": "pt-eupdo-PDO-PT-A1540" },
+        { "f": "Vintage Port", "b": "From a single declared year, bottled two to three years after harvest. It needs long bottle age and decanting.", "place": "pt-eupdo-PDO-PT-A1540" },
+        { "f": "Colheita Port", "b": "A tawny from a single harvest, aged at least seven years in wood.", "place": "pt-eupdo-PDO-PT-A1540" },
+        { "f": "Vinho Verde subregions", "b": "Nine: Monção e Melgaço, Lima, Cávado, Ave, Basto, Sousa, Amarante, Baião and Paiva.", "place": "pt-eupdo-PDO-PT-A1545" },
+        { "f": "Dão", "b": "Granite plateau ringed by mountains such as the Serra da Estrela. Touriga Nacional and Encruzado lead.", "place": "pt-eupdo-PDO-PT-A1534" },
+        { "f": "Vinho de Talha", "b": "Alentejo wine fermented in large clay jars, an old practice kept alive within the DO.", "place": "pt-eupdo-PDO-PT-A1542" },
+        { "f": "Estufagem and canteiro", "b": "Estufagem heats Madeira in tanks for at least three months. Canteiro ages it slowly in casks in warm lofts.", "place": "pt-eupdo-PDO-PT-A0038" },
+        { "f": "Madeira styles from driest to sweetest", "b": "Sercial, Verdelho, Boal (Bual), Malvasia (Malmsey).", "place": "pt-eupdo-PDO-PT-A0038" },
+        { "f": "Frasqueira and Colheita Madeira", "b": "Both from a single vintage. Frasqueira needs at least 20 years in cask, Colheita at least five years.", "place": "pt-eupdo-PDO-PT-A0038" }
       ]
     }
   ]
