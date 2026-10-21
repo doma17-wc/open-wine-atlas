@@ -1193,5 +1193,16 @@
  "Names as Liv-ex publishes them. The atlas places each wine on the site, appellation or region its record names; the number next to a wine is its LWIN.": "名称按Liv-ex发布的原样。地图集把每款葡萄酒放在其记录所写的园地、产区或地区；葡萄酒旁的数字是它的LWIN。",
  "{w} wines in the LWIN database by Liv-ex (CC BY 4.0) name this place or a place inside it. The number is how many.": "Liv-ex的LWIN数据库（CC BY 4.0）中有{w}款葡萄酒注明此地或其内的地点。数字表示款数。",
  "Search Barolo, Musigny, Louis Roederer, Cristal…": "搜索 Barolo、Musigny、Louis Roederer、Cristal…",
- "Search wine places, producers and wines": "搜索产地、生产商和葡萄酒"
+ "Search wine places, producers and wines": "搜索产地、生产商和葡萄酒",
+ "Vineyards (OSM)": "葡萄园（OSM）",
+ "Measuring the vineyards…": "正在测量葡萄园…",
+ "Zoom in on the place to measure its vineyards.": "放大到该地点以测量其葡萄园。",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "该地点范围过大，无法实时测量葡萄园。请打开其中的某个产区。",
+ "{pct}% of the {ha} ha outline.": "占{ha}公顷轮廓的{pct}%。",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "范围较大，按粗略比例测量：约{ha}公顷以下的地块未计入，因此这是最小值。",
+ "no vineyards mapped in OpenStreetMap here yet": "OpenStreetMap中此处尚未标绘葡萄园",
+ "Vineyards cover about {ha} ha of it.": "其中葡萄园约占{ha}公顷。",
+ "The vineyard map could not be loaded right now.": "暂时无法加载葡萄园地图。",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "轮廓内被OpenStreetMap标为葡萄园的土地，在您的浏览器中测量。轮廓是法定或行政范围，也包括森林、村庄和农田，因此葡萄园面积更能反映实际种植了多少。OpenStreetMap由志愿者绘制：欧洲大部分地区非常完整，其他地方则有缺漏，所以数值偏低可能意味着葡萄园尚未标绘。",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "全球葡萄园及其面积；放大后：小河、溪流、村庄和山峰"
 }

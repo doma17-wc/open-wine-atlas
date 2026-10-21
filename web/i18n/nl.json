@@ -1193,5 +1193,16 @@
  "Names as Liv-ex publishes them. The atlas places each wine on the site, appellation or region its record names; the number next to a wine is its LWIN.": "Namen zoals Liv-ex ze publiceert. De atlas plaatst elke wijn op de wijngaard, appellatie of regio die het gegeven noemt; het nummer naast een wijn is de LWIN.",
  "{w} wines in the LWIN database by Liv-ex (CC BY 4.0) name this place or a place inside it. The number is how many.": "{w} wijnen uit de LWIN-database van Liv-ex (CC BY 4.0) noemen deze plek of een plek erbinnen. Het getal zegt hoeveel.",
  "Search Barolo, Musigny, Louis Roederer, Cristal…": "Zoek Barolo, Musigny, Louis Roederer, Cristal…",
- "Search wine places, producers and wines": "Zoek wijnplekken, producenten en wijnen"
+ "Search wine places, producers and wines": "Zoek wijnplekken, producenten en wijnen",
+ "Vineyards (OSM)": "Wijngaarden (OSM)",
+ "Measuring the vineyards…": "Wijngaarden worden gemeten…",
+ "Zoom in on the place to measure its vineyards.": "Zoom in op de plek om de wijngaarden te meten.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Deze plek is te groot om de wijngaarden live te meten. Open een van de herkomstbenamingen erin.",
+ "{pct}% of the {ha} ha outline.": "{pct}% van de omtrek van {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Groot gebied, op grove schaal gemeten: percelen kleiner dan ongeveer {ha} ha vallen weg, dus dit is een minimum.",
+ "no vineyards mapped in OpenStreetMap here yet": "hier nog geen wijngaarden in OpenStreetMap gekarteerd",
+ "Vineyards cover about {ha} ha of it.": "Wijngaarden beslaan er ongeveer {ha} ha van.",
+ "The vineyard map could not be loaded right now.": "De wijngaardkaart kon nu niet worden geladen.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "Het land binnen de omtrek dat OpenStreetMap als wijngaard karteert, gemeten in je browser. De omtrek is het wettelijke of bestuurlijke gebied en omvat ook bossen, dorpen en akkers, dus de wijngaardoppervlakte zegt beter hoeveel er beplant is. OpenStreetMap wordt bijgehouden door vrijwilligers: zeer volledig in het grootste deel van Europa, elders onvollediger, dus een laag cijfer kan betekenen dat wijngaarden nog niet gekarteerd zijn.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Wijngaarden wereldwijd en hun oppervlakte; van dichtbij: kleine rivieren, beken, dorpen en toppen"
 }

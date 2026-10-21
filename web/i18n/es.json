@@ -1193,5 +1193,16 @@
  "Names as Liv-ex publishes them. The atlas places each wine on the site, appellation or region its record names; the number next to a wine is its LWIN.": "Nombres tal como los publica Liv-ex. El atlas sitúa cada vino en el pago, la denominación o la región que indica su registro; el número junto a un vino es su LWIN.",
  "{w} wines in the LWIN database by Liv-ex (CC BY 4.0) name this place or a place inside it. The number is how many.": "{w} vinos de la base LWIN de Liv-ex (CC BY 4.0) indican este lugar o un lugar dentro de él. El número dice cuántos.",
  "Search Barolo, Musigny, Louis Roederer, Cristal…": "Buscar Barolo, Musigny, Louis Roederer, Cristal…",
- "Search wine places, producers and wines": "Buscar lugares, productores y vinos"
+ "Search wine places, producers and wines": "Buscar lugares, productores y vinos",
+ "Vineyards (OSM)": "Viñedos (OSM)",
+ "Measuring the vineyards…": "Midiendo los viñedos…",
+ "Zoom in on the place to measure its vineyards.": "Acerca el mapa al lugar para medir sus viñedos.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Este lugar es demasiado grande para medir sus viñedos en directo. Abre una de sus denominaciones.",
+ "{pct}% of the {ha} ha outline.": "El {pct} % del contorno de {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Lugar extenso, medido a escala gruesa: se omiten las parcelas de menos de unas {ha} ha, así que es un mínimo.",
+ "no vineyards mapped in OpenStreetMap here yet": "aún no hay viñedos cartografiados aquí en OpenStreetMap",
+ "Vineyards cover about {ha} ha of it.": "Los viñedos ocupan unas {ha} ha.",
+ "The vineyard map could not be loaded right now.": "No se ha podido cargar el mapa de viñedos en este momento.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "El terreno dentro del contorno que OpenStreetMap cartografía como viñedo, medido en tu navegador. El contorno es la zona legal o administrativa e incluye también bosques, pueblos y campos, así que la superficie de viñedo indica mejor cuánto está plantado. OpenStreetMap lo mantienen voluntarios: muy completo en casi toda Europa, más irregular en otros lugares, de modo que una cifra baja puede deberse a viñedos aún no cartografiados.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Viñedos de todo el mundo y su superficie; de cerca: ríos pequeños, arroyos, pueblos y cumbres"
 }

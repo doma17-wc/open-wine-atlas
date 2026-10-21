@@ -1193,5 +1193,16 @@
  "Names as Liv-ex publishes them. The atlas places each wine on the site, appellation or region its record names; the number next to a wine is its LWIN.": "Namen so, wie Liv-ex sie veröffentlicht. Der Atlas setzt jeden Wein auf die Lage, Appellation oder Region, die sein Eintrag nennt; die Zahl neben einem Wein ist sein LWIN.",
  "{w} wines in the LWIN database by Liv-ex (CC BY 4.0) name this place or a place inside it. The number is how many.": "{w} Weine der LWIN-Datenbank von Liv-ex (CC BY 4.0) nennen diesen Ort oder einen Ort darin. Die Zahl sagt, wie viele.",
  "Search Barolo, Musigny, Louis Roederer, Cristal…": "Barolo, Musigny, Louis Roederer, Cristal suchen…",
- "Search wine places, producers and wines": "Weinorte, Erzeuger und Weine suchen"
+ "Search wine places, producers and wines": "Weinorte, Erzeuger und Weine suchen",
+ "Vineyards (OSM)": "Rebflächen (OSM)",
+ "Measuring the vineyards…": "Rebflächen werden gemessen…",
+ "Zoom in on the place to measure its vineyards.": "Zoomen Sie an den Ort heran, um seine Rebflächen zu messen.",
+ "This place is too large to measure its vineyards live. Open one of its appellations.": "Dieser Ort ist zu groß, um seine Rebflächen live zu messen. Öffnen Sie eine seiner Appellationen.",
+ "{pct}% of the {ha} ha outline.": "{pct} % des Umrisses von {ha} ha.",
+ "Large place, measured at a coarse scale: plots under about {ha} ha are left out, so this is a minimum.": "Großer Ort, in grobem Maßstab gemessen: Parzellen unter etwa {ha} ha fehlen, daher ist dies ein Mindestwert.",
+ "no vineyards mapped in OpenStreetMap here yet": "hier noch keine Rebflächen in OpenStreetMap kartiert",
+ "Vineyards cover about {ha} ha of it.": "Reben bedecken davon etwa {ha} ha.",
+ "The vineyard map could not be loaded right now.": "Die Rebflächenkarte konnte gerade nicht geladen werden.",
+ "The land inside the outline that OpenStreetMap maps as vineyard, measured in your browser. The outline is the legal or administrative area and also takes in woods, villages and fields, so the vineyard area is the better measure of how much is planted. OpenStreetMap is mapped by volunteers: very complete in most of Europe, patchier in places elsewhere, so a low figure can mean vineyards not yet mapped.": "Die Fläche innerhalb des Umrisses, die OpenStreetMap als Weinberg kartiert, gemessen in Ihrem Browser. Der Umriss ist das rechtliche oder administrative Gebiet und umfasst auch Wälder, Dörfer und Felder, deshalb zeigt die Rebfläche besser, wie viel bestockt ist. OpenStreetMap wird von Freiwilligen gepflegt: in den meisten Teilen Europas sehr vollständig, anderswo lückenhafter. Ein niedriger Wert kann also noch nicht kartierte Weinberge bedeuten.",
+ "Vineyards worldwide and their area; close up: small rivers, streams, villages and peaks": "Rebflächen weltweit und ihre Fläche; aus der Nähe: kleine Flüsse, Bäche, Dörfer und Gipfel"
 }
