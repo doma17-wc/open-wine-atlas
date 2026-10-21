@@ -1,1398 +1,1398 @@
 {
- "id": "vine-wine",
- "title": "In the vineyard and the winery",
- "level": "WSET 2 to Diploma",
- "summary": "How grapes are grown and turned into wine: the vine's year, climate and site, the grower's choices from rootstock to harvest, white and rosé winemaking, and red winemaking and maturation. Each technique is tied to a place on the map where it matters.",
- "lessons": [
-  {
-   "id": "vine-wine-vine-year",
-   "title": "The vine and its year",
-   "minutes": 9,
-   "intro": "This lesson follows the vine through one year, from winter dormancy to harvest and leaf fall. It explains what each stage needs, warmth, light, water and calm weather at the right moment, and why one season's weather is felt in the next.",
-   "sections": [
+  "id": "vine-wine",
+  "title": "In the vineyard and the winery",
+  "level": "WSET 2 to Diploma",
+  "summary": "How grapes are grown and turned into wine: the vine's year, climate and site, the grower's choices from rootstock to harvest, white and rosé winemaking, and red winemaking and maturation. Each technique is tied to a place on the map where it matters.",
+  "lessons": [
     {
-     "h": "What the vine needs",
-     "p": [
-      "Vitis vinifera, the European species behind almost all quality wine, needs warmth, sunlight, water and nutrients. Its leaves use sunlight to make sugar by photosynthesis. Part of that sugar goes to the grapes, and part is stored in the trunk, arms and roots as carbohydrate reserves for the next spring. Growth starts when average temperatures rise above about 10°C.",
-      "Water and nutrients must be in balance. Too little water stresses the vine and can stop ripening. Too much water, or too much nitrogen, pushes it to grow leaves and shoots instead of ripening fruit. Many of the best sites give a moderate stress that keeps berries small and concentrated.",
-      "The vine is a perennial, so each crop depends partly on the year before. The flower clusters for a crop form inside the buds during the previous summer. Warm, sunny weather in early summer therefore tends to raise the size of the following year's crop."
-     ]
+      "id": "vine-wine-vine-year",
+      "title": "The vine and its year",
+      "minutes": 9,
+      "intro": "This lesson follows the vine through one year, from winter dormancy to harvest and leaf fall. It explains what each stage needs, warmth, light, water and calm weather at the right moment, and why one season's weather is felt in the next.",
+      "sections": [
+        {
+          "h": "What the vine needs",
+          "p": [
+            "Vitis vinifera, the European species behind almost all quality wine, needs warmth, sunlight, water and nutrients. Its leaves use sunlight to make sugar by photosynthesis. Part of that sugar goes to the grapes, and part is stored in the trunk, arms and roots as carbohydrate reserves for the next spring. Growth starts when average temperatures rise above about 10°C.",
+            "Water and nutrients must be in balance. Too little water stresses the vine and can stop ripening. Too much water, or too much nitrogen, pushes it to grow leaves and shoots instead of ripening fruit. Many of the best sites give a moderate stress that keeps berries small and concentrated.",
+            "The vine is a perennial, so each crop depends partly on the year before. The flower clusters for a crop form inside the buds during the previous summer. Warm, sunny weather in early summer therefore tends to raise the size of the following year's crop."
+          ]
+        },
+        {
+          "h": "Winter dormancy and pruning",
+          "p": [
+            "After the leaves fall the vine is dormant. It needs this winter rest to complete its cycle, which is one reason vines struggle in the tropics. Dormant wood is hardy, but deep freezes of around -20°C or below can kill buds, canes or whole vines. In the coldest regions growers hill soil over the base of the vine, or bury whole vines, to protect them.",
+            "Winter is the time for pruning. It sets how many buds, and so how many shoots and bunches, the vine will carry, and it shapes the vine for the year ahead. Cane pruning keeps one or two long canes from the previous year. Spur pruning keeps several short spurs of two or three buds on a permanent arm, the cordon. Pruning late can delay budburst by a few days, which helps in frost-prone sites."
+          ],
+          "places": [
+            "us-ava-finger_lakes"
+          ]
+        },
+        {
+          "h": "Budburst and shoot growth",
+          "p": [
+            "In early spring sap drips from the pruning cuts, a sign called weeping or bleeding. Soon the buds swell and open. Budburst comes once average temperatures pass about 10°C: March or April in the Northern Hemisphere, September or October in the Southern. Early-budding grapes such as Chardonnay and Pinot Noir are more exposed to spring frost than late budders such as Cabernet Sauvignon, which is why frost is a constant fear in Chablis.",
+            "For the first weeks the young shoots live on the stored reserves. Once the leaves are large enough, photosynthesis takes over. In warm weather shoots grow several centimetres a day, and growers start tying them in, removing extra shoots and managing the canopy."
+          ],
+          "places": [
+            "fr-inao-a146"
+          ]
+        },
+        {
+          "h": "Flowering and fruit set",
+          "p": [
+            "Flowering comes some weeks after budburst, usually in late May or June in the north. Vine flowers are small and mostly self-pollinating. Flowers that are fertilised become berries, a stage called fruit set. Warm, dry and calm weather gives a good set; cold, rain or strong wind give a poor one.",
+            "A poor set reduces the crop. Coulure is when many flowers fail to set, so bunches are sparse; Grenache, Merlot and Malbec are prone to it. Millerandage is when a bunch sets berries of very different sizes, including small seedless ones. In Bourgogne growers say harvest comes about 100 days after flowering, a rule of thumb rather than a law."
+          ],
+          "places": [
+            "fr-inao-d2840"
+          ]
+        },
+        {
+          "h": "Berry growth, véraison and ripening",
+          "p": [
+            "After fruit set the green berries grow. They are hard and sour, building up acids, mainly tartaric and malic, along with green, herbaceous aroma compounds.",
+            "Véraison marks the start of ripening, usually in July or August in the north. Berries soften, black grapes take on colour, and sugar starts to flow in. From then on sugar rises and acidity falls, malic acid most of all, because the vine uses it up, especially in hot weather. Tannins in skins and seeds ripen and green aromas fade. At the same time the green shoots turn into brown wood, which lets them survive the winter.",
+            "Harvest comes when sugar, acidity and flavour reach the balance the winemaker wants. In the Northern Hemisphere that is usually September or October; in the Southern Hemisphere February to April, as in the Barossa Valley and Marlborough. Grapes for some sweet wines stay on the vine much longer."
+          ],
+          "places": [
+            "au-world-barossa-valley",
+            "nz-world-marlborough"
+          ]
+        },
+        {
+          "h": "After harvest",
+          "p": [
+            "Once the grapes are picked, the leaves keep working for some weeks and refill the reserves in the wood and roots. These reserves carry the vine through winter and feed the first growth of spring. With the first frosts the leaves yellow and fall, and the cycle starts again.",
+            "An early autumn frost can end ripening before the grapes are ready and cut short this refilling. It is a real risk in inland, continental regions such as Central Otago."
+          ],
+          "places": [
+            "nz-world-central-otago"
+          ]
+        }
+      ],
+      "key": [
+        "The vine grows above about 10°C and stores carbohydrate reserves in its wood and roots for next spring.",
+        "The flower clusters for a crop form in the buds the summer before.",
+        "The cycle: dormancy and pruning, budburst, shoot growth, flowering and fruit set, véraison, ripening, harvest, leaf fall.",
+        "Cane pruning keeps long canes; spur pruning keeps short spurs on a permanent cordon. Late pruning can delay budburst.",
+        "Coulure (Grenache, Merlot, Malbec) and millerandage come from poor weather at flowering.",
+        "After véraison sugar rises, acidity falls (malic most of all) and shoots turn to wood."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Above roughly which average temperature does the vine start to grow?",
+          "options": [
+            "5°C",
+            "10°C",
+            "15°C",
+            "20°C"
+          ],
+          "answer": 1,
+          "explain": "Growth and budburst start once average temperatures pass about 10°C. The same figure is the base for growing degree days."
+        },
+        {
+          "id": "q2",
+          "q": "When do the flower clusters for a vintage's crop form inside the buds?",
+          "options": [
+            "In the winter just before budburst",
+            "At budburst in the same spring",
+            "At véraison of the same year",
+            "In the summer of the year before"
+          ],
+          "answer": 3,
+          "explain": "The clusters form in the buds during the previous summer, so one year's weather affects the next year's crop."
+        },
+        {
+          "id": "q3",
+          "q": "What is the main difference between cane and spur pruning?",
+          "options": [
+            "Cane pruning is done in summer, spur pruning in winter",
+            "Cane pruning keeps one or two long canes; spur pruning keeps short spurs on a permanent cordon",
+            "Spur pruning is only used for white grapes",
+            "Cane pruning removes all of last year's wood"
+          ],
+          "answer": 1,
+          "explain": "A cane-pruned vine such as Guyot renews its long canes each year. A spur-pruned vine keeps a permanent arm with short spurs."
+        },
+        {
+          "id": "q4",
+          "q": "Which group of grapes is especially prone to coulure?",
+          "options": [
+            "Grenache, Merlot and Malbec",
+            "Riesling, Sylvaner and Müller-Thurgau",
+            "Glera, Garganega and Trebbiano",
+            "Furmint, Hárslevelű and Kabar"
+          ],
+          "answer": 0,
+          "explain": "Coulure, the failure of flowers to set, is a known weakness of Grenache, Merlot and Malbec."
+        },
+        {
+          "id": "q5",
+          "q": "What happens to malic acid during ripening, especially in hot weather?",
+          "options": [
+            "It rises sharply",
+            "It is converted into tartaric acid",
+            "It falls as the vine uses it up",
+            "It stays the same until harvest"
+          ],
+          "answer": 2,
+          "explain": "After véraison the vine uses malic acid as an energy source, so it falls fastest in warm conditions."
+        },
+        {
+          "id": "q6",
+          "q": "When is the harvest usually in the Barossa Valley?",
+          "options": [
+            "September to October",
+            "June to July",
+            "November to December",
+            "February to April"
+          ],
+          "answer": 3,
+          "explain": "In the Southern Hemisphere every stage comes about six months after the north, so harvest falls in February to April.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "id": "q7",
+          "q": "Why can late pruning help in a frost-prone vineyard?",
+          "options": [
+            "It can delay budburst by a few days",
+            "It kills insects that carry frost",
+            "It warms the soil",
+            "It makes each bud carry more fruit"
+          ],
+          "answer": 0,
+          "explain": "Pruning late can hold back budburst by a few days, which may be enough to escape a late frost."
+        },
+        {
+          "id": "q8",
+          "q": "How do growers in the coldest regions protect vines through winter?",
+          "options": [
+            "By spraying copper",
+            "By green harvesting",
+            "By hilling soil over the base of the vine, or burying it",
+            "By removing the leaves early"
+          ],
+          "answer": 2,
+          "explain": "Soil insulates the graft and buds from deep freezes that can kill a vine."
+        }
+      ],
+      "cards": [
+        {
+          "f": "Vitis vinifera",
+          "b": "The European vine species behind almost all quality wine. American species are used mainly as rootstocks."
+        },
+        {
+          "f": "At what temperature does the vine start to grow?",
+          "b": "Above an average of about 10°C. Below that it stays dormant."
+        },
+        {
+          "f": "Carbohydrate reserves",
+          "b": "Sugars stored in the trunk, arms and roots. They carry the vine through winter and feed the first spring growth."
+        },
+        {
+          "f": "Bud fruitfulness",
+          "b": "The flower clusters for a crop form in the buds the summer before, so one year's weather affects the next crop."
+        },
+        {
+          "f": "Why does too much nitrogen hurt quality?",
+          "b": "It drives leafy, vigorous growth at the expense of ripening fruit."
+        },
+        {
+          "f": "Winter freeze damage",
+          "b": "Deep cold of around -20°C or below can kill buds, canes or whole vines in very continental regions."
+        },
+        {
+          "f": "Cane pruning",
+          "b": "One or two long canes from last year are kept and tied along a wire. Guyot is the classic example."
+        },
+        {
+          "f": "Spur pruning",
+          "b": "Short spurs of two or three buds are kept on a permanent arm, the cordon."
+        },
+        {
+          "f": "Weeping or bleeding",
+          "b": "Sap dripping from pruning cuts in early spring, a sign the roots are active and budburst is near."
+        },
+        {
+          "f": "Budburst",
+          "b": "The buds open and shoots appear: March or April in the north, September or October in the south."
+        },
+        {
+          "f": "Two early-budding grapes at risk from spring frost",
+          "b": "Chardonnay and Pinot Noir. Late budders such as Cabernet Sauvignon are safer.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "f": "Flowering",
+          "b": "Late May or June in the north. Vine flowers are small and mostly self-pollinating."
+        },
+        {
+          "f": "Fruit set",
+          "b": "The stage when fertilised flowers become berries. Warm, dry, calm weather gives a good set."
+        },
+        {
+          "f": "Coulure",
+          "b": "Many flowers fail to set, so bunches are sparse and the crop small. Grenache, Merlot and Malbec are prone to it."
+        },
+        {
+          "f": "Millerandage",
+          "b": "A bunch with berries of very different sizes, including small seedless ones. Yield falls but concentration can rise."
+        },
+        {
+          "f": "The Burgundy 100 days rule",
+          "b": "Growers say harvest comes about 100 days after flowering. It is a rule of thumb, not a law.",
+          "place": "fr-inao-d2840"
+        },
+        {
+          "f": "Véraison",
+          "b": "The start of ripening: berries soften and black grapes change colour. July or August in the north."
+        },
+        {
+          "f": "What happens to sugar and acid after véraison?",
+          "b": "Sugar rises and acidity falls, malic acid most of all. Tannins ripen and green aromas fade."
+        },
+        {
+          "f": "Lignification of the shoots",
+          "b": "After véraison green shoots turn to brown wood (aoûtement in French), which lets them survive winter."
+        },
+        {
+          "f": "Southern Hemisphere harvest",
+          "b": "Usually February to April, about six months after the north, as in the Barossa Valley.",
+          "place": "au-world-barossa-valley"
+        }
+      ]
     },
     {
-     "h": "Winter dormancy and pruning",
-     "p": [
-      "After the leaves fall the vine is dormant. It needs this winter rest to complete its cycle, which is one reason vines struggle in the tropics. Dormant wood is hardy, but deep freezes of around -20°C or below can kill buds, canes or whole vines. In the coldest regions growers hill soil over the base of the vine, or bury whole vines, to protect them.",
-      "Winter is the time for pruning. It sets how many buds, and so how many shoots and bunches, the vine will carry, and it shapes the vine for the year ahead. Cane pruning keeps one or two long canes from the previous year. Spur pruning keeps several short spurs of two or three buds on a permanent arm, the cordon. Pruning late can delay budburst by a few days, which helps in frost-prone sites."
-     ],
-     "places": [
-      "us-ava-finger_lakes"
-     ]
+      "id": "vine-wine-climate-site",
+      "title": "Climate and site",
+      "minutes": 10,
+      "intro": "This lesson looks at what sets the warmth and the weather risk of a vineyard: continentality, latitude and altitude, water and wind, aspect and slope, and diurnal range. It then covers the main hazards, frost, hail and poor fruit set, and how growers respond to them.",
+      "sections": [
+        {
+          "h": "Continentality",
+          "p": [
+            "Continentality is the difference between the average temperature of the warmest month and that of the coldest month. Inland regions far from the sea, such as Chablis and Mendoza, have high continentality: hot summers, cold winters, and short springs and autumns. Coastal regions such as Bordeaux have low continentality, because the ocean evens out the year.",
+            "High continentality brings risks: spring frost after budburst, and a quick drop in temperature in autumn that can end ripening. It also gives a short, intense growing season, which suits early-ripening grapes."
+          ],
+          "places": [
+            "fr-inao-a146",
+            "ar-world-mendoza",
+            "fr-inao-a53"
+          ]
+        },
+        {
+          "h": "Latitude, altitude and diurnal range",
+          "p": [
+            "Most vineyards lie between about 30° and 50° of latitude. Towards the poles the sun is lower and the season shorter, though summer days are long. The Mosel at about 50°N and England, beyond 50°N, are close to the cool limit, where only early-ripening grapes succeed and sparkling wine is a natural fit.",
+            "Altitude cools a site by roughly 0.6°C for every 100 metres. In north-west Argentina, Salta has some of the highest vineyards in the world, a few above 3,000 metres, and many vineyards of the Valle de Uco in Mendoza lie above 1,000 metres. Height lets growers make fresh wines at low latitudes. The thin air also brings intense sunlight, which tends to give thick skins and deep colour.",
+            "Diurnal range is the gap between day and night temperatures. It is large in high, dry and inland places such as Salta and Mendoza and small near the sea. Warm days build sugar and colour, while cool nights slow the loss of acidity and aroma."
+          ],
+          "places": [
+            "de-eupdo-PDO-DE-A1270",
+            "gb-eupdo-PDO-GB-A1585",
+            "ar-world-salta",
+            "ar-world-valle-de-uco"
+          ]
+        },
+        {
+          "h": "Water and wind",
+          "p": [
+            "Large bodies of water warm up and cool down slowly. In spring they keep the air cool and delay budburst until frost risk has passed; in autumn they release stored heat and lengthen the season. In the Finger Lakes of New York, deep lakes such as Seneca Lake rarely freeze and soften the winter cold. On the Niagara Peninsula, air moving between Lake Ontario and the Niagara Escarpment lowers the risk of frost.",
+            "Water also brings humidity. The large, shallow Neusiedlersee in Austria, like the Ciron and the Garonne in Sauternes, gives autumn mists that favour noble rot. In the Médoc, the best gravel banks lie close to the Gironde estuary, which moderates temperature.",
+            "Wind can cool and dry a vineyard. Sea breezes and fog cool coastal California and Chile, and the mistral dries the Rhône valley after rain. Strong winds can also break young shoots and disturb flowering."
+          ],
+          "places": [
+            "us-ava-seneca_lake",
+            "ca-world-niagara-peninsula",
+            "at-eupdo-PDO-AT-A0219",
+            "fr-inao-a75",
+            "fr-inao-a53"
+          ]
+        },
+        {
+          "h": "Aspect, slope and soil warmth",
+          "p": [
+            "Aspect is the direction a slope faces. In the Northern Hemisphere south-facing slopes take the most sun; in the Southern Hemisphere north-facing ones do. Between Wiesbaden and Rüdesheim the Rhine flows west, so the Rheingau vineyards on its north bank face south. The Côte d'Or faces east and south-east and warms up early in the day.",
+            "A slope turned towards the sun receives its rays at a steeper angle than flat ground, so each square metre gets more energy. Slopes also drain water away and let cold air flow down to the valley floor. On the Mosel, the Bremmer Calmont, with gradients of up to about 60%, is one of the steepest vineyards in Europe, and its dark slate absorbs heat and drains well.",
+            "Steep slopes erode and are costly to farm. In the Douro, the Wachau and Côte Rôtie, terraces or walls hold the soil, and most work is done by hand."
+          ],
+          "places": [
+            "de-eupdo-PDO-DE-A1273",
+            "fr-inao-d2840",
+            "de-rlp-440209",
+            "pt-eupdo-PDO-PT-A1539",
+            "at-eupdo-PDO-AT-A0205",
+            "fr-inao-a272"
+          ]
+        },
+        {
+          "h": "Spring frost",
+          "p": [
+            "Spring frost kills young shoots after budburst. There are two kinds. Radiation frost forms on clear, still nights, when the ground loses heat to the sky and cold air settles in low spots under a layer of warmer air. Advection frost comes when a mass of freezing air moves in on the wind; it is much harder to fight.",
+            "Against radiation frost, wind machines and helicopters mix the warmer air above down into the vines. Heaters and candles warm the rows. Sprinklers coat the buds in ice, which gives off heat as the water freezes and holds them near 0°C. Chablis relies on heaters and sprinklers; wind machines are common in Marlborough and Central Otago. Planting on slopes, choosing late-budding grapes and pruning late all lower the risk from the start."
+          ],
+          "places": [
+            "fr-inao-a146",
+            "nz-world-marlborough",
+            "nz-world-central-otago"
+          ]
+        },
+        {
+          "h": "Hail, poor fruit set and other hazards",
+          "p": [
+            "Hail can strip leaves, break shoots and split berries in minutes. The damage is local and hard to predict. In Mendoza many growers cover the rows with hail nets; elsewhere growers rely on insurance and on owning vines in several places.",
+            "Cold, wet or windy weather at flowering causes coulure and millerandage. Growers respond by choosing varieties and clones less prone to poor set and by keeping vine vigour in balance. Other hazards are drought, heatwaves that scorch exposed berries, rain at harvest that brings rot, and smoke from wildfires, which can taint the grapes."
+          ],
+          "places": [
+            "ar-world-mendoza"
+          ]
+        }
+      ],
+      "key": [
+        "Continentality is the gap between the warmest and coldest month: high in Chablis and Mendoza, low in Bordeaux.",
+        "Altitude cools about 0.6°C per 100 metres. Salta has vineyards above 3,000 metres; large diurnal range keeps acidity.",
+        "Lakes and seas delay budburst, soften winter and lengthen autumn: Seneca Lake, Lake Ontario. Shallow Neusiedlersee gives mists.",
+        "Sun-facing slopes catch more energy and drain cold air. The Rheingau faces south where the Rhine runs west.",
+        "Radiation frost (clear, still nights) is fought with wind machines, heaters and sprinklers. Advection frost is a moving cold air mass.",
+        "Hail nets in Mendoza; coulure and millerandage from bad weather at flowering; smoke taint from wildfires."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What does continentality measure?",
+          "options": [
+            "Height above sea level",
+            "The gap between the average temperatures of the warmest and coldest months",
+            "The difference between day and night temperatures",
+            "The rainfall of the growing season"
+          ],
+          "answer": 1,
+          "explain": "Continentality compares the warmest and coldest months. Diurnal range is the day to night gap."
+        },
+        {
+          "id": "q2",
+          "q": "Why do most Rheingau vineyards face south?",
+          "options": [
+            "The Rhine flows west for a stretch, so its north bank faces south",
+            "The Mosel joins the Rhine there",
+            "The vineyards lie on islands in the river",
+            "The Taunus hills block the northern sun"
+          ],
+          "answer": 0,
+          "explain": "Between Wiesbaden and Rüdesheim the Rhine runs west, giving the vineyards of its north bank a southern aspect.",
+          "place": "de-eupdo-PDO-DE-A1273"
+        },
+        {
+          "id": "q3",
+          "q": "Which type of frost can wind machines NOT protect against?",
+          "options": [
+            "Radiation frost",
+            "Frost on a clear, still night",
+            "Frost in a valley hollow under an inversion",
+            "Advection frost"
+          ],
+          "answer": 3,
+          "explain": "Wind machines need warmer air above the vines to mix down. In advection frost the whole air mass is freezing."
+        },
+        {
+          "id": "q4",
+          "q": "How do deep lakes such as Seneca Lake help Finger Lakes vineyards?",
+          "options": [
+            "They raise the sugar of the grapes",
+            "They soften winter cold and delay budburst in spring",
+            "They cause noble rot every year",
+            "They block all wind"
+          ],
+          "answer": 1,
+          "explain": "Deep water rarely freezes and gives off stored heat in winter, while cool water in spring holds back budburst.",
+          "place": "us-ava-seneca_lake"
+        },
+        {
+          "id": "q5",
+          "q": "Which Mosel vineyard, at Bremm, is one of the steepest in Europe?",
+          "options": [
+            "Juffer",
+            "Sonnenuhr",
+            "Calmont",
+            "Doctor"
+          ],
+          "answer": 2,
+          "explain": "The Bremmer Calmont has gradients of up to about 60%.",
+          "place": "de-rlp-440209"
+        },
+        {
+          "id": "q6",
+          "q": "Which region has some of the highest vineyards in the world, a few above 3,000 metres?",
+          "options": [
+            "Marlborough",
+            "Salta",
+            "Mosel",
+            "Coonawarra"
+          ],
+          "answer": 1,
+          "explain": "Salta in north-west Argentina has some of the world's highest vineyards.",
+          "place": "ar-world-salta"
+        },
+        {
+          "id": "q7",
+          "q": "What creates the autumn mists that favour noble rot by the Neusiedlersee?",
+          "options": [
+            "A cold ocean current",
+            "Snowmelt from the Alps",
+            "A large, shallow lake",
+            "Fog from the Atlantic"
+          ],
+          "answer": 2,
+          "explain": "The large, shallow Neusiedlersee gives humid autumn mornings that suit botrytis.",
+          "place": "at-eupdo-PDO-AT-A0219"
+        },
+        {
+          "id": "q8",
+          "q": "Why does a slope facing the sun receive more heat than flat land?",
+          "options": [
+            "The sun's rays strike it at a steeper angle, so each square metre gets more energy",
+            "Its soil is always darker",
+            "It is always higher",
+            "It holds more water"
+          ],
+          "answer": 0,
+          "explain": "The more directly the rays strike the ground, the more energy each square metre receives."
+        }
+      ],
+      "cards": [
+        {
+          "f": "Continentality",
+          "b": "The gap between the average temperatures of the warmest and coldest months. High inland, low by the sea."
+        },
+        {
+          "f": "A classic highly continental region",
+          "b": "Chablis: cold winters, warm summers, short seasons and a high risk of spring frost.",
+          "place": "fr-inao-a146"
+        },
+        {
+          "f": "Latitude band of most vineyards",
+          "b": "Roughly 30° to 50° in both hemispheres."
+        },
+        {
+          "f": "How much does temperature fall with altitude?",
+          "b": "About 0.6°C for every 100 metres."
+        },
+        {
+          "f": "Salta",
+          "b": "North-west Argentina, with some of the world's highest vineyards, a few above 3,000 metres.",
+          "place": "ar-world-salta"
+        },
+        {
+          "f": "Valle de Uco",
+          "b": "A high subregion of Mendoza at the foot of the Andes, with many vineyards above 1,000 metres.",
+          "place": "ar-world-valle-de-uco"
+        },
+        {
+          "f": "Diurnal range",
+          "b": "The gap between day and night temperatures. Cool nights keep acidity and aroma; warm days build sugar."
+        },
+        {
+          "f": "How do lakes protect vines in spring?",
+          "b": "Cool water keeps spring air cool and delays budburst until the frost risk has passed."
+        },
+        {
+          "f": "Seneca Lake",
+          "b": "A deep Finger Lakes lake in New York that rarely freezes and softens the winter cold for nearby vines.",
+          "place": "us-ava-seneca_lake"
+        },
+        {
+          "f": "Niagara Peninsula",
+          "b": "Ontario region where Lake Ontario and the Niagara Escarpment keep air moving and lower frost risk.",
+          "place": "ca-world-niagara-peninsula"
+        },
+        {
+          "f": "Neusiedlersee",
+          "b": "A large, shallow Austrian lake whose autumn mists favour noble rot.",
+          "place": "at-eupdo-PDO-AT-A0219"
+        },
+        {
+          "f": "Aspect",
+          "b": "The direction a slope faces. South is warmest in the Northern Hemisphere, north in the Southern."
+        },
+        {
+          "f": "Rheingau aspect",
+          "b": "The Rhine flows west from Wiesbaden to Rüdesheim, so the vineyards on its north bank face south.",
+          "place": "de-eupdo-PDO-DE-A1273"
+        },
+        {
+          "f": "Bremmer Calmont",
+          "b": "A Mosel slate slope at Bremm with gradients of up to about 60%, one of Europe's steepest vineyards.",
+          "place": "de-rlp-440209"
+        },
+        {
+          "f": "Why does slate help Mosel Riesling?",
+          "b": "The dark stone absorbs heat and drains well, adding warmth in a cool climate.",
+          "place": "de-eupdo-PDO-DE-A1270"
+        },
+        {
+          "f": "Radiation frost",
+          "b": "Forms on clear, still nights as the ground loses heat and cold air pools in low spots under warmer air."
+        },
+        {
+          "f": "Advection frost",
+          "b": "A moving mass of freezing air. Wind machines cannot help, as there is no warmer air above to mix in."
+        },
+        {
+          "f": "Wind machines",
+          "b": "Large fans that pull warmer air from above an inversion down to the vines. Common in Marlborough.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "f": "Hail nets",
+          "b": "Netting over the rows that shields vines from hail, widely used in Mendoza.",
+          "place": "ar-world-mendoza"
+        },
+        {
+          "f": "Smoke taint",
+          "b": "Off-flavours from wildfire smoke absorbed by grape skins, a growing risk in warm, dry regions."
+        }
+      ]
     },
     {
-     "h": "Budburst and shoot growth",
-     "p": [
-      "In early spring sap drips from the pruning cuts, a sign called weeping or bleeding. Soon the buds swell and open. Budburst comes once average temperatures pass about 10°C: March or April in the Northern Hemisphere, September or October in the Southern. Early-budding grapes such as Chardonnay and Pinot Noir are more exposed to spring frost than late budders such as Cabernet Sauvignon, which is why frost is a constant fear in Chablis.",
-      "For the first weeks the young shoots live on the stored reserves. Once the leaves are large enough, photosynthesis takes over. In warm weather shoots grow several centimetres a day, and growers start tying them in, removing extra shoots and managing the canopy."
-     ],
-     "places": [
-      "fr-inao-a146"
-     ]
+      "id": "vine-wine-vineyard",
+      "title": "Vineyard choices",
+      "minutes": 10,
+      "intro": "This lesson covers the choices a grower makes: which rootstock to plant after phylloxera, how to train and trellis the vine, how to manage the canopy and the yield, whether to farm organically or biodynamically, and when and how to pick.",
+      "sections": [
+        {
+          "h": "Phylloxera and rootstocks",
+          "p": [
+            "Phylloxera is a tiny insect, related to aphids, that feeds on vine roots. It came from North America, was identified in France in 1868 and then spread through almost every wine region. The roots of Vitis vinifera have no defence against it, and infected vines die within a few years.",
+            "The lasting answer is grafting: a vinifera variety is joined onto a rootstock bred from American species such as Vitis riparia, Vitis rupestris and Vitis berlandieri, or from crosses between them. Rootstocks also do other jobs: tolerating lime, drought or salt, resisting nematodes, and raising or lowering vigour. Berlandieri crosses such as 41 B tolerate lime and are widely used on the chalk of Champagne.",
+            "A rootstock must be truly resistant. In Napa Valley and Sonoma the rootstock AXR1 failed against phylloxera in the 1980s and 1990s, and many vineyards had to be replanted. A few places have never had phylloxera or keep it out, so vines still grow on their own roots: Chile, South Australia with the Barossa Valley, and sandy soils such as those of Colares in Portugal."
+          ],
+          "places": [
+            "fr-eupdo-PDO-FR-A1359",
+            "us-ava-napa_valley",
+            "au-world-barossa-valley",
+            "pt-eupdo-PDO-PT-A1461"
+          ]
+        },
+        {
+          "h": "Old vines",
+          "p": [
+            "Ungrafted vines can live a very long time. The Barossa Valley has Shiraz and other vines planted in the 19th century. Its Old Vine Charter, introduced in 2009, names four tiers: Old Vine (at least 35 years), Survivor (at least 70), Centenarian (at least 100) and Ancestor (at least 125).",
+            "Old vines usually give smaller crops of smaller berries, and many growers believe their deep roots make them steadier in dry or wet years. Most countries have no legal definition of old vines, so terms such as vieilles vignes are not regulated."
+          ],
+          "places": [
+            "au-world-barossa-valley"
+          ]
+        },
+        {
+          "h": "Training and trellising",
+          "p": [
+            "Training sets the shape of the vine; trellising is the system of posts and wires that holds it. Guyot is a cane-pruned system named after the 19th century French scientist Jules Guyot: one cane (single Guyot) or two (double Guyot) are laid along a low wire. It is the classic system of Bourgogne and much of Bordeaux. Cordon training keeps a permanent arm along the wire with short spurs. Champagne allows four pruning systems: Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
+            "Gobelet, or bush vine, needs no wires: a short trunk with a few arms and spurs, shaped like an open goblet. It suits hot, dry, windy sites and low vigour, as in Châteauneuf-du-Pape, Beaujolais and the old vineyards of Swartland. On Pantelleria, the traditional cultivation of low head-trained alberello vines is listed by UNESCO as intangible cultural heritage.",
+            "Pergolas raise the canopy on a high frame, with the grapes hanging below the leaves. They keep fruit away from damp ground and let air flow through. They are traditional in Trentino, Alto Adige and Valpolicella, and in Rías Baixas, where granite posts carry high pergolas called parras. On the steep Mosel, many old vines are trained to a single stake, with their canes bent into a heart shape."
+          ],
+          "places": [
+            "fr-inao-d2840",
+            "fr-eupdo-PDO-FR-A1359",
+            "fr-inao-a267",
+            "za-world-swartland",
+            "it-eupdo-PDO-IT-A0792",
+            "it-eupdo-PDO-IT-A0754",
+            "it-eupdo-PDO-IT-A0293",
+            "es-eupdo-PDO-ES-A1119",
+            "de-eupdo-PDO-DE-A1270"
+          ]
+        },
+        {
+          "h": "Canopy and yield",
+          "p": [
+            "Canopy management controls the leaves around the fruit through shoot positioning, trimming, leaf removal and shoot thinning. In vertical shoot positioning (VSP), the most common modern trellis, shoots are tied upright between pairs of wires to form a narrow wall of leaves. Split canopies such as the Lyre, the Geneva Double Curtain and Scott Henry divide very vigorous vines so that light and air reach more fruit.",
+            "An open canopy lets the sun ripen the grapes, lowers green flavours and reduces fungal disease. Too much exposure in hot places can sunburn the berries, so there growers leave more leaves on the sunny side.",
+            "In Europe yield is usually measured in hectolitres of wine per hectare (hl/ha); elsewhere often in tonnes of grapes per hectare. The rules vary widely: Prosecco DOC allows up to 18 tonnes per hectare, while Sauternes allows just 25 hl/ha. Growers lower yields by pruning to fewer buds and by green harvesting, cutting off bunches in summer."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A0516",
+            "fr-inao-a75"
+          ]
+        },
+        {
+          "h": "Organic and biodynamic",
+          "p": [
+            "Organic viticulture bans synthetic fertilisers, herbicides and most synthetic pesticides. Growers feed the soil with compost and cover crops and protect the vines mainly with sulphur and copper. In the EU, copper in organic farming is limited to 28 kg per hectare over seven years, an average of 4 kg a year. Since 2012, EU rules for organic wine also cover the winery, with lower limits for sulphur dioxide: 100 mg/L for dry reds and 150 mg/L for dry whites and rosés.",
+            "Biodynamics grew from lectures given by Rudolf Steiner in 1924. It treats the farm as a single living system and adds special preparations sprayed in tiny doses, such as horn manure (500) on the soil and horn silica (501) on the leaves. Many biodynamic growers follow a calendar of lunar and planetary rhythms. Demeter and Biodyvin are the best-known certifiers.",
+            "Sustainability schemes are broader and usually less strict. They cover energy, water and biodiversity as well as sprays, and may allow some synthetic products."
+          ]
+        },
+        {
+          "h": "When and how to pick",
+          "p": [
+            "The picking date sets the style. Growers measure sugar with a refractometer, in Brix, Baumé or Oechsle, test acidity and pH, and taste skins and seeds for ripe tannin. Grapes for sparkling wine are picked early for high acidity; grapes for full-bodied reds later.",
+            "Machine harvesting is fast and cheap and can work at night, when the grapes are cool, which matters in hot regions. Hand picking allows selection and keeps bunches whole. Champagne requires whole bunches at the press, which in practice means picking by hand. Sauternes requires hand picking in several passes, called tries, to take only the nobly rotten grapes."
+          ],
+          "places": [
+            "fr-eupdo-PDO-FR-A1359",
+            "fr-inao-a75"
+          ]
+        }
+      ],
+      "key": [
+        "Phylloxera kills vinifera roots. Grafting onto American rootstocks (riparia, rupestris, berlandieri) is the answer.",
+        "AXR1 failed in Napa and Sonoma in the 1980s and 1990s. Chile, South Australia and the sands of Colares grow ungrafted vines.",
+        "Barossa Old Vine Charter (2009): Old Vine 35, Survivor 70, Centenarian 100, Ancestor 125 years.",
+        "Guyot is cane pruned, cordon is spur pruned, gobelet is a free-standing bush vine, pergola raises the canopy overhead.",
+        "Champagne allows four systems: Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
+        "Organic: no synthetic fertilisers or herbicides; EU copper limit 28 kg/ha over seven years. Biodynamics adds Steiner's preparations."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "In which year was phylloxera identified in France?",
+          "options": [
+            "1755",
+            "1868",
+            "1935",
+            "1976"
+          ],
+          "answer": 1,
+          "explain": "Phylloxera was identified in France in 1868 and went on to destroy most European vineyards."
+        },
+        {
+          "id": "q2",
+          "q": "Which American vine species is valued in rootstocks for tolerating lime-rich soils such as Champagne's chalk?",
+          "options": [
+            "Vitis riparia",
+            "Vitis labrusca",
+            "Vitis berlandieri",
+            "Vitis vinifera"
+          ],
+          "answer": 2,
+          "explain": "Berlandieri crosses such as 41 B tolerate lime and are widely used in Champagne.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q3",
+          "q": "Which rootstock failed against phylloxera in Napa Valley in the 1980s and 1990s?",
+          "options": [
+            "41 B",
+            "SO4",
+            "110 Richter",
+            "AXR1"
+          ],
+          "answer": 3,
+          "explain": "AXR1 was not resistant enough, and many Napa and Sonoma vineyards had to be replanted.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "id": "q4",
+          "q": "Why do the vines of Colares in Portugal still grow on their own roots?",
+          "options": [
+            "They grow in deep sand, where phylloxera cannot thrive",
+            "They are sprayed with copper",
+            "They are grafted onto Vitis berlandieri",
+            "The climate is too hot for the insect"
+          ],
+          "answer": 0,
+          "explain": "Phylloxera cannot spread through deep sand, so Colares escaped it.",
+          "place": "pt-eupdo-PDO-PT-A1461"
+        },
+        {
+          "id": "q5",
+          "q": "Under the Barossa Old Vine Charter, how old must a Centenarian vine be?",
+          "options": [
+            "At least 100 years",
+            "At least 35 years",
+            "At least 70 years",
+            "At least 125 years"
+          ],
+          "answer": 0,
+          "explain": "The tiers are Old Vine 35, Survivor 70, Centenarian 100 and Ancestor 125 years.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "id": "q6",
+          "q": "Which training system has no wires and forms a free-standing bush?",
+          "options": [
+            "Guyot",
+            "Gobelet",
+            "Cordon de Royat",
+            "Pergola"
+          ],
+          "answer": 1,
+          "explain": "Gobelet, the bush vine, suits hot, dry, windy sites such as Châteauneuf-du-Pape.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "id": "q7",
+          "q": "Which is NOT one of the four pruning systems allowed in Champagne?",
+          "options": [
+            "Chablis",
+            "Cordon de Royat",
+            "Vallée de la Marne",
+            "Gobelet"
+          ],
+          "answer": 3,
+          "explain": "Champagne allows Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q8",
+          "q": "What is the EU limit on copper in organic vineyards?",
+          "options": [
+            "10 kg per hectare each year",
+            "No copper is allowed",
+            "100 kg per hectare over five years",
+            "28 kg per hectare over seven years"
+          ],
+          "answer": 3,
+          "explain": "Organic growers may use copper against downy mildew, but no more than 28 kg per hectare over seven years."
+        }
+      ],
+      "cards": [
+        {
+          "f": "Phylloxera",
+          "b": "Daktulosphaira vitifoliae, a tiny North American insect that feeds on vine roots and kills vinifera vines."
+        },
+        {
+          "f": "When was phylloxera identified in France?",
+          "b": "In 1868. It went on to destroy most of Europe's vineyards."
+        },
+        {
+          "f": "Three American species used in rootstocks",
+          "b": "Vitis riparia, Vitis rupestris and Vitis berlandieri, often crossed with each other."
+        },
+        {
+          "f": "Rootstock for chalky soils",
+          "b": "Berlandieri crosses such as 41 B tolerate lime and are widely used in Champagne.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "f": "Besides phylloxera, what can a rootstock control?",
+          "b": "Vigour, tolerance of drought, lime and salt, and resistance to nematodes."
+        },
+        {
+          "f": "AXR1",
+          "b": "A rootstock that failed against phylloxera in Napa and Sonoma in the 1980s and 1990s, forcing wide replanting.",
+          "place": "us-ava-napa_valley"
+        },
+        {
+          "f": "Colares",
+          "b": "Portuguese DOC on the Atlantic coast near Sintra where vines grow ungrafted in deep sand.",
+          "place": "pt-eupdo-PDO-PT-A1461"
+        },
+        {
+          "f": "Barossa Old Vine Charter",
+          "b": "Since 2009: Old Vine 35+, Survivor 70+, Centenarian 100+ and Ancestor 125+ years.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "f": "Guyot",
+          "b": "Cane pruning named after Jules Guyot: one cane (single) or two (double) on a low wire. Classic in Bourgogne."
+        },
+        {
+          "f": "Cordon de Royat",
+          "b": "A spur-pruned cordon, one of the four pruning systems allowed in Champagne.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "f": "Gobelet",
+          "b": "A free-standing bush vine with a short trunk and spurs, suited to hot, dry, windy sites like Châteauneuf-du-Pape.",
+          "place": "fr-inao-a267"
+        },
+        {
+          "f": "Alberello of Pantelleria",
+          "b": "Low head-trained bush vines whose traditional cultivation UNESCO listed as intangible heritage in 2014.",
+          "place": "it-eupdo-PDO-IT-A0792"
+        },
+        {
+          "f": "Pergola",
+          "b": "A high overhead frame with grapes hanging below the leaves. Traditional in Trentino, Alto Adige and Valpolicella.",
+          "place": "it-eupdo-PDO-IT-A0754"
+        },
+        {
+          "f": "Parra",
+          "b": "The high pergola on granite posts traditional in Rías Baixas, which keeps Albariño airy in a wet climate.",
+          "place": "es-eupdo-PDO-ES-A1119"
+        },
+        {
+          "f": "Vertical shoot positioning (VSP)",
+          "b": "Shoots tied upright between pairs of wires to form a narrow wall of leaves. The most common modern trellis."
+        },
+        {
+          "f": "Green harvesting",
+          "b": "Cutting off some bunches in summer to lower the yield and help the rest ripen."
+        },
+        {
+          "f": "Yield units",
+          "b": "Europe uses hectolitres per hectare. Sauternes allows 25 hl/ha; Prosecco DOC up to 18 tonnes per hectare.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "f": "EU copper limit for organic vineyards",
+          "b": "28 kg per hectare over seven years, an average of 4 kg a year."
+        },
+        {
+          "f": "Biodynamic preparations 500 and 501",
+          "b": "Horn manure (500), sprayed on the soil, and horn silica (501), sprayed on the leaves, in tiny doses."
+        },
+        {
+          "f": "Tries",
+          "b": "Successive passes by pickers to take only nobly rotten grapes. Required in Sauternes.",
+          "place": "fr-inao-a75"
+        }
+      ]
     },
     {
-     "h": "Flowering and fruit set",
-     "p": [
-      "Flowering comes some weeks after budburst, usually in late May or June in the north. Vine flowers are small and mostly self-pollinating. Flowers that are fertilised become berries, a stage called fruit set. Warm, dry and calm weather gives a good set; cold, rain or strong wind give a poor one.",
-      "A poor set reduces the crop. Coulure is when many flowers fail to set, so bunches are sparse; Grenache, Merlot and Malbec are prone to it. Millerandage is when a bunch sets berries of very different sizes, including small seedless ones. In Bourgogne growers say harvest comes about 100 days after flowering, a rule of thumb rather than a law."
-     ],
-     "places": [
-      "fr-inao-d2840"
-     ]
+      "id": "vine-wine-white-rose",
+      "title": "White and rosé winemaking",
+      "minutes": 10,
+      "intro": "This lesson follows white and rosé grapes from the press to the bottle: pressing and settling, cool fermentation, the choice of malolactic conversion, lees and bâtonnage, oak or steel, skin contact and orange wine, and the three ways to make rosé.",
+      "sections": [
+        {
+          "h": "From grape to juice",
+          "p": [
+            "For white wine, speed and care matter, because the juice must stay fresh and free of bitter phenolics. Grapes may be crushed and destemmed, or pressed as whole bunches. Whole-bunch pressing is gentler and gives clearer juice with fewer phenolics, and Champagne and most fine sparkling wine use it.",
+            "Pneumatic presses squeeze the grapes slowly with an inflating membrane. The free-run juice, which flows before much pressure is applied, is the finest. Juice pressed out at higher pressure carries more phenolics and is kept apart or used for lesser wines.",
+            "Many winemakers protect the juice from oxygen with cold, sulphur dioxide and inert gas. This reductive handling keeps fresh fruit aromas, as in Marlborough Sauvignon Blanc. Others let the juice brown a little on purpose, so that the phenolics that would brown later drop out early."
+          ],
+          "places": [
+            "fr-eupdo-PDO-FR-A1359",
+            "nz-world-marlborough"
+          ]
+        },
+        {
+          "h": "Settling and fermentation",
+          "p": [
+            "Before fermentation the juice is clarified. In settling, or débourbage, it is chilled and left to stand, often overnight, so the solids sink and the clear juice can be drawn off. Some winemakers keep a little of the solids for texture and complexity.",
+            "Whites are usually fermented cool, at about 12 to 22°C, which keeps fruity and floral aromas. Stainless steel tanks with cooling jackets make this easy. Large old casks are traditional too: in the Mosel the Fuder holds about 1,000 litres and adds little oak flavour.",
+            "Fermentation can be stopped early to keep some sweetness, by chilling the wine, adding sulphur dioxide and filtering out the yeast. Many fruity Mosel Rieslings are made this way."
+          ],
+          "places": [
+            "de-eupdo-PDO-DE-A1270"
+          ]
+        },
+        {
+          "h": "Malolactic conversion",
+          "p": [
+            "Malolactic conversion is carried out by lactic acid bacteria, mainly Oenococcus oeni, not by yeast. It turns sharp malic acid into softer lactic acid, raises the pH slightly and can add the buttery aroma of diacetyl. It also makes the wine more stable, because the bacteria cannot start up later in the bottle.",
+            "For whites it is a style choice. Winemakers often allow it for full-bodied Chardonnay, as in Meursault, and block it for crisp, aromatic wines such as Riesling and Sauvignon Blanc. They block it with low temperature, sulphur dioxide and filtration, or let only part of the blend go through it."
+          ],
+          "places": [
+            "fr-inao-a204"
+          ]
+        },
+        {
+          "h": "Lees, bâtonnage and oak",
+          "p": [
+            "After fermentation the dead yeast cells, the lees, settle out. Gross lees are coarse and usually removed. Fine lees can stay in contact with the wine for months, adding texture, a creamy or bready character and some protection from oxidation.",
+            "Muscadet sur lie stays on its fine lees through the winter and is bottled straight from them, which gives a fuller, slightly yeasty wine, sometimes with a faint prickle. In Bourgogne, Chardonnay fermented in barrel is often stirred, a practice called bâtonnage, to lift the lees back into the wine.",
+            "Oak changes a white in two ways. Fermenting in barrel integrates the oak and gives a creamy texture; ageing in barrel adds vanilla, toast and nutty notes and allows slow oxygen exchange. New barrels give the most flavour, older ones mainly texture. Many whites see no oak at all. Hunter Valley Semillon, picked early and made in steel, is light and lemony when young and turns toasty and honeyed after years in bottle."
+          ],
+          "places": [
+            "fr-inao-a100",
+            "fr-inao-a204",
+            "au-world-hunter-valley"
+          ]
+        },
+        {
+          "h": "Skin contact and orange wine",
+          "p": [
+            "A few hours of cold skin contact before pressing can draw more aroma from varieties such as Sauvignon Blanc or Muscat, at the risk of extra phenolics.",
+            "Orange or amber wine takes this much further. White grapes ferment and macerate on their skins for days, weeks or months, like a red. The wines are deeper in colour, with some tannin and flavours of dried fruit, nuts and tea. In Georgia, especially Kakheti, the method uses large clay jars called qvevri, buried in the ground; UNESCO listed it as intangible heritage in 2013. Collio in Friuli and Goriška Brda across the border in Slovenia are modern centres of the style."
+          ],
+          "places": [
+            "ge-world-kakheti",
+            "it-eupdo-PDO-IT-A0908",
+            "si-eupdo-PDO-SI-A0270"
+          ]
+        },
+        {
+          "h": "Making rosé",
+          "p": [
+            "Rosé takes its colour from brief contact with the skins of black grapes. In direct pressing, the grapes are pressed at once and pick up only a faint colour. Many of the palest rosés of Côtes de Provence are made this way, often from Grenache, Cinsault and Syrah.",
+            "In short maceration, juice and skins stay together for a few hours to about two days before the juice is drawn off and fermented like a white. Tavel, a southern Rhône appellation for rosé only, makes deeper, fuller rosés this way. In saignée, some juice is bled from a tank of black grapes soon after crushing. It becomes rosé, and the red wine left behind is more concentrated.",
+            "In the EU, blending red and white wine to make rosé is generally not allowed. Rosé Champagne, which may blend in still red wine, is the classic exception."
+          ],
+          "places": [
+            "fr-inao-a297",
+            "fr-inao-a287",
+            "fr-eupdo-PDO-FR-A1359"
+          ]
+        }
+      ],
+      "key": [
+        "Whole-bunch pressing is gentle and gives clear juice low in phenolics; free-run juice is the finest.",
+        "Débourbage settles the juice before a cool fermentation of about 12 to 22°C.",
+        "Malolactic conversion (Oenococcus oeni) softens acidity and can add buttery diacetyl. It is optional for whites.",
+        "Muscadet sur lie is bottled from its fine lees after one winter; bâtonnage stirs the lees in barrel.",
+        "Orange wine ferments white grapes on their skins; Georgia's qvevri method was listed by UNESCO in 2013.",
+        "Rosé: direct pressing (Côtes de Provence), short maceration (Tavel) or saignée."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Why is whole-bunch pressing used for Champagne and fine sparkling wine?",
+          "options": [
+            "It extracts more colour",
+            "It is gentle and gives clear juice low in phenolics",
+            "It raises the sugar",
+            "It speeds up malolactic conversion"
+          ],
+          "answer": 1,
+          "explain": "Pressing whole bunches gently limits phenolics and colour, which matters when black grapes are pressed for white sparkling wine.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q2",
+          "q": "What is débourbage?",
+          "options": [
+            "Stirring the lees in barrel",
+            "Adding sugar before fermentation",
+            "Removing the yeast after the second fermentation",
+            "Letting chilled juice settle so solids sink before fermentation"
+          ],
+          "answer": 3,
+          "explain": "Settling clarifies the juice so that a clean fermentation follows."
+        },
+        {
+          "id": "q3",
+          "q": "Which organism carries out most malolactic conversions?",
+          "options": [
+            "Saccharomyces cerevisiae",
+            "Botrytis cinerea",
+            "Oenococcus oeni",
+            "Brettanomyces"
+          ],
+          "answer": 2,
+          "explain": "Lactic acid bacteria, mainly Oenococcus oeni, turn malic acid into lactic acid. Saccharomyces is the wine yeast."
+        },
+        {
+          "id": "q4",
+          "q": "How is Muscadet sur lie made?",
+          "options": [
+            "It ages in new oak for two years",
+            "It is fermented on its skins",
+            "It is sweetened with grape must",
+            "It stays on its fine lees through the winter and is bottled from them"
+          ],
+          "answer": 3,
+          "explain": "The wine is not racked off its fine lees before bottling, which adds texture and a yeasty note.",
+          "place": "fr-inao-a100"
+        },
+        {
+          "id": "q5",
+          "q": "In which country is wine fermented in buried clay jars called qvevri?",
+          "options": [
+            "Georgia",
+            "Greece",
+            "Portugal",
+            "Slovenia"
+          ],
+          "answer": 0,
+          "explain": "The qvevri method of Georgia, strong in Kakheti, was listed by UNESCO in 2013.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "id": "q6",
+          "q": "Which southern Rhône appellation is for rosé only?",
+          "options": [
+            "Lirac",
+            "Gigondas",
+            "Tavel",
+            "Vacqueyras"
+          ],
+          "answer": 2,
+          "explain": "Tavel makes only rosé, deeper in colour than Provence rosé thanks to maceration.",
+          "place": "fr-inao-a287"
+        },
+        {
+          "id": "q7",
+          "q": "What is saignée?",
+          "options": [
+            "Pressing black grapes at once",
+            "Bleeding off some juice from a tank of black grapes",
+            "Blending red and white wine",
+            "Ageing rosé on its lees"
+          ],
+          "answer": 1,
+          "explain": "The bled juice becomes rosé and the red left in the tank is more concentrated."
+        },
+        {
+          "id": "q8",
+          "q": "Which white wine is traditionally made without oak and ages for years to toasty, honeyed flavours?",
+          "options": [
+            "Hunter Valley Semillon",
+            "Meursault",
+            "Montrachet",
+            "Corton-Charlemagne"
+          ],
+          "answer": 0,
+          "explain": "Hunter Valley Semillon is picked early and made in steel, then develops toast and honey in bottle.",
+          "place": "au-world-hunter-valley"
+        }
+      ],
+      "cards": [
+        {
+          "f": "Whole-bunch pressing",
+          "b": "Pressing uncrushed bunches. Gentle, with clear juice low in phenolics. Standard in Champagne.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "f": "Free-run juice",
+          "b": "Juice that flows before much pressure is applied. The finest and lowest in phenolics."
+        },
+        {
+          "f": "Saignée",
+          "b": "Juice bled from a tank of black grapes after brief contact. It makes rosé and concentrates the red left behind."
+        },
+        {
+          "f": "Reductive winemaking",
+          "b": "Protecting juice and wine from oxygen with cold, sulphur dioxide and inert gas to keep fresh fruit aromas."
+        },
+        {
+          "f": "Débourbage",
+          "b": "Settling: chilled juice rests, often overnight, so solids sink and clear juice can be drawn off."
+        },
+        {
+          "f": "White fermentation temperature",
+          "b": "Usually about 12 to 22°C, cool enough to keep fruity and floral aromas."
+        },
+        {
+          "f": "Fuder",
+          "b": "The traditional Mosel cask of about 1,000 litres. Old Fuder add little oak flavour.",
+          "place": "de-eupdo-PDO-DE-A1270"
+        },
+        {
+          "f": "How can fermentation be stopped to keep sweetness?",
+          "b": "By chilling, adding sulphur dioxide and filtering out the yeast."
+        },
+        {
+          "f": "Malolactic conversion",
+          "b": "Lactic acid bacteria turn sharp malic acid into softer lactic acid, which can add buttery notes."
+        },
+        {
+          "f": "Diacetyl",
+          "b": "A by-product of malolactic conversion that smells of butter."
+        },
+        {
+          "f": "How is malolactic conversion blocked?",
+          "b": "With low temperatures, sulphur dioxide and filtration that stop or remove the bacteria."
+        },
+        {
+          "f": "Gross lees and fine lees",
+          "b": "Gross lees are coarse solids removed early. Fine lees are small yeast particles that may stay to add texture."
+        },
+        {
+          "f": "Muscadet sur lie",
+          "b": "Stays on its fine lees for one winter and is bottled from them, giving a fuller, slightly yeasty wine.",
+          "place": "fr-inao-a100"
+        },
+        {
+          "f": "Bâtonnage",
+          "b": "Stirring the lees in barrel or tank for body and a creamy texture. Common for Bourgogne Chardonnay.",
+          "place": "fr-inao-a204"
+        },
+        {
+          "f": "Barrel fermentation",
+          "b": "Fermenting white juice in barrel. The oak integrates better and the texture is creamier than with ageing alone."
+        },
+        {
+          "f": "Hunter Valley Semillon",
+          "b": "Picked early and made without oak: light and lemony young, toasty and honeyed after years in bottle.",
+          "place": "au-world-hunter-valley"
+        },
+        {
+          "f": "Orange wine",
+          "b": "White grapes fermented on their skins like a red, giving amber colour, tannin and dried fruit flavours."
+        },
+        {
+          "f": "Qvevri",
+          "b": "Large Georgian clay jars buried in the ground for fermenting and ageing. UNESCO listed the method in 2013.",
+          "place": "ge-world-kakheti"
+        },
+        {
+          "f": "Direct pressing for rosé",
+          "b": "Black grapes pressed at once for very pale rosé. Typical of Côtes de Provence.",
+          "place": "fr-inao-a297"
+        },
+        {
+          "f": "Tavel",
+          "b": "A southern Rhône appellation for rosé only. Maceration gives deeper, fuller wines.",
+          "place": "fr-inao-a287"
+        }
+      ]
     },
     {
-     "h": "Berry growth, véraison and ripening",
-     "p": [
-      "After fruit set the green berries grow. They are hard and sour, building up acids, mainly tartaric and malic, along with green, herbaceous aroma compounds.",
-      "Véraison marks the start of ripening, usually in July or August in the north. Berries soften, black grapes take on colour, and sugar starts to flow in. From then on sugar rises and acidity falls, malic acid most of all, because the vine uses it up, especially in hot weather. Tannins in skins and seeds ripen and green aromas fade. At the same time the green shoots turn into brown wood, which lets them survive the winter.",
-      "Harvest comes when sugar, acidity and flavour reach the balance the winemaker wants. In the Northern Hemisphere that is usually September or October; in the Southern Hemisphere February to April, as in the Barossa Valley and Marlborough. Grapes for some sweet wines stay on the vine much longer."
-     ],
-     "places": [
-      "au-world-barossa-valley",
-      "nz-world-marlborough"
-     ]
-    },
-    {
-     "h": "After harvest",
-     "p": [
-      "Once the grapes are picked, the leaves keep working for some weeks and refill the reserves in the wood and roots. These reserves carry the vine through winter and feed the first growth of spring. With the first frosts the leaves yellow and fall, and the cycle starts again.",
-      "An early autumn frost can end ripening before the grapes are ready and cut short this refilling. It is a real risk in inland, continental regions such as Central Otago."
-     ],
-     "places": [
-      "nz-world-central-otago"
-     ]
+      "id": "vine-wine-red-maturation",
+      "title": "Red winemaking and maturation",
+      "minutes": 10,
+      "intro": "This lesson covers how red wines gain colour, tannin and flavour, from crushing and cap management to whole bunches and carbonic maceration. It then follows the wine through maceration, pressing and oak, and on to fining, filtration and bottle ageing.",
+      "sections": [
+        {
+          "h": "Before fermentation",
+          "p": [
+            "Black grapes are sorted, usually destemmed and lightly crushed so that juice and skins mix. The colour pigments, called anthocyanins, and much of the tannin sit in the skins. Seeds hold harsher tannin that is released if they are crushed or over-extracted.",
+            "Some winemakers keep the crushed grapes cool for a few days before fermentation, a cold soak or pre-fermentation maceration. It extracts colour and fruit into a water-based juice before alcohol forms, and it is popular for Pinot Noir in Bourgogne."
+          ],
+          "places": [
+            "fr-inao-d2840"
+          ]
+        },
+        {
+          "h": "Fermentation and extraction",
+          "p": [
+            "Red wine ferments warmer than white, at about 20 to 32°C, to help extraction. Carbon dioxide pushes the skins to the top, where they form a cap. The cap must be kept wet and mixed back into the juice, or it dries out and spoils, and extraction stops.",
+            "Pumping over (remontage) draws juice from the bottom of the tank and sprays it over the cap. Punching down (pigeage) pushes the cap into the juice by hand or by machine, and suits the small open vats often used for Pinot Noir. Rack and return (délestage) drains all the juice into another tank and pours it back over the cap, which also cools and aerates the ferment. Rotary fermenters turn the whole tank to mix skins and juice."
+          ],
+          "places": [
+            "fr-inao-d2840",
+            "fr-inao-a59"
+          ]
+        },
+        {
+          "h": "Whole bunches and carbonic maceration",
+          "p": [
+            "Some winemakers keep part or all of the bunches whole, stems included. Whole-bunch fermentation can add fresh, herbal and spicy notes, lift the aroma and soften the texture, but unripe stems add green tannin. It is used for some Pinot Noir in Bourgogne and Syrah in the northern Rhône.",
+            "In carbonic maceration, whole uncrushed bunches are put in a vessel filled with carbon dioxide. Without oxygen, an enzyme fermentation starts inside each berry and makes a little alcohol, about 2%, along with aromas of cherry, banana, bubblegum and kirsch. The berries then split, the grapes are pressed, and yeast finishes the fermentation.",
+            "Beaujolais uses semi-carbonic maceration. Bunches go whole into the vat; the lower ones are crushed by the weight above and ferment normally, while the upper ones go through carbonic maceration. The result is bright, fruity Gamay with low tannin. Beaujolais Nouveau is released on the third Thursday of November. In crus such as Morgon and Moulin-à-Vent, many producers macerate for longer to make firmer wines that age."
+          ],
+          "places": [
+            "fr-inao-a1032",
+            "fr-inao-a209",
+            "fr-inao-a210",
+            "fr-inao-a272"
+          ]
+        },
+        {
+          "h": "Maceration and pressing",
+          "p": [
+            "Maceration can be short or long. A few days give light, fruity reds. Two to four weeks, including time on the skins after fermentation, give deep-coloured, structured reds, and traditional Barolo producers have long used macerations of several weeks or more. A long maceration after fermentation is thought to make tannins feel softer, as they bind into longer chains.",
+            "The free-run wine is then drained off and the skins are pressed. Press wine is darker and more tannic. It is kept apart and blended back to taste. Almost all reds then go through malolactic conversion, in tank or in barrel."
+          ],
+          "places": [
+            "it-eupdo-PDO-IT-A1389"
+          ]
+        },
+        {
+          "h": "Oak: size, age and origin",
+          "p": [
+            "Barrel size changes the effect. The smaller the barrel, the more wood each litre of wine touches. The Bordeaux barrique holds 225 litres and the Bourgogne pièce 228 litres. Large casks such as Italian botti or French foudres, often thousands of litres, add little oak flavour and allow slow, gentle contact with oxygen.",
+            "Age matters too. A new barrel gives the most vanilla, toast, spice and wood tannin. After several fills it gives little flavour but still lets in oxygen, which softens tannin and stabilises colour. Toasting the inside of the barrel over fire adds smoky, toasty notes.",
+            "Origin shapes flavour. French oak, from Quercus petraea and Quercus robur in forests such as Tronçais, Nevers and the Vosges, is tight-grained and gives subtle spice and toast. American oak, Quercus alba, gives stronger vanilla and coconut and was long the classic choice in Rioja. Slavonian oak from Croatia is traditional for large botti in Italy. Oak chips and staves are a cheaper way to add oak flavour.",
+            "Some reds must age by law. Barolo needs at least 38 months, 18 of them in wood, and Brunello di Montalcino at least two years in wood."
+          ],
+          "places": [
+            "fr-inao-a59",
+            "fr-inao-d2840",
+            "es-eupdo-PDO-ES-A0117",
+            "it-eupdo-PDO-IT-A1389",
+            "it-eupdo-PDO-IT-A1199"
+          ]
+        },
+        {
+          "h": "Fining, filtration and bottle ageing",
+          "p": [
+            "Before bottling, most wines are clarified and stabilised. Fining adds an agent that binds to unwanted particles and settles out. Egg white softens harsh tannin in red wine, bentonite clay removes proteins that could cloud a white, and gelatine, casein and PVPP are also used. In the EU, egg and milk products used for fining must be named on the label if they can be detected in the wine.",
+            "Filtration removes yeast, bacteria and haze. Coarse depth filters catch larger particles, while fine membrane filters can make a wine microbiologically stable. Cold stabilisation chills the wine so that tartrate crystals form in the tank instead of the bottle. Some producers prefer to bottle unfined and unfiltered and accept a deposit.",
+            "In bottle a fine red changes slowly. Tannins and colour pigments join together and some drop out as sediment, so the wine softens and the colour moves from purple to ruby, then garnet and brick. Fruit gives way to tertiary aromas such as leather, earth, forest floor and dried fruit. Wines with high acidity, tannin and concentration age longest, and old wines with a deposit need decanting."
+          ]
+        }
+      ],
+      "key": [
+        "Cap management: pumping over (remontage), punching down (pigeage), rack and return (délestage).",
+        "Carbonic maceration: whole bunches under carbon dioxide ferment inside the berry to about 2% alcohol. Beaujolais uses semi-carbonic.",
+        "Beaujolais Nouveau is released on the third Thursday of November.",
+        "Longer maceration gives deeper colour and more tannin; press wine is kept apart and blended back to taste.",
+        "Barrique 225 L (Bordeaux), pièce 228 L (Bourgogne); botti and foudres are large casks. French oak: Q. petraea and Q. robur; American oak: Q. alba.",
+        "Fining: egg white for reds, bentonite for whites. In bottle the colour moves from purple to brick and tertiary aromas develop."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is délestage?",
+          "options": [
+            "Punching down the cap",
+            "Draining all the juice into another tank and pouring it back over the cap",
+            "Spraying juice over the cap with a pump",
+            "Keeping crushed grapes cold before fermentation"
+          ],
+          "answer": 1,
+          "explain": "Délestage, rack and return, is vigorous and also cools and aerates the ferment. Pigeage is punching down and remontage is pumping over."
+        },
+        {
+          "id": "q2",
+          "q": "About how much alcohol forms inside the berries during carbonic maceration?",
+          "options": [
+            "About 2%",
+            "About 6%",
+            "About 10%",
+            "None at all"
+          ],
+          "answer": 0,
+          "explain": "The enzyme fermentation inside the berry makes about 2% alcohol before the grapes are pressed and yeast takes over."
+        },
+        {
+          "id": "q3",
+          "q": "When is Beaujolais Nouveau released?",
+          "options": [
+            "1 January after the harvest",
+            "The first Monday of October",
+            "The third Thursday of November",
+            "Easter of the following year"
+          ],
+          "answer": 2,
+          "explain": "Beaujolais Nouveau goes on sale on the third Thursday of November of the harvest year.",
+          "place": "fr-inao-a1032"
+        },
+        {
+          "id": "q4",
+          "q": "How large is a Bordeaux barrique?",
+          "options": [
+            "114 litres",
+            "500 litres",
+            "1,000 litres",
+            "225 litres"
+          ],
+          "answer": 3,
+          "explain": "The barrique holds 225 litres; the Bourgogne pièce holds 228.",
+          "place": "fr-inao-a59"
+        },
+        {
+          "id": "q5",
+          "q": "Which oak species is American oak?",
+          "options": [
+            "Quercus robur",
+            "Quercus petraea",
+            "Quercus alba",
+            "Quercus suber"
+          ],
+          "answer": 2,
+          "explain": "American oak is Quercus alba. French oak comes from Q. robur and Q. petraea. Q. suber is the cork oak."
+        },
+        {
+          "id": "q6",
+          "q": "Which fining agent removes proteins that could cloud a white wine?",
+          "options": [
+            "Bentonite",
+            "Egg white",
+            "Gelatine",
+            "Sulphur dioxide"
+          ],
+          "answer": 0,
+          "explain": "Bentonite is a clay that binds proteins. Egg white is used mainly to soften tannin in reds."
+        },
+        {
+          "id": "q7",
+          "q": "What is the purpose of cold stabilisation?",
+          "options": [
+            "To stop malolactic conversion",
+            "To extract colour before fermentation",
+            "To make tartrate crystals form in the tank instead of the bottle",
+            "To kill wild yeast on the grapes"
+          ],
+          "answer": 2,
+          "explain": "Chilling makes tartrates crystallise before bottling, so they do not appear in the bottle."
+        },
+        {
+          "id": "q8",
+          "q": "How does the colour of a red wine change with age in bottle?",
+          "options": [
+            "From brick to purple",
+            "It turns greenish",
+            "It does not change",
+            "From purple through ruby and garnet to brick"
+          ],
+          "answer": 3,
+          "explain": "As pigments and tannins bind and drop out, red wine loses its purple and moves towards garnet and brick."
+        }
+      ],
+      "cards": [
+        {
+          "f": "Anthocyanins",
+          "b": "The colour pigments of black grapes, found in the skins."
+        },
+        {
+          "f": "Cold soak",
+          "b": "Holding crushed grapes cool for some days before fermentation to extract colour and fruit. Common for Pinot Noir.",
+          "place": "fr-inao-d2840"
+        },
+        {
+          "f": "Red fermentation temperature",
+          "b": "About 20 to 32°C, warmer than white, to help extract colour and tannin."
+        },
+        {
+          "f": "The cap",
+          "b": "The layer of skins pushed to the top of the tank by carbon dioxide during red fermentation."
+        },
+        {
+          "f": "Remontage",
+          "b": "Pumping over: juice from the bottom of the tank is sprayed over the cap."
+        },
+        {
+          "f": "Pigeage",
+          "b": "Punching down: the cap is pushed into the juice by hand or machine."
+        },
+        {
+          "f": "Délestage",
+          "b": "Rack and return: the juice is drained off and poured back over the cap, which also cools and aerates it."
+        },
+        {
+          "f": "Egg white fining",
+          "b": "Softens harsh tannin in red wine. In the EU, egg and milk fining agents must be labelled if detectable."
+        },
+        {
+          "f": "Whole-bunch fermentation",
+          "b": "Fermenting with stems and whole berries. Adds fresh, spicy, herbal notes; unripe stems add green tannin."
+        },
+        {
+          "f": "Carbonic maceration",
+          "b": "Whole bunches under carbon dioxide ferment inside the berry to about 2% alcohol, with cherry and banana aromas."
+        },
+        {
+          "f": "Semi-carbonic maceration",
+          "b": "Whole bunches in a vat: the lower ones are crushed and ferment normally, the upper ones carbonically.",
+          "place": "fr-inao-a1032"
+        },
+        {
+          "f": "Beaujolais Nouveau release date",
+          "b": "The third Thursday of November of the harvest year.",
+          "place": "fr-inao-a1032"
+        },
+        {
+          "f": "Post-fermentation maceration",
+          "b": "Leaving the new wine on its skins after fermentation. It extracts more and can make tannins feel softer."
+        },
+        {
+          "f": "Press wine",
+          "b": "Wine squeezed from the skins after the free-run wine is drained. Darker and more tannic; blended back to taste."
+        },
+        {
+          "f": "Barrique and pièce",
+          "b": "The Bordeaux barrique holds 225 litres; the Bourgogne pièce 228 litres."
+        },
+        {
+          "f": "Botti",
+          "b": "Large Italian casks, often of Slavonian oak, traditional for Barolo and Brunello. They add little oak flavour.",
+          "place": "it-eupdo-PDO-IT-A1389"
+        },
+        {
+          "f": "French and American oak",
+          "b": "French (Quercus petraea, Q. robur) is subtle and spicy. American (Q. alba) gives more vanilla and coconut."
+        },
+        {
+          "f": "Which oak is traditional in Rioja?",
+          "b": "American oak was long the classic barrel wood of traditional Rioja.",
+          "place": "es-eupdo-PDO-ES-A0117"
+        },
+        {
+          "f": "Bentonite",
+          "b": "A clay used to fine white wines, removing proteins that could make them hazy."
+        },
+        {
+          "f": "Tertiary aromas",
+          "b": "Notes from bottle ageing, such as leather, earth, forest floor, mushroom and dried fruit."
+        }
+      ]
     }
-   ],
-   "key": [
-    "The vine grows above about 10°C and stores carbohydrate reserves in its wood and roots for next spring.",
-    "The flower clusters for a crop form in the buds the summer before.",
-    "The cycle: dormancy and pruning, budburst, shoot growth, flowering and fruit set, véraison, ripening, harvest, leaf fall.",
-    "Cane pruning keeps long canes; spur pruning keeps short spurs on a permanent cordon. Late pruning can delay budburst.",
-    "Coulure (Grenache, Merlot, Malbec) and millerandage come from poor weather at flowering.",
-    "After véraison sugar rises, acidity falls (malic most of all) and shoots turn to wood."
-   ],
-   "questions": [
-    {
-     "id": "q1",
-     "q": "Above roughly which average temperature does the vine start to grow?",
-     "options": [
-      "5°C",
-      "10°C",
-      "15°C",
-      "20°C"
-     ],
-     "answer": 1,
-     "explain": "Growth and budburst start once average temperatures pass about 10°C. The same figure is the base for growing degree days."
-    },
-    {
-     "id": "q2",
-     "q": "When do the flower clusters for a vintage's crop form inside the buds?",
-     "options": [
-      "In the winter just before budburst",
-      "At budburst in the same spring",
-      "At véraison of the same year",
-      "In the summer of the year before"
-     ],
-     "answer": 3,
-     "explain": "The clusters form in the buds during the previous summer, so one year's weather affects the next year's crop."
-    },
-    {
-     "id": "q3",
-     "q": "What is the main difference between cane and spur pruning?",
-     "options": [
-      "Cane pruning is done in summer, spur pruning in winter",
-      "Cane pruning keeps one or two long canes; spur pruning keeps short spurs on a permanent cordon",
-      "Spur pruning is only used for white grapes",
-      "Cane pruning removes all of last year's wood"
-     ],
-     "answer": 1,
-     "explain": "A cane-pruned vine such as Guyot renews its long canes each year. A spur-pruned vine keeps a permanent arm with short spurs."
-    },
-    {
-     "id": "q4",
-     "q": "Which group of grapes is especially prone to coulure?",
-     "options": [
-      "Grenache, Merlot and Malbec",
-      "Riesling, Sylvaner and Müller-Thurgau",
-      "Glera, Garganega and Trebbiano",
-      "Furmint, Hárslevelű and Kabar"
-     ],
-     "answer": 0,
-     "explain": "Coulure, the failure of flowers to set, is a known weakness of Grenache, Merlot and Malbec."
-    },
-    {
-     "id": "q5",
-     "q": "What happens to malic acid during ripening, especially in hot weather?",
-     "options": [
-      "It rises sharply",
-      "It is converted into tartaric acid",
-      "It falls as the vine uses it up",
-      "It stays the same until harvest"
-     ],
-     "answer": 2,
-     "explain": "After véraison the vine uses malic acid as an energy source, so it falls fastest in warm conditions."
-    },
-    {
-     "id": "q6",
-     "q": "When is the harvest usually in the Barossa Valley?",
-     "options": [
-      "September to October",
-      "June to July",
-      "November to December",
-      "February to April"
-     ],
-     "answer": 3,
-     "explain": "In the Southern Hemisphere every stage comes about six months after the north, so harvest falls in February to April.",
-     "place": "au-world-barossa-valley"
-    },
-    {
-     "id": "q7",
-     "q": "Why can late pruning help in a frost-prone vineyard?",
-     "options": [
-      "It can delay budburst by a few days",
-      "It kills insects that carry frost",
-      "It warms the soil",
-      "It makes each bud carry more fruit"
-     ],
-     "answer": 0,
-     "explain": "Buds at the end of an unpruned cane open first; pruning late delays budburst on the buds that are kept, past some frost risk."
-    },
-    {
-     "id": "q8",
-     "q": "How do growers in the coldest regions protect vines through winter?",
-     "options": [
-      "By spraying copper",
-      "By green harvesting",
-      "By hilling soil over the base of the vine, or burying it",
-      "By removing the leaves early"
-     ],
-     "answer": 2,
-     "explain": "Soil insulates the graft and buds from deep freezes that can kill a vine."
-    }
-   ],
-   "cards": [
-    {
-     "f": "Vitis vinifera",
-     "b": "The European vine species behind almost all quality wine. American species are used mainly as rootstocks."
-    },
-    {
-     "f": "At what temperature does the vine start to grow?",
-     "b": "Above an average of about 10°C. Below that it stays dormant."
-    },
-    {
-     "f": "Carbohydrate reserves",
-     "b": "Sugars stored in the trunk, arms and roots. They carry the vine through winter and feed the first spring growth."
-    },
-    {
-     "f": "Bud fruitfulness",
-     "b": "The flower clusters for a crop form in the buds the summer before, so one year's weather affects the next crop."
-    },
-    {
-     "f": "Why does too much nitrogen hurt quality?",
-     "b": "It drives leafy, vigorous growth at the expense of ripening fruit."
-    },
-    {
-     "f": "Winter freeze damage",
-     "b": "Deep cold of around -20°C or below can kill buds, canes or whole vines in very continental regions."
-    },
-    {
-     "f": "Cane pruning",
-     "b": "One or two long canes from last year are kept and tied along a wire. Guyot is the classic example."
-    },
-    {
-     "f": "Spur pruning",
-     "b": "Short spurs of two or three buds are kept on a permanent arm, the cordon."
-    },
-    {
-     "f": "Weeping or bleeding",
-     "b": "Sap dripping from pruning cuts in early spring, a sign the roots are active and budburst is near."
-    },
-    {
-     "f": "Budburst",
-     "b": "The buds open and shoots appear: March or April in the north, September or October in the south."
-    },
-    {
-     "f": "Two early-budding grapes at risk from spring frost",
-     "b": "Chardonnay and Pinot Noir. Late budders such as Cabernet Sauvignon are safer.",
-     "place": "fr-inao-a146"
-    },
-    {
-     "f": "Flowering",
-     "b": "Late May or June in the north. Vine flowers are small and mostly self-pollinating."
-    },
-    {
-     "f": "Fruit set",
-     "b": "The stage when fertilised flowers become berries. Warm, dry, calm weather gives a good set."
-    },
-    {
-     "f": "Coulure",
-     "b": "Many flowers fail to set, so bunches are sparse and the crop small. Grenache, Merlot and Malbec are prone to it."
-    },
-    {
-     "f": "Millerandage",
-     "b": "A bunch with berries of very different sizes, including small seedless ones. Yield falls but concentration can rise."
-    },
-    {
-     "f": "The Burgundy 100 days rule",
-     "b": "Growers say harvest comes about 100 days after flowering. It is a rule of thumb, not a law.",
-     "place": "fr-inao-d2840"
-    },
-    {
-     "f": "Véraison",
-     "b": "The start of ripening: berries soften and black grapes change colour. July or August in the north."
-    },
-    {
-     "f": "What happens to sugar and acid after véraison?",
-     "b": "Sugar rises and acidity falls, malic acid most of all. Tannins ripen and green aromas fade."
-    },
-    {
-     "f": "Lignification of the shoots",
-     "b": "After véraison green shoots turn to brown wood (aoûtement in French), which lets them survive winter."
-    },
-    {
-     "f": "Southern Hemisphere harvest",
-     "b": "Usually February to April, about six months after the north, as in the Barossa Valley.",
-     "place": "au-world-barossa-valley"
-    }
-   ]
-  },
-  {
-   "id": "vine-wine-climate-site",
-   "title": "Climate and site",
-   "minutes": 10,
-   "intro": "This lesson looks at what sets the warmth and the weather risk of a vineyard: continentality, latitude and altitude, water and wind, aspect and slope, and diurnal range. It then covers the main hazards, frost, hail and poor fruit set, and how growers respond to them.",
-   "sections": [
-    {
-     "h": "Continentality",
-     "p": [
-      "Continentality is the difference between the average temperature of the warmest month and that of the coldest month. Inland regions far from the sea, such as Chablis and Mendoza, have high continentality: hot summers, cold winters, and short springs and autumns. Coastal regions such as Bordeaux have low continentality, because the ocean evens out the year.",
-      "High continentality brings risks: spring frost after budburst, and a quick drop in temperature in autumn that can end ripening. It also gives a short, intense growing season, which suits early-ripening grapes."
-     ],
-     "places": [
-      "fr-inao-a146",
-      "ar-world-mendoza",
-      "fr-inao-a53"
-     ]
-    },
-    {
-     "h": "Latitude, altitude and diurnal range",
-     "p": [
-      "Most vineyards lie between about 30° and 50° of latitude. Towards the poles the sun is lower and the season shorter, though summer days are long. The Mosel at about 50°N and England, beyond 50°N, are close to the cool limit, where only early-ripening grapes succeed and sparkling wine is a natural fit.",
-      "Altitude cools a site by roughly 0.6°C for every 100 metres. In north-west Argentina, Salta has some of the highest vineyards in the world, a few above 3,000 metres, and many vineyards of the Valle de Uco in Mendoza lie above 1,000 metres. Height lets growers make fresh wines at low latitudes. The thin air also brings intense sunlight, which tends to give thick skins and deep colour.",
-      "Diurnal range is the gap between day and night temperatures. It is large in high, dry and inland places such as Salta and Mendoza and small near the sea. Warm days build sugar and colour, while cool nights slow the loss of acidity and aroma."
-     ],
-     "places": [
-      "de-eupdo-PDO-DE-A1270",
-      "gb-eupdo-PDO-GB-A1585",
-      "ar-world-salta",
-      "ar-world-valle-de-uco"
-     ]
-    },
-    {
-     "h": "Water and wind",
-     "p": [
-      "Large bodies of water warm up and cool down slowly. In spring they keep the air cool and delay budburst until frost risk has passed; in autumn they release stored heat and lengthen the season. In the Finger Lakes of New York, deep lakes such as Seneca Lake rarely freeze and soften the winter cold. On the Niagara Peninsula, air moving between Lake Ontario and the Niagara Escarpment lowers the risk of frost.",
-      "Water also brings humidity. The large, shallow Neusiedlersee in Austria, like the Ciron and the Garonne in Sauternes, gives autumn mists that favour noble rot. In the Médoc, the best gravel banks lie close to the Gironde estuary, which moderates temperature.",
-      "Wind can cool and dry a vineyard. Sea breezes and fog cool coastal California and Chile, and the mistral dries the Rhône valley after rain. Strong winds can also break young shoots and disturb flowering."
-     ],
-     "places": [
-      "us-ava-seneca_lake",
-      "ca-world-niagara-peninsula",
-      "at-eupdo-PDO-AT-A0219",
-      "fr-inao-a75",
-      "fr-inao-a53"
-     ]
-    },
-    {
-     "h": "Aspect, slope and soil warmth",
-     "p": [
-      "Aspect is the direction a slope faces. In the Northern Hemisphere south-facing slopes take the most sun; in the Southern Hemisphere north-facing ones do. Between Wiesbaden and Rüdesheim the Rhine flows west, so the Rheingau vineyards on its north bank face south. The Côte d'Or faces east and south-east and warms up early in the day.",
-      "A slope turned towards the sun receives its rays at a steeper angle than flat ground, so each square metre gets more energy. Slopes also drain water away and let cold air flow down to the valley floor. On the Mosel, the Bremmer Calmont, with gradients of up to about 60%, is one of the steepest vineyards in Europe, and its dark slate absorbs heat and drains well.",
-      "Steep slopes erode and are costly to farm. In the Douro, the Wachau and Côte Rôtie, terraces or walls hold the soil, and most work is done by hand."
-     ],
-     "places": [
-      "de-eupdo-PDO-DE-A1273",
-      "fr-inao-d2840",
-      "de-rlp-440209",
-      "pt-eupdo-PDO-PT-A1539",
-      "at-eupdo-PDO-AT-A0205",
-      "fr-inao-a272"
-     ]
-    },
-    {
-     "h": "Spring frost",
-     "p": [
-      "Spring frost kills young shoots after budburst. There are two kinds. Radiation frost forms on clear, still nights, when the ground loses heat to the sky and cold air settles in low spots under a layer of warmer air. Advection frost comes when a mass of freezing air moves in on the wind; it is much harder to fight.",
-      "Against radiation frost, wind machines and helicopters mix the warmer air above down into the vines. Heaters and candles warm the rows. Sprinklers coat the buds in ice, which gives off heat as the water freezes and holds them near 0°C. Chablis relies on heaters and sprinklers; wind machines are common in Marlborough and Central Otago. Planting on slopes, choosing late-budding grapes and pruning late all lower the risk from the start."
-     ],
-     "places": [
-      "fr-inao-a146",
-      "nz-world-marlborough",
-      "nz-world-central-otago"
-     ]
-    },
-    {
-     "h": "Hail, poor fruit set and other hazards",
-     "p": [
-      "Hail can strip leaves, break shoots and split berries in minutes. The damage is local and hard to predict. In Mendoza many growers cover the rows with hail nets; elsewhere growers rely on insurance and on owning vines in several places.",
-      "Cold, wet or windy weather at flowering causes coulure and millerandage. Growers respond by choosing varieties and clones less prone to poor set and by keeping vine vigour in balance. Other hazards are drought, heatwaves that scorch exposed berries, rain at harvest that brings rot, and smoke from wildfires, which can taint the grapes."
-     ],
-     "places": [
-      "ar-world-mendoza"
-     ]
-    }
-   ],
-   "key": [
-    "Continentality is the gap between the warmest and coldest month: high in Chablis and Mendoza, low in Bordeaux.",
-    "Altitude cools about 0.6°C per 100 metres. Salta has vineyards above 3,000 metres; large diurnal range keeps acidity.",
-    "Lakes and seas delay budburst, soften winter and lengthen autumn: Seneca Lake, Lake Ontario. Shallow Neusiedlersee gives mists.",
-    "Sun-facing slopes catch more energy and drain cold air. The Rheingau faces south where the Rhine runs west.",
-    "Radiation frost (clear, still nights) is fought with wind machines, heaters and sprinklers. Advection frost is a moving cold air mass.",
-    "Hail nets in Mendoza; coulure and millerandage from bad weather at flowering; smoke taint from wildfires."
-   ],
-   "questions": [
-    {
-     "id": "q1",
-     "q": "What does continentality measure?",
-     "options": [
-      "Height above sea level",
-      "The gap between the average temperatures of the warmest and coldest months",
-      "The difference between day and night temperatures",
-      "The rainfall of the growing season"
-     ],
-     "answer": 1,
-     "explain": "Continentality compares the warmest and coldest months. Diurnal range is the day to night gap."
-    },
-    {
-     "id": "q2",
-     "q": "Why do most Rheingau vineyards face south?",
-     "options": [
-      "The Rhine flows west for a stretch, so its north bank faces south",
-      "The Mosel joins the Rhine there",
-      "The vineyards lie on islands in the river",
-      "The Taunus hills block the northern sun"
-     ],
-     "answer": 0,
-     "explain": "Between Wiesbaden and Rüdesheim the Rhine runs west, giving the vineyards of its north bank a southern aspect.",
-     "place": "de-eupdo-PDO-DE-A1273"
-    },
-    {
-     "id": "q3",
-     "q": "Which type of frost can wind machines NOT protect against?",
-     "options": [
-      "Radiation frost",
-      "Frost on a clear, still night",
-      "Frost in a valley hollow under an inversion",
-      "Advection frost"
-     ],
-     "answer": 3,
-     "explain": "Wind machines need warmer air above the vines to mix down. In advection frost the whole air mass is freezing."
-    },
-    {
-     "id": "q4",
-     "q": "How do deep lakes such as Seneca Lake help Finger Lakes vineyards?",
-     "options": [
-      "They raise the sugar of the grapes",
-      "They soften winter cold and delay budburst in spring",
-      "They cause noble rot every year",
-      "They block all wind"
-     ],
-     "answer": 1,
-     "explain": "Deep water rarely freezes and gives off stored heat in winter, while cool water in spring holds back budburst.",
-     "place": "us-ava-seneca_lake"
-    },
-    {
-     "id": "q5",
-     "q": "Which Mosel vineyard, at Bremm, is one of the steepest in Europe?",
-     "options": [
-      "Juffer",
-      "Sonnenuhr",
-      "Calmont",
-      "Doctor"
-     ],
-     "answer": 2,
-     "explain": "The Bremmer Calmont has gradients of up to about 60%.",
-     "place": "de-rlp-440209"
-    },
-    {
-     "id": "q6",
-     "q": "Which region has some of the highest vineyards in the world, a few above 3,000 metres?",
-     "options": [
-      "Marlborough",
-      "Salta",
-      "Mosel",
-      "Coonawarra"
-     ],
-     "answer": 1,
-     "explain": "Salta in north-west Argentina has some of the world's highest vineyards.",
-     "place": "ar-world-salta"
-    },
-    {
-     "id": "q7",
-     "q": "What creates the autumn mists that favour noble rot by the Neusiedlersee?",
-     "options": [
-      "A cold ocean current",
-      "Snowmelt from the Alps",
-      "A large, shallow lake",
-      "Fog from the Atlantic"
-     ],
-     "answer": 2,
-     "explain": "The large, shallow Neusiedlersee gives humid autumn mornings that suit botrytis.",
-     "place": "at-eupdo-PDO-AT-A0219"
-    },
-    {
-     "id": "q8",
-     "q": "Why does a slope facing the sun receive more heat than flat land?",
-     "options": [
-      "The sun's rays strike it at a steeper angle, so each square metre gets more energy",
-      "Its soil is always darker",
-      "It is always higher",
-      "It holds more water"
-     ],
-     "answer": 0,
-     "explain": "The more directly the rays strike the ground, the more energy each square metre receives."
-    }
-   ],
-   "cards": [
-    {
-     "f": "Continentality",
-     "b": "The gap between the average temperatures of the warmest and coldest months. High inland, low by the sea."
-    },
-    {
-     "f": "A classic highly continental region",
-     "b": "Chablis: cold winters, warm summers, short seasons and a high risk of spring frost.",
-     "place": "fr-inao-a146"
-    },
-    {
-     "f": "Latitude band of most vineyards",
-     "b": "Roughly 30° to 50° in both hemispheres."
-    },
-    {
-     "f": "How much does temperature fall with altitude?",
-     "b": "About 0.6°C for every 100 metres."
-    },
-    {
-     "f": "Salta",
-     "b": "North-west Argentina, with some of the world's highest vineyards, a few above 3,000 metres.",
-     "place": "ar-world-salta"
-    },
-    {
-     "f": "Valle de Uco",
-     "b": "A high subregion of Mendoza at the foot of the Andes, with many vineyards above 1,000 metres.",
-     "place": "ar-world-valle-de-uco"
-    },
-    {
-     "f": "Diurnal range",
-     "b": "The gap between day and night temperatures. Cool nights keep acidity and aroma; warm days build sugar."
-    },
-    {
-     "f": "How do lakes protect vines in spring?",
-     "b": "Cool water keeps spring air cool and delays budburst until the frost risk has passed."
-    },
-    {
-     "f": "Seneca Lake",
-     "b": "A deep Finger Lakes lake in New York that rarely freezes and softens the winter cold for nearby vines.",
-     "place": "us-ava-seneca_lake"
-    },
-    {
-     "f": "Niagara Peninsula",
-     "b": "Ontario region where Lake Ontario and the Niagara Escarpment keep air moving and lower frost risk.",
-     "place": "ca-world-niagara-peninsula"
-    },
-    {
-     "f": "Neusiedlersee",
-     "b": "A large, shallow Austrian lake whose autumn mists favour noble rot.",
-     "place": "at-eupdo-PDO-AT-A0219"
-    },
-    {
-     "f": "Aspect",
-     "b": "The direction a slope faces. South is warmest in the Northern Hemisphere, north in the Southern."
-    },
-    {
-     "f": "Rheingau aspect",
-     "b": "The Rhine flows west from Wiesbaden to Rüdesheim, so the vineyards on its north bank face south.",
-     "place": "de-eupdo-PDO-DE-A1273"
-    },
-    {
-     "f": "Bremmer Calmont",
-     "b": "A Mosel slate slope at Bremm with gradients of up to about 60%, one of Europe's steepest vineyards.",
-     "place": "de-rlp-440209"
-    },
-    {
-     "f": "Why does slate help Mosel Riesling?",
-     "b": "The dark stone absorbs heat and drains well, adding warmth in a cool climate.",
-     "place": "de-eupdo-PDO-DE-A1270"
-    },
-    {
-     "f": "Radiation frost",
-     "b": "Forms on clear, still nights as the ground loses heat and cold air pools in low spots under warmer air."
-    },
-    {
-     "f": "Advection frost",
-     "b": "A moving mass of freezing air. Wind machines cannot help, as there is no warmer air above to mix in."
-    },
-    {
-     "f": "Wind machines",
-     "b": "Large fans that pull warmer air from above an inversion down to the vines. Common in Marlborough.",
-     "place": "nz-world-marlborough"
-    },
-    {
-     "f": "Hail nets",
-     "b": "Netting over the rows that shields vines from hail, widely used in Mendoza.",
-     "place": "ar-world-mendoza"
-    },
-    {
-     "f": "Smoke taint",
-     "b": "Off-flavours from wildfire smoke absorbed by grape skins, a growing risk in warm, dry regions."
-    }
-   ]
-  },
-  {
-   "id": "vine-wine-vineyard",
-   "title": "Vineyard choices",
-   "minutes": 10,
-   "intro": "This lesson covers the choices a grower makes: which rootstock to plant after phylloxera, how to train and trellis the vine, how to manage the canopy and the yield, whether to farm organically or biodynamically, and when and how to pick.",
-   "sections": [
-    {
-     "h": "Phylloxera and rootstocks",
-     "p": [
-      "Phylloxera is a tiny insect, related to aphids, that feeds on vine roots. It came from North America, was identified in France in 1868 and then spread through almost every wine region. The roots of Vitis vinifera have no defence against it, and infected vines die within a few years.",
-      "The lasting answer is grafting: a vinifera variety is joined onto a rootstock bred from American species such as Vitis riparia, Vitis rupestris and Vitis berlandieri, or from crosses between them. Rootstocks also do other jobs: tolerating lime, drought or salt, resisting nematodes, and raising or lowering vigour. Berlandieri crosses such as 41 B tolerate lime and are widely used on the chalk of Champagne.",
-      "A rootstock must be truly resistant. In Napa Valley and Sonoma the rootstock AXR1 failed against phylloxera in the 1980s and 1990s, and many vineyards had to be replanted. A few places have never had phylloxera or keep it out, so vines still grow on their own roots: Chile, South Australia with the Barossa Valley, and sandy soils such as those of Colares in Portugal."
-     ],
-     "places": [
-      "fr-eupdo-PDO-FR-A1359",
-      "us-ava-napa_valley",
-      "au-world-barossa-valley",
-      "pt-eupdo-PDO-PT-A1461"
-     ]
-    },
-    {
-     "h": "Old vines",
-     "p": [
-      "Ungrafted vines can live a very long time. The Barossa Valley has Shiraz and other vines planted in the 19th century. Its Old Vine Charter, introduced in 2009, names four tiers: Old Vine (at least 35 years), Survivor (at least 70), Centenarian (at least 100) and Ancestor (at least 125).",
-      "Old vines usually give smaller crops of smaller berries, and many growers believe their deep roots make them steadier in dry or wet years. Most countries have no legal definition of old vines, so terms such as vieilles vignes are not regulated."
-     ],
-     "places": [
-      "au-world-barossa-valley"
-     ]
-    },
-    {
-     "h": "Training and trellising",
-     "p": [
-      "Training sets the shape of the vine; trellising is the system of posts and wires that holds it. Guyot is a cane-pruned system named after the 19th century French scientist Jules Guyot: one cane (single Guyot) or two (double Guyot) are laid along a low wire. It is the classic system of Bourgogne and much of Bordeaux. Cordon training keeps a permanent arm along the wire with short spurs. Champagne allows four pruning systems: Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
-      "Gobelet, or bush vine, needs no wires: a short trunk with a few arms and spurs, shaped like an open goblet. It suits hot, dry, windy sites and low vigour, as in Châteauneuf-du-Pape, Beaujolais and the old vineyards of Swartland. On Pantelleria, the traditional cultivation of low head-trained alberello vines is listed by UNESCO as intangible cultural heritage.",
-      "Pergolas raise the canopy on a high frame, with the grapes hanging below the leaves. They keep fruit away from damp ground and let air flow through. They are traditional in Trentino, Alto Adige and Valpolicella, and in Rías Baixas, where granite posts carry high pergolas called parras. On the steep Mosel, many old vines are trained to a single stake, with their canes bent into a heart shape."
-     ],
-     "places": [
-      "fr-inao-d2840",
-      "fr-eupdo-PDO-FR-A1359",
-      "fr-inao-a267",
-      "za-world-swartland",
-      "it-eupdo-PDO-IT-A0792",
-      "it-eupdo-PDO-IT-A0754",
-      "it-eupdo-PDO-IT-A0293",
-      "es-eupdo-PDO-ES-A1119",
-      "de-eupdo-PDO-DE-A1270"
-     ]
-    },
-    {
-     "h": "Canopy and yield",
-     "p": [
-      "Canopy management controls the leaves around the fruit through shoot positioning, trimming, leaf removal and shoot thinning. In vertical shoot positioning (VSP), the most common modern trellis, shoots are tied upright between pairs of wires to form a narrow wall of leaves. Split canopies such as the Lyre, the Geneva Double Curtain and Scott Henry divide very vigorous vines so that light and air reach more fruit.",
-      "An open canopy lets the sun ripen the grapes, lowers green flavours and reduces fungal disease. Too much exposure in hot places can sunburn the berries, so there growers leave more leaves on the sunny side.",
-      "In Europe yield is usually measured in hectolitres of wine per hectare (hl/ha); elsewhere often in tonnes of grapes per hectare. The rules vary widely: Prosecco DOC allows up to 18 tonnes per hectare, while Sauternes allows just 25 hl/ha. Growers lower yields by pruning to fewer buds and by green harvesting, cutting off bunches in summer."
-     ],
-     "places": [
-      "it-eupdo-PDO-IT-A0516",
-      "fr-inao-a75"
-     ]
-    },
-    {
-     "h": "Organic and biodynamic",
-     "p": [
-      "Organic viticulture bans synthetic fertilisers, herbicides and most synthetic pesticides. Growers feed the soil with compost and cover crops and protect the vines mainly with sulphur and copper. In the EU, copper in organic farming is limited to 28 kg per hectare over seven years, an average of 4 kg a year. Since 2012, EU rules for organic wine also cover the winery, with lower limits for sulphur dioxide: 100 mg/L for dry reds and 150 mg/L for dry whites and rosés.",
-      "Biodynamics grew from lectures given by Rudolf Steiner in 1924. It treats the farm as a single living system and adds special preparations sprayed in tiny doses, such as horn manure (500) on the soil and horn silica (501) on the leaves. Many biodynamic growers follow a calendar of lunar and planetary rhythms. Demeter and Biodyvin are the best-known certifiers.",
-      "Sustainability schemes are broader and usually less strict. They cover energy, water and biodiversity as well as sprays, and may allow some synthetic products."
-     ]
-    },
-    {
-     "h": "When and how to pick",
-     "p": [
-      "The picking date sets the style. Growers measure sugar with a refractometer, in Brix, Baumé or Oechsle, test acidity and pH, and taste skins and seeds for ripe tannin. Grapes for sparkling wine are picked early for high acidity; grapes for full-bodied reds later.",
-      "Machine harvesting is fast and cheap and can work at night, when the grapes are cool, which matters in hot regions. Hand picking allows selection and keeps bunches whole. It is required in Champagne, where whole bunches go to the press, and in Sauternes, where pickers make several passes, called tries, to take only the nobly rotten grapes."
-     ],
-     "places": [
-      "fr-eupdo-PDO-FR-A1359",
-      "fr-inao-a75"
-     ]
-    }
-   ],
-   "key": [
-    "Phylloxera kills vinifera roots. Grafting onto American rootstocks (riparia, rupestris, berlandieri) is the answer.",
-    "AXR1 failed in Napa and Sonoma in the 1980s and 1990s. Chile, South Australia and the sands of Colares grow ungrafted vines.",
-    "Barossa Old Vine Charter (2009): Old Vine 35, Survivor 70, Centenarian 100, Ancestor 125 years.",
-    "Guyot is cane pruned, cordon is spur pruned, gobelet is a free-standing bush vine, pergola raises the canopy overhead.",
-    "Champagne allows four systems: Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
-    "Organic: no synthetic fertilisers or herbicides; EU copper limit 28 kg/ha over seven years. Biodynamics adds Steiner's preparations."
-   ],
-   "questions": [
-    {
-     "id": "q1",
-     "q": "In which year was phylloxera identified in France?",
-     "options": [
-      "1755",
-      "1868",
-      "1935",
-      "1976"
-     ],
-     "answer": 1,
-     "explain": "Phylloxera was identified in France in 1868 and went on to destroy most European vineyards."
-    },
-    {
-     "id": "q2",
-     "q": "Which American vine species is valued in rootstocks for tolerating lime-rich soils such as Champagne's chalk?",
-     "options": [
-      "Vitis riparia",
-      "Vitis labrusca",
-      "Vitis berlandieri",
-      "Vitis vinifera"
-     ],
-     "answer": 2,
-     "explain": "Berlandieri crosses such as 41 B tolerate lime and are widely used in Champagne.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "id": "q3",
-     "q": "Which rootstock failed against phylloxera in Napa Valley in the 1980s and 1990s?",
-     "options": [
-      "41 B",
-      "SO4",
-      "110 Richter",
-      "AXR1"
-     ],
-     "answer": 3,
-     "explain": "AXR1 was not resistant enough, and many Napa and Sonoma vineyards had to be replanted.",
-     "place": "us-ava-napa_valley"
-    },
-    {
-     "id": "q4",
-     "q": "Why do the vines of Colares in Portugal still grow on their own roots?",
-     "options": [
-      "They grow in deep sand, where phylloxera cannot thrive",
-      "They are sprayed with copper",
-      "They are grafted onto Vitis berlandieri",
-      "The climate is too hot for the insect"
-     ],
-     "answer": 0,
-     "explain": "Phylloxera cannot spread through deep sand, so Colares escaped it.",
-     "place": "pt-eupdo-PDO-PT-A1461"
-    },
-    {
-     "id": "q5",
-     "q": "Under the Barossa Old Vine Charter, how old must a Centenarian vine be?",
-     "options": [
-      "At least 100 years",
-      "At least 35 years",
-      "At least 70 years",
-      "At least 125 years"
-     ],
-     "answer": 0,
-     "explain": "The tiers are Old Vine 35, Survivor 70, Centenarian 100 and Ancestor 125 years.",
-     "place": "au-world-barossa-valley"
-    },
-    {
-     "id": "q6",
-     "q": "Which training system has no wires and forms a free-standing bush?",
-     "options": [
-      "Guyot",
-      "Gobelet",
-      "Cordon de Royat",
-      "Pergola"
-     ],
-     "answer": 1,
-     "explain": "Gobelet, the bush vine, suits hot, dry, windy sites such as Châteauneuf-du-Pape.",
-     "place": "fr-inao-a267"
-    },
-    {
-     "id": "q7",
-     "q": "Which is NOT one of the four pruning systems allowed in Champagne?",
-     "options": [
-      "Chablis",
-      "Cordon de Royat",
-      "Vallée de la Marne",
-      "Gobelet"
-     ],
-     "answer": 3,
-     "explain": "Champagne allows Chablis, Cordon de Royat, Guyot and Vallée de la Marne.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "id": "q8",
-     "q": "What is the EU limit on copper in organic vineyards?",
-     "options": [
-      "10 kg per hectare each year",
-      "No copper is allowed",
-      "100 kg per hectare over five years",
-      "28 kg per hectare over seven years"
-     ],
-     "answer": 3,
-     "explain": "Organic growers may use copper against downy mildew, but no more than 28 kg per hectare over seven years."
-    }
-   ],
-   "cards": [
-    {
-     "f": "Phylloxera",
-     "b": "Daktulosphaira vitifoliae, a tiny North American insect that feeds on vine roots and kills vinifera vines."
-    },
-    {
-     "f": "When was phylloxera identified in France?",
-     "b": "In 1868. It went on to destroy most of Europe's vineyards."
-    },
-    {
-     "f": "Three American species used in rootstocks",
-     "b": "Vitis riparia, Vitis rupestris and Vitis berlandieri, often crossed with each other."
-    },
-    {
-     "f": "Rootstock for chalky soils",
-     "b": "Berlandieri crosses such as 41 B tolerate lime and are widely used in Champagne.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "f": "Besides phylloxera, what can a rootstock control?",
-     "b": "Vigour, tolerance of drought, lime and salt, and resistance to nematodes."
-    },
-    {
-     "f": "AXR1",
-     "b": "A rootstock that failed against phylloxera in Napa and Sonoma in the 1980s and 1990s, forcing wide replanting.",
-     "place": "us-ava-napa_valley"
-    },
-    {
-     "f": "Colares",
-     "b": "Portuguese DOC on the Atlantic coast near Sintra where vines grow ungrafted in deep sand.",
-     "place": "pt-eupdo-PDO-PT-A1461"
-    },
-    {
-     "f": "Barossa Old Vine Charter",
-     "b": "Since 2009: Old Vine 35+, Survivor 70+, Centenarian 100+ and Ancestor 125+ years.",
-     "place": "au-world-barossa-valley"
-    },
-    {
-     "f": "Guyot",
-     "b": "Cane pruning named after Jules Guyot: one cane (single) or two (double) on a low wire. Classic in Bourgogne."
-    },
-    {
-     "f": "Cordon de Royat",
-     "b": "A spur-pruned cordon, one of the four pruning systems allowed in Champagne.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "f": "Gobelet",
-     "b": "A free-standing bush vine with a short trunk and spurs, suited to hot, dry, windy sites like Châteauneuf-du-Pape.",
-     "place": "fr-inao-a267"
-    },
-    {
-     "f": "Alberello of Pantelleria",
-     "b": "Low head-trained bush vines whose traditional cultivation UNESCO listed as intangible heritage in 2014.",
-     "place": "it-eupdo-PDO-IT-A0792"
-    },
-    {
-     "f": "Pergola",
-     "b": "A high overhead frame with grapes hanging below the leaves. Traditional in Trentino, Alto Adige and Valpolicella.",
-     "place": "it-eupdo-PDO-IT-A0754"
-    },
-    {
-     "f": "Parra",
-     "b": "The high pergola on granite posts traditional in Rías Baixas, which keeps Albariño airy in a wet climate.",
-     "place": "es-eupdo-PDO-ES-A1119"
-    },
-    {
-     "f": "Vertical shoot positioning (VSP)",
-     "b": "Shoots tied upright between pairs of wires to form a narrow wall of leaves. The most common modern trellis."
-    },
-    {
-     "f": "Green harvesting",
-     "b": "Cutting off some bunches in summer to lower the yield and help the rest ripen."
-    },
-    {
-     "f": "Yield units",
-     "b": "Europe uses hectolitres per hectare. Sauternes allows 25 hl/ha; Prosecco DOC up to 18 tonnes per hectare.",
-     "place": "fr-inao-a75"
-    },
-    {
-     "f": "EU copper limit for organic vineyards",
-     "b": "28 kg per hectare over seven years, an average of 4 kg a year."
-    },
-    {
-     "f": "Biodynamic preparations 500 and 501",
-     "b": "Horn manure (500), sprayed on the soil, and horn silica (501), sprayed on the leaves, in tiny doses."
-    },
-    {
-     "f": "Tries",
-     "b": "Successive passes by pickers to take only nobly rotten grapes. Required in Sauternes.",
-     "place": "fr-inao-a75"
-    }
-   ]
-  },
-  {
-   "id": "vine-wine-white-rose",
-   "title": "White and rosé winemaking",
-   "minutes": 10,
-   "intro": "This lesson follows white and rosé grapes from the press to the bottle: pressing and settling, cool fermentation, the choice of malolactic conversion, lees and bâtonnage, oak or steel, skin contact and orange wine, and the three ways to make rosé.",
-   "sections": [
-    {
-     "h": "From grape to juice",
-     "p": [
-      "For white wine, speed and care matter, because the juice must stay fresh and free of bitter phenolics. Grapes may be crushed and destemmed, or pressed as whole bunches. Whole-bunch pressing is gentler and gives clearer juice with fewer phenolics, and Champagne and most fine sparkling wine use it.",
-      "Pneumatic presses squeeze the grapes slowly with an inflating membrane. The free-run juice, which flows before much pressure is applied, is the finest. Juice pressed out at higher pressure carries more phenolics and is kept apart or used for lesser wines.",
-      "Many winemakers protect the juice from oxygen with cold, sulphur dioxide and inert gas. This reductive handling keeps fresh fruit aromas, as in Marlborough Sauvignon Blanc. Others let the juice brown a little on purpose, so that the phenolics that would brown later drop out early."
-     ],
-     "places": [
-      "fr-eupdo-PDO-FR-A1359",
-      "nz-world-marlborough"
-     ]
-    },
-    {
-     "h": "Settling and fermentation",
-     "p": [
-      "Before fermentation the juice is clarified. In settling, or débourbage, it is chilled and left to stand, often overnight, so the solids sink and the clear juice can be drawn off. Some winemakers keep a little of the solids for texture and complexity.",
-      "Whites are usually fermented cool, at about 12 to 22°C, which keeps fruity and floral aromas. Stainless steel tanks with cooling jackets make this easy. Large old casks are traditional too: in the Mosel the Fuder holds about 1,000 litres and adds little oak flavour.",
-      "Fermentation can be stopped early to keep some sweetness, by chilling the wine, adding sulphur dioxide and filtering out the yeast. Many fruity Mosel Rieslings are made this way."
-     ],
-     "places": [
-      "de-eupdo-PDO-DE-A1270"
-     ]
-    },
-    {
-     "h": "Malolactic conversion",
-     "p": [
-      "Malolactic conversion is carried out by lactic acid bacteria, mainly Oenococcus oeni, not by yeast. It turns sharp malic acid into softer lactic acid, raises the pH slightly and can add the buttery aroma of diacetyl. It also makes the wine more stable, because the bacteria cannot start up later in the bottle.",
-      "For whites it is a style choice. Winemakers often allow it for full-bodied Chardonnay, as in Meursault, and block it for crisp, aromatic wines such as Riesling and Sauvignon Blanc. They block it with low temperature, sulphur dioxide and filtration, or let only part of the blend go through it."
-     ],
-     "places": [
-      "fr-inao-a204"
-     ]
-    },
-    {
-     "h": "Lees, bâtonnage and oak",
-     "p": [
-      "After fermentation the dead yeast cells, the lees, settle out. Gross lees are coarse and usually removed. Fine lees can stay in contact with the wine for months, adding texture, a creamy or bready character and some protection from oxidation.",
-      "Muscadet sur lie stays on its fine lees through the winter and is bottled straight from them, which gives a fuller, slightly yeasty wine, sometimes with a faint prickle. In Bourgogne, Chardonnay fermented in barrel is often stirred, a practice called bâtonnage, to lift the lees back into the wine.",
-      "Oak changes a white in two ways. Fermenting in barrel integrates the oak and gives a creamy texture; ageing in barrel adds vanilla, toast and nutty notes and allows slow oxygen exchange. New barrels give the most flavour, older ones mainly texture. Many whites see no oak at all. Hunter Valley Semillon, picked early and made in steel, is light and lemony when young and turns toasty and honeyed after years in bottle."
-     ],
-     "places": [
-      "fr-inao-a100",
-      "fr-inao-a204",
-      "au-world-hunter-valley"
-     ]
-    },
-    {
-     "h": "Skin contact and orange wine",
-     "p": [
-      "A few hours of cold skin contact before pressing can draw more aroma from varieties such as Sauvignon Blanc or Muscat, at the risk of extra phenolics.",
-      "Orange or amber wine takes this much further. White grapes ferment and macerate on their skins for days, weeks or months, like a red. The wines are deeper in colour, with some tannin and flavours of dried fruit, nuts and tea. In Georgia, especially Kakheti, the method uses large clay jars called qvevri, buried in the ground; UNESCO listed it as intangible heritage in 2013. Collio in Friuli and Goriška Brda across the border in Slovenia are modern centres of the style."
-     ],
-     "places": [
-      "ge-world-kakheti",
-      "it-eupdo-PDO-IT-A0908",
-      "si-eupdo-PDO-SI-A0270"
-     ]
-    },
-    {
-     "h": "Making rosé",
-     "p": [
-      "Rosé takes its colour from brief contact with the skins of black grapes. In direct pressing, the grapes are pressed at once and pick up only a faint colour. Most pale rosés of Côtes de Provence are made this way, often from Grenache, Cinsault and Syrah.",
-      "In short maceration, juice and skins stay together for a few hours to about two days before the juice is drawn off and fermented like a white. Tavel, a southern Rhône appellation for rosé only, makes deeper, fuller rosés this way. In saignée, some juice is bled from a tank of black grapes soon after crushing. It becomes rosé, and the red wine left behind is more concentrated.",
-      "In the EU, blending red and white wine to make rosé is generally not allowed. Rosé Champagne, which may blend in still red wine, is the classic exception."
-     ],
-     "places": [
-      "fr-inao-a297",
-      "fr-inao-a287",
-      "fr-eupdo-PDO-FR-A1359"
-     ]
-    }
-   ],
-   "key": [
-    "Whole-bunch pressing is gentle and gives clear juice low in phenolics; free-run juice is the finest.",
-    "Débourbage settles the juice before a cool fermentation of about 12 to 22°C.",
-    "Malolactic conversion (Oenococcus oeni) softens acidity and can add buttery diacetyl. It is optional for whites.",
-    "Muscadet sur lie is bottled from its fine lees after one winter; bâtonnage stirs the lees in barrel.",
-    "Orange wine ferments white grapes on their skins; Georgia's qvevri method was listed by UNESCO in 2013.",
-    "Rosé: direct pressing (Côtes de Provence), short maceration (Tavel) or saignée."
-   ],
-   "questions": [
-    {
-     "id": "q1",
-     "q": "Why is whole-bunch pressing used for Champagne and fine sparkling wine?",
-     "options": [
-      "It extracts more colour",
-      "It is gentle and gives clear juice low in phenolics",
-      "It raises the sugar",
-      "It speeds up malolactic conversion"
-     ],
-     "answer": 1,
-     "explain": "Pressing whole bunches gently limits phenolics and colour, which matters when black grapes are pressed for white sparkling wine.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "id": "q2",
-     "q": "What is débourbage?",
-     "options": [
-      "Stirring the lees in barrel",
-      "Adding sugar before fermentation",
-      "Removing the yeast after the second fermentation",
-      "Letting chilled juice settle so solids sink before fermentation"
-     ],
-     "answer": 3,
-     "explain": "Settling clarifies the juice so that a clean fermentation follows."
-    },
-    {
-     "id": "q3",
-     "q": "Which organism carries out most malolactic conversions?",
-     "options": [
-      "Saccharomyces cerevisiae",
-      "Botrytis cinerea",
-      "Oenococcus oeni",
-      "Brettanomyces"
-     ],
-     "answer": 2,
-     "explain": "Lactic acid bacteria, mainly Oenococcus oeni, turn malic acid into lactic acid. Saccharomyces is the wine yeast."
-    },
-    {
-     "id": "q4",
-     "q": "How is Muscadet sur lie made?",
-     "options": [
-      "It ages in new oak for two years",
-      "It is fermented on its skins",
-      "It is sweetened with grape must",
-      "It stays on its fine lees through the winter and is bottled from them"
-     ],
-     "answer": 3,
-     "explain": "The wine is not racked off its fine lees before bottling, which adds texture and a yeasty note.",
-     "place": "fr-inao-a100"
-    },
-    {
-     "id": "q5",
-     "q": "In which country is wine fermented in buried clay jars called qvevri?",
-     "options": [
-      "Georgia",
-      "Greece",
-      "Portugal",
-      "Slovenia"
-     ],
-     "answer": 0,
-     "explain": "The qvevri method of Georgia, strong in Kakheti, was listed by UNESCO in 2013.",
-     "place": "ge-world-kakheti"
-    },
-    {
-     "id": "q6",
-     "q": "Which southern Rhône appellation is for rosé only?",
-     "options": [
-      "Lirac",
-      "Gigondas",
-      "Tavel",
-      "Vacqueyras"
-     ],
-     "answer": 2,
-     "explain": "Tavel makes only rosé, deeper in colour than Provence rosé thanks to maceration.",
-     "place": "fr-inao-a287"
-    },
-    {
-     "id": "q7",
-     "q": "What is saignée?",
-     "options": [
-      "Pressing black grapes at once",
-      "Bleeding off some juice from a tank of black grapes",
-      "Blending red and white wine",
-      "Ageing rosé on its lees"
-     ],
-     "answer": 1,
-     "explain": "The bled juice becomes rosé and the red left in the tank is more concentrated."
-    },
-    {
-     "id": "q8",
-     "q": "Which white wine is traditionally made without oak and ages for years to toasty, honeyed flavours?",
-     "options": [
-      "Hunter Valley Semillon",
-      "Meursault",
-      "Montrachet",
-      "Corton-Charlemagne"
-     ],
-     "answer": 0,
-     "explain": "Hunter Valley Semillon is picked early and made in steel, then develops toast and honey in bottle.",
-     "place": "au-world-hunter-valley"
-    }
-   ],
-   "cards": [
-    {
-     "f": "Whole-bunch pressing",
-     "b": "Pressing uncrushed bunches. Gentle, with clear juice low in phenolics. Standard in Champagne.",
-     "place": "fr-eupdo-PDO-FR-A1359"
-    },
-    {
-     "f": "Free-run juice",
-     "b": "Juice that flows before much pressure is applied. The finest and lowest in phenolics."
-    },
-    {
-     "f": "Saignée",
-     "b": "Juice bled from a tank of black grapes after brief contact. It makes rosé and concentrates the red left behind."
-    },
-    {
-     "f": "Reductive winemaking",
-     "b": "Protecting juice and wine from oxygen with cold, sulphur dioxide and inert gas to keep fresh fruit aromas."
-    },
-    {
-     "f": "Débourbage",
-     "b": "Settling: chilled juice rests, often overnight, so solids sink and clear juice can be drawn off."
-    },
-    {
-     "f": "White fermentation temperature",
-     "b": "Usually about 12 to 22°C, cool enough to keep fruity and floral aromas."
-    },
-    {
-     "f": "Fuder",
-     "b": "The traditional Mosel cask of about 1,000 litres. Old Fuder add little oak flavour.",
-     "place": "de-eupdo-PDO-DE-A1270"
-    },
-    {
-     "f": "How can fermentation be stopped to keep sweetness?",
-     "b": "By chilling, adding sulphur dioxide and filtering out the yeast."
-    },
-    {
-     "f": "Malolactic conversion",
-     "b": "Lactic acid bacteria turn sharp malic acid into softer lactic acid, which can add buttery notes."
-    },
-    {
-     "f": "Diacetyl",
-     "b": "A by-product of malolactic conversion that smells of butter."
-    },
-    {
-     "f": "How is malolactic conversion blocked?",
-     "b": "With low temperatures, sulphur dioxide and filtration that stop or remove the bacteria."
-    },
-    {
-     "f": "Gross lees and fine lees",
-     "b": "Gross lees are coarse solids removed early. Fine lees are small yeast particles that may stay to add texture."
-    },
-    {
-     "f": "Muscadet sur lie",
-     "b": "Stays on its fine lees for one winter and is bottled from them, giving a fuller, slightly yeasty wine.",
-     "place": "fr-inao-a100"
-    },
-    {
-     "f": "Bâtonnage",
-     "b": "Stirring the lees in barrel or tank for body and a creamy texture. Common for Bourgogne Chardonnay.",
-     "place": "fr-inao-a204"
-    },
-    {
-     "f": "Barrel fermentation",
-     "b": "Fermenting white juice in barrel. The oak integrates better and the texture is creamier than with ageing alone."
-    },
-    {
-     "f": "Hunter Valley Semillon",
-     "b": "Picked early and made without oak: light and lemony young, toasty and honeyed after years in bottle.",
-     "place": "au-world-hunter-valley"
-    },
-    {
-     "f": "Orange wine",
-     "b": "White grapes fermented on their skins like a red, giving amber colour, tannin and dried fruit flavours."
-    },
-    {
-     "f": "Qvevri",
-     "b": "Large Georgian clay jars buried in the ground for fermenting and ageing. UNESCO listed the method in 2013.",
-     "place": "ge-world-kakheti"
-    },
-    {
-     "f": "Direct pressing for rosé",
-     "b": "Black grapes pressed at once for very pale rosé. Typical of Côtes de Provence.",
-     "place": "fr-inao-a297"
-    },
-    {
-     "f": "Tavel",
-     "b": "A southern Rhône appellation for rosé only. Maceration gives deeper, fuller wines.",
-     "place": "fr-inao-a287"
-    }
-   ]
-  },
-  {
-   "id": "vine-wine-red-maturation",
-   "title": "Red winemaking and maturation",
-   "minutes": 10,
-   "intro": "This lesson covers how red wines gain colour, tannin and flavour, from crushing and cap management to whole bunches and carbonic maceration. It then follows the wine through maceration, pressing and oak, and on to fining, filtration and bottle ageing.",
-   "sections": [
-    {
-     "h": "Before fermentation",
-     "p": [
-      "Black grapes are sorted, usually destemmed and lightly crushed so that juice and skins mix. The colour pigments, called anthocyanins, and much of the tannin sit in the skins. Seeds hold harsher tannin that is released if they are crushed or over-extracted.",
-      "Some winemakers keep the crushed grapes cool for a few days before fermentation, a cold soak or pre-fermentation maceration. It extracts colour and fruit into a water-based juice before alcohol forms, and it is popular for Pinot Noir in Bourgogne."
-     ],
-     "places": [
-      "fr-inao-d2840"
-     ]
-    },
-    {
-     "h": "Fermentation and extraction",
-     "p": [
-      "Red wine ferments warmer than white, at about 20 to 32°C, to help extraction. Carbon dioxide pushes the skins to the top, where they form a cap. The cap must be kept wet and mixed back into the juice, or it dries out and spoils, and extraction stops.",
-      "Pumping over (remontage) draws juice from the bottom of the tank and sprays it over the cap. Punching down (pigeage) pushes the cap into the juice by hand or by machine, and suits the small open vats often used for Pinot Noir. Rack and return (délestage) drains all the juice into another tank and pours it back over the cap, which also cools and aerates the ferment. Rotary fermenters turn the whole tank to mix skins and juice."
-     ],
-     "places": [
-      "fr-inao-d2840",
-      "fr-inao-a59"
-     ]
-    },
-    {
-     "h": "Whole bunches and carbonic maceration",
-     "p": [
-      "Some winemakers keep part or all of the bunches whole, stems included. Whole-bunch fermentation can add fresh, herbal and spicy notes, lift the aroma and soften the texture, but unripe stems add green tannin. It is used for some Pinot Noir in Bourgogne and Syrah in the northern Rhône.",
-      "In carbonic maceration, whole uncrushed bunches are put in a vessel filled with carbon dioxide. Without oxygen, an enzyme fermentation starts inside each berry and makes a little alcohol, about 2%, along with aromas of cherry, banana, bubblegum and kirsch. The berries then split, the grapes are pressed, and yeast finishes the fermentation.",
-      "Beaujolais uses semi-carbonic maceration. Bunches go whole into the vat; the lower ones are crushed by the weight above and ferment normally, while the upper ones go through carbonic maceration. The result is bright, fruity Gamay with low tannin. Beaujolais Nouveau is released on the third Thursday of November. In crus such as Morgon and Moulin-à-Vent, many producers macerate for longer to make firmer wines that age."
-     ],
-     "places": [
-      "fr-inao-a1032",
-      "fr-inao-a209",
-      "fr-inao-a210",
-      "fr-inao-a272"
-     ]
-    },
-    {
-     "h": "Maceration and pressing",
-     "p": [
-      "Maceration can be short or long. A few days give light, fruity reds. Two to four weeks, including time on the skins after fermentation, give deep-coloured, structured reds, and traditional Barolo producers have long used macerations of several weeks or more. A long maceration after fermentation is thought to make tannins feel softer, as they bind into longer chains.",
-      "The free-run wine is then drained off and the skins are pressed. Press wine is darker and more tannic. It is kept apart and blended back to taste. Almost all reds then go through malolactic conversion, in tank or in barrel."
-     ],
-     "places": [
-      "it-eupdo-PDO-IT-A1389"
-     ]
-    },
-    {
-     "h": "Oak: size, age and origin",
-     "p": [
-      "Barrel size changes the effect. The smaller the barrel, the more wood each litre of wine touches. The Bordeaux barrique holds 225 litres and the Bourgogne pièce 228 litres. Large casks such as Italian botti or French foudres, often thousands of litres, add little oak flavour and allow slow, gentle contact with oxygen.",
-      "Age matters too. A new barrel gives the most vanilla, toast, spice and wood tannin. After several fills it gives little flavour but still lets in oxygen, which softens tannin and stabilises colour. Toasting the inside of the barrel over fire adds smoky, toasty notes.",
-      "Origin shapes flavour. French oak, from Quercus petraea and Quercus robur in forests such as Tronçais, Nevers and the Vosges, is tight-grained and gives subtle spice and toast. American oak, Quercus alba, gives stronger vanilla and coconut and was long the classic choice in Rioja. Slavonian oak from Croatia is traditional for large botti in Italy. Oak chips and staves are a cheaper way to add oak flavour.",
-      "Some reds must age by law. Barolo needs at least 38 months, 18 of them in wood, and Brunello di Montalcino at least two years in wood."
-     ],
-     "places": [
-      "fr-inao-a59",
-      "fr-inao-d2840",
-      "es-eupdo-PDO-ES-A0117",
-      "it-eupdo-PDO-IT-A1389",
-      "it-eupdo-PDO-IT-A1199"
-     ]
-    },
-    {
-     "h": "Fining, filtration and bottle ageing",
-     "p": [
-      "Before bottling, most wines are clarified and stabilised. Fining adds an agent that binds to unwanted particles and settles out. Egg white softens harsh tannin in red wine, bentonite clay removes proteins that could cloud a white, and gelatine, casein and PVPP are also used. In the EU, egg and milk products used for fining must be named on the label if they can be detected in the wine.",
-      "Filtration removes yeast, bacteria and haze. Coarse depth filters catch larger particles, while fine membrane filters can make a wine microbiologically stable. Cold stabilisation chills the wine so that tartrate crystals form in the tank instead of the bottle. Some producers prefer to bottle unfined and unfiltered and accept a deposit.",
-      "In bottle a fine red changes slowly. Tannins and colour pigments join together and some drop out as sediment, so the wine softens and the colour moves from purple to ruby, then garnet and brick. Fruit gives way to tertiary aromas such as leather, earth, forest floor and dried fruit. Wines with high acidity, tannin and concentration age longest, and old wines with a deposit need decanting."
-     ]
-    }
-   ],
-   "key": [
-    "Cap management: pumping over (remontage), punching down (pigeage), rack and return (délestage).",
-    "Carbonic maceration: whole bunches under carbon dioxide ferment inside the berry to about 2% alcohol. Beaujolais uses semi-carbonic.",
-    "Beaujolais Nouveau is released on the third Thursday of November.",
-    "Longer maceration gives deeper colour and more tannin; press wine is kept apart and blended back to taste.",
-    "Barrique 225 L (Bordeaux), pièce 228 L (Bourgogne); botti and foudres are large casks. French oak: Q. petraea and Q. robur; American oak: Q. alba.",
-    "Fining: egg white for reds, bentonite for whites. In bottle the colour moves from purple to brick and tertiary aromas develop."
-   ],
-   "questions": [
-    {
-     "id": "q1",
-     "q": "What is délestage?",
-     "options": [
-      "Punching down the cap",
-      "Draining all the juice into another tank and pouring it back over the cap",
-      "Spraying juice over the cap with a pump",
-      "Keeping crushed grapes cold before fermentation"
-     ],
-     "answer": 1,
-     "explain": "Délestage, rack and return, is vigorous and also cools and aerates the ferment. Pigeage is punching down and remontage is pumping over."
-    },
-    {
-     "id": "q2",
-     "q": "About how much alcohol forms inside the berries during carbonic maceration?",
-     "options": [
-      "About 2%",
-      "About 6%",
-      "About 10%",
-      "None at all"
-     ],
-     "answer": 0,
-     "explain": "The enzyme fermentation inside the berry makes about 2% alcohol before the grapes are pressed and yeast takes over."
-    },
-    {
-     "id": "q3",
-     "q": "When is Beaujolais Nouveau released?",
-     "options": [
-      "1 January after the harvest",
-      "The first Monday of October",
-      "The third Thursday of November",
-      "Easter of the following year"
-     ],
-     "answer": 2,
-     "explain": "Beaujolais Nouveau goes on sale on the third Thursday of November of the harvest year.",
-     "place": "fr-inao-a1032"
-    },
-    {
-     "id": "q4",
-     "q": "How large is a Bordeaux barrique?",
-     "options": [
-      "114 litres",
-      "500 litres",
-      "1,000 litres",
-      "225 litres"
-     ],
-     "answer": 3,
-     "explain": "The barrique holds 225 litres; the Bourgogne pièce holds 228.",
-     "place": "fr-inao-a59"
-    },
-    {
-     "id": "q5",
-     "q": "Which oak species is American oak?",
-     "options": [
-      "Quercus robur",
-      "Quercus petraea",
-      "Quercus alba",
-      "Quercus suber"
-     ],
-     "answer": 2,
-     "explain": "American oak is Quercus alba. French oak comes from Q. robur and Q. petraea. Q. suber is the cork oak."
-    },
-    {
-     "id": "q6",
-     "q": "Which fining agent removes proteins that could cloud a white wine?",
-     "options": [
-      "Bentonite",
-      "Egg white",
-      "Gelatine",
-      "Sulphur dioxide"
-     ],
-     "answer": 0,
-     "explain": "Bentonite is a clay that binds proteins. Egg white is used mainly to soften tannin in reds."
-    },
-    {
-     "id": "q7",
-     "q": "What is the purpose of cold stabilisation?",
-     "options": [
-      "To stop malolactic conversion",
-      "To extract colour before fermentation",
-      "To make tartrate crystals form in the tank instead of the bottle",
-      "To kill wild yeast on the grapes"
-     ],
-     "answer": 2,
-     "explain": "Chilling makes tartrates crystallise before bottling, so they do not appear in the bottle."
-    },
-    {
-     "id": "q8",
-     "q": "How does the colour of a red wine change with age in bottle?",
-     "options": [
-      "From brick to purple",
-      "It turns greenish",
-      "It does not change",
-      "From purple through ruby and garnet to brick"
-     ],
-     "answer": 3,
-     "explain": "As pigments and tannins bind and drop out, red wine loses its purple and moves towards garnet and brick."
-    }
-   ],
-   "cards": [
-    {
-     "f": "Anthocyanins",
-     "b": "The colour pigments of black grapes, found in the skins."
-    },
-    {
-     "f": "Cold soak",
-     "b": "Holding crushed grapes cool for some days before fermentation to extract colour and fruit. Common for Pinot Noir.",
-     "place": "fr-inao-d2840"
-    },
-    {
-     "f": "Red fermentation temperature",
-     "b": "About 20 to 32°C, warmer than white, to help extract colour and tannin."
-    },
-    {
-     "f": "The cap",
-     "b": "The layer of skins pushed to the top of the tank by carbon dioxide during red fermentation."
-    },
-    {
-     "f": "Remontage",
-     "b": "Pumping over: juice from the bottom of the tank is sprayed over the cap."
-    },
-    {
-     "f": "Pigeage",
-     "b": "Punching down: the cap is pushed into the juice by hand or machine."
-    },
-    {
-     "f": "Délestage",
-     "b": "Rack and return: the juice is drained off and poured back over the cap, which also cools and aerates it."
-    },
-    {
-     "f": "Egg white fining",
-     "b": "Softens harsh tannin in red wine. In the EU, egg and milk fining agents must be labelled if detectable."
-    },
-    {
-     "f": "Whole-bunch fermentation",
-     "b": "Fermenting with stems and whole berries. Adds fresh, spicy, herbal notes; unripe stems add green tannin."
-    },
-    {
-     "f": "Carbonic maceration",
-     "b": "Whole bunches under carbon dioxide ferment inside the berry to about 2% alcohol, with cherry and banana aromas."
-    },
-    {
-     "f": "Semi-carbonic maceration",
-     "b": "Whole bunches in a vat: the lower ones are crushed and ferment normally, the upper ones carbonically.",
-     "place": "fr-inao-a1032"
-    },
-    {
-     "f": "Beaujolais Nouveau release date",
-     "b": "The third Thursday of November of the harvest year.",
-     "place": "fr-inao-a1032"
-    },
-    {
-     "f": "Post-fermentation maceration",
-     "b": "Leaving the new wine on its skins after fermentation. It extracts more and can make tannins feel softer."
-    },
-    {
-     "f": "Press wine",
-     "b": "Wine squeezed from the skins after the free-run wine is drained. Darker and more tannic; blended back to taste."
-    },
-    {
-     "f": "Barrique and pièce",
-     "b": "The Bordeaux barrique holds 225 litres; the Bourgogne pièce 228 litres."
-    },
-    {
-     "f": "Botti",
-     "b": "Large Italian casks, often of Slavonian oak, traditional for Barolo and Brunello. They add little oak flavour.",
-     "place": "it-eupdo-PDO-IT-A1389"
-    },
-    {
-     "f": "French and American oak",
-     "b": "French (Quercus petraea, Q. robur) is subtle and spicy. American (Q. alba) gives more vanilla and coconut."
-    },
-    {
-     "f": "Which oak is traditional in Rioja?",
-     "b": "American oak was long the classic barrel wood of traditional Rioja.",
-     "place": "es-eupdo-PDO-ES-A0117"
-    },
-    {
-     "f": "Bentonite",
-     "b": "A clay used to fine white wines, removing proteins that could make them hazy."
-    },
-    {
-     "f": "Tertiary aromas",
-     "b": "Notes from bottle ageing, such as leather, earth, forest floor, mushroom and dried fruit."
-    }
-   ]
-  }
- ]
+  ]
 }
