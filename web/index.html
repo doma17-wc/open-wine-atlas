@@ -438,12 +438,69 @@ body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing 
   display: flex; flex-direction: column; overflow: hidden; position: relative; }
 .dash-head { display: flex; align-items: center; gap: 18px; padding: 16px 64px 14px 22px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
 .dash-head h2 { margin: 0; font: 600 28px/1 var(--f-display); }
-.dash-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
-.dash-tabs button { all: unset; cursor: pointer; padding: 6px 12px; border-radius: 999px; font-size: 13px; color: var(--muted); }
-.dash-tabs button:hover { color: var(--parchment); }
-.dash-tabs button[aria-selected="true"] { color: var(--night); background: var(--parchment); }
-.dash-tabs button:focus-visible { outline: 2px solid var(--focus); }
-.dash-body { overflow: auto; padding: 20px 22px 28px; flex: 1; display: flex; flex-direction: column; gap: 22px; }
+/* My atlas: a grouped list of sections on the left (Home, Learn, My wine, Discover, Account), the section on the right */
+.dash-main { flex: 1; min-height: 0; display: grid; grid-template-columns: 200px minmax(0, 1fr); }
+.dash-nav { border-right: 1px solid var(--line); padding: 14px 10px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+.dn-g { display: flex; flex-direction: column; gap: 2px; margin-top: 14px; }
+.dn-h { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 0 10px 4px; }
+.dash-nav button { all: unset; box-sizing: border-box; cursor: pointer; position: relative; display: flex; align-items: center; gap: 9px; padding: 7px 10px; border-radius: 8px;
+  font-size: 13.5px; color: #c9c0b1; }
+.dash-nav button svg { flex: none; color: var(--muted); }
+.dash-nav button:hover { background: #1c1c21; color: var(--parchment); }
+.dash-nav button[aria-current="page"] { background: #24232a; color: var(--parchment); }
+.dash-nav button[aria-current="page"]::before { content: ""; position: absolute; left: 0; top: 7px; bottom: 7px; width: 2px; border-radius: 2px; background: var(--gold); }
+.dash-nav button[aria-current="page"] svg { color: var(--gold); }
+.dash-nav button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.dn-n { margin-left: auto; font: 600 10.5px var(--f-mono); font-style: normal; color: var(--night); background: var(--gold); border-radius: 999px; padding: 1px 6px; }
+.dn-acct { margin-top: auto; padding-top: 14px; }
+.dash-body { overflow: auto; padding: 20px 22px 28px; flex: 1; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.dash-body:focus { outline: none; }
+.dsec { display: grid; gap: 4px; }
+.dsec-t { margin: 0; font: 600 30px/1.08 var(--f-display); color: var(--parchment); text-wrap: balance; }
+.dsec p { margin: 0; color: var(--muted); font-size: 13.5px; max-width: 70ch; }
+/* Home */
+.home-study { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 0; align-items: stretch; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.home-study .hs { padding: 14px 16px; display: grid; gap: 2px; border-right: 1px solid var(--line); min-width: 0; }
+.home-study .hs b { font: 600 30px/1.05 var(--f-display); font-variant-numeric: tabular-nums; }
+.home-study .hs span { color: var(--muted); font-size: 12px; }
+.home-study .hs-go { padding: 14px 16px; display: grid; gap: 6px; align-content: center; justify-items: start; background: rgba(231,192,106,.05); min-width: 0; }
+.home-study .hs-go small { color: var(--muted); font-size: 12px; max-width: 30ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.btn-gold { all: unset; box-sizing: border-box; cursor: pointer; padding: 9px 14px; border-radius: 9px; background: var(--gold); color: #17130b; font: 600 13.5px var(--f-body); }
+.btn-gold:hover { background: #f0cf85; }
+.btn-gold:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.fgroups { display: grid; gap: 18px; }
+.ftiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.ftile { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 3px 12px; align-items: start; align-content: start; padding: 14px 16px;
+  border: 1px solid var(--line); border-radius: 12px; background: #151518; min-width: 0; }
+.ftile:hover { border-color: #57534a; background: #18181c; }
+.ftile:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ftile svg { grid-row: 1 / span 2; margin-top: 3px; color: var(--muted); }
+.ftile.learn svg { color: var(--gold); }
+.ftile b { font: 600 20px/1.15 var(--f-display); color: var(--parchment); }
+.ftile span { grid-column: 2 / span 2; color: #a9a091; font-size: 12.5px; line-height: 1.45; }
+.ftile em { font: 500 12px var(--f-mono); font-style: normal; color: var(--muted); align-self: center; }
+.ftile em.hot { color: var(--gold); }
+@media (max-width: 760px) {
+  .dash-main { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .dash-nav { flex-direction: row; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--line); padding: 8px 10px; gap: 4px; scrollbar-width: none; }
+  .dash-nav::-webkit-scrollbar { display: none; }
+  .dn-g { display: contents; }
+  .dn-h { display: none; }
+  .dn-acct { margin: 0; padding: 0; }
+  .dash-nav button { flex: none; padding: 6px 11px; border-radius: 999px; font-size: 13px; }
+  .dash-nav button svg { display: none; }
+  .dash-nav button[aria-current="page"] { background: var(--parchment); color: var(--night); }
+  .dash-nav button[aria-current="page"]::before { display: none; }
+  .dn-g > button:first-of-type { margin-left: 8px; }
+  .dsec-t { font-size: 26px; }
+  .home-study { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-study .hs { padding: 12px; }
+  .home-study .hs b { font-size: 26px; }
+  .home-study .hs:nth-child(3) { border-right: 0; }
+  .home-study .hs-go { grid-column: 1 / -1; border-top: 1px solid var(--line); grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .home-study .hs-go small { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .ftiles { grid-template-columns: minmax(0, 1fr); }
+}
 .dash-body > * { flex-shrink: 0; }
 .dash-body h3 { margin: 0 0 8px; font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .dash-body .lead { margin: 0; color: #c9c0b1; max-width: 70ch; }
@@ -635,6 +692,70 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   .sheet.min.open ~ .geochip { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+
+/* ---------- the tools, always in sight: a toolbar in the rail (desk), a tab bar at the bottom (phones) */
+:root { --tabH: 0px; }
+.quick { display: flex; gap: 2px; padding: 4px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--r); backdrop-filter: blur(10px); }
+.quick button { all: unset; box-sizing: border-box; cursor: pointer; position: relative; flex: 1 1 auto; display: grid; justify-items: center; gap: 3px; padding: 7px 3px 6px; border-radius: 7px;
+  color: #b9b09f; font-size: 11.5px; line-height: 1.15; text-align: center; min-width: 0; }
+.quick button span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11.5px; letter-spacing: -.005em; }
+.quick button svg { color: var(--muted); }
+.quick button.lead svg { color: var(--gold); }
+.quick button:hover { background: #222228; color: var(--parchment); }
+.quick button:hover svg { color: var(--parchment); }
+.quick button.lead:hover svg { color: var(--gold); }
+.quick button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.qn { position: absolute; top: 3px; left: calc(50% + 6px); font: 600 9.5px/1 var(--f-mono); font-style: normal; color: var(--night); background: var(--gold); border-radius: 999px; padding: 2px 5px; }
+.tabbar { display: none; }
+.welcome { position: absolute; z-index: 3; bottom: calc(44px + env(safe-area-inset-bottom, 0px)); width: min(540px, calc(100% - 32px)); box-sizing: border-box;
+  left: calc(var(--railR, 16px) + (100% - var(--railR, 16px) - var(--topR, 16px)) / 2); transform: translateX(-50%);
+  padding: 18px 20px 16px; background: rgba(17,17,20,.96); border: 1px solid #3a3830; border-radius: 14px; box-shadow: 0 18px 50px rgba(0,0,0,.5); backdrop-filter: blur(12px); }
+.welcome h2 { margin: 0 40px 10px 0; font: 600 26px/1.1 var(--f-display); }
+.welcome ol { list-style: none; counter-reset: w; margin: 0 0 14px; padding: 0; display: grid; gap: 10px; }
+.welcome li { counter-increment: w; display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 0 10px; }
+.welcome li::before { content: counter(w); grid-row: 1 / span 2; width: 24px; height: 24px; border-radius: 50%; border: 1px solid #6b5a33; color: var(--gold);
+  display: grid; place-items: center; font: 600 14px var(--f-display); }
+.welcome li b { font-weight: 500; }
+.welcome li span { color: #b8af9f; font-size: 13px; }
+.welcome .row { gap: 8px; }
+.welcome .mini-btn { padding: 8px 13px; font-size: 13px; }
+.welcome .x { top: 12px; right: 12px; }
+body.maponly .welcome, body.quizzing .welcome, body.maponly .quick, body.maponly .tabbar, body.quizzing .tabbar { display: none !important; }
+@media (max-width: 760px) {
+  :root { --tabH: calc(58px + env(safe-area-inset-bottom, 0px)); }
+  body.maponly, body.quizzing { --tabH: 0px; }
+  .quick { display: none; }
+  .dash-btn { display: none; }
+  .lang-btn { right: 12px; }
+  .brand h1 { padding-right: 70px; }
+  .tabbar { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); position: absolute; z-index: 9; left: 0; right: 0; bottom: 0;
+    height: var(--tabH); box-sizing: border-box; padding: 0 4px env(safe-area-inset-bottom, 0px); background: rgba(13,13,16,.97); border-top: 1px solid var(--line); backdrop-filter: blur(12px); }
+  .tabbar button { all: unset; box-sizing: border-box; cursor: pointer; position: relative; display: grid; justify-items: center; align-content: center; gap: 3px;
+    color: var(--muted); font-size: 11px; line-height: 1.1; min-width: 0; -webkit-tap-highlight-color: transparent; }
+  .tabbar button span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tabbar button[aria-current="page"] { color: var(--parchment); }
+  .tabbar button[aria-current="page"] svg { color: var(--gold); }
+  .tabbar button[aria-current="page"]::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 2px; border-radius: 0 0 2px 2px; background: var(--gold); }
+  .tabbar button:focus-visible { outline: 2px solid var(--focus); outline-offset: -3px; border-radius: 8px; }
+  .tabbar .qn { top: 6px; }
+  /* everything that sits at the bottom moves above the tab bar */
+  .dash { bottom: var(--tabH); }
+  .sheet, .sheet.min { bottom: var(--tabH); }
+  .sheet { transform: translateY(calc(105% + var(--tabH))); }
+  .sheet.open { transform: none; }
+  .viewbar { bottom: calc(16px + var(--tabH)); }
+  .sheet.min.open ~ .viewbar { bottom: calc(96px + var(--tabH)); }
+  .geochip { bottom: calc(16px + var(--tabH)); }
+  .sheet.open ~ .geochip { bottom: calc(62% + var(--tabH) + 10px); }
+  .sheet.min.open ~ .geochip { bottom: calc(96px + var(--tabH)); }
+  .maplibregl-ctrl-bottom-left { bottom: var(--tabH); }
+  .loading { bottom: calc(22px + var(--tabH)); }
+  .toast { bottom: calc(14px + var(--tabH)); max-width: calc(100% - 32px); box-sizing: border-box; }
+  .sheet.open ~ .toast { bottom: auto; top: calc(14px + env(safe-area-inset-top, 0px)); } /* never over the place sheet */
+  .welcome { left: 12px; right: 12px; width: auto; transform: none; bottom: calc(64px + var(--tabH)); padding: 16px 16px 14px; }
+  .welcome h2 { font-size: 23px; }
+}
 </style>
 
 </head>
@@ -648,6 +769,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button id="miniExplore" title="Explore regions" data-i18n-title="Explore regions" aria-label="Explore regions" data-i18n-aria="Explore regions"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3.5h6M5 8h7M7 12.5h6M3 3.5v9h4M3 8h2"/></svg></button>
     <button id="miniLayers" title="Map and layers" data-i18n-title="Map and layers" aria-label="Map and layers" data-i18n-aria="Map and layers"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5l6 3-6 3-6-3z"/><path d="M2 9l6 3 6-3"/></svg></button>
     <button id="miniLang" title="Language" data-i18n-title="Language" aria-label="Language" data-i18n-aria="Language"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 4 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.8 5.4 8s.8 4.3 2.6 6.2"/></svg></button>
+    <button id="miniStudy" class="web-only" hidden data-open="study" title="Study and quiz" data-i18n-title="Study and quiz" aria-label="Study and quiz" data-i18n-aria="Study and quiz"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5.5C8.5 4.3 6 4 3 4.5v10.5c3-.5 5.5-.2 7 1 1.5-1.2 4-1.5 7-1V4.5c-3-.5-5.5-.2-7 1zM10 5.5v10.5"/></svg></button>
     <button id="miniDash" title="My atlas (M)" data-i18n-title="My atlas (M)" aria-label="My atlas" data-i18n-aria="My atlas"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2l1.8 3.7 4 .6-2.9 2.8.7 4L8 11.4l-3.6 1.9.7-4L2.2 6.5l4-.6z"/></svg></button>
   </div>
   <div class="brand">
@@ -669,6 +791,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     </div>
     <ul class="results" id="results" role="listbox" hidden></ul>
   </div>
+  <nav class="quick" id="quick" aria-label="Your tools" data-i18n-aria="Your tools">
+    <button class="web-only lead" id="openStudy" data-open="study" hidden title="Study and quiz" data-i18n-title="Study and quiz" data-icon="study"><span data-i18n>Study</span><i class="qn" data-badge="due" hidden></i></button>
+    <button class="web-only" data-open="cards" hidden title="Flashcards" data-i18n-title="Flashcards" data-icon="cards"><span data-i18n>Flashcards</span></button>
+    <button data-open="saved" title="Saved places" data-i18n-title="Saved places" data-icon="saved"><span data-i18n>Saved</span><i class="qn" data-badge="saved" hidden></i></button>
+    <button data-open="notebook" title="Notebook" data-i18n-title="Notebook" data-icon="notebook"><span data-i18n>Notebook</span></button>
+    <button class="web-only" data-open="account" hidden title="Account" data-i18n-title="Account" data-icon="me"><span data-i18n>Account</span></button>
+  </nav>
   <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar" data-i18n-aria="Sidebar">
     <button role="tab" id="tabExplore" aria-selected="true" aria-controls="explore" data-i18n>Explore regions</button>
     <button role="tab" id="tabMap" aria-selected="false" aria-controls="mapPanel" data-i18n>Map and layers</button>
@@ -713,7 +842,6 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button class="link-btn" id="openSuggest" data-i18n>Suggest a place</button>
     <a class="link-btn web-only" href="/places/" style="color:inherit;text-decoration:none" hidden data-i18n>All places A to Z</a>
     <a class="link-btn web-only fm-link" href="/founding?from=map" hidden data-i18n>Become a Founding Member</a>
-    <button class="link-btn web-only study-link" id="openStudy" hidden data-i18n>Study and quiz</button>
   </div>
   <p class="legal-links web-only" hidden><a href="/privacy" data-i18n>Privacy</a> · <a href="/terms" data-i18n>Terms of Use</a> · <a href="/legal" data-i18n>Legal notice</a></p>
   </div>
@@ -746,14 +874,51 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
 <section class="dash" id="dash" hidden>
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
-    <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2>
-      <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
-        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="notebook" aria-selected="false" data-i18n>Notebook</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button><button role="tab" data-tab="study" aria-selected="false" class="web-only" id="tabStudy" hidden data-i18n>Study</button><button role="tab" data-tab="account" aria-selected="false" class="web-only" id="tabAccount" hidden data-i18n>Account</button>
-      </nav></header>
-    <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
-    <div class="dash-body" id="dashBody" role="tabpanel"></div>
+    <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2></header>
+    <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <div class="dash-main">
+      <nav class="dash-nav" id="dashTabs" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
+        <button data-tab="overview" data-icon="home"><span data-i18n>Home</span></button>
+        <div class="dn-g web-only" role="group" aria-labelledby="dnLearn" hidden><span class="dn-h" id="dnLearn" data-i18n>Learn</span>
+          <button data-tab="study" data-icon="study"><span data-i18n>Study</span><i class="dn-n" data-badge="due" hidden></i></button>
+          <button data-tab="cards" data-icon="cards"><span data-i18n>Flashcards</span></button>
+          <button data-tab="exam" data-icon="exam"><span data-i18n>Mock exam</span></button>
+        </div>
+        <div class="dn-g" role="group" aria-labelledby="dnMine"><span class="dn-h" id="dnMine" data-i18n>My wine</span>
+          <button data-tab="saved" data-icon="saved"><span data-i18n>Saved</span><i class="dn-n" data-badge="saved" hidden></i></button>
+          <button data-tab="journal" data-icon="journal"><span data-i18n>Journal</span></button>
+          <button data-tab="notebook" data-icon="notebook"><span data-i18n>Notebook</span></button>
+          <button data-tab="compare" data-icon="compare"><span data-i18n>Compare</span></button>
+        </div>
+        <div class="dn-g" role="group" aria-labelledby="dnDisc"><span class="dn-h" id="dnDisc" data-i18n>Discover</span>
+          <button data-tab="explore" data-icon="explore"><span data-i18n>Explore</span></button>
+          <button data-tab="records" data-icon="records"><span data-i18n>Records</span></button>
+        </div>
+        <div class="dn-g dn-acct web-only" hidden>
+          <button data-tab="account" data-icon="me"><span data-i18n>Account</span></button>
+        </div>
+      </nav>
+      <div class="dash-body" id="dashBody" tabindex="-1"></div>
+    </div>
   </div>
 </section>
+<nav class="tabbar" id="tabbar" aria-label="Main" data-i18n-aria="Main">
+  <button data-open="map" aria-current="page" data-icon="map"><span data-i18n>Map</span></button>
+  <button class="web-only" data-open="study" hidden data-icon="study"><span data-i18n>Study</span><i class="qn" data-badge="due" hidden></i></button>
+  <button data-open="saved" data-icon="saved"><span data-i18n>Saved</span></button>
+  <button data-open="notebook" data-icon="notebook"><span data-i18n>Notebook</span></button>
+  <button data-open="overview" data-icon="me"><span data-i18n>Me</span></button>
+</nav>
+<aside class="welcome" id="welcome" aria-labelledby="welcomeT" hidden>
+  <button class="x" id="welcomeX" aria-label="Close the welcome" data-i18n-aria="Close the welcome"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <h2 id="welcomeT" data-i18n>Welcome to the Open Wine Atlas</h2>
+  <ol>
+    <li><b data-i18n>Explore the map</b><span data-i18n>Click any outline: its rules, grapes, terrain and climate open beside the map.</span></li>
+    <li><b data-i18n>Study and quiz yourself</b><span data-i18n>Lessons, flashcards and mock exams for WSET, CMS and sommelier courses.</span></li>
+    <li><b data-i18n>Save and take notes</b><span data-i18n>Star places, log tastings and write notes. My atlas keeps them for you.</span></li>
+  </ol>
+  <div class="row"><button class="btn-gold" id="welcomeGo" data-i18n>Start exploring</button><button class="mini-btn" id="welcomeStudy" data-i18n>Open Study</button></div>
+</aside>
 <div class="loading" id="loading" data-i18n>Loading the atlas…</div>
 <div class="tag" id="tag" hidden></div>
 <div class="geochip" id="geoChip" role="status" hidden><span class="k"></span><button class="n" id="geoChipName" title="Show all of it" data-i18n-title="Show all of it"></button><button class="x" id="geoChipX" aria-label="Remove the highlight" data-i18n-aria="Remove the highlight" title="Remove the highlight" data-i18n-title="Remove the highlight"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
@@ -880,6 +1045,23 @@ const REPO = "https://github.com/doma17-wc/open-wine-atlas";
 const DEM_URL = QS.get("dem") || "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp";
 const DEM_TILE = 512, DEM_MAX = 14;
 if (WEB) document.querySelectorAll(".web-only").forEach((el) => { el.hidden = false; });
+// line icons for the toolbar, the tab bar and My atlas (20 × 20, drawn in the text colour)
+const ICONS = {
+  map: '<path d="M2.5 5l5-2 5 2 5-2v12l-5 2-5-2-5 2zM7.5 3v12M12.5 5v12"/>',
+  home: '<path d="M3 9.5l7-6 7 6V17h-4.5v-5h-5v5H3z"/>',
+  study: '<path d="M10 5.5C8.5 4.3 6 4 3 4.5v10.5c3-.5 5.5-.2 7 1 1.5-1.2 4-1.5 7-1V4.5c-3-.5-5.5-.2-7 1zM10 5.5v10.5"/>',
+  cards: '<rect x="3" y="6.5" width="11" height="10" rx="1.5"/><path d="M6.5 3.5h9a1.5 1.5 0 0 1 1.5 1.5v8"/>',
+  exam: '<rect x="4" y="3" width="12" height="14.5" rx="1.5"/><path d="M7.3 8.6l1.8 1.8 3.6-3.7M7.3 13.5h5.4"/>',
+  saved: '<path d="M10 2.8l2.2 4.5 5 .7-3.6 3.5.9 4.9L10 14.1l-4.5 2.3.9-4.9L2.8 8l5-.7z"/>',
+  journal: '<path d="M6 2.5h8c.3 3.6-.9 6.6-4 7.1-3.1-.5-4.3-3.5-4-7.1zM10 9.6v7M6.5 17h7"/>',
+  notebook: '<rect x="4" y="2.5" width="12" height="15" rx="1.5"/><path d="M7 6.5h6M7 9.5h6M7 12.5h3.5"/>',
+  compare: '<rect x="2.5" y="4" width="6" height="12" rx="1"/><rect x="11.5" y="4" width="6" height="12" rx="1"/>',
+  explore: '<path d="M7 5h10M7 10h10M7 15h10M3.2 5h.6M3.2 10h.6M3.2 15h.6"/>',
+  records: '<path d="M2 16.5l5.5-9 3.3 4.8 2.2-3.3 5 7.5z"/>',
+  me: '<circle cx="10" cy="7" r="3.2"/><path d="M3.5 17c.8-3.3 3.4-5 6.5-5s5.7 1.7 6.5 5"/>',
+};
+const icon = (k, sz = 18) => '<svg width="' + sz + '" height="' + sz + '" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[k] || "") + "</svg>";
+document.querySelectorAll("[data-icon]").forEach((el) => el.insertAdjacentHTML("afterbegin", icon(el.dataset.icon, el.closest(".dash-nav") ? 16 : 18)));
 
 // ---------- PMTiles kept in memory (each file is fetched once, then read by offset)
 class MemSource {
@@ -3146,6 +3328,7 @@ function applyLayout() {
   sh.classList.toggle("wide", size === "wide");
   sh.classList.toggle("min", size === "min");
   const open = sh.classList.contains("open"), w = size === "min" ? 300 : curSheetW();
+  if (open && !desk) hideWelcome(); // on a phone the sheet takes the place of the welcome card
   const R = document.documentElement.style;
   R.setProperty("--railR", (!desk || UI.mapOnly ? 16 : UI.rail === "mini" ? 76 : 372) + "px");
   R.setProperty("--sheetW", w + "px");
@@ -4106,11 +4289,11 @@ function sheetActs(p) {
 }
 function refreshActs() { const box = document.querySelector("#sh-head .acts"); if (box && CURRENT) box.outerHTML = sheetActs(CURRENT.p); }
 let toastTimer = null;
-function toast(html) {
+function toast(html, ms = 4200) {
   let t = $("toast");
   if (!t) { t = document.createElement("div"); t.id = "toast"; t.className = "toast"; t.setAttribute("role", "status"); document.body.appendChild(t); }
   t.innerHTML = html; t.hidden = false;
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 4200);
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, ms);
 }
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-act]");
@@ -4159,6 +4342,20 @@ function refreshMine() {
 function updateDashBadge() {
   const n = Object.keys(MY.saved).length + MY.journal.length + MY.notes.length, el = $("dashCount");
   if (el) { el.textContent = n; el.hidden = !n; }
+  // the toolbar, the tab bar and the sections of My atlas: saved places and study cards due today
+  const g = studyGlance(), v = { saved: Object.keys(MY.saved).length, due: WEB ? g.due : 0 };
+  document.querySelectorAll("[data-badge]").forEach((b) => { const k = v[b.dataset.badge]; b.textContent = k > 99 ? "99+" : k; b.hidden = !k; });
+}
+// study progress at a glance, read from My atlas without loading study.js
+const dayKey = (t) => { const d = new Date(t); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+function studyGlance() {
+  const s = MY.study && typeof MY.study === "object" ? MY.study : {}, st = s.stats || {}, now = Date.now();
+  const days = new Set(st.days || []);
+  let streak = 0, t = now;
+  if (!days.has(dayKey(t))) t -= 864e5;
+  while (days.has(dayKey(t))) { streak++; t -= 864e5; }
+  const due = Object.values(s.cards || {}).filter((c) => c && c.due <= now).length;
+  return { answered: st.answered || 0, right: st.right || 0, streak, due, last: s.last && s.last.id ? s.last : null };
 }
 
 // ---------- quiz mode (study.js): no names on the map, clicks go to the quiz, the panels step aside
@@ -4197,28 +4394,83 @@ function placesAt(point) {
 }
 
 // ---------- the dashboard
-let dashTab = "overview", dashPrefill = null;
+let dashTab = "overview", dashPrefill = null, dashShown = null;
 const EXP = { q: "", cc: "", level: "", top: false, sort: "name", dir: 1, limit: 150 };
+// the sections of My atlas, each with a line that says what it is for (Home tiles and the head of each section)
+const SECTION = {
+  overview: [N_("Home"), ""],
+  study: [N_("Study"), N_("Lessons for WSET, CMS and sommelier courses, with quizzes on the map.")],
+  cards: [N_("Flashcards"), N_("Turn a card, say the answer, see if you knew it.")],
+  exam: [N_("Mock exam"), N_("Thirty questions from a whole path, scored at the end.")],
+  saved: [N_("Saved places"), N_("The places you starred, with their terrain and climate.")],
+  journal: [N_("Tasting journal"), N_("The wines you tasted, where they come from and your score.")],
+  notebook: [N_("Notebook"), N_("Your notes, linked to places and tagged.")],
+  compare: [N_("Compare"), N_("Up to four places side by side.")],
+  explore: [N_("Explore"), N_("Every place in the atlas in one table to sort and filter.")],
+  records: [N_("Records"), N_("The highest, steepest, largest and farthest places.")],
+  account: [N_("Account"), N_("Sign in to keep your atlas on every device.")],
+};
+const STUDY_TABS = ["study", "cards", "exam"];
 function openDash(tab, prefillId) {
+  if (!WEB && (STUDY_TABS.includes(tab) || tab === "account")) tab = "overview";
+  if (dashTab === "notebook" && tab && tab !== "notebook" && NB.dirty && $("nb-form")) nbSave(true);
   dashTab = tab || dashTab; dashPrefill = prefillId || null;
+  const was = $("dash").hidden;
+  if (was && $("toast")) $("toast").hidden = true; // a note about the map does not follow into My atlas
   $("dash").hidden = false; renderDash();
-  const first = document.querySelector('#dashTabs button[aria-selected="true"]'); if (first) first.focus();
+  if (was) { const cur = document.querySelector('#dashTabs button[aria-current="page"]'); if (cur) cur.focus({ preventScroll: true }); }
+  hideWelcome();
 }
-function closeDash() { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); $("dash").hidden = true; }
+function closeDash() { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); $("dash").hidden = true; syncNav(); }
 $("openDash").onclick = () => openDash();
-$("openStudy").onclick = () => openDash("study");
 $("dashClose").onclick = closeDash;
 $("dash").addEventListener("click", (e) => { if (e.target.id === "dash") closeDash(); });
-document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); dashTab = b.dataset.tab; renderDash(); });
+document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => openDash(b.dataset.tab));
 function goFromDash(id) { const r = recOf(id); if (r) { closeDash(); goTo(r); } }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) { e.preventDefault(); goFromDash(b.dataset.go); } });
-document.addEventListener("click", (e) => { const b = e.target.closest("[data-dtab]"); if (b) { e.preventDefault(); dashTab = b.dataset.dtab; renderDash(); } });
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-dtab]"); if (b) { e.preventDefault(); openDash(b.dataset.dtab); } });
+// the toolbar in the rail, the slim sidebar and the tab bar on phones
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-open]");
+  if (!b) return;
+  e.preventDefault();
+  const k = b.dataset.open;
+  if (k === "map") { closeDash(); if ($("modal") && !$("modal").hidden && $("mclose")) $("mclose").click(); return; }
+  if (!$("dash").hidden && dashTab === k) return;
+  openDash(k);
+});
+// the tab bar and the sections list show where you are
+function syncNav() {
+  const open = !$("dash").hidden;
+  document.querySelectorAll("#dashTabs button").forEach((b) => { if (b.dataset.tab === dashTab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+  // phones: the sections scroll sideways, keep the current one in sight
+  const nav = $("dashTabs"), cur = nav.querySelector('[aria-current="page"]');
+  if (open && cur && nav.scrollWidth > nav.clientWidth) {
+    const l = cur.offsetLeft - nav.offsetLeft, r = l + cur.offsetWidth;
+    if (l < nav.scrollLeft + 8) nav.scrollLeft = Math.max(0, l - 24); else if (r > nav.scrollLeft + nav.clientWidth - 8) nav.scrollLeft = r - nav.clientWidth + 24;
+  }
+  const tb = !open ? "map" : STUDY_TABS.includes(dashTab) ? "study" : dashTab === "saved" || dashTab === "notebook" ? dashTab : "overview";
+  document.querySelectorAll("#tabbar [data-open]").forEach((b) => { if (b.dataset.open === tb) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
+}
+// study.js links: lesson:<id>, path:<id>, cards, deck:lesson:<id>, deck:path:<id>, exam, exam:<path id>, review
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-study-go]");
+  if (!b) return;
+  e.preventDefault();
+  const spec = b.dataset.studyGo;
+  loadStudy().then(() => { if (window.OWA_STUDY && window.OWA_STUDY.go) window.OWA_STUDY.go(spec); else openDash("study"); });
+});
 
 function renderDash() {
-  document.querySelectorAll("#dashTabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === dashTab)));
+  syncNav();
   const body = $("dashBody");
-  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, notebook: dashNotebook, compare: dashCompare, explore: dashExplore, records: dashRecords, account: dashAccount, study: dashStudy }[dashTab] || dashOverview)();
-  if (dashTab === "study" && window.OWA_STUDY) window.OWA_STUDY.wire();
+  const fresh = dashShown !== dashTab; dashShown = dashTab;
+  const sec = SECTION[dashTab];
+  const busy = STUDY_TABS.includes(dashTab) && window.OWA_STUDY && window.OWA_STUDY.busy && window.OWA_STUDY.busy(dashTab);
+  const head = dashTab === "overview" || !sec || busy ? "" : '<div class="dsec"><h2 class="dsec-t">' + t_(sec[0]) + "</h2>" + (sec[1] ? "<p>" + t_(sec[1]) + "</p>" : "") + "</div>";
+  body.innerHTML = head + ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, notebook: dashNotebook, compare: dashCompare, explore: dashExplore, records: dashRecords, account: dashAccount, study: dashStudy, cards: dashStudy, exam: dashStudy }[dashTab] || dashOverview)();
+  if (fresh) body.scrollTop = 0;
+  if (STUDY_TABS.includes(dashTab) && window.OWA_STUDY) window.OWA_STUDY.wire();
   if (dashTab === "records") wireRecords();
   if (dashTab === "journal") wireJournal();
   if (dashTab === "notebook") wireNotebook();
@@ -4231,6 +4483,17 @@ const tile = (v, l) => '<div class="tile"><b>' + v + "</b><span>" + l + "</span>
 const facing = (deg) => deg == null ? "–" : SECTOR_NAME[compass(deg)];
 const sunPct = (s) => s == null ? "–" : Math.round(s * 100) + " %";
 
+function greeting() {
+  const h = new Date().getHours(), name = window.OWA_ACCOUNT && window.OWA_ACCOUNT.name ? window.OWA_ACCOUNT.name() : "";
+  const g = h < 5 || h >= 18 ? (name ? t_("Good evening, {name}.", { name: esc(name) }) : t_("Good evening.")) : h < 12 ? (name ? t_("Good morning, {name}.", { name: esc(name) }) : t_("Good morning.")) : (name ? t_("Good afternoon, {name}.", { name: esc(name) }) : t_("Good afternoon."));
+  return g;
+}
+// a big tile that says what a section is for and opens it
+function ftile(tab, ic, count, cls = "") {
+  const s = SECTION[tab];
+  return '<button class="ftile ' + cls + '" data-' + (STUDY_TABS.includes(tab) ? 'study-go="' + tab : 'dtab="' + tab) + '">' + icon(ic, 18) + "<b>" + t_(s[0]) + "</b>" +
+    (count ? "<em" + (/hot/.test(cls) ? ' class="hot"' : "") + ">" + count + "</em>" : "<em></em>") + "<span>" + t_(s[1]) + "</span></button>";
+}
 function dashOverview() {
   const saved = Object.values(MY.saved), cc = new Set([...saved.map((s) => s.country), ...MY.journal.map((j) => j.country), ...MY.recent.map((id) => recOf(id)?.[2]).filter(Boolean)]);
   const countries = new Set(INDEX.map((r) => r[2]));
@@ -4238,18 +4501,34 @@ function dashOverview() {
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12), mx = top[0]?.[1] || 1;
   const recent = MY.recent.map(recOf).filter(Boolean);
   const synced = window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn();
-  return '<p class="lead">' + t_("Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register.") + " " +
-    (synced ? t_("Everything here is synced to your account.") : t_("Everything here stays on this device.")) + '</p>' +
+  const g = studyGlance();
+  // study progress and the way back into the last lesson
+  const study = !WEB ? "" : '<section aria-labelledby="hsT"><h3 id="hsT">' + t_("Your study") + '</h3><div class="home-study">' +
+    '<div class="hs"><b>' + g.streak + "</b><span>" + (g.streak === 1 ? t_("day in a row") : t_("days in a row")) + "</span></div>" +
+    '<div class="hs"><b>' + fmt(g.answered) + "</b><span>" + t_("questions answered") + "</span></div>" +
+    '<div class="hs"><b>' + fmt(g.due) + "</b><span>" + t_("cards due for review") + "</span></div>" +
+    '<div class="hs-go">' + (g.last
+      ? '<small>' + esc(t_("Last lesson: {title}", { title: g.last.t || "" })) + '</small><button class="btn-gold" data-study-go="lesson:' + esc(g.last.id) + '">' + t_("Continue") + "</button>"
+      : '<small>' + t_("New here? Start with the basics.") + '</small><button class="btn-gold" data-study-go="start">' + t_("Start studying") + "</button>") +
+    (g.due ? '<button class="mini-btn" data-study-go="review">' + t_("Review {n} cards", { n: g.due }) + "</button>" : "") + "</div></div></section>";
+  const groups = '<div class="fgroups">' +
+    (WEB ? '<section aria-labelledby="fgL"><h3 id="fgL">' + t_("Learn") + '</h3><div class="ftiles">' + ftile("study", "study", "", "learn") + ftile("cards", "cards", g.due ? t_("{n} due", { n: g.due }) : "", "learn hot") + ftile("exam", "exam", "", "learn") + "</div></section>" : "") +
+    '<section aria-labelledby="fgM"><h3 id="fgM">' + t_("My wine") + '</h3><div class="ftiles">' + ftile("saved", "saved", saved.length || "") + ftile("journal", "journal", MY.journal.length || "") +
+      ftile("notebook", "notebook", MY.notes.length || "") + ftile("compare", "compare", MY.compare.length ? MY.compare.length + " / 4" : "") + "</div></section>" +
+    '<section aria-labelledby="fgD"><h3 id="fgD">' + t_("Discover") + '</h3><div class="ftiles">' + ftile("explore", "explore", fmt(INDEX.length)) + ftile("records", "records", "") +
+      (WEB ? ftile("account", "me", synced ? t_("signed in") : "") : "") + "</div></section></div>";
+  return '<div class="dsec"><h2 class="dsec-t">' + greeting() + "</h2><p>" +
+    t_("What you study, save and note in the atlas lives here.") + " " + (synced ? t_("Everything here is synced to your account.") : t_("Everything here stays on this device.")) + "</p></div>" +
     (window.OWA_ACCOUNT ? window.OWA_ACCOUNT.line() : "") +
-    (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Become a Founding Member") + '</b><span>' +
-      t_("Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
-    '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
-    tile(MY.journal.length, t_("tastings logged")) + tile(MY.notes.length, t_("notes")) + tile(cc.size, t_("countries you explored")) + "</div>" +
-    '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
+    study + groups +
+    '<div class="dgrid"><div><h3>' + t_("Recently viewed") + "</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">' + t_("Places you open on the map appear here.") + '</div>') +
+    "<h3 style=\"margin-top:18px\">" + t_("Discover") + '</h3><div class="row">' +
     '<button class="mini-btn" data-rand="any">' + t_("Surprise me") + '</button><button class="mini-btn" data-rand="grand_cru">' + t_("A grand cru") + '</button><button class="mini-btn" data-rand="premier_cru">' + t_("A premier cru") + '</button>' +
-    '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + '</button><button class="mini-btn" data-dtab="records">' + t_("Records") + ' →</button></div>' +
-    "<h3 style=\"margin-top:18px\">" + t_("Recently viewed") + "</h3>" + (recent.length ? '<div class="row">' + recent.map((r) => '<button class="mini-btn" data-go="' + esc(r[1]) + '">' + esc(r[0]) + "</button>").join("") + "</div>" : '<div class="empty">' + t_("Places you open on the map appear here.") + '</div>') +
-    "<h3 style=\"margin-top:18px\">" + t_("Best recent vintages") + "</h3>" + '<div id="bestV" class="note">' + t_("Loading…") + '</div></div>' +
+    '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + "</button></div></div>" +
+    "<div>" + (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Become a Founding Member") + '</b><span>' +
+      t_("Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : "") + "</div></div>" +
+    '<section aria-labelledby="fgN"><h3 id="fgN">' + t_("The atlas in numbers") + '</h3><div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(cc.size, t_("countries you explored")) + "</div></section>" +
+    '<div class="dgrid"><div><h3>' + t_("Best recent vintages") + "</h3>" + '<div id="bestV" class="note">' + t_("Loading…") + '</div></div>' +
     "<div><h3>" + t_("Places per country") + "</h3><div class=\"hbars\">" + top.map(([c, n]) => '<button class="hbar" data-explore-cc="' + c + '" aria-label="' + esc(t_("{country}: {n} places, explore", { country: cname(c), n })) + '"><span>' + esc(cname(c)) + '</span><span class="t"><i style="width:' + (100 * n / mx).toFixed(1) + '%"></i></span><span class="v">' + fmt(n) + "</span></button>").join("") +
     '</div><p class="note">' + t_("Click a country to explore its places.") + '</p></div></div>';
 }
@@ -4268,7 +4547,18 @@ document.addEventListener("click", (e) => {
   const pool = INDEX.filter((r) => k === "any" ? (TOP.includes(r[4]) || r[4] === "premier_cru" || r[3] === "vineyard") : k === "einzellage" ? (r[2] === "DE" && r[3] === "vineyard") : k === "ava" ? r[2] === "US" : r[4] === k);
   if (pool.length) goFromDash(pool[Math.floor(Math.random() * pool.length)][1]);
 });
-document.addEventListener("click", (e) => { const b = e.target.closest("[data-explore-cc]"); if (b) { EXP.cc = b.dataset.exploreCc; EXP.limit = 150; dashTab = "explore"; renderDash(); } });
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-explore-cc]"); if (b) { EXP.cc = b.dataset.exploreCc; EXP.limit = 150; openDash("explore"); } });
+
+// ---------- first visit: three steps, once, never over a link to a place
+function hideWelcome(remember) { const w = $("welcome"); if (w && !w.hidden) { w.hidden = true; if (remember) store.set("welcomed", "1"); } }
+function maybeWelcome() {
+  if (!WEB || location.hash.slice(1) || store.get("welcomed") === "1" || !$("dash").hidden) return;
+  $("welcome").hidden = false;
+}
+$("welcomeX").onclick = () => hideWelcome(true);
+$("welcomeGo").onclick = () => { hideWelcome(true); if (!PHONE()) qEl.focus(); };
+$("welcomeStudy").onclick = () => { hideWelcome(true); openDash("study"); };
+$("welcome").addEventListener("keydown", (e) => { if (e.key === "Escape") { e.stopPropagation(); hideWelcome(true); } });
 
 let savedSort = "recent";
 function dashSaved() {
@@ -4677,8 +4967,8 @@ function loadStudy() {
   return studyLoading;
 }
 function dashStudy() {
-  if (window.OWA_STUDY) return window.OWA_STUDY.render();
-  loadStudy().then(() => { if (dashTab === "study" && !$("dash").hidden) renderDash(); });
+  if (window.OWA_STUDY) return window.OWA_STUDY.render(dashTab);
+  loadStudy().then(() => { if (STUDY_TABS.includes(dashTab) && !$("dash").hidden) renderDash(); });
   return '<p class="lead">' + t_("Loading…") + "</p>";
 }
 function dashAccount() {
@@ -4692,7 +4982,7 @@ if (WEB) {
     // for study.js
     get INDEX() { return INDEX; }, byId, getDetails, fitTo, markSelected, clearSelected, quizMode, placesAt, closeDash, goTo,
     tnode: (k) => tnode(k), kidsOf: (k) => kidsOf(k), pathOf: (k) => pathOf(k), get TREE() { return TREE; },
-    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy };
+    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy, icon, updateBadges: updateDashBadge, get dashOpen() { return !$("dash").hidden; } };
   loadAccount();
 }
 
@@ -4753,6 +5043,7 @@ map.on("load", async () => {
     applyLegend();
     ensureDetail();
     map.on("moveend", ensureDetail);
+    maybeWelcome();
     if (WEB) { setBase(store.get("base") || "dark"); setOverlay(store.get("overlay") || "relief"); }
     // deep link: #<place id>
     const hid = decodeURIComponent(location.hash.slice(1));

@@ -29,11 +29,11 @@ const KINDS = {
 // study progress (study.js): one row per review card, plus the lessons read and the totals
 KINDS.study = { keys: ["study"], keep: true,
   items: () => { const s = MY.study || {};
-    return [...Object.entries(s.cards || {}).map(([k, v]) => ["c:" + k, v]), ["done", { v: s.done || {} }], ["stats", { v: s.stats || {}, today: s.today || {} }]]; },
+    return [...Object.entries(s.cards || {}).map(([k, v]) => ["c:" + k, v]), ["done", { v: s.done || {} }], ["stats", { v: s.stats || {}, today: s.today || {}, last: s.last || null }]]; },
   apply: (m) => { const s = MY.study && typeof MY.study === "object" ? MY.study : (MY.study = {});
     s.cards = {}; for (const [id, v] of m) if (id.startsWith("c:")) s.cards[id.slice(2)] = v;
     if (m.get("done")) s.done = m.get("done").v || {};
-    if (m.get("stats")) { s.stats = m.get("stats").v || s.stats; s.today = m.get("stats").today || s.today; } } };
+    if (m.get("stats")) { s.stats = m.get("stats").v || s.stats; s.today = m.get("stats").today || s.today; s.last = m.get("stats").last || s.last; } } };
 const KIND_OF = { saved: "saved", journal: "tasting", notes: "note", recent: "state", compare: "state", study: "study" };
 
 // a fingerprint that does not depend on key order (the database stores JSON keys in its own order)
@@ -414,7 +414,9 @@ async function signOut(clear) {
   O.toast(clear ? t_("Signed out. This device is cleared.") : t_("Signed out. Your atlas stays on this device."));
 }
 
-window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user };
+window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user,
+  // the first name for the greeting on the Home of My atlas
+  name: () => S.user ? String(S.profile?.display_name || "").trim().split(/\s+/)[0] || "" : "" };
 
 // ---------- boot: restore a session only when there is one (or a sign-in link was just opened)
 const url = new URL(location.href);
