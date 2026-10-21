@@ -49,11 +49,16 @@ const S = { loading: null, loadFailed: false, sb: null, user: null, profile: nul
 function loadMeta() { try { return JSON.parse(localStorage.getItem(META_KEY)) || {}; } catch (e) { return {}; } }
 function saveMeta(m) { try { localStorage.setItem(META_KEY, JSON.stringify(m)); } catch (e) {} }
 function clearMeta() { try { localStorage.removeItem(META_KEY); } catch (e) {} }
-const loadScript = (src) => new Promise((ok, fail) => {
-  if (document.querySelector('script[data-src="' + src + '"]')) return ok();
-  const s = document.createElement("script"); s.src = src; s.async = true; s.dataset.src = src; s.onload = ok; s.onerror = () => fail(new Error("load " + src));
-  document.head.appendChild(s);
-});
+// one load per script: a second call waits for the first instead of returning before the script has run
+const LOADS = new Map();
+const loadScript = (src) => {
+  if (!LOADS.has(src)) LOADS.set(src, new Promise((ok, fail) => {
+    const s = document.createElement("script"); s.src = src; s.async = true; s.dataset.src = src; s.onload = ok;
+    s.onerror = () => { LOADS.delete(src); fail(new Error("load " + src)); };
+    document.head.appendChild(s);
+  }));
+  return LOADS.get(src);
+};
 function rerender() { if (O.tab === "account" || O.tab === "overview") O.renderDash(); }
 const view = () => O.tab === "account";
 
@@ -62,7 +67,7 @@ async function client() {
   if (S.sb) return S.sb;
   await loadScript("/config.js");
   const C = window.OWA_CONFIG;
-  if (!C || /SUPABASE_REF|SUPABASE_PUBLISHABLE_KEY/.test(C.supabaseUrl + C.supabaseKey)) { S.unavailable = true; throw new Error("not_configured"); }
+  if (!C || !C.accountsOpen || /SUPABASE_REF|SUPABASE_PUBLISHABLE_KEY/.test(C.supabaseUrl + C.supabaseKey)) { S.unavailable = true; throw new Error("not_configured"); }
   await loadScript(SB_JS);
   S.sb = window.supabase.createClient(C.supabaseUrl, C.supabaseKey, {
     auth: { flowType: "pkce", persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, storageKey: AUTH_KEY },
@@ -212,6 +217,7 @@ const countList = (c) => [t_("saved places: {n}", { n: c.saved }), t_("tastings:
 const counts = () => ({ saved: Object.keys(MY.saved).length, tastings: MY.journal.length, notes: MY.notes.length });
 
 function line() {
+  if (S.unavailable && !S.user) return "";
   if (S.user) return '<div class="acct-line"><span class="acct-av" style="width:26px;height:26px;font-size:13px">' + esc(initial()) + "</span><span>" +
     t_("Signed in as {name}", { name: "<b>" + esc(S.profile?.display_name || S.user.email) + "</b>" }) + "</span>" +
     (S.founding?.founding ? '<span class="badge-f">' + t_("Founding Member") + "</span>" : "") +
@@ -385,5 +391,8 @@ if (hasSession || url.searchParams.has("code")) {
     if (url.searchParams.has("code")) O.toast(t_("Sign-in could not finish here. Type the code from the email instead."));
   });
 }
+// until accounts open (OWA_CONFIG.accountsOpen), no sign-in prompt on the overview
+if (!window.OWA_CONFIG) loadScript("/config.js").then(() => { if (!window.OWA_CONFIG?.accountsOpen) { S.unavailable = true; rerender(); } }).catch(() => {});
+else if (!window.OWA_CONFIG.accountsOpen) S.unavailable = true;
 rerender();
 })();

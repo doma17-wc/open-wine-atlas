@@ -8,7 +8,21 @@ Two parts, both in one Supabase project (region Zurich, `eu-central-2`):
   (saved places, tastings, notes, recent, compare) in `atlas_items`, each user limited to their own rows by row level
   security.
 
-The browser reads the project URL and the publishable key from `web/config.js`.
+The browser reads the project URL and the publishable key from `web/config.js`, with two switches: `accountsOpen`
+(sign-in, profile, sync) and `foundingOpen` (the Founding form). Both stay `false` until the email settings below
+are done; meanwhile My atlas, the notebook and the study work on the device, and /founding says it opens soon.
+
+## Status (21 October 2026)
+
+Project `budizvexjzlbzzcmlaey` ("Open Wine Atlas", Zurich). Applied: the waitlist, accounts and study migrations;
+the `founding` function is deployed with JWT verification off. Still to do, in this order:
+
+1. In the SQL editor, run the `delete_my_account()` part of `20261018010000_accounts.sql` (the API refused to apply
+   a statement that deletes from `auth.users` without a confirmation, so it was left out).
+2. Resend: verify `openwineatlas.com` (DNS records at GoDaddy) and create an API key.
+3. Edge Functions > Secrets: `RESEND_API_KEY`.
+4. The Authentication settings below.
+5. `web/config.js`: `accountsOpen: true`, `foundingOpen: true`, then rebuild and deploy.
 
 ## Settings made in the Supabase dashboard
 
