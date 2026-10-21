@@ -750,7 +750,7 @@
           "h": "Chianti and Chianti Classico",
           "p": [
             "Chianti DOCG covers a large area of central Toscana. Its rules ask for at least 70% Sangiovese; a change proposed in 2026 would lower this to 60%. It has subzones that may appear on the label, among them Rufina and Colli Senesi. Chianti Classico is the historic zone between Florence and Siena. It has been a separate DOCG since 1996, and its symbol is the black rooster (Gallo Nero).",
-            "Chianti Classico needs at least 80% Sangiovese, and white grapes are no longer allowed. Riserva must age at least 24 months, including 3 in bottle. Gran Selezione, introduced in 2014, is the top tier: estate-grown grapes, at least 90% Sangiovese since 2023, and at least 30 months of ageing, including 3 in bottle. Eleven village areas, the UGA (Unità Geografiche Aggiuntive), were later approved for Gran Selezione labels."
+            "Chianti Classico needs at least 80% Sangiovese, and white grapes are no longer allowed. Riserva must age at least 24 months, including 3 in bottle. Gran Selezione, introduced in 2014, is the top tier: estate-grown grapes, at least 80% Sangiovese (90% from the 2027 vintage), and at least 30 months of ageing, including 3 in bottle. Eleven village areas, the UGA (Unità Geografiche Aggiuntive), were later approved for Gran Selezione labels."
           ],
           "places": [
             "it-eupdo-PDO-IT-A1228",
@@ -1052,7 +1052,7 @@
         },
         {
           "f": "UGA in Chianti Classico",
-          "b": "Unità Geografiche Aggiuntive: eleven village areas, such as Panzano, Radda and Gaiole, named on Gran Selezione labels.",
+          "b": "Unità Geografiche Aggiuntive: eleven approved village areas for Gran Selezione labels, such as Panzano, Radda and Gaiole. Three may be used only from 2027.",
           "place": "it-eupdo-PDO-IT-A1235"
         },
         {
@@ -2198,7 +2198,7 @@
         },
         {
           "f": "Marsala",
-          "b": "A fortified wine from western Sicily. Its age categories run from Fine (at least 1 year) to Vergine (at least 5 years).",
+          "b": "A fortified wine from western Sicily. Its age categories run from Fine (at least 1 year) through Vergine (5 years) to Vergine Stravecchio (at least 10 years).",
           "place": "it-eupdo-PDO-IT-A0785"
         },
         {
