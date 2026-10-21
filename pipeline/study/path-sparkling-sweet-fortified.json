@@ -187,6 +187,106 @@
           ],
           "answer": 3,
           "explain": "Crémant must be made by the traditional method, with the second fermentation in bottle."
+        },
+        {
+          "id": "q9",
+          "q": "What does a gyropalette do?",
+          "options": [
+            "Disgorges the bottles",
+            "Adds the dosage",
+            "Riddles hundreds of bottles at once",
+            "Presses whole bunches"
+          ],
+          "answer": 2,
+          "explain": "Gyropalettes do the work of hand riddling on pupitres, day and night."
+        },
+        {
+          "id": "q10",
+          "q": "Which of these is NOT one of the eight French Crémant appellations?",
+          "options": [
+            "Alsace",
+            "Champagne",
+            "Limoux",
+            "Savoie"
+          ],
+          "answer": 1,
+          "explain": "The eight are Alsace, Bordeaux, Bourgogne, Die, Jura, Limoux, Loire and Savoie. Champagne has its own appellation."
+        },
+        {
+          "id": "q11",
+          "q": "What is the taille in Champagne pressing?",
+          "options": [
+            "The last 500 litres of juice, fruitier and less fine",
+            "The first 2,050 litres of juice",
+            "The yeast sediment in the neck",
+            "The sugar added at dosage"
+          ],
+          "answer": 0,
+          "explain": "From 4,000 kg of grapes the cuvée gives 2,050 litres and the taille the last 500.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q12",
+          "q": "What is the pressure limit for Franciacorta Satèn?",
+          "options": [
+            "2.5 bar",
+            "No limit",
+            "At least 6 atmospheres",
+            "Under 5 atmospheres"
+          ],
+          "answer": 3,
+          "explain": "Satèn may not exceed 5 atmospheres, which gives a softer mousse.",
+          "place": "it-eupdo-PDO-IT-A1034"
+        },
+        {
+          "id": "q13",
+          "q": "What is the sugar range of Sec on a sparkling wine label?",
+          "options": [
+            "Under 12 g/L",
+            "12 to 17 g/L",
+            "32 to 50 g/L",
+            "17 to 32 g/L"
+          ],
+          "answer": 3,
+          "explain": "Sec is 17 to 32 g/L. Under 12 is Brut, 12 to 17 Extra Dry and 32 to 50 Demi-Sec."
+        },
+        {
+          "id": "q14",
+          "q": "Which three grapes make almost all Champagne?",
+          "options": [
+            "Chardonnay, Pinot Noir and Meunier",
+            "Chardonnay, Pinot Blanc and Arbane",
+            "Pinot Noir, Gamay and Chardonnay",
+            "Macabeo, Xarel·lo and Parellada"
+          ],
+          "answer": 0,
+          "explain": "Chardonnay, Pinot Noir and Meunier dominate; the minor grapes are rare.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q15",
+          "q": "How is the bottle usually sealed during the second fermentation?",
+          "options": [
+            "With a cork and wire cage",
+            "With a crown cap",
+            "With a screwcap",
+            "With a glass stopper"
+          ],
+          "answer": 1,
+          "explain": "A crown cap is used during tirage; the cork and muselet go on after disgorgement."
+        },
+        {
+          "id": "q16",
+          "q": "Which Cava zone produces the great majority of Cava?",
+          "options": [
+            "Valle del Ebro",
+            "Levante",
+            "Comtats de Barcelona",
+            "Viñedos de Almendralejo"
+          ],
+          "answer": 2,
+          "explain": "Comtats de Barcelona, which includes the heart of Penedès, makes most Cava.",
+          "place": "es-eupdo-PDO-ES-A0735"
         }
       ],
       "cards": [
@@ -453,6 +553,109 @@
           ],
           "answer": 3,
           "explain": "The traditional method term requires disgorgement. Transfer method wine may be called bottle-fermented."
+        },
+        {
+          "id": "q9",
+          "q": "Which Prosecco landscape became a UNESCO World Heritage Site in 2019?",
+          "options": [
+            "The hills of Conegliano and Valdobbiadene",
+            "The hills around Asolo",
+            "The Montello hill",
+            "The plain around Trieste"
+          ],
+          "answer": 0,
+          "explain": "Le Colline del Prosecco di Conegliano e Valdobbiadene were listed in 2019.",
+          "place": "it-eupdo-PDO-IT-A0515"
+        },
+        {
+          "id": "q10",
+          "q": "In which year was Prosecco DOC created?",
+          "options": [
+            "1969",
+            "2009",
+            "1995",
+            "2020"
+          ],
+          "answer": 1,
+          "explain": "Prosecco DOC and the two DOCGs date from 2009. 2020 is the year Prosecco Rosé was approved.",
+          "place": "it-eupdo-PDO-IT-A0516"
+        },
+        {
+          "id": "q11",
+          "q": "About how much alcohol does Asti have?",
+          "options": [
+            "About 5%",
+            "About 12.5%",
+            "About 7 to 9.5%",
+            "About 15%"
+          ],
+          "answer": 2,
+          "explain": "Asti has about 7 to 9.5% alcohol. Moscato d'Asti is lower, at around 5%.",
+          "place": "it-eupdo-PDO-IT-A1396"
+        },
+        {
+          "id": "q12",
+          "q": "Which sweetness level is NOT allowed for Prosecco Rosé DOC?",
+          "options": [
+            "Brut Nature",
+            "Extra Brut",
+            "Extra Dry",
+            "Demi-Sec"
+          ],
+          "answer": 3,
+          "explain": "Prosecco Rosé may be Brut Nature, Extra Brut, Brut or Extra Dry. White Spumante may also be Dry or Demi-Sec.",
+          "place": "it-eupdo-PDO-IT-A0516"
+        },
+        {
+          "id": "q13",
+          "q": "Why does tank method wine keep fresh fruit aromas?",
+          "options": [
+            "It spends little or no time on its lees",
+            "It is fortified",
+            "It ages in new oak",
+            "It is made from dried grapes"
+          ],
+          "answer": 0,
+          "explain": "With little lees contact there is little autolysis, so primary fruit leads."
+        },
+        {
+          "id": "q14",
+          "q": "How long must Clairette de Die méthode ancestrale stay on its lees in bottle?",
+          "options": [
+            "At least 9 months",
+            "At least 15 months",
+            "No minimum",
+            "At least four months"
+          ],
+          "answer": 3,
+          "explain": "The rules ask for at least four months on the lees in bottle before release.",
+          "place": "fr-inao-a269"
+        },
+        {
+          "id": "q15",
+          "q": "What does rifermentazione in bottiglia mean on a Prosecco Frizzante label?",
+          "options": [
+            "The wine was fortified",
+            "The wine aged in barrel",
+            "The wine was refermented in the bottle",
+            "The wine blends several vintages"
+          ],
+          "answer": 2,
+          "explain": "Bottle-refermented Frizzante must carry these words and may be slightly hazy.",
+          "place": "it-eupdo-PDO-IT-A0516"
+        },
+        {
+          "id": "q16",
+          "q": "Which was the first Prosecco denomination to allow the Extra Brut style?",
+          "options": [
+            "Conegliano Valdobbiadene",
+            "Asolo",
+            "Prosecco DOC Treviso",
+            "Superiore di Cartizze"
+          ],
+          "answer": 1,
+          "explain": "Asolo Prosecco DOCG, also called Colli Asolani, led the way with Extra Brut.",
+          "place": "it-eupdo-PDO-IT-A0514"
         }
       ],
       "cards": [
@@ -743,6 +946,108 @@
           ],
           "answer": 1,
           "explain": "Süssreserve is sterile, unfermented grape juice blended in before bottling."
+        },
+        {
+          "id": "q9",
+          "q": "At about what alcohol does the fermentation of Sauternes usually stop?",
+          "options": [
+            "5 to 6%",
+            "9 to 10%",
+            "17 to 18%",
+            "13 to 14%"
+          ],
+          "answer": 3,
+          "explain": "In very sweet musts the yeast struggles as alcohol rises, and Sauternes usually stops at around 13 to 14%.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "id": "q10",
+          "q": "From which harvest did Tokaji Aszú lose its 3 and 4 puttonyos levels?",
+          "options": [
+            "1993",
+            "2005",
+            "2013",
+            "2020"
+          ],
+          "answer": 2,
+          "explain": "From the 2013 harvest Aszú needs at least 120 g/L of sugar, so only 5 and 6 puttonyos remain.",
+          "place": "hu-eupdo-PDO-HU-A1254"
+        },
+        {
+          "id": "q11",
+          "q": "Which Alsace term means late harvest?",
+          "options": [
+            "Vendanges Tardives",
+            "Sélection de Grains Nobles",
+            "Grand Cru",
+            "Crémant"
+          ],
+          "answer": 0,
+          "explain": "Vendanges Tardives is late harvest; Sélection de Grains Nobles is the richer, usually botrytised level.",
+          "place": "fr-inao-a1"
+        },
+        {
+          "id": "q12",
+          "q": "What is the minimum sugar in the must for Sauternes?",
+          "options": [
+            "150 g/L",
+            "221 g/L",
+            "120 g/L",
+            "450 g/L"
+          ],
+          "answer": 1,
+          "explain": "Sauternes musts need at least 221 g/L of sugar. 120 g/L is the Tokaji Aszú minimum and 450 g/L the Eszencia minimum.",
+          "place": "fr-inao-a75"
+        },
+        {
+          "id": "q13",
+          "q": "What is Recioto di Soave made from?",
+          "options": [
+            "Dried Corvina",
+            "Dried Garganega",
+            "Nobly rotten Chenin Blanc",
+            "Frozen Vidal"
+          ],
+          "answer": 1,
+          "explain": "Recioto di Soave is a sweet white DOCG from dried Garganega. Dried Corvina makes Recioto della Valpolicella.",
+          "place": "it-eupdo-PDO-IT-A0465"
+        },
+        {
+          "id": "q14",
+          "q": "What keeps great sweet wines fresh rather than cloying?",
+          "options": [
+            "High acidity",
+            "High tannin",
+            "Low alcohol",
+            "New oak"
+          ],
+          "answer": 0,
+          "explain": "High acidity balances the sugar, as in Sauternes, Tokaji and German Riesling."
+        },
+        {
+          "id": "q15",
+          "q": "What is Occhio di Pernice?",
+          "options": [
+            "A style of Tokaji",
+            "A German Prädikat",
+            "A rosé Vin Santo from Sangiovese",
+            "A Jura straw wine"
+          ],
+          "answer": 2,
+          "explain": "Occhio di Pernice is the rosé version of Vin Santo, made mainly from Sangiovese.",
+          "place": "it-eupdo-PDO-IT-A1514"
+        },
+        {
+          "id": "q16",
+          "q": "Which Prädikat's minimum must weight must German Eiswein reach?",
+          "options": [
+            "Kabinett",
+            "Spätlese",
+            "Auslese",
+            "Beerenauslese"
+          ],
+          "answer": 3,
+          "explain": "Eiswein shares the Beerenauslese minimum must weight."
         }
       ],
       "cards": [
@@ -1023,6 +1328,108 @@
           ],
           "answer": 2,
           "explain": "Frasqueira, or Garrafeira, is vintage Madeira with at least 20 years in cask.",
+          "place": "pt-eupdo-PDO-PT-A0038"
+        },
+        {
+          "id": "q9",
+          "q": "What is a lagar?",
+          "options": [
+            "A Port lodge in Vila Nova de Gaia",
+            "A shallow granite trough for treading grapes",
+            "A cask for tawny Port",
+            "A rack for drying grapes"
+          ],
+          "answer": 1,
+          "explain": "Treading in lagares extracts colour and tannin quickly during the short fermentation."
+        },
+        {
+          "id": "q10",
+          "q": "What is canteiro?",
+          "options": [
+            "Heating the wine in tanks at 45 to 50°C",
+            "Fortifying with spirit of about 77%",
+            "Ageing in casks in warm lofts, heated only by the sun",
+            "Blending several years in a solera"
+          ],
+          "answer": 2,
+          "explain": "Canteiro is the slow method used for the finest Madeira, at least two years in cask.",
+          "place": "pt-eupdo-PDO-PT-A0038"
+        },
+        {
+          "id": "q11",
+          "q": "When may an unfiltered LBV be labelled bottle matured?",
+          "options": [
+            "Straight after bottling",
+            "After one year in cask",
+            "After seven years in wood",
+            "After at least three years in bottle"
+          ],
+          "answer": 3,
+          "explain": "Under IVDP rules the term needs at least three years of ageing in bottle.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q12",
+          "q": "Which Port comes from one estate, often in years that are not generally declared?",
+          "options": [
+            "Single Quinta Vintage",
+            "Crusted",
+            "Reserve Ruby",
+            "Colheita"
+          ],
+          "answer": 0,
+          "explain": "Single Quinta Vintage Port comes from one quinta, often in good but undeclared years."
+        },
+        {
+          "id": "q13",
+          "q": "What alcohol does Port usually have?",
+          "options": [
+            "12 to 14%",
+            "15 to 17%",
+            "19 to 22%",
+            "24 to 26%"
+          ],
+          "answer": 2,
+          "explain": "Fortification with spirit of about 77% leaves Port at 19 to 22% abv.",
+          "place": "pt-eupdo-PDO-PT-A1540"
+        },
+        {
+          "id": "q14",
+          "q": "Which Madeira style is the sweetest?",
+          "options": [
+            "Sercial",
+            "Malvasia (Malmsey)",
+            "Verdelho",
+            "Boal"
+          ],
+          "answer": 1,
+          "explain": "Malvasia (Malmsey) is the sweetest, after Sercial, Verdelho and Boal.",
+          "place": "pt-eupdo-PDO-PT-A0038"
+        },
+        {
+          "id": "q15",
+          "q": "In which year was the Douro demarcated?",
+          "options": [
+            "1756",
+            "1855",
+            "1906",
+            "1986"
+          ],
+          "answer": 0,
+          "explain": "The Douro was demarcated in 1756 under the Marquês de Pombal.",
+          "place": "pt-eupdo-PDO-PT-A1539"
+        },
+        {
+          "id": "q16",
+          "q": "How strong is the spirit used to stop fermentation in Madeira?",
+          "options": [
+            "About 40% abv",
+            "About 60% abv",
+            "About 77% abv",
+            "About 96% abv"
+          ],
+          "answer": 3,
+          "explain": "Madeira uses neutral grape spirit of 96%. Port uses aguardente of about 77%.",
           "place": "pt-eupdo-PDO-PT-A0038"
         }
       ],
@@ -1306,6 +1713,107 @@
           "answer": 1,
           "explain": "Rutherglen Muscat uses the pink-skinned Muscat à Petits Grains Rouge. Muscadelle makes Topaque.",
           "place": "au-world-rutherglen"
+        },
+        {
+          "id": "q9",
+          "q": "What does en rama mean on a Sherry label?",
+          "options": [
+            "Sweetened with PX",
+            "Bottled with minimal clarification and filtration",
+            "Aged over 30 years",
+            "From a single vintage"
+          ],
+          "answer": 1,
+          "explain": "En rama Sherry is bottled close to how it tastes from the butt."
+        },
+        {
+          "id": "q10",
+          "q": "Which grape makes almost all dry Sherry?",
+          "options": [
+            "Palomino",
+            "Pedro Ximénez",
+            "Moscatel",
+            "Airén"
+          ],
+          "answer": 0,
+          "explain": "Palomino is neutral and low in acid, which lets the ageing give the flavour.",
+          "place": "es-eupdo-PDO-ES-A1483"
+        },
+        {
+          "id": "q11",
+          "q": "Which Rutherglen Muscat tier has the greatest average age?",
+          "options": [
+            "Classic",
+            "Grand",
+            "Rutherglen",
+            "Rare"
+          ],
+          "answer": 3,
+          "explain": "The tiers rise from Rutherglen to Classic, Grand and Rare, at 20 years or more.",
+          "place": "au-world-rutherglen"
+        },
+        {
+          "id": "q12",
+          "q": "What is the minimum average ageing for any Sherry?",
+          "options": [
+            "Six months",
+            "One year",
+            "Two years",
+            "Five years"
+          ],
+          "answer": 2,
+          "explain": "Every Sherry must age for an average of at least two years.",
+          "place": "es-eupdo-PDO-ES-A1483"
+        },
+        {
+          "id": "q13",
+          "q": "Which grape is the only variety of Muscat de Beaumes-de-Venise?",
+          "options": [
+            "Muscat of Alexandria",
+            "Grenache Noir",
+            "Muscat à Petits Grains",
+            "Muscadelle"
+          ],
+          "answer": 2,
+          "explain": "Muscat de Beaumes-de-Venise is made only from Muscat à Petits Grains.",
+          "place": "fr-inao-a308"
+        },
+        {
+          "id": "q14",
+          "q": "What is the sugar minimum for Pedro Ximénez Sherry?",
+          "options": [
+            "5 g/L",
+            "45 g/L",
+            "115 g/L",
+            "212 g/L"
+          ],
+          "answer": 3,
+          "explain": "Pedro Ximénez has at least 212 g/L of sugar. Cream has 115 to 140 g/L.",
+          "place": "es-eupdo-PDO-ES-A1483"
+        },
+        {
+          "id": "q15",
+          "q": "Which style starts like a Fino, loses its flor and joins Amontillado's finesse with Oloroso's body?",
+          "options": [
+            "Palo Cortado",
+            "Manzanilla",
+            "Pale Cream",
+            "Moscatel"
+          ],
+          "answer": 0,
+          "explain": "Palo Cortado begins as a biological wine and then develops with oxygen, at 17 to 22%."
+        },
+        {
+          "id": "q16",
+          "q": "To what strength is wine for biological ageing usually fortified?",
+          "options": [
+            "About 12%",
+            "About 15 to 15.5%",
+            "About 17 to 18%",
+            "About 20%"
+          ],
+          "answer": 1,
+          "explain": "At about 15 to 15.5% flor can grow. At about 17% or more it cannot."
         }
       ],
       "cards": [

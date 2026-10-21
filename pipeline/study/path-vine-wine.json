@@ -176,6 +176,103 @@
           ],
           "answer": 2,
           "explain": "Soil insulates the graft and buds from deep freezes that can kill a vine."
+        },
+        {
+          "id": "q9",
+          "q": "Which of these grapes buds late and so is safer from spring frost?",
+          "options": [
+            "Chardonnay",
+            "Pinot Noir",
+            "Cabernet Sauvignon",
+            "Merlot"
+          ],
+          "answer": 2,
+          "explain": "Cabernet Sauvignon buds late. Chardonnay and Pinot Noir bud early and are more exposed."
+        },
+        {
+          "id": "q10",
+          "q": "In which months does véraison usually happen in the Northern Hemisphere?",
+          "options": [
+            "May or June",
+            "July or August",
+            "September or October",
+            "November or December"
+          ],
+          "answer": 1,
+          "explain": "Véraison, when berries soften and colour, usually falls in July or August in the north."
+        },
+        {
+          "id": "q11",
+          "q": "What is the weeping or bleeding of the vine?",
+          "options": [
+            "Sap dripping from pruning cuts in early spring",
+            "Juice running from berries split by hail",
+            "Resin oozing from the trunk in summer",
+            "Dew dripping from the leaves at dawn"
+          ],
+          "answer": 0,
+          "explain": "In early spring the roots become active and sap drips from pruning cuts, a sign that budburst is near."
+        },
+        {
+          "id": "q12",
+          "q": "Why is an early autumn frost a risk in Central Otago?",
+          "options": [
+            "It causes coulure",
+            "It brings noble rot",
+            "It splits the berries like hail",
+            "It can end ripening before the grapes are ready"
+          ],
+          "answer": 3,
+          "explain": "In inland, continental regions an early frost can kill the leaves and stop ripening.",
+          "place": "nz-world-central-otago"
+        },
+        {
+          "id": "q13",
+          "q": "What is millerandage?",
+          "options": [
+            "Many flowers fail to set",
+            "Berries freeze on the vine",
+            "Grapes shrivel after harvest",
+            "A bunch sets berries of very different sizes"
+          ],
+          "answer": 3,
+          "explain": "Millerandage gives bunches with large and small, often seedless, berries. Coulure is the failure to set."
+        },
+        {
+          "id": "q14",
+          "q": "What weather at flowering gives a good fruit set?",
+          "options": [
+            "Warm, dry and calm",
+            "Cold and rainy",
+            "Cool and windy",
+            "Humid with morning mist"
+          ],
+          "answer": 0,
+          "explain": "Warm, dry and calm conditions let the flowers be fertilised and set well."
+        },
+        {
+          "id": "q15",
+          "q": "What do the vine's stored carbohydrate reserves mainly feed?",
+          "options": [
+            "The sugar in the grapes at harvest",
+            "The first weeks of shoot growth in spring",
+            "The growth of noble rot",
+            "The roots of the rootstock only"
+          ],
+          "answer": 1,
+          "explain": "Young shoots live on reserves stored in the wood and roots until their leaves can photosynthesise."
+        },
+        {
+          "id": "q16",
+          "q": "What happens to the green shoots after véraison?",
+          "options": [
+            "They flower a second time",
+            "They shed all their buds",
+            "They turn into brown wood, ready for winter",
+            "They grow new roots"
+          ],
+          "answer": 2,
+          "explain": "Lignification turns the shoots into wood that can survive the winter."
         }
       ],
       "cards": [
@@ -459,6 +556,105 @@
           ],
           "answer": 0,
           "explain": "The more directly the rays strike the ground, the more energy each square metre receives."
+        },
+        {
+          "id": "q9",
+          "q": "Which of these lowers frost risk from the start, before any frost night?",
+          "options": [
+            "Planting on slopes and choosing late-budding grapes",
+            "Picking early",
+            "Green harvesting",
+            "Ageing the wine in new oak"
+          ],
+          "answer": 0,
+          "explain": "Cold air drains off slopes, and late budders open after much of the frost risk has passed."
+        },
+        {
+          "id": "q10",
+          "q": "How does strong sunlight at high altitude tend to affect black grapes?",
+          "options": [
+            "It lowers their sugar",
+            "It tends to give thicker skins and deep colour",
+            "It stops photosynthesis",
+            "It causes coulure"
+          ],
+          "answer": 1,
+          "explain": "Thin mountain air lets intense sunlight through, which tends to thicken skins and deepen colour."
+        },
+        {
+          "id": "q11",
+          "q": "On what kind of night does radiation frost form?",
+          "options": [
+            "Windy and cloudy",
+            "Rainy and mild",
+            "Clear and still",
+            "Hot and humid"
+          ],
+          "answer": 2,
+          "explain": "With no cloud cover or wind, the ground loses heat to the sky and cold air settles in low spots."
+        },
+        {
+          "id": "q12",
+          "q": "Which estuary moderates the Médoc, where the best gravel banks lie close to the water?",
+          "options": [
+            "Loire",
+            "Rhône",
+            "Seine",
+            "Gironde"
+          ],
+          "answer": 3,
+          "explain": "The Gironde estuary evens out temperatures for the vineyards along its banks.",
+          "place": "fr-inao-a53"
+        },
+        {
+          "id": "q13",
+          "q": "Which climate feature gives a short, intense growing season that suits early-ripening grapes?",
+          "options": [
+            "High continentality",
+            "A maritime climate",
+            "Low latitude at sea level",
+            "Constant sea fog"
+          ],
+          "answer": 0,
+          "explain": "Highly continental regions have hot summers but short springs and autumns."
+        },
+        {
+          "id": "q14",
+          "q": "Which hazard comes from wildfires and can taint the grapes?",
+          "options": [
+            "Coulure",
+            "Millerandage",
+            "Powdery mildew",
+            "Smoke"
+          ],
+          "answer": 3,
+          "explain": "Smoke compounds absorbed by grape skins can give off-flavours in the wine."
+        },
+        {
+          "id": "q15",
+          "q": "Where is diurnal range usually largest?",
+          "options": [
+            "Close to the sea",
+            "On small islands",
+            "In high, dry, inland places such as Mendoza",
+            "Under coastal fog"
+          ],
+          "answer": 2,
+          "explain": "Height, dry air and distance from the sea give a big gap between day and night temperatures.",
+          "place": "ar-world-mendoza"
+        },
+        {
+          "id": "q16",
+          "q": "Which group of steep regions uses terraces or walls to hold the soil?",
+          "options": [
+            "Médoc, Pomerol and Graves",
+            "Douro, Wachau and Côte Rôtie",
+            "Napa Valley, Sonoma Valley and Lodi",
+            "Coonawarra, Barossa Valley and McLaren Vale"
+          ],
+          "answer": 1,
+          "explain": "Terraces or dry-stone walls hold the steep slopes of the Douro, the Wachau and Côte Rôtie.",
+          "place": "pt-eupdo-PDO-PT-A1539"
         }
       ],
       "cards": [
@@ -746,6 +942,103 @@
           ],
           "answer": 3,
           "explain": "Organic growers may use copper against downy mildew, but no more than 28 kg per hectare over seven years."
+        },
+        {
+          "id": "q9",
+          "q": "Why is machine harvesting at night useful in hot regions?",
+          "options": [
+            "It allows tries for noble rot",
+            "It keeps the bunches whole",
+            "Machines cannot work in daylight",
+            "The grapes are picked cool"
+          ],
+          "answer": 3,
+          "explain": "Cool grapes arrive at the winery fresher and in better condition."
+        },
+        {
+          "id": "q10",
+          "q": "What does a split canopy such as the Lyre or the Geneva Double Curtain do?",
+          "options": [
+            "Shades all the fruit",
+            "Removes the need for pruning",
+            "Divides a vigorous vine so that light and air reach more fruit",
+            "Protects the vine from phylloxera"
+          ],
+          "answer": 2,
+          "explain": "Splitting the canopy spreads a vigorous vine's leaves so the fruit is not over-shaded."
+        },
+        {
+          "id": "q11",
+          "q": "Who gave the 1924 lectures on which biodynamics is based?",
+          "options": [
+            "Rudolf Steiner",
+            "Jules Guyot",
+            "Louis Pasteur",
+            "Émile Peynaud"
+          ],
+          "answer": 0,
+          "explain": "Biodynamics grew from Rudolf Steiner's agriculture lectures of 1924."
+        },
+        {
+          "id": "q12",
+          "q": "Which of these countries has never had phylloxera?",
+          "options": [
+            "France",
+            "Chile",
+            "Spain",
+            "United States"
+          ],
+          "answer": 1,
+          "explain": "Chile has remained free of phylloxera, so most of its vines grow on their own roots."
+        },
+        {
+          "id": "q13",
+          "q": "Under EU organic rules, what is the maximum sulphur dioxide for a dry red wine?",
+          "options": [
+            "50 mg/L",
+            "100 mg/L",
+            "150 mg/L",
+            "200 mg/L"
+          ],
+          "answer": 1,
+          "explain": "Organic dry reds may have up to 100 mg/L; dry organic whites and rosés up to 150 mg/L."
+        },
+        {
+          "id": "q14",
+          "q": "Where did phylloxera come from?",
+          "options": [
+            "North America",
+            "South Africa",
+            "Australia",
+            "Central Asia"
+          ],
+          "answer": 0,
+          "explain": "Phylloxera is native to North America, which is why American vine species resist it."
+        },
+        {
+          "id": "q15",
+          "q": "Where are high pergolas on granite posts, called parras, traditional?",
+          "options": [
+            "Mosel",
+            "Barossa Valley",
+            "Rías Baixas",
+            "Châteauneuf-du-Pape"
+          ],
+          "answer": 2,
+          "explain": "In wet Rías Baixas the high parras keep Albariño grapes airy and away from damp ground.",
+          "place": "es-eupdo-PDO-ES-A1119"
+        },
+        {
+          "id": "q16",
+          "q": "Why do growers in hot places leave more leaves on the sunny side of the vine?",
+          "options": [
+            "To raise yields",
+            "To make the wine sweeter",
+            "To keep birds away",
+            "To protect the berries from sunburn"
+          ],
+          "answer": 3,
+          "explain": "Shade from the leaves stops exposed berries from scorching."
         }
       ],
       "cards": [
@@ -1029,6 +1322,104 @@
           "answer": 0,
           "explain": "Hunter Valley Semillon is picked early and made in steel, then develops toast and honey in bottle.",
           "place": "au-world-hunter-valley"
+        },
+        {
+          "id": "q9",
+          "q": "What do juice fractions pressed at high pressure contain more of?",
+          "options": [
+            "Sugar",
+            "Phenolics",
+            "Water",
+            "Carbon dioxide"
+          ],
+          "answer": 1,
+          "explain": "Harder pressing extracts more phenolics, so these fractions are kept apart or used in lesser wines."
+        },
+        {
+          "id": "q10",
+          "q": "How long do juice and skins usually stay together for short-maceration rosé?",
+          "options": [
+            "A few seconds",
+            "Several months",
+            "A few hours to about two days",
+            "Two to four weeks"
+          ],
+          "answer": 2,
+          "explain": "After a few hours to about two days the juice is drawn off and fermented like a white."
+        },
+        {
+          "id": "q11",
+          "q": "For which wine is malolactic conversion usually blocked?",
+          "options": [
+            "Meursault",
+            "Montrachet",
+            "Corton-Charlemagne",
+            "Mosel Riesling"
+          ],
+          "answer": 3,
+          "explain": "Crisp, aromatic whites such as Riesling keep their malic acid. Full Bourgogne Chardonnay usually goes through it."
+        },
+        {
+          "id": "q12",
+          "q": "What does bâtonnage add to a white wine?",
+          "options": [
+            "Body and a creamy texture",
+            "Tannin and colour",
+            "Sweetness",
+            "Carbon dioxide"
+          ],
+          "answer": 0,
+          "explain": "Stirring the fine lees back into the wine gives more body and a creamy texture."
+        },
+        {
+          "id": "q13",
+          "q": "About how much does a Mosel Fuder hold?",
+          "options": [
+            "225 litres",
+            "500 litres",
+            "1,000 litres",
+            "5,000 litres"
+          ],
+          "answer": 2,
+          "explain": "The Fuder holds about 1,000 litres; old Fuder add little oak flavour.",
+          "place": "de-eupdo-PDO-DE-A1270"
+        },
+        {
+          "id": "q14",
+          "q": "Which region across the border from Collio is a modern centre of orange wine?",
+          "options": [
+            "Kakheti",
+            "Goriška Brda",
+            "Tokaj",
+            "Wachau"
+          ],
+          "answer": 1,
+          "explain": "Goriška Brda in Slovenia faces Collio in Friuli; both are known for skin-fermented whites.",
+          "place": "si-eupdo-PDO-SI-A0270"
+        },
+        {
+          "id": "q15",
+          "q": "Why are white wines usually fermented cool?",
+          "options": [
+            "To keep fruity and floral aromas",
+            "To extract tannin",
+            "To speed up malolactic conversion",
+            "To raise the alcohol"
+          ],
+          "answer": 0,
+          "explain": "Cool fermentation, about 12 to 22°C, keeps the delicate aromas that warmer fermentation would lose."
+        },
+        {
+          "id": "q16",
+          "q": "Besides adding flavour, what does barrel ageing allow?",
+          "options": [
+            "Removal of all phenolics",
+            "A second fermentation",
+            "Faster blocking of malolactic conversion",
+            "Slow exchange of oxygen"
+          ],
+          "answer": 3,
+          "explain": "Oxygen passes slowly through the wood, which softens and develops the wine."
         }
       ],
       "cards": [
@@ -1304,6 +1695,105 @@
           ],
           "answer": 3,
           "explain": "As pigments and tannins bind and drop out, red wine loses its purple and moves towards garnet and brick."
+        },
+        {
+          "id": "q9",
+          "q": "How large is the Bourgogne pièce?",
+          "options": [
+            "205 litres",
+            "228 litres",
+            "300 litres",
+            "600 litres"
+          ],
+          "answer": 1,
+          "explain": "The Bourgogne pièce holds 228 litres, slightly more than the 225 litre Bordeaux barrique.",
+          "place": "fr-inao-d2840"
+        },
+        {
+          "id": "q10",
+          "q": "Why do winemakers avoid crushing grape seeds?",
+          "options": [
+            "Seeds release harsher tannin",
+            "Seeds hold all the colour",
+            "Seeds contain the yeast",
+            "Seeds raise the sugar"
+          ],
+          "answer": 0,
+          "explain": "Crushed or over-extracted seeds give harsh, bitter tannin."
+        },
+        {
+          "id": "q11",
+          "q": "What can a fine membrane filter achieve?",
+          "options": [
+            "Add tannin",
+            "Raise acidity",
+            "Remove only the colour pigments",
+            "Make a wine microbiologically stable"
+          ],
+          "answer": 3,
+          "explain": "Fine membrane filters remove yeast and bacteria; coarse depth filters catch larger particles."
+        },
+        {
+          "id": "q12",
+          "q": "Which cap management method suits the small open vats often used for Pinot Noir?",
+          "options": [
+            "Délestage",
+            "Rotary fermentation",
+            "Pigeage",
+            "Carbonic maceration"
+          ],
+          "answer": 2,
+          "explain": "Punching down by hand or machine is easy in small open vats.",
+          "place": "fr-inao-d2840"
+        },
+        {
+          "id": "q13",
+          "q": "Which flavours are typical of American oak?",
+          "options": [
+            "Green pepper and mint",
+            "Bread dough and almond",
+            "Vanilla and coconut",
+            "Petrol and honey"
+          ],
+          "answer": 2,
+          "explain": "American oak, Quercus alba, gives stronger vanilla and coconut than French oak."
+        },
+        {
+          "id": "q14",
+          "q": "What can unripe stems add in whole-bunch fermentation?",
+          "options": [
+            "Sweetness",
+            "Colour",
+            "Alcohol",
+            "Green tannin"
+          ],
+          "answer": 3,
+          "explain": "Ripe stems can add freshness and spice, but unripe ones add green, harsh tannin."
+        },
+        {
+          "id": "q15",
+          "q": "In semi-carbonic maceration in Beaujolais, what happens to the lower bunches in the vat?",
+          "options": [
+            "They are crushed by the weight above and ferment normally",
+            "They freeze",
+            "They are removed and pressed at once",
+            "They dry into raisins"
+          ],
+          "answer": 0,
+          "explain": "The lower bunches break and ferment with yeast, while the upper ones undergo carbonic maceration.",
+          "place": "fr-inao-a1032"
+        },
+        {
+          "id": "q16",
+          "q": "What happens if the cap is not kept wet during red fermentation?",
+          "options": [
+            "It turns into lees",
+            "It dries out and can spoil, and extraction stops",
+            "It starts malolactic conversion",
+            "It sinks and blocks the press"
+          ],
+          "answer": 1,
+          "explain": "A dry cap can spoil and no longer gives colour and tannin to the juice."
         }
       ],
       "cards": [
