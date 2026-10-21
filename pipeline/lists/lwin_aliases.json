@@ -1,0 +1,327 @@
+{
+ "_note": "Names used in the LWIN database (Liv-ex, English) mapped to the names of the atlas, for pipeline/lwin.py. 'countries': LWIN country name to ISO code, where the English name of build_tree.py differs. 'places': per country, an LWIN region, sub-region or site name to one or more atlas names (an appellation, or a region of the explorer tree), tried in order. Names are compared without accents, case and punctuation. Add a line when build/lwin_unplaced.tsv shows a region that should be placed.",
+ "countries": {
+  "USA": "US",
+  "United States of America": "US",
+  "England": "GB",
+  "Wales": "GB",
+  "Scotland": "GB",
+  "Great Britain": "GB",
+  "Czech Republic": "CZ",
+  "Turkey": "TR",
+  "Macedonia": "MK",
+  "Republic of North Macedonia": "MK",
+  "Bosnia": "BA",
+  "Bosnia-Herzegovina": "BA",
+  "Republic of Georgia": "GE",
+  "RSA": "ZA"
+ },
+ "places": {
+  "FR": {
+   "Burgundy": "Bourgogne",
+   "Rhone": "Vallée du Rhône",
+   "Rhone Valley": "Vallée du Rhône",
+   "Northern Rhone": "Northern Rhône",
+   "Southern Rhone": "Southern Rhône",
+   "Loire": "Vallée de la Loire",
+   "Loire Valley": "Vallée de la Loire",
+   "South West France": "Sud-Ouest",
+   "Southwest France": "Sud-Ouest",
+   "South West": "Sud-Ouest",
+   "Languedoc-Roussillon": [
+    "Languedoc",
+    "Roussillon"
+   ],
+   "Corsica": "Corse",
+   "Savoie": "Savoie and Bugey",
+   "Savoy": "Savoie and Bugey",
+   "Beaujolais Cru": "Crus du Beaujolais",
+   "Cote de Nuits": "Côte de Nuits",
+   "Cote de Beaune": "Côte de Beaune",
+   "Cote Chalonnaise": "Côte Chalonnaise",
+   "Maconnais": "Mâconnais",
+   "Medoc": "Médoc",
+   "Graves": "Graves",
+   "Sauternes-Barsac": "Sauternes",
+   "Champagne Grand Cru": "Champagne",
+   "Champagne Premier Cru": "Champagne",
+   "Chateauneuf du Pape": "Châteauneuf-du-Pape",
+   "Cote Rotie": "Côte Rôtie",
+   "Corton Charlemagne": "Corton-Charlemagne",
+   "Clos Vougeot": "Clos de Vougeot",
+   "Bordeaux Superieur": "Bordeaux supérieur",
+   "Cognac": "Charentes"
+  },
+  "IT": {
+   "Piedmont": "Piemonte",
+   "Tuscany": "Toscana",
+   "Sicily": "Sicilia",
+   "Sardinia": "Sardegna",
+   "Lombardy": "Lombardia",
+   "Apulia": "Puglia",
+   "Aosta Valley": "Valle d'Aosta",
+   "Valle d'Aosta": "Valle d'Aosta",
+   "Alto Adige": "Alto Adige",
+   "Trentino Alto Adige": "Trentino-Alto Adige",
+   "Friuli": "Friuli Venezia Giulia",
+   "Friuli-Venezia Giulia": "Friuli Venezia Giulia",
+   "Emilia Romagna": "Emilia-Romagna",
+   "Brunello": "Brunello di Montalcino",
+   "Vino Nobile": "Vino Nobile di Montepulciano",
+   "Amarone": "Amarone della Valpolicella",
+   "Prosecco": "Prosecco",
+   "Chianti Classico Gran Selezione": "Chianti Classico",
+   "Sassicaia": "Bolgheri Sassicaia",
+   "Taurasi": "Taurasi"
+  },
+  "ES": {
+   "Rioja": "Rioja",
+   "Ribera del Duero": "Ribera del Duero",
+   "Catalonia": "Catalunya",
+   "Castilla y Leon": "Castilla y León",
+   "Castile and Leon": "Castilla y León",
+   "Castilla La Mancha": "Castilla-La Mancha",
+   "Andalusia": "Andalucía",
+   "Basque Country": "País Vasco",
+   "Canary Islands": "Canarias",
+   "Balearic Islands": "Illes Balears",
+   "Valencia": "Comunitat Valenciana",
+   "Navarre": "Navarra",
+   "Aragon": "Aragón",
+   "Jerez": "Jerez-Xérès-Sherry",
+   "Sherry": "Jerez-Xérès-Sherry",
+   "Priorat": "Priorat",
+   "Rias Baixas": "Rías Baixas",
+   "Cava": "Cava"
+  },
+  "PT": {
+   "Port": "Porto",
+   "Douro": "Douro",
+   "Madeira": "Madeira",
+   "Vinho Verde": "Vinho Verde",
+   "Dao": "Dão",
+   "Alentejo": "Alentejo",
+   "Alentejano": "Alentejo",
+   "Tejo": "DoTejo",
+   "Minho": "Vinho Verde",
+   "Duriense": "Douro",
+   "Moscatel de Setubal": "Setúbal"
+  },
+  "DE": {
+   "Moselle": "Mosel",
+   "Mosel-Saar-Ruwer": "Mosel",
+   "Rheingau": "Rheingau",
+   "Rheinhessen": "Rheinhessen",
+   "Palatinate": "Pfalz",
+   "Pfalz": "Pfalz",
+   "Nahe": "Nahe",
+   "Franconia": "Franken",
+   "Baden": "Baden",
+   "Wurttemberg": "Württemberg",
+   "Saar": "Bereich Saar",
+   "Ruwer": "Bereich Ruwer",
+   "Ahr": "Ahr",
+   "Mittelrhein": "Mittelrhein",
+   "Sachsen": "Sachsen",
+   "Saxony": "Sachsen"
+  },
+  "AT": {
+   "Lower Austria": "Niederösterreich",
+   "Styria": "Steiermark",
+   "Vienna": "Wien",
+   "Wachau": "Wachau",
+   "Kamptal": "Kamptal",
+   "Kremstal": "Kremstal",
+   "Burgenland": "Burgenland",
+   "Steirerland": "Steiermark"
+  },
+  "CH": {
+   "Valais": "AOC Valais",
+   "Vaud": "AOC Vaud",
+   "Geneva": "AOC Genève",
+   "Ticino": "DOC Ticino",
+   "Neuchatel": "AOC Neuchâtel",
+   "Graubunden": "AOC Graubünden",
+   "Grisons": "AOC Graubünden",
+   "Zurich": "AOC Zürich",
+   "Svizzera Italiana": "DOC Ticino",
+   "Schaffhausen": "AOC Schaffhausen",
+   "Aargau": "AOC Aargau",
+   "Thurgau": "AOC Thurgau",
+   "St Gallen": "AOC St. Gallen",
+   "Lucerne": "AOC Luzern",
+   "Basel": "AOC Basel-Landschaft"
+  },
+  "US": {
+   "Napa": "Napa Valley",
+   "Sonoma": "Sonoma County",
+   "Sonoma Coast": "Sonoma Coast",
+   "Willamette": "Willamette Valley",
+   "Central Coast": "Central Coast",
+   "Santa Cruz Mountains": "Santa Cruz Mountains",
+   "Paso Robles": "Paso Robles",
+   "Columbia Valley": "Columbia Valley",
+   "Walla Walla": "Walla Walla Valley",
+   "Finger Lakes": "Finger Lakes",
+   "Russian River": "Russian River Valley",
+   "Anderson Valley": "Anderson Valley",
+   "Santa Rita Hills": "Sta. Rita Hills",
+   "Sta Rita Hills": "Sta. Rita Hills",
+   "Howell Mountain": "Howell Mountain",
+   "Stags Leap District": "Stags Leap District"
+  },
+  "AU": {
+   "Barossa": "Barossa Valley",
+   "Barossa Valley": "Barossa Valley",
+   "Eden Valley": "Eden Valley",
+   "McLaren Vale": "McLaren Vale",
+   "Coonawarra": "Coonawarra",
+   "Clare Valley": "Clare Valley",
+   "Margaret River": "Margaret River",
+   "Yarra Valley": "Yarra Valley",
+   "Hunter Valley": "Hunter",
+   "Adelaide Hills": "Adelaide Hills",
+   "Tasmania": "Tasmania",
+   "Mornington Peninsula": "Mornington Peninsula"
+  },
+  "NZ": {
+   "Central Otago": "Central Otago",
+   "Marlborough": "Marlborough",
+   "Hawke's Bay": "Hawke's Bay",
+   "Martinborough": "Martinborough",
+   "Wairarapa": "Wairarapa"
+  },
+  "ZA": {
+   "Stellenbosch": "Stellenbosch",
+   "Swartland": "Swartland",
+   "Constantia": "Constantia",
+   "Walker Bay": "Walker Bay",
+   "Hemel-en-Aarde": "Hemel-en-Aarde Valley",
+   "Franschhoek": "Franschhoek Valley",
+   "Paarl": "Paarl"
+  },
+  "AR": {
+   "Mendoza": "Mendoza",
+   "Uco Valley": "Valle de Uco",
+   "Lujan de Cuyo": "Luján de Cuyo",
+   "Salta": "Salta",
+   "Calchaqui Valley": "Valles Calchaquíes - Valle Calchaquí",
+   "Valles Calchaquies": "Valles Calchaquíes - Valle Calchaquí",
+   "Cafayate": "Cafayate - Valle de Cafayate",
+   "La Rioja": "La Rioja Argentina",
+   "Rio Negro": "Río Negro",
+   "Neuquen": "Neuquén",
+   "Patagonia": "Patagonia - Patagonia Argentina"
+  },
+  "CL": {
+   "Maipo Valley": "Valle del Maipo",
+   "Maipo": "Valle del Maipo",
+   "Colchagua Valley": "Valle de Colchagua",
+   "Colchagua": "Valle de Colchagua",
+   "Aconcagua Valley": "Valle del Aconcagua",
+   "Casablanca Valley": "Valle de Casablanca",
+   "Rapel Valley": "Valle del Rapel",
+   "Cachapoal Valley": "Valle del Cachapoal",
+   "Maule Valley": "Valle del Maule",
+   "Central Valley": "Valle Central"
+  },
+  "HU": {
+   "Tokaj": "Tokaj",
+   "Tokaji": "Tokaj"
+  },
+  "GR": {
+   "Santorini": "Σαντορίνη",
+   "Naoussa": "Νάουσα",
+   "Nemea": "Νεμέα",
+   "Amyndaio": "Αμύνταιο",
+   "Amyndeon": "Αμύνταιο",
+   "Paros": "Πάρος",
+   "Samos": "Σάμος",
+   "Rhodes": "Ρόδος",
+   "Mantinia": "Μαντινεία",
+   "Goumenissa": "Γουμένισσα",
+   "Rapsani": "Ραψάνη",
+   "Limnos": "Λήμνος",
+   "Lemnos": "Λήμνος",
+   "Patras": "Πάτρα",
+   "Sitia": "Σητεία",
+   "Peza": "Πεζά",
+   "Archanes": "Αρχάνες",
+   "Zitsa": "Ζίτσα",
+   "Dafnes": "Δαφνές",
+   "Cephalonia": "Ρομπόλα Κεφαλληνίας",
+   "Kefalonia": "Ρομπόλα Κεφαλληνίας",
+   "Monemvasia": "Μονεμβασία- Malvasia",
+   "Peloponnese": "Peloponnese"
+  },
+  "LB": {
+   "Bekaa Valley": "Bekaa",
+   "Bekaa": "Bekaa"
+  },
+  "CY": {
+   "Commandaria": "Κουμανδαρία",
+   "Krasochoria Lemesou": "Κρασοχώρια Λεμεσού",
+   "Pitsilia": "Πιτσιλιά",
+   "Laona Akamas": "Λαόνα Ακάμα"
+  },
+  "CZ": {
+   "Moravia": "Morava",
+   "Bohemia": "Čechy",
+   "Znojmo": "Znojmo",
+   "Mikulov": "Mikulovská"
+  },
+  "SI": {
+   "Podravje": "Štajerska Slovenija",
+   "Stajerska": "Štajerska Slovenija",
+   "Goriska Brda": "Goriška Brda",
+   "Brda": "Goriška Brda",
+   "Vipava": "Vipavska dolina",
+   "Vipava Valley": "Vipavska dolina",
+   "Karst": "Kras"
+  },
+  "HR": {
+   "Istria": "Hrvatska Istra",
+   "Slavonia": "Slavonija"
+  },
+  "UY": {
+   "Canelones": "Metropolitana",
+   "Metropolitan": "Metropolitana",
+   "Maldonado": "Oceánica",
+   "Oceanic": "Oceánica"
+  },
+  "GB": {
+   "England": "English",
+   "Wales": "Welsh",
+   "Sussex": "English",
+   "Kent": "English",
+   "Hampshire": "English",
+   "Cornwall": "English"
+  },
+  "CA": {
+   "Quebec": "Vin du Québec",
+   "Cowichan Valley": "Vancouver Island",
+   "Prince Edward County": "Prince Edward County"
+  },
+  "MX": {
+   "Valle de Guadalupe": "Valle de Guadalupe (Ensenada)",
+   "Parras Valley": "Parras",
+   "Parras": "Parras"
+  },
+  "CN": {
+   "Ningxia": "Helan Mountain East (Ningxia)"
+  },
+  "IL": {
+   "Shomron": "Shomron (Carmel, Sharon)",
+   "Galilee": "Galilee",
+   "Upper Galilee": "Upper Galilee",
+   "Judean Hills": "Judean Hills"
+  },
+  "BR": {
+   "Campanha": "Campanha Gaúcha"
+  },
+  "MK": {
+   "Vardar River Valley": "Povardarie",
+   "Tikves": "Tikveš"
+  }
+ }
+}
