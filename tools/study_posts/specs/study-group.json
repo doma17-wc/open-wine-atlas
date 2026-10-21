@@ -1,0 +1,9 @@
+{"slides": [
+ {"kind": "cover", "eyebrow": "For WSET, CMS and sommelier study groups", "title": "How to use the atlas in your study group", "text": "Five things to try at your next session.", "shots": ["compare.png"]},
+ {"kind": "shots", "eyebrow": "1 · Share a place", "title": "Every place has its own link", "text": "Send it to the group and everyone opens the same map.", "shots": ["place.png"], "caps": ["openwineatlas.com/places/france/corton"]},
+ {"kind": "shots", "eyebrow": "2 · Compare", "title": "Two crus at the same scale", "text": "Romanée-Conti next to La Tâche, outline against outline.", "shots": ["compare.png"], "crop": [300]},
+ {"kind": "shots", "eyebrow": "3 · Notebook", "title": "Keep notes per place", "text": "Pin a note to a place and tag it by course or region.", "shots": ["notebook.png"]},
+ {"kind": "shots", "eyebrow": "4 · Saved places", "title": "Save the places you study", "text": "Elevation, slope and exposure come with them.", "shots": ["saved.png"]},
+ {"kind": "shots", "eyebrow": "5 · Producers", "title": "Find any producer", "text": "See where its wines are made, place by place.", "shots": ["producer.png"]},
+ {"kind": "end", "eyebrow": "Open Wine Atlas · Study", "title": "Bring it to your next session", "list": ["Share a place link", "Compare crus at the same scale", "Notes, saved places and producers in My atlas", "The first lesson of every path is free"], "url": "openwineatlas.com"}
+]}

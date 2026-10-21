@@ -1,0 +1,8 @@
+{"slides": [
+ {"kind": "cover", "eyebrow": "New on the Open Wine Atlas", "title": "Study wine on the map", "text": "Lessons, map quizzes and review. Made for WSET, CMS and sommelier study groups.", "shots": ["study-hub.png"]},
+ {"kind": "shots", "eyebrow": "10 study paths", "title": "From Burgundy to the Southern Hemisphere", "text": "53 lessons, 419 questions. WSET 2 to Diploma.", "shots": ["study-paths.png"], "top": 400},
+ {"kind": "shots", "eyebrow": "Lessons", "title": "Lessons that fly you to each place", "text": "Tap a place in the text and the map takes you there.", "shots": ["study-lesson.png", "lesson-fly.png"], "caps": ["The lesson", "Tap a place: the map flies there"]},
+ {"kind": "shots", "eyebrow": "Quizzes", "title": "Quizzes on the map", "text": "Answer, then see the place. Or find it on the map yourself.", "shots": ["quiz-answered.png", "map-quiz.png"], "caps": ["Lesson quiz", "Map quiz"]},
+ {"kind": "shots", "eyebrow": "Review", "title": "Review brings back what you missed", "text": "Every answer becomes a card. Misses come back.", "top": 400, "shots": ["review-hub.png", "review-quiz.png"], "caps": ["Cards due today", "Review session"]},
+ {"kind": "end", "eyebrow": "Open Wine Atlas · Study", "title": "Free to try", "list": ["The first lesson of every path is free", "10 free questions every day", "Study groups: every place has its own link to share"], "url": "openwineatlas.com"}
+]}
