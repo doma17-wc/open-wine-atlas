@@ -44,12 +44,12 @@
   ],
   "functions": {
     "api/story.mjs": {
-      "includeFiles": "{web/data/*.json,web/data/*.pmtiles,api/fonts/*.ttf}",
+      "includeFiles": "{web/data/manifest.json,web/data/search.json,web/data/details-*.json,web/data/*.pmtiles,api/fonts/*.ttf}",
       "memory": 1024,
       "maxDuration": 30
     },
     "api/pair.mjs": {
-      "includeFiles": "{web/data/*.json,web/data/*.pmtiles}",
+      "includeFiles": "{web/data/manifest.json,web/data/search.json,web/data/*.pmtiles}",
       "memory": 1024,
       "maxDuration": 20
     }

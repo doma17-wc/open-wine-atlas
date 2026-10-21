@@ -29,6 +29,7 @@ Live: https://open-wine-atlas.vercel.app
 | All | About 9,600 wineries in 44 countries | OpenStreetMap via openwinemap | ODbL |
 | France, Italy | Per-wine rules: colour, category, main and secondary grapes, yields, density | EU specifications compiled by Candiago et al. 2022 (via pdo-wine-data) | CC BY 4.0 |
 | All | Regional bedrock per place | GLiM, Hartmann & Moosdorf 2012 | CC BY 3.0 |
+| All | About 33,000 producers and 185,000 wines, each placed on the site, appellation or region its record names | LWIN database, Liv-ex | CC BY 4.0 |
 | All | 151 editorial notes | Open Wine Atlas contributors | CC BY 4.0 |
 | All | Nearest town and city with distance and direction, distance to the sea, rivers and lakes nearby, latitude twins on other continents | GeoNames cities5000; Natural Earth 1:10m coastline, rivers, lakes | CC BY 4.0; public domain |
 | All | Named rivers, lakes, mountain ranges and peaks on the map, each one can be highlighted | Natural Earth 1:10m rivers, lakes and physical regions | Public domain |
@@ -74,6 +75,24 @@ Natural Earth rivers stay drawn close up. The layers switch on and off under Map
 
 ```bash
 python pipeline/geo.py && python web/build_web.py
+```
+
+## Producers and wines
+
+`pipeline/lwin.py` reads the LWIN database (Liv-ex Wine Identification Number, CC BY 4.0, free to download from
+https://www.liv-ex.com/lwin-database-download/ into `raw/lwin/`) and places every live wine on the most precise atlas
+place its record names: the site (Vosne-Romanée › Les Suchots, or the Einzellage in a German label such as Wehlener
+Sonnenuhr), then the sub-region (Pauillac, Barolo), then the region (Champagne, Mosel). English names are translated by
+`pipeline/lists/lwin_aliases.json`; two vineyards of the same name are never guessed. `build/lwin_unplaced.tsv` lists the
+regions it could not place.
+
+It writes `web/data/producers.json` (1.5 MB, for the search and the *Producers* list of every place and region) and
+`web/data/wines.json` (9 MB, loaded when a producer opens or a search looks for a wine). A search for *Louis Roederer*
+or *Cristal* opens the producer: its places light up on the map, and the sheet lists its wines under the place each
+comes from, with the LWIN code. `#producer:<name>-<country>` links to one (`/#producer:louis-roederer-fr`).
+
+```bash
+python3 pipeline/lwin.py && python3 web/build_web.py
 ```
 
 ## Share images

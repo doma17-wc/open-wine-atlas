@@ -105,5 +105,14 @@
   "url": "https://openfreemap.org",
   "tiles": "https://tiles.openfreemap.org/planet",
   "used_for": "read live by the web page from zoom 9: waterways, water, lake names, peaks, villages"
+ },
+ "lwin": {
+  "name": "LWIN, the Liv-ex Wine Identification Number (LWIN database)",
+  "license": "CC BY 4.0",
+  "attribution": "LWIN by Liv-ex",
+  "url": "https://www.liv-ex.com/lwin/",
+  "licence_url": "https://www.liv-ex.com/lwin-creative-commons-licence/",
+  "download_used": "https://www.liv-ex.com/lwin-database-download/ (LWINdatabase.xlsx, after a short registration form)",
+  "notes": "Live wine records only. Each wine is placed on an atlas place by pipeline/lwin.py; names are kept as published."
  }
 }

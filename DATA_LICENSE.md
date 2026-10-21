@@ -27,6 +27,7 @@ source, and anyone who reuses it must give the attribution shown here.
 | Distance to the sea, rivers and lakes nearby | Public domain | Natural Earth 1:10m |
 | Stored terrain figures (`terrain` in details) and records (`web/data/records.json`) | Open licences of each elevation model; the figures CC BY 4.0 | © Mapterhorn and its sources; Open Wine Atlas contributors |
 | Community contributions in `contrib/` | CC BY 4.0 | Open Wine Atlas contributors |
+| Producers and wines (`web/data/producers.json`, `web/data/wines.json`) | CC BY 4.0 | LWIN by Liv-ex (https://www.liv-ex.com/lwin/). Changed: spirits, beer and retired codes left out, each wine placed on an atlas place by Open Wine Atlas |
 
 Because the OpenStreetMap layers are under ODbL, a database that combines them with other
 layers must keep them as separate, clearly attributed layers, as this project does.
