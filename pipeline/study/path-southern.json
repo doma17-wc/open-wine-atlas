@@ -1,0 +1,611 @@
+{
+  "id": "southern",
+  "title": "The Southern Hemisphere",
+  "level": "WSET 3 to Diploma",
+  "summary": "Five lessons on the classic wine countries of the southern hemisphere: Australia, New Zealand, South Africa, Chile and Argentina. Each lesson covers the origin system, the climate drivers, the key regions and the signature grapes and styles.",
+  "lessons": [
+    {
+      "id": "southern-australia",
+      "title": "Australia: zones, regions and styles",
+      "minutes": 8,
+      "intro": "This lesson explains how Australia names the origin of its wines and then visits the regions that matter most in exams: the Barossa, McLaren Vale, Clare Valley and Coonawarra in South Australia, the Hunter Valley in New South Wales, and the cool regions of the Yarra Valley, Margaret River and Tasmania.",
+      "sections": [
+        {
+          "h": "The Geographical Indication system",
+          "p": [
+            "Australian wine origins are defined as Geographical Indications, or GIs, registered by Wine Australia. The system is a map of boundaries, not a set of production rules: a GI does not limit grape varieties, yields or winemaking. The hierarchy runs from state to zone, then region, then subregion.",
+            "An example: the state of South Australia contains the Barossa zone, which contains the Eden Valley region, which contains the High Eden subregion. There is also a multi-state GI, South Eastern Australia, used for large-volume blends sourced across several states.",
+            "Under Australian wine law, a wine that states a GI, a grape variety or a vintage must contain at least 85% of that GI, variety or vintage. The Label Integrity Program, with its record-keeping and audits, checks that such label claims are true."
+          ],
+          "places": ["au-world-barossa", "au-world-eden-valley", "au-world-high-eden"]
+        },
+        {
+          "h": "Barossa Valley and Eden Valley",
+          "p": [
+            "The Barossa Valley lies north-east of Adelaide. It was settled in the 1840s by German-speaking Lutherans from Silesia. The valley floor is warm and dry, and it is best known for full-bodied Shiraz with ripe black fruit, as well as Grenache and Mourvèdre.",
+            "South Australia has never had phylloxera, thanks to strict quarantine rules. Many Barossa vines are therefore very old and grow on their own roots.",
+            "Eden Valley sits in the hills to the east, inside the same Barossa zone. It is higher and cooler, with poorer soils. It is famous for dry Riesling with lime and citrus flavours, and for elegant Shiraz such as Henschke's Hill of Grace."
+          ],
+          "places": ["au-world-barossa-valley", "au-world-eden-valley"]
+        },
+        {
+          "h": "McLaren Vale, Clare Valley and Coonawarra",
+          "p": [
+            "McLaren Vale, in the Fleurieu zone south of Adelaide, has a warm Mediterranean climate cooled by breezes from Gulf St Vincent. Shiraz, Grenache and Cabernet Sauvignon are the main grapes.",
+            "Clare Valley, in the Mount Lofty Ranges zone north of Adelaide, has warm days and cool nights. It makes bone-dry Riesling with high acidity and lime flavours that turn toasty with age. In 2000 a group of Clare Riesling producers switched together to screwcaps, a step that helped the closure spread across Australia.",
+            "Coonawarra, in the Limestone Coast zone, is a narrow strip of terra rossa: red clay loam over a bed of limestone. The climate is cool. Its Cabernet Sauvignon shows blackcurrant with a typical mint or eucalyptus note."
+          ],
+          "places": ["au-world-mclaren-vale", "au-world-clare-valley", "au-world-coonawarra", "au-world-limestone-coast"]
+        },
+        {
+          "h": "Hunter Valley Semillon",
+          "p": [
+            "The Hunter Valley, north of Sydney in New South Wales, is hot and humid, with much of its rain falling in summer and often at harvest. Afternoon sea breezes and cloud cover temper the heat. The Hunter region has three subregions: Pokolbin, Broke Fordwich and Upper Hunter Valley.",
+            "Hunter Semillon is picked early, at low sugar, to avoid the rain. It is fermented in stainless steel without oak, and often has around 11% alcohol or less. Young, it is lean and citrusy. After some years in bottle it develops toast, honey and nut aromas, even though it has never seen oak. Hunter Shiraz is medium-bodied and earthy."
+          ],
+          "places": ["au-world-hunter", "au-world-pokolbin", "au-world-broke-fordwich", "au-world-upper-hunter-valley"]
+        },
+        {
+          "h": "Cool climates: Yarra Valley, Margaret River, Tasmania",
+          "p": [
+            "The Yarra Valley, near Melbourne in Victoria, is cool. It is known for Pinot Noir, Chardonnay and traditional method sparkling wine, as well as Cabernet Sauvignon and Shiraz.",
+            "Margaret River, in the South West Australia zone, has a maritime climate shaped by the Indian Ocean to the west and the Southern Ocean to the south. Planting began in the late 1960s after scientific studies compared its climate to Bordeaux. It makes Cabernet Sauvignon, Bordeaux-style blends, Chardonnay, and Semillon and Sauvignon Blanc blends.",
+            "Tasmania, the island south of the mainland, is the coolest part of Australia. It is a leading source of traditional method sparkling wine, Pinot Noir, Chardonnay and Riesling."
+          ],
+          "places": ["au-world-yarra-valley", "au-world-margaret-river", "au-world-tasmania"]
+        }
+      ],
+      "key": [
+        "The GI hierarchy runs state, zone, region, subregion; GIs set boundaries but not production rules.",
+        "The 85% rule applies to a stated GI, grape variety or vintage.",
+        "South Australia has never had phylloxera, so the Barossa has many old own-rooted vines.",
+        "Eden Valley and Clare Valley are the classic sources of dry, lime-scented Riesling.",
+        "Coonawarra means terra rossa over limestone and Cabernet Sauvignon.",
+        "Hunter Semillon is picked early, unoaked and low in alcohol, and becomes toasty with bottle age."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the order of the Australian GI hierarchy, from largest to smallest?",
+          "options": ["Zone, state, subregion, region", "Region, zone, state, subregion", "State, zone, region, subregion", "State, region, zone, subregion"],
+          "answer": 2,
+          "explain": "Australian GIs run from state to zone, then region, then subregion, for example South Australia, Barossa, Eden Valley, High Eden.",
+          "place": "au-world-high-eden"
+        },
+        {
+          "id": "q2",
+          "q": "An Australian label names a single grape variety. What share of the wine must come from that variety?",
+          "options": ["At least 85%", "At least 75%", "At least 95%", "100%"],
+          "answer": 0,
+          "explain": "Under Australian wine law, a stated GI, variety or vintage must make up at least 85% of the wine. The Label Integrity Program checks these claims."
+        },
+        {
+          "id": "q3",
+          "q": "Why does the Barossa Valley have so many very old vines on their own roots?",
+          "options": ["The vines were grafted onto American rootstock in the 1840s", "Its sandy soils are too dry for vines to need grafting", "Old vines were protected by a law banning replanting", "South Australia has never had phylloxera"],
+          "answer": 3,
+          "explain": "Strict quarantine has kept phylloxera out of South Australia, so old own-rooted vines survive.",
+          "place": "au-world-barossa-valley"
+        },
+        {
+          "id": "q4",
+          "q": "How does Eden Valley differ from the Barossa Valley?",
+          "options": ["It is lower and warmer, and focuses on fortified wine", "It is higher and cooler, and is known for dry Riesling", "It is a separate zone with sandy coastal soils", "It is a subregion of McLaren Vale"],
+          "answer": 1,
+          "explain": "Eden Valley lies in the hills east of the Barossa Valley, in the same zone. It is higher and cooler and famous for dry Riesling.",
+          "place": "au-world-eden-valley"
+        },
+        {
+          "id": "q5",
+          "q": "Which soil and grape define Coonawarra?",
+          "options": ["Alluvial gravel and Grenache", "Volcanic basalt and Chardonnay", "Terra rossa over limestone and Cabernet Sauvignon", "Sandy loam and Semillon"],
+          "answer": 2,
+          "explain": "Coonawarra is a narrow strip of red terra rossa over limestone, best known for Cabernet Sauvignon.",
+          "place": "au-world-coonawarra"
+        },
+        {
+          "id": "q6",
+          "q": "Which description fits classic Hunter Valley Semillon?",
+          "options": ["Late-picked, barrel-fermented and high in alcohol", "Botrytised and sweet", "Blended with Sauvignon Blanc and aged in new oak", "Picked early, unoaked and low in alcohol, gaining toasty notes with age"],
+          "answer": 3,
+          "explain": "Hunter Semillon is picked early to avoid harvest rain, made without oak, and develops toast and honey in bottle.",
+          "place": "au-world-hunter"
+        },
+        {
+          "id": "q7",
+          "q": "Clare Valley Riesling producers acted together in 2000 to adopt which change?",
+          "options": ["Screwcap closures", "Botrytis-affected sweet styles", "Malolactic conversion", "Ageing in new French oak"],
+          "answer": 0,
+          "explain": "In 2000 a group of Clare Valley Riesling makers moved to screwcaps together, which helped the closure spread across Australia.",
+          "place": "au-world-clare-valley"
+        },
+        {
+          "id": "q8",
+          "q": "What shapes the climate of Margaret River?",
+          "options": ["Hot inland desert winds", "The Indian Ocean to the west and the Southern Ocean to the south", "High altitude in the Great Dividing Range", "Summer monsoon rain"],
+          "answer": 1,
+          "explain": "Margaret River is maritime, bordered by the Indian Ocean to the west and the Southern Ocean to the south.",
+          "place": "au-world-margaret-river"
+        }
+      ]
+    },
+    {
+      "id": "southern-new-zealand",
+      "title": "New Zealand: cool and maritime",
+      "minutes": 7,
+      "intro": "This lesson covers New Zealand's maritime climate and its four classic names for exams: Marlborough Sauvignon Blanc, Central Otago Pinot Noir, the Bordeaux blends and Syrah of Hawke's Bay and the Gimblett Gravels, and the Pinot Noir of Martinborough.",
+      "sections": [
+        {
+          "h": "A long, maritime country",
+          "p": [
+            "New Zealand is two long, narrow islands with a cool maritime climate. No vineyard is far from the sea. Prevailing westerly winds bring rain to the west coast, while mountain ranges shelter the east. Most wine regions lie on the eastern side, in the rain shadow, where it is sunnier and drier.",
+            "Regional names are protected as geographical indications under the Geographical Indications (Wine and Spirits) Registration Act 2006. As in Australia, a stated region, variety or vintage must account for at least 85% of the wine."
+          ],
+          "places": ["nz-world-marlborough", "nz-world-hawke-s-bay", "nz-world-central-otago"]
+        },
+        {
+          "h": "Marlborough Sauvignon Blanc",
+          "p": [
+            "Marlborough, at the north-east tip of the South Island, is sunny and fairly dry, with cool nights. The long, cool ripening season keeps acidity high while flavours develop. The main areas are the Wairau Valley, the Southern Valleys and the cooler, drier Awatere Valley.",
+            "Commercial planting began in 1973, and Cloudy Bay, first made in 1985, brought the style world fame. Classic Marlborough Sauvignon Blanc is pungent, with high acidity and flavours of passion fruit, gooseberry, green bell pepper and cut grass. Most is fermented in stainless steel and drunk young. The region also makes Pinot Noir, Chardonnay and sparkling wine."
+          ],
+          "places": ["nz-world-marlborough"]
+        },
+        {
+          "h": "Central Otago Pinot Noir",
+          "p": [
+            "Central Otago lies inland in the south of the South Island, among mountains. It is the only New Zealand region with a continental climate: hot, dry summers, cold winters, a high risk of frost and low rainfall, so irrigation is common. Soils are mainly schist-derived, with loess.",
+            "Pinot Noir dominates. It is typically ripe and fruit-forward, with red and dark cherry flavours and fresh acidity. Subregions differ in warmth: Bannockburn is one of the warmest and earliest-ripening, while Gibbston is higher and cooler. Riesling, Pinot Gris and Chardonnay are also grown."
+          ],
+          "places": ["nz-world-central-otago", "nz-world-bannockburn"]
+        },
+        {
+          "h": "Hawke's Bay and the Gimblett Gravels",
+          "p": [
+            "Hawke's Bay, on the east coast of the North Island, is one of New Zealand's warmest and sunniest regions, sheltered from westerly rain by inland ranges. It is the country's main source of Bordeaux-style reds, mostly based on Merlot and Cabernet Sauvignon, as well as Syrah and Chardonnay.",
+            "The Gimblett Gravels is a district of deep, stony, infertile soils on the former bed of the Ngaruroro River. The stones drain freely and store heat, helping late-ripening varieties ripen fully. The name is a trademark managed by a local winegrowers' association, not an official GI."
+          ],
+          "places": ["nz-world-hawke-s-bay"]
+        },
+        {
+          "h": "Martinborough and other regions",
+          "p": [
+            "Martinborough is a subregion of Wairarapa, at the south-east of the North Island near Wellington. It is cool, dry and very windy, and spring winds often reduce yields. Free-draining gravel terraces and small producers, many planted from around 1980, have made its Pinot Noir known for concentration and structure.",
+            "Other regions to know: Gisborne for Chardonnay, Nelson, Waipara Valley in North Canterbury for Riesling and Pinot Noir, and Waiheke Island near Auckland for Bordeaux blends and Syrah."
+          ],
+          "places": ["nz-world-wairarapa", "nz-world-martinborough", "nz-world-gisborne", "nz-world-waipara-valley", "nz-world-waiheke-island", "nz-world-nelson"]
+        }
+      ],
+      "key": [
+        "Most New Zealand regions lie on the east side of the islands, in the rain shadow of the mountains.",
+        "Marlborough Sauvignon Blanc: pungent, high acid, passion fruit, gooseberry and green pepper; fame came with Cloudy Bay in 1985.",
+        "Central Otago is New Zealand's only continental region; schist and loess soils; Pinot Noir.",
+        "Hawke's Bay is warm and makes Bordeaux blends and Syrah; the Gimblett Gravels is a former riverbed, trademarked rather than a GI.",
+        "Martinborough is a subregion of Wairarapa, known for structured Pinot Noir and strong winds."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which is the only New Zealand wine region with a continental climate?",
+          "options": ["Marlborough", "Central Otago", "Hawke's Bay", "Gisborne"],
+          "answer": 1,
+          "explain": "Central Otago lies inland among mountains, with hot dry summers, cold winters and frost risk.",
+          "place": "nz-world-central-otago"
+        },
+        {
+          "id": "q2",
+          "q": "Which set of flavours is typical of classic Marlborough Sauvignon Blanc?",
+          "options": ["Honey, toast and nuts", "Peach, apricot and vanilla", "Butter, hazelnut and baked apple", "Passion fruit, gooseberry and green bell pepper"],
+          "answer": 3,
+          "explain": "Marlborough Sauvignon Blanc is pungent and high in acid, with passion fruit, gooseberry and green pepper notes.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "id": "q3",
+          "q": "What are the Gimblett Gravels?",
+          "options": ["Stony soils on the former bed of the Ngaruroro River", "Volcanic soils on Waiheke Island", "Limestone hills in North Canterbury", "Schist slopes in Central Otago"],
+          "answer": 0,
+          "explain": "The Gimblett Gravels is an area of deep, free-draining stones left by the Ngaruroro River in Hawke's Bay.",
+          "place": "nz-world-hawke-s-bay"
+        },
+        {
+          "id": "q4",
+          "q": "Which wines are the Gimblett Gravels best known for?",
+          "options": ["Sauvignon Blanc and Riesling", "Pinot Noir and Pinot Gris", "Bordeaux-style blends and Syrah", "Traditional method sparkling wine"],
+          "answer": 2,
+          "explain": "The warm, heat-storing gravels help late-ripening Bordeaux varieties and Syrah ripen fully.",
+          "place": "nz-world-hawke-s-bay"
+        },
+        {
+          "id": "q5",
+          "q": "Martinborough is a subregion of which New Zealand region?",
+          "options": ["Hawke's Bay", "Nelson", "Canterbury", "Wairarapa"],
+          "answer": 3,
+          "explain": "Martinborough lies within Wairarapa at the south-east of the North Island.",
+          "place": "nz-world-martinborough"
+        },
+        {
+          "id": "q6",
+          "q": "Which wine, first made in 1985, brought Marlborough Sauvignon Blanc to world attention?",
+          "options": ["Ata Rangi", "Cloudy Bay", "Hill of Grace", "Vin de Constance"],
+          "answer": 1,
+          "explain": "Cloudy Bay's first Sauvignon Blanc in 1985 made the Marlborough style famous.",
+          "place": "nz-world-marlborough"
+        },
+        {
+          "id": "q7",
+          "q": "Which soils are typical of Central Otago?",
+          "options": ["Schist-derived soils with loess", "Terra rossa over limestone", "Deep river gravels", "Granite and shale"],
+          "answer": 0,
+          "explain": "Central Otago soils are mainly schist-derived, with windblown loess.",
+          "place": "nz-world-central-otago"
+        },
+        {
+          "id": "q8",
+          "q": "Why do most New Zealand wine regions lie on the eastern side of the islands?",
+          "options": ["The east has volcanic soils", "The east is warmed by a tropical current", "Mountains shelter the east from westerly rain", "The east has a continental climate"],
+          "answer": 2,
+          "explain": "Westerly winds drop their rain on the west coast; the east lies in the rain shadow and is sunnier and drier."
+        }
+      ]
+    },
+    {
+      "id": "southern-south-africa",
+      "title": "South Africa: Wine of Origin and the Cape",
+      "minutes": 8,
+      "intro": "This lesson explains South Africa's Wine of Origin scheme, the cold current and strong wind that shape the Cape, the key areas of Stellenbosch, Swartland and Constantia, and the two grapes most linked to the country: Chenin Blanc and Pinotage.",
+      "sections": [
+        {
+          "h": "The Wine of Origin scheme",
+          "p": [
+            "South Africa's Wine of Origin (WO) scheme was introduced in 1973. It defines nested areas. From largest to smallest they are the geographical unit, the region, the district and the ward. Estates and single vineyards can also be registered.",
+            "An example: the Western Cape geographical unit contains the Coastal Region, which contains the Stellenbosch district, which contains the Simonsberg-Stellenbosch ward. If a WO area is stated, all the grapes must come from it. A stated variety or vintage must make up at least 85% of the wine."
+          ],
+          "places": ["za-world-western-cape", "za-world-coastal-region", "za-world-stellenbosch", "za-world-simonsberg-stellenbosch"]
+        },
+        {
+          "h": "The Benguela Current and the Cape Doctor",
+          "p": [
+            "The Cape has a Mediterranean climate with warm, dry summers. Without cooling it would be too hot for fine wine in many places. The cold Benguela Current flows north from the Antarctic along the west coast and cools the land near the sea.",
+            "The Cape Doctor is a strong, dry south-easterly wind that blows in summer. It cools vineyards near False Bay and keeps the canopy dry, which reduces fungal disease. It can also damage leaves and reduce yields.",
+            "Cooler areas closer to the south coast, such as Elgin and the Hemel-en-Aarde wards of Walker Bay, suit Pinot Noir and Chardonnay. Hot inland areas such as Robertson and Worcester in the Breede River Valley rely on irrigation."
+          ],
+          "places": ["za-world-elgin", "za-world-walker-bay", "za-world-hemel-en-aarde-valley", "za-world-upper-hemel-en-aarde-valley", "za-world-hemel-en-aarde-ridge", "za-world-robertson", "za-world-worcester", "za-world-breede-river-valley"]
+        },
+        {
+          "h": "Stellenbosch and Constantia",
+          "p": [
+            "Stellenbosch, east of Cape Town, is a district of mountain slopes, valleys and breezes from False Bay. Soils on the slopes are mostly granite-derived, with sandstone elsewhere. It is best known for Cabernet Sauvignon and Bordeaux-style blends, as well as Pinotage, Shiraz and Chenin Blanc. Its wards include Simonsberg-Stellenbosch, Jonkershoek Valley and Banghoek.",
+            "Constantia, south of Cape Town, is the Cape's most historic fine wine area. Governor Simon van der Stel founded the Constantia estate in 1685. Its sweet, unfortified Muscat wine, Vin de Constance, was famous across Europe in the eighteenth and nineteenth centuries. Today Constantia is a cool ward, now in the Cape Town district, known for Sauvignon Blanc."
+          ],
+          "places": ["za-world-stellenbosch", "za-world-jonkershoek-valley", "za-world-banghoek", "za-world-constantia", "za-world-cape-town"]
+        },
+        {
+          "h": "Swartland",
+          "p": [
+            "Swartland, north of Cape Town, is warm and dry. Its name, black land, comes from a dark native shrub. Much of it is farmed without irrigation, with old bush vines on granite and shale soils.",
+            "For a long time the area made bulk wine for cooperatives. From around 2000 a new wave of independent producers began making old-vine Chenin Blanc, white blends and Rhône-style reds from Syrah, Grenache, Cinsaut and Mourvèdre, often with minimal intervention. Swartland is now one of the Cape's most dynamic areas."
+          ],
+          "places": ["za-world-swartland", "za-world-riebeekberg", "za-world-malmesbury"]
+        },
+        {
+          "h": "Chenin Blanc and Pinotage",
+          "p": [
+            "Chenin Blanc is South Africa's most planted grape, once known locally as Steen. It is made in every style: fresh and dry, rich and oaked from old vines, sweet, and traditional method sparkling, called Méthode Cap Classique.",
+            "Pinotage was created in 1925 by Professor Abraham Perold at Stellenbosch University by crossing Pinot Noir with Cinsaut, which was then called Hermitage in South Africa. It gives deeply coloured reds with dark fruit, sometimes with smoky notes. A Cape Blend is a red blend that includes Pinotage, though the term has no legal definition."
+          ],
+          "places": ["za-world-stellenbosch"]
+        }
+      ],
+      "key": [
+        "Wine of Origin dates from 1973; units are geographical unit, region, district, ward.",
+        "A stated WO area means 100% of the grapes; a variety or vintage needs at least 85%.",
+        "The cold Benguela Current and the summer south-easterly Cape Doctor cool the Cape and reduce disease.",
+        "Constantia: van der Stel, 1685, and the sweet Muscat Vin de Constance.",
+        "Swartland: warm, dry-farmed old bush vines, Chenin Blanc and Rhône varieties.",
+        "Pinotage is Pinot Noir crossed with Cinsaut, made by Abraham Perold in 1925."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "In which year was South Africa's Wine of Origin scheme introduced?",
+          "options": ["1925", "1685", "1999", "1973"],
+          "answer": 3,
+          "explain": "The Wine of Origin scheme began in 1973. 1925 is the year Pinotage was created and 1685 the founding of Constantia."
+        },
+        {
+          "id": "q2",
+          "q": "What is the order of Wine of Origin units, from largest to smallest?",
+          "options": ["Region, district, ward, geographical unit", "Geographical unit, region, district, ward", "District, ward, region, geographical unit", "Geographical unit, district, region, ward"],
+          "answer": 1,
+          "explain": "For example: Western Cape (geographical unit), Coastal Region, Stellenbosch (district), Simonsberg-Stellenbosch (ward).",
+          "place": "za-world-coastal-region"
+        },
+        {
+          "id": "q3",
+          "q": "What is the Benguela Current?",
+          "options": ["A warm current flowing south along the east coast", "A hot wind from the interior", "A cold current flowing north along the west coast", "A river that irrigates the Breede River Valley"],
+          "answer": 2,
+          "explain": "The Benguela Current carries cold water north from the Antarctic along the west coast, cooling the vineyards near the sea."
+        },
+        {
+          "id": "q4",
+          "q": "What is the main benefit of the Cape Doctor for vineyards?",
+          "options": ["It cools vines and keeps the canopy dry, reducing fungal disease", "It brings summer rain to dry areas", "It protects vines from spring frost", "It speeds up ripening in cool areas"],
+          "answer": 0,
+          "explain": "The strong, dry south-easterly wind cools the vines and dries the canopy, although it can also damage leaves.",
+          "place": "za-world-stellenbosch"
+        },
+        {
+          "id": "q5",
+          "q": "Which two grapes are the parents of Pinotage?",
+          "options": ["Pinot Noir and Syrah", "Pinot Noir and Cinsaut", "Pinot Gris and Cinsaut", "Pinot Noir and Grenache"],
+          "answer": 1,
+          "explain": "Abraham Perold crossed Pinot Noir with Cinsaut, then known in South Africa as Hermitage, in 1925."
+        },
+        {
+          "id": "q6",
+          "q": "What was Vin de Constance?",
+          "options": ["A traditional method sparkling wine from Stellenbosch", "A fortified red from the Klein Karoo", "A dry Sauvignon Blanc from Elgin", "A sweet, unfortified Muscat wine from Constantia"],
+          "answer": 3,
+          "explain": "Vin de Constance was the sweet Muscat wine of Constantia, famous in Europe in the eighteenth and nineteenth centuries.",
+          "place": "za-world-constantia"
+        },
+        {
+          "id": "q7",
+          "q": "Which description fits Swartland viticulture?",
+          "options": ["Old bush vines, often without irrigation, on granite and shale", "Irrigated vineyards on deep limestone", "Cool, wet vineyards near the south coast", "High-altitude vineyards above 1,000 m"],
+          "answer": 0,
+          "explain": "Swartland is warm and dry, with many old, dry-farmed bush vines on granite and shale soils.",
+          "place": "za-world-swartland"
+        },
+        {
+          "id": "q8",
+          "q": "What was the old South African name for Chenin Blanc?",
+          "options": ["Hermitage", "Pinotage", "Steen", "Hanepoot"],
+          "answer": 2,
+          "explain": "Chenin Blanc, the most planted grape in South Africa, was known locally as Steen. Hermitage was the old name for Cinsaut."
+        }
+      ]
+    },
+    {
+      "id": "southern-chile",
+      "title": "Chile: between the Andes and the Pacific",
+      "minutes": 8,
+      "intro": "This lesson shows how Chile's shape, the Andes and the cold Humboldt Current create its climates, how the valleys run from north to south and from the coast to the mountains, and why Carmenère and the coastal valleys of Casablanca and San Antonio matter.",
+      "sections": [
+        {
+          "h": "A long, narrow, isolated country",
+          "p": [
+            "Chile is a thin strip of land between the Andes to the east and the Pacific to the west, with the Atacama Desert to the north and the ice fields of Patagonia to the south. These natural barriers have kept phylloxera out, so most Chilean vines grow on their own roots.",
+            "The central wine lands have a Mediterranean climate with dry summers. Rain falls mostly in winter, and many vineyards are irrigated with snowmelt from the Andes. Disease pressure is low."
+          ],
+          "places": ["cl-world-valle-central"]
+        },
+        {
+          "h": "The Humboldt Current: coast, middle and mountains",
+          "p": [
+            "The cold Humboldt Current flows north along the coast. It cools the land near the sea and brings morning fog and cloud. A Coastal Range runs parallel to the shore and blocks this influence in many places, except where valleys open towards the sea.",
+            "Between the Coastal Range and the Andes lies the Central Valley, the warmest and flattest part, long used for high-yield production. Near the Andes, cold air flows down at night, giving a wide difference between day and night temperatures.",
+            "Since 2011 labels can add three terms that describe this east to west contrast: Costa (coast), Entre Cordilleras (between the ranges) and Andes."
+          ],
+          "places": ["cl-world-valle-central"]
+        },
+        {
+          "h": "The valleys from north to south",
+          "p": [
+            "Chile's denominación de origen system divides the country into regions, which are split into subregions, mostly named after river valleys, then zones and areas. The regions from north to south are Atacama, Coquimbo, Aconcagua, Valle Central, Sur and Austral.",
+            "In Coquimbo, Elqui and Limarí are dry and bright; Limarí has limestone soils and is known for Chardonnay. Aconcagua includes the Aconcagua Valley itself and the coastal valleys of Casablanca and San Antonio.",
+            "Valle Central holds Maipo, home of Chile's classic Cabernet Sauvignon, especially in Alto Maipo at Puente Alto and Pirque; Rapel, divided into Cachapoal and Colchagua; Curicó; and Maule. Further south, Itata and Biobío are cooler and wetter. Maule and Itata are known for old, dry-farmed bush vines of País, Carignan and Cinsault."
+          ],
+          "places": ["cl-world-valle-del-elqui", "cl-world-valle-del-limari", "cl-world-valle-del-aconcagua", "cl-world-puente-alto", "cl-world-pirque", "cl-world-valle-del-rapel", "cl-world-valle-de-curico", "cl-world-valle-del-maule", "cl-world-valle-del-itata", "cl-world-valle-del-biobio"]
+        },
+        {
+          "h": "Carmenère",
+          "p": [
+            "Carmenère is an old Bordeaux variety that reached Chile in the nineteenth century. For a long time it was mixed up with Merlot in Chilean vineyards. In 1994 the French ampelographer Jean-Michel Boursiquot identified it, and it became Chile's signature grape.",
+            "Carmenère ripens late and needs a warm site and a long season. Picked underripe, it tastes of green pepper. Ripe, it gives deep colour, black fruit, spice and a herbal note. Peumo in Cachapoal and Apalta in Colchagua are well-known sources."
+          ],
+          "places": ["cl-world-peumo", "cl-world-apalta", "cl-world-valle-del-cachapoal", "cl-world-valle-de-colchagua"]
+        },
+        {
+          "h": "Casablanca and San Antonio",
+          "p": [
+            "Casablanca, between Santiago and the port of Valparaíso, was developed from the 1980s and was Chile's first major cool coastal valley. Morning fog and sea breezes keep it cool. Frost and scarce water are its main problems. It is known for Sauvignon Blanc, Chardonnay and Pinot Noir.",
+            "San Antonio lies just to the south and closer to the sea. It was planted from the late 1990s and is cooler still. Its best-known zone is Leyda. Sauvignon Blanc here is crisp, citrusy and herbal, and Pinot Noir and cool-climate Syrah also do well."
+          ],
+          "places": ["cl-world-valle-de-casablanca", "cl-world-valle-de-san-antonio", "cl-world-valle-de-leyda"]
+        }
+      ],
+      "key": [
+        "Natural barriers have kept phylloxera out of Chile, so most vines are ungrafted.",
+        "The cold Humboldt Current flows north along the coast, bringing fog and cooling.",
+        "Since 2011 labels may add Costa, Entre Cordilleras or Andes.",
+        "Carmenère was confused with Merlot until it was identified in 1994.",
+        "Casablanca (from the 1980s) and San Antonio with Leyda (from the late 1990s) are the key cool coastal valleys.",
+        "Maule and Itata hold old dry-farmed País, Carignan and Cinsault."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Why are most Chilean vines planted on their own roots?",
+          "options": ["Phylloxera has never reached Chile because of its natural barriers", "Chilean law forbids grafting", "Chilean soils are too rich for phylloxera", "Vines were replanted on own roots after phylloxera in the 1990s"],
+          "answer": 0,
+          "explain": "The Andes, the Pacific, the Atacama and the southern ice fields have kept phylloxera out."
+        },
+        {
+          "id": "q2",
+          "q": "What does the Humboldt Current do?",
+          "options": ["It brings warm tropical water south", "It carries snowmelt from the Andes to the vineyards", "It flows north along the coast and cools it, bringing fog", "It brings hot winds over the Coastal Range"],
+          "answer": 2,
+          "explain": "The cold Humboldt Current flows north and cools the coast, with morning fog and cloud."
+        },
+        {
+          "id": "q3",
+          "q": "Which three terms can Chilean labels use since 2011 to describe an east to west position?",
+          "options": ["Norte, Centro, Sur", "Costa, Entre Cordilleras, Andes", "Alto, Medio, Bajo", "Valle, Secano, Montaña"],
+          "answer": 1,
+          "explain": "Costa, Entre Cordilleras and Andes describe the coast, the area between the ranges and the mountain side."
+        },
+        {
+          "id": "q4",
+          "q": "Which grape was Carmenère long confused with in Chile?",
+          "options": ["Cabernet Franc", "Malbec", "Syrah", "Merlot"],
+          "answer": 3,
+          "explain": "Carmenère grew mixed with Merlot until Jean-Michel Boursiquot identified it in 1994."
+        },
+        {
+          "id": "q5",
+          "q": "When was the Casablanca Valley first developed for wine?",
+          "options": ["The 1880s", "The 1950s", "The 1980s", "The late 2000s"],
+          "answer": 2,
+          "explain": "Casablanca was developed from the 1980s as Chile's first major cool coastal valley.",
+          "place": "cl-world-valle-de-casablanca"
+        },
+        {
+          "id": "q6",
+          "q": "Leyda is part of which Chilean valley?",
+          "options": ["San Antonio", "Casablanca", "Maipo", "Colchagua"],
+          "answer": 0,
+          "explain": "Leyda is the best-known zone of the San Antonio Valley, south of Casablanca and close to the sea.",
+          "place": "cl-world-valle-de-leyda"
+        },
+        {
+          "id": "q7",
+          "q": "Which northern valley has limestone soils and is known for Chardonnay?",
+          "options": ["Maipo", "Itata", "Curicó", "Limarí"],
+          "answer": 3,
+          "explain": "Limarí, in the Coquimbo region, has limestone soils and a reputation for Chardonnay.",
+          "place": "cl-world-valle-del-limari"
+        },
+        {
+          "id": "q8",
+          "q": "Maule and Itata are known for which kind of vineyards?",
+          "options": ["Young irrigated Sauvignon Blanc on the coast", "Old, dry-farmed bush vines of País, Carignan and Cinsault", "High-altitude Malbec above 2,000 m", "Pergola-trained table grapes"],
+          "answer": 1,
+          "explain": "These southern areas hold old, unirrigated bush vines of País, Carignan and Cinsault.",
+          "place": "cl-world-valle-del-maule"
+        }
+      ]
+    },
+    {
+      "id": "southern-argentina",
+      "title": "Argentina: altitude, Malbec and Torrontés",
+      "minutes": 8,
+      "intro": "This lesson explains how altitude and a desert climate shape Argentine wine, then visits Mendoza and the Valle de Uco, the high Calchaquí Valleys of Salta, and Patagonia, with the two grapes most linked to the country: Malbec and Torrontés.",
+      "sections": [
+        {
+          "h": "Altitude and the desert",
+          "p": [
+            "Most Argentine vineyards lie east of the Andes, in their rain shadow. The climate is continental and very dry, so vines depend on irrigation with Andean snowmelt. Dry air keeps disease pressure low.",
+            "Altitude is the key factor. Higher vineyards are cooler, have a wide difference between day and night temperatures, and receive intense sunlight. This gives thick-skinned grapes with deep colour while keeping acidity. Hazards include hail, so many vineyards use nets, and the Zonda, a hot, dry wind from the Andes that can damage flowering in spring.",
+            "A 1999 law set three tiers of origin: Indicación de Procedencia (IP), Indicación Geográfica (IG) and Denominación de Origen Controlada (DOC). Luján de Cuyo and San Rafael are the DOCs."
+          ],
+          "places": ["ar-world-lujan-de-cuyo-doc", "ar-world-san-rafael-doc"]
+        },
+        {
+          "h": "Mendoza and Malbec",
+          "p": [
+            "Mendoza is by far the largest wine province. Its traditional heart for fine wine, known as the Primera Zona, lies just south of the city in Luján de Cuyo and Maipú, with areas such as Agrelo, Vistalba, Las Compuertas and Lunlunta. East Mendoza is lower and warmer and makes large volumes. San Rafael lies to the south.",
+            "Malbec came from south-west France. In the mid-nineteenth century the French agronomist Michel Aimé Pouget brought French varieties, Malbec among them, to Mendoza. Argentine Malbec is deeply coloured, with plum, blackberry and violet aromas and soft, ripe tannins. Bonarda is the second red grape."
+          ],
+          "places": ["ar-world-mendoza", "ar-world-lujan-de-cuyo", "ar-world-maipu", "ar-world-agrelo", "ar-world-vistalba", "ar-world-las-compuertas", "ar-world-lunlunta", "ar-world-san-rafael"]
+        },
+        {
+          "h": "The Valle de Uco",
+          "p": [
+            "The Valle de Uco lies south-west of Mendoza city, at the foot of the Andes. It covers three departments: Tupungato, Tunuyán and San Carlos. Its vineyards are higher and cooler than the Primera Zona, on stony alluvial soils, some with calcareous deposits.",
+            "Malbec from Uco tends to have fresher acidity, more floral notes and finer tannins. Chardonnay, Pinot Noir and Cabernet Franc also do well. Several smaller geographical indications are now used on labels, including Paraje Altamira and La Consulta in San Carlos, and Los Chacayes, Vista Flores and San Pablo in Tunuyán."
+          ],
+          "places": ["ar-world-valle-de-uco", "ar-world-tupungato-valle-de-tupungato", "ar-world-tunuyan", "ar-world-san-carlos-mendoza", "ar-world-paraje-altamira", "ar-world-la-consulta", "ar-world-los-chacayes", "ar-world-vista-flores", "ar-world-san-pablo"]
+        },
+        {
+          "h": "Salta, the Calchaquí Valleys and Torrontés",
+          "p": [
+            "Salta lies in the far north, close to the tropics, where only altitude makes quality wine possible. Its vineyards sit in the Calchaquí Valleys, with Cafayate as the main centre. Some vineyards in Salta are above 3,000 m, among the highest in the world. Soils are sandy and poor, and sunlight is intense.",
+            "Torrontés is Argentina's signature white. There are three types; Torrontés Riojano is the most planted and the finest. It is a crossing of Muscat of Alexandria and Criolla Chica. It gives aromatic, usually dry wines with floral and peach notes. Cafayate is its best-known source. Salta also makes powerful Malbec."
+          ],
+          "places": ["ar-world-salta", "ar-world-valles-calchaquies-valle-calchaqui", "ar-world-cafayate-valle-de-cafayate", "ar-world-cachi", "ar-world-molinos"]
+        },
+        {
+          "h": "Patagonia",
+          "p": [
+            "Patagonia, in the south, takes a different route to freshness. Its vineyards are at much lower altitude than Mendoza or Salta, and it is latitude that keeps them cool. The climate is dry and windy, with a wide difference between day and night temperatures.",
+            "Río Negro has a long history, with old vineyards in the Alto Valle. Neuquén was developed more recently. Pinot Noir, Malbec and Merlot are the main reds. Chubut, further south, has some of the most southerly vineyards in the country."
+          ],
+          "places": ["ar-world-patagonia-patagonia-argentina", "ar-world-rio-negro", "ar-world-alto-valle-de-rio-negro", "ar-world-neuquen"]
+        }
+      ],
+      "key": [
+        "Argentine vineyards lie in the Andean rain shadow, are irrigated with snowmelt and owe their freshness to altitude.",
+        "Hail and the hot, dry Zonda wind are the main climatic hazards.",
+        "The Primera Zona is Luján de Cuyo and Maipú; Luján de Cuyo and San Rafael are DOCs.",
+        "The Valle de Uco covers Tupungato, Tunuyán and San Carlos, with higher, cooler vineyards.",
+        "Torrontés Riojano is a crossing of Muscat of Alexandria and Criolla Chica; Cafayate in Salta is its home.",
+        "Patagonia is cool because of latitude, not altitude."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the Zonda?",
+          "options": ["A cold current off the Pacific coast", "A hot, dry wind from the Andes", "A type of hail net", "An irrigation canal system"],
+          "answer": 1,
+          "explain": "The Zonda is a hot, dry wind that comes down from the Andes and can damage flowering in spring."
+        },
+        {
+          "id": "q2",
+          "q": "Which effect does high altitude have on Argentine vineyards?",
+          "options": ["Higher rainfall and more disease", "Warmer nights and lower acidity", "Weaker sunlight and paler wines", "Cooler temperatures and a wide day to night range"],
+          "answer": 3,
+          "explain": "Higher vineyards are cooler, with big day to night differences and intense sunlight, which keeps acidity and builds colour."
+        },
+        {
+          "id": "q3",
+          "q": "Which three departments make up the Valle de Uco?",
+          "options": ["Tupungato, Tunuyán and San Carlos", "Luján de Cuyo, Maipú and San Rafael", "Cafayate, Cachi and Molinos", "San Martín, Rivadavia and Junín"],
+          "answer": 0,
+          "explain": "The Valle de Uco covers Tupungato, Tunuyán and San Carlos, south-west of Mendoza city.",
+          "place": "ar-world-valle-de-uco"
+        },
+        {
+          "id": "q4",
+          "q": "Paraje Altamira lies in which department of the Valle de Uco?",
+          "options": ["Tupungato", "Tunuyán", "San Carlos", "Maipú"],
+          "answer": 2,
+          "explain": "Paraje Altamira, like La Consulta, is in San Carlos.",
+          "place": "ar-world-paraje-altamira"
+        },
+        {
+          "id": "q5",
+          "q": "Which type of Torrontés is the most planted and gives the finest wines?",
+          "options": ["Torrontés Riojano", "Torrontés Sanjuanino", "Torrontés Mendocino", "Torrontés Salteño"],
+          "answer": 0,
+          "explain": "Torrontés Riojano is the most planted and the finest of the three Argentine types."
+        },
+        {
+          "id": "q6",
+          "q": "Torrontés Riojano is a crossing of which two grapes?",
+          "options": ["Malbec and Muscat of Alexandria", "Chenin Blanc and Criolla Grande", "Sauvignon Blanc and Criolla Chica", "Muscat of Alexandria and Criolla Chica"],
+          "answer": 3,
+          "explain": "DNA work shows Torrontés Riojano is a cross of Muscat of Alexandria and Criolla Chica, which explains its floral, Muscat-like aroma."
+        },
+        {
+          "id": "q7",
+          "q": "What keeps Patagonian vineyards cool?",
+          "options": ["Very high altitude", "Fog from the Humboldt Current", "Their southern latitude", "Heavy summer rain"],
+          "answer": 2,
+          "explain": "Patagonian vineyards are at lower altitude than Mendoza; their freshness comes from latitude.",
+          "place": "ar-world-patagonia-patagonia-argentina"
+        },
+        {
+          "id": "q8",
+          "q": "Cafayate is the main wine centre of which area?",
+          "options": ["The Valle de Uco in Mendoza", "The Calchaquí Valleys in Salta", "The Alto Valle de Río Negro", "The Tulum Valley in San Juan"],
+          "answer": 1,
+          "explain": "Cafayate is the hub of the high Calchaquí Valleys in Salta, home of Argentina's best Torrontés.",
+          "place": "ar-world-cafayate-valle-de-cafayate"
+        }
+      ]
+    }
+  ]
+}

@@ -377,6 +377,50 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
   border: 1px solid var(--line); background: #1b1b1f; cursor: pointer; font: 500 12px var(--f-body); color: var(--parchment); }
 .dash-btn:hover, .dash-btn:focus-visible { border-color: var(--parchment); }
 .dash-btn .n { font: 600 10.5px var(--f-mono); background: var(--gold); color: var(--night); border-radius: 999px; padding: 1px 6px; }
+.fm-link { color: var(--gold) !important; text-decoration: none; }
+.fm-card { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: center; margin: 0 0 18px; padding: 14px 16px; border: 1px solid #4a3f28;
+  border-radius: var(--r); background: linear-gradient(90deg, rgba(231,192,106,.09), rgba(231,192,106,.02)); color: var(--parchment); text-decoration: none; }
+.fm-card:hover, .fm-card:focus-visible { border-color: var(--gold); }
+.fm-card b { font: 600 19px/1.2 var(--f-display); color: var(--gold); }
+.fm-card span { grid-column: 1; color: #cfc6b6; font-size: 13px; }
+.fm-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
+/* notebook */
+.nb { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 22px; align-items: start; }
+.nb-list { display: grid; gap: 10px; align-content: start; }
+.nb-bar { display: flex; gap: 8px; }
+.nb-bar input { flex: 1; min-width: 0; background: #1b1b1f; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--parchment); font: 13px var(--f-body); }
+.nb-chips .mini-btn small { color: var(--muted); }
+.mini-btn.on { border-color: var(--gold); color: var(--gold); }
+.nb-items { display: grid; gap: 6px; max-height: min(56vh, 560px); overflow: auto; padding-right: 2px; }
+.nb-item { all: unset; cursor: pointer; display: grid; gap: 2px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; }
+.nb-item:hover { border-color: #4a463f; }
+.nb-item[aria-current="true"] { border-color: var(--slate); background: rgba(157,176,192,.06); }
+.nb-item:focus-visible { outline: 2px solid var(--focus); }
+.nb-item b { font: 600 16px/1.25 var(--f-display); }
+.nb-item .m { font-size: 11.5px; color: var(--muted); }
+.nb-item .p { font-size: 12.5px; color: #b8af9f; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.nb-ed textarea#nb-body { min-height: 300px; line-height: 1.6; font-size: 14px; }
+.nb-ed input#nb-title { font: 600 18px var(--f-display); }
+/* account */
+.acct { display: grid; gap: 22px; max-width: 760px; }
+.acct-card { border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; }
+.acct-who { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.acct-av { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: #2a2620; color: var(--gold); font: 600 20px var(--f-display); flex: none; }
+.acct-who b { font: 600 20px var(--f-display); display: block; }
+.acct-who span { color: var(--muted); font-size: 12.5px; }
+.badge-f { font: 500 10.5px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--gold); border-radius: 999px; padding: 3px 9px; }
+.acct-sync { font: 400 12px var(--f-mono); color: var(--muted); }
+.acct-sync.err { color: #e08a7a; }
+.acct-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #c9c0b1; }
+.acct .code { font: 500 22px var(--f-mono); letter-spacing: .3em; text-align: center; }
+.jform label.acct-agree { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; color: #c9c0b1; line-height: 1.45; }
+.jform label.acct-agree input { width: auto; flex: none; margin: 2px 0 0; accent-color: var(--gold); }
+.legal-links { margin: 10px 2px 0; font-size: 11.5px; color: var(--muted); }
+.study-link { border-color: #5a4a2a; color: var(--gold); }
+body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing .dash-btn, body.quizzing .showpanels { display: none !important; }
+.legal-links a { color: inherit; }
+.chips-edit { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (max-width: 760px) { .nb { grid-template-columns: minmax(0, 1fr); } .nb-items { max-height: 36vh; } }
 .dash { position: absolute; inset: 0; z-index: 8; background: rgba(5,5,7,.62); display: grid; place-items: center; padding: 16px; }
 .dash-card { width: min(1120px, 100%); height: min(880px, 100%); background: #121215; border: 1px solid var(--line); border-radius: 14px;
   display: flex; flex-direction: column; overflow: hidden; position: relative; }
@@ -637,7 +681,10 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <button class="link-btn" id="openData" data-i18n>Open data &amp; sources</button>
     <button class="link-btn" id="openSuggest" data-i18n>Suggest a place</button>
     <a class="link-btn web-only" href="/places/" style="color:inherit;text-decoration:none" hidden data-i18n>All places A to Z</a>
+    <a class="link-btn web-only fm-link" href="/founding?from=map" hidden data-i18n>Become a Founding Member</a>
+    <button class="link-btn web-only study-link" id="openStudy" hidden data-i18n>Study and quiz</button>
   </div>
+  <p class="legal-links web-only" hidden><a href="/privacy" data-i18n>Privacy</a> · <a href="/terms" data-i18n>Terms of Use</a> · <a href="/legal" data-i18n>Legal notice</a></p>
   </div>
 </div>
 
@@ -670,7 +717,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="dash-card" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
     <header class="dash-head"><h2 id="dashTitle" data-i18n>My atlas</h2>
       <nav class="dash-tabs" id="dashTabs" role="tablist" aria-label="My atlas sections" data-i18n-aria="My atlas sections">
-        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button>
+        <button role="tab" data-tab="overview" aria-selected="true" data-i18n>Overview</button><button role="tab" data-tab="saved" aria-selected="false" data-i18n>Saved</button><button role="tab" data-tab="journal" aria-selected="false" data-i18n>Journal</button><button role="tab" data-tab="notebook" aria-selected="false" data-i18n>Notebook</button><button role="tab" data-tab="compare" aria-selected="false" data-i18n>Compare</button><button role="tab" data-tab="explore" aria-selected="false" data-i18n>Explore</button><button role="tab" data-tab="records" aria-selected="false" data-i18n>Records</button><button role="tab" data-tab="study" aria-selected="false" class="web-only" id="tabStudy" hidden data-i18n>Study</button><button role="tab" data-tab="account" aria-selected="false" class="web-only" id="tabAccount" hidden data-i18n>Account</button>
       </nav></header>
     <button class="x" id="dashClose" aria-label="Close My atlas" data-i18n-aria="Close My atlas"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10M11 1L1 11" stroke="currentColor" stroke-width="1.5"/></svg></button>
     <div class="dash-body" id="dashBody" role="tabpanel"></div>
@@ -904,6 +951,7 @@ const rankColor = ["case",
 
 const LAYERS = []; // [layerId, group] for legend toggles
 const BASEF = {}; // layerId -> its own filter, combined with the legend's rank filter
+let QUIZ_ON = false, QUIZ_VIS = null, QUIZ_PREV = null; // quiz mode (study.js), see quizMode()
 // AOCs in the published tiles that are not wine (Taureau de Camargue: beef; Béa du Roussillon: potatoes). The next
 // full build drops them at the source (pipeline/inao.py); until then they are hidden here.
 const NOT_WINE = ["fr-inao-a456", "fr-inao-a593"];
@@ -913,6 +961,7 @@ function add(layer, group) {
     layer.filter = layer.filter ? ["all", keep, layer.filter] : keep;
   }
   map.addLayer(layer); LAYERS.push([layer.id, group]); if (layer.filter) BASEF[layer.id] = layer.filter;
+  if (QUIZ_ON && layer.type === "symbol") quizHide();
 }
 
 function addBase() {
@@ -1256,6 +1305,7 @@ function geoVis() {
     if ((id === "geo-lakes" || id === "osm-water") && baseMap === "satellite") on = false;
     map.setLayoutProperty(id, "visibility", on ? "visible" : "none");
   });
+  if (QUIZ_ON) quizHide();
 }
 function geoFilters() {
   const g = HL ? HL.gid : "-";
@@ -2508,6 +2558,15 @@ function openWinery(f) {
   if (home) { setActive(home); ACTIVE = null; renderMapCrumbs(home, p.name); }
 }
 map.on("mousemove", (e) => {
+  if (QUIZ_ON) {
+    // names would give the answer away: outlines light up, no label
+    tag.hidden = true;
+    const f = pick(e.point);
+    if (hovered && (!f || f.id !== hovered.id)) { setState(hovered, "hover", false); hovered = null; }
+    if (f && !hovered) { hovered = f; setState(f, "hover", true); }
+    map.getCanvas().style.cursor = QUIZ_ON === "find" ? "crosshair" : "";
+    return;
+  }
   const w = pickWinery(e.point);
   setWHover(w);
   if (w) {
@@ -2538,6 +2597,7 @@ map.on("mousemove", (e) => {
 });
 map.on("mouseout", () => { tag.hidden = true; setWHover(null); });
 map.on("click", (e) => {
+  if (QUIZ_ON) { if (window.OWA_QUIZ_CLICK) window.OWA_QUIZ_CLICK(e); return; }
   const w = pickWinery(e.point);
   if (w) { openWinery(w); return; }
   const gh = pickGeo(e.point);
@@ -2608,6 +2668,8 @@ async function select(p, feature) {
 }
 const fitMaxZ = (b, level) => b[0] === b[2] && b[1] === b[3] ? 10.5 : { vineyard: 15, subzone: 13.5, appellation: 12.5, region: 9, subregion: 11.5, state: 8, country: 6.5, group: 11.5 }[level] || 13;
 const fitPad = () => { const wide = innerWidth > 760, small = UI.mapOnly || UI.sheet === "min";
+  if (QUIZ_ON) { const q = $("quiz"), h = q ? q.offsetHeight : 0, w = q ? q.offsetWidth : 0;
+    return wide ? { top: 70, bottom: 50, left: 40, right: w + 60 } : { top: 70, bottom: h + 24, left: 24, right: 24 }; }
   return { top: small ? 110 : 60, bottom: wide ? 60 : small ? 120 : innerHeight * 0.5, left: wide ? 10 : 30, right: wide ? (small ? 40 : curSheetW() + 40) : 30 }; };
 // the zoom fitTo would land on
 function fitZoom(b, level) {
@@ -3796,6 +3858,7 @@ function applyLegend() {
     map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
   });
   geoVis();
+  if (QUIZ_ON) quizHide();
 }
 Object.values(GROUPS).forEach((id) => $(id).addEventListener("change", applyLegend));
 
@@ -3925,11 +3988,18 @@ $("openSuggest").onclick = () => openSuggest(null);
 
 // ---------- My atlas: saved places, tasting journal, compare, explore (kept on this device)
 const loadJSON = (k, def) => { try { const v = JSON.parse(store.get(k)); return v ?? def; } catch (e) { return def; } };
-const MY = { saved: loadJSON("saved", {}), journal: loadJSON("journal", []), recent: loadJSON("recent", []), compare: loadJSON("compare", []) };
+const MY = { saved: loadJSON("saved", {}), journal: loadJSON("journal", []), recent: loadJSON("recent", []), compare: loadJSON("compare", []), notes: loadJSON("notes", []), study: loadJSON("study", {}) };
+const SAVE_HOOKS = []; // sync (web): called after every local save
 const FACTS = new Map(); // id -> measured terrain / climate / soil from this visit
 let CURRENT = null;      // the place open in the sheet
 const CMP_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500"]; // validated categorical slots (dark surface)
-function saveMY(k) { store.set(k, JSON.stringify(MY[k])); refreshMine(); updateDashBadge(); }
+function saveMY(k) { store.set(k, JSON.stringify(MY[k])); refreshMine(); updateDashBadge(); SAVE_HOOKS.forEach((f) => { try { f(k); } catch (e) { console.error(e); } }); }
+// changes that arrived from another device: keep them on this one, redraw, but do not send them back
+function myChanged(keys) {
+  keys.forEach((k) => store.set(k, JSON.stringify(MY[k])));
+  refreshMine(); updateDashBadge(); refreshActs();
+  if (!$("dash").hidden && dashTab !== "account" && !(dashTab === "notebook" && NB.dirty)) renderDash();
+}
 function snapFacts(id) {
   const f = FACTS.get(id) || {}, o = {};
   if (f.terrain) {
@@ -3970,7 +4040,8 @@ function sheetActs(p) {
   const s = !!MY.saved[p.id], c = MY.compare.includes(p.id);
   return '<div class="acts"><button class="mini-btn" data-act="save" aria-pressed="' + s + '">' + (s ? "★ " + t_("Saved") : "☆ " + t_("Save")) + "</button>" +
     '<button class="mini-btn" data-act="compare" aria-pressed="' + c + '">' + (c ? "✓ " + t_("In compare") : "+ " + t_("Compare")) + "</button>" +
-    '<button class="mini-btn" data-act="taste">' + t_("Log a tasting") + '</button></div>';
+    '<button class="mini-btn" data-act="taste">' + t_("Log a tasting") + '</button>' +
+    '<button class="mini-btn" data-act="note">' + (notesFor(p.id).length ? t_("Notes") + " · " + notesFor(p.id).length : t_("Add a note")) + '</button></div>';
 }
 function refreshActs() { const box = document.querySelector("#sh-head .acts"); if (box && CURRENT) box.outerHTML = sheetActs(CURRENT.p); }
 let toastTimer = null;
@@ -3999,6 +4070,7 @@ document.addEventListener("click", (e) => {
     }
     saveMY("compare");
   } else if (b.dataset.act === "taste") { openDash("journal", p.id); }
+  else if (b.dataset.act === "note") { openDash("notebook", p.id); }
   refreshActs();
 });
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-dash]"); if (b) { e.preventDefault(); openDash(b.dataset.dash); } });
@@ -4008,7 +4080,7 @@ function addMine() {
   map.addSource("mine", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
   map.addLayer({ id: "mine-dot", type: "circle", source: "mine",
     paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 4, 10, 7], "circle-color": "rgba(0,0,0,0)",
-      "circle-stroke-color": ["match", ["get", "k"], "j", C.copper, C.gold], "circle-stroke-width": 2 } });
+      "circle-stroke-color": ["match", ["get", "k"], "j", C.copper, "n", C.slate, C.gold], "circle-stroke-width": 2 } });
   map.addLayer({ id: "mine-label", type: "symbol", source: "mine", minzoom: 5,
     layout: { "text-field": ["get", "name"], "text-font": ["noto-medium"], "text-size": 11, "text-offset": [0, 1.2], "text-anchor": "top", "text-optional": true, "text-max-width": 9 },
     paint: { "text-color": C.gold, "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.3 } });
@@ -4020,11 +4092,47 @@ function refreshMine() {
   const feats = [], seen = new Set();
   Object.values(MY.saved).forEach((s) => { if (s.lat != null) { seen.add(s.id); feats.push({ type: "Feature", properties: { id: s.id, name: s.name, k: "s" }, geometry: { type: "Point", coordinates: [s.lon, s.lat] } }); } });
   MY.journal.forEach((j) => { if (j.lat != null && !seen.has(j.placeId)) { seen.add(j.placeId); feats.push({ type: "Feature", properties: { id: j.placeId, name: j.place, k: "j" }, geometry: { type: "Point", coordinates: [j.lon, j.lat] } }); } });
+  MY.notes.forEach((n) => { if (n.placeId && n.lat != null && !seen.has(n.placeId)) { seen.add(n.placeId); feats.push({ type: "Feature", properties: { id: n.placeId, name: n.place, k: "n" }, geometry: { type: "Point", coordinates: [n.lon, n.lat] } }); } });
   src.setData({ type: "FeatureCollection", features: feats });
 }
 function updateDashBadge() {
-  const n = Object.keys(MY.saved).length + MY.journal.length, el = $("dashCount");
+  const n = Object.keys(MY.saved).length + MY.journal.length + MY.notes.length, el = $("dashCount");
   if (el) { el.textContent = n; el.hidden = !n; }
+}
+
+// ---------- quiz mode (study.js): no names on the map, clicks go to the quiz, the panels step aside
+// QUIZ_ON is false, true, or "find" (the reader answers by clicking the map)
+function quizHide() {
+  QUIZ_VIS = QUIZ_VIS || {};
+  map.getStyle().layers.forEach((l) => {
+    if (l.type !== "symbol") return;
+    const v = map.getLayoutProperty(l.id, "visibility") || "visible";
+    if (!(l.id in QUIZ_VIS)) QUIZ_VIS[l.id] = v;
+    if (v !== "none") map.setLayoutProperty(l.id, "visibility", "none");
+  });
+}
+function quizMode(on) {
+  if (!!on === !!QUIZ_ON) { QUIZ_ON = on || false; return; }
+  QUIZ_ON = on || false;
+  if (on) {
+    QUIZ_PREV = { mapOnly: UI.mapOnly };
+    closeSheet(); clearSelected(); tag.hidden = true;
+    document.body.classList.add("quizzing");
+    UI.mapOnly = true; applyLayout();
+    quizHide();
+  } else {
+    const vis = QUIZ_VIS || {}; QUIZ_VIS = null;
+    Object.entries(vis).forEach(([id, v]) => { if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", v); });
+    document.body.classList.remove("quizzing");
+    clearSelected();
+    UI.mapOnly = QUIZ_PREV ? QUIZ_PREV.mapOnly : false; QUIZ_PREV = null; applyLayout();
+    applyLegend();
+  }
+}
+// every place id under the point, outlines only
+function placesAt(point) {
+  const layers = [...pickLayers].filter((l) => map.getLayer(l));
+  return [...new Set(map.queryRenderedFeatures(point, { layers }).map((f) => f.properties.id).filter(Boolean))];
 }
 
 // ---------- the dashboard
@@ -4035,11 +4143,12 @@ function openDash(tab, prefillId) {
   $("dash").hidden = false; renderDash();
   const first = document.querySelector('#dashTabs button[aria-selected="true"]'); if (first) first.focus();
 }
-function closeDash() { $("dash").hidden = true; }
+function closeDash() { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); $("dash").hidden = true; }
 $("openDash").onclick = () => openDash();
+$("openStudy").onclick = () => openDash("study");
 $("dashClose").onclick = closeDash;
 $("dash").addEventListener("click", (e) => { if (e.target.id === "dash") closeDash(); });
-document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { dashTab = b.dataset.tab; renderDash(); });
+document.querySelectorAll("#dashTabs button").forEach((b) => b.onclick = () => { if (dashTab === "notebook" && NB.dirty && $("nb-form")) nbSave(true); dashTab = b.dataset.tab; renderDash(); });
 function goFromDash(id) { const r = recOf(id); if (r) { closeDash(); goTo(r); } }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-go]"); if (b) { e.preventDefault(); goFromDash(b.dataset.go); } });
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-dtab]"); if (b) { e.preventDefault(); dashTab = b.dataset.dtab; renderDash(); } });
@@ -4047,9 +4156,12 @@ document.addEventListener("click", (e) => { const b = e.target.closest("[data-dt
 function renderDash() {
   document.querySelectorAll("#dashTabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === dashTab)));
   const body = $("dashBody");
-  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, compare: dashCompare, explore: dashExplore, records: dashRecords }[dashTab] || dashOverview)();
+  body.innerHTML = ({ overview: dashOverview, saved: dashSaved, journal: dashJournal, notebook: dashNotebook, compare: dashCompare, explore: dashExplore, records: dashRecords, account: dashAccount, study: dashStudy }[dashTab] || dashOverview)();
+  if (dashTab === "study" && window.OWA_STUDY) window.OWA_STUDY.wire();
   if (dashTab === "records") wireRecords();
   if (dashTab === "journal") wireJournal();
+  if (dashTab === "notebook") wireNotebook();
+  if (dashTab === "account" && window.OWA_ACCOUNT) window.OWA_ACCOUNT.wire();
   if (dashTab === "compare") wireCompare();
   if (dashTab === "explore") wireExplore();
   if (dashTab === "overview") bestVintages();
@@ -4064,9 +4176,14 @@ function dashOverview() {
   const counts = {}; INDEX.forEach((r) => { counts[r[2]] = (counts[r[2]] || 0) + 1; });
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12), mx = top[0]?.[1] || 1;
   const recent = MY.recent.map(recOf).filter(Boolean);
-  return '<p class="lead">' + t_("Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register. Everything here stays on this device.") + '</p>' +
+  const synced = window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn();
+  return '<p class="lead">' + t_("Your corner of the atlas. Save places, log what you taste, compare vineyards side by side and explore every appellation in the register.") + " " +
+    (synced ? t_("Everything here is synced to your account.") : t_("Everything here stays on this device.")) + '</p>' +
+    (window.OWA_ACCOUNT ? window.OWA_ACCOUNT.line() : "") +
+    (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Become a Founding Member") + '</b><span>' +
+      t_("Study tools for wine students are coming. The first 1,000 members get a full year for CHF 19.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
     '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
-    tile(MY.journal.length, t_("tastings logged")) + tile(cc.size, t_("countries you explored")) + "</div>" +
+    tile(MY.journal.length, t_("tastings logged")) + tile(MY.notes.length, t_("notes")) + tile(cc.size, t_("countries you explored")) + "</div>" +
     '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
     '<button class="mini-btn" data-rand="any">' + t_("Surprise me") + '</button><button class="mini-btn" data-rand="grand_cru">' + t_("A grand cru") + '</button><button class="mini-btn" data-rand="premier_cru">' + t_("A premier cru") + '</button>' +
     '<button class="mini-btn" data-rand="docg">' + t_("A DOCG") + '</button><button class="mini-btn" data-rand="einzellage">' + t_("An Einzellage") + '</button><button class="mini-btn" data-rand="ava">' + t_("An AVA") + '</button><button class="mini-btn" data-dtab="records">' + t_("Records") + ' →</button></div>' +
@@ -4166,18 +4283,106 @@ function wireJournal() {
     const q = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
     download("wine-journal.csv", "text/csv", ["date,place,place_id,country,wine,vintage,score,notes"].concat(MY.journal.map((j) => [j.date, j.place, j.placeId, j.country, j.wine, j.vintage, j.score, j.note].map(q).join(","))).join("\n"));
   };
-  $("j-json").onclick = () => download("wine-journal.json", "application/json", JSON.stringify({ app: "Open Wine Atlas", saved: MY.saved, journal: MY.journal }, null, 1));
+  $("j-json").onclick = () => download("wine-journal.json", "application/json", JSON.stringify({ app: "Open Wine Atlas", saved: MY.saved, journal: MY.journal, notes: MY.notes }, null, 1));
   $("j-imp").onchange = async (e) => {
     try {
       const j = JSON.parse(await e.target.files[0].text());
       const have = new Set(MY.journal.map((x) => x.at));
       (j.journal || []).forEach((x) => { if (x && x.placeId && !have.has(x.at)) MY.journal.push(x); });
       Object.assign(MY.saved, j.saved || {});
-      saveMY("journal"); saveMY("saved"); renderDash(); toast(t_("Imported."));
+      const haveN = new Set(MY.notes.map((x) => x.id));
+      (j.notes || []).forEach((x) => { if (x && x.id && !haveN.has(x.id)) MY.notes.push(x); });
+      saveMY("journal"); saveMY("saved"); saveMY("notes"); renderDash(); toast(t_("Imported."));
     } catch (err) { toast(t_("That file could not be read.")); }
   };
 }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-jdel]"); if (b) { MY.journal = MY.journal.filter((j) => j.at !== b.dataset.jdel); saveMY("journal"); renderDash(); } });
+// ---------- notebook: notes on regions, crus, producers and wines, pinned to a place when there is one
+const NB = { sel: null, q: "", tag: "", place: "", dirty: false, confirmDel: false };
+const newNoteId = () => "n" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const notesFor = (id) => MY.notes.filter((n) => n.placeId === id);
+const noteTags = (s) => [...new Set(String(s || "").split(/[,#\n]/).map((t) => t.trim().toLowerCase().replace(/\s+/g, "-").slice(0, 32)).filter(Boolean))].slice(0, 12);
+const noteDate = (iso) => { try { return new Date(iso).toLocaleDateString(LOCALE, { day: "numeric", month: "short", year: "numeric" }); } catch (e) { return ""; } };
+function nbFiltered() {
+  const q = NB.q.trim().toLowerCase();
+  return [...MY.notes].sort((a, b) => (b.up || b.at).localeCompare(a.up || a.at)).filter((n) =>
+    (!NB.place || n.placeId === NB.place) && (!NB.tag || (n.tags || []).includes(NB.tag)) &&
+    (!q || [n.title, n.body, n.place, (n.tags || []).join(" ")].join(" ").toLowerCase().includes(q)));
+}
+function nbItems() {
+  const list = nbFiltered();
+  if (!list.length) return '<div class="empty">' + (MY.notes.length ? t_("No notes match.") : t_("No notes yet. Write about a region, a cru, a producer or a wine. Pin a note to a place and it shows on the map.")) + "</div>";
+  return list.map((n) => '<button class="nb-item" data-nb="' + esc(n.id) + '" aria-current="' + (NB.sel === n.id) + '"><b>' + esc(n.title || t_("Untitled note")) + "</b>" +
+    '<span class="m">' + esc([n.place, noteDate(n.up || n.at)].filter(Boolean).join(" · ")) + "</span>" +
+    (n.body ? '<span class="p">' + esc(n.body.slice(0, 140)) + "</span>" : "") + "</button>").join("");
+}
+function dashNotebook() {
+  if (dashPrefill) { NB.place = dashPrefill; NB.sel = "new"; NB.dirty = false; dashPrefill = null; }
+  if (NB.sel && NB.sel !== "new" && !MY.notes.some((n) => n.id === NB.sel)) NB.sel = null;
+  if (!NB.sel) NB.sel = nbFiltered()[0]?.id || "new";
+  const n = NB.sel === "new" ? { title: "", body: "", tags: [], placeId: NB.place || "", place: NB.place ? (placeOf(NB.place)?.name || "") : "" } : MY.notes.find((x) => x.id === NB.sel);
+  const tagCount = {}; MY.notes.forEach((x) => (x.tags || []).forEach((t) => { tagCount[t] = (tagCount[t] || 0) + 1; }));
+  const tags = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).slice(0, 14);
+  const pl = NB.place ? placeOf(NB.place) : null;
+  return '<div class="nb"><div class="nb-list">' +
+    '<div class="nb-bar"><input type="search" id="nb-q" placeholder="' + esc(t_("Search your notes")) + '" value="' + esc(NB.q) + '"><button class="primary" id="nb-new" type="button">' + t_("New note") + "</button></div>" +
+    ((pl || tags.length) ? '<div class="row nb-chips">' + (pl ? '<button class="mini-btn on" data-nb-place="">' + esc(pl.name) + " ✕</button>" : "") +
+      tags.map(([t, c]) => '<button class="mini-btn' + (NB.tag === t ? " on" : "") + '" data-nb-tag="' + esc(t) + '">#' + esc(t) + " <small>" + c + "</small></button>").join("") + "</div>" : "") +
+    '<div class="nb-items" id="nb-items">' + nbItems() + "</div></div>" +
+    '<form class="nb-ed jform" id="nb-form" autocomplete="off">' +
+    '<label class="wide">' + t_("Title") + '<input id="nb-title" maxlength="140" placeholder="' + esc(t_("Chablis grand crus: soils and exposures")) + '" value="' + esc(n.title) + '"></label>' +
+    '<label>' + t_("Place (optional)") + '<input id="nb-place" placeholder="' + esc(t_("Pin it to a place: Les Clos, Barolo…")) + '" value="' + esc(n.place || "") + '" data-id="' + esc(n.placeId || "") + '"><ul class="sugg" id="nb-sugg" hidden></ul></label>' +
+    '<label>' + t_("Tags") + '<input id="nb-tags" maxlength="300" placeholder="' + esc(t_("wset3, burgundy, to taste")) + '" value="' + esc((n.tags || []).join(", ")) + '"></label>' +
+    '<label class="wide">' + t_("Note") + '<textarea id="nb-body" maxlength="20000" placeholder="' + esc(t_("What you learned, what to remember, what to taste next")) + '">' + esc(n.body) + "</textarea></label>" +
+    '<div class="row wide"><button class="primary" type="submit">' + t_("Save note") + "</button>" +
+    (n.placeId ? '<button class="mini-btn" type="button" data-go="' + esc(n.placeId) + '">' + t_("Show on map") + "</button>" : "") +
+    (NB.sel !== "new" ? '<button class="mini-btn warn" type="button" id="nb-del">' + (NB.confirmDel ? t_("Click again to delete") : t_("Delete")) + "</button>" : "") +
+    '<span class="note" id="nb-msg">' + (NB.sel !== "new" && n.up ? t_("Edited {date}", { date: noteDate(n.up) }) : "") + "</span></div></form></div>";
+}
+function nbCollect() {
+  const inp = $("nb-place");
+  return { title: $("nb-title").value.trim(), body: $("nb-body").value.trim(), tags: noteTags($("nb-tags").value),
+    placeId: inp.value.trim() ? inp.dataset.id || (search(inp.value)[0] || [])[1] || "" : "" };
+}
+function nbSave(quiet) {
+  const f = nbCollect();
+  if (!f.title && !f.body) { if (!quiet) $("nb-msg").textContent = t_("Write a title or a note first."); return false; }
+  const r = f.placeId ? recOf(f.placeId) : null, s = r && MY.saved[r[1]];
+  const place = r ? { placeId: r[1], place: r[0], country: r[2], lat: s && s.lat != null ? s.lat : (r[6][1] + r[6][3]) / 2, lon: s && s.lat != null ? s.lon : (r[6][0] + r[6][2]) / 2 }
+    : { placeId: "", place: "", country: "", lat: null, lon: null };
+  const now = new Date().toISOString();
+  if (NB.sel === "new") { const n = { id: newNoteId(), at: now, up: now, title: f.title, body: f.body, tags: f.tags, ...place }; MY.notes.push(n); NB.sel = n.id; }
+  else { const n = MY.notes.find((x) => x.id === NB.sel); if (n) Object.assign(n, { title: f.title, body: f.body, tags: f.tags, up: now }, place); }
+  NB.dirty = false; NB.confirmDel = false; saveMY("notes");
+  if (!quiet) toast(t_("Note saved."));
+  return true;
+}
+function wireNotebook() {
+  const ed = $("nb-form");
+  ed.addEventListener("input", () => { NB.dirty = true; });
+  ed.addEventListener("submit", (e) => { e.preventDefault(); if (nbSave()) renderDash(); });
+  ed.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); if (nbSave()) renderDash(); } });
+  const leave = () => { if (NB.dirty) nbSave(true); NB.dirty = false; NB.confirmDel = false; };
+  $("nb-new").onclick = () => { leave(); NB.sel = "new"; renderDash(); $("nb-title").focus(); };
+  $("nb-q").addEventListener("input", (e) => { NB.q = e.target.value; $("nb-items").innerHTML = nbItems(); });
+  $("nb-items").addEventListener("click", (e) => { const b = e.target.closest("[data-nb]"); if (!b) return; leave(); NB.sel = b.dataset.nb; renderDash(); });
+  document.querySelectorAll("[data-nb-tag]").forEach((b) => b.onclick = () => { leave(); NB.tag = NB.tag === b.dataset.nbTag ? "" : b.dataset.nbTag; NB.sel = null; renderDash(); });
+  document.querySelectorAll("[data-nb-place]").forEach((b) => b.onclick = () => { leave(); NB.place = ""; NB.sel = null; renderDash(); });
+  const del = $("nb-del");
+  if (del) del.onclick = () => {
+    if (!NB.confirmDel) { NB.confirmDel = true; del.textContent = t_("Click again to delete"); return; }
+    MY.notes = MY.notes.filter((x) => x.id !== NB.sel); NB.sel = null; NB.dirty = false; NB.confirmDel = false; saveMY("notes"); renderDash(); toast(t_("Note deleted."));
+  };
+  const inp = $("nb-place"), sg = $("nb-sugg");
+  let opts = [];
+  inp.addEventListener("input", () => {
+    inp.dataset.id = ""; opts = inp.value.trim() ? search(inp.value).slice(0, 8) : [];
+    sg.innerHTML = opts.map((r, i) => '<li><button type="button" data-i="' + i + '">' + esc(r[0]) + "<small>" + esc(kindOf({ rank: r[4], level: r[3], country: r[2] }) + " · " + r[2]) + "</small></button></li>").join("");
+    sg.hidden = !opts.length;
+  });
+  sg.addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (!b) return; const r = opts[+b.dataset.i]; inp.value = r[0]; inp.dataset.id = r[1]; sg.hidden = true; NB.dirty = true; $("nb-tags").focus(); });
+}
+
 
 // compare
 function dashCompare() {
@@ -4392,6 +4597,43 @@ function readoutAt(lngLat) {
 }
 map.on("mousemove", (e) => readoutAt(e.lngLat));
 map.on("mouseout", () => { const el = $("readout"); if (el) el.hidden = true; });
+
+// ---------- account (web): sign in, profile and sync live in /account.js, loaded on its own
+let acctLoading = null;
+function loadAccount() {
+  if (!WEB) return Promise.resolve();
+  return acctLoading || (acctLoading = new Promise((ok) => {
+    const sc = document.createElement("script"); sc.src = "/account.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
+  }));
+}
+// the study section lives in /study.js, loaded the first time it is opened
+let studyLoading = null;
+function loadStudy() {
+  if (window.OWA_STUDY) return Promise.resolve();
+  if (!studyLoading) studyLoading = new Promise((ok) => {
+    const sc = document.createElement("script"); sc.src = "/study.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
+  });
+  return studyLoading;
+}
+function dashStudy() {
+  if (window.OWA_STUDY) return window.OWA_STUDY.render();
+  loadStudy().then(() => { if (dashTab === "study" && !$("dash").hidden) renderDash(); });
+  return '<p class="lead">' + t_("Loading…") + "</p>";
+}
+function dashAccount() {
+  if (window.OWA_ACCOUNT) return window.OWA_ACCOUNT.render();
+  loadAccount().then(() => { if (dashTab === "account" && !$("dash").hidden) renderDash(); });
+  return '<p class="lead">' + t_("Loading…") + "</p>";
+}
+if (WEB) {
+  window.OWA = { MY, saveMY, myChanged, onSave: (f) => SAVE_HOOKS.push(f), openDash, get tab() { return dashTab; },
+    renderDash: () => { if (!$("dash").hidden) renderDash(); }, toast, esc, t_, search, placeOf, recOf, kindOf, cname, store, LOCALE,
+    // for study.js
+    get INDEX() { return INDEX; }, byId, getDetails, fitTo, markSelected, clearSelected, quizMode, placesAt, closeDash, goTo,
+    tnode: (k) => tnode(k), kidsOf: (k) => kidsOf(k), pathOf: (k) => pathOf(k), get TREE() { return TREE; },
+    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy };
+  loadAccount();
+}
 
 // keyboard: "/" search, "m" My atlas
 document.addEventListener("keydown", (e) => {

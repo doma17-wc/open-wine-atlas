@@ -1,0 +1,654 @@
+{
+  "id": "north-france",
+  "title": "Champagne, Alsace and the Loire",
+  "level": "WSET 3 to Diploma",
+  "summary": "The cool northern half of French wine: Champagne's districts, grapes and traditional method, Alsace and its grands crus and sweet wines, and the Loire from Muscadet to Sancerre.",
+  "lessons": [
+    {
+      "id": "north-france-champagne-region",
+      "title": "Champagne: region and grapes",
+      "minutes": 8,
+      "intro": "This lesson covers where Champagne is, why its cool climate and chalk matter, the four main districts and the grapes grown in each. It also explains the village classification and the codes that tell you who made the wine.",
+      "sections": [
+        {
+          "h": "A cool northern region",
+          "p": [
+            "Champagne lies east of Paris, around the towns of Reims and Épernay. Most vineyards are in the Marne department, with the Aube to the south and smaller areas in the Aisne and elsewhere. It is one of the most northerly quality wine regions of France.",
+            "The climate is cool, with both oceanic and continental influences. Grapes ripen slowly and keep high acidity, which suits sparkling wine. Spring frost, hail and rain at harvest are regular risks, so quality and quantity vary from year to year. Blending across villages, grapes and vintages evens out these differences."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A1359"]
+        },
+        {
+          "h": "Chalk and other soils",
+          "p": [
+            "Much of the Marne sits on chalk. Chalk drains well but is porous: it holds water and releases it to the vine roots in dry spells. The purest form, belemnite chalk, lies under many of the best slopes. The chalk also allowed the digging of the deep cellars, called crayères, where wine ages at a cool, steady temperature.",
+            "Not all of Champagne is chalk. The Vallée de la Marne has more clay, marl and sand. The Côte des Bar in the Aube sits on Kimmeridgian marl, the same soil as Chablis, which lies closer to it than Reims does."
+          ]
+        },
+        {
+          "h": "The four main districts",
+          "p": [
+            "The Montagne de Reims is a wooded plateau between Reims and Épernay. Its slopes face many directions, some even north, as at Verzenay. Pinot Noir dominates and gives structure and body. The Vallée de la Marne runs west from Épernay. Its cooler, frost-prone valley sites are planted mainly with Meunier, though Aÿ at its eastern end is famous for Pinot Noir.",
+            "The Côte des Blancs is an east-facing slope south of Épernay, planted almost entirely with Chardonnay. Villages such as Cramant, Avize, Oger and Le Mesnil-sur-Oger give fine, long-lived wines. The Côte des Bar, far to the south in the Aube, is mostly Pinot Noir and gives riper, fruitier wines."
+          ]
+        },
+        {
+          "h": "The grapes",
+          "p": [
+            "Seven grapes are allowed, but three make almost all Champagne. Pinot Noir brings body, red fruit and structure. Meunier buds late and ripens early, so it avoids spring frost and suits cool, low-lying sites. It gives fruity, supple wines that are ready sooner. Chardonnay brings finesse, citrus, high acidity and long ageing.",
+            "The four minor grapes are Pinot Blanc, Pinot Gris, Arbane and Petit Meslier. They are rare but some producers use them in special cuvées. A disease-resistant variety, Voltis, is now also allowed in small amounts under a trial scheme. Grapes must be picked as whole bunches, which in practice means by hand, so black grapes can give clear juice."
+          ]
+        },
+        {
+          "h": "Villages, crus and producers",
+          "p": [
+            "Champagne ranks whole villages, not single vineyards. Under the échelle des crus, each village had a percentage that once set the price of its grapes. That price system has ended, but the terms remain: 17 villages are grand cru, such as Ambonnay, Bouzy, Aÿ, Avize and Cramant, and a larger group are premier cru.",
+            "Labels carry a code for the type of producer. NM (négociant manipulant) is a house that buys grapes, as most large houses do. RM (récoltant manipulant) is a grower who makes wine only from their own vineyards. CM (coopérative de manipulation) is a cooperative. Champagne received its AOC in 1936."
+          ]
+        }
+      ],
+      "key": [
+        "Champagne is cool and marginal: high acidity, variable vintages, and blending to even them out.",
+        "Chalk drains well yet stores water; the Côte des Bar has Kimmeridgian marl like Chablis.",
+        "Montagne de Reims: Pinot Noir. Vallée de la Marne: Meunier. Côte des Blancs: Chardonnay. Côte des Bar (Aube): Pinot Noir.",
+        "Seven traditional grapes are allowed; Pinot Noir, Meunier and Chardonnay dominate. Whole-bunch picking means hand harvesting.",
+        "17 villages are grand cru under the échelle des crus.",
+        "NM is a house that buys grapes, RM a grower using only its own fruit, CM a cooperative."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape is planted most widely in the Vallée de la Marne?",
+          "options": ["Chardonnay", "Pinot Noir", "Meunier", "Pinot Blanc"],
+          "answer": 2,
+          "explain": "Meunier dominates the Vallée de la Marne because it buds late and ripens early, which suits the cooler, frost-prone valley sites.",
+          "place": "fr-eupdo-PDO-FR-A1359"
+        },
+        {
+          "id": "q2",
+          "q": "What soil is typical of the Côte des Bar?",
+          "options": ["Belemnite chalk", "Kimmeridgian marl", "Granite", "Volcanic basalt"],
+          "answer": 1,
+          "explain": "The Côte des Bar in the Aube sits on Kimmeridgian marl, the same soil as nearby Chablis, rather than the chalk of the Marne."
+        },
+        {
+          "id": "q3",
+          "q": "Which grape is planted almost exclusively on the Côte des Blancs?",
+          "options": ["Pinot Noir", "Meunier", "Arbane", "Chardonnay"],
+          "answer": 3,
+          "explain": "The Côte des Blancs takes its name from its white grape, Chardonnay, which covers almost all of the slope."
+        },
+        {
+          "id": "q4",
+          "q": "Why is chalk valued in Champagne's vineyards?",
+          "options": [
+            "It drains well but stores water and releases it to the roots in dry spells",
+            "It is rich in organic matter and supports high yields",
+            "It is dark and absorbs heat, helping grapes ripen",
+            "It stops vines from rooting deeply, which lowers acidity"
+          ],
+          "answer": 0,
+          "explain": "Chalk is free-draining yet porous, so it holds a reserve of water that the vine can draw on when the weather is dry."
+        },
+        {
+          "id": "q5",
+          "q": "How many villages are classified grand cru under the échelle des crus?",
+          "options": ["12", "17", "25", "42"],
+          "answer": 1,
+          "explain": "Seventeen villages are grand cru, among them Ambonnay, Bouzy, Aÿ, Avize and Cramant."
+        },
+        {
+          "id": "q6",
+          "q": "Why does Meunier suit the cooler, low-lying sites of Champagne?",
+          "options": [
+            "It has the highest natural acidity of the three main grapes",
+            "It gives the most structured, long-lived base wines",
+            "It is the only grape that can be machine harvested",
+            "It buds late and ripens early, avoiding spring frost and fitting a short season"
+          ],
+          "answer": 3,
+          "explain": "Late budding protects Meunier from spring frost, and early ripening lets it reach maturity in cool sites."
+        },
+        {
+          "id": "q7",
+          "q": "What does the code RM on a Champagne label mean?",
+          "options": [
+            "A house that buys grapes from growers",
+            "A cooperative that makes and sells wine",
+            "A grower who makes wine only from their own vineyards",
+            "A merchant who buys finished wine and adds a label"
+          ],
+          "answer": 2,
+          "explain": "RM stands for récoltant manipulant: a grower who makes and sells Champagne from their own grapes."
+        },
+        {
+          "id": "q8",
+          "q": "In which department does the Côte des Bar lie?",
+          "options": ["Aube", "Marne", "Aisne", "Yonne"],
+          "answer": 0,
+          "explain": "The Côte des Bar is in the Aube, far to the south of Reims and Épernay in the Marne."
+        }
+      ]
+    },
+    {
+      "id": "north-france-champagne-method",
+      "title": "Champagne: method and styles",
+      "minutes": 8,
+      "intro": "This lesson follows a bottle of Champagne from pressing to dosage. It covers the traditional method, the legal ageing minimums, the sweetness scale, the main styles and the two still-wine appellations of the region.",
+      "sections": [
+        {
+          "h": "Pressing and the base wine",
+          "p": [
+            "Grapes are pressed gently, as whole bunches. From 4,000 kg of grapes, the press may yield 2,550 litres of juice. The first 2,050 litres, the cuvée, are the finest. The last 500 litres, the taille, are fruitier and less fine. The juice ferments into a dry, high-acid still wine, the vin clair.",
+            "The base wines are then blended. This assemblage brings together grapes, villages and often years. Houses keep reserve wines from earlier harvests to give a non-vintage blend its consistent house style from year to year."
+          ]
+        },
+        {
+          "h": "Second fermentation and lees ageing",
+          "p": [
+            "For the tirage, the blend is bottled with the liqueur de tirage: wine, sugar, yeast and a riddling aid. The bottles are sealed, usually with a crown cap. A second fermentation in the bottle, the prise de mousse, adds a little alcohol and traps the carbon dioxide, giving a pressure of around 5 to 6 atmospheres.",
+            "The wine then ages on its dead yeast cells, the lees. Yeast autolysis slowly gives flavours of bread, brioche and biscuit and a finer mousse. Non-vintage Champagne must age at least 15 months after tirage, 12 of them on the lees. Vintage Champagne must age at least three years after tirage."
+          ]
+        },
+        {
+          "h": "Riddling, disgorgement and dosage",
+          "p": [
+            "Riddling, or remuage, moves the sediment into the neck. Bottles are turned and tilted step by step until they stand neck down, by hand on wooden pupitres or by machine in gyropalettes. For disgorgement, the neck is frozen and the cap removed, and the pressure pushes out the plug of frozen sediment.",
+            "The bottle is topped up with the liqueur d'expédition, a mix of wine and sugar. This dosage sets the sweetness. Brut Nature has 0 to 3 g/L and no added sugar, Extra Brut 0 to 6 g/L, and Brut under 12 g/L. Then come Extra Dry (12 to 17), Sec (17 to 32), Demi-Sec (32 to 50) and Doux (over 50)."
+          ]
+        },
+        {
+          "h": "The main styles",
+          "p": [
+            "Most Champagne is non-vintage (NV), a blend of several years. Vintage Champagne, or millésimé, comes from a single year's harvest and is usually made only in good years. Blanc de Blancs is made from white grapes only, in practice Chardonnay. Blanc de Noirs is a white wine made from black grapes, Pinot Noir, Meunier or both.",
+            "Rosé Champagne is made in two ways. Rosé d'assemblage blends a little still red wine from the region with white base wine before the second fermentation, a rare exception in European rules. The other way is saignée or maceration, where colour comes from brief skin contact with black grapes."
+          ]
+        },
+        {
+          "h": "Still wines: Coteaux Champenois and Rosé des Riceys",
+          "p": [
+            "Coteaux Champenois is the appellation for still wines from the Champagne zone. It covers red, white and rosé. The best known are light red Pinot Noirs from villages such as Bouzy. Because the climate is cool, good still reds are made mainly in warm years.",
+            "Rosé des Riceys is a still rosé from Pinot Noir made in the commune of Les Riceys in the Aube. It is one of France's rarest appellations. Les Riceys is the only commune entitled to all three of the region's appellations: Champagne, Coteaux Champenois and Rosé des Riceys."
+          ],
+          "places": ["fr-eupdo-PDO-FR-A1364", "fr-eupdo-PDO-FR-A1363"]
+        }
+      ],
+      "key": [
+        "From 4,000 kg of grapes: 2,050 litres of cuvée and 500 litres of taille.",
+        "NV: at least 15 months after tirage, 12 on lees. Vintage: at least three years after tirage.",
+        "Autolysis gives bread, brioche and biscuit flavours.",
+        "Sweetness scale: Brut Nature, Extra Brut, Brut, Extra Dry, Sec, Demi-Sec, Doux.",
+        "Rosé can be made by blending in still red wine (assemblage) or by saignée.",
+        "Coteaux Champenois covers still wines; Rosé des Riceys is a still Pinot Noir rosé from Les Riceys in the Aube."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the minimum ageing for non-vintage Champagne after tirage?",
+          "options": ["9 months", "12 months", "15 months", "36 months"],
+          "answer": 2,
+          "explain": "NV Champagne must age at least 15 months after tirage, of which at least 12 months on the lees."
+        },
+        {
+          "id": "q2",
+          "q": "What is the minimum ageing for vintage Champagne after tirage?",
+          "options": ["15 months", "Two years", "Five years", "Three years"],
+          "answer": 3,
+          "explain": "Vintage Champagne must spend at least three years in the cellar after tirage."
+        },
+        {
+          "id": "q3",
+          "q": "How much sugar may a Brut Champagne contain?",
+          "options": ["Less than 12 g/L", "12 to 17 g/L", "17 to 32 g/L", "32 to 50 g/L"],
+          "answer": 0,
+          "explain": "Brut means under 12 g/L of sugar. Extra Dry, confusingly, is sweeter at 12 to 17 g/L."
+        },
+        {
+          "id": "q4",
+          "q": "Which sugar range applies to a Demi-Sec Champagne?",
+          "options": ["0 to 3 g/L", "12 to 17 g/L", "32 to 50 g/L", "Over 50 g/L"],
+          "answer": 2,
+          "explain": "Demi-Sec has 32 to 50 g/L of sugar. Over 50 g/L is Doux."
+        },
+        {
+          "id": "q5",
+          "q": "What is rosé d'assemblage?",
+          "options": [
+            "Rosé made by leaving the juice briefly on black grape skins",
+            "Rosé made by blending a little still red wine with white base wine before the second fermentation",
+            "Rosé made by adding red wine in the dosage after disgorgement",
+            "Rosé made by blending finished rosés from several vintages"
+          ],
+          "answer": 1,
+          "explain": "Champagne may blend still red wine into white base wine to make rosé, an exception in European rules. The colour is set before the second fermentation."
+        },
+        {
+          "id": "q6",
+          "q": "Blanc de Noirs Champagne is made from which grapes?",
+          "options": [
+            "Chardonnay only",
+            "Pinot Blanc and Arbane",
+            "Pinot Noir, Meunier or both",
+            "Any of the seven permitted grapes"
+          ],
+          "answer": 2,
+          "explain": "Blanc de Noirs is a white wine made from black grapes, Pinot Noir and Meunier."
+        },
+        {
+          "id": "q7",
+          "q": "What is Rosé des Riceys?",
+          "options": [
+            "A sparkling rosé made from Meunier",
+            "A still rosé made from Pinot Noir in the Aube",
+            "A still red wine from Bouzy",
+            "A sweet rosé made from Pinot Gris"
+          ],
+          "answer": 1,
+          "explain": "Rosé des Riceys is a still Pinot Noir rosé from the commune of Les Riceys in the Aube.",
+          "place": "fr-eupdo-PDO-FR-A1363"
+        },
+        {
+          "id": "q8",
+          "q": "What is the purpose of disgorgement?",
+          "options": [
+            "To add the sugar and yeast that start the second fermentation",
+            "To turn the bottles neck down so the sediment moves",
+            "To blend the base wines with reserve wines",
+            "To remove the yeast sediment that has collected in the neck"
+          ],
+          "answer": 3,
+          "explain": "At disgorgement the frozen plug of sediment in the neck is pushed out by the pressure in the bottle. Riddling is the earlier step that moves it there."
+        }
+      ]
+    },
+    {
+      "id": "north-france-alsace",
+      "title": "Alsace",
+      "minutes": 8,
+      "intro": "This lesson explains why Alsace is so dry and sunny, which grapes it grows and how its wines are labelled. It covers the Alsace Grand Cru appellations, the late-harvest wines Vendanges Tardives and Sélection de Grains Nobles, and Crémant d'Alsace.",
+      "sections": [
+        {
+          "h": "The Vosges rain shadow",
+          "p": [
+            "Alsace is a long, narrow strip in northeastern France, between the Vosges mountains to the west and the Rhine to the east. The vineyards lie on the lower slopes of the Vosges, mostly facing east and southeast. The region is split into the Bas-Rhin in the north and the Haut-Rhin in the south.",
+            "The Vosges block the rain carried by westerly winds. This rain shadow makes Alsace one of the driest parts of France, and Colmar is among the driest towns in the country. Summers are sunny and autumns long and dry, so grapes ripen fully despite the northern latitude. In some years noble rot develops late in the season."
+          ],
+          "places": ["fr-inao-a1"]
+        },
+        {
+          "h": "Grapes and labels",
+          "p": [
+            "Alsace wines are usually labelled by grape and sold in the tall, slim bottle called the flûte. Four grapes are called noble: Riesling, Gewurztraminer, Pinot Gris and Muscat. Riesling is dry and steely. Gewurztraminer is pink-skinned, with lychee and rose aromas, low acidity and high alcohol. Pinot Gris is rich and smoky. Muscat is usually dry and grapey.",
+            "Other grapes include Sylvaner, Pinot Blanc (often blended with Auxerrois under that name) and Pinot Noir, the only red grape. Edelzwicker is a blend of grapes. Klevener de Heiligenstein is a local speciality from Savagnin Rose. Some communes may add their name to Alsace for set grapes: Ottrott, Rodern and Saint-Hippolyte are known for Pinot Noir."
+          ],
+          "places": ["fr-inao-d2", "fr-inao-d2459", "fr-inao-d2460", "fr-inao-d2461"]
+        },
+        {
+          "h": "Soils and the Grands Crus",
+          "p": [
+            "Alsace has a mosaic of soils, including granite, limestone, marl, sandstone, schist and volcanic rock. Different sites can give very different wines from the same grape. The Alsace AOC was created in 1962 and Alsace Grand Cru followed in 1975. There are now 51 grand cru sites, each with its own appellation.",
+            "Grand cru wines are generally limited to the four noble grapes. There are exceptions. Zotzenberg also allows Sylvaner, while Altenberg de Bergheim and Kaefferkopf allow blends. Since the 2022 vintage, Hengst and Kirchberg de Barr also allow Pinot Noir. Well-known sites include Schlossberg and Brand, both on granite, and Rangen at Thann, a steep site on volcanic rock in the far south."
+          ],
+          "places": ["fr-inao-a1223", "fr-inao-a1190", "fr-inao-a1220", "fr-inao-a1237", "fr-inao-a1188", "fr-inao-a1203", "fr-inao-a1202", "fr-inao-a1207"]
+        },
+        {
+          "h": "Vendanges Tardives and Sélection de Grains Nobles",
+          "p": [
+            "Vendanges Tardives (VT) and Sélection de Grains Nobles (SGN) are legal terms, defined in 1984, for late-harvest wines. They may only be made from the four noble grapes. Each needs a minimum sugar level in the grapes, set higher for Gewurztraminer and Pinot Gris than for Riesling and Muscat. Chaptalisation is not allowed.",
+            "VT is made from overripe grapes picked late, sometimes with some noble rot or shrivelling. Styles range from off-dry to sweet. SGN is made from grapes affected by noble rot, picked berry by berry or bunch by bunch in several passes. SGN wines are sweet, concentrated and rare, and only made in suitable years."
+          ]
+        },
+        {
+          "h": "Crémant d'Alsace",
+          "p": [
+            "Crémant d'Alsace became an appellation in 1976. It is made by the traditional method, with the second fermentation in the bottle, and must age at least nine months on the lees. Pinot Blanc is the main grape, with Auxerrois, Pinot Gris, Pinot Noir, Riesling and Chardonnay also allowed.",
+            "Crémant d'Alsace rosé must be made from Pinot Noir only. The style is fresh and fruity, with less autolytic character than most Champagne because the lees ageing is usually shorter."
+          ],
+          "places": ["fr-inao-a2"]
+        }
+      ],
+      "key": [
+        "The Vosges rain shadow makes Alsace dry and sunny; Colmar is one of France's driest towns.",
+        "The four noble grapes are Riesling, Gewurztraminer, Pinot Gris and Muscat. Pinot Noir is the only red.",
+        "Alsace AOC dates from 1962, Alsace Grand Cru from 1975; there are 51 grands crus.",
+        "Grands crus are mostly limited to the noble grapes; Zotzenberg allows Sylvaner.",
+        "VT and SGN (defined 1984) use only the noble grapes; SGN needs noble rot; no chaptalisation.",
+        "Crémant d'Alsace (1976) is traditional method, at least nine months on lees; rosé is Pinot Noir only."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "What is the main reason Alsace is so dry?",
+          "options": [
+            "The Vosges mountains create a rain shadow",
+            "Warm winds blow north along the Rhine",
+            "Mediterranean air reaches it through the Rhône valley",
+            "Its vineyards lie at high altitude above the clouds"
+          ],
+          "answer": 0,
+          "explain": "The Vosges block rain-bearing westerly winds, so the vineyards on their eastern slopes stay dry and sunny.",
+          "place": "fr-inao-a1"
+        },
+        {
+          "id": "q2",
+          "q": "Which of these is one of Alsace's four noble grapes?",
+          "options": ["Sylvaner", "Pinot Blanc", "Muscat", "Auxerrois"],
+          "answer": 2,
+          "explain": "The noble grapes are Riesling, Gewurztraminer, Pinot Gris and Muscat. Sylvaner, Pinot Blanc and Auxerrois are not among them."
+        },
+        {
+          "id": "q3",
+          "q": "How many Alsace Grand Cru appellations are there?",
+          "options": ["25", "51", "64", "100"],
+          "answer": 1,
+          "explain": "Alsace has 51 grand cru sites, each with its own appellation."
+        },
+        {
+          "id": "q4",
+          "q": "What kind of soil is the Rangen grand cru known for?",
+          "options": ["Granite", "Kimmeridgian marl", "Chalk", "Volcanic rock"],
+          "answer": 3,
+          "explain": "Rangen, at Thann in the far south of Alsace, is a steep site on volcanic rock.",
+          "place": "fr-inao-a1220"
+        },
+        {
+          "id": "q5",
+          "q": "What is required for Sélection de Grains Nobles?",
+          "options": [
+            "Grapes affected by noble rot, picked in several passes",
+            "Grapes picked late but never affected by noble rot",
+            "Grapes frozen on the vine and pressed while frozen",
+            "A second fermentation in the bottle"
+          ],
+          "answer": 0,
+          "explain": "SGN is made from botrytised grapes from the four noble varieties, picked selectively."
+        },
+        {
+          "id": "q6",
+          "q": "Which grape must be used for Crémant d'Alsace rosé?",
+          "options": ["Pinot Gris", "Riesling", "Pinot Noir", "Gewurztraminer"],
+          "answer": 2,
+          "explain": "Crémant d'Alsace rosé is made from Pinot Noir only.",
+          "place": "fr-inao-a2"
+        },
+        {
+          "id": "q7",
+          "q": "Which grand cru also allows Sylvaner?",
+          "options": ["Rangen", "Brand", "Schlossberg", "Zotzenberg"],
+          "answer": 3,
+          "explain": "Zotzenberg is an exception to the noble-grape rule and allows Sylvaner.",
+          "place": "fr-inao-a1237"
+        },
+        {
+          "id": "q8",
+          "q": "Which grape makes Klevener de Heiligenstein?",
+          "options": ["Gewurztraminer", "Savagnin Rose", "Chasselas", "Pinot Blanc"],
+          "answer": 1,
+          "explain": "Klevener de Heiligenstein is a local speciality made from Savagnin Rose.",
+          "place": "fr-inao-d2"
+        }
+      ]
+    },
+    {
+      "id": "north-france-loire-west",
+      "title": "The western Loire: Muscadet and Anjou-Saumur",
+      "minutes": 8,
+      "intro": "This lesson covers the Atlantic end of the Loire. It explains Muscadet and the sur lie technique, then moves inland to Anjou and Saumur, where Chenin Blanc makes dry and sweet whites and Cabernet Franc makes the reds.",
+      "sections": [
+        {
+          "h": "The Loire and the Pays Nantais",
+          "p": [
+            "The Loire is France's longest river. Its vineyards run inland from near the Atlantic at Nantes to the Centre of France. The climate changes along the way, from mild and maritime in the west to more continental in the east.",
+            "The Pays Nantais, around Nantes, has the most maritime climate: mild, humid and windy. Its main grape is Melon, often called Melon de Bourgogne, which gives light, dry, neutral whites with high acidity. Gros Plant du Pays Nantais is a tart white made from Folle Blanche."
+          ],
+          "places": ["fr-inao-a97", "fr-inao-a843"]
+        },
+        {
+          "h": "Muscadet sur lie and the crus communaux",
+          "p": [
+            "There are four Muscadet appellations: Muscadet, Muscadet Sèvre et Maine, Muscadet Coteaux de la Loire and Muscadet Côtes de Grandlieu. Sèvre et Maine, southeast of Nantes, is the largest. Sur lie on the label means the wine stayed on its fine lees through the winter, until at least the March after harvest, and was bottled straight off them.",
+            "Lees contact adds texture, a little yeasty flavour and sometimes a slight prickle. Within Sèvre et Maine, the first three crus communaux were Clisson, Gorges and Le Pallet. These wines age much longer on the lees and can develop for years. Soils matter: Clisson is on granite, Gorges on gabbro."
+          ],
+          "places": ["fr-inao-a100", "fr-inao-a98", "fr-inao-a99", "fr-inao-d2521", "fr-inao-d2522", "fr-inao-d2523"]
+        },
+        {
+          "h": "Anjou: soils, rosés and reds",
+          "p": [
+            "Anjou lies inland around Angers. Its western part sits on dark schist of the Massif Armoricain, called Anjou noir. Further east, towards Saumur, the soils are pale tuffeau limestone, called Anjou blanc. The key white grape is Chenin Blanc. Reds come from Cabernet Franc and Cabernet Sauvignon, which ripens in the warmer schist sites.",
+            "Anjou is known for rosé. Rosé d'Anjou is off-dry, mainly from Grolleau. Cabernet d'Anjou is medium-sweet, from Cabernet Franc and Cabernet Sauvignon. Rosé de Loire is dry. For reds, Anjou Villages and Anjou Brissac (called Anjou Villages Brissac until 2020) give more structured wines than basic Anjou."
+          ],
+          "places": ["fr-inao-a76", "fr-inao-a106", "fr-inao-a82", "fr-inao-a107", "fr-inao-a79", "fr-inao-a124"]
+        },
+        {
+          "h": "Chenin Blanc, dry and sweet",
+          "p": [
+            "Savennières, on the north bank of the Loire, is best known for dry Chenin Blanc from steep slopes of schist and volcanic rock. The wines have high acidity and develop slowly. Two named crus stand out: Roche aux Moines and Coulée de Serrant, a monopole of the Joly family and an early biodynamic estate.",
+            "South of the Loire, along the Layon, autumn mists encourage noble rot. Coteaux du Layon makes sweet Chenin, picked by hand in several passes. Six villages may add their name, and Chaume is a premier cru. Bonnezeaux and Quarts de Chaume are the top sweet sites. Quarts de Chaume became the Loire's first grand cru in 2011."
+          ],
+          "places": ["fr-inao-a112", "fr-inao-a1034", "fr-inao-a1164", "fr-eupdo-PDO-FR-A0983", "fr-inao-a88", "fr-inao-d187", "fr-inao-a80", "fr-inao-a103"]
+        },
+        {
+          "h": "Saumur",
+          "p": [
+            "Saumur sits on tuffeau, a soft, chalky limestone. It was quarried to build the châteaux of the Loire, and the caves left behind are used as cellars. Saumur makes Chenin Blanc whites, Cabernet Franc reds and a great deal of traditional-method sparkling wine, sold as Saumur mousseux and as Crémant de Loire.",
+            "Saumur-Champigny makes reds, mainly from Cabernet Franc, that are fresh, fruity and often drunk young. Coteaux de Saumur is a small appellation for sweet Chenin Blanc. Crémant de Loire can come from Anjou, Saumur and Touraine."
+          ],
+          "places": ["fr-inao-a110", "fr-inao-d224", "fr-inao-a122", "fr-inao-a87", "fr-inao-a91"]
+        }
+      ],
+      "key": [
+        "Muscadet is made from Melon; Gros Plant du Pays Nantais from Folle Blanche.",
+        "Sur lie: the wine stays on its fine lees until at least the March after harvest and is bottled off them.",
+        "The first crus communaux of Muscadet Sèvre et Maine were Clisson, Gorges and Le Pallet.",
+        "Anjou noir is schist, Anjou blanc is tuffeau. Chenin Blanc is the key white grape, Cabernet Franc the key red.",
+        "Savennières: dry Chenin. Coteaux du Layon, Bonnezeaux and Quarts de Chaume: sweet Chenin from noble rot.",
+        "Quarts de Chaume became the Loire's first grand cru in 2011. Saumur-Champigny is Cabernet Franc."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape makes Muscadet?",
+          "options": ["Folle Blanche", "Chenin Blanc", "Melon", "Sauvignon Blanc"],
+          "answer": 2,
+          "explain": "Muscadet is made from Melon, also called Melon de Bourgogne.",
+          "place": "fr-inao-a97"
+        },
+        {
+          "id": "q2",
+          "q": "What does sur lie mean on a Muscadet label?",
+          "options": [
+            "The wine stayed on its fine lees over winter and was bottled straight off them",
+            "The wine was aged in new oak barrels",
+            "The wine underwent a second fermentation in the bottle",
+            "The wine was made from grapes affected by noble rot"
+          ],
+          "answer": 0,
+          "explain": "Sur lie Muscadet rests on its fine lees until at least the March after harvest and is bottled without racking, which adds texture."
+        },
+        {
+          "id": "q3",
+          "q": "Which of these is a cru communal of Muscadet Sèvre et Maine?",
+          "options": ["Brissac", "Chaume", "Oisly", "Clisson"],
+          "answer": 3,
+          "explain": "Clisson, with Gorges and Le Pallet, was one of the first three crus communaux of Muscadet Sèvre et Maine.",
+          "place": "fr-inao-d2521"
+        },
+        {
+          "id": "q4",
+          "q": "Which grape makes Gros Plant du Pays Nantais?",
+          "options": ["Melon", "Folle Blanche", "Grolleau", "Chenin Blanc"],
+          "answer": 1,
+          "explain": "Gros Plant du Pays Nantais is a tart white made from Folle Blanche.",
+          "place": "fr-inao-a843"
+        },
+        {
+          "id": "q5",
+          "q": "What style is Savennières best known for?",
+          "options": [
+            "Sweet wine from noble rot",
+            "Fresh Cabernet Franc red",
+            "Dry Chenin Blanc",
+            "Off-dry Grolleau rosé"
+          ],
+          "answer": 2,
+          "explain": "Savennières, on the north bank of the Loire, is famous for dry, high-acid Chenin Blanc that ages slowly.",
+          "place": "fr-inao-a112"
+        },
+        {
+          "id": "q6",
+          "q": "Which appellation became the Loire's first grand cru in 2011?",
+          "options": ["Bonnezeaux", "Quarts de Chaume", "Savennières Roche aux Moines", "Coteaux de l'Aubance"],
+          "answer": 1,
+          "explain": "Quarts de Chaume, a sweet Chenin Blanc appellation in the Layon valley, became the Loire's first grand cru in 2011.",
+          "place": "fr-inao-a103"
+        },
+        {
+          "id": "q7",
+          "q": "Saumur-Champigny is made mainly from which grape?",
+          "options": ["Chenin Blanc", "Grolleau", "Gamay", "Cabernet Franc"],
+          "answer": 3,
+          "explain": "Saumur-Champigny is a red appellation based on Cabernet Franc.",
+          "place": "fr-inao-a122"
+        },
+        {
+          "id": "q8",
+          "q": "What is tuffeau?",
+          "options": [
+            "A soft, chalky limestone found around Saumur",
+            "A dark schist found in western Anjou",
+            "A volcanic rock found in Savennières",
+            "A gravel found along the Atlantic coast"
+          ],
+          "answer": 0,
+          "explain": "Tuffeau is a soft, chalky limestone. It was used to build the Loire châteaux, and its caves serve as cellars."
+        }
+      ]
+    },
+    {
+      "id": "north-france-loire-centre",
+      "title": "Touraine and the Centre-Loire",
+      "minutes": 8,
+      "intro": "This lesson covers the middle and upper Loire. In Touraine it explains Vouvray and Montlouis for Chenin Blanc and Chinon and Bourgueil for Cabernet Franc. In the Centre-Loire it covers Sancerre, Pouilly-Fumé and their neighbours, the home of Loire Sauvignon Blanc.",
+      "sections": [
+        {
+          "h": "Touraine",
+          "p": [
+            "Touraine lies around the city of Tours. The Atlantic influence is weaker here than in Anjou, and the climate is more continental. Many grapes are grown: Chenin Blanc and Sauvignon Blanc for whites, Cabernet Franc, Côt (Malbec) and Gamay for reds. The regional Touraine appellation is best known for crisp Sauvignon Blanc.",
+            "Some areas may add their name to Touraine, such as Amboise, Azay-le-Rideau, Chenonceaux and Oisly. Oisly is for Sauvignon Blanc only. To the east, Cheverny makes blended wines and Cour-Cheverny makes white wine from the rare local grape Romorantin."
+          ],
+          "places": ["fr-inao-a113", "fr-inao-d2056", "fr-inao-d2057", "fr-inao-d2340", "fr-inao-d2339", "fr-inao-a84", "fr-inao-a90"]
+        },
+        {
+          "h": "Vouvray and Montlouis",
+          "p": [
+            "Vouvray lies on the north bank of the Loire, just east of Tours. Its wines are made from Chenin Blanc, on tuffeau covered with clay and flint. The style depends on the year: sec, demi-sec or moelleux (sweet), with sweet wines made in the warmest vintages. Much Vouvray is also made sparkling.",
+            "Montlouis-sur-Loire faces Vouvray across the river, on the south bank, between the Loire and the Cher. It also makes Chenin Blanc in dry, off-dry, sweet and sparkling styles. Its soils are often sandier, and the wines can be a little lighter. North of Tours, Jasnières makes mostly dry Chenin Blanc on the Loir, a separate tributary."
+          ],
+          "places": ["fr-inao-a119", "fr-inao-a94", "fr-inao-a92"]
+        },
+        {
+          "h": "Chinon and Bourgueil",
+          "p": [
+            "Chinon lies west of Tours on the Vienne, close to where it joins the Loire. Its reds are made mainly from Cabernet Franc. Vines on sand and gravel near the river give lighter, fruity wines. Vines on tuffeau and clay-limestone slopes give firmer wines that can age. Some rosé and white Chenin Blanc are made too.",
+            "Bourgueil lies north of the Loire and makes red and rosé, mainly from Cabernet Franc. Its gravel terraces and tuffeau slopes give structured reds. Neighbouring Saint-Nicolas-de-Bourgueil, to the west, has sandier soils and its wines are often lighter."
+          ],
+          "places": ["fr-inao-a85", "fr-inao-a81", "fr-inao-a108"]
+        },
+        {
+          "h": "Sancerre and its soils",
+          "p": [
+            "The Centre-Loire is far from the Atlantic, nearer to Chablis than to Nantes. The climate is continental, with cold winters and a risk of spring frost. Sancerre is on the left bank of the Loire. It is famous for white Sauvignon Blanc and also makes red and rosé from Pinot Noir.",
+            "Sancerre has three main soils. Terres blanches are Kimmeridgian marl and give fuller, structured wines. Caillottes are stony limestone and give aromatic wines for early drinking. Silex is flint, giving tight wines that need time. Many producers blend across soils, while others bottle them separately."
+          ],
+          "places": ["fr-inao-a109"]
+        },
+        {
+          "h": "Pouilly-Fumé and the neighbours",
+          "p": [
+            "Pouilly-Fumé lies on the right bank, opposite Sancerre, around the town of Pouilly-sur-Loire. It makes white wine only, from Sauvignon Blanc, known locally as Blanc Fumé. The separate appellation Pouilly-sur-Loire is for whites from Chasselas.",
+            "West of Sancerre, Menetou-Salon makes Sauvignon Blanc whites and Pinot Noir reds and rosés. Further west, Quincy makes white wine only, from Sauvignon Blanc with some Sauvignon Gris. Reuilly makes Sauvignon Blanc whites, Pinot Noir reds and rosés that can include Pinot Gris. Coteaux du Giennois lies to the north."
+          ],
+          "places": ["fr-inao-a101", "fr-inao-a102", "fr-inao-a93", "fr-inao-a104", "fr-inao-a105", "fr-inao-a125"]
+        }
+      ],
+      "key": [
+        "Touraine grows Chenin Blanc, Sauvignon Blanc, Cabernet Franc, Côt and Gamay; Cour-Cheverny is Romorantin.",
+        "Vouvray (north bank) and Montlouis-sur-Loire (south bank) make Chenin Blanc from dry to sweet, plus sparkling.",
+        "Chinon (on the Vienne) and Bourgueil are mainly Cabernet Franc; Saint-Nicolas-de-Bourgueil is often lighter.",
+        "Sancerre: Sauvignon Blanc whites, Pinot Noir reds and rosés; soils are terres blanches, caillottes and silex.",
+        "Pouilly-Fumé is white only from Sauvignon Blanc; Pouilly-sur-Loire is Chasselas.",
+        "Menetou-Salon and Reuilly make Sauvignon Blanc and Pinot Noir; Quincy makes white only."
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "q": "Which grape makes Vouvray?",
+          "options": ["Sauvignon Blanc", "Chenin Blanc", "Romorantin", "Melon"],
+          "answer": 1,
+          "explain": "Vouvray is made from Chenin Blanc, in styles from dry to sweet and sparkling.",
+          "place": "fr-inao-a119"
+        },
+        {
+          "id": "q2",
+          "q": "Where does Montlouis-sur-Loire lie in relation to Vouvray?",
+          "options": [
+            "North of Vouvray, on the Loir",
+            "West of Vouvray, on the Vienne",
+            "On the same bank, just upstream",
+            "On the south bank of the Loire, facing Vouvray"
+          ],
+          "answer": 3,
+          "explain": "Montlouis-sur-Loire faces Vouvray across the Loire, on the south bank between the Loire and the Cher.",
+          "place": "fr-inao-a94"
+        },
+        {
+          "id": "q3",
+          "q": "On which river does Chinon lie?",
+          "options": ["Vienne", "Cher", "Loir", "Layon"],
+          "answer": 0,
+          "explain": "Chinon lies on the Vienne, close to where it joins the Loire.",
+          "place": "fr-inao-a85"
+        },
+        {
+          "id": "q4",
+          "q": "Which grape makes red Sancerre?",
+          "options": ["Gamay", "Cabernet Franc", "Pinot Noir", "Côt"],
+          "answer": 2,
+          "explain": "Sancerre reds and rosés are made from Pinot Noir, while the whites are Sauvignon Blanc.",
+          "place": "fr-inao-a109"
+        },
+        {
+          "id": "q5",
+          "q": "In Sancerre, what is silex?",
+          "options": ["Stony limestone", "Flint", "Kimmeridgian marl", "Granite"],
+          "answer": 1,
+          "explain": "Silex is flint, which gives tight wines that need time. Caillottes are stony limestone and terres blanches are Kimmeridgian marl."
+        },
+        {
+          "id": "q6",
+          "q": "Which grape makes the wines of the Pouilly-sur-Loire appellation?",
+          "options": ["Sauvignon Blanc", "Pinot Gris", "Melon", "Chasselas"],
+          "answer": 3,
+          "explain": "Pouilly-sur-Loire is for Chasselas whites. The Sauvignon Blanc wines of the area are sold as Pouilly-Fumé.",
+          "place": "fr-inao-a102"
+        },
+        {
+          "id": "q7",
+          "q": "Which grape makes Cour-Cheverny?",
+          "options": ["Chenin Blanc", "Sauvignon Blanc", "Romorantin", "Chardonnay"],
+          "answer": 2,
+          "explain": "Cour-Cheverny is a white made from the rare local grape Romorantin.",
+          "place": "fr-inao-a90"
+        },
+        {
+          "id": "q8",
+          "q": "Which of these Centre-Loire appellations makes white wine only?",
+          "options": ["Quincy", "Menetou-Salon", "Reuilly", "Sancerre"],
+          "answer": 0,
+          "explain": "Quincy makes only white wine from Sauvignon Blanc. Menetou-Salon, Reuilly and Sancerre also make Pinot Noir reds and rosés.",
+          "place": "fr-inao-a104"
+        }
+      ]
+    }
+  ]
+}

@@ -6,3 +6,4 @@ contrib
 web/**/*.txt
 *.log
 !web/robots.txt
+supabase

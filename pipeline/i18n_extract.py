@@ -3,6 +3,7 @@
 The atlas is written in English. A text is translatable when it appears in web/index.src.html as
   t_("…") or N_("…")            in the script (every string literal of the first argument, so t_(a ? "x" : "y") counts)
   data-i18n                       on an HTML element (its text)
+  t_("…") in web/study.js         the study section
   data-i18n-title / -aria / -ph   on an HTML element (the attribute value)
 plus the texts that come with the data and are shown as they are:
   tree.json      continent and group names (country names come from the browser)
@@ -84,6 +85,17 @@ def from_source(path):
     return keys
 
 
+def from_script(path):
+    """t_("…") and N_("…") in a plain script file (web/study.js)."""
+    js = open(path, encoding="utf-8").read()
+    keys = {}
+    for m in re.finditer(r"\b(t_|N_)\(", js):
+        for lit in first_arg_literals(js, m.end() - 1):
+            if re.search(r"[A-Za-z]", lit):
+                keys.setdefault(lit, "study")
+    return keys
+
+
 def from_data():
     keys = {}
     tree = json.load(open(os.path.join(WEB, "data", "tree.json"), encoding="utf-8"))
@@ -123,6 +135,8 @@ def from_data():
 
 def main():
     keys = from_source(os.path.join(WEB, "index.src.html"))
+    for k, ctx in from_script(os.path.join(WEB, "study.js")).items():
+        keys.setdefault(k, ctx)
     for k, ctx in from_data().items():
         keys.setdefault(k, ctx)
     keys.pop("", None)
