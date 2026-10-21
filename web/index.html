@@ -4692,7 +4692,8 @@ if (WEB) {
     // for study.js
     get INDEX() { return INDEX; }, byId, getDetails, fitTo, markSelected, clearSelected, quizMode, placesAt, closeDash, goTo,
     tnode: (k) => tnode(k), kidsOf: (k) => kidsOf(k), pathOf: (k) => pathOf(k), get TREE() { return TREE; },
-    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy };
+    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy,
+    terrainText: (t) => { const x = storedTerrain(t); return x ? terrainSentence(x) : ""; } };
   loadAccount();
 }
 

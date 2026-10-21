@@ -15,7 +15,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "pipeline", "study")
 OUT = os.path.join(ROOT, "web", "data", "study.json")
 
-ORDER = ["foundations", "bourgogne", "bordeaux", "north-france", "rhone-south", "italy", "iberia", "germany-austria", "usa", "southern"]
+ORDER = ["foundations", "viticulture", "winemaking", "grapes", "law-labels", "sparkling", "sweet-fortified",
+         "bourgogne", "bordeaux", "north-france", "rhone-south", "italy", "iberia", "portugal", "germany-austria", "central-europe",
+         "eastern-med", "usa", "southern", "australia", "new-zealand", "south-africa", "south-america"]
 # tree keys (web/data/tree.json) the drills of each path use; foundations has none (theory only)
 SCOPE = {
     "bourgogne": ["g:FR/bourgogne"],
@@ -27,6 +29,15 @@ SCOPE = {
     "germany-austria": ["g:DE", "g:AT"],
     "usa": ["g:US/CA", "g:US/OR", "g:US/WA", "g:US/NY"],
     "southern": ["g:AU", "g:NZ", "g:ZA", "g:CL", "g:AR"],
+    "portugal": ["g:PT"],
+    "central-europe": ["g:AT", "g:HU", "g:SI", "g:HR", "g:CZ", "g:SK", "g:RO", "g:BG"],
+    "eastern-med": ["g:GR", "g:CY", "g:GE", "g:AM", "g:MD", "g:TR", "g:LB", "g:IL"],
+    "australia": ["g:AU"],
+    "new-zealand": ["g:NZ"],
+    "south-africa": ["g:ZA"],
+    "south-america": ["g:CL", "g:AR", "g:UY", "g:BR"],
+    # thematic paths (viticulture, winemaking, grapes, law-labels, sparkling, sweet-fortified) have no region of
+    # their own: their games use the places their lessons link to
 }
 DASH = re.compile("[—–]")  # long dash, and the en dash outside number ranges
 RANGE = re.compile(r"\d–\d")
