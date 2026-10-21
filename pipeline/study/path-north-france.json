@@ -235,7 +235,7 @@
           "h": "Riddling, disgorgement and dosage",
           "p": [
             "Riddling, or remuage, moves the sediment into the neck. Bottles are turned and tilted step by step until they stand neck down, by hand on wooden pupitres or by machine in gyropalettes. For disgorgement, the neck is frozen and the cap removed, and the pressure pushes out the plug of frozen sediment.",
-            "The bottle is topped up with the liqueur d'expédition, a mix of wine and sugar. This dosage sets the sweetness. Brut Nature has 0 to 3 g/L and no added sugar, Extra Brut 0 to 6 g/L, and Brut under 12 g/L. Then come Extra Dry (12 to 17), Sec (17 to 32), Demi-Sec (32 to 50) and Doux (over 50)."
+            "The bottle is topped up with the liqueur d'expédition, a mix of wine and sugar. This dosage sets the sweetness. Brut Nature has less than 3 g/L and no added sugar, Extra Brut 0 to 6 g/L, and Brut under 12 g/L. Then come Extra Dry (12 to 17), Sec (17 to 32), Demi-Sec (32 to 50) and Doux (over 50)."
           ]
         },
         {
@@ -287,7 +287,7 @@
         {
           "id": "q4",
           "q": "Which sugar range applies to a Demi-Sec Champagne?",
-          "options": ["0 to 3 g/L", "12 to 17 g/L", "32 to 50 g/L", "Over 50 g/L"],
+          "options": ["Less than 3 g/L", "12 to 17 g/L", "32 to 50 g/L", "Over 50 g/L"],
           "answer": 2,
           "explain": "Demi-Sec has 32 to 50 g/L of sugar. Over 50 g/L is Doux."
         },
@@ -360,7 +360,7 @@
           "q": "Which of these styles is the driest?",
           "options": ["Extra Dry", "Brut", "Sec", "Brut Nature"],
           "answer": 3,
-          "explain": "Brut Nature has 0 to 3 g/L and no added sugar. Brut is under 12 g/L, Extra Dry 12 to 17 and Sec 17 to 32."
+          "explain": "Brut Nature has less than 3 g/L and no added sugar. Brut is under 12 g/L, Extra Dry 12 to 17 and Sec 17 to 32."
         },
         {
           "id": "q12",
@@ -414,7 +414,7 @@
         {"f": "Pupitre and gyropalette", "b": "A pupitre is a wooden rack for riddling by hand. A gyropalette riddles a large cage of bottles by machine."},
         {"f": "Dégorgement à la volée", "b": "Disgorging by hand without freezing the neck. The sediment is let out with as little wine as possible."},
         {"f": "Liqueur d'expédition", "b": "Wine and sugar added after disgorgement to top up the bottle. This dosage sets the sweetness."},
-        {"f": "Brut Nature", "b": "0 to 3 g/L of sugar, with no sugar added in the dosage."},
+        {"f": "Brut Nature", "b": "Less than 3 g/L of sugar, with no sugar added after the second fermentation."},
         {"f": "Extra Dry", "b": "12 to 17 g/L of sugar, sweeter than Brut despite the name."},
         {"f": "Doux", "b": "Over 50 g/L of sugar, the sweetest style."},
         {"f": "Blanc de Blancs and Blanc de Noirs", "b": "Blanc de Blancs is from white grapes, in practice Chardonnay. Blanc de Noirs is white wine from Pinot Noir, Meunier or both."},
@@ -449,7 +449,7 @@
           "h": "Soils and the Grands Crus",
           "p": [
             "Alsace has a mosaic of soils, including granite, limestone, marl, sandstone, schist and volcanic rock. Different sites can give very different wines from the same grape. The Alsace AOC was created in 1962 and Alsace Grand Cru followed in 1975. There are now 51 grand cru sites, each with its own appellation.",
-            "Grand cru wines are generally limited to the four noble grapes. There are exceptions. Zotzenberg also allows Sylvaner, while Altenberg de Bergheim and Kaefferkopf allow blends. Since the 2022 vintage, Hengst and Kirchberg de Barr also allow Pinot Noir. Well-known sites include Schlossberg and Brand, both on granite, and Rangen at Thann, a steep site on volcanic rock in the far south."
+            "Grand cru wines are generally limited to the four noble grapes. There are exceptions. Zotzenberg also allows Sylvaner, while Altenberg de Bergheim and Kaefferkopf allow blends. Since the 2022 vintage, Hengst and Kirchberg de Barr also allow Pinot Noir, and Vorbourg was added in July 2024. Well-known sites include Schlossberg and Brand, both on granite, and Rangen at Thann, a steep site on volcanic rock in the far south."
           ],
           "places": ["fr-inao-a1223", "fr-inao-a1190", "fr-inao-a1220", "fr-inao-a1237", "fr-inao-a1188", "fr-inao-a1203", "fr-inao-a1202", "fr-inao-a1207"]
         },
@@ -768,10 +768,10 @@
         },
         {
           "id": "q9",
-          "q": "What is the maximum alcohol allowed for Muscadet Sèvre et Maine?",
-          "options": ["11%", "12%", "13.5%", "There is no maximum"],
+          "q": "What is the maximum total alcohol for Muscadet Sèvre et Maine after enrichment?",
+          "options": ["11%", "12%", "13.5%", "14.5%"],
           "answer": 1,
-          "explain": "Muscadet has an upper limit of 12% abv after any enrichment, which keeps the style light.",
+          "explain": "The specification caps Muscadet at 12% total alcohol after enrichment, which keeps the style light.",
           "place": "fr-inao-a100"
         },
         {
@@ -835,7 +835,7 @@
         {"f": "How does the Loire climate change from west to east?", "b": "Mild and maritime in the Pays Nantais, then more continental further inland."},
         {"f": "Melon", "b": "Also called Melon de Bourgogne, the only grape of Muscadet. It gives light, neutral whites with high acidity.", "place": "fr-inao-a97"},
         {"f": "The four Muscadet appellations", "b": "Muscadet, Muscadet Sèvre et Maine, Muscadet Coteaux de la Loire and Muscadet Côtes de Grandlieu."},
-        {"f": "Maximum alcohol for Muscadet", "b": "12% abv after any enrichment, an unusual upper limit for an appellation.", "place": "fr-inao-a100"},
+        {"f": "Maximum alcohol for Muscadet", "b": "12% abv total after enrichment, which keeps the style light.", "place": "fr-inao-a100"},
         {"f": "Muscadet sur lie", "b": "The wine stays on its fine lees until at least 1 March after harvest and is bottled straight off them.", "place": "fr-inao-a100"},
         {"f": "When may Muscadet Sèvre et Maine sur lie be bottled?", "b": "Between 1 March and 31 December of the year after harvest, in the cellar where it was made.", "place": "fr-inao-a100"},
         {"f": "Muscadet crus communaux", "b": "Sèvre et Maine sub-areas with long lees ageing. The first three, approved in 2011, were Clisson, Gorges and Le Pallet."},

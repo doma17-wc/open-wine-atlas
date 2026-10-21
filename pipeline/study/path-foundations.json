@@ -640,7 +640,7 @@
         {
           "h": "Choices in the vineyard",
           "p": [
-            "Growers shape quality through the year. Pruning and green harvesting (cutting off bunches in summer) control yield. Canopy management balances leaves and fruit and keeps the bunches healthy. Hand picking allows careful selection and keeps bunches whole. It is required in Champagne, and in Sauternes pickers pass through the vineyard several times to take only the nobly rotten grapes."
+            "Growers shape quality through the year. Pruning and green harvesting (cutting off bunches in summer) control yield. Canopy management balances leaves and fruit and keeps the bunches healthy. Hand picking allows careful selection and keeps bunches whole. Champagne requires whole bunches, which in practice means hand picking, and in Sauternes pickers pass through the vineyard several times to take only the nobly rotten grapes."
           ],
           "places": ["fr-eupdo-PDO-FR-A1359", "fr-inao-a75"]
         }
@@ -1000,7 +1000,7 @@
           "h": "Sparkling wine: the traditional method",
           "p": [
             "Most fine sparkling wine gets its bubbles from a second fermentation in the bottle. A still base wine is bottled with yeast and sugar (the liqueur de tirage). The yeast ferments the sugar, and the carbon dioxide stays dissolved in the wine. The dead yeast cells (lees) then break down slowly, a process called autolysis, which gives notes of bread, brioche and biscuit.",
-            "The lees are moved into the neck by riddling (remuage), turning and tilting the bottle by hand or machine. At disgorgement the neck is frozen and the plug of yeast removed. A small dose of sweetened wine (the dosage) sets the style, from Brut Nature with no added sugar to Doux, the sweetest. Brut has up to 12 g/L of sugar.",
+            "The lees are moved into the neck by riddling (remuage), turning and tilting the bottle by hand or machine. At disgorgement the neck is frozen and the plug of yeast removed. A small dose of sweetened wine (the dosage) sets the style, from Brut Nature with no added sugar to Doux, the sweetest. Brut has less than 12 g/L of sugar.",
             "Champagne uses mainly Chardonnay, Pinot Noir and Meunier. Non-vintage Champagne must stay at least 15 months in the cellar after bottling, 12 of them on the lees; vintage Champagne at least three years. Cava, mostly from Penedès in Catalonia, uses Macabeo, Xarel·lo and Parellada and needs at least 9 months on the lees. Franciacorta in Lombardy uses mainly Chardonnay and Pinot Nero."
           ],
           "places": ["fr-eupdo-PDO-FR-A1359", "es-eupdo-PDO-ES-A0735", "it-eupdo-PDO-IT-A1034"]
@@ -1033,7 +1033,7 @@
           "h": "Sherry",
           "p": [
             "Sherry comes from the area around Jerez de la Frontera, Sanlúcar de Barrameda and El Puerto de Santa María in Andalucía, and is made mostly from Palomino. Unlike Port, the base wine is fermented to dryness first and fortified afterwards. Any sweetness is added later, for example from wine made with Pedro Ximénez grapes.",
-            "Fino and Manzanilla are fortified to about 15% and age under flor, a layer of yeast that protects the wine from oxygen and gives a tangy, bready character. Oloroso is fortified to about 17%, which stops flor growing, and ages with oxygen, gaining colour and nutty flavours. Sherry is aged in a solera, a system of fractional blending: wine is drawn from the oldest casks, which are topped up from younger ones."
+            "Fino and Manzanilla are usually fortified to about 15%, though the rules now also allow wine that reaches its strength naturally. They age under flor, a layer of yeast that protects the wine from oxygen and gives a tangy, bready character. Oloroso is fortified to about 17%, which stops flor growing, and ages with oxygen, gaining colour and nutty flavours. Sherry is aged in a solera, a system of fractional blending: wine is drawn from the oldest casks, which are topped up from younger ones."
           ],
           "places": ["es-eupdo-PDO-ES-A1483"]
         }
@@ -1190,7 +1190,7 @@
         {"f": "Sauternes grapes", "b": "Mainly Sémillon, with Sauvignon Blanc and some Muscadelle.", "place": "fr-inao-a75"},
         {"f": "Barsac", "b": "A sweet wine commune beside Sauternes. Its wines may be sold as Barsac or as Sauternes.", "place": "fr-inao-a8"},
         {"f": "Tokaji Aszú since 2013", "b": "It needs at least 120 g/L of sugar, the old 5 puttonyos level. The 3 and 4 puttonyos levels were dropped.", "place": "hu-eupdo-PDO-HU-A1254"},
-        {"f": "Eiswein", "b": "Pressed from grapes frozen on the vine, so the water stays behind as ice. German rules require picking at -7°C or colder."},
+        {"f": "Eiswein", "b": "Pressed from grapes picked and pressed while frozen on the vine, so the water stays behind as ice. In practice about -7°C or colder is needed."},
         {"f": "Late Bottled Vintage Port", "b": "Port from a single year, bottled between the fourth and sixth year after harvest.", "place": "pt-eupdo-PDO-PT-A1540"},
         {"f": "Amontillado", "b": "A Sherry that starts ageing under flor and then continues with oxygen once the flor dies away.", "place": "es-eupdo-PDO-ES-A1483"},
         {"f": "Manzanilla", "b": "A flor-aged Sherry style that must be aged in Sanlúcar de Barrameda, by the sea.", "place": "es-eupdo-PDO-ES-A1482"},

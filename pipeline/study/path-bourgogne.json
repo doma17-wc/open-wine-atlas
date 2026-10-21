@@ -173,6 +173,14 @@
           "options": ["Maritime, with mild winters", "Mediterranean, with long dry summers", "Continental, with cold winters", "Semi-arid, with very low rainfall"],
           "answer": 2,
           "explain": "Burgundy is continental, with cold winters, spring frost, summer hail and a risk of rain at harvest."
+        },
+        {
+          "id": "q16",
+          "q": "Which appellation replaced Bourgogne Grand Ordinaire in 2011?",
+          "options": ["Bourgogne Aligoté", "Bourgogne Passe-tout-grains", "Coteaux Bourguignons", "Mâcon-Villages"],
+          "answer": 2,
+          "explain": "Coteaux Bourguignons was created in 2011 in place of Bourgogne Grand Ordinaire. Its reds may use Gamay as well as Pinot Noir.",
+          "place": "fr-inao-a1027"
         }
       ],
       "cards": [
@@ -576,6 +584,14 @@
           "answer": 3,
           "explain": "Chambolle reds are known for perfume and silkiness. Firm, earthy reds are typical of Nuits-Saint-Georges.",
           "place": "fr-inao-a150"
+        },
+        {
+          "id": "q16",
+          "q": "Which Gevrey-Chambertin grand cru may also be sold as Chambertin?",
+          "options": ["Charmes-Chambertin", "Mazoyères-Chambertin", "Chambertin-Clos de Bèze", "Latricières-Chambertin"],
+          "answer": 2,
+          "explain": "Chambertin-Clos de Bèze may be labelled Chambertin. Mazoyères-Chambertin may be sold as Charmes-Chambertin.",
+          "place": "fr-inao-a149"
         }
       ],
       "cards": [
@@ -779,6 +795,14 @@
           "answer": 1,
           "explain": "Saint-Aubin, behind Puligny and Chassagne, is mostly white. Santenay and Maranges are mostly red.",
           "place": "fr-inao-a227"
+        },
+        {
+          "id": "q16",
+          "q": "Which village may NOT sell its red wine as Côte de Beaune-Villages?",
+          "options": ["Santenay", "Pommard", "Saint-Aubin", "Monthelie"],
+          "answer": 1,
+          "explain": "Beaune, Aloxe-Corton, Pommard and Volnay may not use Côte de Beaune-Villages. Santenay, Saint-Aubin and Monthelie may.",
+          "place": "fr-inao-a168"
         }
       ],
       "cards": [
