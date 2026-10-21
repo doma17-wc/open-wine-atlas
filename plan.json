@@ -69,11 +69,13 @@
   {
    "slug": "deep-tokaj",
    "place": "Tokaj",
-   "atlas_id": "",
+   "atlas_id": "hu-eupdo-PDO-HU-A1254",
    "series": "",
    "not_before": "2026-10-21",
    "why": "aszú berries are picked one by one in autumn",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-21T17:50+02:00",
+   "note": "Hook kept generic (aszú berries picked by hand, sorted berry by berry, per the PDO specification); no 2026 harvest date claim. Climate from WMO 1991-2020 normals (HungaroMet data) via the Wikipedia climate boxes citing the NOAA CSVs; the CSVs themselves were not reachable. Sun from the PDO specification."
   },
   {
    "slug": "deep-barolo",
@@ -83,7 +85,7 @@
    "not_before": "2026-10-20",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
    "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi."
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made)."
   },
   {
    "slug": "deep-sauternes",

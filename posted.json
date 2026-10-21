@@ -84,6 +84,17 @@
     "EU GI register",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-tokaj",
+   "place": "Tokaj",
+   "slot": "2026-10-21T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=7714295400713571965",
+   "sources": [
+    "HungaroMet data, WMO normals 1991-2020 (Nyíregyháza-Napkor, Miskolc), via Wikipedia climate boxes citing NOAA NCEI",
+    "Tokaj PDO product specification v10a (Hungarian Ministry of Agriculture)",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

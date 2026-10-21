@@ -1,0 +1,198 @@
+{
+ "slug": "deep-tokaj",
+ "place": "Tokaj",
+ "atlas_id": "hu-eupdo-PDO-HU-A1254",
+ "station": {
+  "name": "Nyíregyháza-Napkor",
+  "wmo": 12892,
+  "lat": 47.96666666666667,
+  "lon": 21.883333333333333,
+  "height_m": null,
+  "service": "HungaroMet (Hungarian Meteorological Service), WMO Climatological Standard Normals 1991-2020 as archived by NOAA NCEI",
+  "period": "1991-2020",
+  "republished_by": "https://en.wikipedia.org/wiki/Ny%C3%ADregyh%C3%A1za",
+  "primary_csv": "https://www.nodc.noaa.gov/archive/arc0216/0253808/1.1/data/0-data/Region-6-WMO-Normals-9120/Hungary/CSV/NyiregyhazaNapkor_12892.csv",
+  "coords_source": "https://nimbus.elte.hu/staff/gyuro/WMO_WWW_HU.pdf",
+  "note": "Primary CSV could not be fetched in this run (proxy/permission); values taken from the Wikipedia climate box that cites that NOAA CSV. Station height not verified, so not shown. No sunshine row in the 1991-2020 data on that page."
+ },
+ "comparison_station": {
+  "name": "Miskolc",
+  "wmo": 12772,
+  "lat": 48.094722222222224,
+  "lon": 20.726666666666667,
+  "period": "1991-2020",
+  "republished_by": "https://en.wikipedia.org/wiki/Miskolc",
+  "primary_csv": "https://www.nodc.noaa.gov/archive/arc0216/0253808/1.1/data/0-data/Region-6-WMO-Normals-9120/Hungary/CSV/MiskolcDiosgyor_12772.csv",
+  "note": "Precipitation and temperature rows are 1991-2020; the page's sunshine row is 1961-1990 and is NOT used."
+ },
+ "monthly": {
+  "nyi": {
+   "tmax": [
+    1.5,
+    4.4,
+    10.6,
+    17.7,
+    22.5,
+    25.8,
+    27.8,
+    27.9,
+    22.2,
+    15.9,
+    9.0,
+    2.7
+   ],
+   "tmax_year": 15.7,
+   "tmean": [
+    -1.2,
+    0.7,
+    5.8,
+    11.9,
+    16.4,
+    19.8,
+    21.4,
+    21.3,
+    16.0,
+    10.6,
+    5.2,
+    0.1
+   ],
+   "tmean_year": 10.7,
+   "tmin": [
+    -3.6,
+    -2.4,
+    1.5,
+    6.5,
+    10.8,
+    14.3,
+    15.6,
+    15.3,
+    10.8,
+    6.2,
+    2.0,
+    -2.1
+   ],
+   "tmin_year": 6.2,
+   "precip": [
+    26.5,
+    30.9,
+    27.9,
+    39.9,
+    58.7,
+    63.5,
+    67.9,
+    46.0,
+    50.8,
+    44.2,
+    41.2,
+    48.5
+   ],
+   "precip_year": 546.0
+  },
+  "mis": {
+   "tmax": [
+    2.0,
+    4.8,
+    11.0,
+    17.7,
+    22.5,
+    26.1,
+    28.1,
+    28.0,
+    22.3,
+    15.7,
+    8.7,
+    2.6
+   ],
+   "tmin": [
+    -3.9,
+    -2.6,
+    1.1,
+    6.0,
+    10.6,
+    14.4,
+    16.0,
+    15.6,
+    11.2,
+    6.2,
+    2.1,
+    -2.6
+   ],
+   "precip": [
+    28.0,
+    35.3,
+    31.3,
+    47.4,
+    67.0,
+    85.0,
+    91.1,
+    64.6,
+    53.8,
+    56.8,
+    44.6,
+    39.0
+   ],
+   "precip_year": 643.9
+  }
+ },
+ "derived": {
+  "nyi_precip_sum": 546.0,
+  "mis_precip_sum": 643.9,
+  "nyi_apr_oct_tmean": 16.77,
+  "nyi_apr_oct_precip": 371.0,
+  "km_centroid_to_nyi": 47.7,
+  "km_centroid_to_mis": 53.6,
+  "mis_minus_nyi_precip": 97.9,
+  "wettest_nyi": "Jul"
+ },
+ "derived_code": "import json, math\ndef hav(a,b):\n    R=6371.0; la1,lo1=map(math.radians,a); la2,lo2=map(math.radians,b)\n    d=math.sin((la2-la1)/2)**2+math.cos(la1)*math.cos(la2)*math.sin((lo2-lo1)/2)**2\n    return 2*R*math.asin(math.sqrt(d))\ndms=lambda d,m,s=0: d+m/60+s/3600\nnyi=(dms(47,58),dms(21,53)); mis=(dms(48,5,41),dms(20,43,36)); cen=(48.25554,21.40798)\ntokaj_town=None\nny={\"tmax\":[1.5,4.4,10.6,17.7,22.5,25.8,27.8,27.9,22.2,15.9,9.0,2.7],\"tmax_year\":15.7,\n    \"tmean\":[-1.2,0.7,5.8,11.9,16.4,19.8,21.4,21.3,16.0,10.6,5.2,0.1],\"tmean_year\":10.7,\n    \"tmin\":[-3.6,-2.4,1.5,6.5,10.8,14.3,15.6,15.3,10.8,6.2,2.0,-2.1],\"tmin_year\":6.2,\n    \"precip\":[26.5,30.9,27.9,39.9,58.7,63.5,67.9,46.0,50.8,44.2,41.2,48.5],\"precip_year\":546.0}\nmi={\"tmax\":[2.0,4.8,11.0,17.7,22.5,26.1,28.1,28.0,22.3,15.7,8.7,2.6],\"tmin\":[-3.9,-2.6,1.1,6.0,10.6,14.4,16.0,15.6,11.2,6.2,2.1,-2.6],\n    \"precip\":[28.0,35.3,31.3,47.4,67.0,85.0,91.1,64.6,53.8,56.8,44.6,39.0],\"precip_year\":643.9}\nder={}\nder[\"nyi_precip_sum\"]=round(sum(ny[\"precip\"]),1)\nder[\"mis_precip_sum\"]=round(sum(mi[\"precip\"]),1)\nder[\"nyi_apr_oct_tmean\"]=round(sum(ny[\"tmean\"][3:10])/7,2)\nder[\"nyi_apr_oct_precip\"]=round(sum(ny[\"precip\"][3:10]),1)\nder[\"km_centroid_to_nyi\"]=round(hav(cen,nyi),1)\nder[\"km_centroid_to_mis\"]=round(hav(cen,mis),1)\nder[\"mis_minus_nyi_precip\"]=round(mi[\"precip_year\"]-ny[\"precip_year\"],1)\nder[\"wettest_nyi\"]=[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"][ny[\"precip\"].index(max(ny[\"precip\"]))]\nprint(der)\nW=\"https://en.wikipedia.org/wiki/Ny%C3%ADregyh%C3%A1za\"; WM=\"https://en.wikipedia.org/wiki/Miskolc\"\nCSV=\"https://www.nodc.noaa.gov/archive/arc0216/0253808/1.1/data/0-data/Region-6-WMO-Normals-9120/Hungary/CSV/NyiregyhazaNapkor_12892.csv\"\nSPEC=\"https://boraszat.kormany.hu/akadalymentes/download/1/40/53000/TOKAJ%20term%C3%A9kle%C3%ADr%C3%A1s%20%2810a%20v%C3%A1ltozat%29%20korr.pdf\"\nfacts={\"slug\":\"deep-tokaj\",\"place\":\"Tokaj\",\"atlas_id\":\"hu-eupdo-PDO-HU-A1254\",\n \"station\":{\"name\":\"Nyíregyháza-Napkor\",\"wmo\":12892,\"lat\":nyi[0],\"lon\":nyi[1],\"height_m\":None,\n   \"service\":\"HungaroMet (Hungarian Meteorological Service), WMO Climatological Standard Normals 1991-2020 as archived by NOAA NCEI\",\n   \"period\":\"1991-2020\",\"republished_by\":W,\"primary_csv\":CSV,\n   \"coords_source\":\"https://nimbus.elte.hu/staff/gyuro/WMO_WWW_HU.pdf\",\n   \"note\":\"Primary CSV could not be fetched in this run (proxy/permission); values taken from the Wikipedia climate box that cites that NOAA CSV. Station height not verified, so not shown. No sunshine row in the 1991-2020 data on that page.\"},\n \"comparison_station\":{\"name\":\"Miskolc\",\"wmo\":12772,\"lat\":mis[0],\"lon\":mis[1],\"period\":\"1991-2020\",\"republished_by\":WM,\n   \"primary_csv\":\"https://www.nodc.noaa.gov/archive/arc0216/0253808/1.1/data/0-data/Region-6-WMO-Normals-9120/Hungary/CSV/MiskolcDiosgyor_12772.csv\",\n   \"note\":\"Precipitation and temperature rows are 1991-2020; the page's sunshine row is 1961-1990 and is NOT used.\"},\n \"monthly\":{\"nyi\":ny,\"mis\":mi},\"derived\":der,\n \"derived_code\":open(__file__).read(),\n \"spec\":{\"source\":\"Tokaj PDO product specification (termékleírás), version 10a, Tokaji Borvidék Hegyközségi Tanácsa, published by the Hungarian Ministry of Agriculture (boraszat.kormany.hu)\",\"url\":SPEC,\n   \"facts\":{\"settlements\":27,\"varieties\":[\"Furmint\",\"Hárslevelű\",\"Kabar\",\"Kövérszőlő\",\"Sárgamuskotály\",\"Zéta\"],\n     \"aszu_definition\":\"berries affected by Botrytis cinerea on the vine, picked by hand separately; hand berry-by-berry sorting mandatory\",\n     \"aszu_min_residual_sugar_g_l\":120,\"aszu_min_oak_months\":18,\"six_puttonyos_min_sugar_g_l\":150,\n     \"annual_mean_temp_c\":10.8,\"annual_precip_mm\":525,\"growing_season_precip_mm\":313,\"sunshine_h_year\":2009,\n     \"active_temp_sum_c\":\"1600-1800\",\"vineyard_altitude_m\":\"100-300\",\n     \"soils\":\"volcanic rock of the Zemplén Mountains with tuffs of varied composition; up to three tuff types within 100 m; loess covers about 5% of the region, mainly around Tarcal and Tokaj\",\n     \"rivers\":\"Bodrog and Tisza and their wetlands shape the microclimate; regular autumn weather favours aszú; noble rot (nemes rothadás)\",\n     \"period_note\":\"Climate figures in the specification carry no stated period.\"}},\n \"atlas\":{\"source\":\"Open Wine Atlas web/data/details-hu.json\",\"communes\":27,\"terrain_e\":[90,170,622,94,326],\"outline_area_ha\":87291,\"registered\":\"2006-02-17\",\"centroid\":list(cen)},\n \"dropped\":[\"Station heights (not verifiable in this run)\",\"Station sunshine 1991-2020 (not available; Miskolc sun row on Wikipedia is 1961-1990)\",\"Grape shares by area (no official source found)\"]}\njson.dump(facts,open('work/deep-tokaj/facts.json','w'),ensure_ascii=False,indent=1)\n",
+ "spec": {
+  "source": "Tokaj PDO product specification (termékleírás), version 10a, Tokaji Borvidék Hegyközségi Tanácsa, published by the Hungarian Ministry of Agriculture (boraszat.kormany.hu)",
+  "url": "https://boraszat.kormany.hu/akadalymentes/download/1/40/53000/TOKAJ%20term%C3%A9kle%C3%ADr%C3%A1s%20%2810a%20v%C3%A1ltozat%29%20korr.pdf",
+  "facts": {
+   "settlements": 27,
+   "varieties": [
+    "Furmint",
+    "Hárslevelű",
+    "Kabar",
+    "Kövérszőlő",
+    "Sárgamuskotály",
+    "Zéta"
+   ],
+   "aszu_definition": "berries affected by Botrytis cinerea on the vine, picked by hand separately; hand berry-by-berry sorting mandatory",
+   "aszu_min_residual_sugar_g_l": 120,
+   "aszu_min_oak_months": 18,
+   "six_puttonyos_min_sugar_g_l": 150,
+   "annual_mean_temp_c": 10.8,
+   "annual_precip_mm": 525,
+   "growing_season_precip_mm": 313,
+   "sunshine_h_year": 2009,
+   "active_temp_sum_c": "1600-1800",
+   "vineyard_altitude_m": "100-300",
+   "soils": "volcanic rock of the Zemplén Mountains with tuffs of varied composition; up to three tuff types within 100 m; loess covers about 5% of the region, mainly around Tarcal and Tokaj",
+   "rivers": "Bodrog and Tisza and their wetlands shape the microclimate; regular autumn weather favours aszú; noble rot (nemes rothadás)",
+   "period_note": "Climate figures in the specification carry no stated period."
+  }
+ },
+ "atlas": {
+  "source": "Open Wine Atlas web/data/details-hu.json",
+  "communes": 27,
+  "terrain_e": [
+   90,
+   170,
+   622,
+   94,
+   326
+  ],
+  "outline_area_ha": 87291,
+  "registered": "2006-02-17",
+  "centroid": [
+   48.25554,
+   21.40798
+  ]
+ },
+ "dropped": [
+  "Station heights (not verifiable in this run)",
+  "Station sunshine 1991-2020 (not available; Miskolc sun row on Wikipedia is 1961-1990)",
+  "Grape shares by area (no official source found)"
+ ]
+}
