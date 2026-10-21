@@ -1311,5 +1311,8 @@
  "Producers": "Productores",
  "Wines": "Vinos",
  "Nothing found. Some kinds are switched off under the filter button.": "Sin resultados. Algunos tipos están desactivados en el botón de filtro.",
- "Loading the wines…": "Cargando los vinos…"
+ "Loading the wines…": "Cargando los vinos…",
+ "Membership opens soon: reserve a Founding spot now, nothing to pay until then.": "La membresía abre pronto: reserva ya una plaza Founding, nada que pagar hasta entonces.",
+ "Reserve my Founding spot": "Reservar mi plaza Founding",
+ "Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.": "La membresía abre pronto. Los primeros 1.000 miembros tienen un año completo por CHF 19, nada que pagar ahora."
 }

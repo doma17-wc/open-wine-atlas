@@ -363,8 +363,9 @@ function paywall() {
 }
 function paywallHtml() {
   return '<div class="qz-pay"><b>' + t_("That was today's {n} free questions.", { n: FREE_PER_DAY }) + "</b><p>" +
-    t_("Members study without limits: every lesson, every quiz and the full review. Free questions come back tomorrow.") + "</p>" +
-    '<a class="primary" href="/founding?from=study">' + t_("Become a Founding Member") + " →</a></div>";
+    t_("Members study without limits: every lesson, every quiz and the full review. Free questions come back tomorrow.") + " " +
+    t_("Membership opens soon: reserve a Founding spot now, nothing to pay until then.") + "</p>" +
+    '<a class="primary" href="/founding?from=study">' + t_("Reserve my Founding spot") + " →</a></div>";
 }
 async function missedAgain() {
   const keys = QZ.missed.slice(), title = QZ.title, back = QZ.back;
@@ -472,7 +473,8 @@ function lessonView(l) {
     '<article class="st-lesson"><div class="eyebrow">' + esc(p.title) + " · " + t_("Lesson {n}", { n: i + 1 }) + "</div><h3 class=\"st-title\">" + esc(l.title) + "</h3>" +
     '<p class="lead">' + esc(l.intro || "") + "</p>" +
     (lock ? (l.sections[0] ? sec(l.sections[0]) : "") + '<div class="qz-pay"><b>' + t_("The rest of this lesson is for members.") + "</b><p>" +
-        t_("The first lesson of every path is free. Members read every lesson and study without limits.") + '</p><a class="primary" href="/founding?from=lesson">' + t_("Become a Founding Member") + " →</a></div>"
+        t_("The first lesson of every path is free. Members read every lesson and study without limits.") + " " +
+        t_("Membership opens soon: reserve a Founding spot now, nothing to pay until then.") + '</p><a class="primary" href="/founding?from=lesson">' + t_("Reserve my Founding spot") + " →</a></div>"
       : l.sections.map(sec).join("") +
         (l.key && l.key.length ? '<div class="st-key"><b>' + t_("Remember") + "</b><ul>" + l.key.map((k) => "<li>" + esc(k) + "</li>").join("") + "</ul></div>" : "") +
         '<div class="st-drills"><button class="primary" data-st-quiz="' + esc(l.id) + '">' + t_("Quiz on this lesson") + " · " + l.questions.length + "</button>" +

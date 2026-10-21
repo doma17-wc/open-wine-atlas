@@ -1311,5 +1311,8 @@
  "Producers": "生産者",
  "Wines": "ワイン",
  "Nothing found. Some kinds are switched off under the filter button.": "見つかりません。フィルターボタンで一部の種類がオフになっています。",
- "Loading the wines…": "ワインを読み込み中…"
+ "Loading the wines…": "ワインを読み込み中…",
+ "Membership opens soon: reserve a Founding spot now, nothing to pay until then.": "メンバーシップはまもなく開始します。今すぐFoundingの枠を予約できます。それまでお支払いはありません。",
+ "Reserve my Founding spot": "Foundingの枠を予約",
+ "Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.": "メンバーシップはまもなく開始。先着1,000名は1年間CHF 19。今はお支払い不要です。"
 }

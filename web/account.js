@@ -250,10 +250,11 @@ function signedOut() {
     '<p class="note wide" id="acct-msg">' + esc(S.msg || t_("You can also open the link in the email on this device.")) + "</p></form></div>";
   return '<div class="acct-card">' + intro +
     '<form class="jform" id="acct-email-form"><label class="wide">' + t_("Email") + '<input id="acct-email" type="email" autocomplete="email" inputmode="email" maxlength="254" required value="' + esc(S.email) + '" placeholder="you@example.com"></label>' +
-    '<label class="wide acct-agree"><input id="acct-terms" type="checkbox" required' + (S.agreed ? " checked" : "") + "><span>" +
-      t_("I am 18 or older and accept the {terms}. See the {privacy}.", { terms: link("/terms", t_("Terms of Use")), privacy: link("/privacy", t_("privacy policy")) }) + "</span></label>" +
-    '<div class="row wide"><button class="primary" type="submit"' + (S.busy ? " disabled" : "") + ">" + t_("Send me a code") + "</button></div>" +
-    '<p class="note wide" id="acct-msg">' + (S.msg ? esc(S.msg) : t_("Signing in creates your account if you do not have one yet.")) + "</p></form></div>";
+    // the Terms come up once, only when the email has no account yet
+    (S.isNew ? '<label class="wide acct-agree"><input id="acct-terms" type="checkbox" required' + (S.agreed ? " checked" : "") + "><span>" +
+      t_("New here: I am 18 or older and accept the {terms}. See the {privacy}.", { terms: link("/terms", t_("Terms of Use")), privacy: link("/privacy", t_("privacy policy")) }) + "</span></label>" : "") +
+    '<div class="row wide"><button class="primary" type="submit"' + (S.busy ? " disabled" : "") + ">" + (S.isNew ? t_("Create my account") : t_("Send me a code")) + "</button></div>" +
+    '<p class="note wide" id="acct-msg">' + (S.msg ? esc(S.msg) : t_("No password: we email you a code.")) + "</p></form></div>";
 }
 
 function signedIn() {
@@ -262,6 +263,9 @@ function signedIn() {
   const favs = S.fav.map((id) => O.placeOf(id)).filter(Boolean);
   return '<div class="acct-card"><div class="acct-who"><span class="acct-av">' + esc(initial()) + "</span><div><b>" + esc(p.display_name || t_("Your profile")) + "</b><span>" + esc(S.user.email) + "</span></div>" +
     (S.founding ? '<span class="badge-f">' + (S.founding.founding ? t_("Founding Member · spot {n}", { n: S.founding.spot }) : t_("On the list")) + "</span>" : "") + "</div>" +
+    (S.founding ? "" : '<div class="fm-reserve"><div><b>' + t_("Become a Founding Member") + "</b><span>" +
+      t_("Membership opens soon. Reserve your spot with this account: CHF 19 for the first year, then CHF 39, nothing to pay now. We email you when it opens.") +
+      '</span></div><button class="primary" id="acct-founding">' + t_("Reserve my spot") + "</button></div>") +
     '<div class="row"><span class="acct-sync' + (S.sync === "error" ? " err" : "") + '" id="acct-sync">' + esc(syncText()) + '</span><button class="mini-btn" id="acct-syncnow">' + t_("Sync now") + "</button>" +
     '<button class="mini-btn" id="acct-out">' + t_("Sign out") + "</button></div></div>" +
     '<div><h3>' + t_("Profile") + '</h3><form class="jform acct-card" id="acct-profile" autocomplete="off">' +
@@ -297,8 +301,9 @@ function wire() {
     e.preventDefault();
     const email = $("acct-email").value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return msg(t_("Please enter a valid email address."));
-    if (!$("acct-terms").checked) { $("acct-terms").focus(); return msg(t_("Please confirm that you are 18 or older and accept the Terms of Use.")); }
-    S.agreed = true;
+    if (email !== S.email) S.isNew = false;
+    if (S.isNew && !$("acct-terms").checked) { $("acct-terms").focus(); return msg(t_("Please confirm that you are 18 or older and accept the Terms of Use.")); }
+    if (S.isNew) S.agreed = true;
     S.email = email; await sendCode();
   };
   const cf = $("acct-code-form");
@@ -315,10 +320,19 @@ function wire() {
       O.toast(t_("Signed in. Your atlas is syncing."));
     };
     $("acct-resend").onclick = sendCode;
-    $("acct-back").onclick = () => { S.step = "email"; S.msg = ""; rerender(); };
+    $("acct-back").onclick = () => { S.step = "email"; S.msg = ""; S.isNew = false; rerender(); };
   }
   if (!S.user) return;
   $("acct-syncnow").onclick = () => fullSync();
+  const fr = $("acct-founding");
+  if (fr) fr.onclick = async () => {
+    fr.disabled = true;
+    const { data, error } = await S.sb.rpc("founding_reserve", { p_consent_version: "2026-10-21", p_source: "account", p_lang: (navigator.language || "").slice(0, 12) });
+    if (error) { fr.disabled = false; return O.toast(t_("Could not reserve the spot. Please try again.")); }
+    S.founding = Array.isArray(data) ? data[0] : data;
+    rerender();
+    O.toast(S.founding?.founding ? t_("Founding spot {n} is yours.", { n: S.founding.spot }) : t_("You are on the list."));
+  };
   $("acct-out").onclick = () => signOut(false);
   const dz = document.querySelector(".acct-danger");
   if (dz) dz.ontoggle = () => { S.dangerOpen = dz.open; };
@@ -375,9 +389,15 @@ function msg(t) { S.msg = t; const el = $("acct-msg"); if (el) el.textContent = 
 function busy(b) { S.busy = b; document.querySelectorAll(".acct button[type=submit]").forEach((x) => { x.disabled = b; }); }
 async function sendCode() {
   busy(true);
-  const { error } = await S.sb.auth.signInWithOtp({ email: S.email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + "/?signin=1",
-    data: { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true } } });
+  const create = !!(S.isNew && S.agreed);
+  const options = { shouldCreateUser: create, emailRedirectTo: location.origin + "/?signin=1" };
+  if (create) options.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true };
+  const { error } = await S.sb.auth.signInWithOtp({ email: S.email, options });
   busy(false);
+  if (error && (error.code === "otp_disabled" || /signups not allowed/i.test(error.message))) {
+    // no account with this email yet: ask for the Terms once, then the same button creates it
+    S.isNew = true; S.msg = t_("Welcome. Tick the box to create your free account."); return rerender();
+  }
   if (error) {
     S.msg = /rate|seconds|too many/i.test(error.message) ? t_("Please wait a minute before asking for another code.") : t_("Could not send the code. Please try again.");
     return S.step === "code" ? msg(S.msg) : rerender();

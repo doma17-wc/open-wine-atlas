@@ -4,6 +4,9 @@ Two parts, both in one Supabase project (region Zurich, `eu-central-2`):
 
 * `migrations/20261018000000_founding_waitlist.sql` and `functions/founding`: the Founding Member waitlist (double
   opt-in emails through Resend, secret `RESEND_API_KEY`).
+* `migrations/20261021010000_founding_reserve.sql`: since 21 October a spot is reserved by a signed-in account
+  (founding page and Account tab), confirmed at once because the sign-in code already verified the email. The
+  `founding` function still answers confirm and unsubscribe links from emails sent before.
 * `migrations/20261018010000_accounts.sql` and `web/account.js`: accounts. Profiles and everything from My atlas
   (saved places, tastings, notes, recent, compare) in `atlas_items`, each user limited to their own rows by row level
   security.
