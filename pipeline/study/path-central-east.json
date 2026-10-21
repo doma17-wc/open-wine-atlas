@@ -14,7 +14,7 @@
           "h": "Cantonal AOCs and the six regions",
           "p": [
             "Switzerland is not in the EU, so its wine law is its own. The federal wine ordinance (Weinverordnung) sets three categories: AOC wines, Landwein (vin de pays) and Swiss Tafelwein. An AOC wine is named after a canton or a place inside a canton.",
-            "The cantons, not the federal state, set the rules for their AOCs. Each canton must delimit the area and list the permitted grapes, a natural minimum sugar for each grape, a maximum yield and a tasting and analysis check. The federal ordinance only sets the limits the cantons must respect, for example a maximum AOC yield of 1.3 kg/m² for white grapes and 1.2 kg/m² for red in western Switzerland. Geneva was the first canton to create an AOC, in 1988.",
+            "The cantons, not the federal state, set the rules for their AOCs. Each canton must delimit the area and list the permitted grapes, a natural minimum sugar for each grape, a maximum yield and a tasting and analysis check. The federal ordinance only sets the limits the cantons must respect, for example a maximum AOC yield of 1.4 kg/m² for white grapes and 1.2 kg/m² for red in western Switzerland. Geneva was the first canton to create an AOC, in 1988.",
             "The vineyards are grouped into six regions: Valais, Vaud, Geneva, the Three Lakes, German-speaking Switzerland and Ticino. Pinot Noir is the most planted grape and Chasselas the second. Swiss research also bred red crossings such as Gamaret and Garanoir, both from Gamay and Reichensteiner."
           ],
           "places": [
@@ -459,7 +459,7 @@
         {
           "h": "Eger and Villány",
           "p": [
-            "Eger lies in northern Hungary, in the foothills of the Bükk hills. Its most famous wine is Egri Bikavér, Bull's Blood, a red blend. Legend ties the name to the Ottoman siege of Eger in 1552, when the defenders were said to drink red wine. A Classicus Bikavér must blend at least three grapes, with Kékfrankos the largest share. Superior and Grand Superior need at least five grapes and longer ageing. Egri Csillag, Star of Eger, is the white blend of the region. Szekszárd makes a Bikavér too.",
+            "Eger lies in northern Hungary, in the foothills of the Bükk hills. Its most famous wine is Egri Bikavér, Bull's Blood, a red blend. Legend ties the name to the Ottoman siege of Eger in 1552, when the defenders were said to drink red wine. Every Bikavér must blend at least three grapes, and in Eger Kékfrankos leads the blend. Superior and Grand Superior need at least five grapes and longer ageing. Egri Csillag, Star of Eger, is the white blend of the region. Szekszárd makes a Bikavér too.",
             "Villány lies in the far south, near the Croatian border. It is one of the warmest parts of Hungary, and most vineyards face south on the limestone and loess of the Villány hills. It makes ripe, full reds from Cabernet Franc, Cabernet Sauvignon, Merlot and Portugieser. Villányi Franc is a category for pure Cabernet Franc with at least a year in oak and no chaptalisation."
           ],
           "places": [
@@ -559,7 +559,7 @@
         },
         {
           "id": "q7",
-          "q": "Which grape must have the largest share in Egri Bikavér?",
+          "q": "Which grape leads the blend in Egri Bikavér?",
           "options": [
             "Kadarka",
             "Cabernet Franc",

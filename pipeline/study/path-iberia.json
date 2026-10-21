@@ -397,7 +397,7 @@
           "h": "Ribera del Duero",
           "p": [
             "Ribera del Duero follows the Duero river across the high plateau of Castilla y León. Many vineyards are at 750 metres or more, among the highest in Spain. Summers are hot, winters cold and nights cool, which helps keep acidity and colour. Spring frost is a real risk.",
-            "The main grape is Tempranillo, known here as Tinto Fino or Tinta del País, and it must make up most of the blend. Cabernet Sauvignon, Merlot and Malbec are allowed in smaller amounts. The reds are deep in colour and structured, with dark fruit and firm tannins.",
+            "The main grape is Tempranillo, known here as Tinto Fino or Tinta del País, and it must make up most of the blend. Cabernet Sauvignon, Merlot, Malbec and Garnacha Tinta are allowed in smaller amounts. Since 2019 the DO also covers white wine, from at least 75% Albillo Mayor. The reds are deep in colour and structured, with dark fruit and firm tannins.",
             "Vega Sicilia, founded in 1864, made the region's name with its Único. The DO was created in 1982, and producers such as Alejandro Fernández of Pesquera brought it wide fame in the years that followed."
           ],
           "places": ["es-eupdo-PDO-ES-A0626"]
@@ -502,7 +502,7 @@
           "q": "What is the minimum share of Tempranillo in a red Ribera del Duero?",
           "options": ["50%", "75%", "85%", "100%"],
           "answer": 1,
-          "explain": "Red Ribera del Duero must be at least 75% Tempranillo (Tinto Fino). Cabernet Sauvignon, Merlot, Malbec and Garnacha may make up the rest.",
+          "explain": "Red Ribera del Duero must be at least 75% Tempranillo (Tinto Fino). Cabernet Sauvignon, Merlot, Malbec, Garnacha Tinta and Albillo Mayor may make up the rest.",
           "place": "es-eupdo-PDO-ES-A0626"
         },
         {
@@ -526,7 +526,7 @@
           "q": "What share of Albariño must a wine labelled Rías Baixas Albariño contain?",
           "options": ["70%", "85%", "100%", "At least 50%"],
           "answer": 2,
-          "explain": "Rías Baixas Albariño is a single-variety wine made from 100% Albariño. 70% is the minimum for blends such as O Rosal or Condado do Tea.",
+          "explain": "Rías Baixas Albariño is a single-variety wine made from 100% Albariño. Subzone blends such as O Rosal or Condado do Tea need only 70% of Albariño and a partner grape together.",
           "place": "es-eupdo-PDO-ES-A1119"
         },
         {
@@ -534,7 +534,7 @@
           "q": "Which white grape partners Albariño in the O Rosal subzone?",
           "options": ["Loureira", "Treixadura", "Godello", "Verdejo"],
           "answer": 0,
-          "explain": "O Rosal wines need at least 70% Albariño and Loureira. Treixadura is the partner grape in Condado do Tea.",
+          "explain": "O Rosal wines need at least 70% Albariño and Loureira together. Treixadura is the partner grape in Condado do Tea.",
           "place": "es-eupdo-PDO-ES-A1119"
         },
         {
@@ -549,7 +549,7 @@
           "q": "Which is the top tier of Bierzo's origin classification?",
           "options": ["Vino de Villa", "Gran Viña Clasificada", "Vino de Paraje", "Viña Clasificada"],
           "answer": 1,
-          "explain": "Gran Viña Clasificada is the top tier. A vineyard must first have been a Viña Clasificada for at least five years.",
+          "explain": "Gran Viña Clasificada is the top tier and has the lowest maximum yield. Below it come Viña Clasificada, Vino de Paraje and Vino de Villa.",
           "place": "es-eupdo-PDO-ES-A0615"
         },
         {
@@ -563,7 +563,7 @@
       ],
       "cards": [
         { "f": "Tinto Fino and Tinta del País", "b": "Local names for Tempranillo in Ribera del Duero.", "place": "es-eupdo-PDO-ES-A0626" },
-        { "f": "Minimum Tempranillo in red Ribera del Duero", "b": "At least 75%. Cabernet Sauvignon, Merlot, Malbec and Garnacha are also allowed.", "place": "es-eupdo-PDO-ES-A0626" },
+        { "f": "Minimum Tempranillo in red Ribera del Duero", "b": "At least 75%. Cabernet Sauvignon, Merlot, Malbec, Garnacha Tinta and the white Albillo Mayor may make up the rest.", "place": "es-eupdo-PDO-ES-A0626" },
         { "f": "White Ribera del Duero", "b": "Approved in 2019. It must be made from at least 75% Albillo Mayor.", "place": "es-eupdo-PDO-ES-A0626" },
         { "f": "Ribera del Duero provinces", "b": "Burgos, Segovia, Soria and Valladolid, all in Castilla y León.", "place": "es-eupdo-PDO-ES-A0626" },
         { "f": "Altitude in Ribera del Duero", "b": "Valleys at about 750 to 850 metres, with higher ground above 1,000 metres.", "place": "es-eupdo-PDO-ES-A0626" },
@@ -577,7 +577,7 @@
         { "f": "Rías Baixas soils and training", "b": "Mostly granite soils. Vines are often trained on high pergolas for airflow, against rot." },
         { "f": "Rías Baixas subzones", "b": "Five: Val do Salnés, Condado do Tea, O Rosal, Soutomaior and Ribeira do Ulla.", "place": "es-eupdo-PDO-ES-A1119" },
         { "f": "Rías Baixas Albariño", "b": "A wine labelled this way must be 100% Albariño.", "place": "es-eupdo-PDO-ES-A1119" },
-        { "f": "O Rosal and Condado do Tea blends", "b": "O Rosal: at least 70% Albariño plus Loureira. Condado do Tea: at least 70% Albariño plus Treixadura.", "place": "es-eupdo-PDO-ES-A1119" },
+        { "f": "O Rosal and Condado do Tea blends", "b": "O Rosal: Albariño and Loureira together at least 70%. Condado do Tea: Albariño and Treixadura together at least 70%.", "place": "es-eupdo-PDO-ES-A1119" },
         { "f": "Mencía", "b": "The red grape of Bierzo and Ribeira Sacra. It gives fresh, fragrant reds with red fruit and floral notes." },
         { "f": "Bierzo's origin tiers", "b": "Vino de Villa, Vino de Paraje, Viña Clasificada and Gran Viña Clasificada, each with lower maximum yields.", "place": "es-eupdo-PDO-ES-A0615" },
         { "f": "Godello", "b": "The leading white grape of Bierzo and Valdeorras.", "place": "es-eupdo-PDO-ES-A1132" },
@@ -800,7 +800,7 @@
         {
           "h": "The sherry triangle",
           "p": [
-            "Sherry comes mainly from the province of Cádiz in Andalucía, in the far south-west of Spain. The DO is Jerez-Xérès-Sherry, its name in Spanish, French and English. Traditionally the wine is aged in three towns that form the sherry triangle: Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda.",
+            "Sherry comes mainly from the province of Cádiz in Andalucía, in the far south-west of Spain. The DO is Jerez-Xérès-Sherry, its name in Spanish, French and English. Traditionally the wine is aged in three towns that form the sherry triangle: Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda. Since 2022 it may also be aged in the other towns of the production zone, but under the current rules fino may no longer be aged in Sanlúcar, the home of manzanilla.",
             "The climate is hot and sunny. Two winds matter. The poniente blows in from the Atlantic and brings humidity. The levante blows from the east and is hot and dry."
           ],
           "places": ["es-eupdo-PDO-ES-A1483", "es-eupdo-PDO-ES-A1482"]
@@ -816,8 +816,8 @@
         {
           "h": "Flor and fortification",
           "p": [
-            "The base wine is fermented dry and then classified. Wines chosen for fino and manzanilla are fortified to about 15 to 15.5% abv. In butts that are not filled to the top, a film of yeast called flor grows on the surface. Flor shields the wine from oxygen and feeds on alcohol and glycerol. This is called biological ageing.",
-            "Flor gives a pale wine with sharp, pungent aromas of bread dough and almond. Wines chosen for oloroso are fortified to about 17% or more. At this strength flor cannot survive, so the wine ages in contact with oxygen. This oxidative ageing darkens the colour and gives nutty, toasty, dried fruit flavours."
+            "The base wine is fermented dry and then classified. Wines chosen for fino and manzanilla are usually fortified to about 15 to 15.5% abv. Since 2025 fortification is optional, and the legal minimum for both is now 14%. In butts that are not filled to the top, a film of yeast called flor grows on the surface. Flor shields the wine from oxygen and feeds on alcohol and glycerol. This is called biological ageing.",
+            "Flor gives a pale wine with sharp, pungent aromas of bread dough and almond. Wines chosen for oloroso are usually fortified to about 17% or more. At this strength flor cannot survive, so the wine ages in contact with oxygen. This oxidative ageing darkens the colour and gives nutty, toasty, dried fruit flavours."
           ]
         },
         {
@@ -841,7 +841,7 @@
         "Sherry is traditionally aged in Jerez de la Frontera, El Puerto de Santa María and Sanlúcar de Barrameda.",
         "Albariza is a white soil rich in calcium carbonate that stores winter rain.",
         "Palomino makes the dry styles. PX and Moscatel make the sweet ones, PX often from sun-dried grapes.",
-        "Fino and manzanilla are fortified to about 15 to 15.5% and age under flor. Oloroso is fortified to about 17% or more and ages oxidatively.",
+        "Fino and manzanilla are usually fortified to about 15 to 15.5% (fortification is now optional) and age under flor. Oloroso is usually fortified to about 17% or more and ages oxidatively.",
         "In a solera, wine is drawn from the oldest tier and topped up from the criaderas, so most sherry has no vintage.",
         "Manzanilla must be aged in Sanlúcar de Barrameda. Amontillado starts under flor and finishes oxidatively."
       ],
@@ -1143,7 +1143,7 @@
           "q": "Which of these is NOT an age indication used for tawny Port?",
           "options": ["10 years", "20 years", "25 years", "40 years"],
           "answer": 2,
-          "explain": "Tawnies with an indication of age are labelled 10, 20, 30 or 40 years. There is no 25-year category.",
+          "explain": "Tawnies with an indication of age are labelled 10, 20, 30, 40 or, since 2022, 50 years. There is no 25-year category.",
           "place": "pt-eupdo-PDO-PT-A1540"
         },
         {
