@@ -463,6 +463,13 @@ body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing 
 .mini-btn:hover, .mini-btn:focus-visible { border-color: var(--parchment); }
 .mini-btn[aria-pressed="true"] { background: var(--parchment); color: var(--night); border-color: var(--parchment); }
 .mini-btn.warn { color: #e0a090; }
+.acct-danger > summary { cursor: pointer; color: var(--muted); font-size: 13px; padding: 4px 0; list-style-position: inside; }
+.acct-danger > summary:hover, .acct-danger > summary:focus-visible { color: var(--parchment); }
+.acct-danger .acct-card { margin-top: 10px; gap: 18px; }
+.acct-danger .note { margin: 4px 0 8px; }
+.acct-danger label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); max-width: 340px; margin-bottom: 8px; }
+.acct-danger input { background: #1b1b1f; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; color: var(--parchment); font: 13px var(--f-body); width: 100%; box-sizing: border-box; }
+.mini-btn:disabled { opacity: .45; cursor: not-allowed; }
 .acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
 .empty { border: 1px dashed var(--line); border-radius: 10px; padding: 18px; color: var(--muted); font-size: 13px; }
 .fbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
