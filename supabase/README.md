@@ -12,10 +12,11 @@ The browser reads the project URL and the publishable key from `web/config.js`, 
 (sign-in, profile, sync) and `foundingOpen` (the Founding form). Both stay `false` until the email settings below
 are done; meanwhile My atlas, the notebook and the study work on the device, and /founding says it opens soon.
 
-## Status (21 October 2026)
+## Status (21 October 2026, opened the same evening)
 
 Project `budizvexjzlbzzcmlaey` ("Open Wine Atlas", Zurich). Applied: the waitlist, accounts and study migrations;
-the `founding` function is deployed with JWT verification off. Still to do, in this order:
+the `founding` function is deployed with JWT verification off. Done since: delete_my_account(), Resend domain and key, the function secret, SMTP, URL configuration and email
+templates; both switches are on. The steps, for a new project:
 
 1. In the SQL editor, run the `delete_my_account()` part of `20261018010000_accounts.sql` (the API refused to apply
    a statement that deletes from `auth.users` without a confirmation, so it was left out).

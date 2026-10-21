@@ -6,6 +6,6 @@
 window.OWA_CONFIG = {
   supabaseUrl: "https://budizvexjzlbzzcmlaey.supabase.co",
   supabaseKey: "sb_publishable_Szh5zLItBA6cXPWAGtG3FQ_gD5QKDuN",
-  accountsOpen: false,
-  foundingOpen: false,
+  accountsOpen: true,
+  foundingOpen: true,
 };
