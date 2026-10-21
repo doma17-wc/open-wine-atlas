@@ -1304,5 +1304,12 @@
  "{n} cards due today, out of {all}": "오늘 복습 {n}장 / 전체 {all}장",
  "{n} lessons": "레슨 {n}개",
  "{n} min": "{n}분",
- "{n} questions": "{n}문제"
+ "{n} questions": "{n}문제",
+ "Search in": "검색 대상",
+ "Choose what the search looks for": "검색할 항목 선택",
+ "Places and regions": "산지와 지역",
+ "Producers": "생산자",
+ "Wines": "와인",
+ "Nothing found. Some kinds are switched off under the filter button.": "결과가 없습니다. 필터 버튼에서 일부 항목이 꺼져 있습니다.",
+ "Loading the wines…": "와인을 불러오는 중…"
 }

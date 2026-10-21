@@ -70,6 +70,20 @@ T = {
     "Search wine places, producers and wines": [
         "Chercher des lieux, producteurs et vins", "Cerca luoghi, produttori e vini", "Weinorte, Erzeuger und Weine suchen", "Buscar lugares, productores y vinos",
         "Pesquisar lugares, produtores e vinhos", "Zoek wijnplekken, producenten en wijnen", "産地・生産者・ワインを検索", "搜索产地、生产商和葡萄酒", "산지, 생산자, 와인 검색"],
+    "Loading the wines…": ["Chargement des vins…", "Caricamento dei vini…", "Weine werden geladen…", "Cargando los vinos…", "A carregar os vinhos…",
+                           "Wijnen laden…", "ワインを読み込み中…", "正在加载葡萄酒…", "와인을 불러오는 중…"],
+    "Search in": ["Chercher dans", "Cerca in", "Suchen in", "Buscar en", "Pesquisar em", "Zoeken in", "検索対象", "搜索范围", "검색 대상"],
+    "Choose what the search looks for": ["Choisir ce que la recherche couvre", "Scegli cosa cercare", "Wählen, wonach gesucht wird", "Elegir qué busca la búsqueda",
+                                         "Escolher o que a pesquisa procura", "Kies waar de zoekfunctie naar zoekt", "検索する対象を選ぶ", "选择搜索的内容", "검색할 항목 선택"],
+    "Places and regions": ["Lieux et régions", "Luoghi e regioni", "Orte und Regionen", "Lugares y regiones", "Lugares e regiões", "Plekken en regio's",
+                           "産地と地域", "产地与地区", "산지와 지역"],
+    "Producers": ["Producteurs", "Produttori", "Erzeuger", "Productores", "Produtores", "Producenten", "生産者", "生产商", "생산자"],
+    "Wines": ["Vins", "Vini", "Weine", "Vinos", "Vinhos", "Wijnen", "ワイン", "葡萄酒", "와인"],
+    "Nothing found. Some kinds are switched off under the filter button.": [
+        "Aucun résultat. Certains types sont désactivés sous le bouton de filtre.", "Nessun risultato. Alcuni tipi sono spenti nel pulsante filtro.",
+        "Nichts gefunden. Einige Arten sind unter dem Filterknopf ausgeschaltet.", "Sin resultados. Algunos tipos están desactivados en el botón de filtro.",
+        "Nada encontrado. Alguns tipos estão desligados no botão de filtro.", "Niets gevonden. Sommige soorten staan uit onder de filterknop.",
+        "見つかりません。フィルターボタンで一部の種類がオフになっています。", "未找到。筛选按钮中关闭了部分类型。", "결과가 없습니다. 필터 버튼에서 일부 항목이 꺼져 있습니다."],
 }
 
 

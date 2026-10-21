@@ -48,6 +48,18 @@ button, input { font: inherit; color: inherit; }
 .search input { width: 100%; box-sizing: border-box; padding: 12px 14px 12px 38px; background: var(--panel); border: 1px solid var(--line);
   border-radius: var(--r); outline: none; backdrop-filter: blur(10px); }
 .search input:focus { border-color: #4a4740; }
+.search input { padding-right: 46px; }
+.qf { all: unset; cursor: pointer; position: absolute; right: 6px; top: 6px; width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; color: var(--muted); }
+.qf:hover, .qf:focus-visible, .qf[aria-expanded="true"] { color: var(--parchment); background: #222228; }
+.qf:focus-visible { outline: 2px solid var(--focus); }
+.search .qf svg { position: static; transform: none; opacity: 1; }
+.qf i { position: absolute; top: 6px; right: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.qfpanel { position: absolute; z-index: 7; top: calc(100% + 6px); right: 0; left: 0; padding: 10px 12px; background: #111114; border: 1px solid var(--line); border-radius: var(--r);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+.qfpanel .h { font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.qfpanel button { all: unset; cursor: pointer; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 12.5px; color: var(--muted); }
+.qfpanel button[aria-pressed="true"] { color: var(--night); background: var(--parchment); border-color: var(--parchment); }
+.qfpanel button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); opacity: .55; }
 .results { list-style: none; margin: 6px 0 0; padding: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
   max-height: 46vh; overflow: auto; backdrop-filter: blur(10px); }
@@ -619,6 +631,13 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="search">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
     <input id="q" type="search" placeholder="Search Barolo, Musigny, Louis Roederer, Cristal…" data-i18n-ph="Search Barolo, Musigny, Louis Roederer, Cristal…" autocomplete="off" aria-label="Search wine places, producers and wines" data-i18n-aria="Search wine places, producers and wines" aria-controls="results">
+    <button class="qf" id="qf" type="button" aria-expanded="false" aria-controls="qfPanel" title="Search in" data-i18n-title="Search in" aria-label="Choose what the search looks for" data-i18n-aria="Choose what the search looks for"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 4h7M12 4h2M2 12h2M7 12h7"/><circle cx="10.5" cy="4" r="1.6"/><circle cx="5.5" cy="12" r="1.6"/></svg><i hidden></i></button>
+    <div class="qfpanel" id="qfPanel" role="group" aria-label="Search in" data-i18n-aria="Search in" hidden>
+      <span class="h" data-i18n>Search in</span>
+      <button type="button" data-qf="places" aria-pressed="true" data-i18n>Places and regions</button>
+      <button type="button" data-qf="producers" aria-pressed="true" data-i18n>Producers</button>
+      <button type="button" data-qf="wines" aria-pressed="true" data-i18n>Wines</button>
+    </div>
     <ul class="results" id="results" role="listbox" hidden></ul>
   </div>
   <div class="rtabs" id="rtabs" role="tablist" aria-label="Sidebar" data-i18n-aria="Sidebar">
@@ -2984,12 +3003,37 @@ const srcOf = (id) => id.split("-")[1] === "canton" ? "bfs" : id.split("-")[1];
 // ---------- search
 const qEl = $("q"), resEl = $("results");
 let active = -1, current = [];
+// what the search looks for: places and regions (with rivers and mountains), producers, wines. Kept per browser.
+const QF = (() => { try { return { places: true, producers: true, wines: true, ...JSON.parse(store.get("qf") || "{}") }; } catch (e) { return { places: true, producers: true, wines: true }; } })();
+function renderQF() {
+  document.querySelectorAll("[data-qf]").forEach((b) => b.setAttribute("aria-pressed", String(!!QF[b.dataset.qf])));
+  $("qf").querySelector("i").hidden = QF.places && QF.producers && QF.wines;
+}
+$("qf").addEventListener("click", (e) => {
+  e.stopPropagation();
+  const open = $("qfPanel").hidden;
+  $("qfPanel").hidden = !open; $("qf").setAttribute("aria-expanded", String(open));
+  if (open) resEl.hidden = true;
+});
+$("qfPanel").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-qf]");
+  if (!b) return;
+  const k = b.dataset.qf;
+  // one kind always stays on
+  if (QF[k] && Object.values(QF).filter(Boolean).length === 1) return;
+  QF[k] = !QF[k];
+  store.set("qf", JSON.stringify(QF));
+  renderQF();
+  if (QF.wines && !WINES && norm(qEl.value).length >= 3) loadWines().then(researchSoon);
+  if (qEl.value.trim()) { current = search(qEl.value); active = -1; renderResults(); $("qfPanel").hidden = false; }
+});
+renderQF();
 function search(q) {
   const n = norm(q);
   if (n.length < 2) return [];
   const words = n.split(" ");
   const out = [];
-  for (const r of INDEX) {
+  for (const r of QF.places ? INDEX : []) {
     const key = r._k;
     // German site names are written "Wehlener Sonnenuhr": match "wehlener" against the village "Wehlen"
     if (!words.every((w) => key.includes(w) || (w.length > 5 && w.endsWith("er") && key.includes(w.slice(0, -2))))) continue;
@@ -3000,11 +3044,13 @@ function search(q) {
     out.push([s, r]);
     if (out.length > 600) break;
   }
-  const geo = searchGeo(n, words).sort((a, b) => a[0] - b[0]).slice(0, 6);
-  return out.concat(geo, searchProducers(n, words), searchWines(n, words)).sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
+  const geo = QF.places ? searchGeo(n, words).sort((a, b) => a[0] - b[0]).slice(0, 6) : [];
+  return out.concat(geo, QF.producers ? searchProducers(n, words) : [], QF.wines ? searchWines(n, words) : [])
+    .sort((a, b) => a[0] - b[0]).slice(0, 30).map((x) => x[1]);
 }
 function renderResults() {
-  if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">' + t_("No place found. Try another spelling.") + "</li>" : ""; return; }
+  if (!current.length) { resEl.hidden = !qEl.value.trim(); resEl.innerHTML = qEl.value.trim() ? '<li class="note" style="padding:8px 10px">' +
+    t_(QF.places && QF.producers && QF.wines ? "No place found. Try another spelling." : "Nothing found. Some kinds are switched off under the filter button.") + "</li>" : ""; return; }
   resEl.innerHTML = current.map((r, i) => r.prod
     ? '<li><button role="option" aria-selected="' + (i === active) + '" data-i="' + i + '"><span class="n">' + esc(r.prod[0]) + '</span><span class="m">' + esc(prodMeta(r.prod)) +
       '</span><span class="c">' + r.prod[1] + "</span></button></li>"
@@ -3023,11 +3069,11 @@ const geoGlyph = (k) => '<svg width="14" height="10" viewBox="0 0 14 10" aria-hi
   : k === "lake" ? '<ellipse cx="7" cy="5" rx="5.5" ry="3.4" fill="none" stroke="currentColor" stroke-width="1.3"/>' : '<path d="M1 3c2 0 2 2 4 2s2-2 4-2 2 2 4 2M1 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2" fill="none" stroke="currentColor" stroke-width="1.3"/>') + "</svg>";
 qEl.addEventListener("focus", () => { loadGeoIndex(); loadProducers(); }, { once: true });
 const researchSoon = () => { if (qEl.value.trim()) { current = search(qEl.value); renderResults(); } };
-qEl.addEventListener("input", () => { current = search(qEl.value); active = -1; renderResults();
+qEl.addEventListener("input", () => { $("qfPanel").hidden = true; $("qf").setAttribute("aria-expanded", "false"); current = search(qEl.value); active = -1; renderResults();
   if (!GEO) loadGeoIndex().then(researchSoon);
   if (!PROD) loadProducers().then(researchSoon);
   // the wines (2.5 MB) only when someone types a name the places and producers do not answer
-  else if (!WINES && norm(qEl.value).length >= 3) loadWines().then(researchSoon); });
+  else if (QF.wines && !WINES && norm(qEl.value).length >= 3) loadWines().then(researchSoon); });
 qEl.addEventListener("keydown", (e) => {
   if (e.key === "ArrowDown") { active = Math.min(active + 1, current.length - 1); renderResults(); e.preventDefault(); }
   else if (e.key === "ArrowUp") { active = Math.max(active - 1, 0); renderResults(); e.preventDefault(); }
@@ -3041,7 +3087,7 @@ function choose(r) {
   if (r.wine) { qEl.value = PROD.p[r.wine[1]][0] + " " + r.wine[0]; openProducer(r.wine[1], r.wi); return; }
   qEl.value = r[0]; goTo(r);
 }
-document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search")) resEl.hidden = true; });
+document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".search")) { resEl.hidden = true; $("qfPanel").hidden = true; $("qf").setAttribute("aria-expanded", "false"); } });
 
 // ---------- sidebar tabs: Explore regions / Map and layers
 const PHONE = () => innerWidth <= 760;
@@ -3646,7 +3692,7 @@ function producersAt() {
   }));
   return prodAt;
 }
-const placeLabel = (k) => { const r = byId.get(k); return r ? r[0] : tnode(k) ? labelOf(k) : k; };
+const placeLabel = (k) => { const r = byId.get(k); return r ? r[0].replace(/ - (rouge|blanc|rosé) exclusif$/, "") : tnode(k) ? labelOf(k) : k; };
 const placeBox = (k) => { const r = byId.get(k); return r ? r[6] : tnode(k) ? tnode(k)[2] : null; };
 // search: producers by name, then wines by producer and wine name ("roederer cristal")
 function searchProducers(n, words) {
@@ -3688,7 +3734,7 @@ async function openProducerHash(h) {
 }
 async function openProducer(i, wi = null, fly = true) {
   const tok = ++sheetToken;
-  const [pj] = await Promise.all([loadProducers(), loadWines()]);
+  const pj = await loadProducers();
   if (!pj || !pj.p[i] || tok !== sheetToken) return;
   const x = pj.p[i];
   clearSelected();
@@ -3703,6 +3749,8 @@ async function openProducer(i, wi = null, fly = true) {
     markSet();
   }
   renderProducerSheet(x, keys, wi);
+  // the wines (wines.json) can take a moment the first time: the sheet opens first and lists them when they are in
+  if (!WINES) loadWines().then(() => { if (tok === sheetToken) renderProducerSheet(x, keys, wi); });
   setActive(null);
   const boxes = keys.map(([k]) => placeBox(k)).filter(Boolean);
   if (fly && boxes.length) {
@@ -3730,6 +3778,7 @@ function renderProducerSheet(x, keys, wi) {
       fmt(n) + '</span><span class="bar"><i style="width:' + Math.max(2, Math.round(n / max * 100)) + '%"></i></span></button>';
   }).join("") + "</div></div>";
   // the wines, under the place each comes from
+  if (!WINES) html += '<div class="sec"><h3>' + t_("Wines · {n}", { n: fmt(x[3]) }) + '</h3><p class="note">' + t_("Loading the wines…") + "</p></div>";
   if (list.length) {
     const groups = new Map();
     list.forEach((j) => { const w = WINES[j], k = w[2] >= 0 ? PROD.places[w[2]] : ""; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(j); });

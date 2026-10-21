@@ -1304,5 +1304,12 @@
  "{n} cards due today, out of {all}": "{n} cartes à revoir aujourd'hui, sur {all}",
  "{n} lessons": "{n} leçons",
  "{n} min": "{n} min",
- "{n} questions": "{n} questions"
+ "{n} questions": "{n} questions",
+ "Search in": "Chercher dans",
+ "Choose what the search looks for": "Choisir ce que la recherche couvre",
+ "Places and regions": "Lieux et régions",
+ "Producers": "Producteurs",
+ "Wines": "Vins",
+ "Nothing found. Some kinds are switched off under the filter button.": "Aucun résultat. Certains types sont désactivés sous le bouton de filtre.",
+ "Loading the wines…": "Chargement des vins…"
 }

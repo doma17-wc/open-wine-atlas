@@ -135,10 +135,12 @@ class Places:
             for key in self.keys(name):
                 self.by[(cc, key)].append((LEVEL_PREF.get(level, 4), pid))
             if level == "vineyard":
-                short = name[len(parent) + 1:] if parent and name.startswith(parent + " ") else name
-                short = CRU.sub(" ", norm(short)).strip()
-                for par in [parent] + [a for a in (alt or "").split(", ") if a]:
-                    self.sites.setdefault((cc, norm(par), short), pid)
+                for full in self.keys(name):
+                    p = norm(parent)
+                    short = full[len(p) + 1:] if p and full.startswith(p + " ") else full
+                    short = CRU.sub(" ", short).strip()
+                    for par in [parent] + [a for a in (alt or "").split(", ") if a]:
+                        self.sites.setdefault((cc, norm(par), short), pid)
         tree = json.load(open(os.path.join(WEB, "tree.json"), encoding="utf-8"))["nodes"]
         for k, v in tree.items():
             if not k.startswith("g:") or v[1] == "country":
@@ -153,11 +155,21 @@ class Places:
 
     @staticmethod
     def keys(name):
-        k = norm(name)
-        out = {k}
-        for pre in PREFIX:
-            if k.startswith(pre):
-                out.add(k[len(pre):])
+        """Every form a place can be looked up by: the name, each alternative of "A ou B" or "A / B" (INAO writes
+        "Les Feusselottes ou Les Feusselotes"), and the name without a leading AOC, DOC or Bereich."""
+        forms = [name] + [x for x in re.split(r" ou | / ", name) if x != name]
+        head = re.split(r" ou | / ", name)[0]
+        # "Chambolle-Musigny premier cru Les Feusselottes ou Les Feusselotes": the second form leaves out the village
+        lead = re.match(r"^(.* (?:premier|grand) cru) ", head, re.I)
+        if lead:
+            forms += [lead.group(1) + " " + x for x in re.split(r" ou | / ", name)[1:]]
+        out = set()
+        for f in forms:
+            k = norm(f)
+            out.add(k)
+            for pre in PREFIX:
+                if k.startswith(pre):
+                    out.add(k[len(pre):])
         return out
 
     def find(self, cc, name, region=False, unique=False):
@@ -209,6 +221,13 @@ def place_of(places, cc, r):
         hit = places.site(cc, site, sub)
         if hit:
             return hit, "site"
+        # the site written after its appellation: "Chablis" + "Les Clos" is Chablis Grand Cru Les Clos,
+        # "Bourgogne" + "Hautes Cotes de Nuits" is Bourgogne Hautes Côtes de Nuits, "Macon" + "Fuisse" is Mâcon Fuissé
+        for base in (sub, reg):
+            for mid in (" ", " grand cru ", " premier cru "):
+                hit = base and places.find(cc, base + mid + site, unique=True)
+                if hit:
+                    return hit, "site"
     if cc == "DE":
         # German labels name the Einzellage after the village: "Wiltinger Braune Kupp", "Wehlener Sonnenuhr"
         for m in VILLAGE_SITE.finditer(r.get("WINE") or ""):
