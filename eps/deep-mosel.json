@@ -1,0 +1,483 @@
+{
+ "slug": "deep-mosel",
+ "id": "de-eupdo-PDO-DE-A1270",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  23
+ ],
+ "markers": [
+  {
+   "lng": 7.0664,
+   "lat": 49.9186,
+   "label": "Bernkastel-Kues · 120 m",
+   "shots": [
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     4.0,
+     47.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     4.6,
+     48.0,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     7.025,
+     49.93,
+     7.8,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     7.025,
+     49.93,
+     7.45,
+     0,
+     0
+    ],
+    [
+     7.5,
+     7.025,
+     49.93,
+     7.7,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     7.05,
+     49.925,
+     11.6,
+     25,
+     60
+    ],
+    [
+     8.5,
+     7.052,
+     49.927,
+     11.8,
+     15,
+     62
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 460
+   },
+   "cam": [
+    [
+     0,
+     7.066,
+     49.917,
+     9.2,
+     0,
+     0
+    ],
+    [
+     16.5,
+     7.066,
+     49.917,
+     9.35,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 460
+   },
+   "cam": [
+    [
+     0,
+     7.066,
+     49.917,
+     9.35,
+     6,
+     15
+    ],
+    [
+     7.5,
+     7.066,
+     49.917,
+     9.45,
+     10,
+     20
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     7.02,
+     49.93,
+     10.3,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     7.02,
+     49.93,
+     10.5,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Germany · Deep dive",
+   "title": "Mosel",
+   "sub": "Riesling on<br>Devonian slate"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "1973",
+   "c": "Mosel's protected name was registered. Today 8,575 ha of vines grow in 131 communes.",
+   "src": "EU GI register · Vines: Destatis 2022 · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "120",
+   "u": "m",
+   "c": "Bernkastel-Kues sits on the river at 120&nbsp;m. The PDO climbs to 656&nbsp;m and averages 254&nbsp;m.",
+   "src": "Station height: DWD · Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "The vines grow on <i>slate</i> from the <i>Devonian</i>, laid down over <i>400 million years</i> ago.",
+   "src": "Rock: DLR Mosel · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "690",
+   "u": "mm",
+   "count": {
+    "v": 690.4,
+    "d": 0
+   },
+   "c": "a year in Bernkastel-Kues. Berlin: 572&nbsp;mm. Every month gets 40 to 70&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     55.8,
+     47.3,
+     47.2,
+     40.5,
+     62.4,
+     66.4,
+     69.9,
+     63.7,
+     57.6,
+     57.8,
+     54,
+     67.8
+    ],
+    "b": [
+     47.7,
+     36,
+     40.5,
+     29.3,
+     52.3,
+     58.2,
+     71.7,
+     58.1,
+     46.6,
+     43.9,
+     41.7,
+     44.2
+    ],
+    "max": 80,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 69.9,
+      "text": "70"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Bernkastel-Kues (120 m) &nbsp; ▢ Berlin &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Deutscher Wetterdienst, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "1,570",
+   "u": "h",
+   "count": {
+    "v": 1570.3,
+    "d": 0
+   },
+   "c": "of sunshine a year at the valley station. Berlin gets 1,736&nbsp;h. 1,274 h fall from April to October.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Bernkastel-Kues",
+      "v": 1570.3
+     },
+     {
+      "label": "Berlin",
+      "v": 1735.9
+     }
+    ]
+   },
+   "src": "Deutscher Wetterdienst, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "19.8",
+   "u": "°C",
+   "count": {
+    "v": 19.8,
+    "d": 1
+   },
+   "c": "the average July temperature, day and night. April to October averages 15.5&nbsp;°C.",
+   "chart": {
+    "type": "months",
+    "a": [
+     2.8,
+     3.4,
+     6.8,
+     10.7,
+     14.7,
+     17.9,
+     19.8,
+     19.3,
+     15.1,
+     10.9,
+     6.6,
+     3.6
+    ],
+    "max": 23,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 19.8,
+      "text": "19.8°"
+     }
+    ],
+    "legend": "Monthly mean, °C · Bernkastel-Kues (120 m)"
+   },
+   "src": "Deutscher Wetterdienst, normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "62",
+   "u": "%",
+   "count": {
+    "v": 62,
+    "d": 0
+   },
+   "c": "of the vines are Riesling. White grapes cover over 90% of the 8,575 ha.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Riesling",
+      "v": 62
+     },
+     {
+      "label": "Müller-Thurgau",
+      "v": 9
+     },
+     {
+      "label": "Elbling",
+      "v": 5
+     },
+     {
+      "label": "Pinot Noir",
+      "v": 5
+     },
+     {
+      "label": "Pinot Blanc",
+      "v": 4
+     },
+     {
+      "label": "Other",
+      "v": 14
+     }
+    ]
+   },
+   "src": "Vineyard survey 2022: Destatis (Federal Statistical Office)"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Explore it free",
+   "title": "Mosel",
+   "small": "Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Tokaj",
+   "srcs": "Sources: Deutscher Wetterdienst (normals 1991–2020) · Destatis vineyard survey 2022 · DLR Mosel · EU GI register · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Germany",
+  "title": "Mosel",
+  "sub": "Riesling on<br>Devonian slate"
+ }
+}

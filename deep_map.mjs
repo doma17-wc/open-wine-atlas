@@ -97,6 +97,9 @@ for (let i = 0; i < spec.shots.length; i++) {
     await idle(page, 60000);
   }
   await settle(60000);
+  // the atlas can re-show layers while tiles load: apply the shot's layer settings again before recording
+  await setLayers(shot, i);
+  await settle(20000);
   for (let f = 0; f < n; f++) {
     const file = path.join(dir, String(f).padStart(5, "0") + ".jpg");
     if (fs.existsSync(file)) continue;

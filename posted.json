@@ -71,6 +71,19 @@
     "INAO Sauternes specification",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-mosel",
+   "place": "Mosel",
+   "slot": "2026-10-21T10:20+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-5101565157604965692",
+   "sources": [
+    "DWD normals 1991-2020 (Bernkastel-Kues, Berlin-Tempelhof)",
+    "Destatis Rebflächen 2022",
+    "DLR Mosel",
+    "EU GI register",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

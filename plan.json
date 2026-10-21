@@ -58,11 +58,13 @@
   {
    "slug": "deep-mosel",
    "place": "Mosel",
-   "atlas_id": "",
+   "atlas_id": "de-eupdo-PDO-DE-A1270",
    "series": "",
    "not_before": "2026-10-21",
    "why": "late Riesling harvest on the steep slate slopes",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-21T10:20+02:00",
+   "note": "Harvest hook dropped (no 2026 Mosel harvest timing source); made as a general deep dive."
   },
   {
    "slug": "deep-tokaj",

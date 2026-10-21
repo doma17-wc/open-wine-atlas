@@ -1,0 +1,210 @@
+{
+ "slug": "deep-mosel",
+ "place": "Mosel",
+ "atlas_id": "de-eupdo-PDO-DE-A1270",
+ "station": {
+  "name": "Bernkastel-Kues",
+  "dwd_id": 450,
+  "height_m": 120,
+  "lat": 49.9186,
+  "lon": 7.0664,
+  "service": "Deutscher Wetterdienst (DWD)",
+  "period": "1991-2020",
+  "datenquelle": "46 (multi-year means computed from monthly values, series completed to 30 years with gridded DWD data)",
+  "urls": [
+   "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Niederschlag_1991-2020.txt",
+   "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Sonnenscheindauer_1991-2020.txt",
+   "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Temperatur_1991-2020.txt",
+   "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Sonnenscheindauer_1991-2020_Stationsliste.txt",
+   "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Beschreibung_Datenquelle.txt"
+  ],
+  "note": "Inside the PDO, in the Middle Mosel town named by the atlas as nearest town. DWD files have mean temperature only (no Tmax/Tmin), so the Heat layer uses monthly means."
+ },
+ "comparison_station": {
+  "name": "Berlin-Tempelhof",
+  "dwd_id": 433,
+  "height_m": 47.7,
+  "service": "DWD",
+  "period": "1991-2020",
+  "note": "Frankfurt/Main precipitation row was not reachable in the fetched file; Berlin used for rain and sun so both comparisons use one station."
+ },
+ "monthly": {
+  "bk_precip_mm": [
+   55.8,
+   47.3,
+   47.2,
+   40.5,
+   62.4,
+   66.4,
+   69.9,
+   63.7,
+   57.6,
+   57.8,
+   54,
+   67.8
+  ],
+  "bk_precip_year": 690.4,
+  "berlin_precip_mm": [
+   47.7,
+   36,
+   40.5,
+   29.3,
+   52.3,
+   58.2,
+   71.7,
+   58.1,
+   46.6,
+   43.9,
+   41.7,
+   44.2
+  ],
+  "berlin_precip_year": 572,
+  "bk_sun_h": [
+   37.5,
+   67,
+   120.4,
+   180.2,
+   202.2,
+   212,
+   225.3,
+   209.2,
+   150,
+   94.9,
+   43.9,
+   27.8
+  ],
+  "bk_sun_year": 1570.3,
+  "berlin_sun_h": [
+   51.1,
+   74,
+   123.7,
+   192,
+   224.3,
+   230.1,
+   236.6,
+   221.3,
+   166.6,
+   115,
+   54.5,
+   41.3
+  ],
+  "berlin_sun_year": 1735.9,
+  "bk_tmean": [
+   2.8,
+   3.4,
+   6.8,
+   10.7,
+   14.7,
+   17.9,
+   19.8,
+   19.3,
+   15.1,
+   10.9,
+   6.6,
+   3.6
+  ],
+  "bk_tmean_year": 11,
+  "berlin_tmean": [
+   1.2,
+   2.2,
+   5.2,
+   10.4,
+   14.8,
+   18.1,
+   20.2,
+   19.8,
+   15.2,
+   10.2,
+   5.4,
+   2.3
+  ],
+  "berlin_tmean_year": 10.4,
+  "frankfurt_sun_year": 1724.8,
+  "frankfurt_tmean_year": 11
+ },
+ "derived": {
+  "bk_p_sum": 690.4,
+  "be_p_sum": 570.2,
+  "bk_s_sum": 1570.4,
+  "be_s_sum": 1730.5,
+  "sun_diff_berlin_minus_bk": 165.6,
+  "bk_sun_apr_oct": 1273.8,
+  "bk_t_apr_oct_mean": 15.49,
+  "bk_t_annual_from_months": 10.97,
+  "rain_diff": 118.4,
+  "bk_p_min_month": 40.5,
+  "bk_p_max_month": 69.9,
+  "grape_shares_pct": {
+   "Riesling": 62.4,
+   "Müller-Thurgau": 9.0,
+   "Elbling": 5.3,
+   "Spätburgunder": 5.0,
+   "Weißburgunder": 4.3,
+   "Dornfelder": 2.9,
+   "Other": 11.0
+  },
+  "white_share": 90.5,
+  "bk_to_centroid_km": 2.7,
+  "bk_to_berlin_km": 524.0,
+  "n_communes": 131
+ },
+ "derived_code": "sums of monthly DWD values; April-October = months 4..10; shares = Destatis ha / 8575 ha; distances haversine R=6371 km",
+ "facts": [
+  {
+   "claim": "PDO Mosel registered 18 September 1973 (EU register)",
+   "value": "1973-09-18",
+   "source": "EU geographical indications register via Open Wine Atlas details-de.json",
+   "url": "https://ec.europa.eu/info/food-farming-fisheries/food-safety-and-quality/certification/quality-labels/geographical-indications-register/details/EUGI00000004648"
+  },
+  {
+   "claim": "Bearing vineyard area Anbaugebiet Mosel 2022: 8,575 ha",
+   "value": 8575,
+   "unit": "ha",
+   "source": "Statistisches Bundesamt, Fachserie 3 Reihe 3.1.5 Rebflächen 2022, p.29",
+   "url": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf"
+  },
+  {
+   "claim": "Riesling 5,354 ha; Müller-Thurgau 771; Elbling 432 white + 21 red; Spätburgunder 430; Weißburgunder 373; Dornfelder 248; Kerner 163; white varieties 7,763 ha; red 812 ha",
+   "source": "Destatis Rebflächen 2022",
+   "url": "https://www.statistischebibliothek.de/mir/servlets/MCRFileNodeServlet/DEHeft_derivate_00076425/2030315227004.pdf"
+  },
+  {
+   "claim": "Communes listed in the PDO",
+   "value": 131,
+   "source": "Open Wine Atlas details-de.json (EU register)"
+  },
+  {
+   "claim": "Outline area 169,773 ha",
+   "value": 169773,
+   "unit": "ha",
+   "source": "Open Wine Atlas outline_area_ha"
+  },
+  {
+   "claim": "Terrain e=[60,254,656,132,384] m: lowest 60 m, mean 254 m, max 656 m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Hunsrück slates formed in the Devonian, beginning over 400 million years ago",
+   "value": 400,
+   "unit": "million years",
+   "source": "DLR Mosel, Steillagenzentrum, Moseltal Terroir",
+   "url": "https://www.dlr.rlp.de/Steillagenkonzept/Moseltal/Terroir"
+  },
+  {
+   "claim": "Mosel climate: relatively cool summers and mild winters",
+   "source": "DLR Mosel Terroir page",
+   "url": "https://www.dlr.rlp.de/Steillagenkonzept/Moseltal/Terroir"
+  },
+  {
+   "claim": "Bernkastel-Kues station 120 m, DWD id 450",
+   "source": "DWD Stationsliste",
+   "url": "https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/multi_annual/mean_91-20/Sonnenscheindauer_1991-2020_Stationsliste.txt"
+  }
+ ],
+ "dropped": [
+  "Hook 'late Riesling harvest this week': no 2026 source for Mosel harvest timing found, dropped; place kept.",
+  "3,400 ha of steep slopes over 30%: only found in trade press citing DWI, not on an official page. Dropped.",
+  "Tmax/Tmin: not in DWD 1991-2020 station files; Heat uses monthly mean temperature.",
+  "Trier-Petrisberg 800 mm (DLR page, period not stated): not used."
+ ]
+}
