@@ -45,7 +45,7 @@ const okId = (id) => typeof id === "string" && id.length > 0 && id.length <= 120
 
 // ---------- state
 const S = { loading: null, loadFailed: false, sb: null, user: null, profile: null, founding: null, step: "email", email: "", msg: "", busy: false,
-  sync: "idle", lastSync: 0, syncing: false, again: false, timer: 0, poll: 0, fav: null, confirmDel: false, unavailable: false };
+  sync: "idle", lastSync: 0, syncing: false, again: false, timer: 0, poll: 0, fav: null, confirmClear: false, dangerOpen: false, unavailable: false };
 function loadMeta() { try { return JSON.parse(localStorage.getItem(META_KEY)) || {}; } catch (e) { return {}; } }
 function saveMeta(m) { try { localStorage.setItem(META_KEY, JSON.stringify(m)); } catch (e) {} }
 function clearMeta() { try { localStorage.removeItem(META_KEY); } catch (e) {} }
@@ -263,7 +263,7 @@ function signedIn() {
   return '<div class="acct-card"><div class="acct-who"><span class="acct-av">' + esc(initial()) + "</span><div><b>" + esc(p.display_name || t_("Your profile")) + "</b><span>" + esc(S.user.email) + "</span></div>" +
     (S.founding ? '<span class="badge-f">' + (S.founding.founding ? t_("Founding Member · spot {n}", { n: S.founding.spot }) : t_("On the list")) + "</span>" : "") + "</div>" +
     '<div class="row"><span class="acct-sync' + (S.sync === "error" ? " err" : "") + '" id="acct-sync">' + esc(syncText()) + '</span><button class="mini-btn" id="acct-syncnow">' + t_("Sync now") + "</button>" +
-    '<button class="mini-btn" id="acct-out">' + t_("Sign out") + '</button><button class="mini-btn warn" id="acct-out-clear">' + t_("Sign out and clear this device") + "</button></div></div>" +
+    '<button class="mini-btn" id="acct-out">' + t_("Sign out") + "</button></div></div>" +
     '<div><h3>' + t_("Profile") + '</h3><form class="jform acct-card" id="acct-profile" autocomplete="off">' +
     '<label>' + t_("Name") + '<input id="pf-name" maxlength="60" value="' + esc(p.display_name || "") + '" placeholder="' + esc(t_("How you want to be called")) + '"></label>' +
     '<label>' + t_("I am") + '<select id="pf-level">' + LEVELS.map(([v, l]) => '<option value="' + v + '"' + (v === (p.level || "") ? " selected" : "") + ">" + esc(t_(l)) + "</option>").join("") + "</select></label>" +
@@ -275,14 +275,21 @@ function signedIn() {
     '<div class="row wide"><button class="primary" type="submit">' + t_("Save profile") + '</button><span class="note" id="pf-msg"></span></div></form></div>' +
     '<div><h3>' + t_("Your data") + '</h3><div class="acct-card"><p class="lead" style="margin:0">' +
     t_("Kept in your account and on this device: {list}.", { list: countList(c) }) + "</p>" +
-    '<div class="row"><button class="mini-btn" id="acct-export">' + t_("Download everything (JSON)") + '</button><button class="mini-btn warn" id="acct-delete">' +
-    (S.confirmDel ? t_("Click again: delete my account for good") : t_("Delete my account")) + "</button></div>" +
-    '<p class="note" style="margin:0">' + t_("Deleting removes your profile and everything synced to your account. What is on this device stays here.") + "</p></div></div>";
+    '<div class="row"><button class="mini-btn" id="acct-export">' + t_("Download everything (JSON)") + "</button></div></div></div>" +
+    // the two actions that cannot be undone sit folded away, and each asks again before it runs
+    '<details class="acct-danger"' + (S.dangerOpen ? " open" : "") + '><summary>' + t_("Clear this device or delete the account") + '</summary><div class="acct-card">' +
+    '<div><b>' + t_("Sign out and clear this device") + '</b><p class="note">' + t_("Removes your saved places, tastings, notes, recent places and compare list from this browser. Your account keeps them, and they come back when you sign in again.") + "</p>" +
+    (S.confirmClear
+      ? '<div class="row"><span class="note">' + t_("Clear this device now?") + '</span><button class="mini-btn warn" id="acct-out-clear">' + t_("Yes, sign out and clear") + '</button><button class="mini-btn" id="acct-clear-cancel">' + t_("Cancel") + "</button></div>"
+      : '<div class="row"><button class="mini-btn" id="acct-out-clear">' + t_("Sign out and clear this device") + "</button></div>") + "</div>" +
+    '<div><b>' + t_("Delete my account") + '</b><p class="note">' + t_("Deletes your profile and everything synced to your account, for good. What is on this device stays here. Download your data first if you want to keep it.") + "</p>" +
+    '<label class="wide">' + t_("Type your email to confirm") + '<input id="acct-del-email" type="email" autocomplete="off" placeholder="' + esc(S.user.email) + '"></label>' +
+    '<div class="row"><button class="mini-btn warn" id="acct-delete" disabled>' + t_("Delete my account for good") + "</button></div></div>" +
+    "</div></details>";
 }
 
 // ---------- events
 function wire() {
-  S.confirmDel = false;
   const rt = $("acct-retry");
   if (rt) rt.onclick = () => { S.loadFailed = false; rerender(); };
   const ef = $("acct-email-form");
@@ -313,14 +320,22 @@ function wire() {
   if (!S.user) return;
   $("acct-syncnow").onclick = () => fullSync();
   $("acct-out").onclick = () => signOut(false);
-  $("acct-out-clear").onclick = () => signOut(true);
+  const dz = document.querySelector(".acct-danger");
+  if (dz) dz.ontoggle = () => { S.dangerOpen = dz.open; };
+  $("acct-out-clear").onclick = () => {
+    if (!S.confirmClear) { S.confirmClear = true; S.dangerOpen = true; rerender(); return; }
+    S.confirmClear = false; signOut(true);
+  };
+  const cc = $("acct-clear-cancel");
+  if (cc) cc.onclick = () => { S.confirmClear = false; rerender(); };
   $("acct-export").onclick = () => {
     const blob = new Blob([JSON.stringify({ app: "Open Wine Atlas", exported: new Date().toISOString(), profile: S.profile, saved: MY.saved, journal: MY.journal, notes: MY.notes }, null, 1)], { type: "application/json" });
     const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "open-wine-atlas.json"; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
   };
-  const del = $("acct-delete");
+  const del = $("acct-delete"), delEmail = $("acct-del-email");
+  delEmail.oninput = () => { del.disabled = delEmail.value.trim().toLowerCase() !== String(S.user.email).toLowerCase(); };
   del.onclick = async () => {
-    if (!S.confirmDel) { S.confirmDel = true; del.textContent = t_("Click again: delete my account for good"); return; }
+    if (delEmail.value.trim().toLowerCase() !== String(S.user.email).toLowerCase()) return;
     del.disabled = true;
     const { error } = await S.sb.rpc("delete_my_account");
     if (error) { del.disabled = false; return O.toast(t_("Could not delete the account. Please try again.")); }
@@ -373,7 +388,7 @@ async function signOut(clear) {
   stopPolling();
   if (!clear && S.syncing) await new Promise((ok) => setTimeout(ok, 800));
   await S.sb.auth.signOut({ scope: "local" }).catch(() => {});
-  clearMeta(); S.user = null; S.profile = null; S.founding = null; S.fav = null; S.sync = "idle";
+  clearMeta(); S.user = null; S.profile = null; S.founding = null; S.fav = null; S.sync = "idle"; S.confirmClear = false; S.dangerOpen = false;
   if (clear) { MY.saved = {}; MY.journal = []; MY.notes = []; MY.recent = []; MY.compare = []; O.myChanged(["saved", "journal", "notes", "recent", "compare"]); }
   rerender();
   O.toast(clear ? t_("Signed out. This device is cleared.") : t_("Signed out. Your atlas stays on this device."));
