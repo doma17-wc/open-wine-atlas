@@ -1,0 +1,248 @@
+{
+ "slug": "deep-douro",
+ "place": "Douro",
+ "atlas_id": "pt-eupdo-PDO-PT-A1539",
+ "made": "2026-10-22",
+ "station": {
+  "name": "Régua",
+  "ipma_no": "052",
+  "lat": 41.1629,
+  "lon": -7.8003,
+  "height_m": 56.0,
+  "service": "IPMA (Instituto Português do Mar e da Atmosfera)",
+  "period": "1981-2010",
+  "url": "https://www.ipma.pt/bin/file.data/climate-normal/cn_81-10_REGUA.pdf",
+  "note": "No IPMA 1991-2020 normal for any station inside the Douro valley could be found (Régua, Pinhão, Vila Real searched); Portugal is not in the NOAA WMO 1991-2020 archive for Region 6. Régua 1981-2010 is the latest official normal for a valley station. Period shown on screen."
+ },
+ "comparison_station": {
+  "name": "Porto / Pedras Rubras",
+  "ipma_no": "545",
+  "lat": 41.2322,
+  "lon": -8.6791,
+  "height_m": 67.7,
+  "period": "1991-2020",
+  "url": "https://www.ipma.pt/opencms/bin/file.data/climate-normal/cn_91-20_PORTO_PEDRAS_RUBRAS.pdf",
+  "note": "No 1981-2010 Porto sheet reachable in this run; periods differ and are named on screen (rain card legend and source)."
+ },
+ "monthly": {
+  "regua": {
+   "tmax": [
+    12.7,
+    15.7,
+    19.5,
+    21.0,
+    24.2,
+    28.7,
+    31.7,
+    32.1,
+    29.1,
+    23.0,
+    17.1,
+    13.5
+   ],
+   "tmax_year": 22.4,
+   "tmin": [
+    4.5,
+    5.1,
+    7.4,
+    9.4,
+    12.1,
+    15.4,
+    17.3,
+    17.2,
+    15.1,
+    11.7,
+    8.1,
+    5.6
+   ],
+   "tmin_year": 10.7,
+   "tmean": [
+    8.6,
+    10.4,
+    13.5,
+    15.2,
+    18.1,
+    22.1,
+    24.5,
+    24.6,
+    22.1,
+    17.4,
+    12.6,
+    9.6
+   ],
+   "tmean_year": 16.6,
+   "precip": [
+    104.9,
+    81.7,
+    57.1,
+    79.7,
+    51.5,
+    28.4,
+    11.9,
+    17.1,
+    40.9,
+    101.1,
+    108.2,
+    136.9
+   ],
+   "precip_year": 819.2,
+   "sunshine": "not in the IPMA sheet"
+  },
+  "porto": {
+   "tmax": [
+    14.0,
+    15.0,
+    17.0,
+    18.1,
+    20.3,
+    22.7,
+    24.3,
+    24.8,
+    23.5,
+    20.7,
+    16.8,
+    14.7
+   ],
+   "tmax_year": 19.3,
+   "tmin": [
+    6.4,
+    6.8,
+    8.8,
+    10.1,
+    12.3,
+    14.5,
+    15.5,
+    15.7,
+    14.8,
+    12.9,
+    9.4,
+    7.6
+   ],
+   "tmin_year": 11.2,
+   "precip": [
+    151.0,
+    97.8,
+    101.1,
+    95.5,
+    85.6,
+    33.7,
+    16.6,
+    29.3,
+    68.2,
+    148.9,
+    165.9,
+    153.3
+   ],
+   "precip_year": 1146.9,
+   "sunshine": "not in the IPMA sheet"
+  }
+ },
+ "derived": {
+  "reg_precip_sum": 819.4,
+  "por_precip_sum": 1146.9,
+  "reg_jja_precip": 57.4,
+  "reg_jja_share_pct": 7.0,
+  "reg_apr_oct_tmean": 20.57,
+  "reg_apr_oct_precip": 330.6,
+  "reg_minus_por_aug_tmax": 7.3,
+  "por_over_reg_precip_ratio": 1.4,
+  "km_regua_to_porto": 73.9,
+  "outline_km2": 2692.0
+ },
+ "derived_code": "import json, math\nreg_tx=[12.7,15.7,19.5,21.0,24.2,28.7,31.7,32.1,29.1,23.0,17.1,13.5]\nreg_tn=[4.5,5.1,7.4,9.4,12.1,15.4,17.3,17.2,15.1,11.7,8.1,5.6]\nreg_tt=[8.6,10.4,13.5,15.2,18.1,22.1,24.5,24.6,22.1,17.4,12.6,9.6]\nreg_pr=[104.9,81.7,57.1,79.7,51.5,28.4,11.9,17.1,40.9,101.1,108.2,136.9]\npor_pr=[151.0,97.8,101.1,95.5,85.6,33.7,16.6,29.3,68.2,148.9,165.9,153.3]\npor_tx=[14.0,15.0,17.0,18.1,20.3,22.7,24.3,24.8,23.5,20.7,16.8,14.7]\ndef hav(a,b):\n    R=6371.0; la1,lo1=map(math.radians,a); la2,lo2=map(math.radians,b)\n    d=math.sin((la2-la1)/2)**2+math.cos(la1)*math.cos(la2)*math.sin((lo2-lo1)/2)**2\n    return 2*R*math.asin(math.sqrt(d))\nd=dict(\n reg_precip_sum=round(sum(reg_pr),1), por_precip_sum=round(sum(por_pr),1),\n reg_jja_precip=round(sum(reg_pr[5:8]),1),\n reg_jja_share_pct=round(100*sum(reg_pr[5:8])/sum(reg_pr),1),\n reg_apr_oct_tmean=round(sum(reg_tt[3:10])/7,2),\n reg_apr_oct_precip=round(sum(reg_pr[3:10]),1),\n reg_minus_por_aug_tmax=round(reg_tx[7]-por_tx[7],1),\n por_over_reg_precip_ratio=round(sum(por_pr)/sum(reg_pr),2),\n km_regua_to_porto=round(hav((41.1629,-7.8003),(41.2322,-8.6791)),1),\n outline_km2=round(269166/100,0),\n)\nprint(json.dumps(d,indent=1))\njson.dump(d,open('derived.json','w'),indent=1)\n",
+ "claims": [
+  {
+   "screen": "10 September 1756, Royal Charter that marked out the Douro production region",
+   "value": "1756",
+   "source": "ICOMOS evaluation, Alto Douro Wine Region (UNESCO World Heritage No 1046), 2001",
+   "url": "https://whc.unesco.org/document/151610"
+  },
+  {
+   "screen": "Douro outline 2,692 km² (269,166 ha)",
+   "value": 269166,
+   "unit": "ha",
+   "source": "Open Wine Atlas, details-pt.json outline_area_ha"
+  },
+  {
+   "screen": "Douro DOC registered 1991-12-24; Porto and Douro are two PDOs with the same outline",
+   "source": "EU GI register via Open Wine Atlas",
+   "url": "https://ec.europa.eu/info/food-farming-fisheries/food-safety-and-quality/certification/quality-labels/geographical-indications-register/details/4965"
+  },
+  {
+   "screen": "Terrain: highest 1,391 m, lowest 46 m, middle 80% between 209 and 669 m",
+   "value": [
+    46,
+    451,
+    1391,
+    209,
+    669
+   ],
+   "unit": "m",
+   "source": "Open Wine Atlas terrain e"
+  },
+  {
+   "screen": "Bedrock: 75% metamorphic (schist, slate, gneiss), 25% granite",
+   "source": "Open Wine Atlas bedrock (details-pt.json, Douro DOC)"
+  },
+  {
+   "screen": "Régua 819 mm a year; Porto 1,147 mm",
+   "source": "IPMA normals (Régua 1981-2010, Porto Pedras Rubras 1991-2020)"
+  },
+  {
+   "screen": "June to August at Régua: 57 mm, 7% of the year",
+   "source": "derived from IPMA Régua 1981-2010"
+  },
+  {
+   "screen": "August mean max 32.1 °C at Régua; July nights 17.3 °C; April to October mean 20.6 °C",
+   "source": "IPMA Régua 1981-2010, derived"
+  },
+  {
+   "screen": "Touriga Franca is the most widely planted grape in the Douro, about a fifth of vineyard area",
+   "source": "Wines of Portugal (ViniPortugal, the interprofessional body)",
+   "url": "https://winesofportugal.com/en/portuguese-wines/grape-varieties/touriga-franca/"
+  },
+  {
+   "screen": "Port: Porto PDO for the fortified wine; Douro PDO for unfortified wines",
+   "source": "EU GI register (Porto EUGI00000006172, Douro 4965) via Open Wine Atlas; Open Wine Atlas study lesson"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which rock covers most of the Douro?",
+   "options": [
+    "A Chalk",
+    "B Schist",
+    "C Limestone"
+   ],
+   "answer": "B Schist",
+   "source": "Open Wine Atlas bedrock: 75% metamorphic (schist, slate, gneiss)"
+  },
+  {
+   "q": "Which grape is most planted in the Douro?",
+   "options": [
+    "A Touriga Franca",
+    "B Baga",
+    "C Castelão"
+   ],
+   "answer": "A Touriga Franca",
+   "source": "Wines of Portugal"
+  },
+  {
+   "q": "About how much rain falls in a year at Régua?",
+   "options": [
+    "A 420 mm",
+    "B 820 mm",
+    "C 1,150 mm"
+   ],
+   "answer": "B 820 mm (819 mm, IPMA 1981-2010)",
+   "source": "IPMA"
+  }
+ ],
+ "dropped": [
+  "Barolo (planned first) postponed again: no reachable official 1991-2020 normals for a station near the Langhe",
+  "Sunshine layer: no sunshine in either IPMA sheet; replaced by Soil",
+  "Hook 'after the harvest': no 2026 harvest timing source; kept generic",
+  "'one of the first demarcated regions in the world' not claimed"
+ ],
+ "hook": "Schist, terraces and Port"
+}

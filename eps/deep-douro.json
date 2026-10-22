@@ -1,0 +1,517 @@
+{
+ "slug": "deep-douro",
+ "id": "pt-eupdo-PDO-PT-A1539",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  47
+ ],
+ "markers": [
+  {
+   "lng": -7.8003,
+   "lat": 41.1629,
+   "label": "Régua station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -12.0,
+     40.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     -11.0,
+     40.5,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -7.34,
+     41.24,
+     6.6,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -7.34,
+     41.245,
+     7.3,
+     0,
+     0
+    ],
+    [
+     7.5,
+     -7.34,
+     41.245,
+     7.55,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     -7.56,
+     41.165,
+     11.4,
+     40,
+     62
+    ],
+    [
+     8.5,
+     -7.555,
+     41.17,
+     11.6,
+     30,
+     65
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -7.6,
+     41.2,
+     8.0,
+     0,
+     0
+    ],
+    [
+     16.5,
+     -7.6,
+     41.2,
+     8.15,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -7.78,
+     41.17,
+     9.4,
+     6,
+     15
+    ],
+    [
+     7.5,
+     -7.78,
+     41.17,
+     9.5,
+     10,
+     20
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -7.53,
+     41.18,
+     10.3,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     -7.53,
+     41.18,
+     10.5,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -7.34,
+     41.245,
+     7.35,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -7.34,
+     41.245,
+     7.5,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Portugal · Deep dive",
+   "title": "Douro",
+   "sub": "Schist, terraces<br>and Port"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Soil",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "1756",
+   "u": "",
+   "c": "a Royal Charter marked out the Douro production region. Today its outline covers 2,692&nbsp;km².",
+   "src": "ICOMOS / UNESCO World Heritage evaluation · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "1,391",
+   "u": "m",
+   "c": "the highest ground in the outline. The river runs at just 46&nbsp;m at the western end.",
+   "src": "Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "Most of the land lies between <i>209 and 669&nbsp;m</i>. Steep slopes drop straight to the river, often on <i>terraces</i>.",
+   "src": "Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "819",
+   "u": "mm",
+   "count": {
+    "v": 819,
+    "d": 0
+   },
+   "c": "a year at Régua (56&nbsp;m), by the river. Porto, on the coast 74&nbsp;km west: 1,147&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     104.9,
+     81.7,
+     57.1,
+     79.7,
+     51.5,
+     28.4,
+     11.9,
+     17.1,
+     40.9,
+     101.1,
+     108.2,
+     136.9
+    ],
+    "b": [
+     151.0,
+     97.8,
+     101.1,
+     95.5,
+     85.6,
+     33.7,
+     16.6,
+     29.3,
+     68.2,
+     148.9,
+     165.9,
+     153.3
+    ],
+    "max": 175,
+    "bands": [
+     {
+      "from": 5,
+      "to": 7,
+      "label": "57 MM IN SUMMER"
+     }
+    ],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Régua 1981–2010 &nbsp; ▢ Porto 1991–2020 &nbsp;·&nbsp; mm per month"
+   },
+   "src": "IPMA climate normals"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Soil",
+   "n": "75",
+   "u": "%",
+   "count": {
+    "v": 75,
+    "d": 0
+   },
+   "c": "of the outline sits on schist and other metamorphic rock. The rest, 25%, is granite.",
+   "src": "Bedrock: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "32.1",
+   "u": "°C",
+   "count": {
+    "v": 32.1,
+    "d": 1
+   },
+   "c": "the average August high at Régua. July nights average 17.3&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     12.7,
+     15.7,
+     19.5,
+     21.0,
+     24.2,
+     28.7,
+     31.7,
+     32.1,
+     29.1,
+     23.0,
+     17.1,
+     13.5
+    ],
+    "min": [
+     4.5,
+     5.1,
+     7.4,
+     9.4,
+     12.1,
+     15.4,
+     17.3,
+     17.2,
+     15.1,
+     11.7,
+     8.1,
+     5.6
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 36,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · April to October averages 20.6 °C"
+   },
+   "src": "IPMA climate normals 1981–2010"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "1 in 5",
+   "u": "",
+   "c": "Touriga Franca is the most widely planted grape, on about a fifth of the vineyard area.",
+   "src": "Wines of Portugal"
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "2",
+   "u": "PDOs",
+   "c": "share this outline: Porto for the fortified wine, Douro for the unfortified wines.",
+   "src": "EU GI register · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 52.3,
+   "t1": 55.5,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which rock covers most of the Douro?<br>A&nbsp;&nbsp;Chalk<br>B&nbsp;&nbsp;Schist<br>C&nbsp;&nbsp;Limestone",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.6,
+   "t1": 58.8,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Which grape is most planted in the Douro?<br>A&nbsp;&nbsp;Touriga Franca<br>B&nbsp;&nbsp;Baga<br>C&nbsp;&nbsp;Castelão",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 58.9,
+   "t1": 62.1,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls in a year at Régua?<br>A&nbsp;&nbsp;420 mm<br>B&nbsp;&nbsp;820 mm<br>C&nbsp;&nbsp;1,150 mm",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.3,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Douro",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Champagne",
+   "srcs": "Sources: IPMA climate normals (Régua 1981–2010, Porto 1991–2020) · ICOMOS / UNESCO · Wines of Portugal · EU GI register · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Portugal",
+  "title": "Douro",
+  "sub": "Schist, terraces<br>and Port"
+ }
+}

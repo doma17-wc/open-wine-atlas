@@ -95,6 +95,19 @@
     "Tokaj PDO product specification v10a (Hungarian Ministry of Agriculture)",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-douro",
+   "place": "Douro",
+   "slot": "2026-10-22T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-5274550527973111408",
+   "sources": [
+    "IPMA climate normals (Régua 1981-2010, Porto Pedras Rubras 1991-2020)",
+    "ICOMOS evaluation, Alto Douro Wine Region (UNESCO WHC 1046)",
+    "Wines of Portugal",
+    "EU GI register",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

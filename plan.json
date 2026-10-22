@@ -82,10 +82,10 @@
    "place": "Barolo",
    "atlas_id": "",
    "series": "",
-   "not_before": "2026-10-20",
+   "not_before": "2026-10-27",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
    "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made)."
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid."
   },
   {
    "slug": "deep-sauternes",
@@ -101,11 +101,13 @@
   {
    "slug": "deep-douro",
    "place": "Douro",
-   "atlas_id": "",
+   "atlas_id": "pt-eupdo-PDO-PT-A1539",
    "series": "",
    "not_before": "2026-10-22",
    "why": "after the harvest on the schist terraces",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-22T17:50+02:00",
+   "note": "Hook 'after the harvest' dropped (no 2026 harvest timing source); title hook 'Schist, terraces and Port'. Climate: IPMA Régua 1981-2010 (no 1991-2020 sheet for a valley station found) vs Porto Pedras Rubras 1991-2020, periods named on screen. Sun layer swapped for Soil (no sunshine in IPMA sheets). First episode with the Test yourself quiz."
   },
   {
    "slug": "deep-champagne",
@@ -150,6 +152,15 @@
    "series": "",
    "not_before": "2026-12-01",
    "why": "icewine harvest waits for -8 °C",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-wachau",
+   "place": "Wachau",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-10-26",
+   "why": "Austria study path: Grüner Veltliner and Riesling on stone terraces above the Danube",
    "status": "planned"
   }
  ]
