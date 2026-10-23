@@ -396,6 +396,19 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .fm-card b { font: 600 19px/1.2 var(--f-display); color: var(--gold); }
 .fm-card span { grid-column: 1; color: #cfc6b6; font-size: 13px; }
 .fm-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
+/* Deep Region: the way in (a button on the map, a card on top of the region list, #burgundy) */
+.deep-go { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 14px; border-radius: 999px; box-sizing: border-box;
+  background: linear-gradient(180deg, #f0cf83, #e1b75c); color: #17130b; font: 600 13px var(--f-body); box-shadow: 0 6px 20px rgba(0,0,0,.35); white-space: nowrap; }
+.deep-go:hover { filter: brightness(1.06); }
+.deep-go:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.deep-go i { width: 10px; height: 10px; border-radius: 2px; background: #17130b; opacity: .85; box-shadow: 4px 4px 0 -1px rgba(23,19,11,.45); }
+.deep-card { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; align-items: center; width: calc(100% - 12px); margin: 4px 6px 10px;
+  padding: 12px 14px; border: 1px solid #5a4a2a; border-radius: var(--r); background: linear-gradient(90deg, rgba(231,192,106,.12), rgba(231,192,106,.03)); }
+.deep-card:hover, .deep-card:focus-visible { border-color: var(--gold); }
+.deep-card b { font: 600 19px/1.15 var(--f-display); color: var(--gold); }
+.deep-card span { grid-column: 1; color: #cfc6b6; font-size: 12.5px; line-height: 1.45; }
+.deep-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; color: var(--gold); font-size: 16px; }
+@media (max-width: 760px) { .deep-go span { display: none; } .deep-go { padding: 0 11px; } }
 /* Deep Region: the Burgundy key on the map and hectares in the region list */
 .deep-key { position: absolute; z-index: 2; top: calc(62px + env(safe-area-inset-top, 0px)); left: var(--railR, 372px); display: flex; flex-wrap: wrap; align-items: center; gap: 4px;
   padding: 5px 6px 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(17,17,20,.88); backdrop-filter: blur(10px); max-width: calc(100% - var(--railR, 372px) - 16px); }
@@ -708,6 +721,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   </div>
   <div class="rail-scroll" id="railScroll">
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
+    <button class="deep-card" id="deepCard" type="button" hidden><b data-i18n>Burgundy in depth</b><span data-i18n>Every grand cru, premier cru and village of the Côte d'Or, with its hectares.</span><i aria-hidden="true">→</i></button>
     <div class="ex-head"><span class="hd" data-i18n>Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world" data-i18n-title="Show the whole world" data-i18n>World view</button></div>
     <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
   </nav>
@@ -762,6 +776,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
 </aside>
 
 <div class="viewbar" id="viewbar">
+  <button class="deep-go" id="deepGo" type="button" hidden title="Grands crus, premiers crus and villages of the Côte d'Or, with their hectares" data-i18n-title="Grands crus, premiers crus and villages of the Côte d'Or, with their hectares"><i aria-hidden="true"></i><span data-i18n>Burgundy in depth</span></button>
   <div class="relief-btn" role="group" aria-label="Map only" data-i18n-aria="Map only">
     <button id="btnMapOnly" aria-pressed="false" title="Only the map, panels hidden (F)" data-i18n-title="Only the map, panels hidden (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/></svg><span class="sr" data-i18n>Map only</span></button>
   </div>
@@ -1619,6 +1634,19 @@ document.addEventListener("click", (e) => {
   DS.show[b.dataset.deepLevel] = !DS.show[b.dataset.deepLevel];
   renderDeepKey(); applyLegend();
 });
+// the way into the Deep Region: the Bourgogne sheet, and the map on the Côte d'Or (Côte de Nuits and Côte de Beaune)
+function openDeepBurgundy() {
+  if (!TREE || !tnode("g:FR/bourgogne")) return;
+  if (QUIZ_ON) return;
+  openGroup("g:FR/bourgogne", false);
+  const bb = ["g:FR/bourgogne/cote-de-nuits", "g:FR/bourgogne/cote-de-beaune"].map((k) => tnode(k) && tnode(k)[2]).filter(Boolean);
+  const b = bb.length ? [Math.min(...bb.map((x) => x[0])), Math.min(...bb.map((x) => x[1])), Math.max(...bb.map((x) => x[2])), Math.max(...bb.map((x) => x[3]))] : tnode("g:FR/bourgogne")[2];
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: 11, pitch: Math.min(map.getPitch(), pitchCap(10)), duration: REDUCED ? 0 : 2600, essential: true });
+  ensureDeepHa();
+  if (WEB) try { history.replaceState(null, "", "#burgundy"); } catch (e) {}
+  try { window.va && window.va("event", { name: "deep_open", data: { region: "bourgogne" } }); } catch (e) {}
+  if (PHONE()) $("rail").classList.remove("open");
+}
 // a hidden level comes back for the place being looked at
 function deepForce(id) {
   const m = deepClasses(), cl = id && m ? m.get(id) : null, f = cl && !DS.show[cl] ? id : null;
@@ -4955,7 +4983,8 @@ map.on("load", async () => {
     });
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
-    if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView); }
+    if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView);
+      if (tnode("g:FR/bourgogne")) { $("deepGo").hidden = false; $("deepCard").hidden = false; $("deepGo").onclick = openDeepBurgundy; $("deepCard").onclick = openDeepBurgundy; } }
     else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
@@ -4987,6 +5016,7 @@ map.on("load", async () => {
     const hid = decodeURIComponent(location.hash.slice(1));
     const GEO_HASH = /^(river|lake|peak|range):/;
     if (hid && byId.has(hid)) goTo(byId.get(hid));
+    else if (hid === "burgundy") openDeepBurgundy();
     else if (hid && tnode(hid)) openGroup(hid);
     else if (GEO_HASH.test(hid)) geoReady.then(() => openGeo(hid));
     else if (SET_HASH.test(hid)) openSetHash(hid);
@@ -4996,6 +5026,7 @@ map.on("load", async () => {
     window.addEventListener("hashchange", () => {
       const h = decodeURIComponent(location.hash.slice(1));
       if (h && byId.has(h)) goTo(byId.get(h));
+      else if (h === "burgundy") openDeepBurgundy();
       else if (h && tnode(h)) openGroup(h);
       else if (GEO_HASH.test(h) && (!HL || HL.gid !== h)) geoReady.then(() => openGeo(h));
       else if (SET_HASH.test(h) && (!SET || SET.hash !== h)) openSetHash(h);
