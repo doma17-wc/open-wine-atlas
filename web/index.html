@@ -2834,7 +2834,22 @@ function deepState(p) {
   if (i >= 0) return { n: i + 1 };
   if (seen.length >= DEEP.free) return { wall: true };
   seen.push(p.id); store.set(DEEP.key, JSON.stringify(seen));
+  owaTrack("deep_preview");
   return { n: seen.length };
+}
+// daily totals of a few steps for the admin page (supabase/migrations/…_admin.sql): a name and nothing else
+let cfgLoading = null;
+function owaTrack(name) {
+  if (!WEB) return;
+  const go = () => {
+    const C = window.OWA_CONFIG;
+    if (!C || !C.accountsOpen || !C.supabaseUrl) return;
+    fetch(C.supabaseUrl + "/rest/v1/rpc/track", { method: "POST", keepalive: true,
+      headers: { apikey: C.supabaseKey, "Content-Type": "application/json" }, body: JSON.stringify({ p_name: name }) }).catch(() => {});
+  };
+  if (window.OWA_CONFIG) return go();
+  cfgLoading = cfgLoading || new Promise((ok) => { const sc = document.createElement("script"); sc.src = "/config.js"; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc); });
+  cfgLoading.then(go);
 }
 function deepGate(p) {
   DEEP.gated = null;
@@ -2861,12 +2876,15 @@ function deepGate(p) {
     '<p class="fine">' + t_("No card, no password: we email you a code. Grand crus stay open for everyone.") + "</p>";
   body.appendChild(wall);
   body.appendChild(lock);
+  owaTrack("deep_wall");
   try { window.va && window.va("event", { name: "deep_wall", data: { region: "bourgogne" } }); } catch (e) {}
 }
 document.addEventListener("click", (e) => {
   if (!e.target.closest("[data-deep-join]")) return;
   e.preventDefault();
   try { window.va && window.va("event", { name: "deep_join", data: { region: "bourgogne" } }); } catch (e2) {}
+  owaTrack("deep_join");
+  try { sessionStorage.setItem("owa.signup_src", "deep_wall"); } catch (e2) {}
   openDash("account");
 });
 // signed in (account.js): open the place that was behind the wall
