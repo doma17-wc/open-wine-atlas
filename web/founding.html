@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Founding Members | Open Wine Atlas</title>
-<meta name="description" content="Reserve a Founding Member spot at Open Wine Atlas. The first 1,000 members get a full year for CHF 19, then CHF 39 a year for as long as they stay. Nothing to pay now.">
+<meta name="description" content="Reserve one of the first 1,000 Founding Member spots at Open Wine Atlas. Free, with a free atlas account: a numbered Founding badge and first access to every new tool.">
 <link rel="canonical" href="https://openwineatlas.com/founding">
 <meta property="og:site_name" content="Open Wine Atlas">
 <meta property="og:url" content="https://openwineatlas.com/founding">
 <meta property="og:title" content="Become a Founding Member of Open Wine Atlas">
-<meta property="og:description" content="The first 1,000 members get a full year for CHF 19, then CHF 39 a year, locked for as long as they stay. Nothing to pay now.">
+<meta property="og:description" content="Free for the first 1,000: a numbered Founding badge, first access to every new tool and Burgundy in full depth.">
 <meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0d'/%3E%3Cpath d='M7 22l6-9 4 5 3-4 5 8z' fill='none' stroke='%23e7c06a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +75,7 @@ input[type=email] { width: 100%; padding: 13px 14px; background: var(--night); c
 input[type=email]:focus { border-color: var(--gold); }
 input[type=email][aria-invalid=true] { border-color: var(--err); }
 .check { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; margin: 14px 0 18px; font-size: 13px; color: #bdb4a5; line-height: 1.5; cursor: pointer; }
+.check[hidden] { display: none; }
 .check input { margin: 3px 0 0; accent-color: var(--gold); width: 16px; height: 16px; }
 .hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 button.go { width: 100%; padding: 14px 18px; border: 0; border-radius: var(--r); background: var(--gold); color: var(--night); font: 600 15px var(--f-body); cursor: pointer; transition: filter .15s; }
@@ -170,20 +171,21 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
       <div class="card" id="card" data-state="form" aria-live="polite">
         <div class="state s-full">
           <p class="spot">Founding spots are taken</p>
-          <p>All 1,000 Founding spots are reserved. Leave your email and we will tell you when membership opens, at the regular price.</p>
+          <p>All 1,000 Founding spots are reserved. Your free atlas account still opens Burgundy in full depth, and we can tell you first about new tools.</p>
         </div>
         <div class="state s-soon">
           <p class="spot">Opening soon</p>
           <h3>Founding spots open in a few days.</h3>
-          <p>CHF 19 for the first year, then CHF 39 a year, locked for as long as you stay. The first 1,000 only.</p>
+          <p>Free, for the first 1,000 only.</p>
           <p>Follow <a href="https://instagram.com/openwineatlas" rel="noopener">@openwineatlas</a> to hear the moment it opens. The map stays free to explore in the meantime.</p>
         </div>
         <div class="state s-form">
-          <h2>Founding price</h2>
-          <div class="price"><span class="cur">CHF</span><span class="big">19</span><span class="per">for the first year</span></div>
+          <h2>Founding Member</h2>
+          <div class="price"><span class="big">Free</span><span class="per">for the first 1,000</span></div>
           <ul class="terms">
-            <li><span>Then</span><span>CHF 39 a year, locked</span></li>
-            <li><span>Regular price</span><span><s>CHF 69 a year</s></span></li>
+            <li><span>Your badge</span><span>numbered, for good</span></li>
+            <li><span>New tools</span><span>first access</span></li>
+            <li><span>Burgundy</span><span>in full depth</span></li>
             <li><span>Founding spots</span><span>first 1,000 only</span></li>
           </ul>
           <div class="meter" id="meter" hidden>
@@ -196,11 +198,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
               <label class="f" for="email">Email</label>
               <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254">
             </div>
-            <label class="check"><input id="consent" type="checkbox" required><span>Email me when membership opens and about the launch. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</span></label>
+            <label class="check"><input id="consent" type="checkbox" required><span>Email me about new tools and the launch. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</span></label>
             <label class="check" id="termsBox" hidden><input id="terms" type="checkbox"><span>New here: I am 18 or older and accept the <a href="/terms" target="_blank" rel="noopener">Terms of Use</a>. This creates your free atlas account.</span></label>
             <button class="go" id="go" type="submit">Reserve my spot</button>
             <p class="msg" id="msg" role="status"></p>
-            <p class="fine" id="fine">Nothing to pay now. Membership opens soon. We send you a code to sign in, and your spot stays with your account.</p>
+            <p class="fine" id="fine">Free. We send you a code to sign in, and your spot stays with your account.</p>
           </form>
         </div>
 
@@ -220,7 +222,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
         <div class="state s-confirmed">
           <p class="spot" id="spotNo">Founding Member</p>
           <h3>You are on the list.</h3>
-          <p id="confirmedText">Your Founding spot is held. When membership opens you will hear from us first, at the founding price: CHF 19 for the first year, then CHF 39 a year for as long as you stay.</p>
+          <p id="confirmedText">Your Founding spot is held. You get first access to every new tool, and Burgundy is open in full depth on the map.</p>
           <p><a href="/">Back to the map &rarr;</a> &nbsp; <a href="/#account">Your account</a></p>
         </div>
 
@@ -259,7 +261,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   <div class="wrap free">
     <div>
       <h2>The atlas stays free</h2>
-      <p class="sub" style="margin-bottom:0">Membership pays for tools, never for data. Every outline comes from official open registers and stays open for everyone.</p>
+      <p class="sub" style="margin-bottom:0">Every outline comes from official open registers and stays open for everyone.</p>
     </div>
     <ul class="ticks">
       <li>The full map, in every country, free</li>
@@ -274,10 +276,11 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   <div class="wrap">
     <h2>Questions</h2>
     <div class="faq">
-      <details><summary>Do I pay anything now?</summary><p>No. You reserve a spot with your email. When membership opens, you get first access at the founding price and decide then.</p></details>
-      <details><summary>Is the founding price really locked?</summary><p>Yes. CHF 19 for the first year, then CHF 39 a year for as long as your membership continues. If you cancel and join again later, the regular price applies.</p></details>
-      <details><summary>What happens after the first 1,000?</summary><p>Founding spots close. You can still join the list and hear when membership opens, at the regular price of CHF 69 a year.</p></details>
-      <details><summary>Will the map stay free?</summary><p>Always. The map, every place and every open dataset stay free to use. Members pay for tools built on top of the atlas.</p></details>
+      <details><summary>Does it cost anything?</summary><p>No. A Founding spot is free, and so is your atlas account. You reserve it with your email and a sign-in code.</p></details>
+      <details><summary>What do Founding Members get?</summary><p>A Founding badge with your number, first access to every new tool, a say in what we build next, and the best terms we will ever offer, whatever comes next.</p></details>
+      <details><summary>What does a free account open?</summary><p>Burgundy in full depth: every village, premier cru and climat with terrain, soils, rules and producers. Your saved places, tastings and notes also follow you on every device.</p></details>
+      <details><summary>What happens after the first 1,000?</summary><p>Founding spots close. Accounts stay free, and you still hear about new tools if you want to.</p></details>
+      <details><summary>Will the map stay free?</summary><p>Always. The map, every place and every open dataset stay free to use.</p></details>
       <details><summary>Who is behind Open Wine Atlas?</summary><p>An independent project built from official open data. It is not tied to any wine seller, and no place on the map is sponsored.</p></details>
       <details><summary>How do I leave the list?</summary><p>Every email we send has an unsubscribe link. One click and your email is off the list.</p></details>
     </div>
@@ -309,7 +312,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   const source = (qs.get("utm_campaign") || qs.get("from") || document.referrer.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] || "direct").slice(0, 80);
 
   function showCount(n) {
-    if (n >= LIMIT) { setState("full"); $("go").textContent = "Tell me when it opens"; }
+    if (n >= LIMIT) { setState("full"); $("go").textContent = "Keep me posted"; }
     if (n < SHOW_COUNT_FROM) return;
     $("meter").hidden = false;
     $("meterN").textContent = Math.min(n, LIMIT).toLocaleString("en-US");
@@ -326,7 +329,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
         $("spotNo").textContent = "Founding Member · spot " + r.position.toLocaleString("en-US") + " of 1,000";
       } else {
         $("spotNo").textContent = "On the list";
-        $("confirmedText").textContent = "All Founding spots were taken before you confirmed. You are on the list and will hear first when membership opens.";
+        $("confirmedText").textContent = "All Founding spots were taken before you confirmed. You are on the list and will hear about new tools first.";
       }
       setState("confirmed");
       track("founding_confirmed", { founding: !!r.founding });
@@ -343,7 +346,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   // then the spot is reserved with the account's email, already verified by the code, so no second email.
   const C = window.OWA_CONFIG || {};
   const SB_JS = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js";
-  const CONSENT_VERSION = "2026-10-21", TERMS_VERSION = "2026-10-20", PENDING = "owa.founding.pending";
+  const CONSENT_VERSION = "2026-10-23", TERMS_VERSION = "2026-10-20", PENDING = "owa.founding.pending";
   const lang = (navigator.language || "").slice(0, 12);
   let sb = null, user = null, newUser = false;
   const form = $("form"), email = $("email"), consent = $("consent"), terms = $("terms"), go = $("go"), msg = $("msg");
@@ -368,7 +371,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     if (r.founding) $("spotNo").textContent = "Founding Member · spot " + Number(r.spot).toLocaleString("en-US") + " of 1,000";
     else {
       $("spotNo").textContent = "On the list";
-      $("confirmedText").textContent = "All Founding spots were taken. You are on the list and will hear first when membership opens.";
+      $("confirmedText").textContent = "All Founding spots were taken. You are on the list and will hear about new tools first.";
     }
     setState("confirmed");
   }
@@ -383,7 +386,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   function signedInView() {
     $("who").hidden = false; $("whoEmail").textContent = user.email;
     $("emailBox").hidden = true; $("termsBox").hidden = true;
-    $("fine").textContent = "Nothing to pay now. Membership opens soon, and you hear from us first.";
+    $("fine").textContent = "Free. Your spot stays with this account.";
   }
   async function sendCode() {
     const opts = { shouldCreateUser: newUser, emailRedirectTo: location.origin + "/founding" };
@@ -410,7 +413,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    if (!consent.checked) { consent.focus(); return say("Please tick the box so we can email you when membership opens.", true); }
+    if (!consent.checked) { consent.focus(); return say("Please tick the box so we can email you about new tools and the launch.", true); }
     go.disabled = true; say("");
     try {
       await client();

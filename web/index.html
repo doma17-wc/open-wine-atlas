@@ -396,6 +396,21 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .fm-card b { font: 600 19px/1.2 var(--f-display); color: var(--gold); }
 .fm-card span { grid-column: 1; color: #cfc6b6; font-size: 13px; }
 .fm-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
+/* Deep Region: Burgundy opens in full with a free account (see deepGate) */
+.deep-note { margin: -4px 0 14px; font: 400 12.5px/1.5 var(--f-body); color: var(--muted); }
+.deep-note b { color: var(--gold); font-weight: 500; }
+.deep-note button { background: none; border: 0; padding: 0; font: inherit; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.deep-wall { position: relative; z-index: 1; margin: 4px 0 18px; padding: 20px 18px; border: 1px solid #5a4a2a; border-radius: 12px;
+  background: linear-gradient(180deg, rgba(231,192,106,.12), rgba(231,192,106,.03)); display: grid; gap: 10px; }
+.deep-wall .ey { font: 500 11px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.deep-wall h3 { margin: 0; font: 500 28px/1.1 var(--f-display); color: var(--parchment); }
+.deep-wall p { margin: 0; color: #cfc6b6; font-size: 14px; line-height: 1.55; }
+.deep-wall .acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.deep-wall .acts button { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: #1b1b1f; color: var(--parchment); font: 500 14px var(--f-body); cursor: pointer; }
+.deep-wall .acts button.primary { background: var(--gold); color: #17130b; border-color: transparent; font-weight: 600; }
+.deep-wall .fine { font-size: 12.5px; color: var(--muted); }
+.deep-lock { position: relative; max-height: 320px; overflow: hidden; filter: blur(5px); opacity: .45; pointer-events: none; user-select: none;
+  -webkit-mask-image: linear-gradient(#000 20%, transparent); mask-image: linear-gradient(#000 20%, transparent); }
 /* notebook */
 .nb { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 22px; align-items: start; }
 .nb-list { display: grid; gap: 10px; align-content: start; }
@@ -2670,6 +2685,65 @@ function shortName(name, parent) {
   return name;
 }
 
+// ---------- Deep Region: Burgundy in full depth with a free account. Everyone gets a taste: the map, the 3D terrain,
+// the region and group sheets and every grand cru stay open, plus DEEP.free other Burgundy places on this device.
+// After that the sheet shows its opening sentence and asks for a free account. A soft wall, not a lock: the static
+// place pages stay public. Off in the artifact host and whenever accounts are switched off in config.js.
+const DEEP = { root: "g:FR/bourgogne", free: 3, key: "deep.bourgogne", gated: null };
+const deepOn = () => WEB && !QUIZ_ON && !(window.OWA_CONFIG && window.OWA_CONFIG.accountsOpen === false);
+const inDeep = (id) => !!TREE && TPARENT.has(id) && pathOf(id).includes(DEEP.root);
+function deepSignedIn() {
+  if (window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn()) return true;
+  try { return !!localStorage.getItem("owa.auth"); } catch (e) { return false; }
+}
+function deepSeen() { try { const a = JSON.parse(store.get(DEEP.key) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+// null: nothing to show; { n }: a free preview, the nth of DEEP.free; { wall: true }: ask for an account
+function deepState(p) {
+  if (!deepOn() || p.rank === "grand_cru" || !inDeep(p.id) || deepSignedIn()) return null;
+  const seen = deepSeen(), i = seen.indexOf(p.id);
+  if (i >= 0) return { n: i + 1 };
+  if (seen.length >= DEEP.free) return { wall: true };
+  seen.push(p.id); store.set(DEEP.key, JSON.stringify(seen));
+  return { n: seen.length };
+}
+function deepGate(p) {
+  DEEP.gated = null;
+  const st = deepState(p), body = $("sh-body");
+  if (!st || !body) return;
+  const total = countOf(DEEP.root) || 0;
+  const lede = body.querySelector("p.lede");
+  if (!st.wall) {
+    const note = '<p class="deep-note">' + t_("Free preview: Burgundy place {n} of {free}. A free account opens all {total}.", { n: "<b>" + st.n + "</b>", free: DEEP.free, total: fmt(total) }) +
+      ' <button type="button" data-deep-join>' + t_("Create my free account") + "</button></p>";
+    if (lede) lede.insertAdjacentHTML("afterend", note); else body.insertAdjacentHTML("afterbegin", note);
+    return;
+  }
+  // keep the opening sentence, fold the rest behind the wall: the fills still land in it, blurred
+  DEEP.gated = p;
+  const lock = document.createElement("div");
+  lock.className = "deep-lock"; lock.setAttribute("aria-hidden", "true"); lock.inert = true;
+  [...body.children].filter((c) => c !== lede).forEach((c) => lock.appendChild(c));
+  const wall = document.createElement("div");
+  wall.className = "deep-wall";
+  wall.innerHTML = '<span class="ey">' + t_("Deep Region") + " · Bourgogne</span><h3>" + t_("Burgundy in full depth") + "</h3><p>" +
+    t_("You have explored {n} Burgundy places for free. A free account opens all {total}: every village, premier cru and climat, with terrain, soils, rules and producers.", { n: DEEP.free, total: fmt(total) }) +
+    '</p><div class="acts"><button type="button" class="primary" data-deep-join>' + t_("Create my free account") + '</button><button type="button" data-deep-join>' + t_("I already have an account") + "</button></div>" +
+    '<p class="fine">' + t_("No card, no password: we email you a code. Grand crus stay open for everyone.") + "</p>";
+  body.appendChild(wall);
+  body.appendChild(lock);
+  try { window.va && window.va("event", { name: "deep_wall", data: { region: "bourgogne" } }); } catch (e) {}
+}
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("[data-deep-join]")) return;
+  e.preventDefault();
+  try { window.va && window.va("event", { name: "deep_join", data: { region: "bourgogne" } }); } catch (e2) {}
+  openDash("account");
+});
+// signed in (account.js): open the place that was behind the wall
+window.addEventListener("owa:auth", (e) => {
+  if (e.detail && e.detail.signedIn && DEEP.gated && $("sheet").classList.contains("open")) { const p = DEEP.gated; DEEP.gated = null; select(p, true); }
+});
+
 async function select(p, feature) {
   const rec = byId.get(p.id);
   markSelected(p.id);
@@ -2679,6 +2753,7 @@ async function select(p, feature) {
   const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
+  deepGate(p);
   // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
   if (SET && SET.ids.includes(p.id)) setBackChip(); else clearSet();
   setActive(p.id);
@@ -4242,7 +4317,7 @@ function dashOverview() {
     (synced ? t_("Everything here is synced to your account.") : t_("Everything here stays on this device.")) + '</p>' +
     (window.OWA_ACCOUNT ? window.OWA_ACCOUNT.line() : "") +
     (WEB ? '<a class="fm-card" href="/founding?from=my-atlas"><b>' + t_("Become a Founding Member") + '</b><span>' +
-      t_("Membership opens soon. The first 1,000 members get a full year for CHF 19, nothing to pay now.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
+      t_("Free for the first 1,000: a numbered Founding badge and first access to every new tool.") + '</span><i>' + t_("Reserve a spot") + ' →</i></a>' : '') +
     '<div class="tiles">' + tile(fmt(INDEX.length), t_("wine places in the atlas")) + tile(countries.size, t_("countries")) + tile(saved.length, t_("places you saved")) +
     tile(MY.journal.length, t_("tastings logged")) + tile(MY.notes.length, t_("notes")) + tile(cc.size, t_("countries you explored")) + "</div>" +
     '<div class="dgrid"><div><h3>' + t_("Discover") + '</h3><div class="row">' +
