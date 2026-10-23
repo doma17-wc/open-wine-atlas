@@ -1,4 +1,4 @@
-"""One-off: translations for the Burgundy Deep Region wall and the free Founding texts added on 23 October 2026.
+"""One-off: translations for the Burgundy Deep Region (wall, map key) and the free Founding texts added on 23 October 2026.
 
 Merges into web/i18n/<lang>.json without touching existing entries. Safe to rerun.
 Order of each list: fr, it, de, es, pt, nl, ja, zh, ko.
@@ -78,6 +78,12 @@ T = {
         "先着1,000名は無料。このアカウントで枠を予約：番号入りの Founding バッジと、新しいツールすべてへの先行アクセス。新機能のお知らせをメールでお送りします。リストはいつでも解除できます。",
         "前 1000 名免费。用此账户预留名额：带编号的 Founding 徽章，并抢先使用每一项新工具。我们会就此给你发邮件，你可以随时退出名单。",
         "선착순 1,000명 무료. 이 계정으로 자리를 예약하세요. 번호가 새겨진 Founding 배지와 모든 새 도구의 우선 이용. 새 소식은 이메일로 알려 드리며, 언제든 목록에서 나갈 수 있습니다."],
+    "Village": ["Village", "Villaggio", "Village", "Village", "Village", "Village", "村名", "村庄级", "빌라주"],
+    "Regional": ["Régional", "Regionale", "Regional", "Regional", "Regional", "Regionaal", "地方名", "大区级", "지역"],
+    "Bourgogne · 4 levels": ["Bourgogne · 4 niveaux", "Bourgogne · 4 livelli", "Bourgogne · 4 Stufen", "Bourgogne · 4 niveles", "Bourgogne · 4 níveis",
+                             "Bourgogne · 4 niveaus", "Bourgogne · 4つの格付け", "Bourgogne · 4 个等级", "Bourgogne · 4단계"],
+    "Burgundy levels": ["Niveaux de la Bourgogne", "Livelli della Borgogna", "Stufen des Burgund", "Niveles de Borgoña", "Níveis da Borgonha",
+                        "Niveaus van Bourgogne", "ブルゴーニュの格付け", "勃艮第等级", "부르고뉴 등급"],
     "Founding Members hear first when the full study opens. Reserve your free spot.": [
         "Les Founding Members sont les premiers informés quand l'étude complète ouvre. Réservez votre place gratuite.",
         "I Founding Member sono i primi a sapere quando apre lo studio completo. Prenota il tuo posto gratuito.",

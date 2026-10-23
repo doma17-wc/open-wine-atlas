@@ -381,6 +381,23 @@ form.suggest textarea { min-height: 90px; resize: vertical; }
 .fm-card b { font: 600 19px/1.2 var(--f-display); color: var(--gold); }
 .fm-card span { grid-column: 1; color: #cfc6b6; font-size: 13px; }
 .fm-card i { grid-row: 1 / span 2; grid-column: 2; font-style: normal; font-size: 13px; color: var(--gold); white-space: nowrap; }
+/* Deep Region: the Burgundy key on the map and hectares in the region list */
+.deep-key { position: absolute; z-index: 2; top: calc(62px + env(safe-area-inset-top, 0px)); left: var(--railR, 372px); display: flex; flex-wrap: wrap; align-items: center; gap: 4px;
+  padding: 5px 6px 5px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(17,17,20,.88); backdrop-filter: blur(10px); max-width: calc(100% - var(--railR, 372px) - 16px); }
+body.maponly .deep-key { display: none !important; }
+.deep-key .dk-h { font: 500 10.5px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.deep-key button { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; padding: 5px 10px; border-radius: 999px; font: 500 12.5px var(--f-body); color: var(--parchment); }
+.deep-key button:hover { background: #222228; }
+.deep-key button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.deep-key button[aria-pressed="false"] { color: var(--muted); }
+.deep-key button[aria-pressed="false"] i { opacity: .25; }
+.deep-key i { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+.deep-key .dk-grand i { background: var(--gold); }
+.deep-key .dk-premier i { background: var(--copper); }
+.deep-key .dk-village i { background: rgba(230,220,203,.14); border: 1px solid var(--parchment); box-sizing: border-box; }
+.deep-key .dk-regional i { border: 1px dashed var(--muted); box-sizing: border-box; }
+.tc .tha { font-weight: 500; color: #b9ae99; }
+@media (max-width: 760px) { .deep-key { top: auto; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); left: 12px; max-width: calc(100% - 24px); } .deep-key .dk-h { display: none; } }
 /* Deep Region: Burgundy opens in full with a free account (see deepGate) */
 .deep-note { margin: -4px 0 14px; font: 400 12.5px/1.5 var(--f-body); color: var(--muted); }
 .deep-note b { color: var(--gold); font-weight: 500; }
@@ -739,6 +756,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   </div>
 </div>
 <nav class="mcrumbs" id="mcrumbs" aria-label="Where you are" data-i18n-aria="Where you are" hidden></nav>
+<div class="deep-key" id="deepKey" role="group" aria-label="Burgundy levels" data-i18n-aria="Burgundy levels" hidden></div>
 <button class="showpanels" id="showPanels" hidden title="Show the panels again (F)" data-i18n-title="Show the panels again (F)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 3h11v10h-11zM6 3v10"/></svg><span data-i18n>Show panels</span></button>
 <div class="attrib" id="attrib">INAO · EU PDO (Candiago et al. 2022) · LWK Rheinland-Pfalz · BFS/swisstopo · UC Davis AVA · Wine Australia · geoBoundaries · Natural Earth · GeoNames · © OpenStreetMap <span data-i18n>contributors</span><span class="web-only" hidden> · <span data-i18n>terrain</span> © <a href="https://mapterhorn.com/attribution" target="_blank" rel="noopener" style="color:inherit">Mapterhorn</a></span> · <button id="attribMore" data-i18n>all sources</button></div>
 <div class="readout" id="readout" hidden aria-hidden="true"></div>
@@ -1049,6 +1067,7 @@ function addOverview() {
       "symbol-sort-key": ["-", 0, ["get", "ha"]] },
     paint: { "text-color": ["case", ["in", ["get", "rank"], ["literal", TOP]], C.gold, "#cbbfa9"], "text-halo-color": "rgba(11,11,13,.9)", "text-halo-width": 1.4 } }, "app");
   addTreeHl("ov", ["appellations"], { maxzoom: 10.6 }, "ov-labels");
+  deepStyleLayers();
 }
 
 // gold outline for what the pointer is on in the sidebar or a sheet list (feature-state "thl"), one pair per source
@@ -1117,6 +1136,7 @@ function addDetail(file) {
     paint: { "text-color": rankColor, "text-halo-color": "rgba(11,11,13,.92)", "text-halo-width": 1.3 } }, isDE ? "de" : "pc");
   addTreeHl(id, isDE ? ["crus", "grosslagen"] : ["appellations", "crus"], { minzoom: isDE ? 8 : 10.5 }, "ov-labels");
   bindHover(isDE ? [id + "-cru-fill"] : [id + "-cru-fill", id + "-app-fill", id + "-sub-fill"]);
+  if (!isDE) deepStyleLayers();
   applyLegend();
   if (WEB) applyTheme();
   if (SET) markSet();
@@ -1480,6 +1500,115 @@ const rankColorP = (P) => ["case", ["in", ["get", "rank"], ["literal", TOP]], P.
 const setP = (id, prop, v) => { if (map.getLayer(id)) try { map.setPaintProperty(id, prop, v); } catch (e) {} };
 const setVis = (id, on) => { if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on ? "visible" : "none"); };
 
+// ---------- Deep Region style: Burgundy read as its four levels, with the size of every place
+// The INAO parcel outlines leave out roads, paths and houses, so the regional appellations (Bourgogne, Coteaux
+// Bourguignons, Crémant…) cover the whole Côte with a mesh of holes. In Burgundy those regional and umbrella names are
+// hidden until they are chosen (the key on the map or the place itself), villages are a soft area with a faint line,
+// premiers crus copper and grands crus solid gold. Labels and the region list carry the delimited area in hectares.
+const DS = { cls: null, ha: null, haLoading: null, view: false, force: null, vineOrig: null,
+  show: { grand: true, premier: true, village: true, regional: false } };
+const DS_UMBRELLA = new Set(["Côte de Nuits-Villages", "Côte de Beaune-Villages", "Mâcon"]);
+const DS_SL = new Set(["appellations", "crus", "labels"]);
+// id -> "grand" | "premier" | "village" | "regional", for every place under Bourgogne in the region tree
+function deepClasses() {
+  if (DS.cls || !TREE) return DS.cls;
+  const m = new Map();
+  const walk = (k, reg) => kidsOf(k).forEach((c) => {
+    const r = byId.get(c), inReg = reg || c === "g:FR/bourgogne/regional-appellations";
+    if (r && !m.has(c)) m.set(c, inReg || DS_UMBRELLA.has(r[0]) || (r[3] === "subzone" && !r[4]) ? "regional"
+      : TOP.includes(r[4]) ? "grand" : r[4] === "premier_cru" ? "premier" : "village");
+    walk(c, inReg);
+  });
+  walk("g:FR/bourgogne", false);
+  DS.cls = m;
+  return m;
+}
+const deepIds = (cl) => { const m = deepClasses(); return m ? [...m].filter(([, c]) => c === cl).map(([k]) => k) : []; };
+// the filter that keeps hidden levels off the map (null: nothing hidden)
+function deepFilter() {
+  const m = deepClasses();
+  if (!m) return null;
+  const hide = [...m].filter(([k, c]) => !DS.show[c] && k !== DS.force).map(([k]) => k);
+  return hide.length ? ["!", ["in", ["get", "id"], ["literal", hide]]] : null;
+}
+function ensureDeepHa() {
+  if (DS.ha || DS.haLoading || !deepClasses()) return DS.haLoading;
+  DS.haLoading = getDetails("FR").then((all) => {
+    const ha = new Map();
+    deepClasses().forEach((c, k) => { const a = all[k] && all[k].area_ha; if (a) ha.set(k, a); });
+    DS.ha = ha;
+    deepStyleLayers();
+    renderTree();
+  });
+  return DS.haLoading;
+}
+// "288 ha" for a Burgundy place, "" for anything else
+function deepHaExpr() {
+  if (!DS.ha || !DS.ha.size) return "";
+  const pairs = [];
+  DS.ha.forEach((v, k) => pairs.push(k, haTxt(v)));
+  return ["match", ["get", "id"], ...pairs, ""];
+}
+function deepLabel(base) {
+  const ha = deepHaExpr();
+  if (!ha) return base;
+  return ["case", ["==", ha, ""], base, ["format", base, {}, "\n", {}, ha, { "font-scale": 0.82, "text-font": ["literal", ["noto-regular"]], "text-color": P.label }]];
+}
+// paint and labels of the Burgundy levels; runs again for every detail file the map adds and on a theme change
+function deepStyleLayers() {
+  if (!deepClasses() || !map.getLayer("ov-labels")) return;
+  // only Burgundy changes: the same ranks elsewhere keep their usual weight
+  const inIds = (cl) => ["in", ["get", "id"], ["literal", deepIds(cl)]];
+  const vill = inIds("village"), gc = inIds("grand"), pc = inIds("premier"), top = ["in", ["get", "rank"], ["literal", TOP]];
+  setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, top, 0.07, INAO, 0.02, 0.025]));
+  const ovBase = ["upcase", ["get", "name"]];
+  map.setLayoutProperty("ov-labels", "text-transform", "none");
+  map.setLayoutProperty("ov-labels", "text-field", ["step", ["zoom"], ovBase, 9, deepLabel(ovBase)]);
+  map.getStyle().layers.forEach(({ id }) => {
+    if (!/^fr-.*-(app|cru)-(fill|line)$|^fr-.*-labels$/.test(id)) return;
+    if (id.endsWith("-app-fill")) setP(id, "fill-opacity", fillOpacityByLevel(["case", gc, 0.32, vill, 0.05, top, 0.1, 0]));
+    else if (id.endsWith("-app-line")) setP(id, "line-opacity", ["case", SEL, 1, HOV, 0.9, gc, 0.9, vill, 0.3, top, 0.8, 0.22]);
+    else if (id.endsWith("-cru-fill")) setP(id, "fill-opacity", fillOpacityByLevel(["case", gc, 0.42, pc, 0.24, top, 0.16, 0.06]));
+    else if (id.endsWith("-cru-line")) setP(id, "line-opacity", ["case", SEL, 1, HOV, 1, gc, 0.9, pc, 0.65, 0.75]);
+    else if (id.endsWith("-labels")) {
+      map.setLayoutProperty(id, "text-field", deepLabel(["case", ["==", ["get", "level"], "appellation"], ["upcase", ["get", "name"]], ["get", "short"]]));
+    }
+  });
+}
+// in Burgundy, close enough to read it: the key on the map and quieter vineyards
+function deepView() {
+  const n = tnode("g:FR/bourgogne");
+  if (!n || !WEB) return;
+  // a little margin: an open sheet pushes the map centre east of the Côte
+  const b = n[2], c = map.getCenter(), m = 0.3;
+  const on = !QUIZ_ON && map.getZoom() >= 8 && c.lng >= b[0] - m && c.lng <= b[2] + m && c.lat >= b[1] - m && c.lat <= b[3] + m;
+  if (on === DS.view) return;
+  DS.view = on;
+  $("deepKey").hidden = !on;
+  if (on) { renderDeepKey(); ensureDeepHa(); }
+  const vines = ["osm-vine-fill", "vine-fill"].filter((l) => map.getLayer(l));
+  if (!DS.vineOrig) DS.vineOrig = Object.fromEntries(vines.map((l) => [l, map.getPaintProperty(l, "fill-opacity")]));
+  vines.forEach((l) => setP(l, "fill-opacity", on ? ["interpolate", ["linear"], ["zoom"], 8, 0.16, 13, 0.12] : DS.vineOrig[l]));
+}
+const DEEP_LEVELS = [["grand", N_("Grand cru")], ["premier", N_("Premier cru")], ["village", N_("Village")], ["regional", N_("Regional")]];
+function renderDeepKey() {
+  const el = $("deepKey");
+  el.innerHTML = '<span class="dk-h">' + t_("Bourgogne · 4 levels") + "</span>" + DEEP_LEVELS.map(([k, l]) =>
+    '<button type="button" class="dk-' + k + '" data-deep-level="' + k + '" aria-pressed="' + DS.show[k] + '"><i></i>' + esc(t_(l)) + "</button>").join("");
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-deep-level]");
+  if (!b) return;
+  DS.show[b.dataset.deepLevel] = !DS.show[b.dataset.deepLevel];
+  renderDeepKey(); applyLegend();
+});
+// a hidden level comes back for the place being looked at
+function deepForce(id) {
+  const m = deepClasses(), cl = id && m ? m.get(id) : null, f = cl && !DS.show[cl] ? id : null;
+  if (f === DS.force) return;
+  DS.force = f; applyLegend();
+}
+
 const IGN = (layer, style, fmt) => "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=" + layer + "&STYLE=" + style +
   "&TILEMATRIXSET=PM&FORMAT=" + fmt + "&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}";
 const FR_BOUNDS = [-5.3, 41.3, 9.6, 51.1];
@@ -1541,6 +1670,7 @@ function applyTheme() {
   setP("osm-vine-fill", "fill-color", P.vine); setP("osm-vine-line", "line-color", P.vine);
   setP("wineries", "circle-color", P.winery); setP("wineries", "circle-stroke-color", P.night);
   setP("winery-labels", "text-color", P.wlabel); setP("winery-labels", "text-halo-color", P.night);
+  deepStyleLayers();
   setP("relief", "hillshade-shadow-color", P.shade[0]); setP("relief", "hillshade-highlight-color", P.shade[1]); setP("relief", "hillshade-accent-color", P.shade[2]);
   ["sat-eox", "sat-es", "sat-fr", "sat-ch"].forEach((id) => setVis(id, baseMap === "satellite"));
   setVis("topo", baseMap === "topo");
@@ -2737,6 +2867,8 @@ async function select(p, feature) {
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
   deepGate(p);
+  deepForce(p.id);
+  if (deepClasses() && deepClasses().has(p.id)) ensureDeepHa();
   // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
   if (SET && SET.ids.includes(p.id)) setBackChip(); else clearSet();
   setActive(p.id);
@@ -3047,7 +3179,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   fillProducers(p.id, sheetToken);
 }
 function closeSheet() {
-  $("sheet").classList.remove("open"); clearSelected(); clearSet(); sheetToken++;
+  $("sheet").classList.remove("open"); clearSelected(); clearSet(); sheetToken++; deepForce(null);
   ACTIVE = null; document.querySelectorAll(".tr.on").forEach((r) => r.classList.remove("on")); renderMapCrumbs(null);
   if (WEB) try { history.replaceState(null, "", location.pathname + location.search + (HL ? "#" + HL.gid : "")); } catch (e) {}
 }
@@ -3336,7 +3468,7 @@ function rowHtml(k, parentKey, depth) {
     '<div class="tr' + (k === ACTIVE ? " on" : "") + '" style="--d:' + depth + '">' +
     '<button class="tw' + (has ? "" : " leaf") + '" tabindex="-1" aria-label="' + t_(exp ? "Collapse" : "Expand") + '">' + (has ? TW : "") + "</button>" +
     '<button class="tl" data-open="' + esc(k) + '" title="' + esc(r ? r[0] : labelOf(k, parentKey)) + '">' + lead + '<span class="nm">' + esc(labelOf(k, parentKey)) + "</span></button>" +
-    '<span class="tc">' + (has ? fmt(countOf(k)) : "") + "</span></div>" +
+    '<span class="tc">' + (DS.ha && DS.ha.has(k) ? '<b class="tha">' + haTxt(DS.ha.get(k)) + "</b>" + (has ? " · " : "") : "") + (has ? fmt(countOf(k)) : "") + "</span></div>" +
     (exp ? '<div class="tk" role="group" style="--d:' + depth + '">' + kidsHtml(k, depth + 1) + "</div>" : "") + "</div>";
 }
 function kidsHtml(k, depth) {
@@ -3361,6 +3493,7 @@ function toggleNode(k, open) {
   if (!kidsOf(k).length) return;
   const want = open ?? !EXPANDED.has(k);
   want ? EXPANDED.add(k) : EXPANDED.delete(k);
+  if (want && pathOf(k).includes("g:FR/bourgogne")) ensureDeepHa();
   renderTree();
   const b = $("tree").querySelector('.tl[data-open="' + CSS.escape(k) + '"]');
   if (b && document.activeElement && document.activeElement.closest(".tree")) b.focus({ preventScroll: true });
@@ -3971,9 +4104,12 @@ function applyLegend() {
     } else map.setLayoutProperty(id, "visibility", on(g) ? "visible" : "none");
   });
   const rankFilter = on("app") && on("top") ? null : on("top") ? ["in", ["get", "rank"], ["literal", TOP]] : ["!", ["in", ["get", "rank"], ["literal", TOP]]];
-  LAYERS.filter(([, g]) => g === "app").forEach(([id]) => {
-    if (!map.getLayer(id)) return;
-    const parts = [BASEF[id], rankFilter].filter(Boolean);
+  // the Burgundy levels hidden in its key (regional names by default) leave every outline and label layer
+  const deepF = deepFilter();
+  LAYERS.forEach(([id, g]) => {
+    const l = map.getLayer(id);
+    if (!l || (g !== "app" && !DS_SL.has(l.sourceLayer)) || l.source === "ovlo") return;
+    const parts = [BASEF[id], g === "app" ? rankFilter : null, DS_SL.has(l.sourceLayer) ? deepF : null].filter(Boolean);
     map.setFilter(id, parts.length ? (parts.length === 1 ? parts[0] : ["all", ...parts]) : null);
   });
   geoVis();
@@ -4784,7 +4920,7 @@ map.on("load", async () => {
     });
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
-    if (tree) { TREE = tree; indexTree(); renderTree(); }
+    if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView); }
     else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
