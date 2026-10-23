@@ -340,6 +340,9 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
     setState("soon");
   } else {
     fetch(API + "?action=count").then((r) => r.json()).then((j) => showCount(j.confirmed || 0)).catch(() => {});
+    // a daily total for the admin page, nothing about the visitor
+    fetch(window.OWA_CONFIG.supabaseUrl + "/rest/v1/rpc/track", { method: "POST", keepalive: true,
+      headers: { apikey: window.OWA_CONFIG.supabaseKey, "Content-Type": "application/json" }, body: JSON.stringify({ p_name: "founding_view" }) }).catch(() => {});
   }
 
   // ---------- one path: the spot belongs to an atlas account. Sign in with a code (new people accept the Terms once),
@@ -390,7 +393,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   }
   async function sendCode() {
     const opts = { shouldCreateUser: newUser, emailRedirectTo: location.origin + "/founding" };
-    if (newUser) opts.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true };
+    if (newUser) opts.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true, signup_source: "founding" };
     const { error } = await sb.auth.signInWithOtp({ email: email.value.trim(), options: opts });
     return error;
   }

@@ -395,7 +395,9 @@ async function sendCode() {
   busy(true);
   const create = !!(S.isNew && S.agreed);
   const options = { shouldCreateUser: create, emailRedirectTo: location.origin + "/?signin=1" };
-  if (create) options.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true };
+  let src = "account";
+  try { src = sessionStorage.getItem("owa.signup_src") || src; } catch (e) {}
+  if (create) options.data = { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true, signup_source: src };
   const { error } = await S.sb.auth.signInWithOtp({ email: S.email, options });
   busy(false);
   if (error && (error.code === "otp_disabled" || /signups not allowed/i.test(error.message))) {
