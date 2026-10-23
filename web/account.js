@@ -90,10 +90,13 @@ async function onSession(session, ev) {
     }
     await Promise.all([loadProfile(), loadFounding()]);
     rerender();
+    // the map reopens a place that was behind the Burgundy wall
+    window.dispatchEvent(new CustomEvent("owa:auth", { detail: { signedIn: true } }));
     fullSync();
     startPolling();
   } else if (!u && S.user) {
     S.user = null; S.profile = null; S.founding = null; S.sync = "idle"; stopPolling(); rerender();
+    window.dispatchEvent(new CustomEvent("owa:auth", { detail: { signedIn: false } }));
   } else if (ev === "INITIAL_SESSION") rerender();
 }
 
@@ -242,7 +245,8 @@ const link = (href, text) => '<a href="' + href + '" target="_blank" rel="noopen
 function signedOut() {
   const c = counts(), have = c.saved + c.tastings + c.notes;
   const intro = '<h3>' + t_("Your atlas on every device") + '</h3><p class="lead">' + t_("Sign in with your email. We send you a code, no password needed.") + " " +
-    (have ? t_("What is on this device comes with you: {list}.", { list: countList(c) }) : t_("Your saved places, tastings and notes follow you from phone to laptop.")) + "</p>";
+    (have ? t_("What is on this device comes with you: {list}.", { list: countList(c) }) : t_("Your saved places, tastings and notes follow you from phone to laptop.")) + " " +
+    t_("It is free, and it opens Burgundy in full depth.") + "</p>";
   if (S.step === "code") return '<div class="acct-card">' + intro +
     '<form class="jform" id="acct-code-form" autocomplete="off"><label class="wide">' + t_("We sent a code to {email}. Enter it here.", { email: "<b>" + esc(S.email) + "</b>" }) +
     '<input id="acct-code" class="code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="••••••" required></label>' +
@@ -264,7 +268,7 @@ function signedIn() {
   return '<div class="acct-card"><div class="acct-who"><span class="acct-av">' + esc(initial()) + "</span><div><b>" + esc(p.display_name || t_("Your profile")) + "</b><span>" + esc(S.user.email) + "</span></div>" +
     (S.founding ? '<span class="badge-f">' + (S.founding.founding ? t_("Founding Member · spot {n}", { n: S.founding.spot }) : t_("On the list")) + "</span>" : "") + "</div>" +
     (S.founding ? "" : '<div class="fm-reserve"><div><b>' + t_("Become a Founding Member") + "</b><span>" +
-      t_("Membership opens soon. Reserve your spot with this account: CHF 19 for the first year, then CHF 39, nothing to pay now. We email you when it opens.") +
+      t_("Free for the first 1,000. Reserve your spot with this account: a numbered Founding badge and first access to every new tool. We email you about them, and you can leave the list at any time.") +
       '</span></div><button class="primary" id="acct-founding">' + t_("Reserve my spot") + "</button></div>") +
     '<div class="row"><span class="acct-sync' + (S.sync === "error" ? " err" : "") + '" id="acct-sync">' + esc(syncText()) + '</span><button class="mini-btn" id="acct-syncnow">' + t_("Sync now") + "</button>" +
     '<button class="mini-btn" id="acct-out">' + t_("Sign out") + "</button></div></div>" +
@@ -327,7 +331,7 @@ function wire() {
   const fr = $("acct-founding");
   if (fr) fr.onclick = async () => {
     fr.disabled = true;
-    const { data, error } = await S.sb.rpc("founding_reserve", { p_consent_version: "2026-10-21", p_source: "account", p_lang: (navigator.language || "").slice(0, 12) });
+    const { data, error } = await S.sb.rpc("founding_reserve", { p_consent_version: "2026-10-23", p_source: "account", p_lang: (navigator.language || "").slice(0, 12) });
     if (error) { fr.disabled = false; return O.toast(t_("Could not reserve the spot. Please try again.")); }
     S.founding = Array.isArray(data) ? data[0] : data;
     rerender();
