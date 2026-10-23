@@ -709,6 +709,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
     <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
   </nav>
   <div class="mappanel" id="mapPanel" role="tabpanel" aria-labelledby="tabMap" hidden>
+  <button class="deep-card" id="deepCard2" type="button" hidden><b data-i18n>Burgundy in depth</b><span data-i18n>Every grand cru, premier cru and village of the Côte d'Or, with its hectares.</span><i aria-hidden="true">→</i></button>
   <div class="mapsel web-only" id="mapsel" hidden>
     <div class="hd" data-i18n>Map</div>
     <div class="seg" id="baseSeg" role="radiogroup" aria-label="Base map" data-i18n-aria="Base map">
@@ -4967,7 +4968,7 @@ map.on("load", async () => {
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
     if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView);
-      if (tnode("g:FR/bourgogne")) { $("deepGo").hidden = false; $("deepCard").hidden = false; $("deepGo").onclick = openDeepBurgundy; $("deepCard").onclick = openDeepBurgundy; } }
+      if (tnode("g:FR/bourgogne")) { ["deepGo", "deepCard", "deepCard2"].forEach((id) => { $(id).hidden = false; $(id).onclick = openDeepBurgundy; }); } }
     else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
