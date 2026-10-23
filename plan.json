@@ -112,11 +112,13 @@
   {
    "slug": "deep-champagne",
    "place": "Champagne",
-   "atlas_id": "",
+   "atlas_id": "fr-eupdo-PDO-FR-A1359",
    "series": "",
    "not_before": "2026-10-23",
    "why": "chalk, cold and why it sparkles",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-23T17:50+02:00",
+   "note": "Hook 'chalk, cold and why it sparkles' kept (title 'Chalk, cold and bubbles'). Sun layer swapped for Soil: no 1991-2020 sunshine normal for Reims-Prunay. Rain/heat: Météo-France 1991-2020 (Reims-Prunay, reconstituted precip normals), Paris-Montsouris comparison."
   },
   {
    "slug": "deep-valais",
@@ -161,6 +163,15 @@
    "series": "",
    "not_before": "2026-10-26",
    "why": "Austria study path: Grüner Veltliner and Riesling on stone terraces above the Danube",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-chablis",
+   "place": "Chablis",
+   "atlas_id": "fr-inao-a146",
+   "series": "",
+   "not_before": "2026-10-29",
+   "why": "Burgundy study path: Kimmeridgian marl, frost and Chardonnay on the Serein",
    "status": "planned"
   }
  ]

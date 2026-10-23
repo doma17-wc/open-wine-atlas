@@ -108,6 +108,18 @@
     "EU GI register",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-champagne",
+   "place": "Champagne",
+   "slot": "2026-10-23T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-7666469724768418873",
+   "sources": [
+    "Météo-France normals 1991-2020 (Reims-Prunay, Paris-Montsouris)",
+    "INAO Champagne specification",
+    "Comité Champagne",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

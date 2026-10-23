@@ -1,0 +1,532 @@
+{
+ "slug": "deep-champagne",
+ "id": "fr-eupdo-PDO-FR-A1359",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  31
+ ],
+ "markers": [
+  {
+   "lng": 4.1553,
+   "lat": 49.2098,
+   "label": "Reims-Prunay station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     1.0,
+     47.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     1.6,
+     47.4,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     4.08,
+     48.67,
+     5.9,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     4.08,
+     48.67,
+     6.45,
+     0,
+     0
+    ],
+    [
+     7.5,
+     4.08,
+     48.67,
+     6.7,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.05,
+     49.13,
+     10.4,
+     192,
+     62
+    ],
+    [
+     8.5,
+     4.05,
+     49.135,
+     10.6,
+     180,
+     65
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     4.02,
+     49.08,
+     8.7,
+     0,
+     0
+    ],
+    [
+     16.5,
+     4.02,
+     49.08,
+     8.85,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     4.1,
+     49.14,
+     9.5,
+     6,
+     15
+    ],
+    [
+     7.5,
+     4.1,
+     49.14,
+     9.6,
+     10,
+     20
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   }
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     4.0,
+     49.03,
+     10.3,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     4.0,
+     49.03,
+     10.5,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.08,
+     48.67,
+     6.5,
+     0,
+     0
+    ],
+    [
+     10.5,
+     4.08,
+     48.67,
+     6.65,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Champagne",
+   "sub": "Chalk, cold<br>and bubbles"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Soil",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "1936",
+   "u": "",
+   "c": "Champagne became an AOC. Its outline covers 3,544&nbsp;km² across 312 communes, east of Paris.",
+   "src": "INAO · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "372",
+   "u": "m",
+   "c": "the highest ground in the outline. The lowest sits at 51&nbsp;m: a relief of just 321&nbsp;m.",
+   "src": "Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "Most of the land lies between <i>95 and 284&nbsp;m</i>. Seen here: the <i>Montagne de Reims</i>, a wooded plateau between Reims and Épernay.",
+   "src": "Terrain: Open Wine Atlas · District: Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "621",
+   "u": "mm",
+   "count": {
+    "v": 621,
+    "d": 0
+   },
+   "c": "a year at Reims-Prunay (95&nbsp;m). Paris, 139&nbsp;km west: 634&nbsp;mm. Rain falls in every month.",
+   "chart": {
+    "type": "months",
+    "a": [
+     49.5,
+     44.2,
+     44.1,
+     39.8,
+     56.1,
+     56.4,
+     59.2,
+     57.2,
+     45.4,
+     52.1,
+     53.7,
+     63.7
+    ],
+    "b": [
+     47.6,
+     41.8,
+     45.2,
+     45.8,
+     69,
+     51.3,
+     59.4,
+     58,
+     44.7,
+     55.2,
+     54.3,
+     62
+    ],
+    "max": 80,
+    "bands": [],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Reims-Prunay &nbsp; ▢ Paris-Montsouris &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Météo-France normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Soil",
+   "n": "80",
+   "u": "%",
+   "count": {
+    "v": 80,
+    "d": 0
+   },
+   "c": "of the outline sits on carbonate rock: chalk, limestone and marl. Chalk drains well yet holds water.",
+   "src": "Bedrock: Open Wine Atlas · INAO"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "15.0",
+   "u": "°C",
+   "count": {
+    "v": 15.0,
+    "d": 1
+   },
+   "c": "the April to October average at Reims. Under 16.5&nbsp;°C: a cool climate in WSET terms.",
+   "chart": {
+    "type": "range",
+    "max": [
+     6.4,
+     7.7,
+     11.9,
+     15.8,
+     19.3,
+     22.6,
+     25.2,
+     25.0,
+     20.9,
+     15.9,
+     10.1,
+     6.9
+    ],
+    "min": [
+     0.6,
+     0.6,
+     2.4,
+     4.3,
+     8.0,
+     10.9,
+     13.0,
+     12.7,
+     9.7,
+     7.2,
+     3.8,
+     1.5
+    ],
+    "hl": 6,
+    "lo": -2,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July high 25.2 °C"
+   },
+   "src": "Météo-France normals 1991–2020 · WSET bands: Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "38",
+   "u": "%",
+   "c": "of the vineyard is Pinot Noir. Chardonnay and Meunier take 31% each.",
+   "src": "Comité Champagne",
+   "count": {
+    "v": 38,
+    "d": 0
+   },
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Pinot Noir",
+      "v": 38
+     },
+     {
+      "label": "Chardonnay",
+      "v": 31
+     },
+     {
+      "label": "Meunier",
+      "v": 31
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "15",
+   "u": "months",
+   "c": "minimum from tirage before a non-vintage Champagne is sold. Vintage: 36 months.",
+   "src": "INAO, Champagne specification"
+  },
+  {
+   "kind": "card",
+   "t0": 52.3,
+   "t1": 55.5,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape covers the most vineyard in Champagne?<br>A&nbsp;&nbsp;Chardonnay<br>B&nbsp;&nbsp;Pinot Noir<br>C&nbsp;&nbsp;Meunier",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.6,
+   "t1": 58.8,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Minimum time from tirage before a non-vintage Champagne is sold?<br>A&nbsp;&nbsp;9 months<br>B&nbsp;&nbsp;15 months<br>C&nbsp;&nbsp;36 months",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 58.9,
+   "t1": 62.1,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "Reims averages 15 °C from April to October. In WSET terms that is:<br>A&nbsp;&nbsp;Cool<br>B&nbsp;&nbsp;Moderate<br>C&nbsp;&nbsp;Warm",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.3,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Champagne",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Valais",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Reims-Prunay, Paris-Montsouris) · INAO · Comité Champagne · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Champagne",
+  "sub": "Chalk, cold<br>and bubbles"
+ }
+}

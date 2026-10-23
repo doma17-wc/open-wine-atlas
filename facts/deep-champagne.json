@@ -1,0 +1,243 @@
+{
+ "slug": "deep-champagne",
+ "place": "Champagne",
+ "atlas_id": "fr-eupdo-PDO-FR-A1359",
+ "made": "2026-10-23",
+ "station": {
+  "name": "Reims-Prunay",
+  "id": "51449002",
+  "height_m": 95,
+  "lat": 49.2097,
+  "lon": 4.1553,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://marne.gouv.fr/contenu/telechargement/45115/327996/file/731155252256REIMS-PRUNAY.pdf",
+  "note": "Météo-France 'Synthèse climatologique' 2022 for Reims-Prunay, published by the Marne prefecture, printing the 1991-2020 normals. Precipitation normals are marked reconstituted; temperature normals for 1991-2012 were computed from nearby station 51183001. No sunshine normal is printed for this station, so the Sun layer was swapped for Soil."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+  "note": "Monthly precipitation reused from facts/deep-sauternes.json (same fiche)."
+ },
+ "monthly": {
+  "reims_tmax": [
+   6.4,
+   7.7,
+   11.9,
+   15.8,
+   19.3,
+   22.6,
+   25.2,
+   25.0,
+   20.9,
+   15.9,
+   10.1,
+   6.9
+  ],
+  "reims_tmin": [
+   0.6,
+   0.6,
+   2.4,
+   4.3,
+   8.0,
+   10.9,
+   13.0,
+   12.7,
+   9.7,
+   7.2,
+   3.8,
+   1.5
+  ],
+  "reims_tmean": [
+   3.5,
+   4.2,
+   7.2,
+   10.0,
+   13.6,
+   16.8,
+   19.1,
+   18.8,
+   15.3,
+   11.6,
+   6.9,
+   4.2
+  ],
+  "reims_precip_mm": [
+   49.5,
+   44.2,
+   44.1,
+   39.8,
+   56.1,
+   56.4,
+   59.2,
+   57.2,
+   45.4,
+   52.1,
+   53.7,
+   63.7
+  ],
+  "reims_precip_year": 621.4,
+  "reims_tmax_year": 15.6,
+  "reims_tmin_year": 6.2,
+  "reims_tmean_year": 10.9,
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3
+ },
+ "facts": [
+  {
+   "claim": "Champagne AOC first recognised by decree of 29 June 1936",
+   "value": 1936,
+   "source": "INAO, cahier des charges AOC Champagne (modification draft 11 Sept 2024)",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDCPNOChampagne20240911.pdf"
+  },
+  {
+   "claim": "Atlas outline area 354,439 ha = 3,544 km², 312 communes listed",
+   "value": 3544,
+   "unit": "km²",
+   "source": "Open Wine Atlas details-fr.json (outline_area_ha, communes)"
+  },
+  {
+   "claim": "Terrain e=[51,186,372,95,284] m: min 51, mean 186, max 372, p10 95, p90 284",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Bedrock: 80% carbonate sedimentary rocks (limestone, marl, dolomite), 17% mixed sedimentary",
+   "value": 80,
+   "unit": "%",
+   "source": "Open Wine Atlas details-fr.json bedrock"
+  },
+  {
+   "claim": "Slopes are chalky, marly or sandy ('crayeuses, marneuses ou sableuses')",
+   "source": "INAO cahier des charges, X.1.a",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDCPNOChampagne20240911.pdf"
+  },
+  {
+   "claim": "Chalk drains well yet holds water for the vines",
+   "source": "Open Wine Atlas study lesson 'Champagne: region and grapes'"
+  },
+  {
+   "claim": "Climate: oceanic influence brings regular water; continental influence brings sometimes destructive frosts and favourable summer sun",
+   "source": "INAO cahier des charges, X.1.a",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDCPNOChampagne20240911.pdf"
+  },
+  {
+   "claim": "Annual precipitation Reims-Prunay 621.4 mm vs Paris-Montsouris 634.3 mm (1991-2020)",
+   "value": 621.4,
+   "unit": "mm",
+   "source": "Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "July mean max 25.2 °C, January mean min 0.6 °C at Reims-Prunay",
+   "value": 25.2,
+   "unit": "°C",
+   "source": "Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "April-October mean temperature 15.0 °C (derived)",
+   "value": 15.0,
+   "unit": "°C",
+   "source": "derived from Météo-France normals"
+  },
+  {
+   "claim": "WSET bands: cool up to about 16.5 °C growing season average, moderate 16.5-18.5",
+   "source": "Open Wine Atlas study lesson 'Climate and weather'"
+  },
+  {
+   "claim": "Pinot Noir 38%, Chardonnay 31%, Meunier 31% of the area under vine; minor varieties at most 0.3%",
+   "source": "Comité Champagne (champagne.fr), Grape varieties",
+   "url": "https://www.champagne.fr/en/about-champagne/a-great-blended-wine/champagne-and-its-grape-varieties"
+  },
+  {
+   "claim": "Non-vintage: at least 15 months from tirage before release; vintage: at least 36 months; disgorging not before 12 months",
+   "source": "INAO cahier des charges IX.5.a, IX.2.e",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDCPNOChampagne20240911.pdf"
+  },
+  {
+   "claim": "Grapes must be harvested as whole bunches",
+   "source": "INAO cahier des charges VII.1.b",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDCPNOChampagne20240911.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape covers the most vineyard in Champagne?",
+   "options": [
+    "Chardonnay",
+    "Pinot Noir",
+    "Meunier"
+   ],
+   "answer": "B, Pinot Noir (38%)",
+   "source": "Comité Champagne"
+  },
+  {
+   "q": "Minimum time from tirage before a non-vintage Champagne is sold?",
+   "options": [
+    "9 months",
+    "15 months",
+    "36 months"
+   ],
+   "answer": "B, 15 months",
+   "source": "INAO cahier des charges"
+  },
+  {
+   "q": "Reims averages 15 °C from April to October. In WSET terms that is:",
+   "options": [
+    "Cool",
+    "Moderate",
+    "Warm"
+   ],
+   "answer": "A, Cool",
+   "source": "Météo-France normals; Open Wine Atlas study lesson"
+  }
+ ],
+ "derived": {
+  "precip_sum_check": 621.4,
+  "paris_precip_sum_check": 634.3,
+  "tmean_apr_oct_c": {
+   "value": 15.03,
+   "code": "mean(tmean[Apr..Oct])"
+  },
+  "tmean_apr_oct_from_maxmin_c": {
+   "value": 15.04,
+   "code": "mean((tmax+tmin)/2, Apr..Oct)"
+  },
+  "precip_apr_oct_mm": {
+   "value": 366.2,
+   "code": "sum(pr[Apr..Oct])"
+  },
+  "outline_km2": {
+   "value": 3544,
+   "code": "354439 ha / 100"
+  },
+  "reims_paris_km": {
+   "value": 139,
+   "code": "haversine Reims-Prunay to Paris-Montsouris (48.8217N, 2.3378E)"
+  },
+  "rain_diff_vs_paris_mm": {
+   "value": 12.9,
+   "code": "634.3-621.4"
+  }
+ },
+ "dropped": [
+  "Sunshine: no official 1991-2020 sunshine normal found for Reims-Prunay (layer swapped for Soil)",
+  "Total vineyard hectares: no official page reachable",
+  "Belemnite chalk: not in the INAO text"
+ ]
+}
