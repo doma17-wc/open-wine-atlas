@@ -150,5 +150,68 @@
   "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-28-story-aspect.jpg",
   "caption": "",
   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3317419921828430269"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "reel",
+  "slot": "2026-10-25T17:50+01:00",
+  "media": "reels/deep-burgundy-region.mp4",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-457504527260695103"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "story",
+  "slot": "2026-10-25T18:30+01:00",
+  "media": "cards/deep-story-cta1.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-474164710599933752"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "carousel",
+  "slot": "2026-10-26T08:35+01:00",
+  "media": "cards/deep-2026-10-burgundy-feature-1..6.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=1705079364049584620"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "story",
+  "slot": "2026-10-26T18:30+01:00",
+  "media": "cards/deep-story-bourgogne-cote-de-nuits-q3.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=4693691289036343170"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "reel",
+  "slot": "2026-10-27T17:50+01:00",
+  "media": "reels/deep-cote-de-nuits.mp4",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=4391123898727090297"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "story",
+  "slot": "2026-10-27T18:30+01:00",
+  "media": "cards/deep-story-cta2.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-7782449039936896743"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "story",
+  "slot": "2026-10-28T18:30+01:00",
+  "media": "cards/deep-story-bourgogne-chablis-q6.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-6328010595797348966"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "carousel",
+  "slot": "2026-10-29T08:35+01:00",
+  "media": "cards/deep-2026-10-burgundy-quiz-1..6.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=2137005253966054320"
+ },
+ {
+  "series": "burgundy-deep",
+  "kind": "story",
+  "slot": "2026-10-29T18:30+01:00",
+  "media": "cards/deep-story-cta3.jpg",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=2999021885726216032"
  }
 ]
