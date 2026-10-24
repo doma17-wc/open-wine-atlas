@@ -34,13 +34,20 @@ WEB = os.path.join(ROOT, "web", "data")
 LIST = os.path.join(ROOT, "pipeline", "lists", "ch_regions.json")
 SWISS = os.path.join(RAW, "basemap", "swiss", "package")
 SRC = "chreg"
+# Swiss lake names (swiss-maps) -> the Natural Earth names the map can highlight
+LAKE_NE = {"Lac Léman": "Geneva", "Lac de Neuchâtel": "Neuchâtel", "Murtensee/Lac de Morat": "Murten", "Bielersee / Lac de Bienne": "Biel",
+           "Zürichsee": "Zurich", "Vierwaldstättersee": "Lucerne", "Walensee": "Walensee", "Bodensee": "Constance", "Lago di Lugano": "Lugano"}
 DISPLAY = {"Roveredo (GR)": "Roveredo", "Villette (Lavaux)": "Villette", "Saint-Saphorin (Lavaux)": "Saint-Saphorin"}
 
 
 def communes(year):
     df = pyogrio.read_dataframe(os.path.join(SWISS, str(year), "municipalities.shp"), encoding="utf-8")
-    df = df.set_crs(2056, allow_override=True)
-    lakes = pyogrio.read_dataframe(os.path.join(SWISS, str(year), "lakes.shp"), encoding="utf-8").set_crs(2056, allow_override=True)
+    # the .prj says which Swiss grid: LV03 (EPSG:21781) up to the early 2010s, LV95 (EPSG:2056) since
+    if df.crs is None:
+        df = df.set_crs(2056)
+    lakes = pyogrio.read_dataframe(os.path.join(SWISS, str(year), "lakes.shp"), encoding="utf-8")
+    if lakes.crs is None:
+        lakes = lakes.set_crs(df.crs)
     return df, lakes
 
 
@@ -81,6 +88,19 @@ def wineries_in(geoms):
     return out
 
 
+def shares(d):
+    """grape_ha [[grape, ha]] -> grape_share [[grape, % of the planted area]]; the hectares go into the note."""
+    gh = d.pop("grape_ha", None)
+    if not gh:
+        return
+    tot = d.get("area_ha") or d.get("vine_area_ha")
+    d["grape_share"] = [[g, round(100 * ha / tot, 1)] for g, ha in gh]
+    if not d.get("grape_share_note"):
+        src = d.get("area_src") or d.get("vine_area_src") or ""
+        d["grape_share_note"] = "Share of the " + f"{tot:,.1f}" + " ha planted" + (", " + src if src else "") + \
+            ". " + ", ".join(f"{g} {ha:g} ha" for g, ha in gh) + "."
+
+
 def extent_km(g):
     w, s, e, n = g.bounds
     mid = (s + n) / 2
@@ -96,7 +116,10 @@ def main():
 
     geoms = []
     for pl in spec["places"]:
-        if "point" in pl:
+        if "geometry_file" in pl:  # an outline drawn elsewhere (OpenStreetMap), see contrib/ch
+            fc = json.load(open(os.path.join(ROOT, pl["geometry_file"]), encoding="utf-8"))
+            g = round_geom(shapely.union_all([shape(f["geometry"]) for f in fc["features"]]), 6)
+        elif "point" in pl:
             lat, lon = pl["point"]
             g = Point(lon, lat)
             names = pl.get("communes", [])
@@ -112,7 +135,7 @@ def main():
             missing = set(names) - set(sel["name"])
             assert not missing, f"{pl['id']}: communes not found in {year}: {missing}"
             g = shapely.make_valid(shapely.union_all(sel.geometry.simplify(20, preserve_topology=True).tolist()))
-            g = sel.iloc[:1].set_geometry([g], crs=2056).to_crs(4326).geometry.iloc[0]
+            g = sel.iloc[:1].set_geometry([g], crs=df.crs).to_crs(4326).geometry.iloc[0]
             g = round_geom(g, 5)
         geoms.append(g)
 
@@ -136,25 +159,35 @@ def main():
             d["vine_area_src"] = d.pop("area_src", None) or (d["refs"][0][0] if d.get("refs") else "")
             if "area_note" in d:
                 d["vine_area_note"] = d.pop("area_note")
+        shares(d)
         if "pinot_ha" in d and d.get("vine_area_ha"):
             pct = round(100 * d["pinot_ha"] / d["vine_area_ha"], 1)
             d["grape_share"] = [["Pinot Noir (Blauburgunder)", pct]]
             d["grape_share_note"] = f"Pinot Noir: {d.pop('pinot_ha')} of {d['vine_area_ha']} ha, Plantahof Rebbaustatistik 2025"
+        extra_outline = d.pop("outline_extra", "")
         if point:
             d["outline_quality"] = "point"
             d["outline"] = d.get("outline") or "Smaller than a commune: shown as a marker until the cantonal vineyard cadastre is mapped."
             c = g
         else:
             d["outline_quality"] = "approx"
-            d["outline"] = ("Union of the communes " if len(shown) > 1 else "The commune of ") + ", ".join(shown) + \
-                ". The vines are only part of it: the vineyard layer of the map shows where they are."
+            if not d.get("outline"):
+                d["outline"] = ("Union of the communes " if len(shown) > 1 else "The commune of ") + ", ".join(shown) + \
+                    ". The vines are only part of it: the vineyard layer of the map shows where they are."
+            if pl.get("year") and pl["year"] < 2024 and not pl.get("geometry_file"):
+                d["outline"] += f" Former communes, drawn with their boundaries of {pl['year']}."
+            if extra_outline:
+                d["outline"] += " " + extra_outline
             k = 111.32 * math.cos(math.radians(g.centroid.y)) * 110.57 * 100
             d["outline_area_ha"] = round(g.area * k)
             d["extent_km"] = extent_km(g)
             c = polylabel(max(getattr(g, "geoms", [g]), key=lambda q: q.area), tolerance=0.0005)
         d["lat"], d["lon"] = round(c.y, 5), round(c.x, 5)
-        d["outline_source"] = {"name": "BFS GEOSTAT / swisstopo municipal boundaries" + (" (" + str(pl["year"]) + ")" if pl.get("year") else " 2024"),
-                               "licence": "Open use, attribution", "source": "swiss-maps 4.7.0"}
+        if pl.get("outline_src") == "osm":
+            d["outline_source"] = {"name": "OpenStreetMap contributors", "licence": "ODbL 1.0", "source": pl["geometry_file"]}
+        elif not point:
+            d["outline_source"] = {"name": "BFS GEOSTAT / swisstopo municipal boundaries" + (" (" + str(pl["year"]) + ")" if pl.get("year") else " 2024"),
+                                   "licence": "Open use, attribution", "source": "swiss-maps 4.7.0"}
         t = towns.nearest(d["lat"], d["lon"])
         if t:
             d["near_town"] = [t["name"], round(hav(t["latitude"], t["longitude"], d["lat"], d["lon"]), 1), bearing(t["latitude"], t["longitude"], d["lat"], d["lon"])]
@@ -166,8 +199,8 @@ def main():
         for nm, lg in zip(lakes_ll["name"], lakes_ll.geometry):
             q = pt if lg.contains(pt) else nearest_points(pt, lg)[1]
             km = hav(d["lat"], d["lon"], q.y, q.x)
-            if km <= 25:
-                lk.append([nm, round(km, 1)])
+            if km <= 25 and nm in LAKE_NE:
+                lk.append([LAKE_NE[nm], round(km, 1)])
         if lk:
             d["lakes"] = sorted(lk, key=lambda x: x[1])[:3]
         if i in wins:
@@ -190,6 +223,7 @@ def main():
         if rec.get("note", "").startswith("Outline follows the canton boundary"):
             rec["note"] = "Outline follows the canton boundary. The wine areas and communal appellations inside are drawn by commune."
         extra = dict(extra)
+        shares(extra)
         if "area_ha" in extra:
             rec["vine_area_ha"] = extra.pop("area_ha")
             rec["vine_area_src"] = extra.pop("area_src", None) or (extra["refs"][0][0] if extra.get("refs") else "")

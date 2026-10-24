@@ -34,6 +34,7 @@ from build_tiles import POINT_MINZOOM, area_ha, label_minzoom, short_name  # noq
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OV = os.environ.get("OVERVIEW", os.path.join(ROOT, "web", "data", "overview.pmtiles"))
 EXTENT = 4096
+MAXZ = 9  # last zoom of overview.pmtiles
 BUFFER = 64  # px of the tile extent, like tippecanoe's default buffer of 5/256
 OUTLINE_MINZOOM = {"region": 2, "appellation": 5, "subzone": 7, "vineyard": 8}
 
@@ -80,15 +81,18 @@ def prepare(path):
             g = shape(ft["geometry"])
             if g.is_empty:
                 continue
+            # the overview stops at zoom 9 (deeper zooms reuse its tiles), so a label must exist by then;
+            # grands crus are drawn first when labels collide
+            top = 10 ** 6 if p.get("rank") == "grand_cru" else None
             if g.geom_type == "Point":
                 out.append(("appellations", OUTLINE_MINZOOM.get(p["level"], 6), p, g))
-                q = dict(p, ha=0, short=p["name"])
-                out.append(("labels", POINT_MINZOOM.get(p["level"], 9), q, g))
+                q = dict(p, ha=top or 0, short=p["name"])
+                out.append(("labels", min(MAXZ, POINT_MINZOOM.get(p["level"], 9)), q, g))
                 continue
             ha = area_ha(g)
             out.append(("appellations", OUTLINE_MINZOOM.get(p["level"], 6), p, g.simplify(0.0008, preserve_topology=True)))
-            q = dict(p, ha=round(ha), short=short_name(p))
-            out.append(("labels", label_minzoom(p["level"], ha, p["country"]), q, label_point(g)))
+            q = dict(p, ha=top or round(ha), short=short_name(p))
+            out.append(("labels", min(MAXZ, label_minzoom(p["level"], ha, p["country"])), q, label_point(g)))
     return out
 
 

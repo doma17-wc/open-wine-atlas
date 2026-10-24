@@ -3131,6 +3131,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     (d.vine_area_note ? '<div class="note">' + esc(t_(d.vine_area_note)) + "</div>" : "")]);
   if (d.growers) rows.push([N_("Growers"), '<span class="num">' + fmtN(d.growers) + "</span>"]);
   if (d.label_rule) rows.push([N_("On the label"), esc(t_(d.label_rule))]);
+  if (d.pgc_rule) rows.push([N_("Premier grand cru"), esc(t_(d.pgc_rule))]);
   if (d.gi_url) rows.push([N_("Register"), '<a href="' + esc(d.gi_url) + '" target="_blank" rel="noopener">' + t_("Wine Australia GI page") + '</a>']);
   if (d.basis) rows.push([N_("Legal basis"), esc(d.basis)]);
   if (d.producers_note) rows.push([N_("Known producers"), esc(d.producers_note)]);
@@ -3166,6 +3167,13 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     html += '<div class="sec"><h3>' + t_("Grapes planted") + '</h3><div class="bars">' +
       d.grape_share.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + Math.min(100, pc) + '%"></i></span><span class="num">' + fmtN(pc, 1) + "%</span></div>").join("") +
       "</div>" + (d.grape_share_note ? '<p class="note">' + esc(t_(d.grape_share_note)) + "</p>" : "") + "</div>";
+  }
+
+  // premiers crus that are listed but not mapped yet (Geneva)
+  if (d.premiers_crus?.length) {
+    html += '<div class="sec"><h3>' + t_("Premiers crus · {n}", { n: d.premiers_crus.length }) + '</h3><dl class="facts">' +
+      d.premiers_crus.map(([n, ha, c]) => "<dt>" + esc(n) + (c ? ' <span class="note">' + esc(c) + "</span>" : "") + '</dt><dd><span class="num">' + fmtN(ha, 1) + " ha</span></dd>").join("") +
+      "</dl>" + (d.premiers_crus_note ? '<p class="note">' + esc(t_(d.premiers_crus_note)) + "</p>" : "") + "</div>";
   }
 
   // bedrock
