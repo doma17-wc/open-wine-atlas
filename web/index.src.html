@@ -831,6 +831,7 @@ const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
   rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
+  chreg: { name: "Cantonal wine laws and vineyard statistics of Vaud, Genève and Graubünden; outlines from BFS GEOSTAT / swisstopo municipal boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
   bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
   osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
   ava: { name: "UC Davis Library, AVA Digitizing Project (from 27 CFR part 9)", license: "CC0 1.0", url: "https://github.com/UCDavisLibrary/ava" },
@@ -2952,7 +2953,7 @@ function fitTo(b, level) {
     duration: REDUCED ? 0 : far, essential: true });
 }
 
-const worldType = (p, d) => (/-world-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
+const worldType = (p, d) => (/-world-|^ch-reg-/.test(p.id) && d && d.type) ? d.type.replace(/\s*\(.*\)\s*$/, "") : "";
 function badgeFor(p, d) {
   const g = (k) => ' <button class="q" data-gloss="' + k + '" aria-label="' + t_("What does this mean?") + '">?</button>';
   const wt = worldType(p, d);
@@ -2989,9 +2990,11 @@ const liveVines = (d) => WEB && !d.vine_area_ha && d.outline_quality !== "point"
 function summary(p, d, pd) {
   const wt = worldType(p, d);
   const lvlKey = p.level === "vineyard" && p.country === "DE" ? "vineyard_DE" : p.level;
-  const what = wt ? t_("a {type}", { type: t_(wt) }) : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
-  const area = liveVines(d) ? null : d.area_ha ?? null;
-  const towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
+  const lc = (s) => p.src === "chreg" && UILANG === "en" ? s.toLowerCase() : s;
+  const what = wt ? t_("a {type}", { type: lc(t_(wt)) }) : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
+  const area = liveVines(d) ? null : d.area_ha ?? (p.src === "chreg" ? d.vine_area_ha : null) ?? null;
+  let towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
+  if (towns?.length === 1 && norm(towns[0]) === norm(p.name)) towns = null;
   let t = t_("{name} is {what}{of} in {country}{area}{towns}.", {
     name: esc(p.name), what,
     of: p.parent ? t_(" of {parent}", { parent: esc(p.parent) }) : "",
@@ -3124,9 +3127,13 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.states?.length) rows.push([N_("State"), esc(d.states.join(", "))]);
   if (d.state) rows.push([N_("State"), esc(d.state)]);
   if (d.register_ref) rows.push([N_("Legal act"), esc(d.register_ref)]);
-  if (d.vine_area_ha) rows.push([N_("Vineyards planted"), '<span class="num">' + fmtN(d.vine_area_ha) + " ha</span>" + ' <span class="note">Wine Australia</span>']);
+  if (d.vine_area_ha) rows.push([N_("Vineyards planted"), '<span class="num">' + fmtN(d.vine_area_ha, d.vine_area_ha < 10 ? 2 : 1) + " ha</span>" + ' <span class="note">' + esc(d.vine_area_src || "Wine Australia") + "</span>" +
+    (d.vine_area_note ? '<div class="note">' + esc(t_(d.vine_area_note)) + "</div>" : "")]);
+  if (d.growers) rows.push([N_("Growers"), '<span class="num">' + fmtN(d.growers) + "</span>"]);
+  if (d.label_rule) rows.push([N_("On the label"), esc(t_(d.label_rule))]);
   if (d.gi_url) rows.push([N_("Register"), '<a href="' + esc(d.gi_url) + '" target="_blank" rel="noopener">' + t_("Wine Australia GI page") + '</a>']);
   if (d.basis) rows.push([N_("Legal basis"), esc(d.basis)]);
+  if (d.producers_note) rows.push([N_("Known producers"), esc(d.producers_note)]);
   if (d.outline_source) rows.push([N_("Outline data"), esc(d.outline_source.name) + ' <span class="note">· ' + esc(d.outline_source.licence) + "</span>"]);
   if (d.counties?.length) rows.push([N_("County"), esc(d.counties.slice(0, 12).join(", ") + (d.counties.length > 12 ? " " + t_("and {n} more", { n: d.counties.length - 12 }) : ""))]);
   if (d.within?.length) rows.push([N_("Within"), d.within.map((w) => { const r = byName.get(norm(w)); return r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(w) + "</button>" : esc(w); }).join(", ")]);
@@ -3152,6 +3159,13 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     const g = String(d.grapes).split("/").map((s) => s.trim()).filter(Boolean);
     html += '<div class="sec"><h3>' + t_("Authorised grapes · {n}", { n: g.length }) + '</h3><div class="grapes">' + g.slice(0, 40).map(grape).join("") +
       (g.length > 40 ? "<span>+" + (g.length - 40) + "</span>" : "") + "</div></div>";
+  }
+
+  // planted grapes with their share of the vineyard area (Switzerland: cantonal statistics)
+  if (d.grape_share?.length) {
+    html += '<div class="sec"><h3>' + t_("Grapes planted") + '</h3><div class="bars">' +
+      d.grape_share.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + Math.min(100, pc) + '%"></i></span><span class="num">' + fmtN(pc, 1) + "%</span></div>").join("") +
+      "</div>" + (d.grape_share_note ? '<p class="note">' + esc(t_(d.grape_share_note)) + "</p>" : "") + "</div>";
   }
 
   // bedrock
@@ -3208,6 +3222,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     links.push('<a href="https://www.openstreetmap.org/?mlat=' + d.lat + "&mlon=" + d.lon + "#map=16/" + d.lat + "/" + d.lon + '" target="_blank" rel="noopener">OpenStreetMap</a>');
     links.push('<a href="https://www.google.com/maps/@' + d.lat + "," + d.lon + ',1500m/data=!3m1!1e3" target="_blank" rel="noopener">' + t_("Satellite view") + "</a>");
   }
+  (d.refs || []).forEach(([t, u]) => links.push('<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(t) + "</a>"));
   const eu = d.eu_register || pd.eu_register;
   if (eu) links.push('<a href="' + esc(eu) + '" target="_blank" rel="noopener">' + t_("EU register") + "</a>");
   html += '<div class="sec"><h3>' + t_("Read and look further") + '</h3><div class="links">' + links.join("") + "</div></div>";

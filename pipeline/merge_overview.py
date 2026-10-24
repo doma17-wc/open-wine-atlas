@@ -26,7 +26,7 @@ from pmtiles.reader import MmapSource, Reader, all_tiles
 from pmtiles.tile import Compression, TileType, zxy_to_tileid
 from pmtiles.writer import Writer
 from shapely.geometry import box, mapping, shape
-from shapely.ops import transform
+from shapely.ops import polylabel, transform
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_tiles import POINT_MINZOOM, area_ha, label_minzoom, short_name  # noqa: E402
@@ -65,7 +65,7 @@ def tile_range(bounds, z):
 
 def label_point(g):
     try:
-        return shapely.polylabel(max(getattr(g, "geoms", [g]), key=lambda p: p.area), tolerance=0.0005)
+        return polylabel(max(getattr(g, "geoms", [g]), key=lambda p: p.area), tolerance=0.0005)
     except Exception:
         return g.representative_point()
 
