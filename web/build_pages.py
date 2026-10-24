@@ -385,6 +385,8 @@ def main():
             (f' <span class="note">{esc(d["grape_share_note"])}</span>' if d.get("grape_share_note") else "") if d.get("grape_share") else "")
         add("Premiers crus", esc(", ".join(f"{n} ({fmt_n(ha, 1)} ha)" for n, ha, *_ in d["premiers_crus"])) if d.get("premiers_crus") else "")
         add("Known producers", esc(d.get("producers_note", "")))
+        for k, v in d.get("rules", []):
+            add(esc(k), esc(v))
         add("Separate plots", fmt_n(d["plots"]) if d.get("plots") and d["plots"] > 1 else "")
         add("Extent N–S × E–W", f"{d['extent_km'][0]} × {d['extent_km'][1]} km" if d.get("extent_km") else "")
         if d.get("lat") is not None:

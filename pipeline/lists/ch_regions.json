@@ -294,6 +294,396 @@
      "https://www.vinum.eu/fileadmin/user_upload/Advertorials/2020/2020_DCH/2012_VINUM_Genf_Geneve.pdf"
     ]
    ]
+  },
+  "ch-canton-23": {
+   "official_name": "AOC Valais / AOC Wallis",
+   "area_ha": 4577.7,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "45,777,472 m2 in 2025: 1,931.6 ha white (42%) and 2,646.1 ha red (58%), down 38 ha on 2024 (BLW). The cantonal wine office gives 4,564 ha and 62 wine communes on its own page. About 18,225 people own vineyard in the register.",
+   "grape_ha": [
+    [
+     "Pinot Noir",
+     1221.6
+    ],
+    [
+     "Chasselas (Fendant)",
+     735.8
+    ],
+    [
+     "Gamay",
+     433.0
+    ],
+    [
+     "Sylvaner (Johannisberg)",
+     330.8
+    ],
+    [
+     "Petite Arvine",
+     277.7
+    ],
+    [
+     "Savagnin Blanc (Heida / Païen)",
+     220.0
+    ],
+    [
+     "Syrah",
+     174.5
+    ],
+    [
+     "Cornalin",
+     166.2
+    ],
+    [
+     "Merlot",
+     145.9
+    ],
+    [
+     "Humagne Rouge",
+     140.8
+    ],
+    [
+     "Gamaret",
+     97.5
+    ],
+    [
+     "Diolinoir",
+     97.2
+    ],
+    [
+     "Pinot Gris (Malvoisie)",
+     54.1
+    ],
+    [
+     "Amigne",
+     38.8
+    ],
+    [
+     "Marsanne (Ermitage)",
+     36.3
+    ],
+    [
+     "Humagne Blanche",
+     25.9
+    ]
+   ],
+   "grape_share_note": "Hectares for Valais in BLW, Das Weinjahr 2025, tables 1.2 and 1.3 (given there in ares). The canton page gives Pinot Noir 26.6%, Chasselas 16.0% and Gamay 9.4%, together 52% of the vineyard. Amigne, Humagne Blanche, Humagne Rouge and Cornalin are grown almost only in Valais.",
+   "basis": "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, of 17 March 2004 (consolidated version in force 1 April 2026)",
+   "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63). Neighbouring communes with a uniform natural setting may share a regional name with the service's approval, but names like 'district de Sion' are banned (art. 64). A local name from the official survey may be used (art. 68).",
+   "atlas_note": "The largest wine canton of Switzerland, about a third of the national vineyard, along the dry upper Rhône valley from Lake Geneva to Brig. Pinot Noir, Chasselas sold as Fendant and Gamay cover half the vines; Sylvaner, Petite Arvine, Heida, Syrah, Cornalin and Humagne Rouge follow. There is one cantonal AOC. Below it a wine can name its commune, and a dozen communes have their own Grand Cru rules. The law knows no premier cru: the word is banned on Valais labels.",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+     "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+    ],
+    [
+     "OVV RS VS 916.142, consolidated text 1 April 2026 (PDF)",
+     "https://lex.vs.ch/api/fr/versions/3580/pdf_file"
+    ],
+    [
+     "Canton du Valais, Office de la vigne et du vin: Vignoble valaisan",
+     "https://www.vs.ch/web/sca/vignoble-valaisan"
+    ],
+    [
+     "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+     "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+    ],
+    [
+     "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+     "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+    ],
+    [
+     "IVV brochure 2023 (Walliser Wein)",
+     "https://swisswinevalais.ch/media/vxpdjpd0/ivv-brochure-2023-de-web.pdf"
+    ],
+    [
+     "Swiss Wine, Valais",
+     "https://www.swisswine.com/en/swiss-wine-regions/valais-wine-region"
+    ]
+   ],
+   "rules": [
+    [
+     "Grand cru",
+     "Grand Cru (OVV art. 85 to 97): set by a communal or regional regulation homologated by the Conseil d'Etat, one per commune or region. Only Chasselas, Sylvaner, Amigne, Arvine, Marsanne, Roussanne, Savagnin, Humagne Blanc, Pinot Gris, Rèze, Pinot Noir, Gamay, Cornalin, Humagne Rouge and Syrah. Yield at most 1.1 kg/m2 for Chasselas, 1.0 for Sylvaner, 0.8 for the rest; vines at least eight years old; no blending of varieties or vintages; vinified and bottled in Valais. The label shows Grand Cru, the commune or region and the vintage; 'Grand Cru Valais', 'premier cru' and 'cru classé' are banned. Cornalin, Humagne Rouge and Syrah not before 1 April of the second year. The IVV control rules add the common Valais bottle and a tasting minimum of 84/100."
+    ],
+    [
+     "Traditional names",
+     "Fendant = Chasselas, Johannisberg = Sylvaner, Malvoisie = Pinot Gris, Ermitage = Marsanne and/or Roussanne, Païen or Heida = Savagnin Blanc, Dôle = Pinot Noir alone or at least 85% Pinot Noir with Gamay, Dôle Blanche and Oeil de Perdrix are rosés, Goron is a red vin de pays without place name (OVV art. 49 to 61)"
+    ]
+   ]
+  },
+  "ch-canton-21": {
+   "official_name": "DOC Ticino",
+   "area_ha": 1115.3,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "88% red, 12% white, 2025, canton Ticino only. With the Mesolcina the cantonal office counts 1,143 ha for Italian-speaking Switzerland in 2025, of which 855 ha (74.8%) Merlot.",
+   "grape_ha": [
+    [
+     "Merlot",
+     821.4
+    ],
+    [
+     "Chardonnay",
+     47.8
+    ],
+    [
+     "Merlot (registered for Blanc de Noir)",
+     43.4
+    ],
+    [
+     "American and hybrid red varieties",
+     42.9
+    ],
+    [
+     "Sauvignon Blanc",
+     21.7
+    ],
+    [
+     "Cabernet Franc",
+     17.5
+    ],
+    [
+     "Cabernet Sauvignon",
+     15.4
+    ],
+    [
+     "Pinot Noir",
+     11.3
+    ],
+    [
+     "Johanniter",
+     9.9
+    ],
+    [
+     "Gamaret",
+     9.1
+    ],
+    [
+     "Bondola",
+     7.6
+    ],
+    [
+     "Souvignier Gris",
+     6.5
+    ],
+    [
+     "Viognier",
+     5.9
+    ],
+    [
+     "Isabella",
+     4.8
+    ],
+    [
+     "Kerner",
+     4.8
+    ]
+   ],
+   "growers": 2452,
+   "basis": "Regolamento sulla viticoltura (RViti), RL 916.150 of 11 Sept 2024, art. 16 to 18, and the Direttive sulla viticoltura of 13 Sept 2024 (point 3, DOC; point 5, IGT), on the federal Weinverordnung SR 916.140. The 2015 regulation, which held the DOC rules, was repealed in 2024.",
+   "label_rule": "'Ticino' plus a grape variety: at least 90% of that variety. Blends: 'Rosso, Bianco or Rosato del Ticino', naming the main variety and others above 10%, never a single variety. 'Denominazione di origine controllata' in full on the main label, right after the name. Part of canton, district, commune, frazione or land register name may be added if on the production and harvest control certificates; not on non-vintage DOC in 1, 0.5 or 0.2 l bottles with crown or screw cap. 'Castello' only for land with that name in the land register for 20 years. Riserva needs the vintage (Direttive 2024, 3.1, 3.10, 3.13, 3.14).",
+   "grapes": "Red: Bondola / Cabernet Franc / Cabernet Sauvignon / Carminoir / Diolinoir / Divico / Galotta / Gamaret / Garanoir / Marselan / Merlot / Petit Verdot / Pinot Nero / Syrah. White: Chardonnay / Chasselas / Doral / Johanniter / Kerner / Müller-Thurgau / Pinot Bianco / Pinot Grigio / Sauvignon Bianco / Sauvignon Grigio / Semillon / Viognier. Up to 10% of other registered varieties, not named on the label.",
+   "atlas_note": "The wine canton of Italian-speaking Switzerland, and Merlot country: about three quarters of the vines are Merlot. It came after phylloxera, when the first cuttings were handed out in 1906 and Bondola, the old local red, was replaced. The Monte Ceneri pass splits the canton into the Sopraceneri and the Sottoceneri, and the Mendrisio district alone has over a third of the vines. Nearly a third of the Merlot is now pressed as white wine.",
+   "producers_note": "Gambero Rosso Tre Bicchieri 2021: Paolo Basso Wine (Lugano), Angelo Delea (Losone). The Cantina Sociale Mendrisio, founded 1949, has about 350 member growers (ticino.ch).",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 3 (superfici per vitigno e cantone)",
+     "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_3.pdf"
+    ],
+    [
+     "Sezione dell'agricoltura TI, Rapporto vendemmia 2023",
+     "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2023.pdf"
+    ],
+    [
+     "Sezione dell'agricoltura TI, Comunicato annata viticola 2025",
+     "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/allegati/20251127_Comunicato_annata_viticola_2025.pdf"
+    ],
+    [
+     "Regolamento sulla viticoltura (RViti), RL 916.150, 11 Sept 2024",
+     "https://www3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfatto/atto/10462"
+    ],
+    [
+     "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+     "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+    ],
+    [
+     "IVVT, Direttiva no. 3 (labels), 2010",
+     "https://m4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/d3_art_16.pdf"
+    ],
+    [
+     "Swiss Wine, Ticino wine region",
+     "https://www.swisswine.com/en/swiss-wine-regions/ticino-wine-region"
+    ],
+    [
+     "Swiss Wine, Bondola",
+     "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/bondola-en"
+    ],
+    [
+     "RSI, Il Merlot non è sempre stato ticinese",
+     "https://www.rsi.ch/food/extra/territorio-e-tradizioni/Il-Merlot-non-%C3%A8-sempre-stato-ticinese--3739464.html"
+    ],
+    [
+     "Gambero Rosso, Tre Bicchieri 2021 Canton Ticino",
+     "https://www.gamberorosso.it/vino/tre-bicchieri-2021-i-migliori-vini-del-canton-ticino/"
+    ],
+    [
+     "ticino.ch, Cantina Sociale Mendrisio",
+     "https://www.ticino.ch/it/commons/details/Cantina-Sociale-Mendrisio/2575.html"
+    ]
+   ],
+   "grape_share_note": "Canton Ticino 2024, total 1,144.8 ha planted (Sezione dell'agricoltura, Rapporto vendemmia 2024, Allegato 3). BLW gives 832.9 ha of Merlot for 2025.",
+   "rules": [
+    [
+     "Nostrano",
+     "Nostrano is a traditional name of the IGT tier, not DOC. Any variety registered in the vineyard cadastre of Ticino or the Mesolcina may be used, including the American and hybrid grapes that are banned from DOC blending and from other IGT wine (RViti 2024 art. 18; Direttive 2024 point 5 and annex 1). Swiss Wine notes Bondola is often blended into Nostrano."
+    ],
+    [
+     "Americana",
+     "Americana is the local name for American grapes and direct-producer hybrids such as Isabella, Clinton and Noah. Annex 1 of the 2024 directives excludes them from DOC and from IGT, except as Nostrano. The 2024 statistics count 42.9 ha of red American and hybrid varieties plus 4.8 ha of Isabella in the canton, most of it in the Locarnese, the Luganese and the Valle Maggia."
+    ],
+    [
+     "Bianco di Merlot",
+     "Much Merlot is pressed as a white wine. In 2023, 1,491,354 kg of Merlot, 29% of the Merlot harvest, was vinified white; in 2024, 43.4 ha were registered as Merlot for Blanc de Noir. The law has no separate category for it: it is DOC Ticino like any other white, and growers must declare red grapes vinified white (RViti 2024 art. 11)."
+    ],
+    [
+     "Production rules",
+     "DOC grapes may come from Ticino and the Mesolcina (GR) and must be vinified in Ticino or the Mesolcina. Minimum natural sugar 18.0 Brix for red and 16.0 Brix for white; maximum yield 1,000 g/m2 red and 1,200 g/m2 white. Up to 10% blending, never with red or rosé wine from outside the canton (Direttive 2024, 3.3 to 3.8)."
+    ],
+    [
+     "Growers",
+     "Growers in Ticino 2023, including 111 from outside the canton with vines in Ticino; plus 93 in the Mesolcina. 185 wineries vinified grapes in 2023 (Rapporto vendemmia 2023)."
+    ],
+    [
+     "Harvest",
+     "2025: 37,903 hl of wine in Ticino, 14,003 hl white and 23,900 hl red; 10,240 hl of the white was made from red grapes (BLW, Das Weinjahr 2025)."
+    ]
+   ]
+  },
+  "ch-canton-24": {
+   "official_name": "AOC Neuchâtel",
+   "wine_region": "Trois-Lacs",
+   "area_ha": 603.3,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "382.8 ha red (63%) and 220.5 ha white (37%), 2025. The legal vineyard zone (zone viticole) was enlarged to 556 ha in March 2018 (Plan directeur cantonal, fiche S_23).",
+   "grape_ha": [
+    [
+     "Pinot Noir",
+     334.4
+    ],
+    [
+     "Chasselas",
+     137.6
+    ],
+    [
+     "Chardonnay",
+     29.3
+    ],
+    [
+     "Pinot Gris",
+     24.9
+    ],
+    [
+     "Gamaret",
+     14.3
+    ],
+    [
+     "Garanoir",
+     10.3
+    ]
+   ],
+   "grape_share_note": "Hectares 2025 from BLW, Das Weinjahr 2025, tables 1.2 and 1.3 (read from the NE column). Neuchâtel Vins et Terroir gives similar figures: Pinot Noir 334 ha, Chasselas 150 ha, Chardonnay 26 ha, Pinot Gris 24 ha, Gamaret 14 ha, Garanoir 9 ha.",
+   "basis": "Arrêté concernant l'appellation d'origine contrôlée des vins de Neuchâtel, RSN 916.120.1, of 20 June 2016 (annex 3 last changed 18 Aug 2021); Loi sur la viticulture RSN 916.120 (vineyard zone and cadastre)",
+   "grapes": "Chardonnay / Chasselas / Doral / Gewürztraminer / Müller-Thurgau / Pinot Blanc / Pinot Gris / Sauvignon Blanc / Viognier / Gamaret / Garanoir / Pinot Noir",
+   "label_rule": "One AOC, Neuchâtel. A commune, locality, region or sector name may be added if at least 85% of the grapes come from it (art. 4); a cadastral name needs 95% from parcels of that name (art. 5). The grape must be named, except for Chasselas, Pinot Noir and sparkling wine (art. 6). A Pinot Noir must hold at least 95% Pinot Noir (art. 12). Wines must be made in the canton (art. 15).",
+   "atlas_note": "About 600 ha on the north shore of Lake Neuchâtel, at the foot of the Jura, from Le Landeron to Vaumarcus. Limestone soils of Jurassic origin. Pinot Noir covers more than half the vineyard, Chasselas about a quarter. Only twelve grape varieties are allowed for the AOC. The canton gave the country the Œil-de-Perdrix rosé and the unfiltered Chasselas sold each January.",
+   "producers_note": "53 winegrowers and cellars (Neuchâtel Vins et Terroir). Caves de la Ville de Neuchâtel own 13.4 ha (Hachette Vins).",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+     "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+    ],
+    [
+     "Arrêté AOC des vins de Neuchâtel du 15 Sept 2010 (repealed 2016)",
+     "https://rsn.ne.ch/DATA/program/books/RSN2016/20163/htm/9161201.htm"
+    ],
+    [
+     "Loi sur la viticulture (LVit), RSN 916.120",
+     "https://rsn.ne.ch/DATA/program/books/rsne/pdf/916.120.pdf"
+    ],
+    [
+     "Canton de Neuchâtel, Plan directeur cantonal, fiche S_23 vignoble (2018)",
+     "https://www.ne.ch/autorites/DDTE/SCAT/Documents/02_Plan_directeur_cantonal/PDC_Fiches_coordination_S23.pdf"
+    ],
+    [
+     "Neuchâtel Vins et Terroir, le vignoble",
+     "https://neuchatel-vins-terroir.ch/vins/vignoble/"
+    ],
+    [
+     "Neuchâtel Vins et Terroir",
+     "https://neuchatel-vins-terroir.ch/"
+    ],
+    [
+     "Neuchâtel Vins et Terroir, Œil-de-Perdrix",
+     "https://neuchatel-vins-terroir.ch/oeil-de-perdrix/"
+    ],
+    [
+     "Neuchâtel Vins et Terroir, press release Non filtré, 17 Jan 2024",
+     "https://agirinfo.com/fileadmin/agir/Medias/Communique_de_presse/2024/01/17012024_CP_Neuchatel_Vins_et_Terroir_Non_filtre_2024.pdf"
+    ],
+    [
+     "Ordonnance sur le vin RS 916.140, annexe 1 (Termes vinicoles spécifiques)",
+     "https://www.fedlex.admin.ch/eli/cc/2007/833/fr"
+    ],
+    [
+     "Ordonnance sur le vin RS 916.140, état 1 Jan 2026 (unofficial mirror)",
+     "https://ch.odat.ch/fr/cc/916.140-20260101-fr.html"
+    ],
+    [
+     "Cavesa, Oeil-de-Perdrix and Perdrix Blanche",
+     "https://www.cavesa.ch/en/definition/oeil-de-perdrix"
+    ],
+    [
+     "Swiss Wine, Three Lakes wine region",
+     "https://www.swisswine.com/en/swiss-wine-regions/three-lakes-wine-region"
+    ],
+    [
+     "Hachette Vins, canton de Neuchâtel",
+     "https://www.hachette-vins.com/tout-sur-le-vin/appellations-vins/725/canton-de-neuchatel/page-5"
+    ]
+   ],
+   "rules": [
+    [
+     "Grand cru",
+     "Grand cru is governed by a regulation of the Interprofession viti-vinicole neuchâteloise (IVN). Only still AOC Neuchâtel wines made solely from Chardonnay, Chasselas or Pinot Noir vinified red may use it. Any other quality term such as 1er Cru or Grand cru classé is banned (RSN 916.120.1 art. 14)."
+    ],
+    [
+     "Production rules",
+     "Minimum sugar 15.2 °Brix for Chasselas and Müller-Thurgau, 18.4 °Brix for most other still wines (annex 2). Maximum yield 0.9 kg/m² for Chasselas and Müller-Thurgau, 0.8 kg/m² for most others, 1.0 kg/m² for sparkling base (annex 3, 2021)."
+    ],
+    [
+     "Non filtré",
+     "Chasselas AOC Neuchâtel bottled without any filtration, sold from the third Wednesday of January after the harvest (RSN 916.120.1 annex 7). First made in 1975 by Henri-Alexandre Godet. About thirty cellars make it, about 15% of the canton's Chasselas (Neuchâtel Vins et Terroir 2024)."
+    ],
+    [
+     "Œil-de-Perdrix",
+     "Federal term: rosé AOC wine from Pinot Noir, with at most 10% Pinot Gris or Pinot Blanc (Ordonnance sur le vin RS 916.140, annex 1). Not reserved to Neuchâtel. First official trace in Neuchâtel 1861, a label printed by Louis Bovet, cellar owner at Areuse."
+    ],
+    [
+     "Perdrix Blanche",
+     "Blanc de noirs from Pinot Noir. Protected as the guarantee mark Perdrix blanche®; the 2010 AOC decree barred blending and tied its making to the mark's rules (art. 10 and 11). Not named in the 2016 decree."
+    ]
+   ]
   }
  },
  "places": [
@@ -2194,6 +2584,4154 @@
      ]
     ]
    }
+  },
+  {
+   "id": "ch-reg-vs-bas-valais",
+   "name": "Bas-Valais",
+   "level": "subzone",
+   "parent": "AOC Valais",
+   "communes": [
+    "Port-Valais",
+    "Vouvry",
+    "Vionnaz",
+    "Troistorrents",
+    "Monthey",
+    "Saint-Maurice",
+    "Evionnaz",
+    "Collonges",
+    "Dorénaz",
+    "Martigny",
+    "Martigny-Combe",
+    "Bovernier",
+    "Val de Bagnes",
+    "Fully",
+    "Saxon",
+    "Riddes",
+    "Saillon",
+    "Leytron"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 1164.5,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "Sum of the commune figures in the 2025 harvest report (Port-Valais and others, 19 communes). Vernayaz has under 0.5 ha and is left out of the outline",
+    "basis": "Promotion region of Swiss Wine Valais (the IVV); the OVV itself names no wine regions inside AOC Valais. Swiss Wine Valais runs it from Port-Valais to Leytron.",
+    "aka": "Lower Valais / Unterwallis",
+    "atlas_note": "The western part, from Port-Valais on Lake Geneva up the Rhône to the bend at Martigny and on to Leytron. Fully, Leytron, Saillon and Saxon hold most of the vines. Around Fully the slopes are mainly granite, and the Combe d'Enfer is a terraced amphitheatre of Petite Arvine.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Swiss Wine Valais, wine regions",
+      "https://swisswinevalais.ch/en/discover/regions/"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-valais-central",
+   "name": "Valais central",
+   "level": "subzone",
+   "parent": "AOC Valais",
+   "communes": [
+    "Chamoson",
+    "Ardon",
+    "Vétroz",
+    "Conthey",
+    "Nendaz",
+    "Sion",
+    "Savièse",
+    "Grimisuat",
+    "Ayent",
+    "Vex",
+    "Mont-Noble",
+    "Saint-Léonard",
+    "Grône",
+    "Chalais",
+    "Chippis",
+    "Sierre",
+    "Noble-Contrée",
+    "Crans-Montana",
+    "Lens"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 2938.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "Sum of the commune figures in the 2025 harvest report (Chamoson and others, 20 communes). Saint-Martin (VS) has under 0.5 ha and is left out of the outline",
+    "basis": "Promotion region of Swiss Wine Valais (the IVV); the OVV itself names no wine regions inside AOC Valais. Swiss Wine Valais runs it from Chamoson to Sierre.",
+    "aka": "Central Valais / Mittelwallis",
+    "atlas_note": "The heart of the canton from Chamoson to Sierre, with about two thirds of the Valais vines. The biggest wine communes of Switzerland are here: Chamoson, Sion, Conthey, Savièse, Sierre and Noble-Contrée. Soils change from alluvial fans and limestone to moraine and schist.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Swiss Wine Valais, wine regions",
+      "https://swisswinevalais.ch/en/discover/regions/"
+     ],
+     [
+      "Swiss Wine Valais, Central Valais",
+      "https://swisswinevalais.ch/en/discover/regions/central-valais/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-oberwallis",
+   "name": "Oberwallis",
+   "level": "subzone",
+   "parent": "AOC Valais",
+   "communes": [
+    "Salgesch",
+    "Varen",
+    "Leuk",
+    "Agarn",
+    "Turtmann-Unterems",
+    "Ergisch",
+    "Gampel-Bratsch",
+    "Steg-Hohtenn",
+    "Niedergesteln",
+    "Raron",
+    "Ausserberg",
+    "Eggerberg",
+    "Lalden",
+    "Visp",
+    "Visperterminen",
+    "Zeneggen",
+    "Stalden (VS)",
+    "Staldenried",
+    "Brig-Glis"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 475.7,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "Sum of the commune figures in the 2025 harvest report (Salgesch and others, 20 communes). Embd has under 0.5 ha and is left out of the outline",
+    "basis": "Promotion region of Swiss Wine Valais (the IVV); the OVV itself names no wine regions inside AOC Valais. Swiss Wine Valais runs it from Salgesch to Brig.",
+    "aka": "Haut-Valais / Upper Valais",
+    "atlas_note": "The German-speaking upper valley from Salgesch to Brig. Salgesch, Varen and Leuk make most of its wine, mainly Pinot Noir. Visperterminen in the side valley above Visp has vines above 1,000 m, and Steg keeps a Humagne Blanche vine planted in 1750, said to be the oldest in Switzerland.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Swiss Wine Valais, wine regions",
+      "https://swisswinevalais.ch/en/discover/regions/"
+     ],
+     [
+      "Swiss Wine Valais, Upper Valais",
+      "https://swisswinevalais.ch/en/discover/regions/upper-valais/"
+     ],
+     [
+      "IVV brochure 2023 (Walliser Wein)",
+      "https://swisswinevalais.ch/media/vxpdjpd0/ivv-brochure-2023-de-web.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-chamoson",
+   "name": "Chamoson",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Chamoson"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 390.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "3,908,758 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "The largest wine commune of Valais, on the right bank between Leytron and Ardon. It is the home of Johannisberg: Sylvaner gave 31% of the AOC harvest in 2025, ahead of Pinot Noir and Chasselas. Its Grand Cru rules of 2011 were the first under the 2005 framework.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Central Valais",
+      "https://swisswinevalais.ch/en/discover/regions/central-valais/"
+     ]
+    ],
+    "producers_note": "Pierre-André Roduit (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-sion",
+   "name": "Sion",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Sion"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 382.1,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "3,820,661 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "The cantonal capital and the second wine commune, with vines on the right bank slope. Chasselas led the AOC harvest in 2025 (25%), then Pinot Noir. The commune now includes Bramois, Salins and Les Agettes.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Pierre Thomas, La plupart des Grands Crus valaisans s'associent (10 Jul 2015)",
+      "https://thomasvino.ch/?p=12907"
+     ]
+    ],
+    "aka": "Sitten",
+    "producers_note": "Philippe Varone (Grand Cru Ville de Sion committee, thomasvino 2015)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-conthey",
+   "name": "Conthey",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Conthey"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 318.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "3,189,459 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "West of Sion on the right bank, with the villages of Plan-Conthey, Erde, Premploz and Sensine on the slopes. Chasselas and Pinot Noir give about equal shares of the harvest, followed by Savagnin Blanc.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Falstaff, Germanier Fendant St-Séverin Conthey Grand Cru",
+      "https://www.falstaff.com/en/wines/domaine-jean-rene-germanier-2019-fendant-st-severin-conthey-grand-cru"
+     ]
+    ],
+    "producers_note": "Jean-René Germanier (Fendant St-Séverin Conthey Grand Cru, Falstaff)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-fully",
+   "name": "Fully",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Fully"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 296.3,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "2,963,188 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Steep granite slopes on the right bank below the Grand Chavalard, just past the Rhône bend at Martigny. Gamay (22%) and Chasselas lead the harvest, but Fully is known for Petite Arvine, 17% of the AOC grapes in 2025. The Combe d'Enfer is a terraced amphitheatre with about 5 km of dry-stone walls, recorded since 1602.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Académie du vin de Bordeaux, voyage d'été 2019 (Fully)",
+      "https://academievin.org/wp-content/uploads/2019/12/Rapport-Voyage-dété-FeVi2019.pdf"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ],
+    "producers_note": "Les Follaterres, Cave Jean Maret, Etienne et Raoul Taramarcaz, Domaine La Rodeline (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-saviese",
+   "name": "Savièse",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Savièse"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 255.0,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "2,549,629 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "A plateau of villages above Sion, with vines on the slope below. Pinot Noir is the first grape, ahead of Chasselas.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Central Valais",
+      "https://swisswinevalais.ch/en/discover/regions/central-valais/"
+     ]
+    ],
+    "producers_note": "Antoniazzi Oreste & Fils (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-sierre",
+   "name": "Sierre",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Sierre"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 250.7,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "2,506,703 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "The town at the language border, where Central Valais ends. Pinot Noir and Chasselas lead, with a large share of Petite Arvine. Sierre leads the regional Sierre Grand Cru with its neighbours.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Central Valais",
+      "https://swisswinevalais.ch/en/discover/regions/central-valais/"
+     ]
+    ],
+    "aka": "Siders",
+    "producers_note": "Château de Villa (wine house with over 650 Valais wines, Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-noble-contree",
+   "name": "Noble-Contrée",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Noble-Contrée"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 246.4,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "2,463,736 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Formed in 2021 from Miège, Venthône and Veyras, on the slope above Sierre. Pinot Noir gives half the harvest. All three former communes belong to the Sierre Grand Cru.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Commune de Sierre, Règlement Grand Cru 2014",
+      "https://www.sierre.ch/data/documents/officielle/publications/reglements/Reglement_Grand_Cru_2014_avec_premiere_page.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-leytron",
+   "name": "Leytron",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Leytron"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 236.8,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "2,368,264 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the right bank between Saillon and Chamoson, below Ovronnaz. Chasselas, Pinot Noir and Gamay lead, and Leytron is one of the homes of Humagne Rouge. The cantonal estate Domaine du Grand Brûlé, which studies the native varieties, is here.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ],
+     [
+      "Swiss Wine Valais, Domaine du Grand Brûlé",
+      "https://swisswinevalais.ch/en/taste/wineries/domaine-grand-brule"
+     ]
+    ],
+    "producers_note": "Cave Gilbert Devayes (Swiss Wine Valais); Domaine du Grand Brûlé, Cave de l'Etat du Valais"
+   }
+  },
+  {
+   "id": "ch-reg-vs-salgesch",
+   "name": "Salgesch",
+   "level": "subzone",
+   "parent": "Oberwallis",
+   "communes": [
+    "Salgesch"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 180.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,809,320 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "The first German-speaking wine village, east of Sierre. Pinot Noir made 66% of its AOC harvest in 2025. Salgesch made the first communal Grand Cru of Switzerland in 1988, and the Valais wine museum has a branch here.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Upper Valais",
+      "https://swisswinevalais.ch/en/discover/regions/upper-valais/"
+     ],
+     [
+      "Pfyn-Finges, Grand Cru Pinot Noir Salgesch",
+      "https://www.pfyn-finges.ch/en/partners-and-products/labelled-products/wine/offer-detail/grand-cru-pinot-noir-salgesch-37427"
+     ],
+     [
+      "Salgesch, 30 years Grand Cru",
+      "https://salgesch.ch/?p=3024"
+     ]
+    ],
+    "aka": "Salquenen",
+    "producers_note": "Domaines Chevaliers (Grand Cru Pinot Noir Salgesch, Pfyn-Finges)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-crans-montana",
+   "name": "Crans-Montana",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Crans-Montana"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 193.6,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,936,291 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Formed in 2017 from Chermignon, Mollens, Montana and Randogne. The vines lie low on the slope between Sierre and Lens, below the resort. Pinot Noir and Chasselas lead. The former Chermignon, Montana and Randogne belong to the Sierre Grand Cru.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Commune de Sierre, Règlement Grand Cru 2014",
+      "https://www.sierre.ch/data/documents/officielle/publications/reglements/Reglement_Grand_Cru_2014_avec_premiere_page.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-saillon",
+   "name": "Saillon",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Saillon"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 171.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,718,773 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "A walled medieval village on a rock at the foot of the slope between Fully and Leytron. Pinot Noir, Chasselas and Gamay lead the harvest. The Farinet vineyard, three vines, is said to be the smallest registered vineyard in the world.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-vetroz",
+   "name": "Vétroz",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Vétroz"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 154.0,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,539,719 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "West of Conthey on the right bank. It is the home of Amigne, a white grape grown almost only here: 15% of the commune's AOC harvest in 2025. Grand Cru Amigne shows its sweetness with one to three bees on the label.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Falstaff, La Madeleine Fendant de Vétroz Grand Cru",
+      "https://www.falstaff.com/en/wines/la-madeleine-andre-fontannaz-et-filles-2023-fendant-de-vetroz-grand-cru-2"
+     ],
+     [
+      "Wine Library, Serge Roh Fendant de Vétroz Grand Cru",
+      "https://winelibrary.com/wines/chasselas/2022-serge-roh-fendant-de-vetroz-grand-cru-143141"
+     ]
+    ],
+    "producers_note": "Cave La Madeleine André Fontannaz, Serge Roh Caves Les Ruinettes (Falstaff; Wine Library)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-ardon",
+   "name": "Ardon",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Ardon"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 150.8,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,507,909 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Between Vétroz and Chamoson at the mouth of the Lizerne. Sylvaner led the AOC harvest in 2025 (25%), ahead of Pinot Noir and Chasselas.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-saxon",
+   "name": "Saxon",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Saxon"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 143.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,439,252 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the right bank between Fully and Riddes. Pinot Noir made 49% of the AOC harvest in 2025.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-ayent",
+   "name": "Ayent",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Ayent"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 141.9,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,419,471 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Above Sion on the right bank, east of Grimisuat, with vines on the lower slope towards Saint-Léonard. Pinot Noir and Chasselas lead.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-lens",
+   "name": "Lens",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Lens"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 115.4,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,154,467 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the slope above Sierre and Saint-Léonard, with the wine village of Flanthey. Pinot Noir and Chasselas lead. Lens belongs to the Sierre Grand Cru.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Commune de Sierre, Règlement Grand Cru 2014",
+      "https://www.sierre.ch/data/documents/officielle/publications/reglements/Reglement_Grand_Cru_2014_avec_premiere_page.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-varen",
+   "name": "Varen",
+   "level": "subzone",
+   "parent": "Oberwallis",
+   "communes": [
+    "Varen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 115.3,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,152,887 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "A steep village above the Rhône east of Salgesch, on the edge of the Pfyn-Finges park. Pinot Noir made 54% of its AOC harvest in 2025.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Upper Valais",
+      "https://swisswinevalais.ch/en/discover/regions/upper-valais/"
+     ]
+    ],
+    "aka": "Varone",
+    "producers_note": "Kellerei Sunnustrahl, Leyscher Weine (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-martigny",
+   "name": "Martigny",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Martigny"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 113.2,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,132,213 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "At the Rhône bend, with vines on the slopes of Plan-Cerisier and the plain towards Charrat, which it absorbed in 2021. Pinot Noir gives most of the harvest.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-grimisuat",
+   "name": "Grimisuat",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Grimisuat"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 103.2,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "1,032,017 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the slope north of Sion between Savièse and Ayent, with Champlan. Pinot Noir and Chasselas lead.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Central Valais",
+      "https://swisswinevalais.ch/en/discover/regions/central-valais/"
+     ]
+    ],
+    "producers_note": "Gillioz Marie-Bernard (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-saint-leonard",
+   "name": "Saint-Léonard",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Saint-Léonard"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 82.6,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "825,952 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "East of Sion on the right bank, below the hill of Lens. Chasselas led the AOC harvest in 2025, ahead of Pinot Noir. Its Grand Cru allows only those two grapes.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Domaine des Virets",
+      "https://swisswinevalais.ch/en/taste/wineries/domaine-des-virets/"
+     ]
+    ],
+    "producers_note": "Domaine des Virets, Cave B. Bétrisey (Swiss Wine Valais; En Primeur Club)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-martigny-combe",
+   "name": "Martigny-Combe",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Martigny-Combe"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 77.7,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "776,506 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "Vines on the slope of Plan-Cerisier and the start of the Trient valley above Martigny. Chasselas led the AOC harvest in 2025, ahead of Gamay.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-chalais",
+   "name": "Chalais",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Chalais"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 72.3,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "723,489 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the left bank of the Rhône opposite Sierre. Pinot Noir made more than half the AOC harvest in 2025.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-leuk",
+   "name": "Leuk",
+   "level": "subzone",
+   "parent": "Oberwallis",
+   "communes": [
+    "Leuk"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 60.6,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "605,737 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "The old town on a terrace above the Pfyn forest, with vines towards Susten and Varen. Pinot Noir leads the harvest, then Sylvaner and Chasselas.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ],
+    "aka": "Loèche"
+   }
+  },
+  {
+   "id": "ch-reg-vs-riddes",
+   "name": "Riddes",
+   "level": "subzone",
+   "parent": "Bas-Valais",
+   "communes": [
+    "Riddes"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 56.4,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "564,299 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the left bank opposite Leytron, below Isérables and La Tzoumaz. Chasselas and Pinot Noir lead.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "Swiss Wine Valais, Lower Valais",
+      "https://swisswinevalais.ch/en/discover/regions/lower-valais/"
+     ]
+    ],
+    "producers_note": "Maison Maye (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-grone",
+   "name": "Grône",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Grône"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 52.5,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "524,956 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the left bank between Chalais and Bramois. Pinot Noir leads, with unusually large shares of Merlot and Gamaret.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-visperterminen",
+   "name": "Visperterminen",
+   "level": "subzone",
+   "parent": "Oberwallis",
+   "communes": [
+    "Visperterminen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 35.1,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "351,498 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "High in the Vispertal above Visp, with terraces from about 650 m to over 1,000 m, the highest vineyards of Switzerland and among the highest of Europe. Heida (Savagnin Blanc) made 55% of the AOC harvest in 2025, and the name Heyda is written here in 1586. Almost all growers deliver to the St. Jodern cooperative, founded in 1979 with 120 members and now over 500.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV brochure 2023 (Walliser Wein)",
+      "https://swisswinevalais.ch/media/vxpdjpd0/ivv-brochure-2023-de-web.pdf"
+     ],
+     [
+      "Swiss Wine Valais, Upper Valais",
+      "https://swisswinevalais.ch/en/discover/regions/upper-valais/"
+     ],
+     [
+      "Swiss Wine Valais, St. Jodern Kellerei",
+      "https://swisswinevalais.ch/en/taste/wineries/st-jodern-kellerei"
+     ]
+    ],
+    "producers_note": "St. Jodern Kellerei (Swiss Wine Valais)"
+   }
+  },
+  {
+   "id": "ch-reg-vs-raron",
+   "name": "Raron",
+   "level": "subzone",
+   "parent": "Oberwallis",
+   "communes": [
+    "Raron"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 23.6,
+    "area_src": "OVV VS, Rapport de vendanges 2025",
+    "area_note": "235,948 m2 of vineyard in the 2025 harvest report",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from the commune and the rest from neighbouring communes; 'Ville de' or 'Village de' may precede it (OVV art. 63)",
+    "atlas_note": "On the north side of the Rhône west of Visp, with steep vines below the castle hill. Pinot Noir, Chasselas and Heida lead the harvest.",
+    "refs": [
+     [
+      "Office de la vigne et du vin VS, Rapport de vendanges 2025 (29 Jan 2026)",
+      "https://www.vs.ch/documents/d/sca/rap-29-01-2026-f"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ]
+    ],
+    "aka": "Rarogne"
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-salgesch",
+   "name": "Salgesch Grand Cru",
+   "level": "appellation",
+   "parent": "Salgesch",
+   "communes": [
+    "Salgesch"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Salgesch under OVV art. 86, the first in Switzerland (1988). The text of the current regulation was not found online.",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Pinot Noir / Gamay / Cornalin / Syrah",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "The oldest communal grand cru of Switzerland, created by the growers of Salgesch in 1988 with strict limits on the crop per vine. Pinot Noir is the main wine. Salgesch checks bottles against an analytical profile taken at tank tasting, a method used only here.",
+    "refs": [
+     [
+      "Salgesch, 30 years Grand Cru",
+      "https://salgesch.ch/?p=3024"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Artisan Swiss, The Grand Cru confusion explained (2019), chart VI",
+      "https://artisanswiss.com/2019/11/07/swiss-wine-the-grand-cru-confusion-explained/"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ],
+    "aka": "Salquenen Grand Cru",
+    "rules": [
+     [
+      "Grapes",
+      "Grape list from two secondary sources (Artisan Swiss 2019, Vinum Montis), not from the regulation"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-vetroz",
+   "name": "Vétroz Grand Cru",
+   "level": "appellation",
+   "parent": "Vétroz",
+   "communes": [
+    "Vétroz"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement communal Vétroz Grand Cru, adopted 21 Oct 2015, homologated by the Conseil d'Etat 2 Mar 2016 (first rules 1993)",
+    "label_rule": "Only Fendant, Amigne, Pinot Noir and Dôle may be named. Amigne shows its sweetness with bees: one dry, two slightly sweet, three sweet. Yield 1.1 kg/m2 for Chasselas, 0.8 for the rest; minimum 18.8 Brix Chasselas, 22.6 Amigne, 22.0 Pinot Noir, 21.2 Gamay. Valais bottle of 37.5, 75 or 150 cl.",
+    "grapes": "Chasselas (Fendant) / Amigne / Pinot Noir / Gamay (Dôle)",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Grand cru since 1993, now under rules of 2016. Amigne may come only from sectors A and C to F of the Coteau de Vétroz; Chasselas from the coteau, sectors A to F; Pinot Noir and Gamay also from the plain, sectors A to H.",
+    "refs": [
+     [
+      "Vétroz, Règlement Vétroz Grand Cru (2016)",
+      "https://vetroz.ch/download/153/reglements/1471/reglement-vetroz-les-grands-crus.pdf"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-saint-leonard",
+   "name": "Saint-Léonard Grand Cru",
+   "level": "appellation",
+   "parent": "Saint-Léonard",
+   "communes": [
+    "Saint-Léonard"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement Grand Cru de Saint-Léonard, adopted 9 Jul 2012, homologated 20 Feb 2013 (first rules 1994)",
+    "label_rule": "Yield at most 1.1 kg/m2 Chasselas and 0.8 kg/m2 Pinot Noir; minimum 18.8 Brix Chasselas, 22.0 Brix Pinot Noir. Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Chasselas (Fendant) / Pinot Noir",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "One of the early grands crus (1994), now under rules of 2013. Only two grapes, from sectors A, B and C of the Coteau de Saint-Léonard.",
+    "refs": [
+     [
+      "Saint-Léonard, Règlement Grand Cru (homologated 2013)",
+      "https://www.vs.ch/documents/17311/4809236/20130220_sleo_reg_grandcru.pdf/3e4d9795-9dfa-4721-9ef8-535276b8eb76"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-fully",
+   "name": "Fully Grand Cru",
+   "level": "appellation",
+   "parent": "Fully",
+   "communes": [
+    "Fully"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Fully under OVV art. 86, first adopted 1996 and adapted to the 2005 framework in 2012. The text was not found online.",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Petite Arvine / Marsanne (Ermitage) / Gamay / Syrah",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Created in 1996 and the first old regulation brought in line with the cantonal framework, in 2012. Petite Arvine is the flagship of the commune.",
+    "refs": [
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Artisan Swiss, The Grand Cru confusion explained (2019), chart VI",
+      "https://artisanswiss.com/2019/11/07/swiss-wine-the-grand-cru-confusion-explained/"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Académie du vin de Bordeaux, voyage d'été 2019 (Fully)",
+      "https://academievin.org/wp-content/uploads/2019/12/Rapport-Voyage-dété-FeVi2019.pdf"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Grapes",
+      "Grape list from two secondary sources (Artisan Swiss 2019, Vinum Montis), not from the regulation"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-conthey",
+   "name": "Conthey Grand Cru",
+   "level": "appellation",
+   "parent": "Conthey",
+   "communes": [
+    "Conthey"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement Conthey Grand Cru, adopted by the municipal council 15 Mar 2017, homologated 21 Feb 2018 (first rules 1999)",
+    "label_rule": "Yield at most 1.1 kg/m2 Chasselas and 0.8 kg/m2 for the rest; minimum 18.8 Brix Chasselas, 22.6 Savagnin, 22.0 Pinot Noir, 21.2 Cornalin. Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Chasselas (Fendant) / Savagnin Blanc (Païen) / Pinot Noir / Cornalin",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Grand cru since 1999, now under rules of 2018. Each grape has its own sectors on the Coteau de Conthey: Cornalin only sector A, Chasselas A, B, C and K, Pinot Noir most of the slope.",
+    "refs": [
+     [
+      "Conthey, Règlement Grand Cru (2018)",
+      "https://www.conthey.ch/files/GrandCru_Reglement.pdf"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-chamoson",
+   "name": "Chamoson Grand Cru",
+   "level": "appellation",
+   "parent": "Chamoson",
+   "communes": [
+    "Chamoson"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Chamoson, approved by the Conseil d'Etat 31 Aug 2011",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Sylvaner (Johannisberg) / Petite Arvine / Pinot Noir / Syrah",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "The first regulation written under the 2005 framework, after six years of work with the wine office. The planting sectors come from the communal vineyard cadastre approved in 2009.",
+    "refs": [
+     [
+      "Chamoson, Grand Cru (communal bulletin, Feb 2012)",
+      "https://www.chamoson.net/files/1820/1955-6-fevrier-2012-1.pdf"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-sion",
+   "name": "Grand Cru Ville de Sion",
+   "level": "appellation",
+   "parent": "Sion",
+   "communes": [
+    "Sion"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement Grand Cru Ville de Sion, homologated by the Conseil d'Etat 6 Jun 2012",
+    "label_rule": "Wines named Fendant, Ermitage, Dôle or Syrah. Yield 1.1 kg/m2 Chasselas, 0.8 the rest; at least 6,000 vines/ha; minimum 18.8 Brix Chasselas, 22.6 Marsanne, 22.0 Pinot Noir, 21.2 Gamay and Syrah; a sweet Ermitage from grapes dried on the vine at 30.2 Brix. Every wine tasted before bottling, 84/100 minimum.",
+    "grapes": "Chasselas (Fendant) / Marsanne (Ermitage) / Pinot Noir and Gamay (Dôle) / Syrah",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune. Sion has since absorbed Salins (2013) and Les Agettes (2017); whether the perimeter followed is not confirmed.",
+    "atlas_note": "Sion argued for years over the grape list before its rules came in 2012. The commission is run by the Association des Encaveurs de Sion with the city.",
+    "refs": [
+     [
+      "Grand Cru Ville de Sion, législation",
+      "https://grandcrusion.ch/legislation.html"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Pierre Thomas, La plupart des Grands Crus valaisans s'associent (10 Jul 2015)",
+      "https://thomasvino.ch/?p=12907"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-saillon",
+   "name": "Saillon Grand Cru",
+   "level": "appellation",
+   "parent": "Saillon",
+   "communes": [
+    "Saillon"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement communal Saillon Grand Cru, homologated 13 Aug 2014; articles 5 and 21 amended 2023, homologated July 2025",
+    "label_rule": "Yield 0.8 kg/m2; minimum 22.6 Brix Arvine, 21.2 for the reds; at least 6,000 vines/ha; tasting 84/100. Petite Arvine over 8 g/l sugar labelled doux. Reds not sold before 1 April of the second year. Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Petite Arvine / Humagne Rouge / Cornalin / Syrah",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Four specialities and no Chasselas or Pinot Noir. Parcels are registered with the grand cru commission by 1 June each year.",
+    "refs": [
+     [
+      "Saillon, Règlement Saillon Grand Cru",
+      "https://saillon.ch/_rtr/publikation_498817"
+     ],
+     [
+      "Pierre Thomas, La plupart des Grands Crus valaisans s'associent (10 Jul 2015)",
+      "https://thomasvino.ch/?p=12907"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-leytron",
+   "name": "Leytron Grand Cru",
+   "level": "appellation",
+   "parent": "Leytron",
+   "communes": [
+    "Leytron"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Leytron, approved by the primary assembly in 2013 after review by the cantonal services. The homologation date was not found.",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Chasselas (Fendant) / Humagne Blanche / Humagne Rouge / Cornalin",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Leytron puts its two Humagnes, white and red, at the centre of its grand cru, with Fendant and Cornalin.",
+    "refs": [
+     [
+      "Info Leytron no. 71 (2013)",
+      "https://leytron.ch/index.php/divers/telechargements/send/58-2013-2016/373-info-leytron-71"
+     ],
+     [
+      "Pierre Thomas, Vaud et Valais: grands crus revus et corrigés (20 Nov 2012)",
+      "https://thomasvino.ch/?p=9495"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-sierre",
+   "name": "Sierre Grand Cru",
+   "level": "appellation",
+   "parent": "Valais central",
+   "communes": [
+    "Sierre",
+    "Chermignon",
+    "Lens",
+    "Miège",
+    "Montana",
+    "Randogne",
+    "Venthône",
+    "Veyras"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Règlement de l'Association Sierre Grand Cru, a regional grand cru under OVV art. 86, homologated 18 Mar 2015",
+    "label_rule": "Label shows Grand Cru and Sierre, never the member commune. Yield at most 0.8 kg/m2; minimum 22.6 Brix Arvine and Marsanne, 22.0 Cornalin and Syrah; no chaptalisation; 86 points on the OIV sheet. Reds from April of the second year, whites from September of the next year.",
+    "grapes": "Petite Arvine / Marsanne (Ermitage) / Cornalin / Syrah",
+    "outline": "The eight member communes with their boundaries of 2010. Grand cru parcels lie only in sectors rated particularly well suited.",
+    "atlas_note": "The only regional grand cru: Sierre with seven neighbours, now the communes of Sierre, Lens, Crans-Montana (without Mollens) and Noble-Contrée. Only parcels in sectors rated particularly well suited may enter. In 2015 about 100 of the 1,000 ha in the perimeter were expected to qualify.",
+    "refs": [
+     [
+      "Commune de Sierre, Règlement Grand Cru 2014",
+      "https://www.sierre.ch/data/documents/officielle/publications/reglements/Reglement_Grand_Cru_2014_avec_premiere_page.pdf"
+     ],
+     [
+      "Venthône, Règlement Sierre Grand Cru (homologated 2015)",
+      "https://www.vs.ch/documents/17311/5520934/20150318_vent_reg_grandcru.pdf/ec1b7904-0f0a-4c43-8a3a-4b10a30c265c"
+     ],
+     [
+      "Pierre Thomas, La plupart des Grands Crus valaisans s'associent (10 Jul 2015)",
+      "https://thomasvino.ch/?p=12907"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ]
+   },
+   "year": 2010
+  },
+  {
+   "id": "ch-reg-vs-gc-saviese",
+   "name": "Savièse Grand Cru",
+   "level": "appellation",
+   "parent": "Savièse",
+   "communes": [
+    "Savièse"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Savièse under OVV art. 86. The text and its date were not found online.",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Chasselas (Fendant) / Pinot Noir / Dôle",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "Listed among the Valais grand crus with Fendant and Pinot Noir; the regulation itself was not found.",
+    "refs": [
+     [
+      "Artisan Swiss, The Grand Cru confusion explained (2019), chart VI",
+      "https://artisanswiss.com/2019/11/07/swiss-wine-the-grand-cru-confusion-explained/"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Wine with Seth, Valais (12 grand cru communes)",
+      "https://www.winewithseth.com/winewiki/valais/"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Grapes",
+      "Grape list from secondary sources: Artisan Swiss 2019 gives Chasselas, Pinot Noir and Dôle; Vinum Montis gives Chasselas and Pinot Noir"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-gc-visperterminen",
+   "name": "Visperterminen Grand Cru",
+   "level": "appellation",
+   "parent": "Visperterminen",
+   "communes": [
+    "Visperterminen"
+   ],
+   "rank": "grand_cru",
+   "d": {
+    "type": "Grand cru",
+    "basis": "Communal Grand Cru regulation of Visperterminen under OVV art. 86. The text and its date were not found online.",
+    "label_rule": "Label: Grand Cru with the commune name, the wine name, AOC Valais and the vintage; brands, fancy names and lieux-dits banned; Valais bottle (OVV art. 94, IVV control rules art. 11 to 13)",
+    "grapes": "Savagnin Blanc (Heida)",
+    "outline": "Grand cru parcels are registered each year inside named planting sectors (secteurs d'encépagement). The outline shows the whole commune.",
+    "atlas_note": "A single-grape grand cru for Heida from the high terraces, sold by St. Jodern Kellerei as Heida Grand Cru.",
+    "refs": [
+     [
+      "Artisan Swiss, The Grand Cru confusion explained (2019), chart VI",
+      "https://artisanswiss.com/2019/11/07/swiss-wine-the-grand-cru-confusion-explained/"
+     ],
+     [
+      "Vinum Montis (Sierre Tourisme), Les Grands Crus",
+      "https://www.vinum-montis.ch/fr/grands-crus-204.html"
+     ],
+     [
+      "Falstaff, St. Jodern Kellerei Heida Grand Cru 2023",
+      "https://www.falstaff.com/en/wines/st-jodern-kellerei-2023-heida-grand-cru-1"
+     ],
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "IVV, Règlement de contrôle Grand Cru, homologated 14 Dec 2005",
+      "https://swisswinevalais.ch/media/eallh4uk/reglement-grand-cru-homologue_14-12-2005_fr.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Grapes",
+      "Grape from secondary sources (Artisan Swiss 2019, Vinum Montis)"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vs-vin-des-glaciers",
+   "name": "Vin des Glaciers",
+   "level": "subzone",
+   "parent": "Valais central",
+   "communes": [
+    "Anniviers"
+   ],
+   "d": {
+    "type": "Traditional designation",
+    "basis": "OVV art. 54b: a white AOC Valais wine from the district of Sierre, raised in the Val d'Anniviers following local tradition",
+    "aka": "Gletscherwein",
+    "outline": "The commune of Anniviers, where the wine is raised. The grapes come from the Sierre district below; there are no vines in the valley.",
+    "atlas_note": "A white wine from the Sierre district carried up to cellars in the Val d'Anniviers and kept there for years. The 2004 text asked for larch casks in cellars at 1,200 m or higher for at least fifteen years; the 2026 text says only that it is raised in the valley following local tradition. The only Valais traditional name tied to how a wine is aged rather than to a grape.",
+    "refs": [
+     [
+      "Ordonnance sur la vigne et le vin (OVV), RS VS 916.142, version in force 1 April 2026",
+      "https://lex.vs.ch/app/fr/texts_of_law/916.142"
+     ],
+     [
+      "OVV RS VS 916.142, consolidated text 1 April 2026 (PDF)",
+      "https://lex.vs.ch/api/fr/versions/3580/pdf_file"
+     ],
+     [
+      "OVV RS VS 916.142, earlier consolidated text (art. 54b)",
+      "https://lex.vs.ch/api/fr/versions/133/pdf_file"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-sopraceneri",
+   "name": "Sopraceneri",
+   "level": "subzone",
+   "parent": "DOC Ticino",
+   "communes": [
+    "Acquarossa",
+    "Airolo",
+    "Arbedo-Castione",
+    "Ascona",
+    "Avegno Gordevio",
+    "Bedretto",
+    "Bellinzona",
+    "Biasca",
+    "Blenio",
+    "Bodio",
+    "Bosco/Gurin",
+    "Brione sopra Minusio",
+    "Brissago",
+    "C'za Cadenazzo/Monteceneri",
+    "Cadenazzo",
+    "Campo (Vallemaggia)",
+    "Centovalli",
+    "Cerentino",
+    "Cevio",
+    "Cugnasco-Gerra",
+    "Dalpe",
+    "Faido",
+    "Gambarogno",
+    "Giornico",
+    "Gordola",
+    "Isone",
+    "Lavertezzo",
+    "Lavizzara",
+    "Linescio",
+    "Locarno",
+    "Losone",
+    "Lumino",
+    "Maggia",
+    "Mergoscia",
+    "Minusio",
+    "Muralto",
+    "Onsernone",
+    "Orselina",
+    "Personico",
+    "Pollegio",
+    "Prato (Leventina)",
+    "Quinto",
+    "Riviera",
+    "Ronco sopra Ascona",
+    "Sant'Antonino",
+    "Serravalle",
+    "Tenero-Contra",
+    "Terre di Pedemonte",
+    "Verzasca"
+   ],
+   "d": {
+    "type": "Part of canton",
+    "area_ha": 496.4,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Sum of the six northern districts (Bellinzona, Blenio, Leventina, Locarno, Riviera, Vallemaggia), 2024: about 43% of the vines of the canton. The outline is all communes of these districts, including alpine communes without vines.",
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: a part of the canton may complete the DOC name",
+    "label_rule": "'Sopraceneri' may follow Ticino DOC on the label if documented on the production certificate and the harvest control certificate (Direttive 2024, 3.10 and 3.2)",
+    "atlas_note": "The part of the canton north of the Monte Ceneri pass: the Bellinzonese, the Locarnese and the alpine valleys. Swiss Wine describes its soils as mainly granite and slate, with cooler alpine nights and lighter Merlot. Bondola, the old red grape of the Ticino, survives mostly here.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "Swiss Wine, Ticino wine region",
+      "https://www.swisswine.com/en/swiss-wine-regions/ticino-wine-region"
+     ],
+     [
+      "Swiss Wine, Bondola",
+      "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/bondola-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-sottoceneri",
+   "name": "Sottoceneri",
+   "level": "subzone",
+   "parent": "DOC Ticino",
+   "communes": [
+    "Agno",
+    "Alto Malcantone",
+    "Aranno",
+    "Arogno",
+    "Astano",
+    "Balerna",
+    "Bedano",
+    "Bedigliora",
+    "Bioggio",
+    "Bissone",
+    "Breggia",
+    "Brusino Arsizio",
+    "C'za Capriasca/Lugano",
+    "Cademario",
+    "Cadempino",
+    "Canobbio",
+    "Capriasca",
+    "Caslano",
+    "Castel San Pietro",
+    "Chiasso",
+    "Coldrerio",
+    "Collina d'Oro",
+    "Comano",
+    "Cureglia",
+    "Curio",
+    "Grancia",
+    "Gravesano",
+    "Lamone",
+    "Lugano",
+    "Magliaso",
+    "Manno",
+    "Massagno",
+    "Melide",
+    "Mendrisio",
+    "Mezzovico-Vira",
+    "Miglieglia",
+    "Monteceneri",
+    "Morbio Inferiore",
+    "Morcote",
+    "Muzzano",
+    "Neggio",
+    "Novaggio",
+    "Novazzano",
+    "Origlio",
+    "Paradiso",
+    "Ponte Capriasca",
+    "Porza",
+    "Pura",
+    "Riva San Vitale",
+    "Savosa",
+    "Sorengo",
+    "Stabio",
+    "Torricella-Taverne",
+    "Tresa",
+    "Vacallo",
+    "Val Mara",
+    "Vernate",
+    "Vezia",
+    "Vico Morcote"
+   ],
+   "d": {
+    "type": "Part of canton",
+    "area_ha": 648.4,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Districts of Lugano and Mendrisio together, 2024: about 57% of the vines of the canton.",
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: a part of the canton may complete the DOC name",
+    "label_rule": "'Sottoceneri' may follow Ticino DOC on the label if documented on the production certificate and the harvest control certificate (Direttive 2024, 3.10 and 3.2)",
+    "atlas_note": "The part of the canton south of the Monte Ceneri pass, around Lake Lugano and down to Chiasso. Swiss Wine describes it as warmer, with clay and limestone soils and gentler slopes, giving fuller Merlot often aged in barrique. It holds the majority of the vines, most of them in the Mendrisiotto.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "Swiss Wine, Ticino wine region",
+      "https://www.swisswine.com/en/swiss-wine-regions/ticino-wine-region"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-mendrisio-district",
+   "name": "Distretto di Mendrisio",
+   "level": "subzone",
+   "parent": "Sottoceneri",
+   "communes": [
+    "Balerna",
+    "Breggia",
+    "Castel San Pietro",
+    "Chiasso",
+    "Coldrerio",
+    "Mendrisio",
+    "Morbio Inferiore",
+    "Novazzano",
+    "Riva San Vitale",
+    "Stabio",
+    "Vacallo"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Mendrisiotto",
+    "area_ha": 425.9,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 37.2% of the canton. Harvest 2024: 2,411,897 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      312.8
+     ],
+     [
+      "Merlot (registered for Blanc de Noir)",
+      25.5
+     ],
+     [
+      "Chardonnay",
+      23.1
+     ],
+     [
+      "Sauvignon Blanc",
+      11.7
+     ],
+     [
+      "Cabernet Franc",
+      9.1
+     ],
+     [
+      "Cabernet Sauvignon",
+      7.6
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The southern tip of the canton, between Lake Lugano, Monte Generoso and Monte San Giorgio, and the biggest wine district of the Ticino: 37% of the vines and 47% of the 2024 harvest. The cooperative Cantina Sociale Mendrisio was founded here in 1949. Three vineyard trails, opened in 2006 for 100 years of Merlot, run from Mendrisio and Salorino to Castel San Pietro and Coldrerio, over the hill of Pedrinate, and up Monte San Giorgio by Besazio, Tremona, Meride and Arzo.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "Mendrisiotto Turismo, vineyard trails 2006",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:9ceba1f3-0be7-4db1-b5be-8ca51f8fe822/24.01.2006%20-%20Tre%20nuovi%20Itinerari%20tematici%20tra%20i%20vigneti%20per%20scoprire%20la%20regione.pdf"
+     ],
+     [
+      "Mendrisiotto Turismo, vineyard trails 2007",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:2878699b-02d1-4707-8a65-3cf9e5ad43d8/29.05.2007%20-%20Prospetti%20per%20gli%20Itinerari%20tematici%20tra%20i%20vigneti.pdf"
+     ],
+     [
+      "ticino.ch, Cantina Sociale Mendrisio",
+      "https://www.ticino.ch/it/commons/details/Cantina-Sociale-Mendrisio/2575.html"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-lugano",
+   "name": "Distretto di Lugano",
+   "level": "subzone",
+   "parent": "Sottoceneri",
+   "communes": [
+    "Agno",
+    "Alto Malcantone",
+    "Aranno",
+    "Arogno",
+    "Astano",
+    "Bedano",
+    "Bedigliora",
+    "Bioggio",
+    "Bissone",
+    "Brusino Arsizio",
+    "C'za Capriasca/Lugano",
+    "Cademario",
+    "Cadempino",
+    "Canobbio",
+    "Capriasca",
+    "Caslano",
+    "Collina d'Oro",
+    "Comano",
+    "Cureglia",
+    "Curio",
+    "Grancia",
+    "Gravesano",
+    "Lamone",
+    "Lugano",
+    "Magliaso",
+    "Manno",
+    "Massagno",
+    "Melide",
+    "Mezzovico-Vira",
+    "Miglieglia",
+    "Monteceneri",
+    "Morcote",
+    "Muzzano",
+    "Neggio",
+    "Novaggio",
+    "Origlio",
+    "Paradiso",
+    "Ponte Capriasca",
+    "Porza",
+    "Pura",
+    "Savosa",
+    "Sorengo",
+    "Torricella-Taverne",
+    "Tresa",
+    "Val Mara",
+    "Vernate",
+    "Vezia",
+    "Vico Morcote"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Luganese",
+    "area_ha": 222.5,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 19.4% of the canton. Harvest 2024: 683,556 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      145.2
+     ],
+     [
+      "American and hybrid red varieties",
+      12.0
+     ],
+     [
+      "Chardonnay",
+      10.5
+     ],
+     [
+      "Pinot Noir",
+      6.4
+     ],
+     [
+      "Sauvignon Blanc",
+      5.6
+     ],
+     [
+      "Cabernet Franc",
+      3.4
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The second district by vineyard area. Its vines are spread over many small communes around Lake Lugano, in the Malcantone, the Vedeggio valley and the Collina d'Oro. The first Merlot cuttings of 1906 were planted in the Malcantone, at Castelrotto and Vallombrosa, by Giovanni Rossi.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "RSI, Il Merlot non è sempre stato ticinese",
+      "https://www.rsi.ch/food/extra/territorio-e-tradizioni/Il-Merlot-non-%C3%A8-sempre-stato-ticinese--3739464.html"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-locarno",
+   "name": "Distretto di Locarno",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Ascona",
+    "Brione sopra Minusio",
+    "Brissago",
+    "Centovalli",
+    "Cugnasco-Gerra",
+    "Gambarogno",
+    "Gordola",
+    "Lavertezzo",
+    "Locarno",
+    "Losone",
+    "Mergoscia",
+    "Minusio",
+    "Muralto",
+    "Onsernone",
+    "Orselina",
+    "Ronco sopra Ascona",
+    "Tenero-Contra",
+    "Terre di Pedemonte",
+    "Verzasca"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Locarnese",
+    "area_ha": 201.1,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 17.6% of the canton. Harvest 2024: 816,474 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      151.4
+     ],
+     [
+      "American and hybrid red varieties",
+      10.7
+     ],
+     [
+      "Chardonnay",
+      6.1
+     ],
+     [
+      "Bondola",
+      3.9
+     ],
+     [
+      "Merlot (registered for Blanc de Noir)",
+      2.6
+     ],
+     [
+      "Sauvignon Blanc",
+      2.5
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The vines around Lake Maggiore: Locarno, Ascona, Losone, the Gambarogno shore, the Piano di Magadino edge and the mouths of the Centovalli and Verzasca. Bondola, the old red grape of the Ticino, keeps more ground here than in any other district.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "Swiss Wine, Bondola",
+      "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/bondola-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-bellinzona-district",
+   "name": "Distretto di Bellinzona",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Arbedo-Castione",
+    "Bellinzona",
+    "C'za Cadenazzo/Monteceneri",
+    "Cadenazzo",
+    "Isone",
+    "Lumino",
+    "Sant'Antonino"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Bellinzonese",
+    "area_ha": 181.3,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 15.8% of the canton. Harvest 2024: 723,307 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      137.2
+     ],
+     [
+      "Merlot (registered for Blanc de Noir)",
+      12.8
+     ],
+     [
+      "American and hybrid red varieties",
+      6.9
+     ],
+     [
+      "Chardonnay",
+      4.0
+     ],
+     [
+      "Cabernet Sauvignon",
+      3.1
+     ],
+     [
+      "Cabernet Franc",
+      2.3
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The vines on the slopes of the Ticino valley around Bellinzona and on the edge of the Piano di Magadino. Gudo, Camorino, Sementina, Monte Carasso and Giubiasco, all quarters of Bellinzona since 2017, hold most of them. A wine cooperative was founded at Giubiasco in 1929.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "RSI, Il Merlot non è sempre stato ticinese",
+      "https://www.rsi.ch/food/extra/territorio-e-tradizioni/Il-Merlot-non-%C3%A8-sempre-stato-ticinese--3739464.html"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-blenio",
+   "name": "Distretto di Blenio",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Acquarossa",
+    "Blenio",
+    "Serravalle"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Valle di Blenio",
+    "area_ha": 41.4,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 3.6% of the canton. Harvest 2024: 178,243 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      28.7
+     ],
+     [
+      "Chardonnay",
+      2.0
+     ],
+     [
+      "Sauvignac",
+      1.5
+     ],
+     [
+      "American and hybrid red varieties",
+      1.2
+     ],
+     [
+      "Johanniter",
+      1.0
+     ],
+     [
+      "Gamaret",
+      0.9
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The lower Valle di Blenio, north of Biasca, mainly in the communes of Serravalle and Acquarossa. Almost 70% of the vines are Merlot, with a share of disease-resistant whites such as Sauvignac and Johanniter.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-leventina",
+   "name": "Distretto di Leventina",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Airolo",
+    "Bedretto",
+    "Bodio",
+    "Dalpe",
+    "Faido",
+    "Giornico",
+    "Personico",
+    "Pollegio",
+    "Prato (Leventina)",
+    "Quinto"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Leventina",
+    "area_ha": 28.4,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 2.5% of the canton. Harvest 2024: 141,261 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      19.9
+     ],
+     [
+      "Chardonnay",
+      1.5
+     ],
+     [
+      "Pinot Noir",
+      0.94
+     ],
+     [
+      "Bondola",
+      0.66
+     ],
+     [
+      "Merlot (registered for Blanc de Noir)",
+      0.63
+     ],
+     [
+      "Marselan",
+      0.51
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The lower Leventina along the Gotthard route, at Giornico, Bodio, Personico, Pollegio and Faido. Merlot makes up 70% of its 28.4 ha.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-riviera",
+   "name": "Distretto di Riviera",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Biasca",
+    "Riviera"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Riviera",
+    "area_ha": 25.6,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 2.2% of the canton. Harvest 2024: 164,593 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "Merlot",
+      21.3
+     ],
+     [
+      "American and hybrid red varieties",
+      0.87
+     ],
+     [
+      "Gamaret",
+      0.55
+     ],
+     [
+      "Merlot Khorus",
+      0.39
+     ],
+     [
+      "Carminoir",
+      0.36
+     ],
+     [
+      "Pinot Noir",
+      0.33
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The Ticino valley between Bellinzona and the mouth of the Blenio and the Leventina. Biasca holds most of the vines. Merlot makes up 83% of the area, the highest share of any district.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-vallemaggia",
+   "name": "Distretto di Vallemaggia",
+   "level": "subzone",
+   "parent": "Sopraceneri",
+   "communes": [
+    "Avegno Gordevio",
+    "Bosco/Gurin",
+    "Campo (Vallemaggia)",
+    "Cerentino",
+    "Cevio",
+    "Lavizzara",
+    "Linescio",
+    "Maggia"
+   ],
+   "d": {
+    "type": "District",
+    "aka": "Valle Maggia",
+    "area_ha": 18.5,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024",
+    "area_note": "Planted area 2024: 1.6% of the canton. Harvest 2024: 19,101 kg of grapes (Allegato 5).",
+    "grape_ha": [
+     [
+      "American and hybrid red varieties",
+      8.3
+     ],
+     [
+      "Merlot",
+      4.7
+     ],
+     [
+      "Isabella",
+      1.3
+     ],
+     [
+      "Johanniter",
+      0.75
+     ],
+     [
+      "Chambourcin",
+      0.57
+     ],
+     [
+      "Cabernet Jura",
+      0.47
+     ]
+    ],
+    "basis": "Direttive sulla viticoltura 2024, point 3.10 cpv. 1 a: the district may complete the DOC name",
+    "label_rule": "The district name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The smallest district by vineyard area. It is the only one where American and hybrid grapes, together with Isabella, cover more ground than Merlot. Yields are the lowest of the canton: 142 g per m2 in 2024 against 489 for the Ticino as a whole.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 2 (superfici per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_2.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 5 (vendemmia per vitigno e distretto)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_5.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-bellinzona",
+   "name": "Bellinzona",
+   "level": "subzone",
+   "parent": "Distretto di Bellinzona",
+   "communes": [
+    "Bellinzona"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 147.9,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Sum of the twelve quarters listed in the statistics, 2024: Gudo 30.7 ha, Camorino 29.0, Bellinzona proper 23.6, Sementina 16.8, Giubiasco 14.9, Monte Carasso 13.3 and six smaller ones. The commune of 2017 includes the former communes on both banks of the Ticino.",
+    "grape_ha": [
+     [
+      "Merlot",
+      104.2
+     ]
+    ],
+    "label_rule": "Commune or frazione (Gudo, Monte Carasso...) may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "Since the 2017 merger the city of Bellinzona has about 148 ha of vines. They lie on the sunny right-bank slopes from Gudo to Monte Carasso and on the left bank at Camorino and Giubiasco.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ],
+    "grape_share_note": "Merlot in the eight largest quarters only (centre, Camorino, Claro, Giubiasco, Gnosca, Gudo, Monte Carasso, Sementina), not counting parcels registered for Blanc de Noir"
+   }
+  },
+  {
+   "id": "ch-reg-ti-gudo",
+   "name": "Gudo",
+   "level": "subzone",
+   "parent": "Bellinzona",
+   "communes": [
+    "Gudo"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Frazione (former commune, quarter of Bellinzona since 2017)",
+    "area_ha": 30.7,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024. Merlot 20.9 ha, Merlot for Blanc de Noir 3.3 ha, Chardonnay 1.3 ha, Sauvignon Blanc 1.1 ha. 29.8 ha of it DOC.",
+    "label_rule": "The frazione name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The largest wine quarter of Bellinzona, on the right bank of the Ticino where the valley opens onto the Piano di Magadino. 30.7 ha in 2024, almost all of it DOC.",
+    "outline": "Boundary of the former commune (2010 set)",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-camorino",
+   "name": "Camorino",
+   "level": "subzone",
+   "parent": "Bellinzona",
+   "communes": [
+    "Camorino"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Frazione (former commune, quarter of Bellinzona since 2017)",
+    "area_ha": 29.0,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024. Merlot 20.8 ha, Merlot for Blanc de Noir 4.6 ha.",
+    "label_rule": "The frazione name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "Vines on the left bank of the Ticino at the foot of the slope south of Bellinzona. 29.0 ha in 2024, with the largest Blanc de Noir Merlot area among the quarters of Bellinzona.",
+    "outline": "Boundary of the former commune (2010 set)",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-sementina",
+   "name": "Sementina",
+   "level": "subzone",
+   "parent": "Bellinzona",
+   "communes": [
+    "Sementina"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Frazione (former commune, quarter of Bellinzona since 2017)",
+    "area_ha": 16.8,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024. Merlot 12.4 ha, Cabernet Sauvignon 1.1 ha, Chardonnay 0.9 ha.",
+    "label_rule": "The frazione name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "Right-bank slope between Gudo and Monte Carasso, 16.8 ha in 2024.",
+    "outline": "Boundary of the former commune (2010 set)",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-giubiasco",
+   "name": "Giubiasco",
+   "level": "subzone",
+   "parent": "Bellinzona",
+   "communes": [
+    "Giubiasco"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Frazione (former commune, quarter of Bellinzona since 2017)",
+    "area_ha": 14.9,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024. Merlot 9.9 ha, Merlot for Blanc de Noir 3.9 ha, Chardonnay 0.4 ha.",
+    "label_rule": "The frazione name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "14.9 ha in 2024. A wine cooperative was founded here in 1929.",
+    "outline": "Boundary of the former commune (2010 set)",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ],
+     [
+      "RSI, Il Merlot non è sempre stato ticinese",
+      "https://www.rsi.ch/food/extra/territorio-e-tradizioni/Il-Merlot-non-%C3%A8-sempre-stato-ticinese--3739464.html"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-monte-carasso",
+   "name": "Monte Carasso",
+   "level": "subzone",
+   "parent": "Bellinzona",
+   "communes": [
+    "Monte Carasso"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Frazione (former commune, quarter of Bellinzona since 2017)",
+    "area_ha": 13.3,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024. Merlot 10.9 ha, Bondola 0.3 ha, Marselan 0.2 ha.",
+    "label_rule": "The frazione name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "Right-bank slope just west of Bellinzona, 13.3 ha in 2024, with a little Bondola.",
+    "outline": "Boundary of the former commune (2010 set)",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-biasca",
+   "name": "Biasca",
+   "level": "subzone",
+   "parent": "Distretto di Riviera",
+   "communes": [
+    "Biasca"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 21.8,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024: Merlot 19.2 ha, Gamaret 0.4 ha, Merlot Khorus 0.4 ha",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The main wine commune of the Riviera, where the Blenio and the Leventina meet the Ticino valley. 88% of its 21.8 ha are Merlot.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-arogno",
+   "name": "Arogno",
+   "level": "subzone",
+   "parent": "Distretto di Lugano",
+   "communes": [
+    "Arogno"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.0,
+    "area_src": "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1",
+    "area_note": "Planted area 2024: Merlot 8.1 ha, Merlot for Blanc de Noir 0.5 ha, Solaris 0.9 ha, Kerner 0.9 ha",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "A village above the eastern arm of Lake Lugano, below Monte Generoso. With 14.0 ha it is one of the larger wine communes of the Luganese.",
+    "refs": [
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-mendrisio",
+   "name": "Mendrisio",
+   "level": "subzone",
+   "parent": "Distretto di Mendrisio",
+   "communes": [
+    "Mendrisio"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "The cantonal statistics list the area per commune (Allegato 1), but the figure could not be read for this commune.",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "The centre of the Mendrisiotto and seat of the Cantina Sociale Mendrisio, a cooperative founded in 1949 with about 350 member growers. The merged commune includes the wine villages of Monte San Giorgio, Besazio, Tremona, Meride and Arzo, as well as Rancate, Ligornetto, Genestrerio, Salorino and Capolago, each listed on its own in the cantonal statistics.",
+    "refs": [
+     [
+      "ticino.ch, Cantina Sociale Mendrisio",
+      "https://www.ticino.ch/it/commons/details/Cantina-Sociale-Mendrisio/2575.html"
+     ],
+     [
+      "Mendrisiotto Turismo, vineyard trails 2007",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:2878699b-02d1-4707-8a65-3cf9e5ad43d8/29.05.2007%20-%20Prospetti%20per%20gli%20Itinerari%20tematici%20tra%20i%20vigneti.pdf"
+     ],
+     [
+      "Sezione dell'agricoltura TI, Rapporto vendemmia 2024, Allegato 1 (superfici per vitigno e comune)",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/comunicati/annatevitic/Rapporto_vendemmia_2024_Allegato_1.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-castel-san-pietro",
+   "name": "Castel San Pietro",
+   "level": "subzone",
+   "parent": "Distretto di Mendrisio",
+   "communes": [
+    "Castel San Pietro"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "The cantonal statistics list the area per commune (Allegato 1), but the figure could not be read for this commune.",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "A commune on the slopes at the mouth of the Valle di Muggio. Mendrisiotto Turismo called it the most planted wine commune of the canton in 2006, when the Merlot centenary trails were opened.",
+    "refs": [
+     [
+      "Mendrisiotto Turismo, vineyard trails 2006",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:9ceba1f3-0be7-4db1-b5be-8ca51f8fe822/24.01.2006%20-%20Tre%20nuovi%20Itinerari%20tematici%20tra%20i%20vigneti%20per%20scoprire%20la%20regione.pdf"
+     ],
+     [
+      "Mendrisiotto Turismo, vineyard trails 2007",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:2878699b-02d1-4707-8a65-3cf9e5ad43d8/29.05.2007%20-%20Prospetti%20per%20gli%20Itinerari%20tematici%20tra%20i%20vigneti.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-coldrerio",
+   "name": "Coldrerio",
+   "level": "subzone",
+   "parent": "Distretto di Mendrisio",
+   "communes": [
+    "Coldrerio"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "The cantonal statistics list the area per commune (Allegato 1), but the figure could not be read for this commune.",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "A commune of vineyard hills between Mendrisio and Chiasso, on the first of the three Merlot centenary trails.",
+    "refs": [
+     [
+      "Mendrisiotto Turismo, vineyard trails 2006",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:9ceba1f3-0be7-4db1-b5be-8ca51f8fe822/24.01.2006%20-%20Tre%20nuovi%20Itinerari%20tematici%20tra%20i%20vigneti%20per%20scoprire%20la%20regione.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ti-stabio",
+   "name": "Stabio",
+   "level": "subzone",
+   "parent": "Distretto di Mendrisio",
+   "communes": [
+    "Stabio"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "The cantonal statistics list the area per commune (Allegato 1), but the figure could not be read for this commune.",
+    "label_rule": "The commune name may follow Ticino DOC if documented on the production and harvest control certificates (Direttive 2024, 3.10)",
+    "atlas_note": "A commune at the foot of Monte San Giorgio on the Italian border, the end point of the trail Viticoltura e territorio through the Monte San Giorgio villages.",
+    "refs": [
+     [
+      "Mendrisiotto Turismo, vineyard trails 2007",
+      "https://www.mendrisiottoturismo.ch/en/dam/jcr:2878699b-02d1-4707-8a65-3cf9e5ad43d8/29.05.2007%20-%20Prospetti%20per%20gli%20Itinerari%20tematici%20tra%20i%20vigneti.pdf"
+     ],
+     [
+      "Direttive sulla viticoltura, Sezione dell'agricoltura, 13 Sept 2024",
+      "https://www4.ti.ch/fileadmin/DFE/DE-SA/viticoltura/direttive_viticoltura.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-entre-deux-lacs",
+   "name": "Entre-deux-Lacs",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Le Landeron",
+    "Cressier (NE)",
+    "Cornaux",
+    "La Tène",
+    "Saint-Blaise"
+   ],
+   "d": {
+    "type": "Region designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The east end of the Neuchâtel vineyard, on the plain and slopes between Lake Neuchâtel and Lake Biel. One of the two regions the AOC decree names. Le Landeron alone held about a tenth of the canton's vines in the early 2000s.",
+    "refs": [
+     [
+      "Historisches Lexikon der Schweiz, Le Landeron",
+      "https://hls-dhs-dss.ch/fr/articles/003212/2009-03-10/"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ],
+    "outline": "Union of the wine communes between the two lakes. The legal limit is on plans at the Service de l'agriculture and was not seen; drawn by commune."
+   }
+  },
+  {
+   "id": "ch-reg-ne-le-landeron",
+   "name": "Le Landeron",
+   "level": "subzone",
+   "parent": "Entre-deux-Lacs",
+   "communes": [
+    "Le Landeron"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The easternmost wine commune of the canton, next to La Neuveville on Lake Biel. Its vineyard was still the second of the canton in the early 2000s, about a tenth of the vines.",
+    "refs": [
+     [
+      "Historisches Lexikon der Schweiz, Le Landeron",
+      "https://hls-dhs-dss.ch/fr/articles/003212/2009-03-10/"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-cressier",
+   "name": "Cressier",
+   "level": "subzone",
+   "parent": "Entre-deux-Lacs",
+   "communes": [
+    "Cressier (NE)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Wine village of the Entre-deux-Lacs between Le Landeron and Cornaux.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-cornaux",
+   "name": "Cornaux",
+   "level": "subzone",
+   "parent": "Entre-deux-Lacs",
+   "communes": [
+    "Cornaux"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Small wine commune of the Entre-deux-Lacs, west of Cressier.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-marin",
+   "name": "Marin",
+   "level": "subzone",
+   "parent": "Entre-deux-Lacs",
+   "communes": [
+    "La Tène"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Marin is a locality of the commune of La Tène. The designation keeps the old village name.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ],
+    "outline": "The commune of La Tène, which holds Marin. The designation covers only Marin."
+   }
+  },
+  {
+   "id": "ch-reg-ne-saint-blaise",
+   "name": "Saint-Blaise",
+   "level": "subzone",
+   "parent": "Entre-deux-Lacs",
+   "communes": [
+    "Saint-Blaise"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Wine village at the north-east corner of Lake Neuchâtel.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-hauterive",
+   "name": "Hauterive",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Hauterive (NE)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Small commune between Saint-Blaise and the city of Neuchâtel.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-neuchatel-ville",
+   "name": "Ville de Neuchâtel",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Neuchâtel"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The city vineyards. The decree also allows the locality La Coudre and the sector Champréveyres inside the city. The City of Neuchâtel owns its own estate, the Caves de la Ville.",
+    "refs": [
+     [
+      "Conseil d'État NE, rapport 20.044, fusion Neuchâtel, Corcelles-Cormondrèche, Peseux, Valangin (2021)",
+      "https://www.ne.ch/autorites/GC/objets/Documents/Rapports/2020/20044_CE.pdf"
+     ],
+     [
+      "Hachette Vins, canton de Neuchâtel",
+      "https://www.hachette-vins.com/tout-sur-le-vin/appellations-vins/725/canton-de-neuchatel/page-5"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ],
+    "outline": "The city as it was before the 2021 merger, 2010 boundaries. Peseux and Corcelles-Cormondrèche, merged into Neuchâtel in 2021, keep their own designations.",
+    "producers_note": "Caves de la Ville de Neuchâtel, 13.4 ha (Hachette Vins)"
+   }
+  },
+  {
+   "id": "ch-reg-ne-peseux",
+   "name": "Peseux",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Peseux"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Former commune west of the city, part of the commune of Neuchâtel since 1 January 2021. The wine designation remains.",
+    "refs": [
+     [
+      "Conseil d'État NE, rapport 20.044, fusion Neuchâtel, Corcelles-Cormondrèche, Peseux, Valangin (2021)",
+      "https://www.ne.ch/autorites/GC/objets/Documents/Rapports/2020/20044_CE.pdf"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-corcelles-cormondreche",
+   "name": "Corcelles-Cormondrèche",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Corcelles-Cormondrèche"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Former commune above Auvernier, part of the commune of Neuchâtel since 1 January 2021. The wine designation remains.",
+    "refs": [
+     [
+      "Conseil d'État NE, rapport 20.044, fusion Neuchâtel, Corcelles-Cormondrèche, Peseux, Valangin (2021)",
+      "https://www.ne.ch/autorites/GC/objets/Documents/Rapports/2020/20044_CE.pdf"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-milvignes",
+   "name": "Milvignes",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Milvignes"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The commune formed in 2013 from Auvernier, Bôle and Colombier. Milvignes is a designation of its own, and the three old village names may still be used.",
+    "refs": [
+     [
+      "Fusions.ch, Milvignes (2013)",
+      "https://fusions.ch/towns-fxtown11.html"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-auvernier",
+   "name": "Auvernier",
+   "level": "subzone",
+   "parent": "Milvignes",
+   "communes": [
+    "Auvernier"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Wine village on the lake west of Neuchâtel, part of Milvignes since 2013.",
+    "refs": [
+     [
+      "Fusions.ch, Milvignes (2013)",
+      "https://fusions.ch/towns-fxtown11.html"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-colombier",
+   "name": "Colombier",
+   "level": "subzone",
+   "parent": "Milvignes",
+   "communes": [
+    "Colombier (NE)"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Village west of Auvernier, part of Milvignes since 2013.",
+    "refs": [
+     [
+      "Fusions.ch, Milvignes (2013)",
+      "https://fusions.ch/towns-fxtown11.html"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-bole",
+   "name": "Bôle",
+   "level": "subzone",
+   "parent": "Milvignes",
+   "communes": [
+    "Bôle"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Small village above Colombier, part of Milvignes since 2013.",
+    "refs": [
+     [
+      "Fusions.ch, Milvignes (2013)",
+      "https://fusions.ch/towns-fxtown11.html"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-boudry",
+   "name": "Boudry",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Boudry"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Commune at the mouth of the Areuse. Areuse, a hamlet of Boudry, is where the first known Œil-de-Perdrix label was printed in 1861.",
+    "refs": [
+     [
+      "Neuchâtel Vins et Terroir, Œil-de-Perdrix",
+      "https://neuchatel-vins-terroir.ch/oeil-de-perdrix/"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-cortaillod",
+   "name": "Cortaillod",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Cortaillod"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Wine commune on the lake south of Boudry. The decree names Cortaillod as a designation.",
+    "refs": [
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-la-beroche",
+   "name": "La Béroche",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "La Grande Béroche"
+   ],
+   "d": {
+    "type": "Region designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The west end of the Neuchâtel vineyard toward the Vaud border. One of the two regions the AOC decree names. Since 2018 its villages form the commune of La Grande Béroche with Bevaix.",
+    "refs": [
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ],
+    "outline": "The commune of La Grande Béroche, merged on 1 January 2018 from Bevaix, Fresens, Gorgier, Montalchez, Saint-Aubin-Sauges and Vaumarcus. The legal limit of the region is on plans at the Service de l'agriculture and was not seen; Bevaix has its own designation."
+   }
+  },
+  {
+   "id": "ch-reg-ne-bevaix",
+   "name": "Bevaix",
+   "level": "subzone",
+   "parent": "AOC Neuchâtel",
+   "communes": [
+    "Bevaix"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Commune between Cortaillod and the Béroche, part of La Grande Béroche since 2018. The priory of Bevaix received leave to plant a vine in 998, the oldest record of the Neuchâtel vineyard.",
+    "refs": [
+     [
+      "Neuchâtel Vins et Terroir, le vignoble",
+      "https://neuchatel-vins-terroir.ch/vins/vignoble/"
+     ],
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-gorgier",
+   "name": "Gorgier",
+   "level": "subzone",
+   "parent": "La Béroche",
+   "communes": [
+    "Gorgier"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Village of the Béroche, part of La Grande Béroche since 2018. The decree also allows its lakeside locality Chez-le-Bart.",
+    "refs": [
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-saint-aubin-sauges",
+   "name": "Saint-Aubin-Sauges",
+   "level": "subzone",
+   "parent": "La Béroche",
+   "communes": [
+    "Saint-Aubin-Sauges"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Lakeside village of the Béroche, part of La Grande Béroche since 2018.",
+    "refs": [
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-fresens",
+   "name": "Fresens",
+   "level": "subzone",
+   "parent": "La Béroche",
+   "communes": [
+    "Fresens"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "Small hill village of the Béroche, part of La Grande Béroche since 2018.",
+    "refs": [
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ne-vaumarcus",
+   "name": "Vaumarcus",
+   "level": "subzone",
+   "parent": "La Béroche",
+   "communes": [
+    "Vaumarcus"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Commune designation",
+    "basis": "RSN 916.120.1 art. 4: name added to AOC Neuchâtel with at least 85% of the grapes from it",
+    "label_rule": "Neuchâtel AOC + this name, at least 85% of the grapes from it (art. 4). Limits on plans filed with the Service de l'agriculture.",
+    "atlas_note": "The westernmost wine commune of the canton, on the border with Vaud. Part of La Grande Béroche since 2018.",
+    "refs": [
+     [
+      "Wikipedia, La Grande Béroche (merger 1 Jan 2018)",
+      "https://en.wikipedia.org/wiki/La_Grande_B%C3%A9roche"
+     ],
+     [
+      "Arrêté AOC des vins de Neuchâtel, RSN 916.120.1 (20 June 2016, état 18 Aug 2021)",
+      "https://rsn.ne.ch/DATA/program/books/RSN2023/20236/htm/916.120.1.htm"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-bielersee",
+   "name": "AOC Bielersee",
+   "level": "appellation",
+   "parent": "AOC Bern",
+   "communes": [
+    "La Neuveville",
+    "Ligerz",
+    "Twann-Tüscherz",
+    "Biel/Bienne",
+    "Erlach",
+    "Tschugg",
+    "Gampelen",
+    "Ins",
+    "Vinelz",
+    "Lüscherz",
+    "Gals"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "aka": "AOC Lac de Bienne",
+    "area_ha": 220.4,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "119.3 ha white (54%) and 101.1 ha red (46%), 2025. Swiss Wine gives 222 ha.",
+    "grape_ha": [
+     [
+      "Pinot Noir",
+      78.0
+     ],
+     [
+      "Chasselas",
+      60.7
+     ],
+     [
+      "Pinot Gris",
+      14.2
+     ],
+     [
+      "Chardonnay",
+      12.2
+     ],
+     [
+      "Sauvignon Blanc",
+      11.3
+     ]
+    ],
+    "grape_share_note": "Hectares 2025 read from the Lake Biel column of BLW, Das Weinjahr 2025, tables 1.2 and 1.3.",
+    "basis": "RebG BSG 916.141.1 art. 1 and 2, RebV art. 1, KUBR art. 3 al. 3; Beilage Bielersee of 26 Mar 2025",
+    "label_rule": "Bielersee AOC or Lac de Bienne AOC: 100% from the region (KUBR art. 3). Village or hamlet name: 85%. Lage name: 100%, written for example Marnin Schafis Bielersee AOC.",
+    "atlas_note": "Vines on the steep south-east facing shore of Lake Biel from Vingelz through Tüscherz, Twann and Ligerz to Schafis and La Neuveville, and on the Jolimont around Erlach, Tschugg, Gampelen and Ins. Limestone on the left shore, molasse at Erlach and the St. Petersinsel. A papal letter of 866 records wine here. Chasselas and Pinot Noir lead.",
+    "outline": "Union of the eleven wine communes named in the RebG (art. 2) and the RebV (art. 1). The vines of Biel/Bienne are at Vingelz.",
+    "producers_note": "More than 60 winegrowers (Bielersee Wein)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Rebbauverordnung (RebV), BSG 916.141.111",
+      "https://be.lexwork.naz.ch/de/dta/916.141.111.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ],
+     [
+      "Bielersee Wein, Weinbauregion Bielersee",
+      "https://www.bielerseewein.ch/weinbauregion-bielersee/"
+     ],
+     [
+      "Swiss Wine, Three Lakes wine region",
+      "https://www.swisswine.com/en/swiss-wine-regions/three-lakes-wine-region"
+     ],
+     [
+      "BLW, liste des AOC suisses, 1 Jan 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Production rules",
+      "2025: maximum yield 1.2 kg/m² for Chasselas and Riesling-Silvaner, 1.0 kg/m² for all others. Minimum sugar 63 °Oe for Chasselas, 77 °Oe for Pinot Noir and Chardonnay, 81 °Oe for Gewürztraminer and Freisamer. Recommended grapes: Pinot Noir, Diolinoir, Gamaret, Garanoir, Chardonnay, Chasselas, Freisamer, Gewürztraminer, Pinot Blanc, Pinot Gris, Riesling-Silvaner, Sauvignon Blanc, Sylvaner."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-la-neuveville",
+   "name": "La Neuveville",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "La Neuveville"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: La Neuveville, Schafis",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "The French-speaking west end of the Bielersee vineyard, next to Le Landeron in Neuchâtel. It holds the hamlet of Schafis (Chavannes), which may be named on its own, as in the KUBR example Schafiser Bielersee AOC.",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Neuenstadt"
+   }
+  },
+  {
+   "id": "ch-reg-be-ligerz",
+   "name": "Ligerz",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Ligerz"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Ligerz, Schernelz",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Steep terraced village between Schafis and Twann, with the hamlet of Schernelz above it. The land consolidation of Ligerz, Twann and Tüscherz-Alfermée covers 105.5 ha of vines.",
+    "refs": [
+     [
+      "Bielersee Wein, Weinbauregion Bielersee",
+      "https://www.bielerseewein.ch/weinbauregion-bielersee/"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Gléresse"
+   }
+  },
+  {
+   "id": "ch-reg-be-twann-tuescherz",
+   "name": "Twann-Tüscherz",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Twann-Tüscherz"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Twann, Tüscherz",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "The largest stretch of the left shore, from Twann to Tüscherz-Alfermée. The KUBR annex lists more named sites here than anywhere else on the lake. Seat of the Haus des Bielersee Weines in Twann.",
+    "refs": [
+     [
+      "Bielersee Wein, Weinbauregion Bielersee",
+      "https://www.bielerseewein.ch/weinbauregion-bielersee/"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Douanne-Daucher"
+   }
+  },
+  {
+   "id": "ch-reg-be-biel-vingelz",
+   "name": "Vingelz",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Biel/Bienne"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Vingelz, Biel",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "The vineyards of the city of Biel, at Vingelz on the lake shore west of the town. The eastern end of the left-shore vineyard.",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Vigneules",
+    "outline": "The city of Biel/Bienne; the vines are only at Vingelz."
+   }
+  },
+  {
+   "id": "ch-reg-be-erlach",
+   "name": "Erlach",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Erlach"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Erlach",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Small town on the south-west shore of Lake Biel near the St. Petersinsel. Vines on molasse on the slopes of the Jolimont.",
+    "refs": [
+     [
+      "Bielersee Wein, Weinbauregion Bielersee",
+      "https://www.bielerseewein.ch/weinbauregion-bielersee/"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Cerlier"
+   }
+  },
+  {
+   "id": "ch-reg-be-tschugg",
+   "name": "Tschugg",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Tschugg"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Tschugg",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Village on the south side of the Jolimont, one of the four Jolimont wine communes named in the RebG.",
+    "refs": [
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-gampelen",
+   "name": "Gampelen",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Gampelen"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Gampelen",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Village at the west foot of the Jolimont, one of the four Jolimont wine communes named in the RebG.",
+    "refs": [
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Champion"
+   }
+  },
+  {
+   "id": "ch-reg-be-ins",
+   "name": "Ins",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Ins"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Ins",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Village above the Seeland plain, the fourth Jolimont wine commune named in the RebG.",
+    "refs": [
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Anet"
+   }
+  },
+  {
+   "id": "ch-reg-be-vinelz",
+   "name": "Vinelz",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Vinelz"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Vinelz",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Lakeside village west of Erlach, a wine commune of the Bielersee region by the RebV.",
+    "refs": [
+     [
+      "Rebbauverordnung (RebV), BSG 916.141.111",
+      "https://be.lexwork.naz.ch/de/dta/916.141.111.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Fénil"
+   }
+  },
+  {
+   "id": "ch-reg-be-luescherz",
+   "name": "Lüscherz",
+   "level": "subzone",
+   "parent": "AOC Bielersee",
+   "communes": [
+    "Lüscherz"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Bielersee 2025); villages listed: Lüscherz",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Lakeside village on the south shore of Lake Biel, a wine commune of the Bielersee region by the RebV.",
+    "refs": [
+     [
+      "Rebbauverordnung (RebV), BSG 916.141.111",
+      "https://be.lexwork.naz.ch/de/dta/916.141.111.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ]
+    ],
+    "aka": "Locraz"
+   }
+  },
+  {
+   "id": "ch-reg-be-thunersee",
+   "name": "AOC Thunersee",
+   "level": "appellation",
+   "parent": "AOC Bern",
+   "communes": [
+    "Spiez",
+    "Oberhofen am Thunersee",
+    "Hilterfingen",
+    "Sigriswil",
+    "Thun",
+    "Steffisburg",
+    "Seftigen",
+    "Wilderswil"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 19.7,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "9.9 ha white and 9.8 ha red, 2025 (BLW tables 1.2 and 1.3; the Lake Thun column is not in table 1.1).",
+    "grape_ha": [
+     [
+      "Pinot Noir",
+      5.3
+     ]
+    ],
+    "basis": "RebG BSG 916.141.1 art. 1 and 2 (Spiez, Oberhofen, Sigriswil-Merligen), RebV art. 1 (also lake-shore communes with vines, Seftigen, Steffisburg, Wilderswil); KUBR; Beilage Teil II of 6 Mar 2025",
+    "label_rule": "Thunersee AOC: 100% from the region. Village name 85%, for example Oberhofen Thunersee AOC (KUBR art. 3).",
+    "atlas_note": "Small vineyards on the shores of Lake Thun below the Alps, at Spiez, Oberhofen, Hilterfingen and Sigriswil. The recommended grapes include Blauburgunder, Riesling-Silvaner and fungus-resistant varieties such as Regent, Divona and Souvignier gris. The KUBR annex lists ten named sites.",
+    "outline": "Union of the communes named in the RebG, the RebV and the 2025 village list (also Thun). The vines cover only a few small slopes.",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Rebbauverordnung (RebV), BSG 916.141.111",
+      "https://be.lexwork.naz.ch/de/dta/916.141.111.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ],
+     [
+      "BLW, liste des AOC suisses, 1 Jan 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Production rules",
+      "2025: maximum yield 1.3 kg/m² for Elbling and Riesling-Silvaner, 1.2 kg/m² for Chasselas, Muscaris, Souvignier gris and Solaris, 1.0 kg/m² for the rest. Minimum sugar from 64.5 °Oe (Chasselas, Elbling) to 81.1 °Oe (Gewürztraminer, Solaris); Pinot Noir 76.7 °Oe. Recommended grapes: Blauburgunder, Diolinoir, Gamaret, Garanoir, Regent, Chardonnay, Gewürztraminer, Pinot Gris, Riesling-Silvaner, Divona, Souvignier gris."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-spiez",
+   "name": "Spiez",
+   "level": "subzone",
+   "parent": "AOC Thunersee",
+   "communes": [
+    "Spiez"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Thunersee 2025); villages listed: Spiez, Spiez-Spiezwiler, Spiez-Faulensee",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "The best known Lake Thun vineyard, the Spiezer Rebberg. The village list also names Spiezwiler and Faulensee. The RebG names Spiez as a wine commune.",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-oberhofen",
+   "name": "Oberhofen",
+   "level": "subzone",
+   "parent": "AOC Thunersee",
+   "communes": [
+    "Oberhofen am Thunersee"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Thunersee 2025); villages listed: Oberhofen",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Village on the north shore of Lake Thun, named as a wine commune in the RebG. The KUBR uses Oberhofen Thunersee AOC as its example of a village name.",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-hilterfingen",
+   "name": "Hilterfingen",
+   "level": "subzone",
+   "parent": "AOC Thunersee",
+   "communes": [
+    "Hilterfingen"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Thunersee 2025); villages listed: Hilterfingen",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Village on the north shore between Thun and Oberhofen, in the 2025 village list.",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-be-sigriswil",
+   "name": "Sigriswil",
+   "level": "subzone",
+   "parent": "AOC Thunersee",
+   "communes": [
+    "Sigriswil"
+   ],
+   "d": {
+    "type": "Village designation",
+    "basis": "KUBR art. 3 al. 4 and annex (Thunersee 2025); villages listed: Merligen, Gunten, Gde Sigriswil",
+    "label_rule": "Village or hamlet name + region AOC, at least 85% from that village, the rest from the same region (KUBR art. 3 al. 4). Named Lagen need 100%.",
+    "atlas_note": "Commune on the north shore with the lakeside villages Merligen and Gunten; the RebG names Sigriswil (Merligen).",
+    "refs": [
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-fr-vully",
+   "name": "Vully fribourgeois",
+   "level": "subzone",
+   "parent": "AOC Vully",
+   "communes": [
+    "Mont-Vully"
+   ],
+   "d": {
+    "type": "Fribourg part of the intercantonal AOC Vully",
+    "area_ha": 102.9,
+    "area_src": "Statistiques viticoles fribourgeoises 2025",
+    "area_note": "60.5 ha white and 42.4 ha red, Fribourg vineyard cadastre 2025. With the Vaud part (Vully-les-Lacs) the appellation has about 150 ha; Région de Fribourg gives 152 ha.",
+    "grape_ha": [
+     [
+      "Chasselas",
+      34.7
+     ],
+     [
+      "Pinot Noir",
+      22.0
+     ],
+     [
+      "Pinot Gris",
+      6.6
+     ],
+     [
+      "Gamaret",
+      5.6
+     ],
+     [
+      "Freiburger (Freisamer)",
+      4.9
+     ],
+     [
+      "Gewürztraminer",
+      3.7
+     ],
+     [
+      "Garanoir",
+      3.4
+     ],
+     [
+      "Sauvignon Blanc",
+      3.4
+     ],
+     [
+      "Divico",
+      2.6
+     ],
+     [
+      "Merlot",
+      2.4
+     ]
+    ],
+    "basis": "RSF 912.4.111 art. 13 al. 1 let. a and art. 16 al. 2: the Vully vineyard is the grape-growing area of Mont-Vully (FR) and Vully-les-Lacs (VD)",
+    "label_rule": "Vully Appellation d'origine contrôlée, or AOC, on the label (art. 13). Minimum sugar Chasselas 64 °Oe, Pinot Noir 75 °Oe, other whites and reds 70 °Oe (art. 17).",
+    "aka": "Wistenlach",
+    "atlas_note": "The Fribourg side of the Mont Vully, two thirds of the appellation. Vines on molasse benches facing Lake Morat. Chasselas leads, then Pinot Noir. Freiburger and Traminer are local specialities. The commune of Mont-Vully replaced Bas-Vully and Haut-Vully in the ordinance text.",
+    "producers_note": "24 winegrowers make Vully AOC on Fribourg and Vaud soil (Région de Fribourg)",
+    "refs": [
+     [
+      "Statistiques viticoles fribourgeoises, vendanges 2025",
+      "https://www.fr.ch/document/579811"
+     ],
+     [
+      "Ordonnance DIAF sur la vigne et le vin, RSF 912.4.111 (état 1 Jan 2024)",
+      "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+     ],
+     [
+      "Verordnung über die Reben und den Wein, SGF 912.4.111, earlier version",
+      "https://bdlf.fr.ch/frontend/versions/942/download_pdf_file?locale=de"
+     ],
+     [
+      "Région de Fribourg, vins fribourgeois",
+      "https://fribourg.ch/fr/all/groupes/vins-fribourgeois/"
+     ],
+     [
+      "Interprofession des vins du Vully",
+      "https://vully.ch/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-fr-cheyres",
+   "name": "AOC Cheyres",
+   "level": "appellation",
+   "parent": "Fribourg / Freiburg",
+   "communes": [
+    "Cheyres",
+    "Châbles",
+    "Font"
+   ],
+   "year": 2010,
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 13.7,
+    "area_src": "Statistiques viticoles fribourgeoises 2025",
+    "area_note": "5.1 ha white and 8.6 ha red, Fribourg vineyard cadastre 2025. Région de Fribourg gives about 14 ha.",
+    "grape_ha": [
+     [
+      "Pinot Noir",
+      6.6
+     ],
+     [
+      "Chasselas",
+      3.7
+     ],
+     [
+      "Gamaret",
+      0.8
+     ],
+     [
+      "Garanoir",
+      0.8
+     ],
+     [
+      "Pinot Gris",
+      0.6
+     ],
+     [
+      "Chardonnay",
+      0.2
+     ]
+    ],
+    "basis": "RSF 912.4.111 art. 13 al. 1 let. b and art. 16 al. 1: Cheyres Appellation d'origine contrôlée for the vineyard of Cheyres/Font",
+    "label_rule": "Cheyres Appellation d'origine contrôlée, or AOC, on the label (art. 13). 2024 harvest: maximum 1.25 kg/m² white and 1.1 kg/m² red, minimum 62 °Oe white and 70 °Oe red.",
+    "atlas_note": "The only vineyard on the south shore of Lake Neuchâtel, in the Fribourg Broye. Vines between the lake and the Cheyres hillside, sheltered from the bise by the cliffs called Crottes de Cheyres. Pinot Noir covers almost half, then Chasselas.",
+    "outline": "Former communes Cheyres, Châbles and Font, 2010 boundaries. Cheyres and Châbles merged into Cheyres-Châbles in 2017; Font joined Estavayer-le-Lac in 2012, now Estavayer.",
+    "producers_note": "About 25 producers share the 14 ha (Région de Fribourg). La Cave de Cheyres, Domaine Morax, Vitagneau (Terroir Fribourg).",
+    "refs": [
+     [
+      "Statistiques viticoles fribourgeoises, vendanges 2025",
+      "https://www.fr.ch/document/579811"
+     ],
+     [
+      "Ordonnance DIAF sur la vigne et le vin, RSF 912.4.111 (état 1 Jan 2024)",
+      "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+     ],
+     [
+      "DIAF, contrôle officiel de la vendange 2024 (27 June 2024)",
+      "https://fr.ch/document/531956"
+     ],
+     [
+      "Région de Fribourg, Cheyres AOC wines",
+      "https://fribourg.ch/en/estavayer-payerne/heritage/cheyres-aoc-wines/"
+     ],
+     [
+      "Terroir Fribourg, vins de Cheyres",
+      "https://fribourg.ch/fr/terroir-fribourg/produits/vins-de-cheyres/"
+     ],
+     [
+      "Région de Fribourg, vins fribourgeois",
+      "https://fribourg.ch/fr/all/groupes/vins-fribourgeois/"
+     ],
+     [
+      "Wikipedia, Font (merged into Estavayer-le-Lac 2012)",
+      "https://en.wikipedia.org/wiki/Font,_Switzerland"
+     ],
+     [
+      "Wikipedia, Cheyres-Châbles (merger 1 Jan 2017)",
+      "https://en.wikipedia.org/wiki/Cheyres-Ch%C3%A2bles"
+     ],
+     [
+      "BLW, liste des AOC suisses, 1 Jan 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
   }
- ]
+ ],
+ "new_cantons": {
+  "ch-canton-2": {
+   "bfs": 2,
+   "name": "AOC Bern",
+   "region": "Trois-Lacs",
+   "d": {
+    "official_name": "AOC Bern",
+    "aka": "Bern AOC / Berne AOC",
+    "wine_region": "Trois-Lacs (Lake Biel); Lake Thun belongs to German-speaking Switzerland",
+    "area_ha": 252.1,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "220.4 ha at Lake Biel (54% white) and 31.7 ha in the rest of the canton (52% white), 2025. Of these, about 19.7 ha at Lake Thun (9.9 ha white, 9.8 ha red, BLW tables 1.2 and 1.3).",
+    "grape_ha": [
+     [
+      "Pinot Noir",
+      85.2
+     ]
+    ],
+    "grape_share_note": "Pinot Noir 2025: 78.0 ha at Lake Biel, 5.3 ha at Lake Thun, 2.0 ha elsewhere (BLW, Das Weinjahr 2025, table 1.3).",
+    "growers": 155,
+    "basis": "Gesetz über den Rebbau (RebG) BSG 916.141.1 of 13 Sept 1995; Rebbauverordnung (RebV) BSG 916.141.111; Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR) BSG 916.141.111.3 of the Rebgesellschaften Bielersee and Thunersee-Bern (version 7/24)",
+    "label_rule": "Bern AOC: 100% from the canton. Region AOC (Bielersee, Thunersee): 100% from the region. Village or hamlet name: at least 85% from it, the rest from the same region. Lage (site): 100% from a site listed in the KUBR annex, written site + village + region (KUBR art. 3). The grapes are listed in descending order; listed grapes make at least 85% (art. 6).",
+    "atlas_note": "Two wine regions by law, Lake Biel and Lake Thun, plus scattered vineyards elsewhere in the canton. Nearly nine tenths of the vines are on the north-west shore of Lake Biel and the Jolimont. The cantonal law leaves the AOC rules to two growers' societies, the Rebgesellschaft Bielersee and the Rebgesellschaft Thunersee-Bern.",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Gesetz über den Rebbau (RebG), BSG 916.141.1",
+      "https://be.lexwork.naz.ch/de/dta/916.141.1.pdf"
+     ],
+     [
+      "Rebbauverordnung (RebV), BSG 916.141.111",
+      "https://be.lexwork.naz.ch/de/dta/916.141.111.pdf"
+     ],
+     [
+      "Reglement über die kontrollierten Ursprungsbezeichnungen (KUBR), version 7/24",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement-2024_D.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Produktionsregion Bielersee, 26 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Bielersee%202025-d.pdf"
+     ],
+     [
+      "Beilage zum KUBR, Teil II, Produktionsregion Thunersee und übriges Kantonsgebiet, 6 Mar 2025",
+      "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/landwirtschaft/vermarktung/AOC-Reglement%20Thunersee%202025-d.pdf"
+     ],
+     [
+      "BLW, liste des AOC suisses, 1 Jan 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ],
+     [
+      "plattformj.ch, Berner Weinbau 2022 (LANAT figures)",
+      "https://www.plattformj.ch/artikel/204654/"
+     ]
+    ],
+    "rules": [
+     [
+      "Production rules",
+      "Grape lists, minimum sugar and maximum yield are set by each Rebgesellschaft every year (KUBR art. 6 and 8). If the yield limit is exceeded the whole lot is declassified (art. 8). Federal AOC list 1 Jan 2026: Bern/Berne, Bielersee/Lac de Bienne, Thunersee."
+     ],
+     [
+      "Growers",
+      "155 farms working vines and 72 cellars (Einkellerbetriebe), 2022"
+     ]
+    ]
+   }
+  },
+  "ch-canton-10": {
+   "bfs": 10,
+   "name": "Fribourg / Freiburg",
+   "region": "Trois-Lacs",
+   "d": {
+    "official_name": "Fribourg / Freiburg",
+    "note": "No cantonal AOC: the ordinance recognises only AOC Vully (shared with Vaud) and AOC Cheyres.",
+    "aka": "Freiburg",
+    "wine_region": "Trois-Lacs",
+    "area_ha": 116.6,
+    "area_src": "Statistiques viticoles fribourgeoises 2025",
+    "area_note": "102.9 ha in the Vully and 13.7 ha at Cheyres, cantonal vineyard cadastre 2025; 56% white. BLW gives 116.5 ha for 2025.",
+    "grape_ha": [
+     [
+      "Chasselas",
+      38.3
+     ],
+     [
+      "Pinot Noir",
+      28.5
+     ],
+     [
+      "Pinot Gris",
+      7.3
+     ],
+     [
+      "Gamaret",
+      6.4
+     ],
+     [
+      "Freiburger (Freisamer)",
+      4.9
+     ],
+     [
+      "Garanoir",
+      4.2
+     ],
+     [
+      "Gewürztraminer",
+      3.7
+     ],
+     [
+      "Sauvignon Blanc",
+      3.5
+     ],
+     [
+      "Divico",
+      2.6
+     ],
+     [
+      "Merlot",
+      2.5
+     ]
+    ],
+    "basis": "Ordonnance DIAF sur la vigne et le vin, RSF 912.4.111, of 1 Oct 2009 (état 1 Jan 2024), art. 13 and 16",
+    "label_rule": "Two AOCs: Vully Appellation d'origine contrôlée and Cheyres Appellation d'origine contrôlée; the mention AOC must be on the label (art. 13). Single-variety whites other than Chasselas must name the grape, blends say Assemblage de cépages (art. 20a). Sweetening of AOC wine is banned since 1 July 2015.",
+    "atlas_note": "Two small vineyards on the Three Lakes. The Vully on the Mont Vully between Lake Morat and Lake Neuchâtel, shared with Vaud, and Cheyres on the south shore of Lake Neuchâtel. Chasselas is the first grape, then Pinot Noir. The Freiburger, a cross also called Freisamer, is a Vully speciality.",
+    "refs": [
+     [
+      "Statistiques viticoles fribourgeoises, vendanges 2025",
+      "https://www.fr.ch/document/579811"
+     ],
+     [
+      "Ordonnance DIAF sur la vigne et le vin, RSF 912.4.111 (état 1 Jan 2024)",
+      "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+     ],
+     [
+      "DIAF, contrôle officiel de la vendange 2024 (27 June 2024)",
+      "https://fr.ch/document/531956"
+     ],
+     [
+      "Canton de Fribourg, Vins AOC: transparence et qualité renforcées (10 July 2015)",
+      "https://www.fr.ch/diaf/actualites/vins-aoc-transparence-et-qualite-renforcees"
+     ],
+     [
+      "BLW, Das Weinjahr 2025",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "BLW, liste des AOC suisses, 1 Jan 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ],
+     [
+      "Région de Fribourg, vins fribourgeois",
+      "https://fribourg.ch/fr/all/groupes/vins-fribourgeois/"
+     ],
+     [
+      "Swiss Wine, Three Lakes wine region",
+      "https://www.swisswine.com/en/swiss-wine-regions/three-lakes-wine-region"
+     ]
+    ],
+    "rules": [
+     [
+      "Production rules",
+      "Vully minimum sugar: Chasselas 64 °Oe, other whites 70 °Oe, Pinot Noir 75 °Oe, other reds 70 °Oe (art. 17). Yields are set each year by the Direction; for 2024 Vully 1.1 kg/m² (Pinot Noir 1.0), Cheyres 1.25 kg/m² white and 1.1 kg/m² red, Cheyres minimum 62 °Oe white and 70 °Oe red."
+     ]
+    ]
+   }
+  }
+ },
+ "_gaps": {
+  "vs": [
+   "The cantonal tables 'Surfaces par commune 2025' and 'Surfaces par cépage 2025' on vs.ch are blocked to automated reading (robots), so commune areas come from the 2025 harvest report, which prints one vineyard surface per commune (sum 4,579.1 ha; BLW 4,577.7 ha) and harvest kg per grape, but no hectares per grape per commune.",
+   "Canton grape hectares were read from the Valais column of BLW Weinjahr 2025 tables 1.2/1.3; the PDF text loses empty cells, so only values that are clearly the Valais column were kept (Chardonnay, Pinot Blanc and Sauvignon Blanc left out). Please check against the PDF.",
+   "Grand cru regulation texts not found for Salgesch, Fully, Savièse and Visperterminen; their grape lists come from Artisan Swiss (2019) and Vinum Montis. Leytron's homologation date not found.",
+   "Number of grand cru communes: secondary sources say 12 (Artisan Swiss, Vinum Montis, Wine with Seth); swisswine.com says '10 AOC Grand Cru'. Not confirmed by an official list.",
+   "No hectares are published for the grand cru parcels; areas are given only for whole communes. The 2015 estimate of about 100 ha for Sierre Grand Cru is journalism (thomasvino), not an official figure.",
+   "No Valais premier cru or new cantonal cru framework exists: OVV art. 94 al. 4 bans 'premier cru' and 'cru classé' (text in force 1 April 2026). The 2025/2026 amendment history was not read; amendment tables are not in the consolidated PDF.",
+   "The OVV defines no wine regions. Bas-Valais, Valais central and Oberwallis follow Swiss Wine Valais (Port-Valais to Leytron, Chamoson to Sierre, Salgesch to Brig); the assignment of each commune is mine. Older text art. 41 al. 2 (lower sugar minima and commune name rule downstream of Evionnaz) appears repealed ('...') in the 2026 version, not confirmed.",
+   "Whether labels may still use former commune names after mergers (Crans-Montana 2017, Noble-Contrée 2021, Sion) was not found in the OVV.",
+   "The 1980 zoning decree (RS VS 916.140) splits slopes into zones 1 to 3 for many communes; not used here.",
+   "Registered parcel count differs between the French (72,799) and German (7,799) vs.ch pages; left out. Owners 18,225 is on both.",
+   "Communes under 20 ha not given their own place (Mont-Noble 18.1, Bovernier 15.5, Port-Valais 14.8, Gampel-Bratsch 12.2, Stalden 12.2, Visp 11.2 and smaller)."
+  ],
+  "ti": [
+   "Castel San Pietro: a scrambled 2021/2022 extraction showed 'Castel San Pietro-Campora' with about 70.5 ha, not confirmed. Per-commune area for the Mendrisio district (Mendrisio and its quarters, Coldrerio, Castel San Pietro, Stabio, Novazzano, Balerna not read beyond 2.7 ha, etc.) and for most Locarno and Lugano communes (Losone, Gordola, Tenero-Contra, Gambarogno, Collina d'Oro, Tresa...): Allegato 1 of the Rapporto vendemmia lists them, but the PDF text could only be read up to Breggia. Older extractions suggest Coldrerio about 32 to 34 ha (2021, 2022), not confirmed.",
+   "Rapporto vendemmia 2025 (full report with 2025 district figures, due Feb 2026) and its allegati could not be fetched (robots or permission block); district and commune figures are 2024.",
+   "Number of growers per district or per commune is not published in the documents read.",
+   "The IVVT directive of 2010 required 90% of the wine from the named zone and 85% from the stated vintage; the 2024 cantonal directives as read state no such percentage, so the current origin share for a commune name is not confirmed (federal Weinverordnung not checked: fedlex blocked).",
+   "The meaning of the '(VMSG)' tag on Arzo, Besazio, Meride and Tremona in the cantonal list was not found.",
+   "No official sub-zones or crus below the district level exist in the Ticino law; only registered locality names (registro delle indicazioni geografiche di località, IVVT), whose list was not found.",
+   "Commune of the Istituto agrario cantonale di Mezzana not confirmed, so it is only named in the district note.",
+   "BLW 2025 per-variety table for Ticino was garbled except for Merlot (832.9 ha)."
+  ],
+  "3l": [
+   "Neuchâtel: no official planted area per commune or per designation found. The cantonal yearly viticulture reports (Rapport sur l'année viticole) and the SITN vine-surface layer VT02 were not reachable; per-commune hectares could be computed from VT02 (NUFECO attribute).",
+   "Neuchâtel: the exact limits of the regions Entre-deux-Lacs and La Béroche and the sector Champréveyres are on plans at the Service de l'agriculture (art. 4 al. 4), not seen. Entre-deux-Lacs is drawn as Le Landeron, Cressier, Cornaux, La Tène and Saint-Blaise; whether Hauterive, Enges or Lignières count is unconfirmed. La Béroche is drawn as La Grande Béroche, which also contains Bevaix.",
+   "Neuchâtel: localities La Coudre, Chez-le-Bart and sector Champréveyres not drawn as places (no verified coordinates).",
+   "Neuchâtel: the IVN Grand cru regulation itself (conditions, yields, approved wines) was not found. Only the decree's art. 14 frame is given.",
+   "Neuchâtel: the 2016 decree no longer mentions Œil-de-Perdrix or Perdrix Blanche; the current status of the Perdrix blanche® guarantee mark was not checked.",
+   "Neuchâtel and Bern grape hectares are read from the BLW 2025 PDF text, where empty cells are dropped. NE Pinot Noir, Chasselas, Chardonnay, Pinot Gris and BE Lake Biel Pinot Noir, Chasselas, Pinot Gris, Chardonnay, Sauvignon Blanc are fixed by column totals and position. NE Gamaret and Garanoir rely also on the match with Neuchâtel Vins et Terroir. Other varieties (Müller-Thurgau, Gewürztraminer, Gamaret for Bern) were ambiguous and left out. Worth checking against the BLW Excel table.",
+   "Bern: no planted area per commune or village. Number of growers is from 2022 (155 farms, 72 cellars); no 2025 figure found. Thunersee area is the sum of the BLW white and red tables (19.7 ha) since table 1.1 has only Lake Biel and the rest of the canton.",
+   "Bern: RebG art. 2 groups Bielersee into the left shore (La Neuveville, Ligerz, Twann, Tüscherz-Alfermée, Biel) and the Jolimont (Erlach, Tschugg, Gampelen, Ins); these legal groupings are not made into places. Gals has no Lagen in the 2025 annex and no own subzone. St. Petersinsel is a village name in the annex but not drawn.",
+   "Bern: the communes of 'Bern AOC, übriges Kantonsgebiet' (Aarberg, Bern, Burgdorf, Brienz, Gerzensee, Muri, Pieterlen, Schüpfen, Wimmis and others, about 12 ha) are not made into places.",
+   "Fribourg: no cantonal AOC exists, so the NEW:Fribourg record has official_name 'Fribourg / Freiburg' and AOC Cheyres uses that as parent. Re-parent if the atlas wants a different name. Vully fribourgeois is hung under the existing 'AOC Vully' (ch-reg-vd-vully, which sits under AOC Vaud); that record's area note could now cite 102.9 ha FR + 56.7 ha VD.",
+   "Fribourg: the ordinance does not delimit Cheyres beyond 'vignoble de Cheyres/Font'; Châbles is included because Terroir Fribourg says the vineyard spans Cheyres, Châbles and Font. Number of Fribourg growers not in the 2025 statistics; 24 (Vully FR+VD) and 25 (Cheyres) come from tourism pages.",
+   "Mont-Vully merger date (Bas-Vully + Haut-Vully) not confirmed from a fetched source, so no date given.",
+   "Web search budget ran out before checking the BLW grape tables against another source and before looking for a Bern Rebbaustatistik by variety."
+  ]
+ }
 }

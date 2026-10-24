@@ -29,6 +29,11 @@ def main():
         pid = by_name.get(r[5])
         assert pid, f"parent not found for {r[0]}: {r[5]}"
         kids.setdefault(pid, []).append(r[1])
+    # cantons added by ch_regions.py (Bern, Fribourg...) join their wine region group
+    for cid, nc in spec.get("new_cantons", {}).items():
+        g = "g:CH/" + nc["region"].lower().replace(" ", "-")
+        assert g in nodes, f"no group {g} for {cid}"
+        nodes[g][3] = [k for k in nodes[g][3] if k != cid] + [cid]
     rank = {r[1]: r[4] for r in ch}
     for pid, ks in kids.items():
         # grands crus first, then the order of pipeline/lists/ch_regions.json (wider places, then communes)
@@ -44,6 +49,12 @@ def main():
             s += (total(c) if c.startswith("g:") else 1 + total(c))
         n[4] = s
         return s
+    # the outline box of each Swiss wine region group follows its places (new cantons widen it)
+    box = {r[1]: r[6] for r in ch}
+    for g in nodes["g:CH"][3]:
+        bs = [box[k] for k in nodes[g][3] if k in box]
+        if bs:
+            nodes[g][2] = [min(b[0] for b in bs), min(b[1] for b in bs), max(b[2] for b in bs), max(b[3] for b in bs)]
     total("g:CH")
     json.dump(tree, open(os.path.join(WEB, "tree.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print(f"  tree.json: Switzerland {nodes['g:CH'][4]} places")

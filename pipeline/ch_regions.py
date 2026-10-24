@@ -114,8 +114,27 @@ def main():
     towns, cities = Towns(5000), Towns(30000)
     lakes_ll = None
 
+    # cantons with vines that ch.py does not draw yet (Bern, Fribourg...): the canton outline, like ch.py
+    cant = None
+    for cid, nc in spec.get("new_cantons", {}).items():
+        if cant is None:
+            cant = pyogrio.read_dataframe(os.path.join(SWISS, "2024", "cantons.shp"), encoding="utf-8")
+            if cant.crs is None:
+                cant = cant.set_crs(2056)
+        row = cant[cant["id"].astype(int) == nc["bfs"]]
+        g = shapely.make_valid(row.geometry.simplify(20, preserve_topology=True).iloc[0])
+        g = round_geom(row.iloc[:1].set_geometry([g], crs=cant.crs).to_crs(4326).geometry.iloc[0], 5)
+        d = dict(nc["d"])
+        d.setdefault("type", "Cantonal AOC")
+        d["note"] = (d.get("note", "") + " " if d.get("note") else "") + "Outline follows the canton boundary."
+        spec["places"].insert(0, {"id": cid, "name": nc["name"], "level": "appellation", "parent": nc["region"], "d": d,
+                                  "canton_geom": g, "wine_region": nc["region"]})
+
     geoms = []
     for pl in spec["places"]:
+        if "canton_geom" in pl:
+            geoms.append(pl["canton_geom"])
+            continue
         if "geometry_file" in pl:  # an outline drawn elsewhere (OpenStreetMap), see contrib/ch
             fc = json.load(open(os.path.join(ROOT, pl["geometry_file"]), encoding="utf-8"))
             g = round_geom(shapely.union_all([shape(f["geometry"]) for f in fc["features"]]), 6)
@@ -145,8 +164,9 @@ def main():
 
     for i, (pl, g) in enumerate(zip(spec["places"], geoms)):
         point = g.geom_type == "Point"
+        canton = "canton_geom" in pl
         p = {"id": pl["id"], "name": pl["name"], "country": "CH", "level": pl["level"], "rank": pl.get("rank", ""),
-             "parent": pl["parent"], "src": SRC, "ol": "point" if point else "approx"}
+             "parent": pl["parent"], "src": SRC, "ol": "point" if point else "" if canton else "approx"}
         feats.append({"type": "Feature", "properties": p, "geometry": mapping(g)})
 
         d = dict(pl.get("d", {}))
@@ -165,7 +185,12 @@ def main():
             d["grape_share"] = [["Pinot Noir (Blauburgunder)", pct]]
             d["grape_share_note"] = f"Pinot Noir: {d.pop('pinot_ha')} of {d['vine_area_ha']} ha, Plantahof Rebbaustatistik 2025"
         extra_outline = d.pop("outline_extra", "")
-        if point:
+        if canton:
+            d.setdefault("wine_region", pl["wine_region"])
+            k = 111.32 * math.cos(math.radians(g.centroid.y)) * 110.57 * 100
+            d["extent_km"] = extent_km(g)
+            c = polylabel(max(getattr(g, "geoms", [g]), key=lambda q: q.area), tolerance=0.0005)
+        elif point:
             d["outline_quality"] = "point"
             d["outline"] = d.get("outline") or "Smaller than a commune: shown as a marker until the cantonal vineyard cadastre is mapped."
             c = g
@@ -183,7 +208,9 @@ def main():
             d["extent_km"] = extent_km(g)
             c = polylabel(max(getattr(g, "geoms", [g]), key=lambda q: q.area), tolerance=0.0005)
         d["lat"], d["lon"] = round(c.y, 5), round(c.x, 5)
-        if pl.get("outline_src") == "osm":
+        if canton:
+            pass
+        elif pl.get("outline_src") == "osm":
             d["outline_source"] = {"name": "OpenStreetMap contributors", "licence": "ODbL 1.0", "source": pl["geometry_file"]}
         elif not point:
             d["outline_source"] = {"name": "BFS GEOSTAT / swisstopo municipal boundaries" + (" (" + str(pl["year"]) + ")" if pl.get("year") else " 2024"),
@@ -217,7 +244,7 @@ def main():
     # details-ch.json: replace the regional places, refresh the cantonal AOCs
     path = os.path.join(WEB, "details-ch.json")
     pub = json.load(open(path, encoding="utf-8"))
-    pub = {k: v for k, v in pub.items() if not k.startswith("ch-reg-")}
+    pub = {k: v for k, v in pub.items() if not k.startswith("ch-reg-") and k not in spec.get("new_cantons", {})}
     for cid, extra in spec.get("cantons", {}).items():
         rec = pub[cid]
         if rec.get("note", "").startswith("Outline follows the canton boundary"):
@@ -238,7 +265,7 @@ def main():
     # search.json: one row per place, same order rule as build_index.py
     from build_index import ORDER
     spath = os.path.join(WEB, "search.json")
-    rows = [r for r in json.load(open(spath, encoding="utf-8")) if not str(r[1]).startswith("ch-reg-")]
+    rows = [r for r in json.load(open(spath, encoding="utf-8")) if not str(r[1]).startswith("ch-reg-") and r[1] not in spec.get("new_cantons", {})]
     for ft in feats:
         p = ft["properties"]
         b = [round(x, 4) for x in shape(ft["geometry"]).bounds]

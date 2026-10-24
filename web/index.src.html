@@ -3232,6 +3232,12 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
       "</div>" + (d.grape_share_note ? '<p class="note">' + esc(t_(d.grape_share_note)) + "</p>" : "") + "</div>";
   }
 
+  // rules and traditional names in plain words (Switzerland: cantonal wine laws)
+  if (d.rules?.length) {
+    html += '<div class="sec"><h3>' + t_("Rules and names") + '</h3><dl class="facts">' +
+      d.rules.map(([k, v]) => "<dt>" + esc(t_(k)) + "</dt><dd>" + esc(v) + "</dd>").join("") + "</dl></div>";
+  }
+
   // premiers crus that are listed but not mapped yet (Geneva)
   if (d.premiers_crus?.length) {
     html += '<div class="sec"><h3>' + t_("Premiers crus · {n}", { n: d.premiers_crus.length }) + '</h3><dl class="facts">' +
