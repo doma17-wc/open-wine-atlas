@@ -7,7 +7,7 @@
 //   map quiz       only the map questions: name the outlined place, or find a place on the map
 //   review         spaced repetition: every question answered becomes a card; a miss comes back tomorrow,
 //                  a right answer later and later (Leitner boxes)
-// Free: the first lesson of each path and FREE_PER_DAY answers a day. Members: everything.
+// Without an account: the first lesson of each path and FREE_PER_DAY answers a day. With a free account: everything.
 // Progress lives in My atlas (MY.study) and syncs with the account like the rest of it.
 (() => {
 "use strict";
@@ -41,7 +41,12 @@ MY.study = norm(MY.study && Object.keys(MY.study).length ? MY.study : loadState(
 const ST = () => { const s = MY.study; if (!s || !s.cards || !s.done || !s.stats || !s.today) MY.study = norm(s); return MY.study; };
 const save = () => O.saveMY("study");
 const dayStr = (t = Date.now()) => { const d = new Date(t); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
-const member = () => !!(window.OWA_ACCOUNT && window.OWA_ACCOUNT.member && window.OWA_ACCOUNT.member()) || store.get("member") === "1";
+// full study = signed in with a free account (account.js). owa.auth covers the moment before account.js has loaded the session.
+const member = () => {
+  if (window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn && window.OWA_ACCOUNT.signedIn()) return true;
+  try { if (localStorage.getItem("owa.auth")) return true; } catch (e) {}
+  return store.get("member") === "1";
+};
 function usedToday() { const t = ST().today; return t.d === dayStr() ? t.n : 0; }
 const leftToday = () => member() ? Infinity : Math.max(0, FREE_PER_DAY - usedToday());
 function countAnswer(key, ok) {
@@ -364,11 +369,16 @@ function paywall() {
   const el = card();
   el.innerHTML = '<div class="qz-h"><span class="qz-t">' + esc(QZ.title) + '</span><button class="qz-x" data-qz="close" aria-label="' + t_("Close the quiz") + '">✕</button></div>' + paywallHtml();
 }
+// the wall for visitors without an account: a free account opens the full study
+function joinHtml(head, body, src) {
+  return '<div class="qz-pay"><b>' + head + "</b><p>" + body + "</p>" +
+    '<div class="qz-row"><button type="button" class="primary" data-st-join="' + src + '">' + t_("Create my free account") + " →</button>" +
+    '<button type="button" class="ghost" data-st-join="' + src + '">' + t_("I already have an account") + "</button></div>" +
+    '<p class="fine">' + t_("No card, no password: we email you a code.") + "</p></div>";
+}
 function paywallHtml() {
-  return '<div class="qz-pay"><b>' + t_("That was today's {n} free questions.", { n: FREE_PER_DAY }) + "</b><p>" +
-    t_("Members study without limits: every lesson, every quiz and the full review. Free questions come back tomorrow.") + " " +
-    t_("Founding Members hear first when the full study opens. Reserve your free spot.") + "</p>" +
-    '<a class="primary" href="/founding?from=study">' + t_("Reserve my Founding spot") + " →</a></div>";
+  return joinHtml(t_("That was today's {n} free questions.", { n: FREE_PER_DAY }),
+    t_("A free account opens the full study: every lesson, every quiz and the full review, without a daily limit."), "study_limit");
 }
 async function missedAgain() {
   const keys = QZ.missed.slice(), title = QZ.title, back = QZ.back;
@@ -440,7 +450,7 @@ function statusLine() {
     '<div class="tile"><b>' + O.fmtN(s.answered) + "</b><span>" + t_("questions answered") + "</span></div>" +
     '<div class="tile"><b>' + (acc == null ? "–" : acc + " %") + "</b><span>" + t_("right") + "</span></div>" +
     '<div class="tile"><b>' + st + "</b><span>" + (st === 1 ? t_("day in a row") : t_("days in a row")) + "</span></div>" +
-    '<div class="tile"><b>' + (member() ? "∞" : leftToday()) + "</b><span>" + (member() ? t_("questions today, member") : t_("free questions left today")) + "</span></div></div>";
+    '<div class="tile"><b>' + (member() ? "∞" : leftToday()) + "</b><span>" + (member() ? t_("questions today, no limit") : t_("free questions left today")) + "</span></div></div>";
 }
 function hub() {
   const due = dueKeys().length, cards = Object.keys(ST().cards).length;
@@ -465,7 +475,7 @@ function pathView(p) {
     '<ol class="st-lessons">' + p.lessons.map((l) => {
       const lock = !lessonFree(l), done = ST().done[l.id];
       return '<li><button data-st-lesson="' + esc(l.id) + '"' + (done ? ' class="done"' : "") + "><span>" + esc(l.title) + "</span><small>" +
-        (done ? "✓ " + t_("done") : t_("{n} min", { n: l.minutes || 5 })) + " · " + t_("{n} questions", { n: l.questions.length }) + (lock ? " · " + t_("members") : "") + "</small></button></li>";
+        (done ? "✓ " + t_("done") : t_("{n} min", { n: l.minutes || 5 })) + " · " + t_("{n} questions", { n: l.questions.length }) + (lock ? " · " + t_("free account") : "") + "</small></button></li>";
     }).join("") + "</ol>";
 }
 function lessonView(l) {
@@ -476,9 +486,8 @@ function lessonView(l) {
   return '<div class="st-nav"><button class="mini-btn" data-st-path="' + esc(p.id) + '">← ' + esc(p.title) + "</button></div>" +
     '<article class="st-lesson"><div class="eyebrow">' + esc(p.title) + " · " + t_("Lesson {n}", { n: i + 1 }) + "</div><h3 class=\"st-title\">" + esc(l.title) + "</h3>" +
     '<p class="lead">' + esc(l.intro || "") + "</p>" +
-    (lock ? (l.sections[0] ? sec(l.sections[0]) : "") + '<div class="qz-pay"><b>' + t_("The rest of this lesson is for members.") + "</b><p>" +
-        t_("The first lesson of every path is free. Members read every lesson and study without limits.") + " " +
-        t_("Founding Members hear first when the full study opens. Reserve your free spot.") + '</p><a class="primary" href="/founding?from=lesson">' + t_("Reserve my Founding spot") + " →</a></div>"
+    (lock ? (l.sections[0] ? sec(l.sections[0]) : "") + joinHtml(t_("Create a free account to read the rest of this lesson."),
+        t_("The first lesson of every path is open to everyone. A free account opens every lesson and the full study, without a daily limit."), "study_lesson")
       : l.sections.map(sec).join("") +
         (l.key && l.key.length ? '<div class="st-key"><b>' + t_("Remember") + "</b><ul>" + l.key.map((k) => "<li>" + esc(k) + "</li>").join("") + "</ul></div>" : "") +
         '<div class="st-drills"><button class="primary" data-st-quiz="' + esc(l.id) + '">' + t_("Quiz on this lesson") + " · " + l.questions.length + "</button>" +
@@ -543,6 +552,7 @@ css.textContent = `
 .qz-end { display: grid; gap: 4px; margin: 14px 0 6px; } .qz-end b { font: 600 40px/1 var(--f-display, serif); color: var(--gold, #e7c06a); }
 .qz-pay { margin: 12px 0; padding: 14px; border: 1px solid #5a4a2a; border-radius: 12px; background: #1c1810; display: grid; gap: 6px; }
 .qz-pay p { margin: 0; color: #cfc6b6; font-size: 13.5px; } .qz-pay a { justify-self: start; margin-top: 4px; }
+.qz-pay .qz-row { margin-top: 4px; } .qz-pay p.fine { font-size: 12px; color: #9a917f; }
 .st-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 14px 0; }
 .st-review { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 14px; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 18px; }
 .st-review div { display: grid; } .st-review span { color: var(--muted); font-size: 12.5px; }
@@ -562,6 +572,21 @@ css.textContent = `
 `;
 document.head.appendChild(css);
 
+// open the account tab from a study wall, and remember where the sign-up came from
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-st-join]");
+  if (!b) return;
+  e.preventDefault();
+  try { sessionStorage.setItem("owa.signup_src", b.dataset.stJoin); } catch (e2) {}
+  try { window.va && window.va("event", { name: "study_join", data: { from: b.dataset.stJoin } }); } catch (e2) {}
+  if (QZ) stop(false);
+  O.openDash("account");
+});
+// signed in or out: drop the wall and show the study as it now is
+window.addEventListener("owa:auth", () => {
+  VIEW = Object.assign({}, VIEW, { pay: false });
+  if (O.tab === "study") O.renderDash();
+});
 window.OWA_STUDY = { render, wire, loadData, member };
 loadData().catch(() => {});
 })();
