@@ -70,14 +70,20 @@ def main(paths):
             if cid.startswith("NEW:"):
                 nm = cid[4:].strip()
                 n = BFS[nm.lower().split(" / ")[0]]
-                name = c.get("official_name") or "AOC " + nm
+                # the map name is the short legal one, "AOC <canton>"; Fribourg has no cantonal AOC and keeps its own
+                off = c.get("official_name") or ""
+                name = "AOC " + nm if "AOC" in off or "KUB" in off or not off else re.sub(r"\s*\(.*\)\s*$", "", off)
                 spec["new_cantons"]["ch-canton-" + str(n)] = {"bfs": n, "name": name, "region": REGION.get(n, "Deutschschweiz"), "d": c}
             else:
                 spec["cantons"][cid] = c
         if src.get("gaps"):
             gaps[key] = src["gaps"]
         print(f"  {key}: {len(new_places)} places, cantons {list(src.get('cantons', {}))}")
-    # new cantons get the same canton-level note as the ones built by ch.py
+    # place names must be unique in Switzerland: children find their parent by name
+    seen = {}
+    for p in spec["places"]:
+        assert p["name"] not in seen, f"two places named {p['name']}: {seen[p['name']]} and {p['id']}"
+        seen[p["name"]] = p["id"]
     open(LIST, "w", encoding="utf-8").write(json.dumps(spec, ensure_ascii=False, indent=1) + "\n")
     print(f"  ch_regions.json: {len(spec['places'])} places, {len(spec['new_cantons'])} new cantons")
 
