@@ -207,6 +207,25 @@ async def feature(a, atlas, br, base):
     return files, []
 
 
+# ---------- call-to-action story with one app screenshot
+async def cta(a, atlas, br, base):
+    spec = json.load(open(a.spec, encoding="utf-8"))
+    tmp = os.path.join(a.out, "_tmp"); os.makedirs(tmp, exist_ok=True)
+    shot = to_jpg_shot(os.path.join(a.shots, spec["shot"]), tmp)
+    ph = phone_html(shot, spec.get("phone_h", 900), "", spec.get("crop", 0))
+    body = f"""<div class="glow"></div>
+      <div class="pad" data-fit="cta-top" style="top:250px;height:360px;overflow:hidden">
+        <div class="eb">{esc(spec["eyebrow"])}</div>
+        <div class="qtext" style="font-size:{spec.get("size", 96)}px">{esc(spec["title"])}</div></div>
+      <div class="phones" style="top:{spec.get("top", 640)}px">{ph}</div>
+      <div class="sfoot" style="bottom:{spec.get("foot", 270)}px">{esc(spec.get("foot_text", "Link in bio"))} · <b>openwineatlas.com</b></div>"""
+    out = os.path.join(a.out, f"{a.name}.jpg")
+    over = await owa.html_jpg(br, doc(atlas, SW, SH, STORY_CSS + FEAT_CSS.replace(".pad{", ".x{"), body), out, SW, SH)
+    if over:
+        raise SystemExit(f"text runs out of its box on {out}: {over}")
+    return [out], []
+
+
 async def run(a):
     global LIBS
     from playwright.async_api import async_playwright
@@ -217,7 +236,7 @@ async def run(a):
     try:
         async with async_playwright() as p:
             br = await owa.launch(p)
-            files, report = await {"quiz": quiz, "story": story, "feature": feature}[a.cmd](a, atlas, br, base)
+            files, report = await {"quiz": quiz, "story": story, "feature": feature, "cta": cta}[a.cmd](a, atlas, br, base)
             await br.close()
     finally:
         srv.shutdown()
@@ -228,7 +247,7 @@ async def run(a):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["quiz", "story", "feature"])
+    ap.add_argument("cmd", choices=["quiz", "story", "feature", "cta"])
     ap.add_argument("--repo", required=True, help="checkout of main (web/data/study.json, api/fonts)")
     ap.add_argument("--libs", required=True, help="folder with maplibre-gl and pmtiles (npm installs them there if missing)")
     ap.add_argument("--out", required=True)

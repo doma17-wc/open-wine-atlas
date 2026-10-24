@@ -205,6 +205,41 @@ def note_seed():
              "tags": ["wset3", "burgundy"], "placeId": "fr-inao-a165", "place": "Corton", "country": "FR", "lat": 47.073, "lon": 4.863}]
 
 
+async def _sheet(pg, pid, wait=7000):
+    await pg.evaluate("(h) => location.hash = h", pid)
+    await pg.wait_for_timeout(wait)
+    await pg.evaluate(owa.IDLE)
+    await pg.wait_for_timeout(1200)
+
+
+async def s_deep_grandcru(pg, a):
+    await _sheet(pg, "fr-inao-a222")
+
+
+async def s_deep_preview(pg, a):
+    await _sheet(pg, "fr-inao-d455")
+    await pg.evaluate("document.querySelector('.deep-note')?.scrollIntoView({block:'end'})")
+    await pg.wait_for_timeout(800)
+
+
+async def s_deep_wall(pg, a):
+    await _sheet(pg, "fr-inao-d1267")
+    await pg.evaluate("document.querySelector('.deep-wall')?.scrollIntoView({block:'center'})")
+    await pg.wait_for_timeout(800)
+
+
+async def s_deep_map(pg, a):
+    await _sheet(pg, "fr-inao-a241", 8000)
+    await pg.evaluate("document.querySelector('.sheet')?.classList.remove('open')")
+    await pg.wait_for_timeout(800)
+
+
+async def s_deep_lesson(pg, a):
+    await open_dash(pg, "study")
+    await click(pg, '[data-st-path="bourgogne"]', 1800)
+    await click(pg, '[data-st-lesson]', 1800)
+
+
 SCENES = {
     "study-hub": ("Study tab: stats, review, the ten paths", "study", s_study_hub),
     "study-paths": ("The list of study paths", "study", s_study_paths),
@@ -221,6 +256,11 @@ SCENES = {
     "notebook": ("Notebook with notes pinned to places", "notes", s_notebook),
     "saved": ("Saved places", None, s_saved),
     "producer": ("A producer and where its wines are made", None, s_producer),
+    "deep-grandcru": ("Burgundy Deep: a grand cru sheet, open to all (Romanée-Conti)", None, s_deep_grandcru),
+    "deep-preview": ("Burgundy Deep: a free preview sheet (Les Amoureuses, place 1 of 3)", None, s_deep_preview),
+    "deep-wall": ("Burgundy Deep: the wall after 3 free places (Cros Parantoux)", "deep3", s_deep_wall),
+    "deep-map": ("Burgundy Deep: Vosne-Romanée climats on the map", None, s_deep_map),
+    "deep-lesson": ("Burgundy study path: first lesson", None, s_deep_lesson),
 }
 
 
@@ -243,6 +283,8 @@ async def run(a):
                 storage = {}
                 if seed == "study":
                     storage["study"] = study_state(atlas)
+                if seed == "deep3":
+                    storage["deep.bourgogne"] = ["fr-inao-d455", "fr-inao-d597", "fr-inao-d1076"]
                 if seed == "notes":
                     storage["notes"] = note_seed()
                 pg = await owa.atlas_page(br, base, a.libs, W, H, SCALE, mobile=True, storage=storage, supabase_stub=a.stub)
