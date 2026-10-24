@@ -375,7 +375,16 @@ def main():
         add("Area", (f"{fmt_n(d['area_ha'], 1)} ha" if d.get("area_ha") else
                      (f"{fmt_n(d['outline_area_ha'])} ha {outline_kind}" if d.get("outline_area_ha") else ""))
             + (f' <span class="note">{esc(d["area_note"])}</span>' if d.get("area_note") else ""))
-        add("Vineyard area", f"{fmt_n(d['vine_area_ha'])} ha" if d.get("vine_area_ha") else "")
+        add("Vineyard area", (f"{fmt_n(d['vine_area_ha'], 2 if d['vine_area_ha'] < 10 else 1)} ha" +
+                              (f' <span class="note">{esc(d["vine_area_src"])}</span>' if d.get("vine_area_src") else "") +
+                              (f' <span class="note">{esc(d["vine_area_note"])}</span>' if d.get("vine_area_note") else "")) if d.get("vine_area_ha") else "")
+        add("Growers", fmt_n(d["growers"]) if d.get("growers") else "")
+        add("On the label", esc(d.get("label_rule", "")))
+        add("Premier grand cru", esc(d.get("pgc_rule", "")))
+        add("Grapes planted", esc(", ".join(f"{g} {fmt_n(pc, 1)}%" for g, pc in d["grape_share"])) +
+            (f' <span class="note">{esc(d["grape_share_note"])}</span>' if d.get("grape_share_note") else "") if d.get("grape_share") else "")
+        add("Premiers crus", esc(", ".join(f"{n} ({fmt_n(ha, 1)} ha)" for n, ha, *_ in d["premiers_crus"])) if d.get("premiers_crus") else "")
+        add("Known producers", esc(d.get("producers_note", "")))
         add("Separate plots", fmt_n(d["plots"]) if d.get("plots") and d["plots"] > 1 else "")
         add("Extent N–S × E–W", f"{d['extent_km'][0]} × {d['extent_km'][1]} km" if d.get("extent_km") else "")
         if d.get("lat") is not None:
@@ -503,6 +512,8 @@ def main():
             src.append("Landwirtschaftskammer Rheinland-Pfalz, Weinbergslagen (dl-de/by-2-0)")
         if pid.startswith("us-ava"):
             src.append("UC Davis Library AVA project (CC0)")
+        for t, u in d.get("refs", []):
+            src.append(f'<a href="{esc(u)}" rel="nofollow noopener">{esc(t)}</a>')
         if src:
             b.append("<h2>Sources</h2><p class=\"note\">" + " · ".join(src) + "</p>")
         b.append(f'<a class="cta" href="/#{esc(pid)}">Open {esc(name)} on the map →</a>')

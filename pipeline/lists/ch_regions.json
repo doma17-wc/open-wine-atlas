@@ -1,0 +1,2199 @@
+{
+ "_about": "Swiss wine regions and communal appellations below the cantonal AOC, read by pipeline/ch_regions.py. Outlines are the union of the listed communes (BFS GEOSTAT generalised boundaries, swiss-maps 4.7.0; 'year' picks an older boundary set for former communes). 'point' places are drawn as a marker. Every figure carries its source in 'refs'. Editorial text is CC BY 4.0, Open Wine Atlas contributors.",
+ "cantons": {
+  "ch-canton-18": {
+   "area_ha": 450.1,
+   "area_note": "422.2 ha in the Rhine valley and Brusio plus 27.9 ha in the Misox, 2025 (BLW, Das Weinjahr 2025)",
+   "basis": "Kantonale Weinverordnung BR 917.400 (in force since 1 March 2018)",
+   "official_name": "AOC Graubünden / DOC Grigioni",
+   "grape_share": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     66.5
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     7.5
+    ],
+    [
+     "Chardonnay",
+     6.8
+    ],
+    [
+     "Pinot Blanc",
+     3.6
+    ],
+    [
+     "Sauvignon Blanc",
+     3.6
+    ],
+    [
+     "Pinot Gris",
+     2.7
+    ],
+    [
+     "Completer",
+     2.3
+    ],
+    [
+     "Merlot",
+     1.4
+    ]
+   ],
+   "grape_share_note": "Share of the 422 ha in the Rhine valley and Brusio, Plantahof Rebbaustatistik 2025 (55 varieties in all). The Misox grows mostly Merlot.",
+   "growers": 293,
+   "atlas_note": "Switzerland's Pinot Noir stronghold: two thirds of the vines are Blauburgunder. The warm Föhn wind from the south, called the grape cooker, gives long ripe autumns in a valley sheltered by the Rätikon. Four villages of the Bündner Herrschaft hold about 83% of the vineyards. The law names three wine areas: the Bündner Rheintal, the Misox south of the Alps and Brusio in the Valposchiavo.",
+   "refs": [
+    [
+     "Plantahof, Rebbaustatistik Graubünden 2025",
+     "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+    ],
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Kantonale Weinverordnung BR 917.400",
+     "https://gr.lexwork.naz.ch/de/dta/917.400.pdf"
+    ],
+    [
+     "Swiss Wine, Graubünden",
+     "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/graubuenden-en"
+    ]
+   ]
+  },
+  "ch-canton-22": {
+   "area_ha": 3748.7,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "65% white, 35% red, 2025",
+   "grape_share": [
+    [
+     "Chasselas",
+     60.0
+    ]
+   ],
+   "grape_share_note": "Chasselas about 60% of the area in 2018, down from 71% in 1994 (Statistique Vaud, Numerus 2019)",
+   "basis": "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+   "official_name": "AOC Vaud",
+   "atlas_note": "The second wine canton of Switzerland and the home of Chasselas. Six regional AOCs, Chablais, Lavaux, La Côte, Côtes de l'Orbe, Bonvillars and Vully, and two grand cru appellations, Dézaley and Calamin, inside Lavaux. The terraces of Lavaux are a UNESCO World Heritage site since 2007. Since 2010 the best parcels can earn the cantonal mention Premier grand cru.",
+   "pgc_rule": "Premier grand cru (since 2010): a named clos, château, domaine or lieu-dit approved by the cantonal commission, hand harvest, at least 6,000 vines/ha, Chasselas, Pinot Noir, Gamay, Merlot, Gamaret or Garanoir, no blending, bottled in Vaud",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+     "https://www.lexaris.de/book/version/documentflat/head/5328090"
+    ],
+    [
+     "Vaud, classification et désignation des vins vaudois",
+     "https://www.vd.ch/economie/agriculture-et-viticulture/production-vitivinicole/classification-et-designation-des-vins-vaudois"
+    ],
+    [
+     "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+     "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+    ],
+    [
+     "Statistique Vaud, Numerus 2019: viticulture",
+     "https://www.vd.ch/fileadmin/user_upload/organisation/dfin/statvd/Publications/Numerus/Numerus-HS-2019_Viticulture.pdf"
+    ],
+    [
+     "Vaud, directive Premiers grands crus 2013",
+     "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/13_05_07_FAO_no_37_Directive_Comm._PGC.pdf"
+    ]
+   ]
+  },
+  "ch-canton-25": {
+   "area_ha": 1363.7,
+   "area_src": "OCAN Genève 2024",
+   "area_note": "1,246.3 ha in Switzerland and 117.4 ha in the French border zone (Viry, Challex, Saint-Julien and others), 2024. 56% red.",
+   "grape_ha": [
+    [
+     "Gamay",
+     275.9
+    ],
+    [
+     "Chasselas",
+     255.6
+    ],
+    [
+     "Pinot Noir",
+     159.9
+    ],
+    [
+     "Gamaret",
+     119.2
+    ],
+    [
+     "Chardonnay",
+     117.7
+    ],
+    [
+     "Merlot",
+     53.8
+    ],
+    [
+     "Garanoir",
+     47.1
+    ],
+    [
+     "Sauvignon Blanc",
+     41.3
+    ],
+    [
+     "Pinot Blanc",
+     37.8
+    ],
+    [
+     "Pinot Gris",
+     27.5
+    ]
+   ],
+   "basis": "Règlement sur la vigne et les vins, RSG M 2 50.05",
+   "official_name": "AOC Genève",
+   "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+   "atlas_note": "The first AOC of Switzerland, created in 1988, and the third wine canton. Three areas: the Rive droite or Mandement with Satigny, the largest wine commune of the country, Entre Arve et Rhône and Entre Arve et Lac. Gamay, not Chasselas, is the first grape. Half the vineyard is in 23 premiers crus, defined parcels of at least about 1 ha with lower yields.",
+   "premiers_crus": [
+    [
+     "Coteaux de Dardagny",
+     119.0,
+     "Dardagny"
+    ],
+    [
+     "Coteau de Peissy",
+     108.6,
+     "Satigny"
+    ],
+    [
+     "Coteau de Bourdigny",
+     96.2,
+     "Satigny"
+    ],
+    [
+     "Coteau de Lully",
+     73.7,
+     "Bernex"
+    ],
+    [
+     "Coteau de Choully",
+     53.6,
+     "Satigny"
+    ],
+    [
+     "Côtes de Russin",
+     51.4,
+     "Russin"
+    ],
+    [
+     "La Feuillée",
+     29.1,
+     "Laconnex, Soral"
+    ],
+    [
+     "Coteaux de Peney",
+     25.3,
+     "Satigny"
+    ],
+    [
+     "Côtes de Landecy",
+     19.0,
+     ""
+    ],
+    [
+     "Coteau de Choulex",
+     18.3,
+     "Choulex"
+    ],
+    [
+     "Rougemont",
+     17.4,
+     ""
+    ],
+    [
+     "Mandement de Jussy",
+     13.0,
+     "Jussy"
+    ],
+    [
+     "Coteau de Bossy",
+     8.9,
+     "Collex-Bossy"
+    ],
+    [
+     "Château du Crest",
+     8.6,
+     "Jussy"
+    ],
+    [
+     "Château de Choully",
+     7.9,
+     "Satigny"
+    ],
+    [
+     "Grand Carraz",
+     7.8,
+     ""
+    ],
+    [
+     "Coteau de Genthod",
+     5.4,
+     "Genthod"
+    ],
+    [
+     "Coteau de Chevrens",
+     4.9,
+     "Anières"
+    ],
+    [
+     "Coteau de la Vigne Blanche",
+     4.3,
+     ""
+    ],
+    [
+     "Château de Collex",
+     4.2,
+     "Collex-Bossy"
+    ],
+    [
+     "Coteau de Vernier",
+     3.9,
+     ""
+    ],
+    [
+     "Coteau des Baillets",
+     3.4,
+     ""
+    ],
+    [
+     "Domaine de l'Abbaye",
+     1.3,
+     ""
+    ]
+   ],
+   "premiers_crus_note": "23 premiers crus with 685.8 ha, OCAN Genève 2024. Yields at most 1.0 kg/m² for Chasselas and Riesling-Sylvaner, 0.9 kg/m² for the others.",
+   "refs": [
+    [
+     "OCAN Genève, Statistiques viti-vinicoles 2024",
+     "https://www.ge.ch/document/5811/annexe/file/706877"
+    ],
+    [
+     "Règlement sur la vigne et les vins, RSG M 2 50.05",
+     "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+    ],
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Swiss Wine, Geneva",
+     "https://swisswine.ch/en/regions/geneva"
+    ],
+    [
+     "Vinum 2020, Genève",
+     "https://www.vinum.eu/fileadmin/user_upload/Advertorials/2020/2020_DCH/2012_VINUM_Genf_Geneve.pdf"
+    ]
+   ]
+  }
+ },
+ "places": [
+  {
+   "id": "ch-reg-gr-rheintal",
+   "name": "Bündner Rheintal",
+   "level": "subzone",
+   "parent": "AOC Graubünden",
+   "communes": [
+    "Fläsch",
+    "Maienfeld",
+    "Jenins",
+    "Malans",
+    "Landquart",
+    "Zizers",
+    "Trimmis",
+    "Chur",
+    "Felsberg",
+    "Domat/Ems",
+    "Bonaduz"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 420.8,
+    "area_note": "Sum of the commune figures, Plantahof Rebbaustatistik 2025",
+    "basis": "BR 917.400 Art. 2: one of the three wine areas of Graubünden",
+    "atlas_note": "The Rhine valley from Fläsch on the St. Gallen border up to Bonaduz, with almost all the vines of the canton. Most of them lie on the right bank of the Rhine, on calcareous slate scree. The Bündner Herrschaft in the north is the heart of it, the Churer Rheintal around Chur the smaller rest.",
+    "grapes": "Pinot Noir / Müller-Thurgau / Chardonnay / Pinot Blanc / Sauvignon Blanc / Pinot Gris / Completer",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Kantonale Weinverordnung BR 917.400",
+      "https://gr.lexwork.naz.ch/de/dta/917.400.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-herrschaft",
+   "name": "Bündner Herrschaft",
+   "level": "subzone",
+   "parent": "Bündner Rheintal",
+   "communes": [
+    "Fläsch",
+    "Maienfeld",
+    "Jenins",
+    "Malans"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "area_ha": 351.8,
+    "area_note": "Fläsch, Maienfeld, Jenins and Malans together, Plantahof Rebbaustatistik 2025: about 83% of the canton",
+    "basis": "Official production area under the 2002 ordinance (Art. 17); since 2018 the law names only the Bündner Rheintal. Labels name the village: Fläscher, Maienfelder, Jeninser, Malanser.",
+    "atlas_note": "Four villages under the Falknis and the Rätikon, the best known Pinot Noir address of Switzerland. Pinot Noir came from Burgundy around 1630, probably with Bündner mercenaries, and Schloss Salenegg in Maienfeld has made wine since 1068. The Föhn, the warm dry wind from the south, ripens the grapes late into autumn, and the vines sit at about 500 to 650 m on calcareous slate scree. Malans keeps the Completer, a white grape first written down there in 1321.",
+    "grape_share": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      66.8
+     ]
+    ],
+    "grape_share_note": "Pinot Noir: 235.1 of 351.8 ha, Plantahof Rebbaustatistik 2025",
+    "producers_note": "Gantenbein, Adank, Christian and Roman Hermann, Marugg and Davaz in Fläsch; Donatsch, Wegelin, Boner, Fromm, Liesch and Studach in Malans; Eichholz and Obrecht in Jenins; Schloss Salenegg in Maienfeld (Falstaff guide)",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Weinverordnung GR 2002 (Art. 17)",
+      "https://www.gr-lex.gr.ch/frontend/versions/477/download_pdf_file?locale=de"
+     ],
+     [
+      "MySwitzerland, Bündner Herrschaft",
+      "https://www.myswitzerland.com/de-at/reiseziele/buendner-herrschaft/"
+     ],
+     [
+      "Swiss Wine, Completer",
+      "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/completer-en"
+     ],
+     [
+      "Falstaff, best wineries of Graubünden",
+      "https://www.falstaff.com/en/listings/the-the-best-wineries-in-canton-of-grisons"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-flaesch",
+   "name": "Fläsch",
+   "level": "subzone",
+   "parent": "Bündner Herrschaft",
+   "communes": [
+    "Fläsch"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 65.5,
+    "growers": 38,
+    "pinot_ha": 39.0,
+    "label_rule": "Fläscher on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "atlas_note": "The northernmost village of Graubünden, under the Fläscherberg on the St. Gallen border. Small, with a tight group of family estates such as Gantenbein, Adank, Hermann, Marugg and Davaz.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-maienfeld",
+   "name": "Maienfeld",
+   "level": "subzone",
+   "parent": "Bündner Herrschaft",
+   "communes": [
+    "Maienfeld"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 108.5,
+    "growers": 108,
+    "pinot_ha": 77.4,
+    "label_rule": "Maienfelder on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "atlas_note": "The largest wine commune of the canton, with the most growers. Schloss Salenegg here has made wine since 1068.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Swiss Wine, Graubünden",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/graubuenden-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-jenins",
+   "name": "Jenins",
+   "level": "subzone",
+   "parent": "Bündner Herrschaft",
+   "communes": [
+    "Jenins"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 79.2,
+    "growers": 80,
+    "pinot_ha": 57.8,
+    "label_rule": "Jeninser on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "atlas_note": "A village high on the slope between Maienfeld and Malans. With 73% Pinot Noir it is the most red of the four Herrschaft villages.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-malans",
+   "name": "Malans",
+   "level": "subzone",
+   "parent": "Bündner Herrschaft",
+   "communes": [
+    "Malans"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 98.7,
+    "growers": 81,
+    "pinot_ha": 60.9,
+    "label_rule": "Malanser on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "atlas_note": "The village of the Completer. The grape was first written down here in 1321 and nearly died out in the 20th century; an old vine at the Completerhalde in Malans kept it alive. Its name comes from Compline, the last prayer of the day, after which the monks were allowed a glass.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Swiss Wine, Completer",
+      "https://www.swisswine.com/en/swiss-vineyards/wine-grapes/completer-en"
+     ],
+     [
+      "Wein-Plus glossary, Completer",
+      "https://glossary.wein-plus.eu/completer"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-churer-rheintal",
+   "name": "Churer Rheintal",
+   "level": "subzone",
+   "parent": "Bündner Rheintal",
+   "communes": [
+    "Landquart",
+    "Zizers",
+    "Trimmis",
+    "Chur",
+    "Felsberg",
+    "Domat/Ems",
+    "Bonaduz"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "area_ha": 68.9,
+    "area_note": "Sum of the commune figures, Plantahof Rebbaustatistik 2025",
+    "basis": "Official production area under the 2002 ordinance (Art. 17), with Igis, Zizers, Trimmis, Chur, Felsberg, Domat/Ems and Bonaduz; since 2018 part of the Bündner Rheintal",
+    "atlas_note": "The vines south of the Herrschaft, from Landquart up past Chur to Bonaduz. Zizers and Trimmis hold most of them; Chur keeps a few hectares.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Weinverordnung GR 2002 (Art. 17)",
+      "https://www.gr-lex.gr.ch/frontend/versions/477/download_pdf_file?locale=de"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-zizers",
+   "name": "Zizers",
+   "level": "subzone",
+   "parent": "Churer Rheintal",
+   "communes": [
+    "Zizers"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 38.0,
+    "growers": 44,
+    "pinot_ha": 25.2,
+    "label_rule": "Zizerser on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-trimmis",
+   "name": "Trimmis",
+   "level": "subzone",
+   "parent": "Churer Rheintal",
+   "communes": [
+    "Trimmis"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 17.7,
+    "growers": 18,
+    "pinot_ha": 11.2,
+    "label_rule": "Trimmiser on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-chur",
+   "name": "Chur",
+   "level": "subzone",
+   "parent": "Churer Rheintal",
+   "communes": [
+    "Chur"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 7.2,
+    "growers": 2,
+    "pinot_ha": 5.8,
+    "label_rule": "Churer on the label: at least 60% of the wine from the commune (BR 917.400 Art. 21)",
+    "atlas_note": "The cantonal capital still has a few hectares of vines. The outline is the whole commune, which since 2021 includes Haldenstein.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-misox",
+   "name": "Misox",
+   "level": "subzone",
+   "parent": "AOC Graubünden",
+   "communes": [
+    "Lostallo",
+    "Cama",
+    "Castaneda",
+    "Grono",
+    "Roveredo (GR)",
+    "San Vittore"
+   ],
+   "d": {
+    "type": "Wine area",
+    "aka": "Mesolcina",
+    "area_ha": 27.9,
+    "area_note": "BLW, Das Weinjahr 2025: 89% red. The BLW counts it with Italian-speaking Switzerland.",
+    "basis": "BR 917.400 Art. 2 and 33 to 36: AOC Graubünden Misox or DOC Grigioni Mesolcina; or DOC Ticino under Ticino law",
+    "label_rule": "AOC Graubünden Misox / DOC Mesolcina Grigioni. No commune or site names with this designation (Art. 35). Growers may instead label DOC Ticino (Art. 34).",
+    "grapes": "Merlot",
+    "atlas_note": "The Graubünden valley south of the San Bernardino pass, Italian speaking and open to the Ticino. Here it is Merlot country, not Pinot: Ticino rules apply to grapes, yields and sugar, and Ticino runs the controls. San Vittore, at 279 m the lowest point of the canton, sits on the vineyard border with Lumino in the Ticino.",
+    "refs": [
+     [
+      "Kantonale Weinverordnung BR 917.400",
+      "https://gr.lexwork.naz.ch/de/dta/917.400.pdf"
+     ],
+     [
+      "BLW, Das Weinjahr 2025",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Kanton Graubünden, Geografie",
+      "https://www.gr.ch/DE/kanton/Seiten/Geografie.aspx"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-gr-brusio",
+   "name": "Brusio",
+   "level": "subzone",
+   "parent": "AOC Graubünden",
+   "communes": [
+    "Brusio"
+   ],
+   "d": {
+    "type": "Wine area",
+    "aka": "Puschlav / Valposchiavo",
+    "area_ha": 0.25,
+    "area_note": "Plantahof Rebbaustatistik 2025",
+    "basis": "BR 917.400 Art. 2: the wine area Puschlav, the commune of Brusio only",
+    "atlas_note": "A quarter of a hectare in the Valposchiavo, the smallest wine area of the canton. Much more wine is made in Poschiavo from grapes grown just over the border in the Valtellina, many of those vineyards owned by Swiss families, but that wine is Italian by origin.",
+    "refs": [
+     [
+      "Plantahof, Rebbaustatistik Graubünden 2025",
+      "https://www.gr.ch/DE/institutionen/verwaltung/dvs/lbbz/beratungfachwissen/weinbau/Rebbaustatistik/Rebbaustatistik%202025.pdf"
+     ],
+     [
+      "Swiss Wine, Graubünden",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/graubuenden-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-chablais",
+   "name": "AOC Chablais",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Aigle",
+    "Yvorne",
+    "Corbeyrier",
+    "Ollon",
+    "Bex",
+    "Lavey-Morcles",
+    "Villeneuve (VD)",
+    "Roche (VD)"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 580.5,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "grape_ha": [
+     [
+      "Chasselas",
+      367.1
+     ],
+     [
+      "Pinot Noir",
+      90.7
+     ],
+     [
+      "Gamay",
+      36.3
+     ],
+     [
+      "Gamaret",
+      16.9
+     ],
+     [
+      "Merlot",
+      12.2
+     ]
+    ],
+    "basis": "RVV art. 3 and 4: the wine communes of the Aigle district",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "atlas_note": "The upper Rhône valley between the end of Lake Geneva and the Valais. Chasselas from Yvorne, Aigle, Ollon and Bex is the classic, and the Föhn warms and dries the grapes in autumn. Villeneuve at the lake end is the gateway. In 2012 a Premier grand cru from Yvorne, L'Ovaille 1584, became the first wine of the Vaud government.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "Vaud, Vin du Conseil d'Etat 2012",
+      "https://www.vd.ch/actualites/communiques-de-presse-de-letat-de-vaud/detail/communique/lyvorne-lovaille-1584-sera-le-vin-du-conseil-detat-pour-lannee-2012-1343407184"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-lavaux",
+   "name": "AOC Lavaux",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Lutry",
+    "Pully",
+    "Paudex",
+    "Belmont-sur-Lausanne",
+    "Bourg-en-Lavaux",
+    "Puidoux",
+    "Chexbres",
+    "Rivaz",
+    "Saint-Saphorin (Lavaux)",
+    "Chardonne",
+    "Corseaux",
+    "Corsier-sur-Vevey",
+    "Jongny",
+    "Vevey",
+    "La Tour-de-Peilz",
+    "Montreux",
+    "Veytaux",
+    "Blonay - Saint-Légier"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 734.4,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "area_note": "Without the 53.9 ha of Dézaley and the 16.3 ha of Calamin, which are appellations of their own. Lausanne (0.1 ha in Lavaux) and Oron are left out of the outline.",
+    "grape_ha": [
+     [
+      "Chasselas",
+      509.1
+     ],
+     [
+      "Pinot Noir",
+      83.0
+     ],
+     [
+      "Gamay",
+      33.6
+     ],
+     [
+      "Gamaret",
+      18.0
+     ]
+    ],
+    "basis": "RVV art. 3 and 4: the wine communes of the Lavaux-Oron and Riviera-Pays-d'Enhaut districts and Lausanne",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "atlas_note": "Steep stone terraces over Lake Geneva for about 30 km from the edge of Lausanne to Chillon, built from the 11th and 12th centuries under Benedictine and Cistercian monasteries. A UNESCO World Heritage site since 2007: the listed area holds 702 ha of vines. Chasselas is two thirds of the planting.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "UNESCO, Lavaux nomination file",
+      "https://whc.unesco.org/document/152145"
+     ],
+     [
+      "BAK, Lavaux vineyard terraces fact sheet",
+      "https://www.bak.admin.ch/dam/bak/en/dokumente/baukultur/archaelogie-denkmalpflege/factsheet-lavaux.pdf.download.pdf/40_50_00_05-Lavaux%20vignoble%20en%20terrasses%20EN.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-la-cote",
+   "name": "AOC La Côte",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Aclens",
+    "Bremblens",
+    "Buchillon",
+    "Hautemorges",
+    "Chavannes-près-Renens",
+    "Chigny",
+    "Clarmont",
+    "Crissier",
+    "Denens",
+    "Denges",
+    "Echandens",
+    "Echichens",
+    "Ecublens (VD)",
+    "Etoy",
+    "Gollion",
+    "Lavigny",
+    "Lonay",
+    "Lully (VD)",
+    "Lussy-sur-Morges",
+    "Mex (VD)",
+    "Morges",
+    "Préverenges",
+    "Prilly",
+    "Romanel-sur-Morges",
+    "Saint-Livres",
+    "Saint-Prex",
+    "Saint-Sulpice (VD)",
+    "Tolochenaz",
+    "Villars-Sainte-Croix",
+    "Vaux-sur-Morges",
+    "Villars-sous-Yens",
+    "Vufflens-la-Ville",
+    "Vufflens-le-Château",
+    "Vullierens",
+    "Yens",
+    "Aubonne",
+    "Féchy",
+    "Bougy-Villars",
+    "Perroy",
+    "Allaman",
+    "Mont-sur-Rolle",
+    "Rolle",
+    "Essertines-sur-Rolle",
+    "Tartegnin",
+    "Gilly",
+    "Bursinel",
+    "Dully",
+    "Vinzel",
+    "Bursins",
+    "Luins",
+    "Begnins",
+    "Vich",
+    "Gland",
+    "Nyon",
+    "Founex",
+    "Duillier",
+    "Commugny",
+    "Crans (VD)",
+    "Signy-Avenex",
+    "Arnex-sur-Nyon",
+    "Givrins",
+    "Prangins",
+    "Eysins",
+    "Coppet",
+    "Genolier",
+    "Borex",
+    "Grens",
+    "Trélex",
+    "Bogis-Bossey",
+    "Crassier",
+    "Mies",
+    "Coinsins"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 2001.6,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "area_note": "About 53% of the Vaud vineyard. The outline joins the communes of its twelve lieux de production.",
+    "grape_ha": [
+     [
+      "Chasselas",
+      1219.9
+     ],
+     [
+      "Pinot Noir",
+      197.2
+     ],
+     [
+      "Gamay",
+      181.1
+     ],
+     [
+      "Gamaret",
+      87.4
+     ],
+     [
+      "Garanoir",
+      67.9
+     ]
+    ],
+    "basis": "RVV art. 3 and 4: the wine communes of the Ouest lausannois, Morges and Nyon districts, except La Sarraz, Pompaples, Orny and Eclépens",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "atlas_note": "The long gentle slope between Lausanne and Geneva, facing the lake, mostly on glacial moraine. The largest region of Vaud by far. Its heart is the run of villages above Rolle, Mont-sur-Rolle, Féchy, Tartegnin, Vinzel and Luins, while Morges in the east is the largest single lieu de production of the canton.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-cotes-orbe",
+   "name": "AOC Côtes de l'Orbe",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Agiez",
+    "Arnex-sur-Orbe",
+    "Baulmes",
+    "Bavois",
+    "Belmont-sur-Yverdon",
+    "Chamblon",
+    "Champvent",
+    "Chavornay",
+    "Eclépens",
+    "La Sarraz",
+    "Mathod",
+    "Montcherand",
+    "Orbe",
+    "Orny",
+    "Pompaples",
+    "Rances",
+    "Suscévaz",
+    "Valeyres-sous-Rances",
+    "Yverdon-les-Bains",
+    "Yvonand"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 177.8,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "grape_ha": [
+     [
+      "Gamay",
+      62.7
+     ],
+     [
+      "Chasselas",
+      29.1
+     ],
+     [
+      "Pinot Noir",
+      27.2
+     ]
+    ],
+    "basis": "RVV art. 3, 4 and 10: one lieu de production",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "atlas_note": "Vines at the foot of the Jura around Orbe, north of the watershed: the water here flows to the Rhine, not the Rhône. The only region of Vaud where Gamay, not Chasselas, leads.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-bonvillars",
+   "name": "AOC Bonvillars",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Bonvillars",
+    "Champagne",
+    "Concise",
+    "Corcelles-près-Concise",
+    "Fiez",
+    "Grandson",
+    "Montagny-près-Yverdon",
+    "Onnens (VD)",
+    "Valeyres-sous-Montagny"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 188.9,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "grape_ha": [
+     [
+      "Pinot Noir",
+      59.1
+     ],
+     [
+      "Chasselas",
+      57.6
+     ],
+     [
+      "Gamay",
+      22.2
+     ]
+    ],
+    "basis": "RVV art. 3, 4 and 11: one lieu de production",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32). Champagne (VD) may name itself only on wine wholly from the commune, never blended.",
+    "atlas_note": "The north-west shore of Lake Neuchâtel below the Jura, from Grandson to Concise, the largest wine commune here. Pinot Noir is planted as much as Chasselas. The village of Champagne may put its name on the label only for wine wholly from the commune.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois, version of 1 July 2013 (art. 32)",
+      "https://lexfind.ch/tolv/91510/fr"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-vully",
+   "name": "AOC Vully",
+   "level": "appellation",
+   "parent": "AOC Vaud",
+   "communes": [
+    "Vully-les-Lacs",
+    "Mont-Vully"
+   ],
+   "d": {
+    "type": "Regional AOC (Vaud and Fribourg)",
+    "area_ha": 56.7,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "area_note": "Vaud part only. With Mont-Vully in Fribourg the appellation has about 150 ha.",
+    "grape_ha": [
+     [
+      "Chasselas",
+      20.1
+     ],
+     [
+      "Pinot Noir",
+      19.5
+     ]
+    ],
+    "basis": "RVV art. 3, 4 and 12, and the Fribourg wine ordinance art. 16: shared by Vully-les-Lacs (VD) and Mont-Vully (FR)",
+    "atlas_note": "The Mont Vully between Lake Neuchâtel and Lake Morat, an appellation shared by Vaud and Fribourg. Vines on molasse facing the Lake of Morat, with the Fribourg villages Môtier, Praz and Lugnorre on the other side of the cantonal line.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "Fribourg wine ordinance 912.4.111",
+      "https://fr.lexwork.naz.ch/fr/dta/912.4.111.pdf"
+     ],
+     [
+      "Vaud tourism, Vully AOC",
+      "https://www.vaud.ch/en/tourism/activites/vully-aoc"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-dezaley",
+   "name": "Dézaley Grand cru",
+   "level": "appellation",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Puidoux"
+   ],
+   "d": {
+    "type": "Grand cru appellation",
+    "area_ha": 53.9,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "area_note": "49.9 ha of Dézaley and 3.9 ha of Dézaley-Marsens, 2019",
+    "grape_ha": [
+     [
+      "Chasselas",
+      46.3
+     ],
+     [
+      "Merlot",
+      2.1
+     ],
+     [
+      "Gamay",
+      1.8
+     ],
+     [
+      "Pinot Noir",
+      1.7
+     ]
+    ],
+    "basis": "RVV art. 4 and 12a: AOC since 20 March 2013, every wine classed grand cru",
+    "label_rule": "Vintage on the label, no blending, at most 10% from other Lavaux sites, higher minimum sugar. The wines may also be sold as AOC Lavaux Puidoux.",
+    "outline": "Part of Puidoux between the Chenalettaz ravine, the Corniche road, the Forestay stream and the lake; Dézaley-Marsens is the small part north of the Corniche. Shown as a marker until the vineyard cadastre is mapped.",
+    "atlas_note": "The steepest and most famous slope of Lavaux, slopes of over 30% falling straight to the lake between Epesses and Rivaz. Cistercian monks of the Haut-Crêt abbey cleared it in the 12th century, and the City of Lausanne has owned the Clos des Moines here since 1802. Almost all Chasselas.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "Vaud, AOC pour le Dézaley et le Calamin (2013)",
+      "https://www.vd.ch/typo3temp/assets/pdfs/appellations-dorigine-controlee-pour-le-dezaley-et-le-calamin-1363887544.pdf"
+     ],
+     [
+      "City of Lausanne, Clos des Moines",
+      "https://www.lausanne.ch/en/vie-pratique/nature/produits-ville/vins-de-lausanne/domaines/domaines-viticoles/domaine-clos-des-moines.html"
+     ]
+    ]
+   },
+   "rank": "grand_cru",
+   "point": [
+    46.485,
+    6.763
+   ]
+  },
+  {
+   "id": "ch-reg-vd-calamin",
+   "name": "Calamin Grand cru",
+   "level": "appellation",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Epesses"
+   ],
+   "d": {
+    "type": "Grand cru appellation",
+    "area_ha": 16.3,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "grape_ha": [
+     [
+      "Chasselas",
+      15.8
+     ]
+    ],
+    "basis": "RVV art. 4 and 12b: AOC since 20 March 2013, every wine classed grand cru",
+    "label_rule": "Vintage on the label, no blending, at most 10% from other Lavaux sites, higher minimum sugar. The wines may also be sold as AOC Lavaux Epesses.",
+    "outline": "The part of the former commune of Epesses south of the Corniche road. Drawn from OpenStreetMap, where the vineyard is mapped as AOC Calamin Grand cru: 15.0 ha on the map against 16.3 ha registered.",
+    "atlas_note": "The smallest appellation of Vaud, a single slope below the village of Epesses between Cully and Dézaley. Practically all Chasselas.",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "Vaud, AOC pour le Dézaley et le Calamin (2013)",
+      "https://www.vd.ch/typo3temp/assets/pdfs/appellations-dorigine-controlee-pour-le-dezaley-et-le-calamin-1363887544.pdf"
+     ]
+    ]
+   },
+   "rank": "grand_cru",
+   "geometry_file": "contrib/ch/calamin_osm.geojson",
+   "outline_src": "osm"
+  },
+  {
+   "id": "ch-reg-vd-aigle",
+   "name": "Aigle",
+   "level": "subzone",
+   "parent": "AOC Chablais",
+   "communes": [
+    "Aigle"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 128.9,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The town of the Chablais, with its castle among the vines and the wine museum of Vaud."
+   }
+  },
+  {
+   "id": "ch-reg-vd-yvorne",
+   "name": "Yvorne",
+   "level": "subzone",
+   "parent": "AOC Chablais",
+   "communes": [
+    "Yvorne",
+    "Corbeyrier"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 158.3,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ],
+     [
+      "Vaud, Vin du Conseil d'Etat 2012",
+      "https://www.vd.ch/actualites/communiques-de-presse-de-letat-de-vaud/detail/communique/lyvorne-lovaille-1584-sera-le-vin-du-conseil-detat-pour-lannee-2012-1343407184"
+     ]
+    ],
+    "atlas_note": "The largest lieu de production of the Chablais, with Corbeyrier above it. L'Ovaille 1584 from Yvorne, a Premier grand cru, was chosen as the wine of the Vaud government in 2012."
+   }
+  },
+  {
+   "id": "ch-reg-vd-ollon",
+   "name": "Ollon",
+   "level": "subzone",
+   "parent": "AOC Chablais",
+   "communes": [
+    "Ollon"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 122.2,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-bex",
+   "name": "Bex",
+   "level": "subzone",
+   "parent": "AOC Chablais",
+   "communes": [
+    "Bex",
+    "Lavey-Morcles"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 108.6,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-villeneuve",
+   "name": "Villeneuve",
+   "level": "subzone",
+   "parent": "AOC Chablais",
+   "communes": [
+    "Villeneuve (VD)",
+    "Roche (VD)"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 62.6,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-lutry",
+   "name": "Lutry",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Lutry",
+    "Pully",
+    "Paudex",
+    "Belmont-sur-Lausanne"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 80.7,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The western door of Lavaux, at the edge of Lausanne. Lutry here means the part of the commune west of the Bouteiller stream, plus Pully, Paudex, Belmont and Lausanne.",
+    "outline_extra": "Lutry east of the Bouteiller belongs to Villette."
+   }
+  },
+  {
+   "id": "ch-reg-vd-villette",
+   "name": "Villette",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Villette (Lavaux)",
+    "Grandvaux"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 137.3,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The former communes of Villette and Grandvaux, merged into Bourg-en-Lavaux in 2011, plus the part of Lutry east of the Bouteiller stream."
+   },
+   "year": 2010
+  },
+  {
+   "id": "ch-reg-vd-epesses",
+   "name": "Epesses",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Epesses",
+    "Riex",
+    "Cully"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 170.5,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The former communes of Epesses, Riex and Cully and part of Grandvaux, all now in Bourg-en-Lavaux, plus a corner of Puidoux. Cully and Riex have no lieu de production of their own: their wine is Epesses. Calamin Grand cru lies inside."
+   },
+   "year": 2010
+  },
+  {
+   "id": "ch-reg-vd-saint-saphorin",
+   "name": "Saint-Saphorin",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Saint-Saphorin (Lavaux)",
+    "Rivaz",
+    "Chexbres"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 143.1,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Saint-Saphorin, Rivaz and Chexbres, plus parts of Puidoux and of Chardonne below the motorway. East of Dézaley, around the medieval village on the lake."
+   }
+  },
+  {
+   "id": "ch-reg-vd-chardonne",
+   "name": "Chardonne",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Chardonne",
+    "Corseaux",
+    "Jongny",
+    "Corsier-sur-Vevey"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 102.2,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The slope above Vevey: Chardonne (above the motorway), Corseaux, Corsier and Jongny."
+   }
+  },
+  {
+   "id": "ch-reg-vd-montreux-vevey",
+   "name": "Montreux-Vevey",
+   "level": "subzone",
+   "parent": "AOC Lavaux",
+   "communes": [
+    "Montreux",
+    "Vevey",
+    "Blonay - Saint-Légier",
+    "La Tour-de-Peilz",
+    "Veytaux"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 100.6,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The eastern end of Lavaux, from Vevey past Montreux to Chillon. The law writes it as Montreux or Vevey.",
+    "aka": "Vevey-Montreux"
+   }
+  },
+  {
+   "id": "ch-reg-vd-morges",
+   "name": "Morges",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Aclens",
+    "Bremblens",
+    "Buchillon",
+    "Hautemorges",
+    "Chavannes-près-Renens",
+    "Chigny",
+    "Clarmont",
+    "Crissier",
+    "Denens",
+    "Denges",
+    "Echandens",
+    "Echichens",
+    "Ecublens (VD)",
+    "Etoy",
+    "Gollion",
+    "Lavigny",
+    "Lonay",
+    "Lully (VD)",
+    "Lussy-sur-Morges",
+    "Mex (VD)",
+    "Morges",
+    "Préverenges",
+    "Prilly",
+    "Romanel-sur-Morges",
+    "Saint-Livres",
+    "Saint-Prex",
+    "Saint-Sulpice (VD)",
+    "Tolochenaz",
+    "Villars-Sainte-Croix",
+    "Vaux-sur-Morges",
+    "Villars-sous-Yens",
+    "Vufflens-la-Ville",
+    "Vufflens-le-Château",
+    "Vullierens",
+    "Yens"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 602.2,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The eastern half of La Côte, from the edge of Lausanne to Etoy. With 602 ha the largest lieu de production of Vaud."
+   }
+  },
+  {
+   "id": "ch-reg-vd-aubonne",
+   "name": "Aubonne",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Aubonne"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 78.0,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Aubonne west of the Aubonne river, without the Curzilles area that belongs to Féchy."
+   }
+  },
+  {
+   "id": "ch-reg-vd-fechy",
+   "name": "Féchy",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Féchy",
+    "Bougy-Villars"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 176.8,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Féchy and Bougy-Villars, plus the Curzilles area of Aubonne and part of Perroy north of the route de l'Etraz. One of the best known Chasselas names of La Côte."
+   }
+  },
+  {
+   "id": "ch-reg-vd-perroy",
+   "name": "Perroy",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Perroy",
+    "Allaman"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 110.9,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-mont-sur-rolle",
+   "name": "Mont-sur-Rolle",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Mont-sur-Rolle",
+    "Rolle",
+    "Essertines-sur-Rolle"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 253.0,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Mont-sur-Rolle, Rolle and Essertines, plus part of Perroy north of the railway: the second largest lieu de production of Vaud."
+   }
+  },
+  {
+   "id": "ch-reg-vd-tartegnin",
+   "name": "Tartegnin",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Tartegnin"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 145.7,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Tartegnin and part of Gilly east of the Flon."
+   }
+  },
+  {
+   "id": "ch-reg-vd-coteau-de-vincy",
+   "name": "Coteau de Vincy",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Gilly"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 60.6,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The rest of Gilly, with the hamlet of Vincy."
+   }
+  },
+  {
+   "id": "ch-reg-vd-bursinel",
+   "name": "Bursinel",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Bursinel",
+    "Dully"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 49.3,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-vinzel",
+   "name": "Vinzel",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Vinzel",
+    "Bursins"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 52.1,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-luins",
+   "name": "Luins",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Luins"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 107.1,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "Luins, the part of Begnins east of the Nant stream and the Sâles vineyard of Gland."
+   }
+  },
+  {
+   "id": "ch-reg-vd-begnins",
+   "name": "Begnins",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Begnins",
+    "Vich",
+    "Gland"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 93.9,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-vd-nyon",
+   "name": "Nyon",
+   "level": "subzone",
+   "parent": "AOC La Côte",
+   "communes": [
+    "Nyon",
+    "Founex",
+    "Duillier",
+    "Commugny",
+    "Crans (VD)",
+    "Signy-Avenex",
+    "Arnex-sur-Nyon",
+    "Givrins",
+    "Prangins",
+    "Eysins",
+    "Coppet",
+    "Genolier",
+    "Borex",
+    "Grens",
+    "Trélex",
+    "Bogis-Bossey",
+    "Crassier",
+    "Mies",
+    "Coinsins"
+   ],
+   "d": {
+    "type": "Lieu de production",
+    "area_ha": 272.1,
+    "area_src": "Registre cantonal des vignes VD, 2019",
+    "label_rule": "Commune name on the label: at least 60% of the grapes from that commune; communes are named as they stood on 1 June 2009 (RVV art. 32)",
+    "refs": [
+     [
+      "Vaud, Registre cantonal des vignes, 1 Nov 2019",
+      "https://www.vd.ch/fileadmin/user_upload/themes/economie_emploi/viticulture/fichiers_pdf/DOC_20191101_RCV_complet.pdf"
+     ],
+     [
+      "Règlement sur les vins vaudois (RVV), RSV 916.125.2",
+      "https://www.lexaris.de/book/version/documentflat/head/5328090"
+     ]
+    ],
+    "atlas_note": "The western end of La Côte between the Sérine and the Geneva border, around Nyon, Founex and Coppet."
+   }
+  },
+  {
+   "id": "ch-reg-ge-rive-droite",
+   "name": "Rive droite",
+   "level": "subzone",
+   "parent": "AOC Genève",
+   "communes": [
+    "Satigny",
+    "Dardagny",
+    "Russin",
+    "Céligny",
+    "Collex-Bossy",
+    "Genthod",
+    "Bellevue",
+    "Vernier",
+    "Meyrin"
+   ],
+   "d": {
+    "area_ha": 752.0,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ],
+     [
+      "Swiss Wine, Geneva",
+      "https://swisswine.ch/en/regions/geneva"
+     ],
+     [
+      "Vinum 2018, Genève",
+      "https://www.geneveterroir.ch/sites/default/files/publications/VINUM_2018_Gen%C3%A8ve_FR.pdf"
+     ]
+    ],
+    "type": "Wine area",
+    "aka": "Mandement",
+    "area_note": "55% of the Geneva vineyard, 2024",
+    "atlas_note": "The right bank of the Rhône north-west of Geneva, called the Mandement around Satigny, Dardagny and Russin. More than half of all Geneva vines. Céligny, an enclave between Vaud communes, belongs here too and may sell its wine as La Côte Céligny."
+   }
+  },
+  {
+   "id": "ch-reg-ge-arve-rhone",
+   "name": "Entre Arve et Rhône",
+   "level": "subzone",
+   "parent": "AOC Genève",
+   "communes": [
+    "Bernex",
+    "Soral",
+    "Bardonnex",
+    "Laconnex",
+    "Avusy",
+    "Avully",
+    "Confignon",
+    "Veyrier",
+    "Chancy",
+    "Perly-Certoux",
+    "Plan-les-Ouates",
+    "Troinex",
+    "Cartigny",
+    "Aire-la-Ville",
+    "Onex"
+   ],
+   "d": {
+    "area_ha": 262.5,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Swiss Wine, Geneva",
+      "https://swisswine.ch/en/regions/geneva"
+     ]
+    ],
+    "type": "Wine area",
+    "area_note": "19% of the Geneva vineyard, 2024",
+    "atlas_note": "The country south-west of Geneva between the Arve and the Rhône, from Bernex and Lully to the Champagne genevoise around Soral, Laconnex and Avully, under the Salève."
+   }
+  },
+  {
+   "id": "ch-reg-ge-arve-lac",
+   "name": "Entre Arve et Lac",
+   "level": "subzone",
+   "parent": "AOC Genève",
+   "communes": [
+    "Meinier",
+    "Jussy",
+    "Anières",
+    "Choulex",
+    "Collonge-Bellerive",
+    "Hermance",
+    "Presinge",
+    "Corsier (GE)",
+    "Gy",
+    "Cologny",
+    "Puplinge",
+    "Vandoeuvres"
+   ],
+   "d": {
+    "area_ha": 231.8,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Swiss Wine, Geneva",
+      "https://swisswine.ch/en/regions/geneva"
+     ]
+    ],
+    "type": "Wine area",
+    "area_note": "17% of the Geneva vineyard, 2024",
+    "atlas_note": "The left shore of the lake between the Arve and the French border, from Cologny to Hermance and inland to Meinier and Jussy."
+   }
+  },
+  {
+   "id": "ch-reg-ge-satigny",
+   "name": "Satigny",
+   "level": "subzone",
+   "parent": "Rive droite",
+   "communes": [
+    "Satigny"
+   ],
+   "d": {
+    "area_ha": 442.8,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Swiss Wine, Geneva",
+      "https://swisswine.ch/en/regions/geneva"
+     ],
+     [
+      "Satigny, plan directeur communal",
+      "https://ge.ch/geodata/SIAMEN/PDL/PDCom_Satigny/PDCom_Satigny_02.pdf"
+     ]
+    ],
+    "type": "Commune",
+    "area_note": "35.5% of the Geneva vineyard in Switzerland, 2024",
+    "atlas_note": "The largest wine commune of Switzerland, a third of all Geneva vines in one place. Its hamlets give their names to premiers crus: Peissy, Bourdigny, Choully and Peney.",
+    "premiers_crus": [
+     [
+      "Coteau de Peissy",
+      108.6
+     ],
+     [
+      "Coteau de Bourdigny",
+      96.2
+     ],
+     [
+      "Coteau de Choully",
+      53.6
+     ],
+     [
+      "Coteaux de Peney",
+      25.3
+     ],
+     [
+      "Château de Choully",
+      7.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ge-dardagny",
+   "name": "Dardagny",
+   "level": "subzone",
+   "parent": "Rive droite",
+   "communes": [
+    "Dardagny"
+   ],
+   "d": {
+    "area_ha": 186.1,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "premiers_crus": [
+     [
+      "Coteaux de Dardagny",
+      119.0
+     ]
+    ],
+    "atlas_note": "The second wine commune of Geneva, at the western end of the Mandement on the French border. Coteaux de Dardagny is the largest premier cru of the canton."
+   }
+  },
+  {
+   "id": "ch-reg-ge-russin",
+   "name": "Russin",
+   "level": "subzone",
+   "parent": "Rive droite",
+   "communes": [
+    "Russin"
+   ],
+   "d": {
+    "area_ha": 85.5,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "premiers_crus": [
+     [
+      "Côtes de Russin",
+      51.4
+     ]
+    ],
+    "atlas_note": "A wine village on the terrace above the Rhône, between Satigny and Dardagny."
+   }
+  },
+  {
+   "id": "ch-reg-ge-bernex",
+   "name": "Bernex",
+   "level": "subzone",
+   "parent": "Entre Arve et Rhône",
+   "communes": [
+    "Bernex"
+   ],
+   "d": {
+    "area_ha": 88.2,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "premiers_crus": [
+     [
+      "Coteau de Lully",
+      73.7
+     ]
+    ],
+    "atlas_note": "The main wine commune between Arve and Rhône. Its hamlet of Lully gives its name to a premier cru."
+   }
+  },
+  {
+   "id": "ch-reg-ge-soral",
+   "name": "Soral",
+   "level": "subzone",
+   "parent": "Entre Arve et Rhône",
+   "communes": [
+    "Soral"
+   ],
+   "d": {
+    "area_ha": 42.5,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "atlas_note": "In the Champagne genevoise near the French border, with La Feuillée, a premier cru shared with Laconnex."
+   }
+  },
+  {
+   "id": "ch-reg-ge-meinier",
+   "name": "Meinier",
+   "level": "subzone",
+   "parent": "Entre Arve et Lac",
+   "communes": [
+    "Meinier"
+   ],
+   "d": {
+    "area_ha": 70.6,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "atlas_note": "The largest wine commune of the left bank, inland from the lake."
+   }
+  },
+  {
+   "id": "ch-reg-ge-jussy",
+   "name": "Jussy",
+   "level": "subzone",
+   "parent": "Entre Arve et Lac",
+   "communes": [
+    "Jussy"
+   ],
+   "d": {
+    "area_ha": 39.6,
+    "area_src": "OCAN Genève 2024",
+    "label_rule": "Commune name on the label: at least 85% of the grapes from that commune (RSG M 2 50.05 art. 58)",
+    "refs": [
+     [
+      "OCAN Genève, Statistiques viti-vinicoles 2024",
+      "https://www.ge.ch/document/5811/annexe/file/706877"
+     ],
+     [
+      "Règlement sur la vigne et les vins, RSG M 2 50.05",
+      "https://silgeneve.ch/legis/data/rsg_m2_50p05.htm"
+     ]
+    ],
+    "type": "Commune",
+    "premiers_crus": [
+     [
+      "Mandement de Jussy",
+      13.0
+     ],
+     [
+      "Château du Crest",
+      8.6
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1338,5 +1338,18 @@
  "A free account opens the full study: every lesson, every quiz and the full review, without a daily limit.": "免费账户可解锁完整学习：全部课程、全部测验和完整复习，没有每日限制。",
  "No card, no password: we email you a code.": "无需银行卡，无需密码：我们会通过电子邮件发送验证码。",
  "questions today, no limit": "今日题目，无限制",
- "free account": "免费账户"
+ "free account": "免费账户",
+ "Grapes planted": "种植的葡萄品种",
+ "Growers": "种植者",
+ "On the label": "酒标标注",
+ "Known producers": "知名生产商",
+ "Premier grand cru": "Premier grand cru",
+ "Premiers crus · {n}": "一级园 · {n}",
+ "Wine area": "葡萄酒产区",
+ "Traditional wine district": "传统葡萄酒区",
+ "Commune designation": "村庄名称",
+ "Commune": "市镇",
+ "Regional AOC": "区域AOC",
+ "Grand cru appellation": "特级园产区",
+ "Lieu de production": "产地（lieu de production）"
 }
