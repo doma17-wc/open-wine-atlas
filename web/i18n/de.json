@@ -1351,5 +1351,14 @@
  "Commune": "Gemeinde",
  "Regional AOC": "Regionale AOC",
  "Grand cru appellation": "Grand-Cru-Appellation",
- "Lieu de production": "Produktionsort"
+ "Lieu de production": "Produktionsort",
+ "Switzerland in depth": "Die Schweiz im Detail",
+ "Switzerland in full depth": "Die Schweiz im ganzen Detail",
+ "Switzerland · 4 levels": "Schweiz · 4 Ebenen",
+ "Regional AOC and wine area": "Regionale AOC und Weinbaugebiet",
+ "Every Swiss wine area, commune and grand cru, with its planted hectares": "Jedes Weinbaugebiet, jede Gemeinde und jeder Grand Cru der Schweiz, mit der Rebfläche",
+ "Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.": "Jeder Kanton, jede regionale AOC, jedes Weinbaugebiet, jede Gemeinde und jeder Grand Cru, mit der Rebfläche.",
+ "Free preview: Swiss place {n} of {free}. A free account opens all {total}.": "Kostenlose Vorschau: Schweizer Ort {n} von {free}. Ein kostenloses Konto öffnet alle {total}.",
+ "You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.": "Sie haben {n} Schweizer Orte kostenlos erkundet. Ein kostenloses Konto öffnet alle {total}: jede regionale AOC, jedes Weinbaugebiet, jede Gemeinde und jeden Lieu de production, mit Rebfläche, Sorten, Etikettenregeln und Produzenten.",
+ "It is free, and it opens Burgundy and Switzerland in full depth.": "Es ist kostenlos und öffnet Burgund und die Schweiz im ganzen Detail."
 }

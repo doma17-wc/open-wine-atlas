@@ -1351,5 +1351,14 @@
  "Commune": "市镇",
  "Regional AOC": "区域AOC",
  "Grand cru appellation": "特级园产区",
- "Lieu de production": "产地（lieu de production）"
+ "Lieu de production": "产地（lieu de production）",
+ "Switzerland in depth": "深入瑞士",
+ "Switzerland in full depth": "全面深入瑞士",
+ "Switzerland · 4 levels": "瑞士 · 4个层级",
+ "Regional AOC and wine area": "区域AOC与产区",
+ "Every Swiss wine area, commune and grand cru, with its planted hectares": "瑞士每个产区、市镇和特级园及其种植面积",
+ "Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.": "每个州、区域AOC、产区、市镇和特级园及其种植面积。",
+ "Free preview: Swiss place {n} of {free}. A free account opens all {total}.": "免费预览：瑞士地点 {n} / {free}。免费账户可打开全部 {total} 个。",
+ "You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.": "您已免费浏览 {n} 个瑞士地点。免费账户可打开全部 {total} 个：每个区域AOC、产区、市镇和产地，附种植面积、葡萄品种、酒标规则和生产商。",
+ "It is free, and it opens Burgundy and Switzerland in full depth.": "免费，并可深入浏览勃艮第和瑞士。"
 }

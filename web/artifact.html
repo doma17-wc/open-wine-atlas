@@ -409,6 +409,9 @@ body.maponly .deep-key { display: none !important; }
 .deep-key .dk-premier i { background: var(--copper); }
 .deep-key .dk-village i { background: rgba(230,220,203,.14); border: 1px solid var(--parchment); box-sizing: border-box; }
 .deep-key .dk-regional i { border: 1px dashed var(--muted); box-sizing: border-box; }
+.deep-key .dk-area i { background: rgba(230,220,203,.2); border: 1px dashed var(--parchment); box-sizing: border-box; }
+.deep-key .dk-commune i { background: rgba(230,220,203,.08); border: 1px dashed rgba(230,220,203,.6); box-sizing: border-box; }
+.deep-key .dk-canton i { border: 1px dashed var(--muted); box-sizing: border-box; }
 .tc .tha { font-weight: 500; color: #b9ae99; }
 @media (max-width: 760px) { .deep-key { top: auto; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); left: 12px; max-width: calc(100% - 24px); } .deep-key .dk-h { display: none; } }
 /* Deep Region: Burgundy opens in full with a free account (see deepGate) */
@@ -705,6 +708,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <div class="rail-scroll" id="railScroll">
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
     <button class="deep-card" id="deepCard" type="button" hidden><b data-i18n>Burgundy in depth</b><span data-i18n>Every grand cru, premier cru and village of the Côte d'Or, with its hectares.</span><i aria-hidden="true">→</i></button>
+    <button class="deep-card" id="deepCardCH" type="button" hidden><b data-i18n>Switzerland in depth</b><span data-i18n>Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.</span><i aria-hidden="true">→</i></button>
     <div class="ex-head"><span class="hd" data-i18n>Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world" data-i18n-title="Show the whole world" data-i18n>World view</button></div>
     <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
   </nav>
@@ -831,7 +835,7 @@ const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
   rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
-  chreg: { name: "Cantonal wine laws and vineyard statistics of Vaud, Genève and Graubünden; outlines from BFS GEOSTAT / swisstopo municipal boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
+  chreg: { name: "Cantonal wine laws and vineyard statistics of the Swiss wine cantons and BLW Das Weinjahr 2025; outlines from BFS GEOSTAT / swisstopo boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
   bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
   osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
   ava: { name: "UC Davis Library, AVA Digitizing Project (from 27 CFR part 9)", license: "CC0 1.0", url: "https://github.com/UCDavisLibrary/ava" },
@@ -1521,11 +1525,25 @@ const setVis = (id, on) => { if (map.getLayer(id)) map.setLayoutProperty(id, "vi
 // Bourguignons, Crémant…) cover the whole Côte with a mesh of holes. In Burgundy those regional and umbrella names are
 // hidden until they are chosen (the key on the map or the place itself), villages are a soft area with a faint line,
 // premiers crus copper and grands crus solid gold. Labels and the region list carry the delimited area in hectares.
-const DS = { cls: null, ha: null, haLoading: null, view: false, force: null, vineOrig: null,
-  show: { grand: true, premier: true, village: true, regional: false } };
+// The same view, lighter, for Switzerland: grands crus gold, regional AOCs and wine areas a soft area, communes and lieux
+// de production a faint one, the cantonal AOCs (canton outlines) quieter still. Labels carry the official planted area.
+const DEEP_REGIONS = [
+  { key: "bourgogne", root: "g:FR/bourgogne", cc: "FR", haField: "area_ha", hash: "burgundy", name: "Bourgogne",
+    go: N_("Burgundy in depth"), keyHead: N_("Bourgogne · 4 levels"),
+    levels: [["grand", N_("Grand cru")], ["premier", N_("Premier cru")], ["village", N_("Village")], ["regional", N_("Regional")]],
+    fit: ["g:FR/bourgogne/cote-de-nuits", "g:FR/bourgogne/cote-de-beaune"], fitZ: 11 },
+  { key: "suisse", root: "g:CH", cc: "CH", haField: "vine_area_ha", hash: "switzerland", name: "Suisse · Schweiz · Svizzera",
+    go: N_("Switzerland in depth"), keyHead: N_("Switzerland · 4 levels"),
+    levels: [["grand", N_("Grand cru")], ["area", N_("Regional AOC and wine area")], ["commune", N_("Commune")], ["canton", N_("Cantonal AOC")]],
+    fit: ["g:CH"], fitZ: 8.2 },
+];
+const deepReg = (key) => DEEP_REGIONS.find((r) => r.key === key);
+const DS = { cls: null, ha: null, haLoading: {}, view: null, force: null, vineOrig: null,
+  show: { grand: true, premier: true, village: true, regional: false, area: true, commune: true, canton: true } };
 const DS_UMBRELLA = new Set(["Côte de Nuits-Villages", "Côte de Beaune-Villages", "Mâcon"]);
 const DS_SL = new Set(["appellations", "crus", "labels"]);
-// id -> "grand" | "premier" | "village" | "regional", for every place under Bourgogne in the region tree
+// id -> level, for every place under Bourgogne and Switzerland in the region tree
+// (Bourgogne: grand, premier, village, regional; Switzerland: grand, area, commune, canton)
 function deepClasses() {
   if (DS.cls || !TREE) return DS.cls;
   const m = new Map();
@@ -1536,10 +1554,19 @@ function deepClasses() {
     walk(c, inReg);
   });
   walk("g:FR/bourgogne", false);
+  const walkCH = (k) => kidsOf(k).forEach((c) => {
+    const r = byId.get(c);
+    if (r && !m.has(c)) m.set(c, /^ch-canton-|^ch-new-/.test(c) ? "canton" : TOP.includes(r[4]) ? "grand"
+      : r[3] === "appellation" || kidsOf(c).length ? "area" : "commune");
+    walkCH(c);
+  });
+  walkCH("g:CH");
   DS.cls = m;
   return m;
 }
 const deepIds = (cl) => { const m = deepClasses(); return m ? [...m].filter(([, c]) => c === cl).map(([k]) => k) : []; };
+// the Deep Region a place or group belongs to, or null
+const deepRegionOf = (id) => !TREE ? null : DEEP_REGIONS.find((R) => id === R.root || (TPARENT.has(id) && pathOf(id).includes(R.root))) || null;
 // the filter that keeps hidden levels off the map (null: nothing hidden)
 function deepFilter() {
   const m = deepClasses();
@@ -1547,18 +1574,21 @@ function deepFilter() {
   const hide = [...m].filter(([k, c]) => !DS.show[c] && k !== DS.force).map(([k]) => k);
   return hide.length ? ["!", ["in", ["get", "id"], ["literal", hide]]] : null;
 }
-function ensureDeepHa() {
-  if (DS.ha || DS.haLoading || !deepClasses()) return DS.haLoading;
-  DS.haLoading = getDetails("FR").then((all) => {
-    const ha = new Map();
-    deepClasses().forEach((c, k) => { const a = all[k] && all[k].area_ha; if (a) ha.set(k, a); });
+// hectares on the labels and in the region list, read from the place details of the region's country
+function ensureDeepHa(key = "bourgogne") {
+  const R = deepReg(key);
+  if (!R || !deepClasses()) return null;
+  if (DS.haLoading[key]) return DS.haLoading[key];
+  DS.haLoading[key] = getDetails(R.cc).then((all) => {
+    const ha = DS.ha || new Map();
+    deepClasses().forEach((c, k) => { const a = all[k] && all[k][R.haField]; if (a) ha.set(k, a); });
     DS.ha = ha;
     deepStyleLayers();
     renderTree();
   });
-  return DS.haLoading;
+  return DS.haLoading[key];
 }
-// "288 ha" for a Burgundy place, "" for anything else
+// "288 ha" for a Burgundy or Swiss place, "" for anything else
 function deepHaExpr() {
   if (!DS.ha || !DS.ha.size) return "";
   const pairs = [];
@@ -1570,13 +1600,14 @@ function deepLabel(base) {
   if (!ha) return base;
   return ["case", ["==", ha, ""], base, ["format", base, {}, "\n", {}, ha, { "font-scale": 0.82, "text-font": ["literal", ["noto-regular"]], "text-color": P.label }]];
 }
-// paint and labels of the Burgundy levels; runs again for every detail file the map adds and on a theme change
+// paint and labels of the Deep Region levels; runs again for every detail file the map adds and on a theme change
 function deepStyleLayers() {
   if (!deepClasses() || !map.getLayer("ov-labels")) return;
-  // only Burgundy changes: the same ranks elsewhere keep their usual weight
+  // only Burgundy and Switzerland change: the same ranks elsewhere keep their usual weight
   const inIds = (cl) => ["in", ["get", "id"], ["literal", deepIds(cl)]];
   const vill = inIds("village"), gc = inIds("grand"), pc = inIds("premier"), top = ["in", ["get", "rank"], ["literal", TOP]];
-  setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, top, 0.07, INAO, 0.02, 0.025]));
+  const area = inIds("area"), comm = inIds("commune"), cant = inIds("canton");
+  setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, area, 0.07, comm, 0.045, cant, 0.015, top, 0.07, INAO, 0.02, 0.025]));
   const ovBase = ["upcase", ["get", "name"]];
   map.setLayoutProperty("ov-labels", "text-transform", "none");
   map.setLayoutProperty("ov-labels", "text-field", ["step", ["zoom"], ovBase, 9, deepLabel(ovBase)]);
@@ -1591,25 +1622,35 @@ function deepStyleLayers() {
     }
   });
 }
-// in Burgundy, close enough to read it: the key on the map and quieter vineyards
+// the Deep Region the map centre is in, close enough to read it
+function deepRegionInView() {
+  const c = map.getCenter(), z = map.getZoom();
+  return DEEP_REGIONS.find((R) => {
+    const n = tnode(R.root);
+    if (!n) return false;
+    // a little margin: an open sheet pushes the map centre east of the region
+    const b = n[2], m = R.key === "suisse" ? 0.1 : 0.3;
+    return z >= (R.key === "suisse" ? 7.5 : 8) && c.lng >= b[0] - m && c.lng <= b[2] + m && c.lat >= b[1] - m && c.lat <= b[3] + m;
+  }) || null;
+}
+// in a Deep Region: the key on the map and quieter vineyards; the map button names the region nearby
 function deepView() {
-  const n = tnode("g:FR/bourgogne");
-  if (!n || !WEB) return;
-  // a little margin: an open sheet pushes the map centre east of the Côte
-  const b = n[2], c = map.getCenter(), m = 0.3;
-  const on = !QUIZ_ON && map.getZoom() >= 8 && c.lng >= b[0] - m && c.lng <= b[2] + m && c.lat >= b[1] - m && c.lat <= b[3] + m;
-  if (on === DS.view) return;
-  DS.view = on;
-  $("deepKey").hidden = !on;
-  if (on) { renderDeepKey(); ensureDeepHa(); }
+  if (!WEB) return;
+  const R = QUIZ_ON ? null : deepRegionInView(), key = R ? R.key : null;
+  deepGoLabel();
+  if (key === DS.view) return;
+  DS.view = key;
+  $("deepKey").hidden = !R;
+  if (R) { renderDeepKey(); ensureDeepHa(key); }
   const vines = ["osm-vine-fill", "vine-fill"].filter((l) => map.getLayer(l));
   if (!DS.vineOrig) DS.vineOrig = Object.fromEntries(vines.map((l) => [l, map.getPaintProperty(l, "fill-opacity")]));
-  vines.forEach((l) => setP(l, "fill-opacity", on ? ["interpolate", ["linear"], ["zoom"], 8, 0.16, 13, 0.12] : DS.vineOrig[l]));
+  vines.forEach((l) => setP(l, "fill-opacity", R ? ["interpolate", ["linear"], ["zoom"], 8, 0.16, 13, 0.12] : DS.vineOrig[l]));
 }
-const DEEP_LEVELS = [["grand", N_("Grand cru")], ["premier", N_("Premier cru")], ["village", N_("Village")], ["regional", N_("Regional")]];
+const DEEP_LEVELS = DEEP_REGIONS[0].levels;
 function renderDeepKey() {
-  const el = $("deepKey");
-  el.innerHTML = '<span class="dk-h">' + t_("Bourgogne · 4 levels") + "</span>" + DEEP_LEVELS.map(([k, l]) =>
+  const R = deepReg(DS.view) || DEEP_REGIONS[0], el = $("deepKey");
+  el.setAttribute("aria-label", t_(R.keyHead));
+  el.innerHTML = '<span class="dk-h">' + t_(R.keyHead) + "</span>" + R.levels.map(([k, l]) =>
     '<button type="button" class="dk-' + k + '" data-deep-level="' + k + '" aria-pressed="' + DS.show[k] + '"><i></i>' + esc(t_(l)) + "</button>").join("");
 }
 document.addEventListener("click", (e) => {
@@ -1618,19 +1659,34 @@ document.addEventListener("click", (e) => {
   DS.show[b.dataset.deepLevel] = !DS.show[b.dataset.deepLevel];
   renderDeepKey(); applyLegend();
 });
-// the way into the Deep Region: the Bourgogne sheet, and the map on the Côte d'Or (Côte de Nuits and Côte de Beaune)
-function openDeepBurgundy() {
-  if (!TREE || !tnode("g:FR/bourgogne")) return;
-  if (QUIZ_ON) return;
-  openGroup("g:FR/bourgogne", false);
-  const bb = ["g:FR/bourgogne/cote-de-nuits", "g:FR/bourgogne/cote-de-beaune"].map((k) => tnode(k) && tnode(k)[2]).filter(Boolean);
-  const b = bb.length ? [Math.min(...bb.map((x) => x[0])), Math.min(...bb.map((x) => x[1])), Math.max(...bb.map((x) => x[2])), Math.max(...bb.map((x) => x[3]))] : tnode("g:FR/bourgogne")[2];
-  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: 11, pitch: Math.min(map.getPitch(), pitchCap(10)), duration: REDUCED ? 0 : 2600, essential: true });
-  ensureDeepHa();
-  if (WEB) try { history.replaceState(null, "", "#burgundy"); } catch (e) {}
-  try { window.va && window.va("event", { name: "deep_open", data: { region: "bourgogne" } }); } catch (e) {}
+// the map button: Switzerland when the map is over it, Burgundy everywhere else
+function deepGoLabel() {
+  const btn = $("deepGo");
+  if (!btn || btn.hidden) return;
+  const c = map.getCenter(), n = tnode("g:CH"), m = 1.2;
+  const ch = n && tnode("g:CH")[3].length && map.getZoom() >= 4.5 && c.lng >= n[2][0] - m && c.lng <= n[2][2] + m && c.lat >= n[2][1] - m && c.lat <= n[2][3] + m;
+  const R = deepReg(ch ? "suisse" : "bourgogne");
+  if (btn.dataset.region === R.key) return;
+  btn.dataset.region = R.key;
+  btn.querySelector("span").textContent = t_(R.go);
+  btn.title = t_(R.key === "suisse" ? "Every Swiss wine area, commune and grand cru, with its planted hectares" : "Grands crus, premiers crus and villages of the Côte d'Or, with their hectares");
+}
+// the way into a Deep Region: its sheet, and the map on its heart (the Côte d'Or for Burgundy, the whole country for Switzerland)
+function openDeep(key) {
+  const R = deepReg(key);
+  if (!R || !TREE || !tnode(R.root) || QUIZ_ON) return;
+  openGroup(R.root, false);
+  const bb = R.fit.map((k) => tnode(k) && tnode(k)[2]).filter(Boolean);
+  const b = bb.length ? [Math.min(...bb.map((x) => x[0])), Math.min(...bb.map((x) => x[1])), Math.max(...bb.map((x) => x[2])), Math.max(...bb.map((x) => x[3]))] : tnode(R.root)[2];
+  map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: R.fitZ, pitch: Math.min(map.getPitch(), pitchCap(10)), duration: REDUCED ? 0 : 2600, essential: true });
+  ensureDeepHa(key);
+  if (WEB) try { history.replaceState(null, "", "#" + R.hash); } catch (e) {}
+  try { window.va && window.va("event", { name: "deep_open", data: { region: key } }); } catch (e) {}
   if (PHONE()) $("rail").classList.remove("open");
 }
+const openDeepBurgundy = () => openDeep("bourgogne");
+const openDeepSwiss = () => openDeep("suisse");
+const DEEP_HASH = Object.fromEntries(DEEP_REGIONS.map((R) => [R.hash, R.key]));
 // a hidden level comes back for the place being looked at
 function deepForce(id) {
   const m = deepClasses(), cl = id && m ? m.get(id) : null, f = cl && !DS.show[cl] ? id : null;
@@ -2831,23 +2887,30 @@ function shortName(name, parent) {
 // the region and group sheets and every grand cru stay open, plus DEEP.free other Burgundy places on this device.
 // After that the sheet shows its opening sentence and asks for a free account. A soft wall, not a lock: the static
 // place pages stay public. Off in the artifact host and whenever accounts are switched off in config.js.
-const DEEP = { root: "g:FR/bourgogne", free: 3, key: "deep.bourgogne", gated: null };
+// Switzerland works the same way: the cantonal AOCs and the grands crus stay open, DEEP.free other Swiss places free.
+const DEEP = { free: 3, gated: null };
 const deepOn = () => WEB && !QUIZ_ON && !(window.OWA_CONFIG && window.OWA_CONFIG.accountsOpen === false);
-const inDeep = (id) => !!TREE && TPARENT.has(id) && pathOf(id).includes(DEEP.root);
+const DEEP_TXT = {
+  bourgogne: { free: N_("Free preview: Burgundy place {n} of {free}. A free account opens all {total}."), title: N_("Burgundy in full depth"),
+    wall: N_("You have explored {n} Burgundy places for free. A free account opens all {total}: every village, premier cru and climat, with terrain, soils, rules and producers.") },
+  suisse: { free: N_("Free preview: Swiss place {n} of {free}. A free account opens all {total}."), title: N_("Switzerland in full depth"),
+    wall: N_("You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.") },
+};
 function deepSignedIn() {
   if (window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn()) return true;
   try { return !!localStorage.getItem("owa.auth"); } catch (e) { return false; }
 }
-function deepSeen() { try { const a = JSON.parse(store.get(DEEP.key) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+function deepSeen(key) { try { const a = JSON.parse(store.get("deep." + key) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
 // null: nothing to show; { n }: a free preview, the nth of DEEP.free; { wall: true }: ask for an account
 function deepState(p) {
-  if (!deepOn() || p.rank === "grand_cru" || !inDeep(p.id) || deepSignedIn()) return null;
-  const seen = deepSeen(), i = seen.indexOf(p.id);
-  if (i >= 0) return { n: i + 1 };
-  if (seen.length >= DEEP.free) return { wall: true };
-  seen.push(p.id); store.set(DEEP.key, JSON.stringify(seen));
+  const R = deepOn() && p.rank !== "grand_cru" && !/^ch-canton-/.test(p.id) ? deepRegionOf(p.id) : null;
+  if (!R || deepSignedIn()) return null;
+  const seen = deepSeen(R.key), i = seen.indexOf(p.id);
+  if (i >= 0) return { n: i + 1, R };
+  if (seen.length >= DEEP.free) return { wall: true, R };
+  seen.push(p.id); store.set("deep." + R.key, JSON.stringify(seen));
   owaTrack("deep_preview");
-  return { n: seen.length };
+  return { n: seen.length, R };
 }
 // daily totals of a few steps for the admin page (supabase/migrations/…_admin.sql): a name and nothing else
 let cfgLoading = null;
@@ -2867,10 +2930,10 @@ function deepGate(p) {
   DEEP.gated = null;
   const st = deepState(p), body = $("sh-body");
   if (!st || !body) return;
-  const total = countOf(DEEP.root) || 0;
+  const R = st.R, T = DEEP_TXT[R.key], total = countOf(R.root) || 0;
   const lede = body.querySelector("p.lede");
   if (!st.wall) {
-    const note = '<p class="deep-note">' + t_("Free preview: Burgundy place {n} of {free}. A free account opens all {total}.", { n: "<b>" + st.n + "</b>", free: DEEP.free, total: fmt(total) }) +
+    const note = '<p class="deep-note">' + t_(T.free, { n: "<b>" + st.n + "</b>", free: DEEP.free, total: fmt(total) }) +
       ' <button type="button" data-deep-join>' + t_("Create my free account") + "</button></p>";
     if (lede) lede.insertAdjacentHTML("afterend", note); else body.insertAdjacentHTML("afterbegin", note);
     return;
@@ -2882,19 +2945,19 @@ function deepGate(p) {
   [...body.children].filter((c) => c !== lede).forEach((c) => lock.appendChild(c));
   const wall = document.createElement("div");
   wall.className = "deep-wall";
-  wall.innerHTML = '<span class="ey">' + t_("Deep Region") + " · Bourgogne</span><h3>" + t_("Burgundy in full depth") + "</h3><p>" +
-    t_("You have explored {n} Burgundy places for free. A free account opens all {total}: every village, premier cru and climat, with terrain, soils, rules and producers.", { n: DEEP.free, total: fmt(total) }) +
+  wall.innerHTML = '<span class="ey">' + t_("Deep Region") + " · " + esc(R.name) + "</span><h3>" + t_(T.title) + "</h3><p>" +
+    t_(T.wall, { n: DEEP.free, total: fmt(total) }) +
     '</p><div class="acts"><button type="button" class="primary" data-deep-join>' + t_("Create my free account") + '</button><button type="button" data-deep-join>' + t_("I already have an account") + "</button></div>" +
     '<p class="fine">' + t_("No card, no password: we email you a code. Grand crus stay open for everyone.") + "</p>";
   body.appendChild(wall);
   body.appendChild(lock);
   owaTrack("deep_wall");
-  try { window.va && window.va("event", { name: "deep_wall", data: { region: "bourgogne" } }); } catch (e) {}
+  try { window.va && window.va("event", { name: "deep_wall", data: { region: R.key } }); } catch (e) {}
 }
 document.addEventListener("click", (e) => {
   if (!e.target.closest("[data-deep-join]")) return;
   e.preventDefault();
-  try { window.va && window.va("event", { name: "deep_join", data: { region: "bourgogne" } }); } catch (e2) {}
+  try { window.va && window.va("event", { name: "deep_join", data: { region: DEEP.gated ? (deepRegionOf(DEEP.gated.id) || {}).key : "" } }); } catch (e2) {}
   owaTrack("deep_join");
   try { sessionStorage.setItem("owa.signup_src", "deep_wall"); } catch (e2) {}
   openDash("account");
@@ -2915,7 +2978,7 @@ async function select(p, feature) {
   renderSheet(p, d, rec, pd, parentRec);
   deepGate(p);
   deepForce(p.id);
-  if (deepClasses() && deepClasses().has(p.id)) ensureDeepHa();
+  if (deepClasses() && deepClasses().has(p.id)) { const R = deepRegionOf(p.id); if (R) ensureDeepHa(R.key); }
   // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
   if (SET && SET.ids.includes(p.id)) setBackChip(); else clearSet();
   setActive(p.id);
@@ -3096,7 +3159,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
+  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality && !(p.src === "chreg" && d.communes) ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
     (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "");
   if (liveVines(d)) rows.push([N_("Vineyard area"), '<span id="vine-ha"><span class="note">' + t_("Measuring the vineyards…") + "</span></span>"]);
   else if (areaHtml) rows.push([N_("Area"), areaHtml]);
@@ -3167,6 +3230,12 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     html += '<div class="sec"><h3>' + t_("Grapes planted") + '</h3><div class="bars">' +
       d.grape_share.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + Math.min(100, pc) + '%"></i></span><span class="num">' + fmtN(pc, 1) + "%</span></div>").join("") +
       "</div>" + (d.grape_share_note ? '<p class="note">' + esc(t_(d.grape_share_note)) + "</p>" : "") + "</div>";
+  }
+
+  // rules and traditional names in plain words (Switzerland: cantonal wine laws)
+  if (d.rules?.length) {
+    html += '<div class="sec"><h3>' + t_("Rules and names") + '</h3><dl class="facts">' +
+      d.rules.map(([k, v]) => "<dt>" + esc(t_(k)) + "</dt><dd>" + esc(v) + "</dd>").join("") + "</dl></div>";
   }
 
   // premiers crus that are listed but not mapped yet (Geneva)
@@ -4990,7 +5059,9 @@ map.on("load", async () => {
     children.forEach((list) => list.sort((a, b) => (PRI[b[3]] - PRI[a[3]]) || ((TOP.includes(b[4]) ? 2 : b[4] === "premier_cru" ? 1 : 0) - (TOP.includes(a[4]) ? 2 : a[4] === "premier_cru" ? 1 : 0)) || a[0].localeCompare(b[0])));
     $("count").textContent = fmt(INDEX.length);
     if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView);
-      if (tnode("g:FR/bourgogne")) { $("deepGo").hidden = false; $("deepCard").hidden = false; $("deepGo").onclick = openDeepBurgundy; $("deepCard").onclick = openDeepBurgundy; } }
+      if (tnode("g:FR/bourgogne")) { $("deepGo").hidden = false; $("deepCard").hidden = false; $("deepCard").onclick = openDeepBurgundy;
+        $("deepGo").onclick = () => openDeep($("deepGo").dataset.region || "bourgogne"); deepGoLabel(); }
+      if (tnode("g:CH") && $("deepCardCH")) { $("deepCardCH").hidden = false; $("deepCardCH").onclick = openDeepSwiss; } }
     else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
@@ -5022,7 +5093,7 @@ map.on("load", async () => {
     const hid = decodeURIComponent(location.hash.slice(1));
     const GEO_HASH = /^(river|lake|peak|range):/;
     if (hid && byId.has(hid)) goTo(byId.get(hid));
-    else if (hid === "burgundy") openDeepBurgundy();
+    else if (DEEP_HASH[hid]) openDeep(DEEP_HASH[hid]);
     else if (hid && tnode(hid)) openGroup(hid);
     else if (GEO_HASH.test(hid)) geoReady.then(() => openGeo(hid));
     else if (SET_HASH.test(hid)) openSetHash(hid);
@@ -5032,7 +5103,7 @@ map.on("load", async () => {
     window.addEventListener("hashchange", () => {
       const h = decodeURIComponent(location.hash.slice(1));
       if (h && byId.has(h)) goTo(byId.get(h));
-      else if (h === "burgundy") openDeepBurgundy();
+      else if (DEEP_HASH[h]) openDeep(DEEP_HASH[h]);
       else if (h && tnode(h)) openGroup(h);
       else if (GEO_HASH.test(h) && (!HL || HL.gid !== h)) geoReady.then(() => openGeo(h));
       else if (SET_HASH.test(h) && (!SET || SET.hash !== h)) openSetHash(h);

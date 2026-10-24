@@ -210,7 +210,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     if (s < 86400 * 30) return Math.round(s / 86400) + " days ago";
     return day(d);
   };
-  const SOURCES = { deep_wall: "Burgundy wall", founding: "Founding page", account: "My atlas › Account", direct: "Before tracking" };
+  const SOURCES = { deep_wall: "Deep Region wall (Burgundy, Switzerland)", founding: "Founding page", account: "My atlas › Account", direct: "Before tracking" };
   const LEVELS = { enthusiast: "Wine lover", student: "Student", sommelier: "Sommelier", trade: "Trade", winemaker: "Winemaker", other: "Other", "not set": "Not set" };
   const show = (id) => ["gate", "denied", "app"].forEach((x) => { $(x).hidden = x !== id; });
   let sb = null, timer = 0, USERS = [], NAMES = null, sortKey = "created_at", sortDir = -1;

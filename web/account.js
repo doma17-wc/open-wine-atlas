@@ -246,7 +246,7 @@ function signedOut() {
   const c = counts(), have = c.saved + c.tastings + c.notes;
   const intro = '<h3>' + t_("Your atlas on every device") + '</h3><p class="lead">' + t_("Sign in with your email. We send you a code, no password needed.") + " " +
     (have ? t_("What is on this device comes with you: {list}.", { list: countList(c) }) : t_("Your saved places, tastings and notes follow you from phone to laptop.")) + " " +
-    t_("It is free, and it opens Burgundy in full depth.") + "</p>";
+    t_("It is free, and it opens Burgundy and Switzerland in full depth.") + "</p>";
   if (S.step === "code") return '<div class="acct-card">' + intro +
     '<form class="jform" id="acct-code-form" autocomplete="off"><label class="wide">' + t_("We sent a code to {email}. Enter it here.", { email: "<b>" + esc(S.email) + "</b>" }) +
     '<input id="acct-code" class="code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="••••••" required></label>' +

@@ -1351,5 +1351,14 @@
  "Commune": "村",
  "Regional AOC": "地域AOC",
  "Grand cru appellation": "グラン・クリュのアペラシオン",
- "Lieu de production": "生産地区（リュー・ド・プロデュクシオン）"
+ "Lieu de production": "生産地区（リュー・ド・プロデュクシオン）",
+ "Switzerland in depth": "スイスを深く",
+ "Switzerland in full depth": "スイスを隅々まで",
+ "Switzerland · 4 levels": "スイス · 4つの階層",
+ "Regional AOC and wine area": "地域AOCとワイン産地",
+ "Every Swiss wine area, commune and grand cru, with its planted hectares": "スイスのすべてのワイン産地、村、グラン・クリュとその栽培面積",
+ "Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.": "すべての州、地域AOC、ワイン産地、村、グラン・クリュとその栽培面積。",
+ "Free preview: Swiss place {n} of {free}. A free account opens all {total}.": "無料プレビュー：スイスの場所 {n} / {free}。無料アカウントで全{total}か所が開きます。",
+ "You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.": "スイスの場所を{n}か所無料で見ました。無料アカウントで全{total}か所が開きます：すべての地域AOC、ワイン産地、村、生産地区を、栽培面積、品種、ラベル規則、生産者とともに。",
+ "It is free, and it opens Burgundy and Switzerland in full depth.": "無料で、ブルゴーニュとスイスを隅々まで開きます。"
 }
