@@ -684,6 +684,478 @@
      "Blanc de noirs from Pinot Noir. Protected as the guarantee mark Perdrix blanche®; the 2010 AOC decree barred blending and tied its making to the mark's rules (art. 10 and 11). Not named in the 2016 decree."
     ]
    ]
+  },
+  "ch-canton-1": {
+   "official_name": "AOC Zürich",
+   "area_ha": 609.2,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "57% red, 43% white, 2025. Strickhof gave 604.6 ha of bearing vineyard for 2024.",
+   "grape_ha": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     253.8
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     105.9
+    ],
+    [
+     "Sauvignon Blanc",
+     21.4
+    ],
+    [
+     "Räuschling",
+     20.7
+    ],
+    [
+     "Chardonnay",
+     17.8
+    ],
+    [
+     "Pinot Gris",
+     14.9
+    ]
+   ],
+   "grape_note": "Read from BLW, Das Weinjahr 2025, tables 1.2 and 1.3 (Zürich column). Strickhof 2024: Blauburgunder 254 ha, Riesling-Silvaner 107.7 ha.",
+   "basis": "Verordnung über den Rebbau, LS 916.51, §§ 12b to 12d: the Baudirektion sets the designations of origin and their areas; details in the Verfügung des ALN über den Rebbau",
+   "label_rule": "A geographic Zusatzbezeichnung (Lage, Flurname, region, hamlet) must be on the cantonal list (Anhang 1 of the ALN Verfügung) and 100% of the wine must come from it, apart from the federal blending tolerance (Strickhof). For AOC Zürichsee a commune name needs at least 85% from that commune (Schwyz decree 2025, Ziff. 2.3, which must match the Zürich rules).",
+   "atlas_note": "The largest wine canton of German-speaking Switzerland, with about 600 ha. Swiss Wine counts five regions: the Weinland in the Andelfingen district, the Unterland, the Zürichsee, Winterthur and the Limmattal. Blauburgunder covers about 42% and Riesling-Silvaner about 17%. Räuschling, called the Zürichsee vine, is the local white grape, on about 20 ha.",
+   "history_note": "Benedictines brought vines to the island of Rheinau in the 9th century. In the late 19th century over 20,000 growers worked 5,600 ha (Swiss Wine).",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Kanton Zürich, Verordnung über den Rebbau, LS 916.51",
+     "https://www.lexaris.de/book/version/documentflat/head/223701"
+    ],
+    [
+     "Strickhof, Weinbezeichnungen: korrekte Verwendung von Zusatzbezeichnungen",
+     "https://www.strickhof.ch/publikationen/weinbezeichnungen-lage-flurname-korrekte-verwendung-von-zusatzbezeichnungen/"
+    ],
+    [
+     "Strickhof, Vorläufiger Rückblick auf das Weinjahr 2024",
+     "https://www.strickhof.ch/publikationen/vorlaeufiger-rueckblick-auf-das-weinjahr-2024/"
+    ],
+    [
+     "Kanton Schwyz, Allgemeinverfügung betreffend AOC Zürichsee (28.7.2025)",
+     "https://www.sz.ch/public/upload/assets/47307/Allgemeinverfuegung_Betreffend_AOC_Zuerichsee.pdf?fp=5"
+    ],
+    [
+     "Swiss Wine, Zurich",
+     "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+    ],
+    [
+     "Zürcher Weinbauverband, Weinbaugebiete",
+     "https://www.zuercherwein.ch/weinbaugebiete/"
+    ]
+   ]
+  },
+  "ch-canton-14": {
+   "official_name": "AOC Schaffhausen",
+   "area_ha": 471.6,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "68% red, 2025 (BLW). The cantonal Fachstelle counts 463.48 ha planted plus 30.58 ha unplanted vineyard in 2025: 436.15 ha AOC, 25.99 ha Landwein.",
+   "grape_ha": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     255.6
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     66.5
+    ],
+    [
+     "Chardonnay",
+     14.5
+    ],
+    [
+     "Sauvignon Blanc",
+     13.5
+    ],
+    [
+     "Pinot Gris",
+     11.0
+    ],
+    [
+     "Souvignier Gris",
+     8.6
+    ],
+    [
+     "Merlot",
+     8.0
+    ],
+    [
+     "Pinot Blanc",
+     7.2
+    ],
+    [
+     "Muscaris",
+     6.8
+    ],
+    [
+     "Cabernet Dorsa",
+     6.7
+    ]
+   ],
+   "grape_note": "Planted area 2025, Fachstelle Rebbau SH-TG (Bericht Weinbau 2025). 34 red and 24 white varieties.",
+   "growers": 313,
+   "basis": "Kantonale Weinverordnung, SHR 817.402 (in force 1 Dec 2009), § 10 and § 11",
+   "label_rule": "Commune name: 60% of the wine from that commune and 100% from the same production area (§ 11 Abs. 2). Several communes of one area may be named together if 100% comes from them. Lage name: 100% from the site, which must be in the cantonal Reblagenverzeichnis (§ 11 Abs. 4).",
+   "atlas_note": "The Blauburgunderland: Pinot Noir covers over half the vines. The law splits the canton into two production areas, the Klettgau in the west with about four fifths of the vines, and Reiat/Rhein around the city, Stein am Rhein and Buchberg. Hallau is the largest wine commune of German-speaking Switzerland. The All Saints monastery in Schaffhausen owned vines in Hallau by 1100.",
+   "harvest_2025_kg": 3577298,
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+     "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+    ],
+    [
+     "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+     "https://lexaris.de/book/version/documentflat/head/5002668"
+    ],
+    [
+     "Swiss Wine, Schaffhausen",
+     "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+    ]
+   ]
+  },
+  "ch-canton-20": {
+   "official_name": "AOC Thurgau",
+   "area_ha": 238.1,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "59% red, 2025 (BLW). The Fachstelle counts 242.24 ha planted plus 27.39 ha unplanted in 2025: 212.13 ha AOC, 26.42 ha Landwein.",
+   "grape_ha": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     99.8
+    ],
+    [
+     "Müller-Thurgau",
+     47.6
+    ],
+    [
+     "Souvignier Gris",
+     7.0
+    ],
+    [
+     "Sauvignon Blanc",
+     5.4
+    ],
+    [
+     "Pinot Gris",
+     5.3
+    ],
+    [
+     "Muscaris",
+     4.2
+    ],
+    [
+     "Solaris",
+     3.9
+    ],
+    [
+     "Sauvignac",
+     3.9
+    ]
+   ],
+   "grape_note": "Planted area 2025, Fachstelle Rebbau SH-TG (Bericht Weinbau 2025). 32 red and 31 white varieties.",
+   "growers": 149,
+   "basis": "Landwirtschaftsverordnung, RB 910.11, §§ 36 to 37 and Anhänge 1 to 3",
+   "label_rule": "Commune, former commune or Ortsteil from Anhang 2: 60% from that place, the rest from Thurgau (§ 36d Abs. 2). Reblage from Anhang 3: the wine must come from that site (§ 36d Abs. 3). Outside the listed names the political commune applies.",
+   "atlas_note": "A small wine canton in the land of apples, with about 240 ha left from more than 2,000 ha two centuries ago. Hermann Müller, born in Thurgau, bred the Müller-Thurgau grape in 1882 and it carries the canton's name. The law groups the vines in three production areas: Unteres Thurtal, Oberes Thurtal and Untersee. Swiss Wine counts six smaller regions.",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+     "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+    ],
+    [
+     "Landwirtschaftsverordnung Thurgau, RB 910.11, §§ 36 to 37",
+     "https://www.lexaris.de/book/version/documentflat/head/2446042"
+    ],
+    [
+     "Landwirtschaftsverordnung Thurgau, Anhänge 1 to 5",
+     "https://www.rechtsbuch.tg.ch/frontend/structured_documents/2058/download_pdf_annex?locale=de"
+    ],
+    [
+     "LwV TG Anhang 2, Zusatzbezeichnungen nach Gemeinden und Ortsteilen",
+     "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7212"
+    ],
+    [
+     "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+     "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+    ],
+    [
+     "Swiss Wine, Thurgau",
+     "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+    ]
+   ]
+  },
+  "ch-canton-19": {
+   "official_name": "AOC Aargau",
+   "area_ha": 383.2,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "64% red, 2025 (BLW). Liebegg counted 381.3 ha and 583 growers in 2024.",
+   "grape_ha": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     181.5
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     65.9
+    ],
+    [
+     "Sauvignon Blanc",
+     17.9
+    ],
+    [
+     "Chardonnay",
+     10.2
+    ],
+    [
+     "Pinot Gris",
+     7.5
+    ],
+    [
+     "Cabernet Dorsa",
+     4.7
+    ],
+    [
+     "Zweigelt",
+     4.3
+    ]
+   ],
+   "grape_note": "BLW, Das Weinjahr 2025, tables 1.2 and 1.3 (Aargau column)",
+   "growers": 584,
+   "basis": "Verordnung über den Weinbau (Weinbauverordnung), SAR 915.712, § 14; Grand Cru chapter §§ 19b to 19i since 1 Jan 2025",
+   "label_rule": "The whole canton is one production area (§ 14 Abs. 1). Ortschaft or commune name: at least 60% from there; region name: at least 90%; Lage name: at least 90% (§ 14 Abs. 2 to 4). Other blends are AOC Aargau. The Liebegg publishes the approved Lage names: 77 sites in 37 communes (Feb 2025).",
+   "atlas_note": "About 380 ha spread over many small villages, mostly on south facing slopes of the main and side valleys. Almost 600 growers, most of them part time on under one hectare. Blauburgunder is about half the area. In the 1880s the canton had 2,700 ha of vines. Since 2025 the law has a Grand Cru Aargau for Pinot Noir.",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+     "https://www.lexfind.ch/tolv/250012/de"
+    ],
+    [
+     "Aargau, Änderung der Weinbauverordnung vom 27.11.2024 (Grand Cru Aargau)",
+     "https://gesetzessammlungen.ag.ch/frontend/change_document_file_dictionaries/1833/download_pdf_file?locale=de"
+    ],
+    [
+     "Liebegg, Weinlesebericht Kanton Aargau 2024",
+     "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+    ],
+    [
+     "Liebegg, Factsheet Weinbau im Aargau (Dez. 2025)",
+     "https://www.liebegg.ch/upload/rm/fa/ct/factsheet-weinbau-2025-1.pdf"
+    ],
+    [
+     "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+     "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+    ],
+    [
+     "Swiss Wine, Aargau",
+     "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+    ]
+   ],
+   "rules": [
+    [
+     "Grand cru",
+     "Grand Cru Aargau (since 2025): Blauburgunder only, from approved parcels scoring 140 of 180 points, vines at least 15 years old, at most 0.6 kg/m², at least 95 °Oechsle, 12 months in barrique, no chaptalisation, 18 of 20 points at tasting, release from 1 June of the second year (SAR 915.712 §§ 19b to 19i)"
+    ]
+   ]
+  },
+  "ch-canton-17": {
+   "official_name": "AOC St.Gallen (Kontrollierte Ursprungsbezeichnung St.Gallen)",
+   "area_ha": 203.7,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "74.9 ha white, 128.9 ha red, 2025 (BLW). The cantonal harvest control lists 200.2 ha by variety in 2025.",
+   "grape_share": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     48.0
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     8.9
+    ],
+    [
+     "Chardonnay",
+     6.1
+    ],
+    [
+     "Sauvignon Blanc",
+     4.8
+    ],
+    [
+     "Johanniter",
+     4.6
+    ],
+    [
+     "Merlot",
+     2.8
+    ],
+    [
+     "Pinot Gris",
+     1.8
+    ],
+    [
+     "Zweigelt",
+     1.7
+    ]
+   ],
+   "grape_share_note": "Share of the 200.2 ha in the LZSG harvest control 2025: Blauburgunder 96.1 ha, Müller-Thurgau 17.9 ha, Chardonnay 12.2 ha, Sauvignon Blanc 9.6 ha, Johanniter 9.2 ha, Merlot 5.6 ha, Pinot Gris 3.6 ha, Zweigelt 3.4 ha. Over 70 varieties in all.",
+   "growers": 400,
+   "basis": "Landwirtschaftsverordnung sGS 610.11, Art. 34-41b (Stand 1 Aug 2024)",
+   "label_rule": "AOC St.Gallen: at least 90% of the grapes from the canton (Art. 35). Production area name: 100% from it; commune name: at least 60% from the commune, the rest from the same production area; named part of a commune: it must hold two thirds of the commune's vines and give 60% of the grapes; single site: 100% (Art. 41a).",
+   "subregions": "Four production areas (Art. 41a Abs. 2): St.Galler Rheintal, Sarganserland (or Sarganserland-Walensee / Walensee for the lakeside communes), Zürichsee (only together with the commune name) and Fürstenland.",
+   "atlas_note": "Most of the vines are in the St. Gallen Rhine valley and the Sarganserland, on steep south slopes. Blauburgunder covers about half the area. Berneck is the largest wine commune, and Pfäfers has the highest vineyard of eastern Switzerland at 740 m. Wine from Appenzell is checked by the same cantonal office in the harvest control.",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "LZSG, Weinlese 2025 nach Kanton (SG, AI, AR)",
+     "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Kanton-inkl.-AI-AR-2025-3-2.pdf"
+    ],
+    [
+     "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+     "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+    ],
+    [
+     "LZSG, Weinlese 2025 nach Region",
+     "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Region-inkl.-AI-AR-2025-1.pdf"
+    ],
+    [
+     "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+     "https://lexaris.de/book/version/documentflat/head/5014484"
+    ],
+    [
+     "sGS 610.11, Gesetzessammlung St.Gallen",
+     "https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/610.11"
+    ],
+    [
+     "St. Galler Wein, Einzigartigkeit",
+     "https://www.stgaller-wein.ch/einzigartigkeit/"
+    ]
+   ],
+   "rules": [
+    [
+     "Growers",
+     "About 400 growers; 25 estates press their own grapes (St. Galler Wein)"
+    ]
+   ]
+  },
+  "ch-canton-13": {
+   "official_name": "AOC Basel-Landschaft (Kontrollierte Ursprungsbezeichnung Basel-Landschaft)",
+   "area_ha": 114.0,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "42.2 ha white, 71.8 ha red, 2025 (BLW)",
+   "grape_share": [
+    [
+     "Pinot Noir (Blauburgunder)",
+     46.5
+    ],
+    [
+     "Müller-Thurgau (Riesling-Silvaner)",
+     9.4
+    ],
+    [
+     "Kerner",
+     4.5
+    ],
+    [
+     "Sauvignon Blanc",
+     4.2
+    ],
+    [
+     "Chardonnay",
+     2.7
+    ],
+    [
+     "Pinot Gris",
+     2.5
+    ]
+   ],
+   "grape_share_note": "Ebenrain harvest control 2025, share of the 114.0 ha (BLW): Blauburgunder 52.9 ha, Riesling-Silvaner 10.7 ha, Kerner 5.1 ha, Sauvignon Blanc 4.8 ha, Chardonnay 3.1 ha, Pinot Gris 2.9 ha. BL, BS and SO together grow 83 varieties; 18.6% of the area is fungus resistant (interspecific) varieties.",
+   "basis": "Verordnung über den Pflanzenbau SGS 516.31, §§ 10-22 (Stand 1 May 2025); the Ebenrain centre in Sissach runs the vineyard register for BL, BS and SO",
+   "label_rule": "AOC Basel-Landschaft; Baselbieter Wein if the grapes come from the BL production area. Commune or registered regional name: at least 70% of the grapes from it, at most 30% from other communes of the same production area. Site (Lage): 100%, and the site must be in the cantonal Reblagenverzeichnis (§ 12).",
+   "atlas_note": "Vines on the south slopes of the Tafeljura and Faltenjura east and south of Basel. Blauburgunder is almost half the area, Riesling-Silvaner and Kerner lead the whites. Aesch, Maisprach, Sissach and Muttenz are the largest wine communes.",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+     "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+    ],
+    [
+     "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+     "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+    ],
+    [
+     "BLW, list of Swiss AOCs, 1 January 2026",
+     "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+    ]
+   ]
+  },
+  "ch-canton-3": {
+   "official_name": "AOC Luzern (KUB Luzern)",
+   "area_ha": 91.4,
+   "area_src": "BLW, Das Weinjahr 2025",
+   "area_note": "53.4 ha white, 37.9 ha red, 2025 (BLW). About 10 ha in the 1980s (SRF 2025).",
+   "growers": 60,
+   "piwi_note": "Fungus resistant (PIWI) varieties: over 45% of the area in 2025, against 3.5% in Switzerland (canton of Luzern via zentralplus, Nov 2025)",
+   "basis": "Verordnung über die kontrollierte Ursprungsbezeichnung für Weine SRL 917 (7 July 2009)",
+   "label_rule": "KUB Luzern or AOC Luzern on the main label. Region, commune or site may be added; a blend of regions may name only the canton, a blend of communes only canton and region (§ 3). Varieties making up at least 85% of the wine are listed in order (§ 4).",
+   "subregions": "Four wine regions (§ 2): Seetal, Surental/Sempachersee, Vierwaldstättersee and Wiggertal. The ordinance does not list their communes.",
+   "atlas_note": "A young wine canton that grew from about 10 ha in the 1980s to over 90 ha. Vines grow around the lakes of Lucerne, Sempach, Hallwil and Baldegg and in the lower Wiggertal. Close to half the area is fungus resistant varieties such as Solaris and Divico, far above the Swiss average of 3.5%. The AOC dates from 2005.",
+   "producers_note": "Weingut Heidegg in Gelfingen (8 ha) and Bioweingut Sitenrain in Meggen (SRF, 2025)",
+   "refs": [
+    [
+     "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+     "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+    ],
+    [
+     "Luzern SRL 917, Verordnung über die kontrollierte Ursprungsbezeichnung für Weine",
+     "https://www.lexfind.ch/tolv/253155/de"
+    ],
+    [
+     "Felder et al., Luzern: moderner Weinbaukanton mit Potenzial, SZOW 2023",
+     "https://digitalcollection.zhaw.ch/bitstream/11475/27784/3/2023_Felder-etal_Luzern-moderner-Weinbaukanton-mit-Potenzial_SZOW.pdf"
+    ],
+    [
+     "BBZN, Weinbau",
+     "https://beruf.lu.ch/Berufslehre/Berufslehre_im_Betrieb/Berufsfachschule/berufsbildungszentren/bbzn/Beratung/Land_und_hauswirtschaftliche_Beratung/Pflanzenbau_Biodiversitaet/Spezialkulturen/Weinbau"
+    ],
+    [
+     "zentralplus, Luzerns Winzer feiern Erfolg gegen den Trend (19 Nov 2025)",
+     "https://www.zentralplus.ch/essen-trinken/luzerns-winzer-feiern-erfolg-gegen-den-trend-2820280/"
+    ],
+    [
+     "SRF, Weinregion Luzern dank umstrittener Sorten zum Erfolg (16 Mar 2025)",
+     "https://www.srf.ch/news/schweiz/rebbau-in-der-zentralschweiz-weinregion-luzern-dank-umstrittener-sorten-zum-erfolg"
+    ]
+   ],
+   "rules": [
+    [
+     "Growers",
+     "60 growers, 12 of them press their own wine (Felder et al. 2023)"
+    ]
+   ]
   }
  },
  "places": [
@@ -1415,7 +1887,7 @@
     "type": "Regional AOC (Vaud and Fribourg)",
     "area_ha": 56.7,
     "area_src": "Registre cantonal des vignes VD, 2019",
-    "area_note": "Vaud part only. With Mont-Vully in Fribourg the appellation has about 150 ha.",
+    "area_note": "Vaud part only, 2019. The Fribourg part, Mont-Vully, had 102.9 ha in 2025 (Fribourg vineyard statistics): together about 160 ha.",
     "grape_ha": [
      [
       "Chasselas",
@@ -6523,6 +6995,3569 @@
      ]
     ]
    }
+  },
+  {
+   "id": "ch-reg-zh-zuerichsee",
+   "name": "AOC Zürichsee",
+   "level": "appellation",
+   "parent": "AOC Zürich",
+   "communes": [
+    "Erlenbach (ZH)",
+    "Herrliberg",
+    "Hombrechtikon",
+    "Küsnacht (ZH)",
+    "Meilen",
+    "Männedorf",
+    "Oetwil am See",
+    "Stäfa",
+    "Uetikon am See",
+    "Zollikon",
+    "Zumikon",
+    "Adliswil",
+    "Horgen",
+    "Kilchberg (ZH)",
+    "Langnau am Albis",
+    "Oberrieden",
+    "Richterswil",
+    "Rüschlikon",
+    "Thalwil",
+    "Wädenswil",
+    "Freienbach",
+    "Wollerau",
+    "Feusisberg",
+    "Altendorf",
+    "Lachen",
+    "Galgenen",
+    "Wangen (SZ)",
+    "Schübelbach",
+    "Tuggen",
+    "Reichenburg"
+   ],
+   "d": {
+    "type": "Regional AOC",
+    "area_ha": 130,
+    "area_src": "Swiss Wine (Zürich part, about)",
+    "area_note": "Swiss Wine: just over 130 ha on the Zürich side. The Zürcher Weinbauverband gives about 153 ha (Strickhof 2024). The St. Gallen shore uses AOC St. Gallen instead.",
+    "basis": "Zürich LS 916.51 § 12b; extended into Schwyz by the Schwyz Allgemeinverfügung of 28 July 2025 under Art. 21 Abs. 3 of the federal Weinverordnung",
+    "label_rule": "Commune name: at least 85% from that commune, at most 15% from another commune of the AOC Zürichsee. Region, Ortsteil, hamlet or Lage: 100%. Minimum 65 °Oe white, 70 °Oe red; at most 1.4 kg/m² white, 1.2 kg/m² red (Schwyz decree, identical to Zürich rules).",
+    "outline": "Whole Meilen and Horgen districts plus the ten Schwyz communes named in the decree. Zürich law fixes the exact Zürich communes; Swiss Wine adds newer vineyards in the city of Zürich and the Uster, Pfäffikon, Hinwil and Affoltern districts.",
+    "atlas_note": "A cross-cantonal AOC for both shores of the lake, from Zürich to the Linth plain in Schwyz. About 150 years ago the shores held nearly 2,000 ha of vines; little more than 130 ha remain on the Zürich side. This is the home of Räuschling, the old local white grape. Stäfa is the largest wine commune of the lake.",
+    "producers_note": "Schwarzenbach in Meilen, Diederik in Küsnacht, Lüthi in Männedorf, Erich Meier in Uetikon am See (Falstaff)",
+    "refs": [
+     [
+      "Kanton Schwyz, Allgemeinverfügung betreffend AOC Zürichsee (28.7.2025)",
+      "https://www.sz.ch/public/upload/assets/47307/Allgemeinverfuegung_Betreffend_AOC_Zuerichsee.pdf?fp=5"
+     ],
+     [
+      "Kanton Zürich, Verordnung über den Rebbau, LS 916.51",
+      "https://www.lexaris.de/book/version/documentflat/head/223701"
+     ],
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "LBC Weinschule, Zürichsee",
+      "https://static1.squarespace.com/static/5f5238e6fa3ec151dd715675/t/65cdc04838b2575dabae88f0/1707982951222/LBC+Zu%CC%88richsee.pdf"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ],
+     [
+      "Schwyz, Allgemeinverfügung AOC Zürichsee (25 June 2020)",
+      "https://sz.ch/public/upload/assets/47307/20200625-AOC%20Z%C3%BCrichsee%20AVerf.pdf?fp=1"
+     ],
+     [
+      "Schwyz, Verordnung über den Weinbau SRSZ 312.711",
+      "https://sz.ch/public/upload/assets/29708/312_711.pdf?fp=5"
+     ],
+     [
+      "Schwyz, Medienmitteilung Weinlese 2022",
+      "https://sz.ch/public/upload/assets/65384/20230220-MM%20Weinlese%202022.pdf?fp=1"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ],
+    "rules": [
+     [
+      "Schwyz side",
+      "The Schwyz side of the intercantonal AOC Zürichsee, shared with the canton of Zürich. Most of the Schwyz vines lie here, on the slopes of the Höfe and the March above the upper lake. Approved site names include Leutschen Klostergut and Insel Ufnau in Freienbach."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-weinland",
+   "name": "Zürcher Weinland",
+   "level": "subzone",
+   "parent": "AOC Zürich",
+   "communes": [
+    "Andelfingen",
+    "Benken (ZH)",
+    "Berg am Irchel",
+    "Buch am Irchel",
+    "Dachsen",
+    "Dorf",
+    "Feuerthalen",
+    "Flaach",
+    "Flurlingen",
+    "Henggart",
+    "Kleinandelfingen",
+    "Laufen-Uhwiesen",
+    "Marthalen",
+    "Ossingen",
+    "Rheinau",
+    "Stammheim",
+    "Thalheim an der Thur",
+    "Truttikon",
+    "Trüllikon",
+    "Volken"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 220,
+    "area_src": "Swiss Wine (about)",
+    "area_note": "Swiss Wine: about 220 ha. Zürcher Weinbauverband (Strickhof 2024): about 234 ha with 105 ha Pinot Noir and 40 ha Riesling-Silvaner.",
+    "basis": "Region used by Swiss Wine and the Zürcher Weinbauverband; whether the name is on the cantonal list of Zusatzbezeichnungen was not checked",
+    "label_rule": "Region and Lage names need 100% from the named area and must be on the cantonal list (Strickhof)",
+    "outline": "The Andelfingen district",
+    "atlas_note": "The largest wine region of the canton, in the Andelfingen district north of Winterthur, from the Irchel and the Kohlfirst to the Stammheim valley. Main wine villages are Stammheim, Ossingen, Benken and Trüllikon.",
+    "producers_note": "Zahner in Truttikon, Besson-Strasser in Uhwiesen (Falstaff)",
+    "refs": [
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-unterland",
+   "name": "Zürcher Unterland",
+   "level": "subzone",
+   "parent": "AOC Zürich",
+   "communes": [
+    "Bachenbülach",
+    "Bassersdorf",
+    "Bülach",
+    "Dietlikon",
+    "Eglisau",
+    "Embrach",
+    "Freienstein-Teufen",
+    "Glattfelden",
+    "Hochfelden",
+    "Höri",
+    "Hüntwangen",
+    "Kloten",
+    "Lufingen",
+    "Nürensdorf",
+    "Oberembrach",
+    "Opfikon",
+    "Rafz",
+    "Rorbas",
+    "Wallisellen",
+    "Wasterkingen",
+    "Wil (ZH)",
+    "Winkel",
+    "Bachs",
+    "Boppelsen",
+    "Buchs (ZH)",
+    "Dielsdorf",
+    "Dällikon",
+    "Dänikon",
+    "Hüttikon",
+    "Neerach",
+    "Niederglatt",
+    "Niederhasli",
+    "Niederweningen",
+    "Oberglatt",
+    "Oberweningen",
+    "Otelfingen",
+    "Regensberg",
+    "Regensdorf",
+    "Rümlang",
+    "Schleinikon",
+    "Schöfflisdorf",
+    "Stadel",
+    "Steinmaur",
+    "Weiach"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 145,
+    "area_src": "Swiss Wine (about)",
+    "area_note": "Swiss Wine: about 145 ha; Falstaff 144 ha; Zürcher Weinbauverband (Strickhof 2024): about 157 ha with 64.8 ha Pinot Noir.",
+    "basis": "Region used by Swiss Wine and the Zürcher Weinbauverband",
+    "label_rule": "Region and Lage names need 100% from the named area and must be on the cantonal list (Strickhof)",
+    "outline": "The Bülach and Dielsdorf districts",
+    "atlas_note": "The vines between the airport and the Rhine, up to the Rafzerfeld on the German border. Mostly Pinot Noir. Main wine villages are Eglisau, Freienstein-Teufen, Rafz and Wil.",
+    "producers_note": "Pircher in Eglisau (Falstaff)",
+    "refs": [
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-winterthur",
+   "name": "Winterthur",
+   "level": "subzone",
+   "parent": "AOC Zürich",
+   "communes": [
+    "Altikon",
+    "Brütten",
+    "Dinhard",
+    "Dägerlen",
+    "Dättlikon",
+    "Elgg",
+    "Ellikon an der Thur",
+    "Elsau",
+    "Hagenbuch",
+    "Hettlingen",
+    "Neftenbach",
+    "Pfungen",
+    "Rickenbach (ZH)",
+    "Schlatt (ZH)",
+    "Seuzach",
+    "Turbenthal",
+    "Wiesendangen",
+    "Winterthur",
+    "Zell (ZH)"
+   ],
+   "d": {
+    "type": "Wine area",
+    "aka": "Winterthurer Weinland",
+    "area_ha": 80,
+    "area_src": "Swiss Wine (about)",
+    "area_note": "Swiss Wine: 80 ha. Zürcher Weinbauverband (Strickhof 2024): about 89 ha with 30 ha Pinot Noir and 16 ha Riesling-Silvaner.",
+    "basis": "Region used by Swiss Wine and the Zürcher Weinbauverband",
+    "label_rule": "Region and Lage names need 100% from the named area and must be on the cantonal list (Strickhof)",
+    "outline": "The Winterthur district",
+    "atlas_note": "The city of Winterthur and the wine villages around it. Neftenbach is the largest wine commune. Winterthur has the oldest wine growers' association of the canton.",
+    "producers_note": "Nadine Saxer in Neftenbach, Stefan Herter near Winterthur (Falstaff)",
+    "refs": [
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-limmattal",
+   "name": "Limmattal",
+   "level": "subzone",
+   "parent": "AOC Zürich",
+   "communes": [
+    "Oetwil an der Limmat",
+    "Weiningen (ZH)",
+    "Unterengstringen",
+    "Oberengstringen",
+    "Urdorf"
+   ],
+   "d": {
+    "type": "Wine area",
+    "area_ha": 32,
+    "area_src": "Zürcher Weinbauverband (Strickhof 2024), about",
+    "area_note": "About 32 ha with 11.6 ha Pinot Noir and 9 ha Riesling-Silvaner; Swiss Wine says about 30 ha",
+    "basis": "Region used by Swiss Wine and the Zürcher Weinbauverband",
+    "label_rule": "Region and Lage names need 100% from the named area and must be on the cantonal list (Strickhof)",
+    "outline": "The five wine villages named by Swiss Wine in the Dietikon district",
+    "atlas_note": "The smallest wine region of the canton, on the north slope of the Limmat valley below Zürich. Weiningen holds most of the vines.",
+    "refs": [
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-staefa",
+   "name": "Stäfa",
+   "level": "subzone",
+   "parent": "AOC Zürichsee",
+   "communes": [
+    "Stäfa"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 40,
+    "area_src": "Zürcher Weinbauverband (Strickhof 2024), about",
+    "area_note": "About 40 ha, the largest wine commune of the Zürichsee. An older table gives 46.88 ha (Wikipedia, after Eggenberger, year not stated).",
+    "label_rule": "Stäfner on the label: at least 85% from Stäfa (AOC Zürichsee rule)",
+    "atlas_note": "The largest wine commune on Lake Zürich, on the right shore. Older sources call it the largest wine commune of the canton.",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Wikipedia, Weinbau am Zürichsee",
+      "https://de.wikipedia.org/wiki/Weinbau_am_Z%C3%BCrichsee"
+     ],
+     [
+      "Kanton Schwyz, Allgemeinverfügung betreffend AOC Zürichsee (28.7.2025)",
+      "https://www.sz.ch/public/upload/assets/47307/Allgemeinverfuegung_Betreffend_AOC_Zuerichsee.pdf?fp=5"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-stammheim",
+   "name": "Stammheim",
+   "level": "subzone",
+   "parent": "Zürcher Weinland",
+   "communes": [
+    "Stammheim"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "Oberstammheim, Unterstammheim and Waltalingen together had 42.6 ha around 2005, called the largest continuous vineyard of the canton (Zürcher Weinbauverband). No current commune figure found.",
+    "atlas_note": "The Stammheim valley at the northeast tip of the canton, on the Thurgau border. Since 2019 one commune, formed from Oberstammheim, Unterstammheim and Waltalingen.",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Rääbe und Wii Nr. 18, Herbst 2005",
+      "https://www.zuercherwein.ch/fileadmin/UserFiles/Nachlese/Raebe_und_Wii/RW_18_Herbst_2005.pdf"
+     ],
+     [
+      "Wikipedia, Stammheim, Zurich",
+      "https://en.wikipedia.org/wiki/Stammheim,_Zurich"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-ossingen",
+   "name": "Ossingen",
+   "level": "subzone",
+   "parent": "Zürcher Weinland",
+   "communes": [
+    "Ossingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 24.2,
+    "area_src": "Kanton Zürich, Flächenstatistik 2025",
+    "area_note": "20.87 ha vines plus 3.33 ha vines with natural species diversity (land-use codes 0701 and 0717, direct payments, 31 Dec 2025). A local grower gives 25 ha and 16 growers, fourth in the canton.",
+    "atlas_note": "A wine village of the Weinland. It founded the first wine growers' cooperative of the canton in 1897, when it still had over 90 ha of vines.",
+    "refs": [
+     [
+      "Kanton Zürich, Flächenstatistik 2025 nach Gemeinden",
+      "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/landwirtschaft/informationen/Flächenstatistik%20Kanton%20ZH%202025%20nach%20Gemeinden.pdf"
+     ],
+     [
+      "Steiner Rebbau, Ossinger Rebbau",
+      "https://www.steiner-rebbau.ch/ossinger-rebbau.html"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-truellikon",
+   "name": "Trüllikon",
+   "level": "subzone",
+   "parent": "Zürcher Weinland",
+   "communes": [
+    "Trüllikon"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 18.3,
+    "area_src": "Kanton Zürich, Flächenstatistik 2025",
+    "area_note": "15.62 ha vines plus 2.71 ha vines with natural species diversity (codes 0701 and 0717, 31 Dec 2025)",
+    "refs": [
+     [
+      "Kanton Zürich, Flächenstatistik 2025 nach Gemeinden",
+      "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/landwirtschaft/informationen/Flächenstatistik%20Kanton%20ZH%202025%20nach%20Gemeinden.pdf"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-benken",
+   "name": "Benken",
+   "level": "subzone",
+   "parent": "Zürcher Weinland",
+   "communes": [
+    "Benken (ZH)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 16.8,
+    "area_src": "Kanton Zürich, Flächenstatistik 2025",
+    "area_note": "11.42 ha vines plus 5.41 ha vines with natural species diversity (codes 0701 and 0717, 31 Dec 2025)",
+    "refs": [
+     [
+      "Kanton Zürich, Flächenstatistik 2025 nach Gemeinden",
+      "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/landwirtschaft/informationen/Flächenstatistik%20Kanton%20ZH%202025%20nach%20Gemeinden.pdf"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-kleinandelfingen",
+   "name": "Kleinandelfingen",
+   "level": "subzone",
+   "parent": "Zürcher Weinland",
+   "communes": [
+    "Kleinandelfingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 18.9,
+    "area_src": "Kanton Zürich, Flächenstatistik 2025",
+    "area_note": "14.91 ha vines plus 4.00 ha vines with natural species diversity (codes 0701 and 0717, 31 Dec 2025)",
+    "refs": [
+     [
+      "Kanton Zürich, Flächenstatistik 2025 nach Gemeinden",
+      "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/landwirtschaft/informationen/Flächenstatistik%20Kanton%20ZH%202025%20nach%20Gemeinden.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-rafz",
+   "name": "Rafz",
+   "level": "subzone",
+   "parent": "Zürcher Unterland",
+   "communes": [
+    "Rafz"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "atlas_note": "The main village of the Rafzerfeld, at the northern end of the Unterland.",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Swiss Wine, Zurich",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/zurich-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-eglisau",
+   "name": "Eglisau",
+   "level": "subzone",
+   "parent": "Zürcher Unterland",
+   "communes": [
+    "Eglisau"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_note": "87.5 ha with 280 owners in the late 19th century, 23 ha in 1951 (Zürcher Weinbauverband 2005). No current figure found.",
+    "atlas_note": "A small town on the Rhine in the Unterland.",
+    "producers_note": "Pircher (Falstaff)",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Rääbe und Wii Nr. 18, Herbst 2005",
+      "https://www.zuercherwein.ch/fileadmin/UserFiles/Nachlese/Raebe_und_Wii/RW_18_Herbst_2005.pdf"
+     ],
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-neftenbach",
+   "name": "Neftenbach",
+   "level": "subzone",
+   "parent": "Winterthur",
+   "communes": [
+    "Neftenbach"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "atlas_note": "The largest wine commune of the Winterthur region.",
+    "producers_note": "Nadine Saxer (Falstaff)",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Falstaff, Ein Streifzug durch Zürichs Weinlandschaft",
+      "https://www.falstaff.com/ch/news/ein-streifzug-durch-zuerichs-ueberraschende-weinlandschaft"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-zh-weiningen",
+   "name": "Weiningen",
+   "level": "subzone",
+   "parent": "Limmattal",
+   "communes": [
+    "Weiningen (ZH)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "atlas_note": "The main wine village of the Limmattal. In 2024 the canton's first grapes were picked here, Solaris on 27 August.",
+    "refs": [
+     [
+      "Zürcher Weinbauverband, Weinbaugebiete",
+      "https://www.zuercherwein.ch/weinbaugebiete/"
+     ],
+     [
+      "Strickhof, Vorläufiger Rückblick auf das Weinjahr 2024",
+      "https://www.strickhof.ch/publikationen/vorlaeufiger-rueckblick-auf-das-weinjahr-2024/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-klettgau",
+   "name": "Klettgau",
+   "level": "subzone",
+   "parent": "AOC Schaffhausen",
+   "communes": [
+    "Beringen",
+    "Gächlingen",
+    "Hallau",
+    "Löhningen",
+    "Oberhallau",
+    "Schleitheim",
+    "Siblingen",
+    "Trasadingen",
+    "Wilchingen"
+   ],
+   "d": {
+    "type": "Production area",
+    "area_ha": 374.3,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted area, sum of the nine communes (Osterfingen counted in Wilchingen). Swiss Wine gives 389 ha.",
+    "basis": "SHR 817.402 § 10: production area Gruppe 2, Klettgau. Hallau and Oberhallau count as one commune.",
+    "label_rule": "A commune name needs 100% of the wine from inside the Klettgau (§ 11 Abs. 2)",
+    "atlas_note": "The western part of the canton along the German border. It holds about four fifths of the canton's vines, mostly Blauburgunder, with Hallau, Wilchingen with Osterfingen, and Oberhallau the largest wine communes.",
+    "refs": [
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-reiat-rhein",
+   "name": "Reiat/Rhein",
+   "level": "subzone",
+   "parent": "AOC Schaffhausen",
+   "communes": [
+    "Buchberg",
+    "Dörflingen",
+    "Ramsen",
+    "Rüdlingen",
+    "Schaffhausen",
+    "Stein am Rhein",
+    "Thayngen"
+   ],
+   "d": {
+    "type": "Production area",
+    "area_ha": 86.9,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted area of the seven Swiss communes. The law also lists the German exclave Büsingen (0.72 ha), not drawn here.",
+    "basis": "SHR 817.402 § 10: production area Gruppe 1, Reiat/Rhein, with Buchberg, Büsingen, Dörflingen, Ramsen, Rüdlingen, Schaffhausen, Stein am Rhein, Thayngen",
+    "label_rule": "A commune name needs 100% of the wine from inside Reiat/Rhein (§ 11 Abs. 2)",
+    "atlas_note": "The scattered vineyards east and south of the Klettgau: the Munot vineyard in the city, the Reiat around Thayngen, the Wolkenstein hills at Stein am Rhein and the Rhine bend at Buchberg and Rüdlingen.",
+    "refs": [
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-hallau",
+   "name": "Hallau",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Hallau"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 135.9,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 77.1,
+    "label_rule": "Hallauer on the label: 60% from Hallau and 100% from the Klettgau; Hallau and Oberhallau count as one commune (SHR 817.402 §§ 10 and 11)",
+    "atlas_note": "The largest wine commune of German-speaking Switzerland. Blauburgunder covers 57% of its vines. The All Saints monastery of Schaffhausen owned vineyards here by 1100.",
+    "area_note": "Planted 2025: 124.0 ha AOC and 11.9 ha Landwein, plus 9.1 ha unplanted vineyard",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-oberhallau",
+   "name": "Oberhallau",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Oberhallau"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 61.7,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 39.6,
+    "label_rule": "Oberhallauer on the label: 60% from Hallau and Oberhallau together and 100% from the Klettgau (SHR 817.402 §§ 10 and 11)",
+    "atlas_note": "The neighbour of Hallau on the same hill. For the label rules the law treats the two as one commune.",
+    "area_note": "Planted 2025, plus 2.1 ha unplanted",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-wilchingen",
+   "name": "Wilchingen",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Wilchingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 91.9,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 53.5,
+    "label_rule": "The name Wilchingen on the label: 60% of the wine from Wilchingen and 100% from the same production area (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "The second wine commune of the canton. Since 2005 it includes Osterfingen, which the statistics still list on its own. Mostly Blauburgunder.",
+    "area_note": "Planted 2025: Wilchingen 57.3 ha and Osterfingen 34.6 ha",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Wikipedia, Wilchingen",
+      "https://en.wikipedia.org/wiki/Wilchingen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-trasadingen",
+   "name": "Trasadingen",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Trasadingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 37.3,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 21.4,
+    "label_rule": "The name Trasadingen on the label: 60% of the wine from Trasadingen and 100% from the same production area (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "The westernmost wine village of the Klettgau, on the German border.",
+    "area_note": "Planted 2025",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-gaechlingen",
+   "name": "Gächlingen",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Gächlingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 15.4,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 8.0,
+    "label_rule": "The name Gächlingen on the label: 60% of the wine from Gächlingen and 100% from the same production area (SHR 817.402 § 11 Abs. 2)",
+    "area_note": "Planted 2025, all AOC",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-siblingen",
+   "name": "Siblingen",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Siblingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.2,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 8.8,
+    "label_rule": "The name Siblingen on the label: 60% of the wine from Siblingen and 100% from the same production area (SHR 817.402 § 11 Abs. 2)",
+    "area_note": "Planted 2025, all AOC",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-loehningen",
+   "name": "Löhningen",
+   "level": "subzone",
+   "parent": "Klettgau",
+   "communes": [
+    "Löhningen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 11.0,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 1.4,
+    "label_rule": "The name Löhningen on the label: 60% of the wine from Löhningen and 100% from the same production area (SHR 817.402 § 11 Abs. 2)",
+    "area_note": "Planted 2025, all AOC. White grapes dominate here: Blauburgunder is only 1.4 ha.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-stein-am-rhein",
+   "name": "Stein am Rhein",
+   "level": "subzone",
+   "parent": "Reiat/Rhein",
+   "communes": [
+    "Stein am Rhein"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 29.1,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 10.9,
+    "label_rule": "Steiner on the label: 60% from Stein am Rhein and 100% from Reiat/Rhein (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "The small town where the Rhine leaves the Untersee. The vines lie on the Wolkenstein hills toward Hemishofen.",
+    "area_note": "Planted 2025",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-buchberg",
+   "name": "Buchberg",
+   "level": "subzone",
+   "parent": "Reiat/Rhein",
+   "communes": [
+    "Buchberg"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 22.5,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 13.5,
+    "label_rule": "Buchberger on the label: 60% from Buchberg and 100% from Reiat/Rhein (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "In the southernmost part of the canton, on the Rhine. With Rüdlingen it forms the Buchberg-Rüdlingen area of Swiss Wine, about 33 ha.",
+    "area_note": "Planted 2025",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-ruedlingen",
+   "name": "Rüdlingen",
+   "level": "subzone",
+   "parent": "Reiat/Rhein",
+   "communes": [
+    "Rüdlingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 7.9,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 6.2,
+    "label_rule": "Rüdlinger on the label: 60% from Rüdlingen and 100% from Reiat/Rhein (SHR 817.402 § 11 Abs. 2)",
+    "area_note": "Planted 2025",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-thayngen",
+   "name": "Thayngen",
+   "level": "subzone",
+   "parent": "Reiat/Rhein",
+   "communes": [
+    "Thayngen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.7,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "label_rule": "Thaynger on the label: 60% from Thayngen and 100% from Reiat/Rhein (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "The main town of the Reiat, known for its vineyards for over 300 years. The statistics still list the old villages Altdorf and Bibern apart.",
+    "area_note": "Planted 2025: Thayngen 8.66 ha, Altdorf 4.41 ha, Bibern 1.59 ha",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sh-schaffhausen",
+   "name": "Schaffhausen",
+   "level": "subzone",
+   "parent": "Reiat/Rhein",
+   "communes": [
+    "Schaffhausen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 6.8,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "label_rule": "Schaffhauser on the label: 60% from the city and 100% from Reiat/Rhein (SHR 817.402 § 11 Abs. 2)",
+    "atlas_note": "The city keeps about 7 ha of vines, among them the Munot vineyard below the Munot fortress.",
+    "area_note": "Planted 2025, all AOC",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Kantonale Weinverordnung Schaffhausen, SHR 817.402",
+      "https://lexaris.de/book/version/documentflat/head/5002668"
+     ],
+     [
+      "Swiss Wine, Schaffhausen",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/schaffhausen-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-unteres-thurtal",
+   "name": "Unteres Thurtal",
+   "level": "subzone",
+   "parent": "AOC Thurgau",
+   "communes": [
+    "Aadorf",
+    "Basadingen-Schlattingen",
+    "Diessenhofen",
+    "Frauenfeld",
+    "Herdern",
+    "Hüttwilen",
+    "Lommis",
+    "Neunforn",
+    "Pfyn",
+    "Stettfurt",
+    "Uesslingen-Buch",
+    "Warth-Weiningen"
+   ],
+   "d": {
+    "type": "Production area",
+    "area_ha": 148.0,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted area, sum of the communes; Warth-Weiningen from the 2024 report. Aadorf (0.2 ha) has no planted figure in the 2025 report.",
+    "basis": "RB 910.11 Anhang 1: Produktionsgebiet I (Unteres Thurtal)",
+    "atlas_note": "The largest of the three production areas, in the west of the canton: the lower Thur valley around Uesslingen and Neunforn, the Seebachtal with Hüttwilen and Nussbaumen, the Rhine at Diessenhofen and the Lauche valley at Stettfurt. Swiss Wine counts these as four regions.",
+    "refs": [
+     [
+      "Landwirtschaftsverordnung Thurgau, Anhänge 1 to 5",
+      "https://www.rechtsbuch.tg.ch/frontend/structured_documents/2058/download_pdf_annex?locale=de"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2024",
+      "https://sh.ch/CMS/get/file/39c950d5-0269-4b57-8e02-51c327839d80"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-oberes-thurtal",
+   "name": "Oberes Thurtal",
+   "level": "subzone",
+   "parent": "AOC Thurgau",
+   "communes": [
+    "Amlikon-Bissegg",
+    "Amriswil",
+    "Berg (TG)",
+    "Erlen",
+    "Kradolf-Schönenberg",
+    "Märstetten",
+    "Romanshorn",
+    "Sulgen",
+    "Weinfelden"
+   ],
+   "d": {
+    "type": "Production area",
+    "area_ha": 62.7,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted area, sum of the entries Amlikon, Amriswil, Berg, Erlen, Kradolf-Schönenberg, Ottoberg, Sulgen, Götighofen and Ottenberg (Romanshorn 0.05 ha left out; no Weinfelden or Märstetten entry beyond Ottenberg and Ottoberg). Swiss Wine gives about 70 ha.",
+    "basis": "RB 910.11 Anhang 1: Produktionsgebiet II (Oberes Thurtal)",
+    "atlas_note": "The Thur valley around Weinfelden. Most vines are on the south slope of the Ottenberg above the town and at Ottoberg above Märstetten. A 1790 record counts 55 wine presses in the Weinfelden area.",
+    "refs": [
+     [
+      "Landwirtschaftsverordnung Thurgau, Anhänge 1 to 5",
+      "https://www.rechtsbuch.tg.ch/frontend/structured_documents/2058/download_pdf_annex?locale=de"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-untersee",
+   "name": "Untersee",
+   "level": "subzone",
+   "parent": "AOC Thurgau",
+   "communes": [
+    "Berlingen",
+    "Ermatingen",
+    "Eschenz",
+    "Kreuzlingen",
+    "Mammern",
+    "Salenstein",
+    "Steckborn",
+    "Tägerwilen"
+   ],
+   "d": {
+    "type": "Production area",
+    "area_ha": 24.7,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted area, sum of the eight communes. Swiss Wine gives about 28 ha.",
+    "basis": "RB 910.11 Anhang 1: Produktionsgebiet III (Untersee)",
+    "atlas_note": "The south shore of the Untersee, the western arm of Lake Constance, from Eschenz to Tägerwilen. Known for Müller-Thurgau and Pinot Gris. Arenenberg in Salenstein is one of the listed sites.",
+    "refs": [
+     [
+      "Landwirtschaftsverordnung Thurgau, Anhänge 1 to 5",
+      "https://www.rechtsbuch.tg.ch/frontend/structured_documents/2058/download_pdf_annex?locale=de"
+     ],
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ],
+     [
+      "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-iselisberg",
+   "name": "Iselisberg",
+   "level": "subzone",
+   "parent": "Unteres Thurtal",
+   "communes": [
+    "Uesslingen-Buch"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 49.2,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 17.1,
+    "area_note": "Planted 2025: 41.6 ha AOC and 7.6 ha Landwein, plus 1.7 ha unplanted. The statistics list the vines of Uesslingen-Buch under Iselisberg, a hamlet of the commune; no separate Uesslingen figure appears.",
+    "label_rule": "The name Iselisberg on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "The largest single entry in the Thurgau vineyard statistics, a hamlet just north of Uesslingen in the lower Thur valley. Swiss Wine names Uesslingen the largest wine commune of the canton. The outline is the whole commune of Uesslingen-Buch.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "LwV TG Anhang 2, Zusatzbezeichnungen nach Gemeinden und Ortsteilen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7212"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ],
+     [
+      "Wikipedia, Uesslingen-Buch",
+      "https://en.wikipedia.org/wiki/Uesslingen-Buch"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-ottenberg",
+   "name": "Ottenberg",
+   "level": "subzone",
+   "parent": "Oberes Thurtal",
+   "communes": [
+    "Weinfelden"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 39.0,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 20.1,
+    "area_note": "Planted 2025: 36.8 ha AOC and 2.2 ha Landwein, plus 6.4 ha unplanted",
+    "label_rule": "The name Ottenberg on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "The south slope of the Ottenberg and the Thurberg above Weinfelden. Ottenberger is the name for all wines from these hills. Records of wine here go back to 1570. Drawn as the commune of Weinfelden, where the listed sites such as Schloss Weinfelden, Bachtobel and Thurberg lie.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "LwV TG Anhang 2, Zusatzbezeichnungen nach Gemeinden und Ortsteilen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7212"
+     ],
+     [
+      "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-neunforn",
+   "name": "Neunforn",
+   "level": "subzone",
+   "parent": "Unteres Thurtal",
+   "communes": [
+    "Neunforn"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 34.5,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 14.7,
+    "area_note": "Planted 2025: 28.3 ha AOC and 6.2 ha Landwein, plus 4.5 ha unplanted",
+    "label_rule": "The name Neunforn on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "A wine commune in the lower Thur valley. Two of its listed sites, Trottenhalde and Fahrhof, may make Lagenwein.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-huettwilen",
+   "name": "Hüttwilen",
+   "level": "subzone",
+   "parent": "Unteres Thurtal",
+   "communes": [
+    "Hüttwilen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 28.1,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 15.2,
+    "area_note": "Planted 2025: Hüttwilen 16.7 ha and Nussbaumen 11.4 ha, listed apart. Both names are approved designations.",
+    "label_rule": "Hüttwiler or Nussbaumer on the label: 60% from that place, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "The heart of the Seebachtal, between the Seerücken hills and the Thur valley. The commune includes Nussbaumen and Uerschhausen. Hüttwilen has three Lagenwein sites, among them the Stadtschryber.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "LwV TG Anhang 2, Zusatzbezeichnungen nach Gemeinden und Ortsteilen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7212"
+     ],
+     [
+      "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ],
+     [
+      "Wikipedia, Hüttwilen",
+      "https://en.wikipedia.org/wiki/H%C3%BCttwilen"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-warth-weiningen",
+   "name": "Warth-Weiningen",
+   "level": "subzone",
+   "parent": "Unteres Thurtal",
+   "communes": [
+    "Warth-Weiningen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.8,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2024",
+    "pinot_ha": 9.7,
+    "area_note": "Planted 2024: 12.3 ha AOC and 2.5 ha Landwein. The 2025 figures were not readable.",
+    "label_rule": "The name Warth-Weiningen on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "Home of the Kartause Ittingen, a former Carthusian monastery whose monks helped spread wine in Thurgau. Several listed sites carry its name.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2024",
+      "https://sh.ch/CMS/get/file/39c950d5-0269-4b57-8e02-51c327839d80"
+     ],
+     [
+      "LwV TG Anhang 3, Zusatzbezeichnungen nach Reblagen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7213"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-ottoberg",
+   "name": "Ottoberg",
+   "level": "subzone",
+   "parent": "Oberes Thurtal",
+   "communes": [
+    "Märstetten"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 8.5,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "pinot_ha": 5.3,
+    "area_note": "Planted 2025: 7.4 ha AOC and 1.1 ha Landwein, plus 0.6 ha unplanted",
+    "label_rule": "The name Ottoberg on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "The vines of Ottoberg above Märstetten, east of Weinfelden. Drawn as the commune of Märstetten.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "LwV TG Anhang 2, Zusatzbezeichnungen nach Gemeinden und Ortsteilen",
+      "https://www.rechtsbuch.tg.ch/frontend/annex_document_dictionaries/7212"
+     ],
+     [
+      "Swiss Wine, Thurgau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/thurgau-en"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-tg-ermatingen",
+   "name": "Ermatingen",
+   "level": "subzone",
+   "parent": "Untersee",
+   "communes": [
+    "Ermatingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 10.8,
+    "area_src": "Fachstelle Rebbau SH-TG, Weinbau 2025",
+    "area_note": "Planted 2025: 9.6 ha AOC and 1.2 ha Landwein",
+    "label_rule": "The name Ermatingen on the label: 60% from there, the rest from Thurgau (RB 910.11 § 36d Abs. 2, Anhang 2)",
+    "atlas_note": "The largest wine commune on the Untersee.",
+    "refs": [
+     [
+      "Fachstelle Rebbau SH-TG, Bericht über den Weinbau SH und TG, Weinbau 2025 (Feb 2026)",
+      "https://sh.ch/CMS/get/file/534af04d-f546-4f02-8ce1-4f12229405dc"
+     ],
+     [
+      "Landwirtschaftsverordnung Thurgau, Anhänge 1 to 5",
+      "https://www.rechtsbuch.tg.ch/frontend/structured_documents/2058/download_pdf_annex?locale=de"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-limmattal",
+   "name": "Limmattal (AG)",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Würenlos",
+    "Wettingen",
+    "Ennetbaden",
+    "Obersiggenthal",
+    "Untersiggenthal"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "basis": "Region used by Swiss Wine; SAR 915.712 § 14 Abs. 3 allows region names but does not delimit them",
+    "label_rule": "Region name on the label: at least 90% from the region (SAR 915.712 § 14 Abs. 3). The law does not delimit the regions.",
+    "area_ha": 32.3,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "area_note": "Sum of the 2024 figures for the five communes Swiss Wine names: Wettingen 13.6, Ennetbaden 8.5, Würenlos 5.1, Untersiggenthal 3.7, Obersiggenthal 1.6 ha",
+    "atlas_note": "The Limmat valley around Baden and Wettingen, mostly Pinot Noir. Ennetbaden and Obersiggenthal share the site name Goldwand.",
+    "refs": [
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-unteres-aaretal",
+   "name": "Unteres Aaretal",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Würenlingen",
+    "Endingen",
+    "Tegerfelden",
+    "Döttingen",
+    "Klingnau"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "basis": "Region used by Swiss Wine; SAR 915.712 § 14 Abs. 3 allows region names but does not delimit them",
+    "label_rule": "Region name on the label: at least 90% from the region (SAR 915.712 § 14 Abs. 3). The law does not delimit the regions.",
+    "area_ha": 71.2,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "area_note": "Sum of the 2024 figures for the five communes Swiss Wine names: Tegerfelden 32.9, Döttingen 16.0, Klingnau 10.9, Würenlingen 7.4, Endingen 4.1 ha",
+    "atlas_note": "The lower Aare and the Surbtal toward the Rhine, mostly in the Zurzach district. Red wine country, with Tegerfelden, the largest wine village of the canton, and Döttingen.",
+    "refs": [
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-schenkenbergertal",
+   "name": "Schenkenbergertal",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Schinznach",
+    "Villnachern",
+    "Thalheim (AG)"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "basis": "Region used by Swiss Wine; SAR 915.712 § 14 Abs. 3 allows region names but does not delimit them",
+    "label_rule": "Region name on the label: at least 90% from the region (SAR 915.712 § 14 Abs. 3). The law does not delimit the regions.",
+    "area_ha": 56.3,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "area_note": "Sum of the 2024 figures: Schinznach 29.2, Oberflachs 16.2 (part of Schinznach since 2014), Villnachern 6.7, Thalheim 4.2 ha",
+    "atlas_note": "A side valley of the Aare west of Brugg. Swiss Wine calls it historically white wine country; in Schinznach Riesling-Silvaner still covers more than Pinot Noir.",
+    "refs": [
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-fricktal",
+   "name": "Fricktal",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Mandach",
+    "Mettauertal",
+    "Laufenburg",
+    "Kaisten",
+    "Obermumpf",
+    "Zeiningen",
+    "Magden",
+    "Oeschgen",
+    "Frick"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "basis": "Region used by Swiss Wine; SAR 915.712 § 14 Abs. 3 allows region names but does not delimit them",
+    "label_rule": "Region name on the label: at least 90% from the region (SAR 915.712 § 14 Abs. 3). The law does not delimit the regions.",
+    "area_note": "No total: Swiss Wine names these communes but not the full list. The Böztal, Wittnau and Herznach-Ueken vineyards are also in the Fricktal.",
+    "atlas_note": "The largest wine region of the canton by Swiss Wine, from the Basel-Landschaft border to the Bözberg and Staffelegg passes, with a balance of red and white. In 2024 the Aargau harvest began here with Solaris on 30 August.",
+    "refs": [
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-seetal",
+   "name": "Seetal",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Seengen",
+    "Meisterschwanden"
+   ],
+   "d": {
+    "type": "Traditional wine district",
+    "basis": "Region used by Swiss Wine; SAR 915.712 § 14 Abs. 3 allows region names but does not delimit them",
+    "label_rule": "Region name on the label: at least 90% from the region (SAR 915.712 § 14 Abs. 3). The law does not delimit the regions.",
+    "area_note": "Seengen 10.9 ha and Meisterschwanden 0.9 ha in 2024",
+    "atlas_note": "Vines above Lake Hallwil, around the Brestenberg site shared by Seengen and Meisterschwanden. Swiss Wine counts it with Wildegg as one region.",
+    "refs": [
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-tegerfelden",
+   "name": "Tegerfelden",
+   "level": "subzone",
+   "parent": "Unteres Aaretal",
+   "communes": [
+    "Tegerfelden"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 32.9,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 17.7,
+    "area_note": "Sum of the variety rows, harvest report 2024. Seven approved sites.",
+    "label_rule": "The name Tegerfelden on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "The largest wine village of the canton, in the Surbtal. Over half of it is Blauburgunder. It has seven approved site names, as many as Döttingen and Würenlingen.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Swiss Wine, Aargau",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/aargau-en"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-schinznach",
+   "name": "Schinznach",
+   "level": "subzone",
+   "parent": "Schenkenbergertal",
+   "communes": [
+    "Schinznach"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 45.4,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 13.4,
+    "area_note": "2024: Schinznach 29.2 ha and Oberflachs 16.2 ha, listed apart. Riesling-Silvaner 14.6 ha.",
+    "label_rule": "Schinznacher or Oberflachser on the label: at least 60% from that village (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "The merged commune of Schinznach-Dorf and Oberflachs (2014) holds the most vines of any Aargau commune. Riesling-Silvaner is as important here as Pinot Noir.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-doettingen",
+   "name": "Döttingen",
+   "level": "subzone",
+   "parent": "Unteres Aaretal",
+   "communes": [
+    "Döttingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 16.0,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 11.0,
+    "area_note": "Sum of the variety rows, harvest report 2024. Seven approved sites.",
+    "label_rule": "The name Döttingen on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "A red wine village on the lower Aare, with seven approved site names such as Oberer Berg and St. Johannser.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-klingnau",
+   "name": "Klingnau",
+   "level": "subzone",
+   "parent": "Unteres Aaretal",
+   "communes": [
+    "Klingnau"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 10.9,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 8.3,
+    "area_note": "Sum of the variety rows, harvest report 2024",
+    "label_rule": "The name Klingnau on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-wettingen",
+   "name": "Wettingen",
+   "level": "subzone",
+   "parent": "Limmattal (AG)",
+   "communes": [
+    "Wettingen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 13.6,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 8.5,
+    "area_note": "Sum of the variety rows, harvest report 2024",
+    "label_rule": "The name Wettingen on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "Approved site names: Herrenberg, Scharten and Schinebüel.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-remigen",
+   "name": "Remigen",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Remigen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 22.9,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 8.4,
+    "area_note": "Sum of the variety rows, harvest report 2024. Not in a Swiss Wine region.",
+    "label_rule": "The name Remigen on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "A village north of Brugg with four approved site names, among them Rütiberg.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-villigen",
+   "name": "Villigen",
+   "level": "subzone",
+   "parent": "AOC Aargau",
+   "communes": [
+    "Villigen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.7,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 9.8,
+    "area_note": "Sum of the variety rows, harvest report 2024. Not in a Swiss Wine region.",
+    "label_rule": "The name Villigen on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-boeztal",
+   "name": "Böztal",
+   "level": "subzone",
+   "parent": "Fricktal",
+   "communes": [
+    "Böztal"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 31.3,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 18.5,
+    "area_note": "2024: Bözen 10.5, Elfingen 9.6, Hornussen 8.0, Effingen 3.3 ha, listed apart",
+    "label_rule": "Village name on the label: at least 60% from that Ortschaft (SAR 915.712 § 14 Abs. 2)",
+    "atlas_note": "Since 2022 one commune formed from Bözen, Effingen, Elfingen and Hornussen in the Sissle valley. Together these villages make one of the largest wine communes of the canton.",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-magden",
+   "name": "Magden",
+   "level": "subzone",
+   "parent": "Fricktal",
+   "communes": [
+    "Magden"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 9.3,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 5.7,
+    "area_note": "Sum of the variety rows, harvest report 2024",
+    "label_rule": "The name Magden on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ag-seengen",
+   "name": "Seengen",
+   "level": "subzone",
+   "parent": "Seetal",
+   "communes": [
+    "Seengen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 10.9,
+    "area_src": "Liebegg, Weinlesebericht 2024",
+    "pinot_ha": 4.7,
+    "area_note": "Sum of the variety rows, harvest report 2024",
+    "label_rule": "The name Seengen on the label: at least 60% from there (SAR 915.712 § 14 Abs. 2)",
+    "refs": [
+     [
+      "Liebegg, Weinlesebericht Kanton Aargau 2024",
+      "https://liebegg.ch/api/rm/UHV29W93BVKYYQC/weinlesebericht-kanton-aargau-2024.pdf"
+     ],
+     [
+      "Weinbauverordnung Aargau, SAR 915.712 (Stand 1.1.2025)",
+      "https://www.lexfind.ch/tolv/250012/de"
+     ],
+     [
+      "Liebegg, Liste der zugelassenen Weinbezeichnungen im Rebbaukataster (Feb. 2025)",
+      "https://www.liebegg.ch/api/rm/3UG8D7P9U9857Z9/liste-zugelassener-weinbezeichnungen-im-rebbaukata-1.pdf"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-rheintal",
+   "name": "St.Galler Rheintal",
+   "level": "subzone",
+   "parent": "AOC St. Gallen",
+   "communes": [
+    "Mörschwil",
+    "Goldach",
+    "Steinach",
+    "Berg (SG)",
+    "Tübach",
+    "Untereggen",
+    "Eggersriet",
+    "Rorschacherberg",
+    "Rorschach",
+    "Thal",
+    "Rheineck",
+    "St. Margrethen",
+    "Au (SG)",
+    "Berneck",
+    "Balgach",
+    "Diepoldsau",
+    "Widnau",
+    "Rebstein",
+    "Marbach (SG)",
+    "Altstätten",
+    "Eichberg",
+    "Oberriet (SG)",
+    "Rüthi (SG)",
+    "Sennwald",
+    "Gams",
+    "Grabs",
+    "Buchs (SG)",
+    "Sevelen"
+   ],
+   "d": {
+    "type": "Production area (Produktionsgebiet)",
+    "area_ha": 115.4,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control for the communes of the area (Altstätten, Au (SG), Balgach, Berneck, Eichberg, Goldach, Grabs, Marbach (SG), Oberriet (SG), Rebstein, Rheineck, Sennwald, Sevelen, St. Margrethen, Thal)",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      53.3
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      14.2
+     ],
+     [
+      "Johanniter",
+      6.7
+     ],
+     [
+      "Chardonnay",
+      5.7
+     ]
+    ],
+    "basis": "sGS 610.11 Art. 41a Abs. 2",
+    "label_rule": "«St.Galler Rheintal» on the label: 100% of the grapes from the area (sGS 610.11 Art. 41a)",
+    "atlas_note": "The left bank of the Rhine from Lake Constance up to Sevelen, with the hills of Rorschach and Goldach. Over half of the canton's vines, most of them on steep south and south-east slopes at Berneck, Thal, Balgach and Altstätten.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-sarganserland",
+   "name": "Sarganserland",
+   "level": "subzone",
+   "parent": "AOC St. Gallen",
+   "communes": [
+    "Wartau",
+    "Sargans",
+    "Vilters-Wangs",
+    "Bad Ragaz",
+    "Pfäfers",
+    "Mels",
+    "Flums",
+    "Walenstadt",
+    "Quarten",
+    "Weesen",
+    "Amden"
+   ],
+   "d": {
+    "type": "Production area (Produktionsgebiet)",
+    "area_ha": 59.3,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control for the communes of the area (Amden, Bad Ragaz, Flums, Mels, Pfäfers, Quarten, Sargans, Walenstadt, Wartau, Weesen)",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      36.9
+     ],
+     [
+      "Chardonnay",
+      4.1
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      2.9
+     ],
+     [
+      "Sauvignon Blanc",
+      2.6
+     ]
+    ],
+    "basis": "sGS 610.11 Art. 41a Abs. 2",
+    "label_rule": "«Sarganserland» on the label: 100% of the grapes from the area; «Sarganserland-Walensee» or «Walensee» allowed for wine from a commune on the Walensee (Art. 41a)",
+    "atlas_note": "The Seez valley and the Walensee, from Wartau and Bad Ragaz to Amden. Pinot Noir dominates at Mels, Sargans and Walenstadt. Wine from a commune on the Walensee may be called Sarganserland-Walensee or Walensee. Walenstadt has over 60% of its vines in organic farming, Pfäfers the highest vineyard of eastern Switzerland at 740 m.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-zuerichsee",
+   "name": "Zürichsee (St. Gallen)",
+   "level": "subzone",
+   "parent": "AOC St. Gallen",
+   "communes": [
+    "Schänis",
+    "Benken (SG)",
+    "Kaltbrunn",
+    "Gommiswald",
+    "Uznach",
+    "Schmerikon",
+    "Rapperswil-Jona",
+    "Eschenbach (SG)"
+   ],
+   "d": {
+    "type": "Production area (Produktionsgebiet)",
+    "area_ha": 17.0,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control for the communes of the area (Eschenbach (SG), Rapperswil-Jona, Schmerikon, Uznach)",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      5.0
+     ],
+     [
+      "Räuschling",
+      2.8
+     ],
+     [
+      "Sauvignon Blanc",
+      2.5
+     ],
+     [
+      "Chardonnay",
+      2.5
+     ]
+    ],
+    "basis": "sGS 610.11 Art. 41a Abs. 2",
+    "label_rule": "«Zürichsee» may only be used together with the commune name (Art. 41a Abs. 2 Ziff. 3)",
+    "atlas_note": "The St. Gallen shore of the upper Lake Zurich and the Linth plain. Rapperswil-Jona holds most of the vines and all the Räuschling of the canton. The law also names Rieden, Ernetschwil, Goldingen and St.Gallenkappel, which are now parts of Gommiswald and Eschenbach.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ],
+    "aka": "Zürichsee"
+   }
+  },
+  {
+   "id": "ch-reg-sg-fuerstenland",
+   "name": "Fürstenland",
+   "level": "subzone",
+   "parent": "AOC St. Gallen",
+   "communes": [
+    "Wil (SG)",
+    "Zuzwil (SG)",
+    "Oberbüren",
+    "Niederbüren",
+    "Niederhelfenschwil",
+    "Gossau (SG)",
+    "Andwil (SG)",
+    "Waldkirch",
+    "Gaiserwald",
+    "St. Gallen",
+    "Wittenbach",
+    "Häggenschwil",
+    "Muolen"
+   ],
+   "d": {
+    "type": "Production area (Produktionsgebiet)",
+    "area_ha": 1.5,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control for the communes of the area (Niederbüren, Wil (SG), Wittenbach)",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      0.6
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.4
+     ],
+     [
+      "Gamaret",
+      0.2
+     ],
+     [
+      "Johanniter",
+      0.1
+     ]
+    ],
+    "basis": "sGS 610.11 Art. 41a Abs. 2",
+    "label_rule": "«Fürstenland» on the label: 100% of the grapes from the area (Art. 41a)",
+    "atlas_note": "The old prince-abbey lands between Wil and the city of St. Gallen. Only scattered small plots remain, at Wil, Wittenbach and Niederbüren. The law also names Bronschhofen, now part of Wil.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-berneck",
+   "name": "Berneck",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Berneck"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 35.9,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      18.98
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      4.31
+     ],
+     [
+      "Johanniter",
+      2.08
+     ],
+     [
+      "Merlot",
+      1.48
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "The largest wine commune of the canton, with vines on the steep slopes above the Rhine valley and some 1,100 years of wine growing. About 30 varieties grow here. The Haus des St. Galler Weins in Berneck sells the wines of 19 estates.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ],
+     [
+      "Vinum Berneck, Weinbaugemeinde Berneck",
+      "https://www.vinumberneck.ch/verein/weinbaugemeinde_berneck"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-thal",
+   "name": "Thal",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Thal"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 22.7,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      7.69
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      2.2
+     ],
+     [
+      "Sauvignon Blanc",
+      2.16
+     ],
+     [
+      "Chardonnay",
+      1.8
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "The second wine commune of the canton, between Rheineck and Rorschach near Lake Constance. It grows the widest range of varieties in the canton, from Blauburgunder and Müller-Thurgau to Kerner and many fungus resistant varieties.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-balgach",
+   "name": "Balgach",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Balgach"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 17.8,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      9.01
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      1.79
+     ],
+     [
+      "Johanniter",
+      1.58
+     ],
+     [
+      "Chardonnay",
+      1.22
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "Third of the Rheintal wine communes, between Berneck and Rebstein. Half the area is Blauburgunder.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-rapperswil-jona",
+   "name": "Rapperswil-Jona",
+   "level": "subzone",
+   "parent": "Zürichsee (St. Gallen)",
+   "communes": [
+    "Rapperswil-Jona"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 14.0,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      4.17
+     ],
+     [
+      "Räuschling",
+      2.82
+     ],
+     [
+      "Chardonnay",
+      2.18
+     ],
+     [
+      "Sauvignon Blanc",
+      1.64
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area; «Zürichsee» only together with the commune name (sGS 610.11 Art. 41a)",
+    "atlas_note": "The wine town of the St. Gallen Zürichsee area. Its 2.8 ha of Räuschling are all of that grape in the canton. Jona was the largest wine commune of the canton a hundred years ago.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "Tagblatt, Alles, was Sie über den Weinbau in der Ostschweiz wissen müssen",
+      "https://www.tagblatt.ch/ostschweiz/alles-was-sie-ueber-den-weinbau-in-der-ostschweiz-wissen-muessen-ld.1061190"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-walenstadt",
+   "name": "Walenstadt",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Walenstadt"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 12.9,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      8.25
+     ],
+     [
+      "Chardonnay",
+      1.03
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.82
+     ],
+     [
+      "Sauvignon Blanc",
+      0.67
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "At the east end of the Walensee. Over 60% of its vines are organic, the highest share in Switzerland according to the St. Gallen wine growers.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-mels",
+   "name": "Mels",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Mels"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 12.9,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      9.39
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.8
+     ],
+     [
+      "Gamaret",
+      0.58
+     ],
+     [
+      "Pinot Gris",
+      0.5
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "In the Seez valley next to Sargans. Nearly three quarters of the vines are Blauburgunder.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-sargans",
+   "name": "Sargans",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Sargans"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 11.0,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      7.04
+     ],
+     [
+      "Sauvignon Blanc",
+      1.03
+     ],
+     [
+      "Pinot Gris",
+      0.69
+     ],
+     [
+      "Souvignier Gris",
+      0.43
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "At the meeting of the Rhine and Seez valleys. Blauburgunder covers about two thirds.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-altstaetten",
+   "name": "Altstätten",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Altstätten"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 10.2,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      3.9
+     ],
+     [
+      "Riesling",
+      0.99
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.84
+     ],
+     [
+      "Sauvignon Blanc",
+      0.81
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "The main town of the upper Rheintal. Next to Blauburgunder it has almost 1 ha of Riesling, the most in the canton.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-au",
+   "name": "Au",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Au (SG)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 8.2,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      3.38
+     ],
+     [
+      "Chardonnay",
+      1.04
+     ],
+     [
+      "Merlot",
+      0.84
+     ],
+     [
+      "Riesling",
+      0.52
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "On the Rhine between St. Margrethen and Berneck.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-wartau",
+   "name": "Wartau",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Wartau"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 7.3,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      4.26
+     ],
+     [
+      "Chardonnay",
+      0.58
+     ],
+     [
+      "CAL 1-28",
+      0.36
+     ],
+     [
+      "Cabernet Cantor",
+      0.27
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "The southern end of the Sarganserland, on the Rhine opposite Liechtenstein.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-quarten",
+   "name": "Quarten",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Quarten"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 5.8,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      3.73
+     ],
+     [
+      "Chardonnay",
+      0.57
+     ],
+     [
+      "Seyval blanc",
+      0.54
+     ],
+     [
+      "Plantet",
+      0.21
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "On the south shore of the Walensee. It has the only Completer of the canton.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-sennwald",
+   "name": "Sennwald",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Sennwald"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 4.3,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      1.44
+     ],
+     [
+      "Gamaret",
+      0.49
+     ],
+     [
+      "Sauvignon Blanc",
+      0.45
+     ],
+     [
+      "Seyval blanc",
+      0.37
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "In the Werdenberg part of the Rheintal.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-st-margrethen",
+   "name": "St. Margrethen",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "St. Margrethen"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 3.9,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      2.66
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      1.29
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "Next to the Rhine mouth on Lake Constance, with only Blauburgunder and Müller-Thurgau.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-rebstein",
+   "name": "Rebstein",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Rebstein"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 3.4,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      2.15
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.79
+     ],
+     [
+      "Sauvignon Blanc",
+      0.22
+     ],
+     [
+      "Johanniter",
+      0.1
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "Between Balgach and Marbach in the middle Rheintal.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-marbach",
+   "name": "Marbach",
+   "level": "subzone",
+   "parent": "St.Galler Rheintal",
+   "communes": [
+    "Marbach (SG)"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 3.3,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      1.78
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.66
+     ],
+     [
+      "Zweigelt",
+      0.19
+     ],
+     [
+      "Souvignier Gris",
+      0.12
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "In the middle Rheintal next to Rebstein.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-sg-pfaefers",
+   "name": "Pfäfers",
+   "level": "subzone",
+   "parent": "Sarganserland",
+   "communes": [
+    "Pfäfers"
+   ],
+   "d": {
+    "type": "Commune designation",
+    "area_ha": 3.2,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      1.78
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.54
+     ],
+     [
+      "Chardonnay",
+      0.33
+     ],
+     [
+      "Johanniter",
+      0.33
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 60% of the grapes from the commune, the rest from the production area (sGS 610.11 Art. 41a Abs. 1 lit. b)",
+    "atlas_note": "Above Bad Ragaz. Its Porta Romana vineyard at 740 m is the highest in eastern Switzerland.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "St.Gallen Landwirtschaftsverordnung sGS 610.11 (Stand 1 Aug 2024), Art. 34-41b",
+      "https://lexaris.de/book/version/documentflat/head/5014484"
+     ],
+     [
+      "St. Galler Wein, Einzigartigkeit",
+      "https://www.stgaller-wein.ch/einzigartigkeit/"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ar-lutzenberg",
+   "name": "Lutzenberg",
+   "level": "subzone",
+   "parent": "AOC Appenzell Ausserrhoden",
+   "communes": [
+    "Lutzenberg"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 2.49,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      0.85
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.57
+     ],
+     [
+      "Malbec",
+      0.29
+     ],
+     [
+      "Seyval blanc",
+      0.23
+     ]
+    ],
+    "label_rule": "Commune name: 90% of the grapes from the commune (kWeinV bGS 920.16 Art. 12)",
+    "atlas_note": "The main wine commune of Appenzell Ausserrhoden, on the slope above Thal and the Rhine valley.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "Appenzell Ausserrhoden bGS 920.16, kWeinV",
+      "https://lexaris.de/book/version/documentflat/head/247190"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ar-walzenhausen",
+   "name": "Walzenhausen",
+   "level": "subzone",
+   "parent": "AOC Appenzell Ausserrhoden",
+   "communes": [
+    "Walzenhausen"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 0.72,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Muscaris",
+      0.19
+     ],
+     [
+      "Sauvignac",
+      0.18
+     ],
+     [
+      "Kerner",
+      0.14
+     ],
+     [
+      "Merlot",
+      0.12
+     ]
+    ],
+    "label_rule": "Commune name: 90% of the grapes from the commune (kWeinV bGS 920.16 Art. 12)",
+    "atlas_note": "Small vineyards on the slope above St. Margrethen, mostly fungus resistant varieties and Kerner.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "Appenzell Ausserrhoden bGS 920.16, kWeinV",
+      "https://lexaris.de/book/version/documentflat/head/247190"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-ai-oberegg",
+   "name": "Oberegg",
+   "level": "subzone",
+   "parent": "AOC Appenzell Innerrhoden",
+   "communes": [
+    "Oberegg"
+   ],
+   "d": {
+    "type": "District (Bezirk)",
+    "area_ha": 0.66,
+    "area_src": "LZSG, Weinlese 2025 nach Gemeinde",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Solaris",
+      0.45
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.18
+     ],
+     [
+      "Johanniter",
+      0.03
+     ]
+    ],
+    "label_rule": "District name: 90% of the grapes from the district (WeinV GS 916.610 Art. 14)",
+    "atlas_note": "The Bezirk Oberegg holds all the vines of Appenzell Innerrhoden, mostly Solaris.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "Appenzell Innerrhoden GS 916.610, Weinverordnung",
+      "https://lexaris.de/book/version/documentflat/head/248162"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-aesch",
+   "name": "Aesch",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Aesch (BL)"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 19.3,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      9.18
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      1.93
+     ],
+     [
+      "Pinot Gris",
+      1.37
+     ],
+     [
+      "Sauvignac",
+      0.91
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "The largest wine commune of Basel-Landschaft, in the lower Birs valley. It grows an unusually wide range, from Pinot Gris and Chasselas to many new fungus resistant varieties.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-maisprach",
+   "name": "Maisprach",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Maisprach"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 14.9,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      8.04
+     ],
+     [
+      "Kerner",
+      1.54
+     ],
+     [
+      "Cabernet Dorsa",
+      0.89
+     ],
+     [
+      "Chardonnay",
+      0.85
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "A wine village of the Tafeljura in the upper Baselbiet. Over half the area is Blauburgunder, with Kerner the main white.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-sissach",
+   "name": "Sissach",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Sissach"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 11.6,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      3.82
+     ],
+     [
+      "Kerner",
+      1.28
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      1.02
+     ],
+     [
+      "Cabernet Dorsa",
+      0.71
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "The district town of the upper Baselbiet, home of the Ebenrain agricultural centre that runs the vineyard register for both Basel cantons and Solothurn.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-muttenz",
+   "name": "Muttenz",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Muttenz"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 10.9,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      5.35
+     ],
+     [
+      "Sauvignon Blanc",
+      1.3
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.7
+     ],
+     [
+      "Chasselas (Gutedel)",
+      0.5
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "Vines on the edge of Basel, the second commune of the canton by harvest in 2025. Sauvignon Blanc is the main white.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-buus",
+   "name": "Buus",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Buus"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 7.9,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      5.17
+     ],
+     [
+      "Bacchus",
+      0.63
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.57
+     ],
+     [
+      "Muscaris",
+      0.22
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "A Tafeljura village next to Maisprach, with two thirds Blauburgunder and some Bacchus.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-wintersingen",
+   "name": "Wintersingen",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Wintersingen"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 7.6,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      6.14
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.45
+     ],
+     [
+      "Sauvignon Blanc",
+      0.37
+     ],
+     [
+      "Chardonnay",
+      0.13
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "A small village in the Tafeljura south of Maisprach where Blauburgunder covers four fifths of the vines.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-pratteln",
+   "name": "Pratteln",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Pratteln"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 5.9,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      2.35
+     ],
+     [
+      "Kerner",
+      0.7
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.53
+     ],
+     [
+      "Chasselas (Gutedel)",
+      0.32
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "Between Muttenz and Liestal, with Kerner as the main white.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-biel-benken",
+   "name": "Biel-Benken",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Biel-Benken"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 5.2,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      2.89
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.65
+     ],
+     [
+      "Chasselas (Gutedel)",
+      0.3
+     ],
+     [
+      "Chardonnay",
+      0.24
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "In the Leimental south-west of Basel, on the French border.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-arlesheim",
+   "name": "Arlesheim",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Arlesheim"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 4.5,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      1.57
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.31
+     ],
+     [
+      "Cabernet Jura",
+      0.27
+     ],
+     [
+      "Sauvignac",
+      0.25
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "In the lower Birs valley next to Aesch, with many fungus resistant varieties.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bl-ettingen",
+   "name": "Ettingen",
+   "level": "subzone",
+   "parent": "AOC Basel-Landschaft",
+   "communes": [
+    "Ettingen"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 3.7,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      1.63
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.82
+     ],
+     [
+      "Johanniter",
+      0.36
+     ],
+     [
+      "Chardonnay",
+      0.23
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune, at most 30% from other communes of the BL production area (SGS 516.31 § 12)",
+    "atlas_note": "In the Leimental next to Aesch, with Riesling-Silvaner and Johanniter beside Blauburgunder.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-bs-riehen",
+   "name": "Riehen",
+   "level": "subzone",
+   "parent": "AOC Basel-Stadt",
+   "communes": [
+    "Riehen"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 4.46,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      2.45
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.64
+     ],
+     [
+      "Pinot Blanc",
+      0.43
+     ],
+     [
+      "Sauvignon Blanc",
+      0.34
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune (SGS 516.31 § 12)",
+    "atlas_note": "All the vines of Basel-Stadt are in Riehen, above the Rhine plain at the German border. Blauburgunder is half the area, with Riesling-Silvaner and Pinot Blanc the main whites.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ],
+     [
+      "Blick, Klein aber fein: die Kantone mit den wenigsten Reben (2023)",
+      "https://www.blick.ch/life/essen/weintipp/klein-aber-fein-in-diesen-kantonen-stehen-am-wenigsten-rebberge-id18864456.html"
+     ]
+    ],
+    "producers_note": "Weingut Riehen, about 3.6 ha (Blick 2023)"
+   }
+  },
+  {
+   "id": "ch-reg-so-hofstetten-flueh",
+   "name": "Hofstetten-Flüh",
+   "level": "subzone",
+   "parent": "AOC Solothurn",
+   "communes": [
+    "Hofstetten-Flüh"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 2.14,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      0.71
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.57
+     ],
+     [
+      "Pinot Gris",
+      0.48
+     ],
+     [
+      "Cabernet Cortis",
+      0.2
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune (SGS 516.31 § 12)",
+    "atlas_note": "The largest wine commune of Solothurn by harvest in 2025, in the Leimental south-west of Basel.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ch-reg-so-dornach",
+   "name": "Dornach",
+   "level": "subzone",
+   "parent": "AOC Solothurn",
+   "communes": [
+    "Dornach"
+   ],
+   "d": {
+    "type": "Commune",
+    "area_ha": 1.34,
+    "area_src": "Ebenrain, Herbstbrief 2025",
+    "area_note": "Sum of the variety rows of the 2025 harvest control",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      0.4
+     ],
+     [
+      "Souvignier Gris",
+      0.35
+     ],
+     [
+      "CAL 1-28",
+      0.22
+     ],
+     [
+      "Léon Millot",
+      0.15
+     ]
+    ],
+    "label_rule": "Commune name on the label: at least 70% of the grapes from the commune (SGS 516.31 § 12)",
+    "atlas_note": "Vines in the lower Birs valley, mostly fungus resistant varieties.",
+    "refs": [
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ]
+    ]
+   }
   }
  ],
  "new_cantons": {
@@ -6692,6 +10727,500 @@
      ]
     ]
    }
+  },
+  "ch-canton-12": {
+   "bfs": 12,
+   "name": "AOC Basel-Stadt",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Basel-Stadt (Kontrollierte Ursprungsbezeichnung Basel-Stadt)",
+    "area_ha": 4.7,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "2.2 ha white, 2.5 ha red, 2025 (BLW)",
+    "grape_share": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      51.8
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      13.5
+     ],
+     [
+      "Pinot Blanc",
+      9.1
+     ],
+     [
+      "Sauvignon Blanc",
+      7.2
+     ]
+    ],
+    "grape_share_note": "Ebenrain harvest control 2025 (all in Riehen), share of the 4.73 ha (BLW): Blauburgunder 2.45 ha, Riesling-Silvaner 0.64 ha, Pinot Blanc 0.43 ha, Sauvignon Blanc 0.34 ha",
+    "basis": "AOC Basel-Stadt is defined in the Basel-Landschaft Verordnung über den Pflanzenbau SGS 516.31 (§ 11); Basel-Stadt applies it through its agreement with Basel-Landschaft (SG 911.200, per CSCV)",
+    "label_rule": "AOC Basel-Stadt; Basler Wein if the grapes come from the Basel-Stadt production area; commune name at least 70% from the commune; site 100% (SGS 516.31 § 12)",
+    "atlas_note": "The city canton has its vines in Riehen, on the slopes above the Rhine plain next to the German border. Weingut Riehen farms most of them.",
+    "producers_note": "Weingut Riehen, about 3.6 ha (Blick 2023)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ],
+     [
+      "CSCV/SWK, cantonal wine law list",
+      "https://www.cscv-swk.ch/weinrecht/kantonal"
+     ],
+     [
+      "Blick, Klein aber fein: die Kantone mit den wenigsten Reben (2023)",
+      "https://www.blick.ch/life/essen/weintipp/klein-aber-fein-in-diesen-kantonen-stehen-am-wenigsten-rebberge-id18864456.html"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-11": {
+   "bfs": 11,
+   "name": "AOC Solothurn",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Solothurn (Kontrollierte Ursprungsbezeichnung Solothurn)",
+    "area_ha": 12.8,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "5.3 ha white, 7.5 ha red, 2025 (BLW)",
+    "grape_share": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      21.9
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      11.8
+     ],
+     [
+      "Pinot Gris",
+      6.3
+     ],
+     [
+      "Maréchal Foch",
+      6.0
+     ],
+     [
+      "Cabernet Jura",
+      4.7
+     ],
+     [
+      "Souvignier Gris",
+      4.5
+     ]
+    ],
+    "grape_share_note": "Ebenrain harvest control 2025, share of the 12.78 ha (BLW): Blauburgunder 2.79 ha, Riesling-Silvaner 1.51 ha, Pinot Gris 0.80 ha, Maréchal Foch 0.77 ha, Cabernet Jura 0.60 ha, Souvignier Gris 0.58 ha",
+    "basis": "AOC Solothurn is defined in the Basel-Landschaft Verordnung über den Pflanzenbau SGS 516.31 (§ 11); Solothurn and Basel-Landschaft cooperate on vineyard matters under the agreement SGS 516.34",
+    "label_rule": "AOC Solothurn; Solothurner Wein if the grapes come from the Solothurn production area; commune name at least 70% from the commune; site 100% (SGS 516.31 § 12)",
+    "atlas_note": "Small scattered vineyards: in the Schwarzbubenland and Dorneck south of Basel (Hofstetten-Flüh, Dornach, Rodersdorf), at the Jura foot near Grenchen and Erlinsbach, and in the Bucheggberg. Fungus resistant hybrids such as Maréchal Foch and Cabernet Jura are a large part of the area.",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Ebenrain, Herbstbrief Weinjahr 2025 BL/BS/SO (U. Weingartner, 25 Nov 2025)",
+      "https://weinregion-basel-solothurn.ch/wp-content/uploads/herbstbrief_blbsso_2025.pdf"
+     ],
+     [
+      "Basel-Landschaft, Verordnung über den Pflanzenbau SGS 516.31 (Stand 1 May 2025), §§ 10-12",
+      "https://bl.clex.ch/frontend/versions/pdf_file_with_annex/4262"
+     ],
+     [
+      "CSCV/SWK, cantonal wine law list",
+      "https://www.cscv-swk.ch/weinrecht/kantonal"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-5": {
+   "bfs": 5,
+   "name": "AOC Schwyz",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Schwyz (with the regional AOC Zürichsee)",
+    "area_ha": 36.6,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "17.3 ha white, 19.3 ha red, 2025 (BLW). 40.2 ha approved for wine, 37.7 ha planted in 2019 (canton).",
+    "basis": "Verordnung über den Weinbau (WBV) SRSZ 312.711, § 7; Allgemeinverfügungen AOC Schwyz and AOC Zürichsee of 25 June 2020",
+    "label_rule": "AOC Schwyz covers the whole canton. Commune name: at least 60% from the commune, the rest from AOC Schwyz; region, hamlet or site: 100%. Approved extra names include Altendorf (Schloss, St. Johann), Wangen (Eggenbüel, Sonnenrain, Nuolen), Schübelbach (Buttikon), Tuggen (Bürg), Freienbach (Leutschen Klostergut, Insel Ufnau, Joch, Tal), Wollerau (Studenbühl) and Küssnacht (Immensee Sunnehof).",
+    "atlas_note": "Most vines are on the slopes of the Höfe and the March above the upper Lake Zurich, which may also carry the regional AOC Zürichsee. Smaller plots lie at Küssnacht and Immensee. The five main varieties in 2019 were Blauburgunder, Riesling-Silvaner, Cabernet Soyhières, Chardonnay and Räuschling, together about 28 ha. The area was 50 ha in 1886 and 7 ha in 1960.",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Schwyz, Verordnung über den Weinbau SRSZ 312.711",
+      "https://sz.ch/public/upload/assets/29708/312_711.pdf?fp=5"
+     ],
+     [
+      "Schwyz, Allgemeinverfügung AOC Schwyz (25 June 2020)",
+      "https://sz.ch/public/upload/assets/47306/20200625-AOC%20Schwyz%20AVerf.pdf?fp=1"
+     ],
+     [
+      "Schwyz, Allgemeinverfügung AOC Zürichsee (25 June 2020)",
+      "https://sz.ch/public/upload/assets/47307/20200625-AOC%20Z%C3%BCrichsee%20AVerf.pdf?fp=1"
+     ],
+     [
+      "Schwyz, Medienmitteilung Weinlese 2019",
+      "https://sz.ch/public/upload/assets/45783/20200330_MM_Weinlese%202019.pdf?fp=1"
+     ],
+     [
+      "Swiss Wine, Central Switzerland",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/central-switzerland"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-9": {
+   "bfs": 9,
+   "name": "AOC Zug",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "Zug AOC (Kontrollierte Ursprungsbezeichnung Zug)",
+    "area_ha": 9.7,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "6.3 ha white, 3.4 ha red, 2025 (BLW)",
+    "basis": "Reglement über die kontrollierte Ursprungsbezeichnung für Weine BGS 924.25 (29 June 2009)",
+    "label_rule": "Zug AOC for wine wholly from Zug grapes from vineyards in the Zug vineyard register; a commune or site name only if the grapes come wholly from that one commune or site (§§ 2-3). Varieties must be stated on the bottle (§ 4).",
+    "atlas_note": "About two thirds of the vines are white. Swiss Wine counts vineyards in all seven communes of the Zug valley floor, the largest at Meisterswil in Hünenberg.",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Zug BGS 924.25, Reglement über die kontrollierte Ursprungsbezeichnung für Weine",
+      "https://bgs.zg.ch/frontend/versions/849/download_pdf_file"
+     ],
+     [
+      "Swiss Wine, Central Switzerland",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/central-switzerland"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-4": {
+   "bfs": 4,
+   "name": "AOC Uri",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Uri",
+    "area_note": "BLW gives Uri, Obwalden and Nidwalden only together: 6.8 ha in 2025 (3.1 ha white, 3.7 ha red). The Uri wine growers' association gives about 5 ha for Uri.",
+    "basis": "Reglement über den Rebbau und die kontrollierte Ursprungsbezeichnung für Weine (Weinreglement) RB 60.3231",
+    "atlas_note": "Vines in the Reuss valley at Altdorf, Bürglen and Silenen, with small plots at Flüelen and Sisikon on Lake Uri. The Föhn wind ripens the grapes. Wine growing in Uri is first recorded in 1248; the canton has been in the Swiss vineyard register since 1995.",
+    "producers_note": "Weingut zum Rosenberg (Altdorf), Ur-Wy (Altdorf), Rebberg Buchholz (Silenen) and others (Weinbauverein Uri)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Weinbauverein Uri",
+      "https://www.weinbauverein-uri.ch/"
+     ],
+     [
+      "Uri RB 60.3231, Weinreglement",
+      "https://www.lexfind.ch/dtah/82713/2/60-3231.pdf"
+     ],
+     [
+      "CSCV/SWK, cantonal wine law list",
+      "https://www.cscv-swk.ch/weinrecht/kantonal"
+     ],
+     [
+      "Swiss Wine, Central Switzerland",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/central-switzerland"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-6": {
+   "bfs": 6,
+   "name": "AOC Obwalden",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "Obwalden KUB/AOC (KUB/AOC Obwalden)",
+    "area_note": "BLW gives Uri, Obwalden and Nidwalden only together: 6.8 ha in 2025 (3.1 ha white, 3.7 ha red)",
+    "basis": "Ausführungsbestimmungen über die kontrollierte Ursprungsbezeichnung für Weine GDB 921.117 (4 March 2008)",
+    "label_rule": "Obwalden KUB/AOC for wine wholly from Obwalden grapes; a commune or site may be named for wine from that commune or site; a site may be named if at least 60% of the grapes come from it and the rest from the same commune (Art. 3)",
+    "atlas_note": "A few hectares in the Sarneraa valley around Sarnen. Weingut Tellen in Kägiswil is the best known estate.",
+    "producers_note": "Weingut Tellen, Kägiswil (Blick 2023)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Obwalden GDB 921.117",
+      "https://gdb.ow.ch/frontend/versions/1002/download_pdf_file"
+     ],
+     [
+      "Blick, Klein aber fein: die Kantone mit den wenigsten Reben (2023)",
+      "https://www.blick.ch/life/essen/weintipp/klein-aber-fein-in-diesen-kantonen-stehen-am-wenigsten-rebberge-id18864456.html"
+     ],
+     [
+      "Swiss Wine, Central Switzerland",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/central-switzerland"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-7": {
+   "bfs": 7,
+   "name": "AOC Nidwalden",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Nidwalden",
+    "area_note": "BLW gives Uri, Obwalden and Nidwalden only together: 6.8 ha in 2025 (3.1 ha white, 3.7 ha red)",
+    "basis": "Vollzugsverordnung über die kontrollierte Ursprungsbezeichnung für Weine (Weinverordnung) NG 821.12 (26 May 2009, Stand 1 June 2024)",
+    "label_rule": "AOC Nidwalden for wine wholly from Nidwalden grapes; commune or site names under the same condition; AOC stands before the canton, commune or site name (§ 3)",
+    "atlas_note": "A few plots on south facing slopes above Lake Lucerne (Swiss Wine).",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Nidwalden NG 821.12, Weinverordnung",
+      "https://lexaris.de/book/version/documentflat/head/5079007"
+     ],
+     [
+      "Swiss Wine, Central Switzerland",
+      "https://www.swisswine.com/en/swiss-wine-regions/german-speaking-switzerland-wine-region/central-switzerland"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-8": {
+   "bfs": 8,
+   "name": "AOC Glarus",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Glarus",
+    "area_ha": 1.9,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "0.7 ha white, 1.2 ha red, 2025 (BLW)",
+    "basis": "Verordnung über den Weinbau (Kantonale Weinbauverordnung) IX D/621/1 (7 Dec 2011)",
+    "label_rule": "AOC Glarus: at least 90% Glarus wine. Commune, village or site name: at least 60% of the grapes from that area and at least 90% from Glarus in all (Art. 8)",
+    "atlas_note": "1.9 ha in 2025, the smallest single canton figure in the federal statistics. The historic Bürgli vineyard is run by the Stiftung Bürglirain; Riesling-Silvaner and Blauburgunder are grown.",
+    "producers_note": "Stiftung Bürglirain (Blick 2023)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Glarus IX D/621/1, Kantonale Weinbauverordnung",
+      "https://gl.lexwork.naz.ch/de/dta/IX-D.621.1.pdf"
+     ],
+     [
+      "Blick, Klein aber fein: die Kantone mit den wenigsten Reben (2023)",
+      "https://www.blick.ch/life/essen/weintipp/klein-aber-fein-in-diesen-kantonen-stehen-am-wenigsten-rebberge-id18864456.html"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-15": {
+   "bfs": 15,
+   "name": "AOC Appenzell Ausserrhoden",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Appenzell Ausserrhoden",
+    "area_ha": 3.3,
+    "area_src": "LZSG, Weinlese 2025 (sum of variety rows)",
+    "area_note": "Lutzenberg 2.49 ha, Walzenhausen 0.72 ha, Wolfhalden 0.03 ha in the 2025 harvest control. BLW gives AI and AR together: 4.45 ha in 2025.",
+    "grape_ha": [
+     [
+      "Pinot Noir (Blauburgunder)",
+      0.98
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.58
+     ],
+     [
+      "Malbec",
+      0.3
+     ],
+     [
+      "Muscaris",
+      0.28
+     ]
+    ],
+    "basis": "Kantonale Weinverordnung (kWeinV) bGS 920.16 (11 Feb 2013); varieties in RebV bGS 920.161",
+    "label_rule": "AOC Appenzell Ausserrhoden: at least 90% of the grapes from the canton (Art. 6). Commune, part of a commune or site: 90% of the grapes from it (Art. 12)",
+    "atlas_note": "The vines are in the Vorderland above the Rhine valley and Lake Constance, at Lutzenberg, Walzenhausen and Wolfhalden. The St. Gallen agriculture centre runs the harvest control.",
+    "producers_note": "Wetli Weine (Blick 2023)",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Kanton (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Kanton-inkl.-AI-AR-2025-3-2.pdf"
+     ],
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Appenzell Ausserrhoden bGS 920.16, kWeinV",
+      "https://lexaris.de/book/version/documentflat/head/247190"
+     ],
+     [
+      "Blick, Klein aber fein: die Kantone mit den wenigsten Reben (2023)",
+      "https://www.blick.ch/life/essen/weintipp/klein-aber-fein-in-diesen-kantonen-stehen-am-wenigsten-rebberge-id18864456.html"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-16": {
+   "bfs": 16,
+   "name": "AOC Appenzell Innerrhoden",
+   "region": "Deutschschweiz",
+   "d": {
+    "official_name": "AOC Appenzell Innerrhoden",
+    "area_ha": 0.66,
+    "area_src": "LZSG, Weinlese 2025 (sum of variety rows)",
+    "area_note": "All in Oberegg. BLW gives AI and AR together: 4.45 ha in 2025. The cantonal message on the 2022 law gave about 66 a (63 a white, 3 a red) and two producers.",
+    "grape_ha": [
+     [
+      "Solaris",
+      0.45
+     ],
+     [
+      "Müller-Thurgau (Riesling-Silvaner)",
+      0.18
+     ],
+     [
+      "Johanniter",
+      0.03
+     ]
+    ],
+    "growers": 2,
+    "basis": "Weinverordnung (WeinV) GS 916.610 (20 June 2022, in force 1 Aug 2022) and Standeskommissionsbeschluss GS 916.611",
+    "label_rule": "AOC Appenzell Innerrhoden: at least 90% of the grapes from the canton (Art. 8). District (Bezirk), part of a district or site: 90% from it (Art. 14)",
+    "atlas_note": "The canton made its own wine law only in 2022, modelled on St. Gallen, so that its wine would not have to be sold as Landwein. All the vines are in the Bezirk Oberegg, an exclave on the hills above the Rhine valley. The larger of the two producers is based in Berneck SG.",
+    "refs": [
+     [
+      "LZSG, Weinlese 2025 nach Kanton (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Kanton-inkl.-AI-AR-2025-3-2.pdf"
+     ],
+     [
+      "LZSG, Weinlese 2025 nach Gemeinde (SG, AI, AR)",
+      "https://www.stgaller-wein.ch/wp-content/uploads/Weinlese-Gemeinde-inkl.-AI-AR-2025-1-3.pdf"
+     ],
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "Appenzell Innerrhoden GS 916.610, Weinverordnung",
+      "https://lexaris.de/book/version/documentflat/head/248162"
+     ],
+     [
+      "Appenzell Innerrhoden GS 916.611, StKB WeinV",
+      "https://ai.clex.ch/frontend/structured_documents/3013/download_pdf_file_and_annex.pdf"
+     ],
+     [
+      "Appenzell Innerrhoden, Botschaft zur kantonalen Weinverordnung (draft)",
+      "https://www.ai.ch/politik/standeskommission/kantonale-vernehmlassungen/weinverordnung-weinv/entwurf-botschaft-zur-einfuehrung-der-kantonalen-weinverordnung/@@download/file/Entwurf%20Botschaft%20zur%20Einf%C3%BChrung%20der%20kantonalen%20Weinverordnung.pdf"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
+  },
+  "ch-canton-26": {
+   "bfs": 26,
+   "name": "AOC Jura",
+   "region": "Trois-Lacs",
+   "d": {
+    "official_name": "AOC Jura",
+    "area_ha": 17.8,
+    "area_src": "BLW, Das Weinjahr 2025",
+    "area_note": "7.8 ha white, 10.0 ha red, 2025 (BLW)",
+    "basis": "Ordonnance sur la viticulture et l'appellation des vins RSJU 916.141; directives RSJU 916.141.1 (in force 1 June 2019)",
+    "label_rule": "AOC Jura from the 2016 vintage; only the varieties in annex 1 of the directives are admitted (Chasselas is not)",
+    "atlas_note": "The youngest Swiss AOC, created for the 2016 vintage. The vineyards were planted from the 1980s on, about half a dozen producers work them, and many grow fungus resistant varieties bred in the region by Valentin Blattner. The largest estate is the Clos des Cantons at Buix in the Ajoie, with 7 ha.",
+    "producers_note": "Clos des Cantons, Buix (Famille Fleury, 7 ha), Martin Buser (1.3 ha), Blattner, Laurent Kohler, Dennert in Vermes (Vinum 2022)",
+    "refs": [
+     [
+      "BLW, Das Weinjahr 2025 (L'anno viticolo 2025), table 1.1",
+      "https://www.blw.admin.ch/dam/it/sd-web/an5PEIBQ1W3u/Weinjahr_2024_I_25_8.pdf"
+     ],
+     [
+      "République et Canton du Jura, Viticulture",
+      "https://www.jura.ch/DES/ECR/Viticulture/Viticulture-dans-le-Canton-du-Jura.html"
+     ],
+     [
+      "RSJU 916.141, Ordonnance sur la viticulture et l'appellation des vins",
+      "https://rsju.jura.ch/extranet/groups/public/documents/rsju_page/loi_916.141.hcsp"
+     ],
+     [
+      "Jura, directives RSJU 916.141.1",
+      "https://www.jura.ch:443/Htdocs/Files/v/34099.pdf/Departements/DES/ECR/Documents/Directives-relatives-a-lapplication-de-lordonnance-sur-la-viticulture-et-lappellation-des-vins.pdf?download=1"
+     ],
+     [
+      "Vinum, Jura: la dernière AOC suisse (2022)",
+      "https://www.vinum.eu/fr/magazine/les-histoires-du-vin/2022/jura/"
+     ],
+     [
+      "BLW, list of Swiss AOCs, 1 January 2026",
+      "https://www.blw.admin.ch/dam/it/sd-web/bQQd5jj01Ivw/AOC_KUB-AOC_DOC_1er%20janvier%202026.pdf"
+     ]
+    ]
+   }
   }
  },
  "_gaps": {
@@ -6732,6 +11261,32 @@
    "Fribourg: the ordinance does not delimit Cheyres beyond 'vignoble de Cheyres/Font'; Châbles is included because Terroir Fribourg says the vineyard spans Cheyres, Châbles and Font. Number of Fribourg growers not in the 2025 statistics; 24 (Vully FR+VD) and 25 (Cheyres) come from tourism pages.",
    "Mont-Vully merger date (Bas-Vully + Haut-Vully) not confirmed from a fetched source, so no date given.",
    "Web search budget ran out before checking the BLW grape tables against another source and before looking for a Bern Rebbaustatistik by variety."
+  ],
+  "ds1": [
+   "Zürich: the Strickhof reports Rebjahr und Weinlese 2025 and Erntezahlen 2025 in den Gemeinden (redaktion.strickhof.ch GetDokument ids 15861, 15862, 15863, 15867) and the ALN Verfügung über den Rebbau with Anhang 1 (id 607, 16322) could not be fetched (permission not granted / robots). So no official per-commune or per-region Zürich figures: region areas are the rounded Swiss Wine figures, and the five region names are not confirmed as legal Zusatzbezeichnungen.",
+   "Zürich: the exact list of Zürich communes entitled to AOC Zürichsee was not read (set by the ALN Verfügung); the outline uses the whole Meilen and Horgen districts. Whether AOC Zürichsee also covers the city of Zürich, Uster, Hinwil, Pfäffikon and Affoltern vineyards is unconfirmed.",
+   "Zürich: commune areas exist only from the cantonal Flächenstatistik 2025 (direct-payment land use, codes 0701+0717), and the readable text stopped after Trüllikon, so Stammheim, Andelfingen, Truttikon, Volken and all other districts have no figure. Stäfa is about 40 ha (Weinbauverband). Rafz, Eglisau, Neftenbach and Weiningen have no current area.",
+   "Zürich: the 85% commune rule is confirmed only through the Schwyz AOC Zürichsee decree (which must match Zürich law); the Zürich text itself was not read. Grape hectares for Zürich were read from the last cantonal column of the BLW tables 1.2/1.3, which have unmarked blank cells.",
+   "Thurgau: the Fachstelle report lists Ortsteile (Iselisberg, Ottenberg, Ottoberg, Nussbaumen, Götighofen, Amlikon). Their match to political communes is from Swiss Wine and Wikipedia (Iselisberg in Uesslingen-Buch, Nussbaumen in Hüttwilen, Ottoberg with Märstetten) and inferred for Ottenberg = Weinfelden and Götighofen = Sulgen. No Weinfelden, Uesslingen-Buch or Märstetten block was found in the text.",
+   "Thurgau: Warth-Weiningen 2025 totals were cut off in the extracted text, so its 2024 figure is used. The Anhang 1 production-area list does not name Wigoltingen, Bussnang, Müllheim and other communes with small vineyards; their membership is unknown.",
+   "Thurgau: Swiss Wine's six regions (Seebachtal, Unteres Thurtal, Untersee, Rhein, Lauchetal, Oberes Thurtal) are tourist regions; only the three legal production areas are drawn.",
+   "Schaffhausen: Osterfingen (merged into Wilchingen 2005) is not in the 2010 boundary set, so it is folded into Wilchingen. Büsingen am Hochrhein (German exclave, 0.72 ha) is in the Reiat/Rhein area by law but has no Swiss boundary. Commune areas use planted (bestockt) area; the overview total 463.48 ha differs slightly from the commune sum 462.14 ha.",
+   "Aargau: the 2025 Weinlesebericht with commune figures was not found; commune areas are sums of the 2024 variety rows (the report gives no commune totals). The law does not define regions, so the five regions follow Swiss Wine and are not complete lists. Swiss Wine names Meisterschwanden among the largest Seetal communes, but Liebegg 2024 shows only 0.9 ha.",
+   "Aargau: no list of approved Grand Cru Aargau parcels found yet (rule in force since 1 Jan 2025).",
+   "Growers per commune are not published in the sources read; Zürich grower total not found in an official source (Falstaff says about 600)."
+  ],
+  "ds2": [
+   "BLW 2025 per-canton variety tables (1.2/1.3) could not be read column by column (empty cells dropped in the text), so Luzern, Schwyz, Zug, Jura, Glarus and Uri/Obwalden/Nidwalden have no official grape hectares. Luzern Pinot Noir is probably 14.96 ha (first value of the row) but not confirmed.",
+   "BLW gives Uri, Obwalden and Nidwalden only together (6.8 ha) and Appenzell AI and AR together (4.45 ha); no separate official 2025 area for UR, OW, NW. AR and AI areas in this file are sums from the LZSG harvest control (3.26 + 0.66 ha).",
+   "St. Gallen commune and area figures are sums of the variety rows in the LZSG 2025 harvest control; the communes add to 193.2 ha against 200.2 ha in the cantonal table and 203.7 ha in BLW (difference not explained in the source). Commune grower counts are not published.",
+   "LZSG regional report puts Amden and Weesen under 'Übrige Gebiete'; the law (sGS 610.11 Art. 41a) puts them in Sarganserland, which this file follows.",
+   "Luzern: the four wine regions (Seetal, Surental/Sempachersee, Vierwaldstättersee, Wiggertal) are in SRL 917 § 2 but without a commune list, so no outlines were drawn. No per-commune area found for Luzern.",
+   "Basel-Landschaft has no official wine districts; the Ebenrain list of regional designations and the Reblagenverzeichnis are not published online. Basel-Landschaft canton area by variety: only the top 12 rows read; canton total area not printed in the Herbstbrief.",
+   "Uri law RB 60.3231 (Weinreglement) and Jura RSJU 916.141 could not be opened; their label percentages are missing. The Jura AOC label rule is based on the directives and Vinum only.",
+   "Zug, Schwyz, Obwalden, Nidwalden, Glarus, Uri and Jura: no per-commune vineyard areas found, so no commune places. Clos des Cantons (Buix, now Basse-Allaine), Weingut Tellen (Kägiswil, Sarnen), Bürglirain (Glarus) and Insel Ufnau not placed: no confirmed coordinates.",
+   "The St. Gallen production area is named «Zürichsee» (its legal name) and is separate from the Zürich/Schwyz AOC Zürichsee; parent names Zürichsee vs AOC Zürichsee must not be merged. AOC Zürichsee here covers only the Schwyz communes; it must be merged with the Zürich side if the ZH researcher adds it.",
+   "Basel-Stadt: the BS agreement SG 911.200 was not read; the legal link to the BL ordinance rests on the BL text (which names AOC Basel-Stadt) and the CSCV law list. Bettingen has no harvest entry in 2025.",
+   "Schwyz growers and Basel-Landschaft growers not published; 'about 400 growers' for St. Gallen is from the growers' association, not a 2025 count."
   ]
  }
 }

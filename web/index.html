@@ -852,7 +852,7 @@ const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
   rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
-  chreg: { name: "Cantonal wine laws and vineyard statistics of Vaud, Genève and Graubünden; outlines from BFS GEOSTAT / swisstopo municipal boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
+  chreg: { name: "Cantonal wine laws and vineyard statistics of the Swiss wine cantons and BLW Das Weinjahr 2025; outlines from BFS GEOSTAT / swisstopo boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
   bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
   osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
   ava: { name: "UC Davis Library, AVA Digitizing Project (from 27 CFR part 9)", license: "CC0 1.0", url: "https://github.com/UCDavisLibrary/ava" },
@@ -3176,7 +3176,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
+  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality && !(p.src === "chreg" && d.communes) ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
     (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "");
   if (liveVines(d)) rows.push([N_("Vineyard area"), '<span id="vine-ha"><span class="note">' + t_("Measuring the vineyards…") + "</span></span>"]);
   else if (areaHtml) rows.push([N_("Area"), areaHtml]);
@@ -3247,6 +3247,12 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     html += '<div class="sec"><h3>' + t_("Grapes planted") + '</h3><div class="bars">' +
       d.grape_share.map(([n, pc]) => '<div class="bar"><span class="bl">' + esc(n) + '</span><span class="bt"><i style="width:' + Math.min(100, pc) + '%"></i></span><span class="num">' + fmtN(pc, 1) + "%</span></div>").join("") +
       "</div>" + (d.grape_share_note ? '<p class="note">' + esc(t_(d.grape_share_note)) + "</p>" : "") + "</div>";
+  }
+
+  // rules and traditional names in plain words (Switzerland: cantonal wine laws)
+  if (d.rules?.length) {
+    html += '<div class="sec"><h3>' + t_("Rules and names") + '</h3><dl class="facts">' +
+      d.rules.map(([k, v]) => "<dt>" + esc(t_(k)) + "</dt><dd>" + esc(v) + "</dd>").join("") + "</dl></div>";
   }
 
   // premiers crus that are listed but not mapped yet (Geneva)

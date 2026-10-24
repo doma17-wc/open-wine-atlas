@@ -183,7 +183,7 @@ def main():
         if "pinot_ha" in d and d.get("vine_area_ha"):
             pct = round(100 * d["pinot_ha"] / d["vine_area_ha"], 1)
             d["grape_share"] = [["Pinot Noir (Blauburgunder)", pct]]
-            d["grape_share_note"] = f"Pinot Noir: {d.pop('pinot_ha')} of {d['vine_area_ha']} ha, Plantahof Rebbaustatistik 2025"
+            d["grape_share_note"] = f"Pinot Noir: {d.pop('pinot_ha')} of {d['vine_area_ha']} ha, {d.get('vine_area_src') or 'cantonal statistics'}"
         extra_outline = d.pop("outline_extra", "")
         if canton:
             d.setdefault("wine_region", pl["wine_region"])

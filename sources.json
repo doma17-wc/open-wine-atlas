@@ -116,9 +116,9 @@
   "notes": "Live wine records only. Each wine is placed on an atlas place by pipeline/lwin.py; names are kept as published."
  },
  "chreg": {
-  "name": "Swiss wine areas, communal appellations and grands crus below the cantonal AOC (Vaud, Genève, Graubünden)",
+  "name": "Swiss wine areas, communal appellations and grands crus below the cantonal AOC, all cantons",
   "license": "Editorial list CC BY 4.0; commune outlines open use with attribution (BFS GEOSTAT / swisstopo); Calamin outline ODbL 1.0 (OpenStreetMap)",
-  "attribution": "Open Wine Atlas contributors, from the cantonal wine laws (RVV RSV 916.125.2, RSG M 2 50.05, BR 917.400) and vineyard statistics (Registre cantonal des vignes VD 2019, OCAN Genève 2024, Plantahof Rebbaustatistik 2025, BLW Das Weinjahr 2025)",
+  "attribution": "Open Wine Atlas contributors, from the cantonal wine laws and vineyard statistics of every wine canton and BLW Das Weinjahr 2025; each figure carries its source in pipeline/lists/ch_regions.json",
   "url": "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json",
   "download_used": "pipeline/lists/ch_regions.json; npm package swiss-maps 4.7.0 (municipalities 2024 and 2010)"
  }

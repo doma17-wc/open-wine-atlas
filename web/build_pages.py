@@ -371,7 +371,8 @@ def main():
         add("Category", esc(d.get("category", "")))
         add("Protected since", esc(d.get("registered", "")))
         outline_kind = ("outline of the administrative units" if d.get("admin_units") else
-                        "registered outline" if d.get("outline_quality") else "outline of listed communes")
+                        "registered outline" if d.get("outline_quality") and not (pid.startswith("ch-reg-") and d.get("communes"))
+                        else "outline of listed communes")
         add("Area", (f"{fmt_n(d['area_ha'], 1)} ha" if d.get("area_ha") else
                      (f"{fmt_n(d['outline_area_ha'])} ha {outline_kind}" if d.get("outline_area_ha") else ""))
             + (f' <span class="note">{esc(d["area_note"])}</span>' if d.get("area_note") else ""))
