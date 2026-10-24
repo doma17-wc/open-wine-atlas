@@ -3,3 +3,5 @@ work/
 tilecache/
 package-lock.json
 TASK_PROMPT.md
+prev/
+*.log

@@ -59,7 +59,7 @@ function serveFile(req, file) {
 
 export async function openAtlas({ width = 540, height = 960, scale = 2, hash = "", css = "", globe = false, labelScale = 1.55 } = {}) {
   const browser = await puppeteer.launch({
-    executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
+    executablePath: "/opt/pw-browsers/chromium-1243/chrome-linux64/chrome",
     headless: true,
     args: ["--no-sandbox", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist", "--disable-dev-shm-usage"],
   });

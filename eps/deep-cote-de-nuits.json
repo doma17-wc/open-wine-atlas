@@ -1,0 +1,342 @@
+{
+ "slug": "deep-cote-de-nuits",
+ "id": "g:FR/bourgogne/cote-de-nuits",
+ "duration": 56.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  17
+ ],
+ "markers": [
+  {
+   "lng": 4.9486,
+   "lat": 47.1616,
+   "label": "La Romanée",
+   "shots": [
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "intro",
+   "dur": 7.0,
+   "pad": {
+    "top": 60,
+    "bottom": 420
+   },
+   "cam": [
+    [
+     0,
+     4.9,
+     47.12,
+     9.2,
+     0,
+     0
+    ],
+    [
+     7.0,
+     4.962,
+     47.19,
+     11.9,
+     0,
+     0
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": true
+  },
+  {
+   "name": "gevrey",
+   "dur": 8.0,
+   "pad": {
+    "top": 60,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.966,
+     47.208,
+     14.2,
+     0,
+     0
+    ],
+    [
+     8.0,
+     4.966,
+     47.208,
+     14.45,
+     6,
+     18
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "morey3d",
+   "dur": 8.0,
+   "fps": 6,
+   "terrain": 1.8,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.958,
+     47.199,
+     14.2,
+     268,
+     54
+    ],
+    [
+     8.0,
+     4.957,
+     47.193,
+     14.35,
+     258,
+     56
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.6
+   },
+   "labels": true
+  },
+  {
+   "name": "vougeot",
+   "dur": 8.0,
+   "pad": {
+    "top": 60,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.956,
+     47.175,
+     14.1,
+     0,
+     0
+    ],
+    [
+     8.0,
+     4.956,
+     47.175,
+     14.35,
+     -6,
+     18
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "vosne3d",
+   "dur": 8.0,
+   "fps": 6,
+   "terrain": 1.8,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.952,
+     47.163,
+     14.7,
+     272,
+     52
+    ],
+    [
+     8.0,
+     4.951,
+     47.161,
+     14.9,
+     262,
+     55
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.6,
+    "markers": true
+   },
+   "labels": true
+  },
+  {
+   "name": "quiz",
+   "dur": 9.0,
+   "pad": {
+    "top": 60,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.96,
+     47.19,
+     12.6,
+     0,
+     0
+    ],
+    [
+     9.0,
+     4.96,
+     47.19,
+     12.8,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.4
+   },
+   "labels": false
+  },
+  {
+   "name": "wall",
+   "dur": 7.0,
+   "pad": {
+    "top": 60,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.96,
+     47.19,
+     12.8,
+     0,
+     10
+    ],
+    [
+     7.0,
+     4.75,
+     47.05,
+     10.2,
+     0,
+     0
+    ]
+   ],
+   "labels": true
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 6.0,
+   "kicker": "Burgundy Deep · France",
+   "title": "Côte de Nuits",
+   "sub": "24 grand crus<br>in 7 km"
+  },
+  {
+   "kind": "card",
+   "t0": 7.3,
+   "t1": 13.6,
+   "kicker": "Gevrey-Chambertin",
+   "n": "9",
+   "u": "grand crus",
+   "count": {
+    "v": 9,
+    "d": 0
+   },
+   "c": "in one village. Chambertin itself: 12.9&nbsp;ha. Clos de Bèze, next door to the north: 15.3&nbsp;ha.",
+   "src": "INAO 2026 · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 14.8,
+   "t1": 21.1,
+   "kicker": "Morey-Saint-Denis",
+   "n": "328",
+   "u": "m",
+   "count": {
+    "v": 328,
+    "d": 0
+   },
+   "c": "the top of Clos des Lambrays, the highest ground of any Côte de Nuits grand cru. It became a grand cru in 1981.",
+   "src": "INAO · Terrain © Mapterhorn"
+  },
+  {
+   "kind": "card",
+   "t0": 22.3,
+   "t1": 28.6,
+   "kicker": "Vougeot",
+   "n": "51.1",
+   "u": "ha",
+   "c": "Clos de Vougeot, the largest grand cru of the Côte de Nuits, enclosed by a wall built by the Cistercian monks of Cîteaux.",
+   "src": "INAO 2026 · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.1,
+   "kicker": "Vosne-Romanée",
+   "n": "1.8",
+   "u": "ha",
+   "c": "Romanée-Conti. La Romanée, just upslope, is smaller still: 0.8&nbsp;ha.",
+   "src": "INAO 2026 · Terrain © Mapterhorn"
+  },
+  {
+   "kind": "card",
+   "t0": 37.3,
+   "t1": 40.8,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "How many grand crus lie in Gevrey-Chambertin?<br>A&nbsp;&nbsp;5<br>B&nbsp;&nbsp;9<br>C&nbsp;&nbsp;12",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 40.9,
+   "t1": 44.4,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Which grand cru sits highest on the slope?<br>A&nbsp;&nbsp;Clos de Vougeot<br>B&nbsp;&nbsp;Romanée-Conti<br>C&nbsp;&nbsp;Clos des Lambrays",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 45.6,
+   "t1": 51.4,
+   "kicker": "Burgundy Deep",
+   "n": "142",
+   "u": "premier crus",
+   "count": {
+    "v": 142,
+    "d": 0
+   },
+   "c": "in the Côte de Nuits alone. Grand crus stay open for everyone. A free account opens all 838 Burgundy places.",
+   "src": "openwineatlas.com"
+  },
+  {
+   "kind": "outro",
+   "t0": 52.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Create your free account",
+   "small": "No card, no password: we email you a code.<br>Every village, premier cru and climat.",
+   "srcs": "Sources: INAO 2026 · Terrain © Mapterhorn · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 4,
+  "at": 0.6,
+  "kicker": "Burgundy Deep · France",
+  "title": "Côte de Nuits",
+  "sub": "24 grand crus<br>in 7 km"
+ }
+}

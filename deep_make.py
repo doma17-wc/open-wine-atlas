@@ -63,7 +63,7 @@ inputs += ["-framerate", "30", "-i", os.path.join(ovl_dir, "%05d.png"), "-i", wa
 fc.append(f"[{n}:v]format=rgba[ov];[base][ov]overlay=0:0:format=auto,format=yuv420p[v]")
 final = os.path.join(W, slug + ".mp4")
 run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(fc), "-map", "[v]", "-map", f"{n + 1}:a",
-     "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-maxrate", "7M", "-bufsize", "14M", "-x264-params", "aq-mode=3", "-pix_fmt", "yuv420p", "-r", "30",
+     "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-maxrate", "7M", "-bufsize", "14M", "-x264-params", "aq-mode=3", "-pix_fmt", "yuv420p", "-r", "30",
      "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", "-t", str(DUR), "-movflags", "+faststart", final])
 
 # 6. cover: a frame of the chosen shot behind the series title

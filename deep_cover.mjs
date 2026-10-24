@@ -25,7 +25,7 @@ h1{font-family:CG;font-weight:500;font-size:${it.size || 170}px;line-height:.96;
 <div class="txt"><div class="kick">${it.kicker}</div><h1>${it.title}</h1><div class="rule"></div><div class="sub">${it.sub || ""}</div></div></body></html>`;
 const file = path.resolve(out + ".html");
 fs.writeFileSync(file, html);
-const browser = await puppeteer.launch({ executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome", headless: true, args: ["--no-sandbox", "--allow-file-access-from-files"] });
+const browser = await puppeteer.launch({ executablePath: "/opt/pw-browsers/chromium-1243/chrome-linux64/chrome", headless: true, args: ["--no-sandbox", "--allow-file-access-from-files"] });
 const page = await browser.newPage();
 await page.setViewport({ width: 1080, height: 1920 });
 await page.goto("file://" + file, { waitUntil: "load" });

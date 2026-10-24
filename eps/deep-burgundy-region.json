@@ -1,0 +1,379 @@
+{
+ "slug": "deep-burgundy-region",
+ "id": "g:FR/bourgogne",
+ "duration": 57.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  52
+ ],
+ "markers": [
+  {
+   "lng": 3.7986,
+   "lat": 47.8146,
+   "label": "Chablis",
+   "shots": [
+    1,
+    6
+   ]
+  },
+  {
+   "lng": 4.86,
+   "lat": 47.12,
+   "label": "Côte d'Or",
+   "shots": [
+    1,
+    6
+   ]
+  },
+  {
+   "lng": 4.72,
+   "lat": 46.78,
+   "label": "Côte Chalonnaise",
+   "shots": [
+    1
+   ]
+  },
+  {
+   "lng": 4.75,
+   "lat": 46.33,
+   "label": "Mâconnais",
+   "shots": [
+    1
+   ]
+  },
+  {
+   "lng": 4.9486,
+   "lat": 47.1616,
+   "label": "La Romanée",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     1.5,
+     46.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     2.2,
+     46.4,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     4.4,
+     46.95,
+     6.0,
+     0,
+     8
+    ]
+   ],
+   "labels": false,
+   "fps": 10
+  },
+  {
+   "name": "region",
+   "dur": 9.0,
+   "pad": {
+    "top": 40,
+    "bottom": 420
+   },
+   "cam": [
+    [
+     0,
+     4.3,
+     46.98,
+     6.35,
+     0,
+     0
+    ],
+    [
+     9.0,
+     4.3,
+     46.98,
+     6.55,
+     4,
+     16
+    ]
+   ],
+   "labels": true,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "markers": true
+   }
+  },
+  {
+   "name": "nuits3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.8,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.958,
+     47.183,
+     13.85,
+     268,
+     52
+    ],
+    [
+     8.5,
+     4.956,
+     47.17,
+     14.05,
+     256,
+     55
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": true
+  },
+  {
+   "name": "smallest",
+   "dur": 8.0,
+   "pad": {
+    "top": 80,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.952,
+     47.1675,
+     14.0,
+     0,
+     0
+    ],
+    [
+     8.0,
+     4.952,
+     47.1675,
+     14.25,
+     6,
+     20
+    ]
+   ],
+   "labels": true,
+   "layers": {
+    "markers": true
+   }
+  },
+  {
+   "name": "corton3d",
+   "dur": 8.0,
+   "fps": 6,
+   "terrain": 1.8,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.868,
+     47.068,
+     13.7,
+     325,
+     57
+    ],
+    [
+     8.0,
+     4.866,
+     47.07,
+     13.85,
+     315,
+     59
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.6
+   },
+   "labels": true
+  },
+  {
+   "name": "premiers",
+   "dur": 7.0,
+   "pad": {
+    "top": 80,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.745,
+     46.975,
+     12.5,
+     0,
+     0
+    ],
+    [
+     7.0,
+     4.745,
+     46.975,
+     12.75,
+     -5,
+     20
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "wall",
+   "dur": 9.0,
+   "pad": {
+    "top": 40,
+    "bottom": 420
+   },
+   "cam": [
+    [
+     0,
+     4.92,
+     47.13,
+     10.0,
+     0,
+     30
+    ],
+    [
+     9.0,
+     4.3,
+     46.98,
+     6.6,
+     0,
+     0
+    ]
+   ],
+   "labels": true,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "markers": true
+   }
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Deep Region · France",
+   "title": "Burgundy",
+   "sub": "838 places<br>on one map"
+  },
+  {
+   "kind": "card",
+   "t0": 6.8,
+   "t1": 14.0,
+   "kicker": "The region",
+   "n": "838",
+   "u": "places",
+   "count": {
+    "v": 838,
+    "d": 0
+   },
+   "c": "from Chablis to the Mâconnais, in 6 districts. The Côte de Beaune alone holds 403.",
+   "src": "Open Wine Atlas · INAO 2026"
+  },
+  {
+   "kind": "card",
+   "t0": 15.2,
+   "t1": 22.2,
+   "kicker": "Côte de Nuits",
+   "n": "24",
+   "u": "grand crus",
+   "count": {
+    "v": 24,
+    "d": 0
+   },
+   "c": "on one east-facing slope south of Dijon. Nine of them are in Gevrey-Chambertin alone.",
+   "src": "INAO · Terrain © Mapterhorn"
+  },
+  {
+   "kind": "card",
+   "t0": 23.2,
+   "t1": 29.8,
+   "kicker": "Smallest and largest",
+   "n": "0.8",
+   "u": "ha",
+   "c": "La Romanée, the smallest grand cru appellation. Clos de Vougeot, 1.4&nbsp;km to the north: 51.1&nbsp;ha.",
+   "src": "INAO 2026 · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 30.8,
+   "t1": 37.2,
+   "kicker": "Côte de Beaune",
+   "n": "160.5",
+   "u": "ha",
+   "c": "Corton, the largest grand cru of Burgundy, across 3 communes. It climbs from 229 to 362&nbsp;m.",
+   "src": "INAO · Terrain © Mapterhorn"
+  },
+  {
+   "kind": "card",
+   "t0": 38.2,
+   "t1": 43.6,
+   "kicker": "Premier crus",
+   "n": "668",
+   "u": "",
+   "count": {
+    "v": 668,
+    "d": 0
+   },
+   "c": "premier crus on the map, each with its outline, wine rules, soils and terrain.",
+   "src": "INAO 2026 · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 44.8,
+   "t1": 52.4,
+   "kicker": "Burgundy Deep",
+   "n": "3",
+   "u": "free places",
+   "c": "to explore first. Then a free account opens all 838. Grand crus stay open for everyone.",
+   "src": "openwineatlas.com"
+  },
+  {
+   "kind": "outro",
+   "t0": 53.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Burgundy in full depth",
+   "title": "Create your free account",
+   "small": "No card, no password: we email you a code.<br>Every village, premier cru and climat.",
+   "srcs": "Sources: INAO 2026 · Terrain © Mapterhorn · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.6,
+  "kicker": "Deep Region · France",
+  "title": "Burgundy",
+  "sub": "838 places<br>on one map"
+ }
+}

@@ -145,7 +145,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><style>${CSS}</st
 const file = path.join(out, "_overlay.html");
 fs.writeFileSync(file, html);
 
-const browser = await puppeteer.launch({ executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome", headless: true,
+const browser = await puppeteer.launch({ executablePath: "/opt/pw-browsers/chromium-1243/chrome-linux64/chrome", headless: true,
   args: ["--no-sandbox", "--disable-dev-shm-usage", "--allow-file-access-from-files"] });
 const page = await browser.newPage();
 await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
