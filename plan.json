@@ -80,7 +80,7 @@
   {
    "slug": "deep-barolo",
    "place": "Barolo",
-   "atlas_id": "",
+   "atlas_id": "it-eupdo-PDO-IT-A1389",
    "series": "",
    "not_before": "2026-10-27",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
@@ -123,16 +123,18 @@
   {
    "slug": "deep-valais",
    "place": "Valais",
-   "atlas_id": "",
+   "atlas_id": "ch-canton-23",
    "series": "",
    "not_before": "2026-10-23",
    "why": "Switzerland's driest valley, Föhn and steep terraces",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-10-24T17:50+02:00",
+   "note": "Hook 'Switzerland's driest valley' dropped (no official ranking); title hook 'A dry valley in the Alps', backed by Sion 583 mm vs Zurich 1,108 mm. Föhn left out (no measured data). Climate: MeteoSwiss data, WMO normals 1991-2020 via NOAA, read from the Wikipedia climate boxes (MeteoSwiss climsheet, STAC API and NOAA CSV not reachable from the run). Flat climate/heat/quiz shots at 6 fps to save time."
   },
   {
    "slug": "deep-cote-de-beaune",
    "place": "Côte de Beaune",
-   "atlas_id": "",
+   "atlas_id": "fr-inao-a167",
    "series": "",
    "not_before": "2026-11-12",
    "why": "Hospices de Beaune charity auction (third Sunday of November, check the 2026 date)",
@@ -141,7 +143,7 @@
   {
    "slug": "deep-beaujolais",
    "place": "Beaujolais",
-   "atlas_id": "",
+   "atlas_id": "fr-inao-a1032",
    "series": "",
    "not_before": "2026-11-16",
    "why": "Beaujolais Nouveau day, third Thursday of November",
@@ -150,7 +152,7 @@
   {
    "slug": "deep-niagara",
    "place": "Niagara Peninsula",
-   "atlas_id": "",
+   "atlas_id": "ca-world-niagara-peninsula",
    "series": "",
    "not_before": "2026-12-01",
    "why": "icewine harvest waits for -8 °C",
@@ -159,11 +161,12 @@
   {
    "slug": "deep-wachau",
    "place": "Wachau",
-   "atlas_id": "",
+   "atlas_id": "at-eupdo-PDO-AT-A0205",
    "series": "",
-   "not_before": "2026-10-26",
+   "not_before": "2026-10-25",
    "why": "Austria study path: Grüner Veltliner and Riesling on stone terraces above the Danube",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-10-26 to 2026-10-25 on 2026-10-24 so the Valais outro 'Next deep dive: Wachau' is true."
   },
   {
    "slug": "deep-chablis",
@@ -172,6 +175,15 @@
    "series": "",
    "not_before": "2026-10-29",
    "why": "Burgundy study path: Kimmeridgian marl, frost and Chardonnay on the Serein",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-rioja",
+   "place": "Rioja",
+   "atlas_id": "es-eupdo-PDO-ES-A0117",
+   "series": "",
+   "not_before": "2026-10-30",
+   "why": "Spain study path: Tempranillo, the Ebro and the ageing categories (Crianza, Reserva, Gran Reserva)",
    "status": "planned"
   }
  ]

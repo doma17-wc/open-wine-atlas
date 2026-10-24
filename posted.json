@@ -120,6 +120,19 @@
     "Comité Champagne",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-valais",
+   "place": "Valais",
+   "slot": "2026-10-24T17:50+02:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-7808262758693911112",
+   "sources": [
+    "MeteoSwiss data, WMO normals 1991-2020 (Sion, Zurich-Fluntern) via NOAA, through Wikipedia climate boxes",
+    "BLW, Das Weinjahr 2025",
+    "Valais OVV RS VS 916.142",
+    "Swiss Wine Promotion",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
