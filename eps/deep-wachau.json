@@ -1,0 +1,550 @@
+{
+ "slug": "deep-wachau",
+ "id": "at-eupdo-PDO-AT-A0205",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "alpine",
+  71
+ ],
+ "markers": [
+  {
+   "lng": 15.6222,
+   "lat": 48.4186,
+   "label": "Krems station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     1.0,
+     47.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     1.6,
+     47.4,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     15.44,
+     48.34,
+     8.2,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     15.44,
+     48.36,
+     9.0,
+     0,
+     0
+    ],
+    [
+     7.5,
+     15.44,
+     48.36,
+     9.25,
+     6,
+     24
+    ]
+   ],
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     15.475,
+     48.392,
+     12.1,
+     -28,
+     62
+    ],
+    [
+     8.5,
+     15.495,
+     48.396,
+     12.3,
+     -18,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     15.47,
+     48.37,
+     9.6,
+     0,
+     0
+    ],
+    [
+     16.5,
+     15.47,
+     48.37,
+     9.75,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     15.5,
+     48.38,
+     10.1,
+     6,
+     15
+    ],
+    [
+     7.5,
+     15.5,
+     48.38,
+     10.2,
+     10,
+     20
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     15.45,
+     48.385,
+     11.3,
+     -10,
+     40
+    ],
+    [
+     8.5,
+     15.45,
+     48.385,
+     11.5,
+     -2,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     15.44,
+     48.36,
+     9.05,
+     0,
+     0
+    ],
+    [
+     10.5,
+     15.44,
+     48.36,
+     9.2,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Austria · Deep dive",
+   "title": "Wachau",
+   "sub": "Stone terraces<br>above the Danube"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "8",
+   "u": "communes",
+   "c": "share the Wachau name, on both banks of the Danube, about 70&nbsp;km from Vienna.",
+   "src": "EU GI register · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "920",
+   "u": "m",
+   "c": "the highest ground in the outline. By the Danube it drops to 193&nbsp;m: a relief of 727&nbsp;m.",
+   "src": "Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "88% of the outline is <i>metamorphic rock</i>, like the Gföhl gneiss the Danube cut through. Stone <i>terraces</i> from the Middle Ages hold the slopes.",
+   "src": "Open Wine Atlas bedrock · Austrian GI dossier, 2015"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "536",
+   "u": "mm",
+   "count": {
+    "v": 536,
+    "d": 0
+   },
+   "c": "a year at Krems (202&nbsp;m). Vienna Hohe Warte: 674&nbsp;mm. Summer brings the most rain.",
+   "chart": {
+    "type": "months",
+    "a": [
+     20,
+     16,
+     29,
+     32,
+     68,
+     81,
+     77,
+     78,
+     49,
+     34,
+     29,
+     23
+    ],
+    "b": [
+     42,
+     38,
+     52,
+     42,
+     79,
+     70,
+     78,
+     69,
+     64,
+     47,
+     46,
+     47
+    ],
+    "max": 90,
+    "bands": [],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Krems &nbsp; ▢ Vienna Hohe Warte &nbsp;·&nbsp; mm per month"
+   },
+   "src": "GeoSphere Austria data, 1991–2020 means"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "1,800",
+   "u": "h",
+   "count": {
+    "v": 1800,
+    "d": 0
+   },
+   "c": "of sun a year at Krems, rounded. Vienna gets about 2,040&nbsp;h: some 240 more.",
+   "src": "GeoSphere Austria data, 1991–2020 means",
+   "chart": {
+    "type": "months",
+    "a": [
+     53,
+     90,
+     140,
+     204,
+     223,
+     231,
+     242,
+     242,
+     171,
+     108,
+     51,
+     46
+    ],
+    "b": [
+     71,
+     107,
+     158,
+     219,
+     248,
+     258,
+     273,
+     267,
+     192,
+     127,
+     66,
+     56
+    ],
+    "max": 300,
+    "bands": [],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Krems &nbsp; ▢ Vienna Hohe Warte &nbsp;·&nbsp; hours per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "15.8",
+   "u": "°C",
+   "count": {
+    "v": 15.8,
+    "d": 1
+   },
+   "c": "the April to October average at Krems. Under 16.5&nbsp;°C: a cool climate in WSET terms.",
+   "chart": {
+    "type": "range",
+    "max": [
+     3.5,
+     5.9,
+     10.9,
+     16.9,
+     21.2,
+     24.9,
+     27.0,
+     26.6,
+     21.0,
+     14.8,
+     8.5,
+     4.0
+    ],
+    "min": [
+     -2.9,
+     -2.2,
+     1.2,
+     5.0,
+     9.5,
+     13.2,
+     14.8,
+     14.3,
+     10.1,
+     5.5,
+     1.9,
+     -2.0
+    ],
+    "hl": 6,
+    "lo": -5,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July high 27.0 °C"
+   },
+   "src": "GeoSphere Austria data, 1991–2020 means · WSET bands: Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "2",
+   "u": "grapes",
+   "c": "for a single-vineyard Wachau DAC wine: Grüner Veltliner or Riesling. Every Wachau DAC grape is picked by hand.",
+   "src": "Wachau DAC regulation, BGBl. II 200/2020"
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "Smaragd",
+   "u": "",
+   "c": "is the fullest dry style, at least 12.5% alcohol. Federspiel: up to 12.5%. Steinfeder: up to 11.5%.",
+   "src": "Vinea Wachau"
+  },
+  {
+   "kind": "card",
+   "t0": 52.3,
+   "t1": 55.5,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which Vinea Wachau category is the fullest dry wine?<br>A&nbsp;&nbsp;Steinfeder<br>B&nbsp;&nbsp;Federspiel<br>C&nbsp;&nbsp;Smaragd",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.6,
+   "t1": 58.8,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Which grapes may a Wachau DAC Riedenwein be made from?<br>A&nbsp;&nbsp;Grüner Veltliner or Riesling<br>B&nbsp;&nbsp;Riesling or Chardonnay<br>C&nbsp;&nbsp;Grüner Veltliner only",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 58.9,
+   "t1": 62.1,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls in a year at Krems?<br>A&nbsp;&nbsp;540 mm<br>B&nbsp;&nbsp;900 mm<br>C&nbsp;&nbsp;1,300 mm",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.3,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Wachau",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Chablis",
+   "srcs": "Sources: GeoSphere Austria data, 1991–2020 means (Krems, Vienna Hohe Warte) via Tauernwetter · BGBl. II 200/2020 · Vinea Wachau · EU GI register · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Austria",
+  "title": "Wachau",
+  "sub": "Stone terraces<br>above the Danube"
+ }
+}

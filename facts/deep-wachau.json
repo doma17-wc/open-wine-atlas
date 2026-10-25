@@ -1,0 +1,252 @@
+{
+ "slug": "deep-wachau",
+ "place": "Wachau",
+ "atlas_id": "at-eupdo-PDO-AT-A0205",
+ "made": "2026-10-25",
+ "station": {
+  "name": "Krems",
+  "height_m": 202,
+  "lat": 48.4186,
+  "lon": 15.6222,
+  "service": "GeoSphere Austria (data, klima-v2-1m homogenised), 1991-2020 means computed by Tauernwetter Forschung (CC BY 4.0)",
+  "period": "1991-2020",
+  "url": "https://tauernwetter.at/klimamittel/krems.html",
+  "coords_url": "https://meteo365.es/weather-stations/geosphere/11070/",
+  "note": "Official GeoSphere normals XLSX (klimaportal.geosphere.at/klimamittel/klimanormalperiode_19912020.xlsx) not reachable from the run (proxy blocked, binary for WebFetch). Cross-check vs GeoSphere annual review 2023 (handwerkundbau.at/wp-content/uploads/2025/04/Jahr_23.pdf): Krems 2023 535 mm = 100% of normal -> normal ~535 mm (536 here); sun 1837 h = 102% -> ~1,800 h (computed 1,801 here)."
+ },
+ "comparison_station": {
+  "name": "Wien Hohe Warte",
+  "height_m": 198,
+  "service": "GeoSphere Austria data, 1991-2020 means by Tauernwetter Forschung",
+  "url": "https://tauernwetter.at/klimamittel/wien-hohe-warte.html",
+  "note": "Cross-check 2023 review: 814 mm = 121% -> ~673 mm (674 here); 2003 h = 98% -> ~2,044 h (computed 2,042)."
+ },
+ "monthly": {
+  "krems_tmax": [
+   3.5,
+   5.9,
+   10.9,
+   16.9,
+   21.2,
+   24.9,
+   27.0,
+   26.6,
+   21.0,
+   14.8,
+   8.5,
+   4.0
+  ],
+  "krems_tmin": [
+   -2.9,
+   -2.2,
+   1.2,
+   5.0,
+   9.5,
+   13.2,
+   14.8,
+   14.3,
+   10.1,
+   5.5,
+   1.9,
+   -2.0
+  ],
+  "krems_tmean": [
+   0.0,
+   1.3,
+   5.4,
+   10.6,
+   15.4,
+   19.2,
+   20.9,
+   20.1,
+   14.8,
+   9.4,
+   4.8,
+   0.7
+  ],
+  "krems_precip_mm": [
+   20,
+   16,
+   29,
+   32,
+   68,
+   81,
+   77,
+   78,
+   49,
+   34,
+   29,
+   23
+  ],
+  "krems_sun_h_per_day": [
+   1.7,
+   3.2,
+   4.5,
+   6.8,
+   7.2,
+   7.7,
+   7.8,
+   7.8,
+   5.7,
+   3.5,
+   1.7,
+   1.5
+  ],
+  "krems_sun_h_month": [
+   52.7,
+   90.4,
+   139.5,
+   204.0,
+   223.2,
+   231.0,
+   241.8,
+   241.8,
+   171.0,
+   108.5,
+   51.0,
+   46.5
+  ],
+  "wien_precip_mm": [
+   42,
+   38,
+   52,
+   42,
+   79,
+   70,
+   78,
+   69,
+   64,
+   47,
+   46,
+   47
+  ],
+  "wien_sun_h_per_day": [
+   2.3,
+   3.8,
+   5.1,
+   7.3,
+   8.0,
+   8.6,
+   8.8,
+   8.6,
+   6.4,
+   4.1,
+   2.2,
+   1.8
+  ],
+  "wien_sun_h_month": [
+   71.3,
+   107.3,
+   158.1,
+   219.0,
+   248.0,
+   258.0,
+   272.8,
+   266.6,
+   192.0,
+   127.1,
+   66.0,
+   55.8
+  ]
+ },
+ "derived": {
+  "computation": "sun_month = h_per_day * days (Feb 28.25); sums; gst = mean(krems_tmean Apr..Oct); relief = e.max - e.min",
+  "values": {
+   "k_sun_year": 1801.4,
+   "w_sun_year": 2042.0,
+   "k_pr": 536,
+   "w_pr": 674,
+   "gst": 15.771428571428572,
+   "relief": 727,
+   "k_aprOct_rain": 419
+  }
+ },
+ "facts": [
+  {
+   "claim": "8 wine communes in the Wachau PDO (Aggsbach, Bergern im Dunkelsteinerwald, Dürnstein, Mautern an der Donau, Mühldorf, Rossatz-Arnsdorf, Spitz, Weißenkirchen in der Wachau)",
+   "value": 8,
+   "source": "EU GI register via Open Wine Atlas details-at.json",
+   "url": "https://ec.europa.eu/info/food-farming-fisheries/food-safety-and-quality/certification/quality-labels/geographical-indications-register/details/3801"
+  },
+  {
+   "claim": "Danube 1.2 km from the outline centroid; Vienna 72 km",
+   "source": "Open Wine Atlas details-at.json (rivers, near_city)",
+   "url": "https://openwineatlas.com/places/austria/wachau"
+  },
+  {
+   "claim": "Terrain over outline e=[193,439,920,208,629] m; max 920, min 193, relief 727",
+   "source": "Open Wine Atlas terrain (Mapterhorn)",
+   "url": "https://openwineatlas.com/places/austria/wachau"
+  },
+  {
+   "claim": "88% of the outline is metamorphic rock (schist, slate, gneiss)",
+   "value": 88,
+   "unit": "%",
+   "source": "Open Wine Atlas bedrock",
+   "url": "https://openwineatlas.com/places/austria/wachau"
+  },
+  {
+   "claim": "The Danube cut its way through the Gföhl gneiss; stone terraces laid out in the Middle Ages on the steep slopes; cool downslope winds from the Waldviertel before harvest",
+   "source": "Austrian technical dossier, GI Wachauer Weinbrand (Bundesministerium für Gesundheit, 2015), EU eAmbrosia",
+   "url": "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/48665"
+  },
+  {
+   "claim": "Krems 536 mm a year; Wien Hohe Warte 674 mm",
+   "source": "GeoSphere Austria data 1991-2020 via Tauernwetter",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Krems sunshine about 1,800 h a year (computed 1,801); Vienna about 2,040 h (computed 2,042)",
+   "source": "GeoSphere Austria data 1991-2020 via Tauernwetter, computed",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Krems April-October mean 15.8 °C; WSET cool up to about 16.5 °C",
+   "value": 15.8,
+   "source": "GeoSphere data via Tauernwetter; WSET bands from Open Wine Atlas Study",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Wachau DAC: exclusively hand-picked grapes; Riedenwein only Grüner Veltliner or Riesling (15% tolerance); no enrichment for Riedenwein",
+   "source": "Wachau DAC regulation, BGBl. II Nr. 200/2020 (5 May 2020)",
+   "url": "https://www.der-winzer.at/content/dam/wein-und-obst/der-winzer/de/web/anh%C3%A4nge/2020/WachauDAC_Verordnung_BGBLA_2020_II_200_05.05.2020.pdf"
+  },
+  {
+   "claim": "Steinfeder up to 11.5% abv (feather grass); Federspiel not more than 12.5% (falconry); Smaragd at least 12.5% (emerald lizard of the dry stone walls)",
+   "source": "Vinea Wachau",
+   "url": "https://www.vinea-wachau.at/en/vinea-wachau/the-brandnames"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which Vinea Wachau category is the fullest dry wine?",
+   "options": [
+    "Steinfeder",
+    "Federspiel",
+    "Smaragd"
+   ],
+   "answer": "C, Smaragd (at least 12.5% abv)",
+   "source": "Vinea Wachau"
+  },
+  {
+   "q": "Which grapes may a Wachau DAC Riedenwein be made from?",
+   "options": [
+    "Grüner Veltliner or Riesling",
+    "Riesling or Chardonnay",
+    "Grüner Veltliner only"
+   ],
+   "answer": "A, Grüner Veltliner or Riesling",
+   "source": "BGBl. II Nr. 200/2020 §4"
+  },
+  {
+   "q": "About how much rain falls in a year at Krems?",
+   "options": [
+    "540 mm",
+    "900 mm",
+    "1,300 mm"
+   ],
+   "answer": "A, about 540 mm (536 mm, 1991-2020)",
+   "source": "GeoSphere Austria data via Tauernwetter"
+  }
+ ]
+}

@@ -133,6 +133,20 @@
     "Swiss Wine Promotion",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-wachau",
+   "place": "Wachau",
+   "slot": "2026-10-25T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-1132845080011388811",
+   "sources": [
+    "GeoSphere Austria data (klima-v2-1m), 1991-2020 means (Krems, Wien Hohe Warte) via Tauernwetter",
+    "Wachau DAC regulation BGBl. II 200/2020",
+    "Vinea Wachau",
+    "Austrian GI dossier Wachauer Weinbrand (2015)",
+    "EU GI register",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

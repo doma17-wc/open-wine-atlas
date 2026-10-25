@@ -165,17 +165,19 @@
    "series": "",
    "not_before": "2026-10-25",
    "why": "Austria study path: Grüner Veltliner and Riesling on stone terraces above the Danube",
-   "status": "planned",
-   "note": "not_before moved from 2026-10-26 to 2026-10-25 on 2026-10-24 so the Valais outro 'Next deep dive: Wachau' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-10-26 to 2026-10-25 on 2026-10-24 so the Valais outro 'Next deep dive: Wachau' is true. Made 2026-10-25. Climate: GeoSphere Austria klima-v2-1m data, 1991-2020 means computed by Tauernwetter (official GeoSphere normals XLSX not reachable); cross-checked against the GeoSphere 2023 annual review percentages. No official vineyard area or variety shares found: Place card uses the 8 PDO communes, Grapes uses the DAC regulation and Vinea Wachau categories.",
+   "slot": "2026-10-25T17:50+01:00"
   },
   {
    "slug": "deep-chablis",
    "place": "Chablis",
    "atlas_id": "fr-inao-a146",
    "series": "",
-   "not_before": "2026-10-29",
+   "not_before": "2026-10-26",
    "why": "Burgundy study path: Kimmeridgian marl, frost and Chardonnay on the Serein",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-10-29 to 2026-10-26 on 2026-10-25 so the Wachau outro 'Next deep dive: Chablis' is true."
   },
   {
    "slug": "deep-rioja",
@@ -184,6 +186,15 @@
    "series": "",
    "not_before": "2026-10-30",
    "why": "Spain study path: Tempranillo, the Ebro and the ageing categories (Crianza, Reserva, Gran Reserva)",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-kamptal",
+   "place": "Kamptal",
+   "atlas_id": "at-eupdo-PDO-AT-A0209",
+   "series": "",
+   "not_before": "2026-11-02",
+   "why": "Austria study path: Kamptal DAC, Grüner Veltliner and Riesling, the Heiligenstein",
    "status": "planned"
   }
  ]
