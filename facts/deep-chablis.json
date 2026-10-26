@@ -1,0 +1,278 @@
+{
+ "slug": "deep-chablis",
+ "place": "Chablis",
+ "atlas_id": "fr-inao-a146",
+ "made": "2026-10-26",
+ "station": {
+  "name": "Chablis (CHABLIS_SAPC)",
+  "id": "89068001",
+  "height_m": 141,
+  "lat": 47.8219,
+  "lon": 3.7911,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_89068001.pdf",
+  "note": "Official Météo-France fiche climatologique, statistics 1991-2020, edited 06/06/2025. No sunshine data for this station ('Données non disponibles'), so the Sun layer is swapped for Frost (days with Tn <= 0 °C from the same fiche)."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+  "note": "Monthly precipitation reused from facts/deep-sauternes.json (same fiche)."
+ },
+ "monthly": {
+  "chablis_tmax": [
+   7.1,
+   8.8,
+   13.2,
+   17,
+   20.8,
+   24.5,
+   27.2,
+   27,
+   22.4,
+   17.2,
+   11.1,
+   7.8
+  ],
+  "chablis_tmean": [
+   3.9,
+   4.6,
+   7.6,
+   10.5,
+   14.4,
+   17.9,
+   20.2,
+   20,
+   16,
+   12.3,
+   7.4,
+   4.6
+  ],
+  "chablis_tmin": [
+   0.6,
+   0.3,
+   2.1,
+   4.1,
+   8,
+   11.3,
+   13.2,
+   13.1,
+   9.7,
+   7.3,
+   3.6,
+   1.4
+  ],
+  "chablis_precip_mm": [
+   57.2,
+   51.8,
+   54.4,
+   62.4,
+   73.2,
+   56.9,
+   59,
+   59.2,
+   58.6,
+   73.9,
+   66.3,
+   67.4
+  ],
+  "chablis_precip_year": 740.3,
+  "chablis_tmax_year": 17,
+  "chablis_tmin_year": 6.2,
+  "chablis_tmean_year": 11.6,
+  "chablis_frost_days_tn_le_0": [
+   13.9,
+   13.5,
+   10.9,
+   5.3,
+   0.5,
+   0.0,
+   0,
+   0,
+   0,
+   2.1,
+   6.3,
+   11.9
+  ],
+  "chablis_frost_days_year": 64.6,
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3
+ },
+ "facts": [
+  {
+   "claim": "AOC Chablis first recognised by decree of 13 January 1938",
+   "value": 1938,
+   "source": "INAO, cahier des charges AOC Chablis (modification draft, opposition 23 June 2025), I",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "Geographical area: 17 communes of the Yonne department",
+   "value": 17,
+   "source": "INAO cahier des charges IV.1; Open Wine Atlas details-fr.json communes (17)",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "The Serein valley, a tributary of the Yonne",
+   "source": "INAO cahier des charges X.1.a",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "Wines made exclusively from Chardonnay B",
+   "source": "INAO cahier des charges V; Open Wine Atlas grapes for Petit Chablis, Chablis, Chablis Grand Cru",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "Marls with Exogyra virgula (Kimmeridgian marls) in the relief",
+   "source": "INAO cahier des charges X.1.a, X.1.b",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "Fairly high risk of winter and spring frost ('un assez fort risque de gelées hivernales et printanières')",
+   "source": "INAO cahier des charges X.1.a",
+   "url": "https://extranet.inao.gouv.fr/fichier/CDC-Chablis-250623-PNO.pdf"
+  },
+  {
+   "claim": "Terrain e=[119,210,327,164,257] m: min 119, mean 210, max 327; relief 208 m",
+   "value": 327,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats (details-fr.json fr-inao-a146)"
+  },
+  {
+   "claim": "Bedrock: 93% carbonate sedimentary rocks (limestone, marl, dolomite)",
+   "value": 93,
+   "unit": "%",
+   "source": "Open Wine Atlas details-fr.json bedrock"
+  },
+  {
+   "claim": "Chablis Grand Cru: 7 climats (Blanchot, Bougros, Grenouilles, Les Clos, Preuses, Valmur, Vaudésir); delimited area 106.6 ha",
+   "value": 7,
+   "source": "Open Wine Atlas (INAO delimitation data: fr-inao-a147 area_ha, vineyards d440-d446); Open Wine Atlas Study lesson 'Chablis and the Grand Auxerrois'"
+  },
+  {
+   "claim": "Grands crus share one hillside on the right bank of the Serein, facing the town",
+   "source": "Open Wine Atlas Study lesson 'Chablis and the Grand Auxerrois'"
+  },
+  {
+   "claim": "Four levels: Petit Chablis, Chablis, Chablis Premier Cru, Chablis Grand Cru, all Chardonnay",
+   "source": "Open Wine Atlas Study lesson; Open Wine Atlas appellation data (INAO)"
+  },
+  {
+   "claim": "Annual precipitation Chablis 740.3 mm vs Paris-Montsouris 634.3 mm (1991-2020)",
+   "value": 740.3,
+   "unit": "mm",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_89068001.pdf"
+  },
+  {
+   "claim": "64.6 days a year with Tn <= 0 °C at Chablis; April 5.3, May 0.5",
+   "value": 64.6,
+   "unit": "days",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_89068001.pdf"
+  },
+  {
+   "claim": "July mean max 27.2 °C, mean min 13.2 °C at Chablis",
+   "value": 27.2,
+   "unit": "°C",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_89068001.pdf"
+  },
+  {
+   "claim": "April-October mean temperature 15.9 °C (derived)",
+   "value": 15.9,
+   "unit": "°C",
+   "source": "derived from Météo-France normals"
+  },
+  {
+   "claim": "WSET bands: cool up to about 16.5 °C growing season average",
+   "source": "Open Wine Atlas study lesson 'Climate and weather' (used in earlier episodes)"
+  },
+  {
+   "claim": "Early-budding Chardonnay is most exposed to spring frost; Chablis protects buds with heaters, wind machines and sprinklers",
+   "source": "Open Wine Atlas Study lessons (Bourgogne/Climate)"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which river flows through Chablis?",
+   "options": [
+    "Yonne",
+    "Serein",
+    "Saône"
+   ],
+   "answer": "B, Serein",
+   "source": "INAO cahier des charges X.1.a; Open Wine Atlas Study"
+  },
+  {
+   "q": "How many climats make up Chablis Grand Cru?",
+   "options": [
+    "5",
+    "7",
+    "12"
+   ],
+   "answer": "B, 7",
+   "source": "Open Wine Atlas (INAO delimitation); Study lesson"
+  },
+  {
+   "q": "About how many frosty nights (0 °C or below) a year at Chablis?",
+   "options": [
+    "15",
+    "65",
+    "120"
+   ],
+   "answer": "B, about 65 (64.6)",
+   "source": "Météo-France normals 1991-2020"
+  }
+ ],
+ "derived": {
+  "precip_sum_check": 740.3,
+  "paris_precip_sum_check": 634.3,
+  "frost_days_sum_check": 64.4,
+  "tmean_apr_oct_c": {
+   "value": 15.9,
+   "code": "mean(tmean[Apr..Oct])"
+  },
+  "tmean_apr_oct_from_maxmin_c": {
+   "value": 15.91,
+   "code": "mean((tmax+tmin)/2, Apr..Oct)"
+  },
+  "precip_apr_oct_mm": {
+   "value": 443.2,
+   "code": "sum(pr[Apr..Oct])"
+  },
+  "chablis_minus_paris_mm": {
+   "value": 106.0,
+   "code": "740.3-634.3"
+  },
+  "frost_days_apr_may": {
+   "value": 5.8,
+   "code": "fr[Apr]+fr[May]"
+  },
+  "terrain_relief_m": {
+   "value": 208,
+   "code": "max-min of atlas terrain e"
+  }
+ },
+ "dropped": [
+  "Sunshine (no data at Chablis station)",
+  "Vineyard area by level (no official BIVB figure reached)",
+  "Yields (2025 specification is a draft under opposition)"
+ ]
+}

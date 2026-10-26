@@ -85,7 +85,7 @@
    "not_before": "2026-10-27",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
    "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid."
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report."
   },
   {
    "slug": "deep-sauternes",
@@ -176,8 +176,9 @@
    "series": "",
    "not_before": "2026-10-26",
    "why": "Burgundy study path: Kimmeridgian marl, frost and Chardonnay on the Serein",
-   "status": "planned",
-   "note": "not_before moved from 2026-10-29 to 2026-10-26 on 2026-10-25 so the Wachau outro 'Next deep dive: Chablis' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-10-29 to 2026-10-26 on 2026-10-25 so the Wachau outro 'Next deep dive: Chablis' is true. Made 2026-10-26. Climate: official Météo-France fiche 89068001 (Chablis, 141 m), 1991-2020; no sunshine at that station, so the Sun layer was swapped for Frost (nights with Tn <= 0 °C). Rain compared with Paris-Montsouris 1991-2020.",
+   "slot": "2026-10-26T17:50+01:00"
   },
   {
    "slug": "deep-rioja",
@@ -195,6 +196,15 @@
    "series": "",
    "not_before": "2026-11-02",
    "why": "Austria study path: Kamptal DAC, Grüner Veltliner and Riesling, the Heiligenstein",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-sancerre",
+   "place": "Sancerre",
+   "atlas_id": "fr-inao-a109",
+   "series": "",
+   "not_before": "2026-11-05",
+   "why": "Loire study path: Sauvignon Blanc on terres blanches (Kimmeridgian marl), caillottes and silex; the Kimmeridgian link with Chablis",
    "status": "planned"
   }
  ]

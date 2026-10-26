@@ -147,6 +147,17 @@
     "EU GI register",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-chablis",
+   "place": "Chablis",
+   "slot": "2026-10-26T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3630023591761954949",
+   "sources": [
+    "Météo-France normals 1991-2020 (Chablis 89068001, Paris-Montsouris)",
+    "INAO Chablis specification (2025 draft modification)",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
