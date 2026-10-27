@@ -158,6 +158,18 @@
     "INAO Chablis specification (2025 draft modification)",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-rioja",
+   "place": "Rioja",
+   "slot": "2026-10-27T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=5920582944901384403",
+   "sources": [
+    "AEMET normals 1981-2010 (Logroño Aeropuerto, Bilbao Aeropuerto)",
+    "Rioja DOCa specification (MAPA)",
+    "Consejo Regulador DOCa Rioja, Memoria anual 2023",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

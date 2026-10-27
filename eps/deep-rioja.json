@@ -1,0 +1,576 @@
+{
+ "slug": "deep-rioja",
+ "id": "es-eupdo-PDO-ES-A0117",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  52
+ ],
+ "markers": [
+  {
+   "lng": -2.3311,
+   "lat": 42.4522,
+   "label": "Logroño station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -4.0,
+     40.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     -3.6,
+     40.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -2.4125,
+     42.37,
+     7.6,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -2.4125,
+     42.37,
+     7.85,
+     0,
+     0
+    ],
+    [
+     7.5,
+     -2.4125,
+     42.37,
+     8.05,
+     6,
+     22
+    ]
+   ],
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     -2.6,
+     42.575,
+     11.9,
+     345,
+     64
+    ],
+    [
+     8.5,
+     -2.59,
+     42.58,
+     12.05,
+     355,
+     67
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -2.4,
+     42.47,
+     8.45,
+     0,
+     0
+    ],
+    [
+     16.5,
+     -2.4,
+     42.47,
+     8.6,
+     -6,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -2.4,
+     42.47,
+     8.4,
+     6,
+     12
+    ],
+    [
+     7.5,
+     -2.4,
+     42.47,
+     8.5,
+     10,
+     16
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -2.8,
+     42.56,
+     10.4,
+     30,
+     34
+    ],
+    [
+     8.5,
+     -2.8,
+     42.56,
+     10.6,
+     38,
+     40
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -2.4125,
+     42.37,
+     7.85,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -2.4125,
+     42.37,
+     8.0,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Spain · Deep dive",
+   "title": "Rioja",
+   "sub": "Ebro, Tempranillo<br>and time in oak"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "144",
+   "u": "municipalities",
+   "c": "in La Rioja, Álava and Navarra, on both banks of the Ebro. Spain's first DOCa, in 1991.",
+   "src": "Consejo Regulador DOCa Rioja, 2023 · Rioja specification · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "700",
+   "u": "m",
+   "c": "about the top of the vineyard terraces. The outline runs from 262&nbsp;m by the Ebro to 1,547&nbsp;m.",
+   "src": "Rioja specification · Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "59% of the outline is <i>limestone, marl and dolomite</i>. The rules name three soils: clay&#8209;limestone, ferrous clay and alluvial.",
+   "src": "Open Wine Atlas bedrock · Rioja specification"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "405",
+   "u": "mm",
+   "count": {
+    "v": 405,
+    "d": 0
+   },
+   "c": "a year at Logroño airport (353&nbsp;m), against 1,134&nbsp;mm at Bilbao. The Sierra de Cantabria shelters the vines.",
+   "chart": {
+    "type": "months",
+    "a": [
+     28,
+     23,
+     26,
+     46,
+     47,
+     44,
+     30,
+     21,
+     26,
+     37,
+     40,
+     38
+    ],
+    "b": [
+     120,
+     86,
+     90,
+     107,
+     78,
+     60,
+     50,
+     76,
+     73,
+     111,
+     147,
+     122
+    ],
+    "max": 160,
+    "bands": [],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Logroño &nbsp; ▢ Bilbao &nbsp;·&nbsp; mm per month"
+   },
+   "src": "AEMET normals 1981–2010 · Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "2,305",
+   "u": "hours",
+   "count": {
+    "v": 2305,
+    "d": 0
+   },
+   "c": "of sunshine a year at Logroño. Bilbao gets 1,610. July alone: 312&nbsp;hours.",
+   "chart": {
+    "type": "months",
+    "a": [
+     105,
+     133,
+     189,
+     198,
+     225,
+     270,
+     312,
+     285,
+     220,
+     164,
+     113,
+     93
+    ],
+    "b": [
+     85,
+     97,
+     132,
+     138,
+     169,
+     180,
+     186,
+     179,
+     160,
+     126,
+     88,
+     78
+    ],
+    "max": 340,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 312,
+      "text": "312"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Logroño &nbsp; ▢ Bilbao &nbsp;·&nbsp; hours per month"
+   },
+   "src": "AEMET normals 1981–2010"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "18.2",
+   "u": "°C",
+   "count": {
+    "v": 18.2,
+    "d": 1
+   },
+   "c": "the April to October average at Logroño. Between 16.5 and 18.5&nbsp;°C: a moderate climate in WSET terms.",
+   "chart": {
+    "type": "range",
+    "max": [
+     9.9,
+     12.0,
+     15.9,
+     17.8,
+     22.0,
+     26.9,
+     30.1,
+     29.8,
+     25.8,
+     20.1,
+     13.8,
+     10.2
+    ],
+    "min": [
+     2.0,
+     2.4,
+     4.6,
+     6.3,
+     9.7,
+     13.3,
+     15.6,
+     15.6,
+     12.9,
+     9.2,
+     5.3,
+     2.8
+    ],
+    "hl": 6,
+    "lo": -3,
+    "hi": 33,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July high 30.1 °C"
+   },
+   "src": "AEMET normals 1981–2010 · WSET bands: Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "5",
+   "u": "red grapes",
+   "c": "are allowed: Tempranillo, Garnacha, Graciano, Mazuelo and Maturana Tinta. Tempranillo is the main one.",
+   "src": "Consejo Regulador DOCa Rioja · Rioja specification · Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Ageing",
+   "n": "60",
+   "u": "months",
+   "c": "at least for a red Gran Reserva: 24 in oak, 24 in bottle.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Gran Reserva",
+      "v": 60
+     },
+     {
+      "label": "Reserva",
+      "v": 36
+     },
+     {
+      "label": "Crianza",
+      "v": 24
+     }
+    ]
+   },
+   "src": "Rioja specification: minimum months, red wines"
+  },
+  {
+   "kind": "card",
+   "t0": 52.3,
+   "t1": 55.5,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which river flows through Rioja?<br>A&nbsp;&nbsp;Duero<br>B&nbsp;&nbsp;Ebro<br>C&nbsp;&nbsp;Tajo",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.6,
+   "t1": 58.8,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Minimum total ageing for a red Gran Reserva?<br>A&nbsp;&nbsp;36 months<br>B&nbsp;&nbsp;48 months<br>C&nbsp;&nbsp;60 months",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 58.9,
+   "t1": 62.1,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls a year at Logroño?<br>A&nbsp;&nbsp;400&nbsp;mm<br>B&nbsp;&nbsp;800&nbsp;mm<br>C&nbsp;&nbsp;1,100&nbsp;mm",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.3,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Rioja",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Kamptal",
+   "srcs": "Sources: AEMET normals 1981–2010 (Logroño airport, Bilbao airport) · Rioja specification (MAPA) · Consejo Regulador DOCa Rioja · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Spain",
+  "title": "Rioja",
+  "sub": "Ebro, Tempranillo<br>and time in oak"
+ }
+}

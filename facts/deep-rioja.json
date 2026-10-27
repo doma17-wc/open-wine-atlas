@@ -1,0 +1,318 @@
+{
+ "slug": "deep-rioja",
+ "place": "Rioja",
+ "atlas_id": "es-eupdo-PDO-ES-A0117",
+ "made": "2026-10-27",
+ "station": {
+  "name": "Logroño, Aeropuerto",
+  "id": "9170",
+  "municipality": "Agoncillo (inside the DOCa outline communes)",
+  "height_m": 353,
+  "lat": 42.4522,
+  "lon": -2.3311,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170",
+  "note": "Official AEMET 'Valores climatológicos normales' page; AEMET publishes station normals for 1981-2010 on this page. No 1991-2020 station table was reachable; both stations use the same service and period, named on screen."
+ },
+ "comparison_station": {
+  "name": "Bilbao Aeropuerto",
+  "id": "1082",
+  "height_m": 42,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=1082"
+ },
+ "monthly": {
+  "logrono_precip_mm": [
+   28,
+   23,
+   26,
+   46,
+   47,
+   44,
+   30,
+   21,
+   26,
+   37,
+   40,
+   38
+  ],
+  "logrono_precip_year": 405,
+  "logrono_tmax": [
+   9.9,
+   12.0,
+   15.9,
+   17.8,
+   22.0,
+   26.9,
+   30.1,
+   29.8,
+   25.8,
+   20.1,
+   13.8,
+   10.2
+  ],
+  "logrono_tmin": [
+   2.0,
+   2.4,
+   4.6,
+   6.3,
+   9.7,
+   13.3,
+   15.6,
+   15.6,
+   12.9,
+   9.2,
+   5.3,
+   2.8
+  ],
+  "logrono_tmean": [
+   5.9,
+   7.2,
+   10.2,
+   12.0,
+   15.9,
+   20.1,
+   22.8,
+   22.7,
+   19.3,
+   14.7,
+   9.5,
+   6.5
+  ],
+  "logrono_sun_h": [
+   105,
+   133,
+   189,
+   198,
+   225,
+   270,
+   312,
+   285,
+   220,
+   164,
+   113,
+   93
+  ],
+  "logrono_sun_year": 2305,
+  "bilbao_precip_mm": [
+   120,
+   86,
+   90,
+   107,
+   78,
+   60,
+   50,
+   76,
+   73,
+   111,
+   147,
+   122
+  ],
+  "bilbao_precip_year": 1134,
+  "bilbao_sun_h": [
+   85,
+   97,
+   132,
+   138,
+   169,
+   180,
+   186,
+   179,
+   160,
+   126,
+   88,
+   78
+  ],
+  "bilbao_sun_year": 1610
+ },
+ "derived": [
+  {
+   "claim": "April to October mean temperature at Logroño",
+   "value": 18.21,
+   "shown": "18.2 °C",
+   "computation": "sum(logrono_tmean[3:10])/7 = (12.0+15.9+20.1+22.8+22.7+19.3+14.7)/7"
+  },
+  {
+   "claim": "sum check monthly precip Logroño",
+   "value": 406,
+   "note": "AEMET annual 405"
+  },
+  {
+   "claim": "sum check monthly sun Logroño",
+   "value": 2307,
+   "note": "AEMET annual 2305"
+  },
+  {
+   "claim": "Terrain relief",
+   "value": 1285,
+   "computation": "e max 1547 - e min 262"
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Rioja became Spain's first DOCa in 1991",
+   "value": 1991,
+   "source": "Open Wine Atlas atlas_note and Study (Spanish wine law, DOCa)",
+   "url": "https://openwineatlas.com/places/spain/rioja"
+  },
+  {
+   "claim": "144 municipalities: 118 in La Rioja, 18 in Álava, 8 in Navarra",
+   "value": 144,
+   "source": "Consejo Regulador DOCa Rioja, Memoria anual 2023, p.5",
+   "url": "https://riojawine.com/wp-content/uploads/2024/05/doca-rioja-memoria-anual-2023.pdf"
+  },
+  {
+   "claim": "Registered vineyard 66,902 ha (2023)",
+   "value": 66902,
+   "unit": "ha",
+   "source": "Consejo Regulador DOCa Rioja, Memoria anual 2023, p.5",
+   "url": "https://riojawine.com/wp-content/uploads/2024/05/doca-rioja-memoria-anual-2023.pdf",
+   "on_screen": false
+  },
+  {
+   "claim": "The area lies in northern Spain on both banks of the Ebro",
+   "source": "Rioja specification (pliego de condiciones) 7.a",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "Vineyard terraces reach a maximum altitude of about 700 m",
+   "value": 700,
+   "unit": "m",
+   "source": "Rioja specification 7.a",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "Outline terrain min 262 m, max 1,547 m",
+   "value": [
+    262,
+    1547
+   ],
+   "source": "Open Wine Atlas details-es.json terrain e",
+   "url": "https://openwineatlas.com/places/spain/rioja"
+  },
+  {
+   "claim": "59% of the outline is carbonate sedimentary rock (limestone, marl, dolomite)",
+   "value": 59,
+   "unit": "%",
+   "source": "Open Wine Atlas bedrock",
+   "url": "https://openwineatlas.com/places/spain/rioja"
+  },
+  {
+   "claim": "Soils: clay-limestone, ferrous clay and alluvial",
+   "source": "Rioja specification 7.a",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "The Sierra de Cantabria to the north shelters the vineyards from Atlantic winds",
+   "source": "Open Wine Atlas Study (Rioja and Navarra); Rioja specification 7.c (protection of the Sierra de Cantabria)",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "Logroño airport 405 mm a year; Bilbao airport 1,134 mm",
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170"
+  },
+  {
+   "claim": "Logroño 2,305 h sunshine a year, July 312 h; Bilbao 1,610 h",
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170"
+  },
+  {
+   "claim": "July mean daily max at Logroño 30.1 °C",
+   "value": 30.1,
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170"
+  },
+  {
+   "claim": "WSET bands: moderate 16.5 to 18.5 °C growing season average",
+   "source": "Open Wine Atlas Study (climate)",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "Five red varieties allowed: Tempranillo, Garnacha Tinta, Graciano, Mazuelo, Maturana Tinta",
+   "value": 5,
+   "source": "Consejo Regulador Memoria 2023 p.5; Rioja specification 6; Open Wine Atlas grapes",
+   "url": "https://riojawine.com/wp-content/uploads/2024/05/doca-rioja-memoria-anual-2023.pdf"
+  },
+  {
+   "claim": "Mainly Tempranillo",
+   "source": "Open Wine Atlas atlas_note",
+   "url": "https://openwineatlas.com/places/spain/rioja"
+  },
+  {
+   "claim": "Red Crianza: at least two years, at least one year in oak barrels of about 225 l",
+   "value": [
+    24,
+    12
+   ],
+   "unit": "months",
+   "source": "Rioja specification 3.c",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "Red Reserva: at least 36 months in oak and bottle, at least 12 in barrel and 6 in bottle",
+   "value": [
+    36,
+    12,
+    6
+   ],
+   "source": "Rioja specification 3.c",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "Red Gran Reserva: at least 60 months, 24 in barrel and 24 in bottle",
+   "value": [
+    60,
+    24,
+    24
+   ],
+   "source": "Rioja specification 3.c; Open Wine Atlas Study",
+   "url": "https://mapa.gob.es/es/alimentacion/temas/calidad-diferenciada/pliegodecondicionesdocariojamodificado_tcm30-680343.pdf"
+  },
+  {
+   "claim": "BOE 19 Oct 2026 amendment changes only cellar minimums (from 225 hl and 50 barrels to one barrel) and control method, not ageing times",
+   "source": "BOE-A-2026-21760",
+   "url": "https://www.boe.es/boe/dias/2026/10/19/pdfs/BOE-A-2026-21760.pdf",
+   "on_screen": false
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which river flows through Rioja?",
+   "options": [
+    "Duero",
+    "Ebro",
+    "Tajo"
+   ],
+   "answer": "B, the Ebro",
+   "source": "Rioja specification 7.a"
+  },
+  {
+   "q": "Minimum total ageing for a red Rioja Gran Reserva?",
+   "options": [
+    "36 months",
+    "48 months",
+    "60 months"
+   ],
+   "answer": "C, 60 months (24 in oak, 24 in bottle)",
+   "source": "Rioja specification 3.c"
+  },
+  {
+   "q": "About how much rain falls a year at Logroño?",
+   "options": [
+    "400 mm",
+    "800 mm",
+    "1,100 mm"
+   ],
+   "answer": "A, about 400 mm (405 mm, AEMET 1981-2010)",
+   "source": "AEMET normals 1981-2010"
+  }
+ ],
+ "dropped": [
+  "Barolo postponed again: no 1991-2020 official normals reachable (ISPRA, NOAA hosts blocked; only SIMN 1951-1991 tables found)",
+  "Variety shares: no official hectares by variety found in the reachable Consejo Regulador memoria",
+  "Topical hook: none date-bound; study-path hook kept"
+ ]
+}

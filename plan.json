@@ -82,10 +82,10 @@
    "place": "Barolo",
    "atlas_id": "it-eupdo-PDO-IT-A1389",
    "series": "",
-   "not_before": "2026-10-27",
+   "not_before": "2026-11-08",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
    "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report."
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report. 2026-10-27: postponed again. ISPRA (station normals app and PDF host), NOAA NCEI and nodc hosts are blocked from the run's shell, WebFetch of the NCEI folder needs approval; only SIMN 1951-1991 tables (Regione Piemonte PTA 2004) found. Rioja made instead. Needs a reachable 1991-2020 source (e.g. Stefano pastes the Cuneo Levaldigi WMO CSV or ARPA Piemonte table into the repo)."
   },
   {
    "slug": "deep-sauternes",
@@ -185,18 +185,21 @@
    "place": "Rioja",
    "atlas_id": "es-eupdo-PDO-ES-A0117",
    "series": "",
-   "not_before": "2026-10-30",
+   "not_before": "2026-10-27",
    "why": "Spain study path: Tempranillo, the Ebro and the ageing categories (Crianza, Reserva, Gran Reserva)",
-   "status": "planned"
+   "status": "posted",
+   "note": "Made 2026-10-27 in place of Barolo (three days before the original not_before 2026-10-30). Climate: official AEMET normals 1981-2010 (Logroño Aeropuerto 9170, Bilbao Aeropuerto 1082), period named on screen; no 1991-2020 station table reachable. Grapes layer: 5 permitted red varieties plus the ageing ladder from the specification (no official variety shares found).",
+   "slot": "2026-10-27T17:50+01:00"
   },
   {
    "slug": "deep-kamptal",
    "place": "Kamptal",
    "atlas_id": "at-eupdo-PDO-AT-A0209",
    "series": "",
-   "not_before": "2026-11-02",
+   "not_before": "2026-10-28",
    "why": "Austria study path: Kamptal DAC, Grüner Veltliner and Riesling, the Heiligenstein",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-02 to 2026-10-28 on 2026-10-27 so the Rioja outro 'Next deep dive: Kamptal' is true."
   },
   {
    "slug": "deep-sancerre",
@@ -205,6 +208,15 @@
    "series": "",
    "not_before": "2026-11-05",
    "why": "Loire study path: Sauvignon Blanc on terres blanches (Kimmeridgian marl), caillottes and silex; the Kimmeridgian link with Chablis",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-priorat",
+   "place": "Priorat",
+   "atlas_id": "es-eupdo-PDO-ES-A1560",
+   "series": "",
+   "not_before": "2026-11-07",
+   "why": "Spain study path: the second DOCa (DOQ), llicorella slate, Garnacha and Cariñena",
    "status": "planned"
   }
  ]
