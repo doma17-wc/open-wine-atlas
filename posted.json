@@ -170,6 +170,19 @@
     "Consejo Regulador DOCa Rioja, Memoria anual 2023",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-kamptal",
+   "place": "Kamptal",
+   "slot": "2026-10-28T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-4288496545122138924",
+   "sources": [
+    "GeoSphere Austria data, 1991-2020 means (Krems, Wien Hohe Warte; Langenlois SPARTACUS grid) via Tauernwetter",
+    "BMLUK, Kamptal DAC neu ab Jahrgang 2024",
+    "ÖWM Dokumentation, Weinproduktion in Österreich",
+    "EU GI register",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

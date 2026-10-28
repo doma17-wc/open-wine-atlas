@@ -198,17 +198,19 @@
    "series": "",
    "not_before": "2026-10-28",
    "why": "Austria study path: Kamptal DAC, Grüner Veltliner and Riesling, the Heiligenstein",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-02 to 2026-10-28 on 2026-10-27 so the Rioja outro 'Next deep dive: Kamptal' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-02 to 2026-10-28 on 2026-10-27 so the Rioja outro 'Next deep dive: Kamptal' is true. Made 2026-10-28. Climate: Krems station (GeoSphere data, 1991-2020 means via Tauernwetter, same as Wachau; no Langenlois station normals found) plus the Langenlois SPARTACUS grid cell (524 mm). Grapes: BMLUK page on the 2024 Kamptal DAC rules (Burgundy varieties from 2024, certification from 2025, Riedenwein min 12%). No official variety shares found.",
+   "slot": "2026-10-28T17:50+01:00"
   },
   {
    "slug": "deep-sancerre",
    "place": "Sancerre",
    "atlas_id": "fr-inao-a109",
    "series": "",
-   "not_before": "2026-11-05",
+   "not_before": "2026-10-29",
    "why": "Loire study path: Sauvignon Blanc on terres blanches (Kimmeridgian marl), caillottes and silex; the Kimmeridgian link with Chablis",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-05 to 2026-10-29 on 2026-10-28 so the Kamptal outro 'Next deep dive: Sancerre' is true."
   },
   {
    "slug": "deep-priorat",
@@ -217,6 +219,24 @@
    "series": "",
    "not_before": "2026-11-07",
    "why": "Spain study path: the second DOCa (DOQ), llicorella slate, Garnacha and Cariñena",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-alsace",
+   "place": "Alsace",
+   "atlas_id": "fr-inao-a1",
+   "series": "",
+   "not_before": "2026-11-10",
+   "why": "Alsace study path: rain shadow of the Vosges, Riesling, Gewurztraminer, Pinot Gris, the 51 Grands Crus",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-kakheti",
+   "place": "Kakheti",
+   "atlas_id": "ge-world-kakheti",
+   "series": "",
+   "not_before": "2026-11-14",
+   "why": "Georgia study path: qvevri wine, Rkatsiteli and Saperavi in the Alazani valley",
    "status": "planned"
   }
  ]

@@ -1,0 +1,269 @@
+{
+ "slug": "deep-kamptal",
+ "place": "Kamptal",
+ "atlas_id": "at-eupdo-PDO-AT-A0209",
+ "made": "2026-10-28",
+ "station": {
+  "name": "Krems",
+  "height_m": 202,
+  "lat": 48.4186,
+  "lon": 15.6222,
+  "service": "GeoSphere Austria (data, klima-v2-1m homogenised), 1991-2020 means computed by Tauernwetter Forschung (CC BY 4.0)",
+  "period": "1991-2020",
+  "url": "https://tauernwetter.at/klimamittel/krems.html",
+  "coords_url": "https://meteo365.es/weather-stations/geosphere/11070/",
+  "note": "Official GeoSphere normals XLSX (klimaportal.geosphere.at/klimamittel/klimanormalperiode_19912020.xlsx) not reachable from the run (proxy blocked, binary for WebFetch). Cross-check vs GeoSphere annual review 2023 (handwerkundbau.at/wp-content/uploads/2025/04/Jahr_23.pdf): Krems 2023 535 mm = 100% of normal -> normal ~535 mm (536 here); sun 1837 h = 102% -> ~1,800 h (computed 1,801 here). Reused from facts/deep-wachau.json (fetched 2026-10-25). Krems station is the nearest GeoSphere station with full monthly 1991-2020 means; it lies just south-west of the Kamptal outline, about 7.2 km from Langenlois."
+ },
+ "comparison_station": {
+  "name": "Wien Hohe Warte",
+  "height_m": 198,
+  "service": "GeoSphere Austria data, 1991-2020 means by Tauernwetter Forschung",
+  "url": "https://tauernwetter.at/klimamittel/wien-hohe-warte.html",
+  "note": "Cross-check 2023 review: 814 mm = 121% -> ~673 mm (674 here); 2003 h = 98% -> ~2,044 h (computed 2,042)."
+ },
+ "langenlois_grid": {
+  "source": "GeoSphere Austria SPARTACUS v3 1-km grid cell 48.4667N 15.6667E (277 m), via Tauernwetter",
+  "url": "https://tauernwetter.at/klimawandel-oesterreich/langenlois",
+  "annual_precip_1991_2020_mm": 523.8,
+  "annual_tmean_1991_2020_c": 10.6,
+  "annual_precip_1961_1990_mm": 505.7,
+  "annual_tmean_1961_1990_c": 9.3
+ },
+ "monthly": {
+  "krems_tmax": [
+   3.5,
+   5.9,
+   10.9,
+   16.9,
+   21.2,
+   24.9,
+   27.0,
+   26.6,
+   21.0,
+   14.8,
+   8.5,
+   4.0
+  ],
+  "krems_tmin": [
+   -2.9,
+   -2.2,
+   1.2,
+   5.0,
+   9.5,
+   13.2,
+   14.8,
+   14.3,
+   10.1,
+   5.5,
+   1.9,
+   -2.0
+  ],
+  "krems_tmean": [
+   0.0,
+   1.3,
+   5.4,
+   10.6,
+   15.4,
+   19.2,
+   20.9,
+   20.1,
+   14.8,
+   9.4,
+   4.8,
+   0.7
+  ],
+  "krems_precip_mm": [
+   20,
+   16,
+   29,
+   32,
+   68,
+   81,
+   77,
+   78,
+   49,
+   34,
+   29,
+   23
+  ],
+  "krems_sun_h_per_day": [
+   1.7,
+   3.2,
+   4.5,
+   6.8,
+   7.2,
+   7.7,
+   7.8,
+   7.8,
+   5.7,
+   3.5,
+   1.7,
+   1.5
+  ],
+  "krems_sun_h_month": [
+   52.7,
+   90.4,
+   139.5,
+   204.0,
+   223.2,
+   231.0,
+   241.8,
+   241.8,
+   171.0,
+   108.5,
+   51.0,
+   46.5
+  ],
+  "wien_precip_mm": [
+   42,
+   38,
+   52,
+   42,
+   79,
+   70,
+   78,
+   69,
+   64,
+   47,
+   46,
+   47
+  ],
+  "wien_sun_h_per_day": [
+   2.3,
+   3.8,
+   5.1,
+   7.3,
+   8.0,
+   8.6,
+   8.8,
+   8.6,
+   6.4,
+   4.1,
+   2.2,
+   1.8
+  ],
+  "wien_sun_h_month": [
+   71.3,
+   107.3,
+   158.1,
+   219.0,
+   248.0,
+   258.0,
+   272.8,
+   266.6,
+   192.0,
+   127.1,
+   66.0,
+   55.8
+  ]
+ },
+ "derived": {
+  "computation": "relief=e.max-e.min; gst=mean(krems_tmean Apr..Oct); dist=haversine(Krems station, Langenlois centre 48.4717N 15.6783E); warming=10.6-9.3",
+  "values": {
+   "relief": 394,
+   "gst": 15.77,
+   "krems_langenlois_km": 7.2,
+   "langenlois_warming_c": 1.3,
+   "k_pr": 536,
+   "w_pr": 674,
+   "k_sun_year": 1801.4,
+   "w_sun_year": 2042.0
+  }
+ },
+ "facts": [
+  {
+   "claim": "Kamptal PDO: 6 communes (Grafenegg, Hadersdorf-Kammern, Langenlois, Lengenfeld, Schönberg am Kamp, Straß im Straßertale); registered 1996-11-15; outline 19,190 ha",
+   "source": "EU GI register via Open Wine Atlas details-at.json",
+   "url": "https://ec.europa.eu/info/food-farming-fisheries/food-safety-and-quality/certification/quality-labels/geographical-indications-register/details/4222"
+  },
+  {
+   "claim": "Kamptal productive vineyard area 4,053 ha (3,196 ha white, 857 ha red and rosé), area shares based on Weingartenerhebung 2015",
+   "value": 4053,
+   "unit": "ha",
+   "source": "Österreich Wein Marketing, Dokumentation, 2. Weinproduktion in Österreich, table 'Übersicht Weinernte nach Weinbaugebieten 2019', p. 34",
+   "url": "https://www.oesterreichwein.at/fileadmin/user_upload/PDF/Doku/2._Weinproduktion_in_OEsterreich_131020.pdf"
+  },
+  {
+   "claim": "Vienna 60 km; Danube 7.8 km from centroid",
+   "source": "Open Wine Atlas details-at.json",
+   "url": "https://openwineatlas.com/places/austria/kamptal"
+  },
+  {
+   "claim": "Terrain e=[186,317,580,199,428] m: max 580, min 186, relief 394",
+   "source": "Open Wine Atlas terrain (Mapterhorn)",
+   "url": "https://openwineatlas.com/places/austria/kamptal"
+  },
+  {
+   "claim": "Bedrock: 50% metamorphic rocks (schist, slate, gneiss), 43% mixed sedimentary rocks",
+   "source": "Open Wine Atlas bedrock",
+   "url": "https://openwineatlas.com/places/austria/kamptal"
+  },
+  {
+   "claim": "Kamptal follows the Kamp river around Langenlois; Zöbinger Heiligenstein is a famous steep hill for Riesling",
+   "source": "Open Wine Atlas Study, lesson Austria",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "Krems 536 mm a year, Vienna Hohe Warte 674 mm (1991-2020)",
+   "source": "GeoSphere Austria data via Tauernwetter",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Langenlois grid cell 524 mm a year 1991-2020 (523.8); 10.6 °C mean vs 9.3 °C in 1961-1990 (+1.3)",
+   "source": "GeoSphere SPARTACUS via Tauernwetter",
+   "url": "https://tauernwetter.at/klimawandel-oesterreich/langenlois"
+  },
+  {
+   "claim": "Krems about 1,800 h sun a year, Vienna about 2,040 h",
+   "source": "GeoSphere data via Tauernwetter, computed",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Krems April-October mean 15.8 °C; July high 27.0 °C; WSET cool up to about 16.5 °C",
+   "source": "GeoSphere data via Tauernwetter; WSET bands Open Wine Atlas Study",
+   "url": "https://tauernwetter.at/klimamittel/krems.html"
+  },
+  {
+   "claim": "Kamptal DAC: Grüner Veltliner and Riesling since 2008; from vintage 2024 also Chardonnay, Weißburgunder, Grauburgunder; from vintage 2025 only grapes certified Nachhaltig Austria or organic (producers under 5,000 l exempt); Gebietswein and Ortswein 11.5-12.5% vol, Riedenwein at least 12% vol; rules in force 18 Sept 2024",
+   "source": "BMLUK (Austrian Ministry of Agriculture), Kamptal DAC neu ab Jahrgang 2024",
+   "url": "https://www.bmluk.gv.at/themen/landwirtschaft/landwirtschaft-in-oesterreich/pflanzliche-produktion/wein/kamptal-dac-neu-ab-jahrgang-2024.html"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grapes joined Kamptal DAC from the 2024 vintage?",
+   "options": [
+    "Chardonnay, Weissburgunder, Grauburgunder",
+    "Zweigelt, Blaufränkisch, St. Laurent",
+    "Sauvignon Blanc and Muskateller"
+   ],
+   "answer": "A, Chardonnay, Weissburgunder and Grauburgunder",
+   "source": "BMLUK"
+  },
+  {
+   "q": "From the 2025 vintage, Kamptal DAC grapes must be...",
+   "options": [
+    "Picked by hand",
+    "Certified sustainable or organic",
+    "Grown on loess"
+   ],
+   "answer": "B, certified sustainable or organic",
+   "source": "BMLUK"
+  },
+  {
+   "q": "Minimum alcohol for a Kamptal DAC Riedenwein?",
+   "options": [
+    "11%",
+    "12%",
+    "13.5%"
+   ],
+   "answer": "B, 12%",
+   "source": "BMLUK"
+  }
+ ],
+ "dropped": [
+  "Grape variety shares for Kamptal (no official regional table found)",
+  "Heiligenstein rock age (only an unclear GBA text found)",
+  "Tourism figure of 2,000 sun hours (not an official normal)"
+ ]
+}
