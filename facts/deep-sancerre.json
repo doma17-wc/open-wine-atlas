@@ -1,0 +1,240 @@
+{
+ "slug": "deep-sancerre",
+ "place": "Sancerre",
+ "atlas_id": "fr-inao-a109",
+ "made": "2026-10-29",
+ "station": {
+  "name": "Bourges",
+  "id": "18033001",
+  "height_m": 161,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://cher.gouv.fr/contenu/telechargement/38360/296719/file/Annexes.pdf",
+  "note": "Official Météo-France fiche climatologique 18033001 (statistics 1991-2020), reproduced in an annex published by the Préfecture du Cher. Bourges is 43 km SW of the appellation (atlas near_city). The station inside the appellation (Bué 18039001, listed by Météo-France) and Sancerre 18241002 (closed 2014, partial data) had no reachable 1991-2020 fiche. Frost days not in the annex, so no Frost layer."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+  "note": "Precipitation and annual sunshine reused from facts/deep-sauternes.json (same fiche)."
+ },
+ "monthly": {
+  "bourges_tmax": [
+   7.4,
+   8.9,
+   13.1,
+   16.3,
+   20.1,
+   23.8,
+   26.2,
+   26.2,
+   22.1,
+   17.2,
+   11.2,
+   7.9
+  ],
+  "bourges_tmean": [
+   4.5,
+   5.1,
+   8.4,
+   11.1,
+   14.8,
+   18.4,
+   20.5,
+   20.5,
+   16.7,
+   12.9,
+   7.9,
+   5.0
+  ],
+  "bourges_tmin": [
+   1.6,
+   1.4,
+   3.7,
+   5.8,
+   9.5,
+   13.0,
+   14.8,
+   14.7,
+   11.3,
+   8.5,
+   4.6,
+   2.2
+  ],
+  "bourges_precip_mm": [
+   58,
+   51,
+   52.8,
+   62,
+   75.9,
+   58.4,
+   63.5,
+   53.5,
+   56.7,
+   74.2,
+   69.3,
+   67.4
+  ],
+  "bourges_precip_year": 742.7,
+  "bourges_sun_h": [
+   65.5,
+   93.5,
+   155.9,
+   185.6,
+   215.6,
+   227.4,
+   248.6,
+   239.8,
+   194,
+   127,
+   76.6,
+   59.5
+  ],
+  "bourges_sun_year": 1888.9,
+  "bourges_tmax_year": 16.7,
+  "bourges_tmin_year": 7.6,
+  "bourges_tmean_year": 12.1,
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3,
+  "paris_sun_year": 1717.0
+ },
+ "derived": {
+  "bourges_precip_sum": 742.7,
+  "bourges_sun_sum": 1889.0,
+  "bourges_aproct_tmean": 16.41,
+  "bourges_aproct_rain": 444.2,
+  "rain_diff_vs_paris": 108.4,
+  "sun_diff_vs_paris": 171.9,
+  "relief_m": 220
+ },
+ "derived_code": "sum(B_rr); sum(B_sun); mean(B_tmean[3:10]) (April..October); 742.7-634.3; 1888.9-1717.0; 368-148",
+ "facts": [
+  {
+   "claim": "14 communes in the appellation area",
+   "value": 14,
+   "source": "Open Wine Atlas details-fr.json fr-inao-a109 (INAO data)"
+  },
+  {
+   "claim": "Delimited area 3,624.6 ha (aire parcellaire)",
+   "value": 3624.6,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-fr.json area_ha (INAO data)"
+  },
+  {
+   "claim": "On the left bank of the Loire; the Loire passes 4.2 km from the outline centre",
+   "source": "Open Wine Atlas Study lesson (Loire, Sancerre and its soils); details-fr.json rivers"
+  },
+  {
+   "claim": "Terrain e=[148,251,368,197,304] m; relief 220 m",
+   "value": 368,
+   "unit": "m",
+   "source": "Open Wine Atlas terrain stats"
+  },
+  {
+   "claim": "Bedrock 78% carbonate sedimentary rocks (limestone, marl), 19% mixed sedimentary",
+   "value": 78,
+   "unit": "%",
+   "source": "Open Wine Atlas details-fr.json bedrock"
+  },
+  {
+   "claim": "Three main soils: terres blanches (Kimmeridgian marl), caillottes (stony limestone), silex (flint)",
+   "source": "Open Wine Atlas Study lesson 'Sancerre and its soils'; atlas_note"
+  },
+  {
+   "claim": "Kimmeridgian marl: the same layer as Chablis",
+   "source": "Open Wine Atlas Study (soils key: 'Kimmeridgian marl: Chablis and Sancerre')"
+  },
+  {
+   "claim": "White Sancerre: Sauvignon B; red and rosé: Pinot Noir N",
+   "source": "Open Wine Atlas details-fr.json wines (INAO data); Study lesson"
+  },
+  {
+   "claim": "Max yield white 75 hl/ha, red/rosé 69 hl/ha; min density 6,100 vines/ha",
+   "source": "Open Wine Atlas details-fr.json wines (INAO data)"
+  },
+  {
+   "claim": "Pouilly-Fumé lies on the right bank, opposite Sancerre, white only from Sauvignon Blanc",
+   "source": "Open Wine Atlas Study lesson"
+  },
+  {
+   "claim": "Bourges annual precipitation 742.7 mm vs Paris-Montsouris 634.3 mm",
+   "value": 742.7,
+   "unit": "mm",
+   "source": "Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "Bourges sunshine 1,888.9 h/yr vs Paris-Montsouris 1,717.0 h",
+   "value": 1888.9,
+   "unit": "h",
+   "source": "Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "July mean max 26.2 °C at Bourges",
+   "value": 26.2,
+   "unit": "°C",
+   "source": "Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "April-October mean 16.4 °C (derived)",
+   "value": 16.4,
+   "unit": "°C",
+   "source": "derived from Météo-France normals"
+  },
+  {
+   "claim": "WSET bands: cool up to about 16.5 °C growing season average",
+   "source": "Open Wine Atlas study lesson 'Climate and weather' (used in earlier episodes)"
+  },
+  {
+   "claim": "Centre-Loire climate continental, cold winters, risk of spring frost; nearer to Chablis than to Nantes",
+   "source": "Open Wine Atlas Study lesson"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which river flows past Sancerre?",
+   "options": [
+    "Cher",
+    "Loire",
+    "Loir"
+   ],
+   "answer": "B, Loire",
+   "source": "Open Wine Atlas Study lesson; details-fr.json rivers"
+  },
+  {
+   "q": "Which grape makes red Sancerre?",
+   "options": [
+    "Gamay",
+    "Cabernet Franc",
+    "Pinot Noir"
+   ],
+   "answer": "C, Pinot Noir",
+   "source": "INAO data via Open Wine Atlas; Study lesson"
+  },
+  {
+   "q": "What are the terres blanches of Sancerre?",
+   "options": [
+    "Kimmeridgian marl",
+    "Flint",
+    "Granite sand"
+   ],
+   "answer": "A, Kimmeridgian marl",
+   "source": "Open Wine Atlas Study lesson"
+  }
+ ]
+}

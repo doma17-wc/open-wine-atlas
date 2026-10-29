@@ -209,17 +209,19 @@
    "series": "",
    "not_before": "2026-10-29",
    "why": "Loire study path: Sauvignon Blanc on terres blanches (Kimmeridgian marl), caillottes and silex; the Kimmeridgian link with Chablis",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-05 to 2026-10-29 on 2026-10-28 so the Kamptal outro 'Next deep dive: Sancerre' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-05 to 2026-10-29 on 2026-10-28 so the Kamptal outro 'Next deep dive: Sancerre' is true. Made 2026-10-29. Climate: official Météo-France fiche 18033001 Bourges (161 m, 43 km SW), 1991-2020, via a Préfecture du Cher annex; Bué (18039001) and Sancerre (18241002) fiches not reachable. Rain/Sun vs Paris-Montsouris. Grapes and yields from INAO data in the atlas; soils from the Study lesson. Hook = study path, no event.",
+   "slot": "2026-10-29T17:50+01:00"
   },
   {
    "slug": "deep-priorat",
    "place": "Priorat",
    "atlas_id": "es-eupdo-PDO-ES-A1560",
    "series": "",
-   "not_before": "2026-11-07",
+   "not_before": "2026-10-30",
    "why": "Spain study path: the second DOCa (DOQ), llicorella slate, Garnacha and Cariñena",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-07 to 2026-10-30 on 2026-10-29 so the Sancerre outro 'Next deep dive: Priorat' is true."
   },
   {
    "slug": "deep-alsace",

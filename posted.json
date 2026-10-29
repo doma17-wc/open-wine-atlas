@@ -183,6 +183,18 @@
     "EU GI register",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-sancerre",
+   "place": "Sancerre",
+   "slot": "2026-10-29T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-8126352835336122593",
+   "sources": [
+    "Météo-France normals 1991-2020 (Bourges 18033001, Paris-Montsouris)",
+    "INAO data (via Open Wine Atlas)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
