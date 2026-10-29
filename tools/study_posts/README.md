@@ -68,6 +68,24 @@ Inputs: one `--q`; optional `--prev` = yesterday's story question, whose answer 
 "Answer in our next post · openwineatlas.com". Content stays inside the Instagram story safe area
 (250 px top and bottom). Long questions get a smaller size automatically.
 
+## (b2) Tap-to-answer formats (since 30 Oct 2026)
+
+Stefano wants people to choose the answer instead of writing it in the comments. Instagram only offers that
+through its own Quiz sticker (stories) and caption poll (feed posts), which the API cannot add. So these two are
+scheduled in Metricool with `autoPublish: false` (push notification) and Stefano adds the sticker or poll in the
+Instagram app before sharing. Always send him the exact sticker or poll text.
+
+```sh
+python3 $T/render.py qstory --repo main --libs $LIBS --out $OUT --name study-2026-10-30-quizstory-champagne-nv --q north-france-champagne-method#q1
+python3 $T/render.py qpost  --repo main --libs $LIBS --out $OUT --name study-2026-10-30-poll-muscadet --q north-france-loire-west#q1
+```
+
+- `qstory`: 1080x1920, question at the top, "TAP YOUR ANSWER" and an empty zone in the middle for the Quiz sticker
+  (question "Your answer?", the options as in study.json, the right one marked). No options on the image.
+- `qpost`: two slides. 1 = question and options A to D ("Vote in the poll · swipe for the answer"),
+  2 = answer with the place map (`--map`, default the question's `place`) and the study.json explanation.
+  Caption poll: "Your answer?" with options "A. ...", "B. ...". Pick questions whose options are short (22 chars max).
+
 ## (c) Feature carousel from app screenshots
 
 1. Screenshots of the app at phone size (390x844 CSS px, scale 2):

@@ -134,6 +134,60 @@ async def story(a, atlas, br, base):
     return [out], [{"key": l["id"] + "#" + q["id"], "q": q["q"], "answer": L[q["answer"]], "option": q["options"][q["answer"]], "explain": q["explain"]}]
 
 
+# ---------- story made for the Instagram Quiz sticker (answers are tapped, not written)
+async def qstory(a, atlas, br, base):
+    """Question at the top, an empty zone in the middle for the Quiz sticker added in the Instagram app."""
+    p, l, q = atlas.q(a.q[0])
+    body = f"""<div class="glow"></div>
+      <div class="pad" data-fit="story" data-strict="1" style="top:290px;height:560px;display:flex;flex-direction:column;overflow:hidden">
+        <div class="eb">Question of the day · {esc(p['title'])}</div>
+        <div class="qtext" data-fit="q" style="font-size:{92 if len(q['q']) <= 50 else 82 if len(q['q']) <= 75 else 74}px;max-height:470px;overflow:hidden">{esc(q['q']).replace('-', '\u2011')}</div></div>
+      <div class="pad" style="top:880px;text-align:center;font:400 30px 'IBM Plex Mono';color:{GOLD};letter-spacing:.06em">TAP YOUR ANSWER</div>
+      <div class="pad" style="top:940px;height:640px;border-radius:28px;background:radial-gradient(closest-side,rgba(231,192,106,.07),rgba(11,11,13,0))"></div>
+      <div class="sfoot">Study it free · <b>openwineatlas.com</b></div>"""
+    out = os.path.join(a.out, f"{a.name}.jpg")
+    over = await owa.html_jpg(br, doc(atlas, SW, SH, STORY_CSS, body), out, SW, SH)
+    if over:
+        raise SystemExit(f"text runs out of its box on {out}: {over}")
+    return [out], [{"key": l["id"] + "#" + q["id"], "q": q["q"], "options": q["options"], "answer": L[q["answer"]],
+                    "option": q["options"][q["answer"]], "explain": q["explain"]}]
+
+
+# ---------- one-question feed post for the Instagram caption poll: slide 1 question, slide 2 answer
+async def qpost(a, atlas, br, base):
+    p, l, q = atlas.q(a.q[0])
+    place_id = a.map or q.get("place") or ""
+    tmp = tempfile.mkdtemp()
+    opts = "".join(f'<div class="opt"><b>{L[j]}</b><span>{esc(o)}</span></div>' for j, o in enumerate(q["options"]))
+    slides = [f"""<div class="pad" style="top:96px;bottom:170px;display:flex;flex-direction:column">
+          <div class="eb">Question of the day · {esc(p['title'])}</div>
+          <div class="qtext" data-fit="q" style="font-size:{80 if len(q['q']) <= 60 else 72}px;max-height:420px;overflow:hidden">{esc(q['q']).replace('-', '\u2011')}</div>
+          <div style="flex:1"></div><div class="opts">{opts}</div></div>{owa.foot(right='Vote in the poll · swipe for the answer')}"""]
+    band_h = 800
+    if place_id:
+        band_png = os.path.join(tmp, "band.png")
+        await owa.map_png(br, base, a.libs, atlas, place_id, band_png, FW, band_h, pad={"top": 80, "bottom": 80, "left": 160, "right": 160})
+        band = f"""<div class="band" style="height:{band_h}px;background-image:url({owa.data_uri(band_png)})"><div class="lbl"><div class="eb tag" style="color:{PARCH}">Answer</div></div>
+        <div style="position:absolute;left:80px;bottom:18px;z-index:2" class="eb tag">{esc(atlas.index[place_id][0])} on the atlas</div></div>"""
+        top = band_h + 50
+    else:
+        band, top = "", 140
+    slides.append(f"""{band}<div class="pad" data-fit="answer" data-strict="1" style="top:{top}px;bottom:150px;overflow:hidden">
+        {'' if band else '<div class="eb">Answer</div>'}
+        <div class="a" style="margin-top:{0 if band else 30}px"><div class="n">{L[q['answer']]}</div><h3 style="font-size:76px">{esc(q['options'][q['answer']])}</h3>
+        <p style="font-size:38px;margin-top:8px">{esc(q['explain'])}</p></div></div>
+      {owa.foot(left='Open Wine Atlas', right='Study it free · openwineatlas.com')}""")
+    files = []
+    for i, body in enumerate(slides):
+        out = os.path.join(a.out, f"{a.name}-{i + 1}.jpg")
+        over = await owa.html_jpg(br, doc(atlas, FW, FH, QUIZ_CSS, body), out, FW, FH)
+        if over:
+            raise SystemExit(f"text runs out of its box on {out}: {over}")
+        files.append(out)
+    return files, [{"key": l["id"] + "#" + q["id"], "q": q["q"], "options": q["options"], "answer": L[q["answer"]],
+                    "option": q["options"][q["answer"]], "explain": q["explain"], "place": place_id}]
+
+
 # ---------- feature carousel from app screenshots
 FEAT_CSS = f"""
 .pad{{position:absolute;left:80px;right:80px}}
@@ -236,7 +290,7 @@ async def run(a):
     try:
         async with async_playwright() as p:
             br = await owa.launch(p)
-            files, report = await {"quiz": quiz, "story": story, "feature": feature, "cta": cta}[a.cmd](a, atlas, br, base)
+            files, report = await {"quiz": quiz, "story": story, "qstory": qstory, "qpost": qpost, "feature": feature, "cta": cta}[a.cmd](a, atlas, br, base)
             await br.close()
     finally:
         srv.shutdown()
@@ -247,7 +301,7 @@ async def run(a):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["quiz", "story", "feature", "cta"])
+    ap.add_argument("cmd", choices=["quiz", "story", "qstory", "qpost", "feature", "cta"])
     ap.add_argument("--repo", required=True, help="checkout of main (web/data/study.json, api/fonts)")
     ap.add_argument("--libs", required=True, help="folder with maplibre-gl and pmtiles (npm installs them there if missing)")
     ap.add_argument("--out", required=True)
@@ -263,8 +317,8 @@ def main():
     a = ap.parse_args()
     if a.cmd == "quiz" and not (a.q and a.map and a.hook and a.title):
         ap.error("quiz needs --q (2 to 4), --map, --hook and --title")
-    if a.cmd == "story" and len(a.q) != 1:
-        ap.error("story needs exactly one --q")
+    if a.cmd in ("story", "qstory", "qpost") and len(a.q) != 1:
+        ap.error(f"{a.cmd} needs exactly one --q")
     if a.cmd == "feature" and not a.spec:
         ap.error("feature needs --spec")
     asyncio.run(run(a))
