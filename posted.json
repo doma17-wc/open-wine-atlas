@@ -213,5 +213,65 @@
   "slot": "2026-10-29T18:30+01:00",
   "media": "cards/deep-story-cta3.jpg",
   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=2999021885726216032"
+ },
+ {
+  "id": "study-2026-10-30-poll-muscadet",
+  "name": "Poll post: Muscadet grape (north-france-loire-west#q1, answer C Melon)",
+  "date": "2026-10-30T08:35:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-30-poll-muscadet-1.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3296837703096877985",
+  "images": [
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-30-poll-muscadet-1.jpg",
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-30-poll-muscadet-2.jpg"
+  ]
+ },
+ {
+  "id": "study-2026-10-30-quizstory-champagne-nv",
+  "name": "Quiz sticker story: NV Champagne ageing (north-france-champagne-method#q1, answer C 15 months)",
+  "date": "2026-10-30T15:20:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-30-quizstory-champagne-nv.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=7507377320793033492"
+ },
+ {
+  "id": "study-2026-10-31-poll-cote-rotie",
+  "name": "Poll post: Côte-Rôtie white grape (rhone-south-northern-rhone#q1, answer B Viognier)",
+  "date": "2026-10-31T08:35:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-31-poll-cote-rotie-1.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=2056369000841955788",
+  "images": [
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-31-poll-cote-rotie-1.jpg",
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-31-poll-cote-rotie-2.jpg"
+  ]
+ },
+ {
+  "id": "study-2026-10-31-quizstory-smaragd",
+  "name": "Quiz sticker story: Wachau Smaragd (germany-austria-austria#q2, answer B Smaragd)",
+  "date": "2026-10-31T15:20:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-10-31-quizstory-smaragd.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=7840436850590827370"
+ },
+ {
+  "id": "study-2026-11-01-poll-ribera",
+  "name": "Poll post: Tinto Fino (iberia-duero-northwest#q1, answer B Tinto Fino)",
+  "date": "2026-11-01T08:35:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-11-01-poll-ribera-1.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=5148003702148582285",
+  "images": [
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-11-01-poll-ribera-1.jpg",
+   "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-11-01-poll-ribera-2.jpg"
+  ]
+ },
+ {
+  "id": "study-2026-11-01-quizstory-solera",
+  "name": "Quiz sticker story: solera (iberia-jerez#q6, answer B The solera)",
+  "date": "2026-11-01T15:20:00+01:00",
+  "image": "https://raw.githubusercontent.com/doma17-wc/open-wine-atlas/social/cards/study-2026-11-01-quizstory-solera.jpg",
+  "caption": "",
+  "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=6225893287321422290"
  }
 ]
