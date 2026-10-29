@@ -1,0 +1,2207 @@
+{
+ "_note": "Bordeaux classified estates for the Deep Region (pipeline/bordeaux_deep.py). Names follow French and English Wikipedia, iDealwine and the INAO / AGCCSE list for Saint-Émilion 2022; the official sites of the Conseil des Grands Crus Classés en 1855 could not be read when this list was made. Locations: the château's coordinates on Wikipedia, else its OpenStreetMap point. Estates without a checked location are listed on their appellation but not drawn.",
+ "classifications": {
+  "medoc_1855": {
+   "title": "Classification of 1855, Médoc (red)",
+   "year": 1855,
+   "ranks": [
+    "Premier Grand Cru Classé",
+    "Deuxième Cru",
+    "Troisième Cru",
+    "Quatrième Cru",
+    "Cinquième Cru"
+   ],
+   "short": {
+    "Premier Grand Cru Classé": "1855 · 1er",
+    "Deuxième Cru": "1855 · 2e",
+    "Troisième Cru": "1855 · 3e",
+    "Quatrième Cru": "1855 · 4e",
+    "Cinquième Cru": "1855 · 5e"
+   },
+   "note": "The list was drawn up by Bordeaux brokers for the Paris Universal Exhibition of 1855 and ranked estates by price. It covers 60 Médoc estates plus Haut-Brion in the Graves. Apart from Mouton in 1973 and the addition of Cantemerle it has never been revised.",
+   "estates": [
+    {
+     "name": "Château Lafite Rothschild",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.225,
+      -0.77306,
+      "Wikipedia (English: Château Lafite Rothschild)"
+     ]
+    },
+    {
+     "name": "Château Latour",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.17667,
+      -0.745,
+      "Wikipedia (English: Château Latour)"
+     ]
+    },
+    {
+     "name": "Château Margaux",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.04442,
+      -0.66871,
+      "Wikipedia (English: Château Margaux)"
+     ]
+    },
+    {
+     "name": "Château Haut-Brion",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Pessac-Léognan",
+     "commune": "Pessac",
+     "loc": [
+      44.81425,
+      -0.61268,
+      "Wikipedia (French: Château Haut-Brion)"
+     ]
+    },
+    {
+     "name": "Château Mouton Rothschild",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.2153,
+      -0.7684,
+      "Wikipedia (English: Château Mouton Rothschild)"
+     ]
+    },
+    {
+     "name": "Château Rauzan-Ségla",
+     "rank": "Deuxième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.03543,
+      -0.67484,
+      "Wikipedia (English: Château Rauzan-Ségla)"
+     ]
+    },
+    {
+     "name": "Château Rauzan-Gassies",
+     "rank": "Deuxième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.03669,
+      -0.67497,
+      "Wikipedia (English: Château Rauzan-Gassies)"
+     ]
+    },
+    {
+     "name": "Château Léoville Las Cases",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.16371,
+      -0.74041,
+      "Wikipedia (English: Château Léoville-Las Cases)"
+     ]
+    },
+    {
+     "name": "Château Léoville Poyferré",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.16409,
+      -0.74048,
+      "Wikipedia (English: Château Léoville-Poyferré)"
+     ]
+    },
+    {
+     "name": "Château Léoville Barton",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.15739,
+      -0.73925,
+      "Wikipedia (English: Château Léoville Barton)"
+     ]
+    },
+    {
+     "name": "Château Durfort-Vivens",
+     "rank": "Deuxième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.0399,
+      -0.67498,
+      "Wikipedia (English: Château Durfort-Vivens)"
+     ]
+    },
+    {
+     "name": "Château Gruaud Larose",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.14444,
+      -0.75083,
+      "Wikipedia (English: Château Gruaud-Larose)"
+     ]
+    },
+    {
+     "name": "Château Lascombes",
+     "rank": "Deuxième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.04145,
+      -0.68376,
+      "Wikipedia (English: Château Lascombes)"
+     ]
+    },
+    {
+     "name": "Château Brane-Cantenac",
+     "rank": "Deuxième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.02395,
+      -0.6737,
+      "Wikipedia (English: Château Brane-Cantenac)"
+     ]
+    },
+    {
+     "name": "Château Pichon Baron",
+     "rank": "Deuxième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.17662,
+      -0.75195,
+      "OpenStreetMap node 11540039584"
+     ]
+    },
+    {
+     "name": "Château Pichon Longueville Comtesse de Lalande",
+     "rank": "Deuxième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.17578,
+      -0.74955,
+      "OpenStreetMap node 3751440211"
+     ]
+    },
+    {
+     "name": "Château Ducru-Beaucaillou",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.15096,
+      -0.7345,
+      "Wikipedia (English: Château Ducru-Beaucaillou)"
+     ]
+    },
+    {
+     "name": "Château Cos d'Estournel",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Estèphe",
+     "commune": "Saint-Estèphe",
+     "loc": [
+      45.23111,
+      -0.77611,
+      "Wikipedia (English: Château Cos d'Estournel)"
+     ]
+    },
+    {
+     "name": "Château Montrose",
+     "rank": "Deuxième Cru",
+     "appellation": "Saint-Estèphe",
+     "commune": "Saint-Estèphe",
+     "loc": [
+      45.24667,
+      -0.76114,
+      "Wikipedia (English: Château Montrose)"
+     ]
+    },
+    {
+     "name": "Château Kirwan",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.02742,
+      -0.65816,
+      "Wikipedia (English: Château Kirwan)"
+     ]
+    },
+    {
+     "name": "Château d'Issan",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.0379,
+      -0.6581,
+      "Wikipedia (English: Château d'Issan)"
+     ]
+    },
+    {
+     "name": "Château Lagrange",
+     "rank": "Troisième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.14947,
+      -0.77325,
+      "Wikipedia (English: Château Lagrange)"
+     ]
+    },
+    {
+     "name": "Château Langoa Barton",
+     "rank": "Troisième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.15782,
+      -0.74008,
+      "Wikipedia (English: Château Langoa-Barton)"
+     ]
+    },
+    {
+     "name": "Château Giscours",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Labarde",
+     "loc": [
+      45.0087,
+      -0.64605,
+      "Wikipedia (English: Château Giscours)"
+     ]
+    },
+    {
+     "name": "Château Malescot St. Exupéry",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.0414,
+      -0.67361,
+      "Wikipedia (French: Château Malescot Saint-Exupéry)"
+     ]
+    },
+    {
+     "name": "Château Cantenac Brown",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.0278,
+      -0.67923,
+      "Wikipedia (English: Château Cantenac-Brown)"
+     ]
+    },
+    {
+     "name": "Château Boyd-Cantenac",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.0228,
+      -0.656,
+      "Wikipedia (English: Château Boyd-Cantenac)"
+     ]
+    },
+    {
+     "name": "Château Palmer",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.0369,
+      -0.6694,
+      "Wikipedia (English: Château Palmer)"
+     ]
+    },
+    {
+     "name": "Château La Lagune",
+     "rank": "Troisième Cru",
+     "appellation": "Haut-Médoc",
+     "commune": "Ludon-Médoc",
+     "loc": [
+      44.9789,
+      -0.6188,
+      "Wikipedia (English: Château La Lagune)"
+     ]
+    },
+    {
+     "name": "Château Desmirail",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.02852,
+      -0.65397,
+      "Wikipedia (English: Château Desmirail)"
+     ]
+    },
+    {
+     "name": "Château Calon-Ségur",
+     "rank": "Troisième Cru",
+     "appellation": "Saint-Estèphe",
+     "commune": "Saint-Estèphe",
+     "loc": [
+      45.26697,
+      -0.77769,
+      "Wikipedia (English: Château Calon-Ségur)"
+     ]
+    },
+    {
+     "name": "Château Ferrière",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.0433,
+      -0.6778,
+      "Wikipedia (English: Château Ferrière)"
+     ]
+    },
+    {
+     "name": "Château Marquis d'Alesme",
+     "rank": "Troisième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.04175,
+      -0.67627,
+      "Wikipedia (French: Château Marquis d'Alesme Becker)"
+     ]
+    },
+    {
+     "name": "Château Saint-Pierre",
+     "rank": "Quatrième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.14715,
+      -0.74272,
+      "Wikipedia (English: Château Saint-Pierre)"
+     ]
+    },
+    {
+     "name": "Château Talbot",
+     "rank": "Quatrième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.1593,
+      -0.7557,
+      "Wikipedia (English: Château Talbot)"
+     ]
+    },
+    {
+     "name": "Château Branaire-Ducru",
+     "rank": "Quatrième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.145,
+      -0.7388,
+      "Wikipedia (English: Château Branaire-Ducru)"
+     ]
+    },
+    {
+     "name": "Château Duhart-Milon",
+     "rank": "Quatrième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.1979,
+      -0.747,
+      "Wikipedia (English: Château Duhart-Milon)"
+     ]
+    },
+    {
+     "name": "Château Pouget",
+     "rank": "Quatrième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.02319,
+      -0.65685,
+      "Wikipedia (French: Château Pouget)"
+     ]
+    },
+    {
+     "name": "Château La Tour Carnet",
+     "rank": "Quatrième Cru",
+     "appellation": "Haut-Médoc",
+     "commune": "Saint-Laurent-Médoc",
+     "loc": [
+      45.14674,
+      -0.79404,
+      "Wikipedia (English: Château La Tour Carnet)"
+     ]
+    },
+    {
+     "name": "Château Lafon-Rochet",
+     "rank": "Quatrième Cru",
+     "appellation": "Saint-Estèphe",
+     "commune": "Saint-Estèphe",
+     "loc": [
+      45.22941,
+      -0.78777,
+      "Wikipedia (English: Château Lafon-Rochet)"
+     ]
+    },
+    {
+     "name": "Château Beychevelle",
+     "rank": "Quatrième Cru",
+     "appellation": "Saint-Julien",
+     "commune": "Saint-Julien-Beychevelle",
+     "loc": [
+      45.14504,
+      -0.73497,
+      "Wikipedia (English: Château Beychevelle)"
+     ]
+    },
+    {
+     "name": "Château Prieuré-Lichine",
+     "rank": "Quatrième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Cantenac",
+     "loc": [
+      45.029,
+      -0.6559,
+      "Wikipedia (English: Château Prieuré-Lichine)"
+     ]
+    },
+    {
+     "name": "Château Marquis de Terme",
+     "rank": "Quatrième Cru",
+     "appellation": "Margaux",
+     "commune": "Margaux-Cantenac",
+     "village": "Margaux",
+     "loc": [
+      45.0384,
+      -0.67729,
+      "Wikipedia (English: Château Marquis de Terme)"
+     ]
+    },
+    {
+     "name": "Château Pontet-Canet",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.20833,
+      -0.77053,
+      "Wikipedia (English: Château Pontet-Canet)"
+     ]
+    },
+    {
+     "name": "Château Batailley",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.1768,
+      -0.77289,
+      "Wikipedia (English: Château Batailley)"
+     ]
+    },
+    {
+     "name": "Château Haut-Batailley",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.17681,
+      -0.77291,
+      "Wikipedia (English: Château Haut-Batailley)"
+     ]
+    },
+    {
+     "name": "Château Grand-Puy-Lacoste",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.19007,
+      -0.7691,
+      "Wikipedia (English: Château Grand-Puy-Lacoste)"
+     ]
+    },
+    {
+     "name": "Château Grand-Puy Ducasse",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.19987,
+      -0.74658,
+      "Wikipedia (French: Château Grand-Puy Ducasse)"
+     ]
+    },
+    {
+     "name": "Château Lynch-Bages",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.19083,
+      -0.75561,
+      "Wikipedia (English: Château Lynch-Bages)"
+     ]
+    },
+    {
+     "name": "Château Lynch-Moussas",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.18363,
+      -0.79317,
+      "Wikipedia (English: Château Lynch-Moussas)"
+     ]
+    },
+    {
+     "name": "Château Dauzac",
+     "rank": "Cinquième Cru",
+     "appellation": "Margaux",
+     "commune": "Labarde",
+     "loc": [
+      45.01941,
+      -0.62356,
+      "Wikipedia (French: Château Dauzac)"
+     ]
+    },
+    {
+     "name": "Château d'Armailhac",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.2111,
+      -0.77,
+      "Wikipedia (English: Château d'Armailhac)"
+     ]
+    },
+    {
+     "name": "Château du Tertre",
+     "rank": "Cinquième Cru",
+     "appellation": "Margaux",
+     "commune": "Arsac",
+     "loc": [
+      45.00593,
+      -0.6809,
+      "Wikipedia (English: Château du Tertre)"
+     ]
+    },
+    {
+     "name": "Château Haut-Bages Libéral",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.18203,
+      -0.7494,
+      "Wikipedia (French: Château Haut-Bages Libéral)"
+     ]
+    },
+    {
+     "name": "Château Pédesclaux",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.2114,
+      -0.7582,
+      "Wikipedia (English: Château Pédesclaux)"
+     ]
+    },
+    {
+     "name": "Château Belgrave",
+     "rank": "Cinquième Cru",
+     "appellation": "Haut-Médoc",
+     "commune": "Saint-Laurent-Médoc",
+     "loc": [
+      45.15134,
+      -0.78011,
+      "Wikipedia (English: Château Belgrave)"
+     ]
+    },
+    {
+     "name": "Château Camensac",
+     "rank": "Cinquième Cru",
+     "appellation": "Haut-Médoc",
+     "commune": "Saint-Laurent-Médoc",
+     "loc": [
+      45.1466,
+      -0.78645,
+      "Wikipedia (English: Château de Camensac)"
+     ]
+    },
+    {
+     "name": "Château Cos Labory",
+     "rank": "Cinquième Cru",
+     "appellation": "Saint-Estèphe",
+     "commune": "Saint-Estèphe",
+     "loc": [
+      45.23069,
+      -0.77698,
+      "Wikipedia (French: Château Cos Labory)"
+     ]
+    },
+    {
+     "name": "Château Clerc Milon",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.22161,
+      -0.76532,
+      "Wikipedia (English: Château Clerc Milon)"
+     ]
+    },
+    {
+     "name": "Château Croizet-Bages",
+     "rank": "Cinquième Cru",
+     "appellation": "Pauillac",
+     "commune": "Pauillac",
+     "loc": [
+      45.19073,
+      -0.75658,
+      "Wikipedia (French: Château Croizet-Bages)"
+     ]
+    },
+    {
+     "name": "Château Cantemerle",
+     "rank": "Cinquième Cru",
+     "appellation": "Haut-Médoc",
+     "commune": "Macau",
+     "loc": [
+      44.99402,
+      -0.62632,
+      "Wikipedia (French: Château Cantemerle)"
+     ]
+    }
+   ],
+   "revisions": "Cantemerle added as a Cinquième Cru shortly after the original list (handwritten addition dated 16 September 1855 per French sources; usually given as 1856). Mouton Rothschild promoted from Deuxième to Premier Cru in 1973. Third growth Dubignon disappeared (absorbed by Malescot St. Exupéry and Château Margaux around 1960). Several estates split later: Léoville (3), Pichon (2), Boyd (Boyd-Cantenac, Cantenac Brown), Batailley (Haut-Batailley); Pouget-Lassale merged into Pouget."
+  },
+  "sauternes_1855": {
+   "title": "Classification of 1855, Sauternes and Barsac (sweet white)",
+   "year": 1855,
+   "ranks": [
+    "Premier Cru Supérieur",
+    "Premier Cru",
+    "Deuxième Cru"
+   ],
+   "short": {
+    "Premier Cru Supérieur": "1855 · 1er supérieur",
+    "Premier Cru": "1855 · 1er",
+    "Deuxième Cru": "1855 · 2e"
+   },
+   "note": "Made at the same time as the Médoc list for the 1855 exhibition. Château d'Yquem alone holds Premier Cru Supérieur. Barsac estates may label as Barsac or Sauternes.",
+   "estates": [
+    {
+     "name": "Château d'Yquem",
+     "rank": "Premier Cru Supérieur",
+     "appellation": "Sauternes",
+     "commune": "Sauternes",
+     "loc": [
+      44.54364,
+      -0.32868,
+      "Wikipedia (French: Château d'Yquem)"
+     ]
+    },
+    {
+     "name": "Château La Tour Blanche",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.5428,
+      -0.3507,
+      "Wikipedia (English: Château La Tour Blanche)"
+     ]
+    },
+    {
+     "name": "Château Lafaurie-Peyraguey",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.54944,
+      -0.33778,
+      "Wikipedia (English: Château Lafaurie-Peyraguey)"
+     ]
+    },
+    {
+     "name": "Château Clos Haut-Peyraguey",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.54583,
+      -0.33972,
+      "Wikipedia (English: Château Clos Haut-Peyraguey)"
+     ]
+    },
+    {
+     "name": "Château de Rayne Vigneau",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.54759,
+      -0.34464,
+      "Wikipedia (French: Château de Rayne-Vigneau)"
+     ]
+    },
+    {
+     "name": "Château Suduiraut",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Preignac",
+     "loc": [
+      44.55639,
+      -0.32,
+      "Wikipedia (English: Château Suduiraut)"
+     ]
+    },
+    {
+     "name": "Château Coutet",
+     "rank": "Premier Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.59476,
+      -0.32595,
+      "Wikipedia (English: Château Coutet)"
+     ]
+    },
+    {
+     "name": "Château Climens",
+     "rank": "Premier Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.58948,
+      -0.33473,
+      "Wikipedia (English: Château Climens)"
+     ]
+    },
+    {
+     "name": "Château Guiraud",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Sauternes",
+     "loc": [
+      44.53306,
+      -0.33222,
+      "Wikipedia (English: Château Guiraud)"
+     ]
+    },
+    {
+     "name": "Château Rieussec",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Fargues",
+     "loc": [
+      44.53875,
+      -0.31134,
+      "Wikipedia (English: Château Rieussec)"
+     ]
+    },
+    {
+     "name": "Château Rabaud-Promis",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.5551,
+      -0.3386,
+      "Wikipedia (English: Château Rabaud-Promis)"
+     ]
+    },
+    {
+     "name": "Château Sigalas Rabaud",
+     "rank": "Premier Cru",
+     "appellation": "Sauternes",
+     "commune": "Bommes",
+     "loc": [
+      44.55297,
+      -0.33904,
+      "Wikipedia (French: Château Sigalas Rabaud)"
+     ]
+    },
+    {
+     "name": "Château de Myrat",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Barsac",
+     "loc": [
+      44.59724,
+      -0.33442,
+      "Wikipedia (English: Château de Myrat)"
+     ]
+    },
+    {
+     "name": "Château Doisy Daëne",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.59164,
+      -0.33079,
+      "Wikipedia (English: Château Doisy Daëne)"
+     ]
+    },
+    {
+     "name": "Château Doisy-Dubroca",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.5858,
+      -0.3236,
+      "Wikipedia (English: Château Doisy-Dubroca)"
+     ]
+    },
+    {
+     "name": "Château Doisy-Védrines",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.5859,
+      -0.3235,
+      "Wikipedia (English: Château Doisy-Védrines)"
+     ]
+    },
+    {
+     "name": "Château d'Arche",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Sauternes",
+     "loc": [
+      44.53806,
+      -0.34344,
+      "Wikipedia (English: Château d'Arche)"
+     ]
+    },
+    {
+     "name": "Château Filhot",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Sauternes",
+     "loc": [
+      44.52301,
+      -0.34186,
+      "Wikipedia (English: Château Filhot)"
+     ]
+    },
+    {
+     "name": "Château Broustet",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.6034,
+      -0.32497,
+      "Wikipedia (French: Château Broustet)"
+     ]
+    },
+    {
+     "name": "Château Nairac",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.6115,
+      -0.3177,
+      "Wikipedia (English: Château Nairac)"
+     ]
+    },
+    {
+     "name": "Château Caillou",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac",
+     "loc": [
+      44.59416,
+      -0.341,
+      "Wikipedia (English: Château Caillou)"
+     ]
+    },
+    {
+     "name": "Château Suau",
+     "rank": "Deuxième Cru",
+     "appellation": "Barsac",
+     "commune": "Barsac"
+    },
+    {
+     "name": "Château de Malle",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Preignac",
+     "loc": [
+      44.565,
+      -0.29667,
+      "Wikipedia (English: Château de Malle)"
+     ]
+    },
+    {
+     "name": "Château Romer",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Fargues"
+    },
+    {
+     "name": "Château Romer du Hayot",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Fargues",
+     "loc": [
+      44.59284,
+      -0.34265,
+      "Wikipedia (English: Château Romer du Hayot)"
+     ]
+    },
+    {
+     "name": "Château Lamothe",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Sauternes"
+    },
+    {
+     "name": "Château Lamothe Guignard",
+     "rank": "Deuxième Cru",
+     "appellation": "Sauternes",
+     "commune": "Sauternes",
+     "loc": [
+      44.53296,
+      -0.34996,
+      "Wikipedia (French: Château Lamothe Guignard)"
+     ]
+    }
+   ],
+   "revisions": "No change in rank. The original 21 entries became 27 estates through splits (Peyraguey, Rabaud, Doisy, Broustet and Nairac, Romer, Lamothe). Pexoto was absorbed into Rabaud in the 19th century."
+  },
+  "graves_1959": {
+   "title": "Classification of Graves (1953, revised 1959)",
+   "year": 1959,
+   "ranks": [
+    "Cru Classé (red and white)",
+    "Cru Classé (red)",
+    "Cru Classé (white)"
+   ],
+   "short": {
+    "Cru Classé (red and white)": "Graves · red and white",
+    "Cru Classé (red)": "Graves · red",
+    "Cru Classé (white)": "Graves · white"
+   },
+   "note": "A single unranked tier of Crus Classés, each listed for red, white or both. Laville Haut-Brion has been sold as La Mission Haut-Brion Blanc since 2009, and La Tour Haut-Brion stopped after the 2005 vintage.",
+   "estates": [
+    {
+     "name": "Château Bouscaut",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Cadaujac",
+     "loc": [
+      44.7468,
+      -0.54842,
+      "Wikipedia (English: Château Bouscaut)"
+     ]
+    },
+    {
+     "name": "Château Carbonnieux",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.74533,
+      -0.56894,
+      "Wikipedia (English: Château Carbonnieux)"
+     ]
+    },
+    {
+     "name": "Domaine de Chevalier",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.72081,
+      -0.62262,
+      "Wikipedia (English: Domaine de Chevalier)"
+     ]
+    },
+    {
+     "name": "Château Couhins",
+     "rank": "Cru Classé (white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Villenave-d'Ornon",
+     "loc": [
+      44.75374,
+      -0.56268,
+      "OpenStreetMap node 662310393"
+     ]
+    },
+    {
+     "name": "Château Couhins-Lurton",
+     "rank": "Cru Classé (white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Villenave-d'Ornon"
+    },
+    {
+     "name": "Château de Fieuzal",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.7158,
+      -0.6096,
+      "Wikipedia (English: Château de Fieuzal)"
+     ]
+    },
+    {
+     "name": "Château Haut-Bailly",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.7332,
+      -0.5815,
+      "Wikipedia (English: Château Haut-Bailly)"
+     ]
+    },
+    {
+     "name": "Château Haut-Brion",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Pessac",
+     "loc": [
+      44.81425,
+      -0.61268,
+      "Wikipedia (French: Château Haut-Brion)"
+     ]
+    },
+    {
+     "name": "Château Latour-Martillac",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Martillac",
+     "loc": [
+      44.71156,
+      -0.53931,
+      "Wikipedia (English: Château Latour-Martillac)"
+     ]
+    },
+    {
+     "name": "Château Laville Haut-Brion",
+     "rank": "Cru Classé (white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Talence",
+     "loc": [
+      44.8152,
+      -0.6053,
+      "Wikipedia (English: Château Laville Haut-Brion)"
+     ]
+    },
+    {
+     "name": "Château Malartic-Lagravière",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.7223,
+      -0.6026,
+      "Wikipedia (English: Château Malartic-Lagravière)"
+     ]
+    },
+    {
+     "name": "Château La Mission Haut-Brion",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Talence",
+     "loc": [
+      44.81539,
+      -0.60565,
+      "Wikipedia (English: Château La Mission Haut-Brion)"
+     ]
+    },
+    {
+     "name": "Château Olivier",
+     "rank": "Cru Classé (red and white)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Léognan",
+     "loc": [
+      44.74791,
+      -0.59779,
+      "Wikipedia (English: Château Olivier)"
+     ]
+    },
+    {
+     "name": "Château Pape Clément",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Pessac",
+     "loc": [
+      44.80571,
+      -0.64683,
+      "Wikipedia (English: Château Pape Clément)"
+     ]
+    },
+    {
+     "name": "Château Smith Haut Lafitte",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Martillac",
+     "loc": [
+      44.73251,
+      -0.55857,
+      "Wikipedia (English: Château Smith Haut Lafitte)"
+     ]
+    },
+    {
+     "name": "Château La Tour Haut-Brion",
+     "rank": "Cru Classé (red)",
+     "appellation": "Pessac-Léognan",
+     "commune": "Talence"
+    }
+   ],
+   "revisions": "First approved in August 1953, completed with additions in February 1959. Since 1987 all classified estates lie in the Pessac-Léognan appellation."
+  },
+  "saint_emilion_2022": {
+   "title": "Classification of Saint-Émilion Grand Cru (2022)",
+   "year": 2022,
+   "ranks": [
+    "Premier Grand Cru Classé A",
+    "Premier Grand Cru Classé",
+    "Grand Cru Classé"
+   ],
+   "short": {
+    "Premier Grand Cru Classé A": "Saint-Émilion · 1er A",
+    "Premier Grand Cru Classé": "Saint-Émilion · 1er",
+    "Grand Cru Classé": "Saint-Émilion · GCC"
+   },
+   "note": "Saint-Émilion is the only Bordeaux classification revised on a regular schedule. Estates are judged on tasting and other criteria, and the 2022 list has 85 estates. The three most famous former A estates chose to leave it.",
+   "estates": [
+    {
+     "name": "Château Figeac",
+     "rank": "Premier Grand Cru Classé A",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.91283,
+      -0.19243,
+      "Wikipedia (French: Château-Figeac)"
+     ]
+    },
+    {
+     "name": "Château Pavie",
+     "rank": "Premier Grand Cru Classé A",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8843,
+      -0.1496,
+      "Wikipedia (English: Château Pavie)"
+     ]
+    },
+    {
+     "name": "Château Beau-Séjour Bécot",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89478,
+      -0.16439,
+      "Wikipedia (English: Château Beau-Séjour Bécot)"
+     ]
+    },
+    {
+     "name": "Château Beauséjour Héritiers Duffau Lagarrosse",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89229,
+      -0.16474,
+      "OpenStreetMap way 173279617"
+     ]
+    },
+    {
+     "name": "Château Bélair Monange",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Canon",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89293,
+      -0.16323,
+      "OpenStreetMap way 173279681"
+     ]
+    },
+    {
+     "name": "Château Canon La Gaffelière",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88117,
+      -0.16085,
+      "Wikipedia (English: Château Canon-la-Gaffelière)"
+     ]
+    },
+    {
+     "name": "Château Larcis Ducasse",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88146,
+      -0.14537,
+      "OpenStreetMap way 174642734"
+     ]
+    },
+    {
+     "name": "Château Pavie Macquin",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8907,
+      -0.14911,
+      "Wikipedia (English: Château Pavie-Macquin)"
+     ]
+    },
+    {
+     "name": "Château Troplong Mondot",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88853,
+      -0.14075,
+      "Wikipedia (English: Château Troplong Mondot)"
+     ]
+    },
+    {
+     "name": "Château Trottevieille",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89478,
+      -0.14508,
+      "Wikipedia (English: Château Trotte Vieille)"
+     ]
+    },
+    {
+     "name": "Château Valandraud",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8878,
+      -0.0855,
+      "Wikipedia (English: Château Valandraud)"
+     ]
+    },
+    {
+     "name": "Clos Fourtet",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89509,
+      -0.15807,
+      "Wikipedia (English: Clos Fourtet)"
+     ]
+    },
+    {
+     "name": "La Mondotte",
+     "rank": "Premier Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Badette",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Balestard La Tonnelle",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Barde-Haut",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89192,
+      -0.13264,
+      "OpenStreetMap node 10940001258"
+     ]
+    },
+    {
+     "name": "Château Bellefont-Belcier",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88056,
+      -0.13813,
+      "OpenStreetMap way 174642016"
+     ]
+    },
+    {
+     "name": "Château Bellevue",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Berliquet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Boutisse",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Cadet-Bon",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90166,
+      -0.15323,
+      "OpenStreetMap node 11750294937"
+     ]
+    },
+    {
+     "name": "Château Cap de Mourlin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Chauvin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Clos de Sarpe",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89712,
+      -0.13816,
+      "OpenStreetMap node 10940001231"
+     ]
+    },
+    {
+     "name": "Château Corbin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Corbin Michotte",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92314,
+      -0.18114,
+      "OpenStreetMap node 4667511990"
+     ]
+    },
+    {
+     "name": "Château Côte de Baleau",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90587,
+      -0.16415,
+      "OpenStreetMap node 11747925277"
+     ]
+    },
+    {
+     "name": "Château Croix de Labrie",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Dassault",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.9084,
+      -0.14155,
+      "Wikipedia (French: Château Dassault)"
+     ]
+    },
+    {
+     "name": "Château de Ferrand",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.91755,
+      -0.21264,
+      "OpenStreetMap way 79363477"
+     ]
+    },
+    {
+     "name": "Château de Pressac",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88351,
+      -0.0902,
+      "OpenStreetMap node 5985313685"
+     ]
+    },
+    {
+     "name": "Château Destieux",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Faugères",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Fleur Cardinale",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88987,
+      -0.08287,
+      "OpenStreetMap node 10886940196"
+     ]
+    },
+    {
+     "name": "Château Fombrauge",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89677,
+      -0.11409,
+      "OpenStreetMap node 10926135307"
+     ]
+    },
+    {
+     "name": "Château Fonplégade",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88538,
+      -0.16624,
+      "OpenStreetMap way 173279661"
+     ]
+    },
+    {
+     "name": "Château Fonroque",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.9044,
+      -0.15971,
+      "OpenStreetMap node 11747925347"
+     ]
+    },
+    {
+     "name": "Château Franc Mayne",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8996,
+      -0.1712,
+      "Wikipedia (English: Château Franc Mayne)"
+     ]
+    },
+    {
+     "name": "Château Grand Corbin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92028,
+      -0.16966,
+      "OpenStreetMap node 13179795168"
+     ]
+    },
+    {
+     "name": "Château Grand Corbin-Despagne",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92312,
+      -0.17755,
+      "Wikipedia (English: Château Grand Corbin-Despagne)"
+     ]
+    },
+    {
+     "name": "Château Grand Mayne",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89965,
+      -0.17432,
+      "OpenStreetMap way 173279671"
+     ]
+    },
+    {
+     "name": "Château Guadet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89695,
+      -0.15455,
+      "OpenStreetMap way 173282649"
+     ]
+    },
+    {
+     "name": "Château Haut-Sarpe",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89702,
+      -0.13846,
+      "OpenStreetMap node 10940001230"
+     ]
+    },
+    {
+     "name": "Château Jean Faure",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92024,
+      -0.1827,
+      "OpenStreetMap way 173279498"
+     ]
+    },
+    {
+     "name": "Château La Commanderie",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92003,
+      -0.21073,
+      "OpenStreetMap way 322567810"
+     ]
+    },
+    {
+     "name": "Château La Confession",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château La Couspaude",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château La Croizille",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88445,
+      -0.13493,
+      "OpenStreetMap node 10940015618"
+     ]
+    },
+    {
+     "name": "Château La Dominique",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92052,
+      -0.18679,
+      "OpenStreetMap way 173281743"
+     ]
+    },
+    {
+     "name": "Château La Fleur Morange",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château La Marzelle",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90837,
+      -0.19172,
+      "OpenStreetMap node 11724482730"
+     ]
+    },
+    {
+     "name": "Château La Serre",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8931,
+      -0.1507,
+      "Wikipedia (English: Château La Serre)"
+     ]
+    },
+    {
+     "name": "Château La Tour Figeac",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.92065,
+      -0.19419,
+      "OpenStreetMap node 4667326194"
+     ]
+    },
+    {
+     "name": "Château Laniote",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90494,
+      -0.16069,
+      "OpenStreetMap node 6459367086"
+     ]
+    },
+    {
+     "name": "Château Larmande",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Laroque",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.8907,
+      -0.1194,
+      "Wikipedia (English: Château Laroque)"
+     ]
+    },
+    {
+     "name": "Château Laroze",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90814,
+      -0.17881,
+      "OpenStreetMap way 173280046"
+     ]
+    },
+    {
+     "name": "Château Le Châtelet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89553,
+      -0.1625,
+      "OpenStreetMap node 3580174301"
+     ]
+    },
+    {
+     "name": "Château Le Prieuré",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Mangot",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Monbousquet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.87116,
+      -0.17571,
+      "Wikipedia (English: Château Monbousquet)"
+     ]
+    },
+    {
+     "name": "Château Montlabert",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.91236,
+      -0.18118,
+      "OpenStreetMap way 173281076"
+     ]
+    },
+    {
+     "name": "Château Montlisse",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Moulin du Cadet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90426,
+      -0.155,
+      "OpenStreetMap node 11747925307"
+     ]
+    },
+    {
+     "name": "Château Peby Faugères",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Petit Faurie de Soutard",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Ripeau",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Rochebelle",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.88387,
+      -0.13618,
+      "OpenStreetMap node 6649731685"
+     ]
+    },
+    {
+     "name": "Château Rol Valentin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.9111,
+      -0.1672,
+      "Wikipedia (English: Château Rol Valentin)"
+     ]
+    },
+    {
+     "name": "Château Saint-Georges (Côte Pavie)",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Sansonnet",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Soutard",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.89789,
+      -0.15036,
+      "Wikipedia (French: Château Soutard)"
+     ]
+    },
+    {
+     "name": "Château Tour Baladoz",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Tour Saint Christophe",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Villemaurine",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Yon-Figeac",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Clos Badon Thunevin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Clos de l'Oratoire",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Clos des Jacobins",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null,
+     "loc": [
+      44.90308,
+      -0.17207,
+      "OpenStreetMap node 11216178039"
+     ]
+    },
+    {
+     "name": "Clos Dubreuil",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Clos Saint-Julien",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Clos Saint-Martin",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Couvent des Jacobins",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    },
+    {
+     "name": "Château Lassègue",
+     "rank": "Grand Cru Classé",
+     "appellation": "Saint-Emilion grand cru",
+     "commune": null
+    }
+   ],
+   "approved": "Approved by the INAO national committee on 8 September 2022; homologated by interministerial arrêté of 15 December 2022 (published 22 December 2022). Valid until the 2031 harvest.",
+   "withdrawals": "Château Cheval Blanc and Château Ausone announced in July 2021 that they would not apply, criticising the weight of non-tasting criteria. Château Angélus withdrew on 5 January 2022. All three had been Premier Grand Cru Classé A in 2012, so they are no longer classified and only Figeac and Pavie hold the A rank.",
+   "history_2012": "The 2012 list (announced 6 September 2012) had 82 estates: 18 Premiers Grands Crus Classés, 4 of them A (Ausone, Cheval Blanc, Angélus, Pavie), and 64 Grands Crus Classés. It followed the 2006 list annulled by the courts and faced lawsuits from demoted estates. The classification dates from 1955 and is meant to be revised every ten years."
+  }
+ },
+ "open_ranks": {
+  "medoc_1855": [
+   "Premier Grand Cru Classé"
+  ],
+  "sauternes_1855": [
+   "Premier Cru Supérieur"
+  ],
+  "saint_emilion_2022": [
+   "Premier Grand Cru Classé A"
+  ]
+ },
+ "crus_bourgeois": {
+  "title": "Classification des Crus Bourgeois du Médoc 2025",
+  "year": 2025,
+  "count": 170,
+  "tiers": {
+   "Cru Bourgeois Exceptionnel": 14,
+   "Cru Bourgeois Supérieur": 36,
+   "Cru Bourgeois": 120
+  },
+  "note": "Announced 12 February 2025 (at Wine Paris), replacing the 2020 list of 249. Revised every five years; counts refer to classified wines."
+ },
+ "region": {
+  "bordeaux_total_vineyard_ha": 91543,
+  "src": "Agreste Nouvelle-Aquitaine (DRAAF), Essentiel no 80, June 2026: vines in production in Gironde",
+  "year": 2025,
+  "vineyard_ha_history": [
+   [
+    2020,
+    110000,
+    "CIVB Bordeaux Key Facts (Sept 2021)"
+   ],
+   [
+    2024,
+    100737,
+    "Agreste Nouvelle-Aquitaine Essentiel no 74 (June 2025)"
+   ],
+   [
+    2025,
+    91543,
+    "Agreste Nouvelle-Aquitaine Essentiel no 80 (June 2026)"
+   ]
+  ],
+  "grape_share": {
+   "basis": "Share of vineyard area within each colour; red varieties 89% and white 11% of plantings",
+   "red": [
+    [
+     "Merlot",
+     66
+    ],
+    [
+     "Cabernet Sauvignon",
+     22
+    ],
+    [
+     "Cabernet Franc",
+     9
+    ],
+    [
+     "Other red",
+     3
+    ]
+   ],
+   "white": [
+    [
+     "Sémillon",
+     46
+    ],
+    [
+     "Sauvignon (blanc and gris)",
+     46
+    ],
+    [
+     "Muscadelle",
+     5
+    ],
+    [
+     "Other white",
+     3
+    ]
+   ]
+  },
+  "grape_share_src": "CIVB, Bordeaux Key Facts, September 2021",
+  "grape_share_year": 2020,
+  "pomerol_note": "Pomerol has no official classification of its wines.",
+  "left_right_bank": "The Garonne and Dordogne rivers meet north of the city of Bordeaux to form the Gironde estuary. The Left Bank (Médoc and Graves) lies west of the Garonne and Gironde, and its reds are led by Cabernet Sauvignon. The Right Bank (Saint-Émilion, Pomerol and neighbours) lies around Libourne on the Dordogne, and its reds are led by Merlot with Cabernet Franc."
+ },
+ "sources": [
+  [
+   "Bordeaux Wine Official Classification of 1855 (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Bordeaux_Wine_Official_Classification_of_1855"
+  ],
+  [
+   "Classification officielle des vins de Bordeaux de 1855 (French Wikipedia)",
+   "https://fr.wikipedia.org/wiki/Classification_officielle_des_vins_de_Bordeaux_de_1855"
+  ],
+  [
+   "iDealwine: Bordeaux classifications, which category does each château belong to?",
+   "https://www.idealwine.info/?p=18843"
+  ],
+  [
+   "The Wine Cellar Insider: 1855 Sauternes-Barsac classification",
+   "https://thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/1855-sauternes-barsac-classifications"
+  ],
+  [
+   "Classification of Graves wine (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Classification_of_Graves_wine"
+  ],
+  [
+   "Classification of Saint-Émilion wine (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Classification_of_Saint-%C3%89milion_wine"
+  ],
+  [
+   "INAO: Saint-Émilion grand cru, classement for the next decade",
+   "https://www.inao.gouv.fr/en/saint-emilion-grand-cru-classement-next-decade"
+  ],
+  [
+   "INAO press notice (Sept 2022), printable",
+   "https://www.inao.gouv.fr/node/32757/printable/pdf"
+  ],
+  [
+   "AGCCSE press kit, Nouveau classement des vins de Saint-Émilion 2022",
+   "https://agccse.fr/wp-content/uploads/2022/09/Dossier-de-presse-Nouveau-classement-des-vins-de-Saint-Emilion-2022.pdf"
+  ],
+  [
+   "Vitisphere: Saint-Émilion 2022 classification goes uncontested",
+   "https://www.vitisphere.com/news-99144-saint-emilion-2022-classification-goes-uncontested.html"
+  ],
+  [
+   "Wine Spectator: St.-Emilion issues a surprising new classification (2012)",
+   "https://www.winespectator.com/articles/st-emilion-issues-a-surprising-new-classification-47276"
+  ],
+  [
+   "Decanter: Angélus withdraws from the next St-Emilion classification",
+   "https://www.decanter.com/wine-news/angelus-withdraws-from-the-next-st-emilion-classification-471835/"
+  ],
+  [
+   "Larvi: Cheval Blanc and Ausone withdraw from the St-Emilion classification",
+   "https://larvi.com/cheval-blanc-and-ausone-withdraw-from-the-st-emilion-classification/"
+  ],
+  [
+   "Decanter: Cru Bourgeois 2025 results",
+   "https://www.decanter.com/wine-news/eight-new-estates-upgraded-to-top-of-cru-bourgeois-classification-as-2025-results-revealed-550748/"
+  ],
+  [
+   "Wine Industry Advisor: Crus Bourgeois du Médoc 2025 classification",
+   "https://wineindustryadvisor.com/2025/02/13/crus-bourgeois-du-medoc-a-new-era-begins-with-2025-classification/"
+  ],
+  [
+   "CIVB Bordeaux Key Facts 2021",
+   "https://www.about-drinks.com/wp-content/uploads/2021/12/CIVB-Bordeaux-Key-Facts-2021_09.pdf"
+  ],
+  [
+   "Agreste Nouvelle-Aquitaine Essentiel no 80, filière viticole girondine (June 2026)",
+   "https://draaf.nouvelle-aquitaine.agriculture.gouv.fr/IMG/pdf/essentiel_no80_-_la_filiere_viticole_girondine___chiffres_cles.pdf"
+  ],
+  [
+   "Agreste Nouvelle-Aquitaine Essentiel no 74 (June 2025)",
+   "https://draaf.nouvelle-aquitaine.agriculture.gouv.fr/IMG/pdf/agrestena_essentiel_74_juin2025_filiereviticolegirondine.pdf"
+  ],
+  [
+   "Bordeaux wine (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Bordeaux_wine"
+  ],
+  [
+   "Pomerol AOC (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Pomerol_AOC"
+  ],
+  [
+   "Margaux (AOC) (French Wikipedia), crus classés per commune",
+   "https://fr.wikipedia.org/wiki/Margaux_(AOC)"
+  ],
+  [
+   "Margaux-Cantenac (French Wikipedia)",
+   "https://fr.wikipedia.org/wiki/Margaux-Cantenac"
+  ],
+  [
+   "The Wine Cellar Insider: Château Marquis d'Alesme",
+   "https://www.thewinecellarinsider.com/bordeaux-wine-producer-profiles/bordeaux/margaux/marquis-dalesme-becker/"
+  ],
+  [
+   "Château Laville Haut-Brion (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_Laville_Haut-Brion"
+  ],
+  [
+   "Château La Mission Haut-Brion (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_La_Mission_Haut-Brion"
+  ],
+  [
+   "Château Romer du Hayot (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_Romer_du_Hayot"
+  ],
+  [
+   "Château de Myrat (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Myrat"
+  ],
+  [
+   "Château de Camensac (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Camensac"
+  ],
+  [
+   "Château Pichon Longueville Baron (English Wikipedia)",
+   "https://en.wikipedia.org/wiki/Ch%C3%A2teau_Pichon_Longueville_Baron"
+  ],
+  [
+   "Saint-Laurent-Médoc (French Wikipedia)",
+   "https://fr.wikipedia.org/wiki/Saint-Laurent-M%C3%A9doc"
+  ],
+  [
+   "Ludon-Médoc (French Wikipedia)",
+   "https://fr.wikipedia.org/wiki/Ludon-M%C3%A9doc"
+  ],
+  [
+   "Decanter: Château Desmirail, 33460 Cantenac",
+   "https://www.decanter.com/wine-travel/chateau-desmirail-68353/"
+  ]
+ ],
+ "doubts": [
+  "Official sites (crus-classes.com / grand-cru-classes-1855.com, bordeaux.com) could not be fetched in this session (permission not granted), so estate names follow the French Wikipedia list, iDealwine and estate articles rather than the Conseil des Grands Crus Classés.",
+  "Margaux and Cantenac merged in 2017 into the commune Margaux-Cantenac. 'commune' gives the historic village (Margaux or Cantenac) and 'current_commune' gives Margaux-Cantenac. The Margaux/Cantenac split (9 and 9, plus Labarde 2 and Arsac 1) follows French Wikipedia counts; Desmirail and Boyd-Cantenac placed in Cantenac (Decanter address for Desmirail), Rauzan-Gassies in Margaux though one French page lists it under Cantenac.",
+  "Cantemerle: English Wikipedia says added in 1856; French Wikipedia says a handwritten addition dated 16 September 1855.",
+  "Château Marquis d'Alesme: Wine Cellar Insider says 'Becker' was dropped around 2015; Wikipedia and iDealwine still use Marquis d'Alesme Becker.",
+  "Château Camensac vs Château de Camensac: both forms used; Pichon Baron full legal name is Château Pichon Longueville Baron.",
+  "Mouton Rothschild counted as Premier Cru (so Deuxièmes = 14).",
+  "Château La Mission Haut-Brion: Graves table says Pessac, estate article says Talence (used Talence).",
+  "Château Romer du Hayot: vineyard in Fargues per French Wikipedia list; its English article says commune Sauternes and the wine is now made in Barsac. Château de Myrat is in Barsac commune but listed with Sauternes appellation by sources.",
+  "Sauternes tiers: French Wikipedia list misgroups Rabaud-Promis, Sigalas Rabaud and Myrat; tiers taken from iDealwine and Wine Cellar Insider (11 Premiers, 15 Deuxièmes).",
+  "Saint-Émilion 2022: communes not given by INAO/AGCCSE, so commune is null; many estates lie outside Saint-Émilion commune (e.g. Saint-Christophe-des-Bardes, Saint-Étienne-de-Lisse). Spelling of names follows INAO with accents; AGCCSE uses upper case. One INAO web page list showed a duplicate La Couspaude and an extra 'La Dominique La Fleur Morange' entry, but the AGCCSE press kit and iDealwine give 71 unique names.",
+  "Arrêté date 15 December 2022 comes from English Wikipedia; Vitisphere says the decree was published 22 December 2022. Not checked on Légifrance.",
+  "Vineyard area: CIVB figure (110,000 ha, Key Facts 2021) is outdated after large-scale vine pulling; the 2025 figure (91,543 ha in production) is Agreste/DRAAF for Gironde, not CIVB. Grape shares are the latest CIVB figures found (2020 data) and are within-colour shares.",
+  "Cru Bourgeois 2025: Decanter says it applies from the 2025 vintage for five years; counts are of wines (170)."
+ ]
+}

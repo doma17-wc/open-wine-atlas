@@ -297,6 +297,7 @@ svg.pair .sb text { fill: var(--muted); font: 500 10px var(--f-mono); }
 .sub-list button { all: unset; cursor: pointer; padding: 4px 0; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed #2a2a31; font-size: 13px; }
 .sub-list button:hover { color: var(--focus); }
 .sub-list .r { font: 500 10.5px var(--f-mono); color: var(--muted); }
+.sub-list .nolink { padding: 4px 0; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed #2a2a31; font-size: 13px; color: var(--muted); }
 .primary { justify-self: start; padding: 8px 12px; border-radius: 8px; border: 1px solid #4a463f; background: #1d1c1f; cursor: pointer; }
 .primary:hover { border-color: var(--parchment); }
 
@@ -427,6 +428,12 @@ body.maponly .deep-key { display: none !important; }
 .deep-key .dk-area i { background: rgba(230,220,203,.2); border: 1px dashed var(--parchment); box-sizing: border-box; }
 .deep-key .dk-commune i { background: rgba(230,220,203,.08); border: 1px dashed rgba(230,220,203,.6); box-sizing: border-box; }
 .deep-key .dk-canton i { border: 1px dashed var(--muted); box-sizing: border-box; }
+.deep-key .dk-cvillage i { background: rgba(230,220,203,.14); border: 1px dashed var(--parchment); box-sizing: border-box; }
+.deep-key .dk-zone i { border: 1px dashed var(--muted); box-sizing: border-box; }
+.deep-key .dk-estate i { background: var(--gold); border-radius: 50%; width: 10px; height: 10px; margin: 1px; }
+.deep-key .dk-communal i { background: rgba(230,220,203,.3); border: 1px solid var(--parchment); box-sizing: border-box; }
+.deep-key .dk-subregional i { background: rgba(230,220,203,.08); border: 1px solid rgba(230,220,203,.45); box-sizing: border-box; }
+.deep-key .dk-bxregional i { border: 1px dashed var(--muted); box-sizing: border-box; }
 .tc .tha { font-weight: 500; color: #b9ae99; }
 @media (max-width: 760px) { .deep-key { top: auto; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); left: 12px; max-width: calc(100% - 24px); } .deep-key .dk-h { display: none; } }
 /* Deep Region: Burgundy opens in full with a free account (see deepGate) */
@@ -726,6 +733,8 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
     <button class="deep-card" id="deepCard" type="button" hidden><b data-i18n>Burgundy in depth</b><span data-i18n>Every grand cru, premier cru and village of the Côte d'Or, with its hectares.</span><i aria-hidden="true">→</i></button>
     <button class="deep-card" id="deepCardCH" type="button" hidden><b data-i18n>Switzerland in depth</b><span data-i18n>Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.</span><i aria-hidden="true">→</i></button>
+    <button class="deep-card" id="deepCardCHAMP" type="button" hidden><b data-i18n>Champagne in depth</b><span data-i18n>Every village of the appellation with its cru rating and planted hectares, in its vineyard zone.</span><i aria-hidden="true">→</i></button>
+    <button class="deep-card" id="deepCardBX" type="button" hidden><b data-i18n>Bordeaux in depth</b><span data-i18n>Every appellation with its hectares, and the estates of the 1855, Graves and Saint-Émilion classifications.</span><i aria-hidden="true">→</i></button>
     <div class="ex-head"><span class="hd" data-i18n>Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world" data-i18n-title="Show the whole world" data-i18n>World view</button></div>
     <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
   </nav>
@@ -852,6 +861,8 @@ const SOURCES = {
   inao: { name: "INAO, Délimitation parcellaire des AOC viticoles (2026-08-31)", license: "Licence Ouverte 2.0", url: "https://www.data.gouv.fr/datasets/5aaf6b7ec751df67b0d7a87f" },
   eupdo: { name: "Candiago et al. 2022, A geospatial inventory of regulatory information for wine PDOs in Europe", license: "CC BY 4.0", url: "https://www.nature.com/articles/s41597-022-01513-0" },
   rlp: { name: "Landwirtschaftskammer Rheinland-Pfalz, Weinbergsrolle (2021-10-06)", license: "dl-de/by-2-0", url: "https://www.lwk-rlp.de/weinbau/rebflaechen/weinlagen" },
+  champ: { name: "Champagne AOC product specification (communes) and the Comité Champagne; échelle des crus ratings; commune outlines from IGN ADMIN EXPRESS (france-geojson)", license: "Licence Ouverte 2.0 (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/champagne.json" },
+  bxcc: { name: "Official classifications of Bordeaux: 1855 (Médoc, Sauternes and Barsac), Graves 1959, Saint-Émilion 2022; locations from Wikipedia and OpenStreetMap", license: "CC BY 4.0 (editorial); ODbL 1.0 (OpenStreetMap locations)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/bordeaux_classified.json" },
   chreg: { name: "Cantonal wine laws and vineyard statistics of the Swiss wine cantons and BLW Das Weinjahr 2025; outlines from BFS GEOSTAT / swisstopo boundaries", license: "Open use, attribution (boundaries); CC BY 4.0 (editorial)", url: "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json" },
   bfs: { name: "BFS GEOSTAT / swisstopo, generalised canton boundaries 2024", license: "Open use, attribution", url: "https://www.bfs.admin.ch/bfs/en/home/services/geostat/swiss-federal-statistics-geodata/administrative-boundaries/generalized-boundaries-local-regional-authorities.html" },
   osm: { name: "OpenStreetMap contributors (via openwinemap)", license: "ODbL 1.0", url: "https://www.openstreetmap.org/copyright" },
@@ -1553,10 +1564,25 @@ const DEEP_REGIONS = [
     go: N_("Switzerland in depth"), keyHead: N_("Switzerland · 4 levels"),
     levels: [["grand", N_("Grand cru")], ["area", N_("Regional AOC and wine area")], ["commune", N_("Commune")], ["canton", N_("Cantonal AOC")]],
     fit: ["g:CH"], fitZ: 8.2 },
+  // Champagne: every commune of the appellation, classed by the old échelle des crus, in its vineyard zone, with its planted hectares
+  { key: "champagne", root: "g:FR/champagne", cc: "FR", haField: "vine_area_ha", hash: "champagne", name: "Champagne",
+    go: N_("Champagne in depth"), keyHead: N_("Champagne · 4 levels"),
+    levels: [["grand", N_("Grand cru")], ["premier", N_("Premier cru")], ["cvillage", N_("Other villages")], ["zone", N_("Vineyard zone")]],
+    fit: ["g:FR/champagne"], fitZ: 8.6, inView: 7.2 },
+  // Bordeaux: regional, sub-regional and communal appellations, and the classified estates as markers
+  { key: "bordeaux", root: "g:FR/bordeaux", cc: "FR", haField: "area_ha", hash: "bordeaux", name: "Bordeaux",
+    go: N_("Bordeaux in depth"), keyHead: N_("Bordeaux · 4 levels"),
+    levels: [["estate", N_("Classified estate")], ["communal", N_("Communal appellation")], ["subregional", N_("Sub-regional appellation")], ["bxregional", N_("Regional")]],
+    txt: (d) => d.class_short || null,
+    fit: ["g:FR/bordeaux/medoc", "g:FR/bordeaux/libournais", "g:FR/bordeaux/graves-and-sauternais"], fitZ: 9.4, inView: 7.6 },
 ];
 const deepReg = (key) => DEEP_REGIONS.find((r) => r.key === key);
 const DS = { cls: null, ha: null, haLoading: {}, view: null, force: null, vineOrig: null,
-  show: { grand: true, premier: true, village: true, regional: false, area: true, commune: true, canton: true } };
+  show: { grand: true, premier: true, village: true, regional: false, area: true, commune: true, canton: true,
+    cvillage: true, zone: true, estate: true, communal: true, subregional: true, bxregional: false } };
+// Bordeaux appellations below the regional ones and above the communal ones (the CIVB's "sous-régionales")
+const BX_SUBREG = new Set(["Médoc", "Haut-Médoc", "Graves", "Graves supérieures", "Entre-deux-Mers", "Côtes de Bordeaux",
+  "Côtes de Bordeaux-Saint-Macaire", "Premières Côtes de Bordeaux", "Blaye", "Côtes de Blaye"]);
 const DS_UMBRELLA = new Set(["Côte de Nuits-Villages", "Côte de Beaune-Villages", "Mâcon"]);
 const DS_SL = new Set(["appellations", "crus", "labels"]);
 // id -> level, for every place under Bourgogne and Switzerland in the region tree
@@ -1578,6 +1604,19 @@ function deepClasses() {
     walkCH(c);
   });
   walkCH("g:CH");
+  // Champagne: zones, then the communes inside them (fr-champ-*); the AOC outlines themselves keep their usual look
+  const walkCHAMP = (k) => kidsOf(k).forEach((c) => {
+    const r = byId.get(c);
+    if (r && /^fr-champ-/.test(c) && !m.has(c)) m.set(c, /^fr-champ-z-/.test(c) ? "zone" : r[4] === "grand_cru" ? "grand" : r[4] === "premier_cru" ? "premier" : "cvillage");
+    walkCHAMP(c);
+  });
+  walkCHAMP("g:FR/champagne");
+  const walkBX = (k, reg) => kidsOf(k).forEach((c) => {
+    const r = byId.get(c), inReg = reg || c === "g:FR/bordeaux/regional-appellations";
+    if (r && !m.has(c)) m.set(c, /^fr-bxcc-/.test(c) ? "estate" : inReg ? "bxregional" : BX_SUBREG.has(r[0]) ? "subregional" : "communal");
+    walkBX(c, inReg);
+  });
+  walkBX("g:FR/bordeaux", false);
   DS.cls = m;
   return m;
 }
@@ -1598,18 +1637,24 @@ function ensureDeepHa(key = "bourgogne") {
   if (DS.haLoading[key]) return DS.haLoading[key];
   DS.haLoading[key] = getDetails(R.cc).then((all) => {
     const ha = DS.ha || new Map();
-    deepClasses().forEach((c, k) => { const a = all[k] && all[k][R.haField]; if (a) ha.set(k, a); });
+    deepClasses().forEach((c, k) => {
+      const d = all[k];
+      if (!d || !pathOf(k).includes(R.root)) return;
+      const a = (R.txt && R.txt(d)) || d[R.haField];
+      if (a) ha.set(k, a);
+    });
     DS.ha = ha;
     deepStyleLayers();
     renderTree();
   });
   return DS.haLoading[key];
 }
-// "288 ha" for a Burgundy or Swiss place, "" for anything else
+// "288 ha" for a Burgundy, Swiss or Bordeaux place, "99 %" for a Champagne cru, "1855 · 2e" for a classified estate
+const deepTxt = (v) => typeof v === "string" ? v : haTxt(v);
 function deepHaExpr() {
   if (!DS.ha || !DS.ha.size) return "";
   const pairs = [];
-  DS.ha.forEach((v, k) => pairs.push(k, haTxt(v)));
+  DS.ha.forEach((v, k) => pairs.push(k, deepTxt(v)));
   return ["match", ["get", "id"], ...pairs, ""];
 }
 function deepLabel(base) {
@@ -1620,18 +1665,23 @@ function deepLabel(base) {
 // paint and labels of the Deep Region levels; runs again for every detail file the map adds and on a theme change
 function deepStyleLayers() {
   if (!deepClasses() || !map.getLayer("ov-labels")) return;
-  // only Burgundy and Switzerland change: the same ranks elsewhere keep their usual weight
+  // only the Deep Regions change: the same ranks elsewhere keep their usual weight
   const inIds = (cl) => ["in", ["get", "id"], ["literal", deepIds(cl)]];
   const vill = inIds("village"), gc = inIds("grand"), pc = inIds("premier"), top = ["in", ["get", "rank"], ["literal", TOP]];
   const area = inIds("area"), comm = inIds("commune"), cant = inIds("canton");
-  setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, area, 0.07, comm, 0.045, cant, 0.015, top, 0.07, INAO, 0.02, 0.025]));
+  const cvil = inIds("cvillage"), zone = inIds("zone"), bxc = inIds("communal"), bxs = inIds("subregional"), est = inIds("estate");
+  setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, area, 0.07, comm, 0.045, cant, 0.015,
+    cvil, 0.05, zone, 0.03, bxc, 0.08, bxs, 0.03, top, 0.07, INAO, 0.02, 0.025]));
+  // classified Bordeaux estates: gold markers
+  if (map.getLayer("ov-pts")) setP("ov-pts", "circle-color", ["case", est, P.gold, ["==", ["get", "level"], "subzone"], P.copper, P.parchment]);
+  setP("ov-labels", "text-color", ["case", ["any", top, est], P.gold, P.label]);
   const ovBase = ["upcase", ["get", "name"]];
   map.setLayoutProperty("ov-labels", "text-transform", "none");
   map.setLayoutProperty("ov-labels", "text-field", ["step", ["zoom"], ovBase, 9, deepLabel(ovBase)]);
   map.getStyle().layers.forEach(({ id }) => {
     if (!/^fr-.*-(app|cru)-(fill|line)$|^fr-.*-labels$/.test(id)) return;
-    if (id.endsWith("-app-fill")) setP(id, "fill-opacity", fillOpacityByLevel(["case", gc, 0.32, vill, 0.05, top, 0.1, 0]));
-    else if (id.endsWith("-app-line")) setP(id, "line-opacity", ["case", SEL, 1, HOV, 0.9, gc, 0.9, vill, 0.3, top, 0.8, 0.22]);
+    if (id.endsWith("-app-fill")) setP(id, "fill-opacity", fillOpacityByLevel(["case", gc, 0.32, vill, 0.05, bxc, 0.1, bxs, 0.025, top, 0.1, 0]));
+    else if (id.endsWith("-app-line")) setP(id, "line-opacity", ["case", SEL, 1, HOV, 0.9, gc, 0.9, vill, 0.3, bxc, 0.85, bxs, 0.35, top, 0.8, 0.22]);
     else if (id.endsWith("-cru-fill")) setP(id, "fill-opacity", fillOpacityByLevel(["case", gc, 0.42, pc, 0.24, top, 0.16, 0.06]));
     else if (id.endsWith("-cru-line")) setP(id, "line-opacity", ["case", SEL, 1, HOV, 1, gc, 0.9, pc, 0.65, 0.75]);
     else if (id.endsWith("-labels")) {
@@ -1639,16 +1689,23 @@ function deepStyleLayers() {
     }
   });
 }
+// the Deep Regions whose box holds the map centre (with a margin); where two boxes meet (Chablis and the Côte des Bar)
+// the region whose centre is nearest wins
+function deepNear(c, ok, margin) {
+  const hits = DEEP_REGIONS.filter((R) => {
+    const n = tnode(R.root);
+    if (!n || !n[3].length || !ok(R)) return false;
+    const b = n[2], m = margin(R);
+    return c.lng >= b[0] - m && c.lng <= b[2] + m && c.lat >= b[1] - m && c.lat <= b[3] + m;
+  });
+  const dist = (R) => { const b = tnode(R.root)[2]; return Math.hypot(c.lng - (b[0] + b[2]) / 2, c.lat - (b[1] + b[3]) / 2); };
+  return hits.sort((a, b) => dist(a) - dist(b))[0] || null;
+}
 // the Deep Region the map centre is in, close enough to read it
 function deepRegionInView() {
-  const c = map.getCenter(), z = map.getZoom();
-  return DEEP_REGIONS.find((R) => {
-    const n = tnode(R.root);
-    if (!n) return false;
-    // a little margin: an open sheet pushes the map centre east of the region
-    const b = n[2], m = R.key === "suisse" ? 0.1 : 0.3;
-    return z >= (R.key === "suisse" ? 7.5 : 8) && c.lng >= b[0] - m && c.lng <= b[2] + m && c.lat >= b[1] - m && c.lat <= b[3] + m;
-  }) || null;
+  const z = map.getZoom();
+  // a little margin: an open sheet pushes the map centre east of the region
+  return deepNear(map.getCenter(), (R) => z >= (R.inView || (R.key === "suisse" ? 7.5 : 8)), (R) => R.key === "bourgogne" ? 0.3 : 0.1);
 }
 // in a Deep Region: the key on the map and quieter vineyards; the map button names the region nearby
 function deepView() {
@@ -1676,19 +1733,25 @@ document.addEventListener("click", (e) => {
   DS.show[b.dataset.deepLevel] = !DS.show[b.dataset.deepLevel];
   renderDeepKey(); applyLegend();
 });
-// the map button: Switzerland when the map is over it, Burgundy everywhere else
+// the map button names the Deep Region the map is over (Switzerland, Champagne, Bordeaux), Burgundy everywhere else
+const DEEP_GO_TITLE = {
+  bourgogne: N_("Grands crus, premiers crus and villages of the Côte d'Or, with their hectares"),
+  suisse: N_("Every Swiss wine area, commune and grand cru, with its planted hectares"),
+  champagne: N_("Every Champagne village with its cru rating, in its vineyard zone"),
+  bordeaux: N_("Every Bordeaux appellation with its hectares, and the classified estates"),
+};
 function deepGoLabel() {
   const btn = $("deepGo");
   if (!btn || btn.hidden) return;
-  const c = map.getCenter(), n = tnode("g:CH"), m = 1.2;
-  const ch = n && tnode("g:CH")[3].length && map.getZoom() >= 4.5 && c.lng >= n[2][0] - m && c.lng <= n[2][2] + m && c.lat >= n[2][1] - m && c.lat <= n[2][3] + m;
-  const R = deepReg(ch ? "suisse" : "bourgogne");
+  const near = map.getZoom() >= 4.5 ? deepNear(map.getCenter(), () => true, (R) => R.key === "suisse" ? 1.2 : 0.3) : null;
+  const R = near || deepReg("bourgogne");
   if (btn.dataset.region === R.key) return;
   btn.dataset.region = R.key;
   btn.querySelector("span").textContent = t_(R.go);
-  btn.title = t_(R.key === "suisse" ? "Every Swiss wine area, commune and grand cru, with its planted hectares" : "Grands crus, premiers crus and villages of the Côte d'Or, with their hectares");
+  btn.title = t_(DEEP_GO_TITLE[R.key]);
 }
-// the way into a Deep Region: its sheet, and the map on its heart (the Côte d'Or for Burgundy, the whole country for Switzerland)
+// the way into a Deep Region: its sheet, and the map on its heart (the Côte d'Or for Burgundy, the whole country for Switzerland,
+// the Marne and the Aube for Champagne, the Médoc, Graves and Libournais for Bordeaux)
 function openDeep(key) {
   const R = deepReg(key);
   if (!R || !TREE || !tnode(R.root) || QUIZ_ON) return;
@@ -1703,6 +1766,8 @@ function openDeep(key) {
 }
 const openDeepBurgundy = () => openDeep("bourgogne");
 const openDeepSwiss = () => openDeep("suisse");
+const openDeepChampagne = () => openDeep("champagne");
+const openDeepBordeaux = () => openDeep("bordeaux");
 const DEEP_HASH = Object.fromEntries(DEEP_REGIONS.map((R) => [R.hash, R.key]));
 // a hidden level comes back for the place being looked at
 function deepForce(id) {
@@ -2905,6 +2970,8 @@ function shortName(name, parent) {
 // After that the sheet shows its opening sentence and asks for a free account. A soft wall, not a lock: the static
 // place pages stay public. Off in the artifact host and whenever accounts are switched off in config.js.
 // Switzerland works the same way: the cantonal AOCs and the grands crus stay open, DEEP.free other Swiss places free.
+// Champagne: the zones and the grand cru villages stay open. Bordeaux: the regional and sub-regional appellations and
+// the first growths stay open (deep_open in the place details), the communal appellations and the other estates count.
 const DEEP = { free: 3, gated: null };
 const deepOn = () => WEB && !QUIZ_ON && !(window.OWA_CONFIG && window.OWA_CONFIG.accountsOpen === false);
 const DEEP_TXT = {
@@ -2912,6 +2979,10 @@ const DEEP_TXT = {
     wall: N_("You have explored {n} Burgundy places for free. A free account opens all {total}: every village, premier cru and climat, with terrain, soils, rules and producers.") },
   suisse: { free: N_("Free preview: Swiss place {n} of {free}. A free account opens all {total}."), title: N_("Switzerland in full depth"),
     wall: N_("You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.") },
+  champagne: { free: N_("Free preview: Champagne place {n} of {free}. A free account opens all {total}."), title: N_("Champagne in full depth"),
+    wall: N_("You have explored {n} Champagne places for free. A free account opens all {total}: every premier cru and village of every zone, with its cru rating, hectares, terrain, soils and producers.") },
+  bordeaux: { free: N_("Free preview: Bordeaux place {n} of {free}. A free account opens all {total}."), title: N_("Bordeaux in full depth"),
+    wall: N_("You have explored {n} Bordeaux places for free. A free account opens all {total}: every communal appellation and classified estate, with hectares, classifications, terrain, soils and producers.") },
 };
 function deepSignedIn() {
   if (window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn()) return true;
@@ -2919,8 +2990,8 @@ function deepSignedIn() {
 }
 function deepSeen(key) { try { const a = JSON.parse(store.get("deep." + key) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
 // null: nothing to show; { n }: a free preview, the nth of DEEP.free; { wall: true }: ask for an account
-function deepState(p) {
-  const R = deepOn() && p.rank !== "grand_cru" && !/^ch-canton-/.test(p.id) ? deepRegionOf(p.id) : null;
+function deepState(p, d) {
+  const R = deepOn() && p.rank !== "grand_cru" && !/^ch-canton-/.test(p.id) && !(d && d.deep_open) ? deepRegionOf(p.id) : null;
   if (!R || deepSignedIn()) return null;
   const seen = deepSeen(R.key), i = seen.indexOf(p.id);
   if (i >= 0) return { n: i + 1, R };
@@ -2943,9 +3014,9 @@ function owaTrack(name) {
   cfgLoading = cfgLoading || new Promise((ok) => { const sc = document.createElement("script"); sc.src = "/config.js"; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc); });
   cfgLoading.then(go);
 }
-function deepGate(p) {
+function deepGate(p, d) {
   DEEP.gated = null;
-  const st = deepState(p), body = $("sh-body");
+  const st = deepState(p, d), body = $("sh-body");
   if (!st || !body) return;
   const R = st.R, T = DEEP_TXT[R.key], total = countOf(R.root) || 0;
   const lede = body.querySelector("p.lede");
@@ -2993,7 +3064,7 @@ async function select(p, feature) {
   const parentRec = p.parent ? byName.get(norm(p.parent)) : null;
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
-  deepGate(p);
+  deepGate(p, d);
   deepForce(p.id);
   if (deepClasses() && deepClasses().has(p.id)) { const R = deepRegionOf(p.id); if (R) ensureDeepHa(R.key); }
   // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
@@ -3176,7 +3247,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   // key facts
   const rows = [];
   const area = d.area_ha ?? d.outline_area_ha;
-  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality && !(p.src === "chreg" && d.communes) ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
+  const areaHtml = area == null ? null : '<span class="num">' + fmtN(area, 1) + " ha</span>" + (d.outline_area_ha && !d.area_ha ? ' <span class="note">' + t_(d.admin_units ? N_("outline of the administrative units") : d.outline_quality && !((p.src === "chreg" || p.src === "champ") && d.communes) ? N_("registered outline") : N_("outline of listed communes")) + "</span>" : "") +
     (d.area_note ? '<div class="note">' + esc(t_(d.area_note)) + "</div>" : "");
   if (liveVines(d)) rows.push([N_("Vineyard area"), '<span id="vine-ha"><span class="note">' + t_("Measuring the vineyards…") + "</span></span>"]);
   else if (areaHtml) rows.push([N_("Area"), areaHtml]);
@@ -3200,6 +3271,9 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.bereich) rows.push([N_("Bereich"), esc(d.bereich)]);
   if (d.region) rows.push([N_("Anbaugebiet"), esc(d.region)]);
   if (d.wine_region) rows.push([N_("Wine region"), esc(d.wine_region)]);
+  if (d.zone) { const r = byName.get(norm(d.zone)); rows.push([N_("Vineyard zone"), r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(d.zone) + "</button>" : esc(d.zone)]); }
+  if (d.echelle_pct) rows.push([N_("Échelle des crus"), '<span class="num">' + d.echelle_pct + " %</span>" + (d.echelle_note ? '<div class="note">' + esc(t_(d.echelle_note)) + "</div>" : "")]);
+  if (d.appellation_of) { const r = byName.get(norm(d.appellation_of)); rows.push([N_("Appellation"), r ? '<button class="inline" data-goto="' + esc(r[1]) + '">' + esc(d.appellation_of) + "</button>" : esc(d.appellation_of)]); }
   if (d.register_no) rows.push([N_("Register no."), '<span class="num">' + esc(d.register_no) + "</span>"]);
   if (d.inao_office) rows.push([N_("INAO office"), esc(d.inao_office)]);
   if (d.official_name && d.official_name !== p.name) rows.push([N_("Official name"), esc(d.official_name)]);
@@ -3255,6 +3329,19 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
       d.rules.map(([k, v]) => "<dt>" + esc(t_(k)) + "</dt><dd>" + esc(v) + "</dd>").join("") + "</dl></div>";
   }
 
+  // Bordeaux: the classifications an estate is in, and the classified estates of an appellation
+  if (d.classifications?.length) {
+    html += '<div class="sec"><h3>' + t_("Classification") + '</h3><dl class="facts">' +
+      d.classifications.map(([c, r, y]) => "<dt>" + esc(t_(c)) + '</dt><dd>' + esc(r) + (y ? ' <span class="note">' + esc(String(y)) + "</span>" : "") + "</dd>").join("") + "</dl>" +
+      (d.class_note ? '<p class="note">' + esc(t_(d.class_note)) + "</p>" : "") + "</div>";
+  }
+  if (d.estates?.length) {
+    html += '<div class="sec"><h3>' + t_("Classified estates · {n}", { n: d.estates.length }) + '</h3><div class="sub-list">' +
+      d.estates.map(([id, n, r]) => id ? '<button data-goto="' + esc(id) + '"><span>' + esc(n) + '</span><span class="r">' + esc(r) + "</span></button>"
+        : '<div class="nolink"><span>' + esc(n) + '</span><span class="r">' + esc(r) + "</span></div>").join("") + "</div>" +
+      (d.estates_note ? '<p class="note">' + esc(t_(d.estates_note)) + "</p>" : "") + "</div>";
+  }
+
   // premiers crus that are listed but not mapped yet (Geneva)
   if (d.premiers_crus?.length) {
     html += '<div class="sec"><h3>' + t_("Premiers crus · {n}", { n: d.premiers_crus.length }) + '</h3><dl class="facts">' +
@@ -3276,7 +3363,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   }
 
   // places inside
-  const kids = (children.get(norm(p.name)) || []).filter((k) => k[1] !== p.id);
+  // classified Bordeaux estates have their own list above
+  const kids = (children.get(norm(p.name)) || []).filter((k) => k[1] !== p.id && !(d.estates && /^fr-bxcc-/.test(k[1])));
   if (kids.length) {
     html += '<div class="sec"><h3>' + t_("Inside {name} · {n}", { name: esc(p.name), n: kids.length }) + '</h3><div class="sub-list">' +
       kids.slice(0, 120).map((k) => '<button data-goto="' + esc(k[1]) + '"><span>' + esc(shortName(k[0], p.name)) + '</span><span class="r">' + esc(RANK_LABEL[k[4]] || LEVEL_LABEL[k[3]] || "") + "</span></button>").join("") +
@@ -3623,7 +3711,7 @@ function rowHtml(k, parentKey, depth) {
     '<div class="tr' + (k === ACTIVE ? " on" : "") + '" style="--d:' + depth + '">' +
     '<button class="tw' + (has ? "" : " leaf") + '" tabindex="-1" aria-label="' + t_(exp ? "Collapse" : "Expand") + '">' + (has ? TW : "") + "</button>" +
     '<button class="tl" data-open="' + esc(k) + '" title="' + esc(r ? r[0] : labelOf(k, parentKey)) + '">' + lead + '<span class="nm">' + esc(labelOf(k, parentKey)) + "</span></button>" +
-    '<span class="tc">' + (DS.ha && DS.ha.has(k) ? '<b class="tha">' + haTxt(DS.ha.get(k)) + "</b>" + (has ? " · " : "") : "") + (has ? fmt(countOf(k)) : "") + "</span></div>" +
+    '<span class="tc">' + (DS.ha && DS.ha.has(k) ? '<b class="tha">' + deepTxt(DS.ha.get(k)) + "</b>" + (has ? " · " : "") : "") + (has ? fmt(countOf(k)) : "") + "</span></div>" +
     (exp ? '<div class="tk" role="group" style="--d:' + depth + '">' + kidsHtml(k, depth + 1) + "</div>" : "") + "</div>";
 }
 function kidsHtml(k, depth) {
@@ -3648,7 +3736,7 @@ function toggleNode(k, open) {
   if (!kidsOf(k).length) return;
   const want = open ?? !EXPANDED.has(k);
   want ? EXPANDED.add(k) : EXPANDED.delete(k);
-  if (want && pathOf(k).includes("g:FR/bourgogne")) ensureDeepHa();
+  if (want) { const R = deepRegionOf(k); if (R) ensureDeepHa(R.key); }
   renderTree();
   const b = $("tree").querySelector('.tl[data-open="' + CSS.escape(k) + '"]');
   if (b && document.activeElement && document.activeElement.closest(".tree")) b.focus({ preventScroll: true });
@@ -5078,7 +5166,9 @@ map.on("load", async () => {
     if (tree) { TREE = tree; indexTree(); renderTree(); deepStyleLayers(); applyLegend(); deepView(); map.on("moveend", deepView);
       if (tnode("g:FR/bourgogne")) { $("deepGo").hidden = false; $("deepCard").hidden = false; $("deepCard").onclick = openDeepBurgundy;
         $("deepGo").onclick = () => openDeep($("deepGo").dataset.region || "bourgogne"); deepGoLabel(); }
-      if (tnode("g:CH") && $("deepCardCH")) { $("deepCardCH").hidden = false; $("deepCardCH").onclick = openDeepSwiss; } }
+      if (tnode("g:CH") && $("deepCardCH")) { $("deepCardCH").hidden = false; $("deepCardCH").onclick = openDeepSwiss; }
+      if (deepIds("grand").some((k) => /^fr-champ-/.test(k)) && $("deepCardCHAMP")) { $("deepCardCHAMP").hidden = false; $("deepCardCHAMP").onclick = openDeepChampagne; }
+      if (deepIds("estate").length && $("deepCardBX")) { $("deepCardBX").hidden = false; $("deepCardBX").onclick = openDeepBordeaux; } }
     else $("tree").innerHTML = '<p class="note ex-wait">' + t_("The region list could not load. Search still works.") + '</p>';
     setTab(store.get("tab") || "explore");
     if (PHONE()) $("rail").classList.remove("open");
