@@ -81,21 +81,24 @@ def main():
         shown = v.get("display", name)
         rank = v.get("cru", "")
         typ = {"grand_cru": "Grand cru village", "premier_cru": "Premier cru village"}.get(rank, "Champagne village")
-        d = {"type": typ, "zone": v["zone"], "official_name": name if shown != name else None,
-             "category": "Quality Sparkling Wine, Wine", "grapes": aoc.get("grapes"),
+        d = {"type": typ, "zone": v["zone"], "category": "Quality Sparkling Wine, Wine", "grapes": aoc.get("grapes"),
              "communes": [shown], "insee": codes[name]}
+        if v.get("vine_ha"):
+            d["vine_area_ha"] = v["vine_ha"]
+            d["vine_area_src"] = "Union des Maisons de Champagne (UMC)"
+        rules = [["Terroir", v["terroir"]]] if v.get("terroir") else []
         if v.get("pct"):
             d["echelle_pct"] = v["pct"]
         if v.get("echelle_note"):
             d["echelle_note"] = v["echelle_note"]
-        if v.get("rules"):
-            d["rules"] = v["rules"]
+        rules += v.get("rules", [])
+        if rules:
+            d["rules"] = rules
         if v.get("note"):
-            d["atlas_note"] = v["note"]
-        if v.get("refs"):
-            d["refs"] = v["refs"]
+            d["note"] = v["note"]
+        d["refs"] = v.get("refs") or [["UMC, aire géographique de l'appellation", "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"]]
         d["outline_quality"] = "approx"
-        d["outline"] = "The commune of " + shown + ". Champagne is delimited commune by commune; the vines are only part of it, the vineyard layer of the map shows where they are."
+        d["outline"] = "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are."
         d["outline_area_ha"] = ha_of(g)
         d["outline_source"] = OUTLINE_SRC
         places.append(({"id": "fr-champ-" + codes[name], "name": shown, "country": "FR", "level": "subzone", "rank": rank,

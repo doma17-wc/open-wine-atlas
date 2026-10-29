@@ -282,6 +282,7 @@ svg.pair .sb text { fill: var(--muted); font: 500 10px var(--f-mono); }
 .sub-list button { all: unset; cursor: pointer; padding: 4px 0; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed #2a2a31; font-size: 13px; }
 .sub-list button:hover { color: var(--focus); }
 .sub-list .r { font: 500 10.5px var(--f-mono); color: var(--muted); }
+.sub-list .nolink { padding: 4px 0; display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed #2a2a31; font-size: 13px; color: var(--muted); }
 .primary { justify-self: start; padding: 8px 12px; border-radius: 8px; border: 1px solid #4a463f; background: #1d1c1f; cursor: pointer; }
 .primary:hover { border-color: var(--parchment); }
 
@@ -715,7 +716,7 @@ button.inline { all: unset; cursor: pointer; text-decoration: underline; text-de
   <nav class="explore" id="explore" role="tabpanel" aria-labelledby="tabExplore">
     <button class="deep-card" id="deepCard" type="button" hidden><b data-i18n>Burgundy in depth</b><span data-i18n>Every grand cru, premier cru and village of the Côte d'Or, with its hectares.</span><i aria-hidden="true">→</i></button>
     <button class="deep-card" id="deepCardCH" type="button" hidden><b data-i18n>Switzerland in depth</b><span data-i18n>Every canton, regional AOC, wine area, commune and grand cru, with its planted hectares.</span><i aria-hidden="true">→</i></button>
-    <button class="deep-card" id="deepCardCHAMP" type="button" hidden><b data-i18n>Champagne in depth</b><span data-i18n>Every village of the appellation with its cru rating, the 17 grands crus and the five vineyard zones.</span><i aria-hidden="true">→</i></button>
+    <button class="deep-card" id="deepCardCHAMP" type="button" hidden><b data-i18n>Champagne in depth</b><span data-i18n>Every village of the appellation with its cru rating and planted hectares, in its vineyard zone.</span><i aria-hidden="true">→</i></button>
     <button class="deep-card" id="deepCardBX" type="button" hidden><b data-i18n>Bordeaux in depth</b><span data-i18n>Every appellation with its hectares, and the estates of the 1855, Graves and Saint-Émilion classifications.</span><i aria-hidden="true">→</i></button>
     <div class="ex-head"><span class="hd" data-i18n>Wine regions of the world</span><button class="ex-world" id="exWorld" title="Show the whole world" data-i18n-title="Show the whole world" data-i18n>World view</button></div>
     <div class="tree" id="tree" role="tree" aria-label="Countries, regions and appellations" data-i18n-aria="Countries, regions and appellations"><p class="note ex-wait" data-i18n>Loading the regions…</p></div>
@@ -1546,12 +1547,10 @@ const DEEP_REGIONS = [
     go: N_("Switzerland in depth"), keyHead: N_("Switzerland · 4 levels"),
     levels: [["grand", N_("Grand cru")], ["area", N_("Regional AOC and wine area")], ["commune", N_("Commune")], ["canton", N_("Cantonal AOC")]],
     fit: ["g:CH"], fitZ: 8.2 },
-  // Champagne: every commune of the appellation, classed by the old échelle des crus, in its vineyard zone
+  // Champagne: every commune of the appellation, classed by the old échelle des crus, in its vineyard zone, with its planted hectares
   { key: "champagne", root: "g:FR/champagne", cc: "FR", haField: "vine_area_ha", hash: "champagne", name: "Champagne",
     go: N_("Champagne in depth"), keyHead: N_("Champagne · 4 levels"),
     levels: [["grand", N_("Grand cru")], ["premier", N_("Premier cru")], ["cvillage", N_("Other villages")], ["zone", N_("Vineyard zone")]],
-    // a commune label carries its échelle des crus rating, a zone its planted hectares
-    txt: (d) => d.echelle_pct ? d.echelle_pct + " %" : null,
     fit: ["g:FR/champagne"], fitZ: 8.6, inView: 7.2 },
   // Bordeaux: regional, sub-regional and communal appellations, and the classified estates as markers
   { key: "bordeaux", root: "g:FR/bordeaux", cc: "FR", haField: "area_ha", hash: "bordeaux", name: "Bordeaux",
@@ -2964,7 +2963,7 @@ const DEEP_TXT = {
   suisse: { free: N_("Free preview: Swiss place {n} of {free}. A free account opens all {total}."), title: N_("Switzerland in full depth"),
     wall: N_("You have explored {n} Swiss places for free. A free account opens all {total}: every regional AOC, wine area, commune and lieu de production, with planted hectares, grapes, label rules and producers.") },
   champagne: { free: N_("Free preview: Champagne place {n} of {free}. A free account opens all {total}."), title: N_("Champagne in full depth"),
-    wall: N_("You have explored {n} Champagne places for free. A free account opens all {total}: every premier cru and village of the five zones, with its cru rating, terrain, soils, rules and producers.") },
+    wall: N_("You have explored {n} Champagne places for free. A free account opens all {total}: every premier cru and village of every zone, with its cru rating, hectares, terrain, soils and producers.") },
   bordeaux: { free: N_("Free preview: Bordeaux place {n} of {free}. A free account opens all {total}."), title: N_("Bordeaux in full depth"),
     wall: N_("You have explored {n} Bordeaux places for free. A free account opens all {total}: every communal appellation and classified estate, with hectares, classifications, terrain, soils and producers.") },
 };
@@ -3321,7 +3320,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   }
   if (d.estates?.length) {
     html += '<div class="sec"><h3>' + t_("Classified estates · {n}", { n: d.estates.length }) + '</h3><div class="sub-list">' +
-      d.estates.map(([id, n, r]) => '<button data-goto="' + esc(id) + '"><span>' + esc(n) + '</span><span class="r">' + esc(r) + "</span></button>").join("") + "</div>" +
+      d.estates.map(([id, n, r]) => id ? '<button data-goto="' + esc(id) + '"><span>' + esc(n) + '</span><span class="r">' + esc(r) + "</span></button>"
+        : '<div class="nolink"><span>' + esc(n) + '</span><span class="r">' + esc(r) + "</span></div>").join("") + "</div>" +
       (d.estates_note ? '<p class="note">' + esc(t_(d.estates_note)) + "</p>" : "") + "</div>";
   }
 

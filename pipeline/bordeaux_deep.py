@@ -28,15 +28,6 @@ GROUP = "g:FR/bordeaux"
 BX_REGIONAL = {"Bordeaux", "Bordeaux supérieur", "Crémant de Bordeaux"}
 BX_SUBREG = {"Médoc", "Haut-Médoc", "Graves", "Graves supérieures", "Entre-deux-Mers", "Côtes de Bordeaux",
              "Côtes de Bordeaux-Saint-Macaire", "Premières Côtes de Bordeaux", "Blaye", "Côtes de Blaye"}
-# rank -> short label for the map and the lists
-SHORT = {
-    "Premier Grand Cru Classé": "1855 · 1er", "Deuxième Cru": "1855 · 2e", "Troisième Cru": "1855 · 3e",
-    "Quatrième Cru": "1855 · 4e", "Cinquième Cru": "1855 · 5e",
-    "Premier Cru Supérieur": "1855 · 1er supérieur", "Premier Cru": "1855 · 1er", "Deuxième Cru (Sauternes)": "1855 · 2e",
-    "Premier Grand Cru Classé A": "Saint-Émilion · 1er A", "Premier Grand Cru Classé (Saint-Émilion)": "Saint-Émilion · 1er",
-    "Grand Cru Classé": "Saint-Émilion · GCC",
-}
-
 
 def main():
     spec = json.load(open(LIST, encoding="utf-8"))
@@ -61,30 +52,36 @@ def main():
     for ck, cl in spec["classifications"].items():
         for e in cl["estates"]:
             eid = "fr-bxcc-" + slug(e.get("key") or e["name"])
-            rec = estates.setdefault(eid, {"name": e["name"], "classes": [], "appellation": e["appellation"], "commune": e["commune"],
-                                           "loc": e.get("loc"), "web": e.get("web", ""), "aka": e.get("aka", "")})
-            rec["classes"].append([cl["title"], e["rank"], cl.get("year_label") or cl.get("year"), e.get("short") or cl["short"].get(e["rank"], ""), ck])
+            rec = estates.setdefault(eid, {"name": e["name"], "classes": [], "appellation": e["appellation"], "commune": e.get("commune"),
+                                           "village": e.get("village"), "loc": e.get("loc"), "web": e.get("web", ""), "aka": e.get("aka", "")})
+            rec["classes"].append([cl["title"], e["rank"], cl.get("year"), cl["short"].get(e["rank"], ""), ck])
             if e.get("loc") and not rec["loc"]:
                 rec["loc"] = e["loc"]
 
     feats, details = [], {}
     by_app = {}
     for eid, e in estates.items():
-        assert e["loc"], f"no location for {e['name']}"
-        lat, lon, loc_src = e["loc"]
         a = e["appellation"]
         assert a in app, f"{e['name']}: appellation not in the map: {a}"
         first = e["classes"][0]
+        if not e["loc"]:
+            # listed on its appellation, not drawn until its location is checked
+            by_app.setdefault(a, []).append((None, e["name"], first[3], [c[4] for c in e["classes"]], first[1]))
+            continue
+        lat, lon, loc_src = e["loc"]
         top = any(c[4] in spec.get("open_ranks", {}) and c[1] in spec["open_ranks"][c[4]] for c in e["classes"])
-        d = {"type": "Classified estate", "appellation_of": a, "communes": [e["commune"]],
+        d = {"type": "Classified estate", "appellation_of": a, "communes": [e["commune"]] if e.get("commune") else None,
              "classifications": [[c[0], c[1], c[2]] for c in e["classes"]],
              "class_short": first[3], "lat": round(lat, 5), "lon": round(lon, 5),
              "outline_quality": "point",
              "outline": "Location of the château. The vines of an estate are often spread over several plots around it.",
              "location_src": loc_src}
+        d = {k: v for k, v in d.items() if v is not None}
+        if e.get("village"):
+            d["rules"] = [["Village", e["village"] + " (part of " + e["commune"] + " since 2017)"]]
         if top:
             d["deep_open"] = True
-        notes = [spec["classifications"][c[4]].get("estate_note") for c in e["classes"]]
+        notes = [spec["classifications"][c[4]].get("note") for c in e["classes"]]
         if any(notes):
             d["class_note"] = " ".join(n for n in notes if n)
         if e.get("aka"):
@@ -124,11 +121,8 @@ def main():
         if es:
             es.sort(key=lambda x: (min(order.get((ck, x[4]), 9) for ck in x[3]), slug(x[1])))
             rec["estates"] = [[eid, n, s] for eid, n, s, _, _ in es]
-            if spec.get("app_notes", {}).get(name):
-                rec["estates_note"] = spec["app_notes"][name]
-    for k, v in spec.get("app_notes_only", {}).items():
-        if k in app:
-            pub[app[k]]["estates_note"] = v
+            if any(eid is None for eid, *_ in es):
+                rec["estates_note"] = "Estates without a link are listed but not on the map yet: their location is still to be checked."
     pub.update(details)
     with open(os.path.join(WEB, "details-fr.json"), "w", encoding="utf-8") as f:
         json.dump(pub, f, ensure_ascii=False, separators=(",", ":"))
@@ -158,7 +152,7 @@ def main():
         aid = app[name]
         if aid not in nodes:
             nodes[aid] = [None, "place", None, [], 0]
-        nodes[aid][3] = nodes[aid][3] + [x[0] for x in es]
+        nodes[aid][3] = nodes[aid][3] + [x[0] for x in es if x[0]]
 
     def total(k):
         n = nodes.get(k)

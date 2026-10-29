@@ -1,0 +1,2811 @@
+{
+ "_note": "Champagne in depth (pipeline/champagne.py). Zones and terroirs follow the UMC aire géographique tables, which keep Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux inside a wider Côte des Blancs; here they are zones of their own. Échelle des crus ratings from secondary lists that agree with each other; the AOC specification lists only the names of the grand and premier cru communes. Breuil-sur-Vesle is in the AOC list but not in the UMC tables: zone by proximity, no area.",
+ "sources": [
+  [
+   "UMC, Aire géographique (zone and terroir tables, commune lists with ha)",
+   "https://maisons-champagne.com/fr/appellation/aire-geographique/"
+  ],
+  [
+   "UMC, Montagne de Reims terroirs (terroir=1..4)",
+   "https://maisons-champagne.com/fr/appellation/aire-geographique/montagne-de-reims/?terroir=2"
+  ],
+  [
+   "UMC, Vallée de la Marne terroirs (terroir=5..10)",
+   "https://maisons-champagne.com/fr/appellation/aire-geographique/vallee-de-la-marne/?terroir=5"
+  ],
+  [
+   "UMC, Côte des Blancs terroirs (terroir=11..15)",
+   "https://maisons-champagne.com/en/appellation/geographical-area/cote-des-blancs/?terroir=11"
+  ],
+  [
+   "UMC, Côte des Bar terroirs (terroir=16,17)",
+   "https://maisons-champagne.com/en/appellation/geographical-area/cote-des-bar/?terroir=17"
+  ],
+  [
+   "Cahier des charges AOC Champagne, homologated 25 Jan 2024 (champagne.fr)",
+   "https://www.champagne.fr/system/files/2024-03/Cahier_des_charges_appellation.pdf"
+  ],
+  [
+   "Cahier des charges AOC Champagne, BO agri 7 Aug 2025",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-677d59b2-d392-4220-9fa3-e65dbc723244/telechargement"
+  ],
+  [
+   "Décret n° 2010-1441 du 22 novembre 2010 (eAmbrosia attachment)",
+   "https://ec.europa.eu/geographical-indications-register/eambrosia-public-api/api/v1/attachments/8209"
+  ],
+  [
+   "INAO, Champagne product page (aire géographique: 319 communes by department, 14 viticultural regions)",
+   "https://www.inao.gouv.fr/node/7174/printable/pdf"
+  ],
+  [
+   "SGV Champagne, Les chiffres du vignoble 2023 (POKET 2024)",
+   "https://www.sgv-champagne.fr/wp-content/uploads/2024/09/POKET-2024-WEB.pdf"
+  ],
+  [
+   "SGV Champagne, Les chiffres du vignoble 2022 (POKET 2023)",
+   "https://www.sgv-champagne.fr/wp-content/uploads/2023/09/POKET-2023VF-1.pdf"
+  ],
+  [
+   "Comité Champagne, The Champagne region",
+   "https://www.champagne.fr/en/about-champagne/a-great-blended-wine/the-champagne-region"
+  ],
+  [
+   "vitaceae.fr, Filière Champagne observatory",
+   "https://vitaceae.fr/observatoire/filiere-champagne/"
+  ],
+  [
+   "The Finest Bubble, Champagne's Grand & Premier Cru Vineyards (échelle %)",
+   "https://thefinestbubble.com/news-and-reviews/champagne-grand-premier-cru-vineyards/"
+  ],
+  [
+   "Champagne Club, Official classification of the villages (échelle %)",
+   "https://www.champagneclub.com/classification-of-the-villages-terroirs/"
+  ],
+  [
+   "Wein.plus, Champagne AOC (échelle %)",
+   "https://wineguide.wein.plus/wine-regions/champagne-aoc"
+  ],
+  [
+   "krasiagr.com, Grand & Premier Cru of Champagne (échelle %)",
+   "https://krasiagr.com/poia-einai-grand-cru-premier-cru-aoc-champagne/"
+  ],
+  [
+   "wine-law.org, L'échelle des crus en Champagne (history)",
+   "https://www.wine-law.org/index.php/lechelle-des-crus-en-champagne/"
+  ],
+  [
+   "Tom Stevenson, GuildSomm, Champagne Classifications and Pricing",
+   "https://guildsomm.com/public_content/features/articles/b/tom_stevenson/posts/champagne-classifications-and-pricing"
+  ],
+  [
+   "BKWine, Grand cru and premier cru in Champagne",
+   "https://www.bkwine.com/features/more/grand-premier-cru-champagne-abandoned/"
+  ],
+  [
+   "Dico du Vin, Échelle des crus (17/44/237)",
+   "https://dico-du-vin.com/echelle-des-crus-champagne/"
+  ],
+  [
+   "ABC du Vin, Champagne appellations (grape-growing zone commune list)",
+   "https://www.abcduvin.com/index.php/term/,6c53ad9f5fa7aa706e53adacb1a2.xhtml"
+  ],
+  [
+   "Wikipedia, Aÿ-Champagne",
+   "https://en.wikipedia.org/wiki/A%C3%BF-Champagne"
+  ],
+  [
+   "Wikipedia, Blancs-Coteaux",
+   "https://en.wikipedia.org/wiki/Blancs-Coteaux"
+  ],
+  [
+   "Wikipédia, Blancs-Coteaux",
+   "https://fr.wikipedia.org/wiki/Blancs-Coteaux"
+  ],
+  [
+   "Wikipedia, Val de Livre",
+   "https://en.wikipedia.org/wiki/Val_de_Livre"
+  ],
+  [
+   "Wikipedia, Vallées en Champagne",
+   "https://en.wikipedia.org/wiki/Vall%C3%A9es_en_Champagne"
+  ],
+  [
+   "Wikipédia, Val-des-Marais",
+   "https://fr.wikipedia.org/wiki/Val-des-Marais"
+  ],
+  [
+   "Wikipédia, Villeneuve-Renneville-Chevigny",
+   "https://fr.wikipedia.org/wiki/Villeneuve-Renneville-Chevigny"
+  ],
+  [
+   "Wikipédia, Champagne (AOC)",
+   "https://fr.wikipedia.org/wiki/Champagne_(AOC)"
+  ],
+  [
+   "Wikipédia, Vignoble de Champagne",
+   "https://fr.wikipedia.org/wiki/Vignoble_de_Champagne"
+  ],
+  [
+   "Wikipedia, Classification of Champagne vineyards",
+   "https://en.wikipedia.org/wiki/Classification_of_Champagne_vineyards"
+  ],
+  [
+   "Union des Maisons de Champagne, À la redécouverte du terroir champenois (2011)",
+   "https://maisons-champagne.com/IMG/pdf/terroir_2011.pdf"
+  ]
+ ],
+ "doubts": [
+  "Sub-region scheme: zone and terroir assignments come from the UMC tables (4 zones, 17 terroirs, 319 communes, sums match exactly). UMC puts Côte de Sézanne (Sézannais), Vitryat, Montgueux and Val du Petit Morin inside its Côte des Blancs zone. I kept them as separate sub-regions; 'umc_zone' and 'umc_terroir' on each commune allow folding them back. Val du Petit Morin (19 input communes, incl. premier crus Étréchy, Val-des-Marais/Coligny, Villeneuve-Renneville-Chevigny) is a UMC terroir name not on the requested list; fold into Côte des Blancs if you need only the listed names.",
+  "Comité Champagne (champagne.fr) uses four main areas without per-commune lists on the pages I could read. INAO lists 14 viticultural regions (e.g. Région de Congy-Villevenard, Vallée du Surmelin) but no commune mapping.",
+  "Tours-sur-Marne: UMC places it in the Grande Vallée de la Marne; many guides list it with the Montagne de Reims grands crus. I followed UMC (Vallée de la Marne).",
+  "Villenauxe-la-Grande (Aube) is listed by UMC in the Barséquanais (Côte des Bar), though geographically it adjoins the Côte de Sézanne. Followed UMC.",
+  "Breuil-Sur-Vesle is not in the UMC 319-commune tables. ABC du Vin lists 'Breuil' in the Marne grape-growing zone (213 Marne communes vs 212 in UMC). Subregion Montagne de Reims (Vesle valley) is my assignment by proximity, not from a source. Vineyard area unknown, probably tiny.",
+  "Bligny: two AOC communes share the name, Bligny (Aube, Bar-sur-Aubois, 160.4 ha) and Bligny (Marne, Vesle & Ardre, 5.2 ha). The input has one key; I mapped it to the Aube commune and put the Marne one under 'homonym'. Check which one the EU list meant (it may cover both).",
+  "Échelle percentages are not in the official specification (it lists only names). Values come from secondary sources that agree with each other (thefinestbubble, champagneclub, wein.plus, krasiagr). Disagreements: Bergères-lès-Vertus 95 (champagneclub splits 95 white / 90 black); Bezannes and Cormontreuil missing from some lists; champagneclub wrongly shows Épernay at 94 and 95. Coulommes-la-Montagne, Sermiers and Vrigny are 90 since 2003 (were 89), so older lists omit them.",
+  "Premier cru count: 42 in the AOC specification section II.c; 44 in sources that add Chouilly (Pinot Noir) and Tours-sur-Marne (Chardonnay); some lists show 41 to 43 because of double entries. The input yields 37 premier cru communes plus 5 premier crus inside merged communes (Mareuil-sur-Aÿ, Bisseuil, Vertus, Voipreux, Tauxières) = 42.",
+  "End of the échelle: sources disagree. wine-law.org and BKWine say abandoned from the 2004 harvest (indicative prices stopped 2001); GuildSomm and champagneclub say 2010. The 22 Nov 2010 decree repealed the 1952 decree and kept the grand/premier cru commune lists in the specification.",
+  "The current specification still names pre-merger communes (Ay, Mareuil-sur-Ay, Bisseuil, Louvois, Tauxières, Oger, Vertus, Voipreux, Coligny (Val-des-Marais), Villeneuve-Renneville). Whether premier cru/grand cru applies to the whole merged commune or only the former commune territory is assumed to be the latter; not explicitly verified.",
+  "Gionges (part of Blancs-Coteaux) appears only in the élaboration zone per ABC du Vin, not the grape-growing zone; not verified in an official source.",
+  "Aÿ-Champagne English Wikipedia contradicts itself (grand cru 100% vs premier cru 99%); 99% applies to Mareuil-sur-Aÿ, 100% to Aÿ per the specification and échelle lists.",
+  "UMC area figures carry no year. Total vineyard figures range 34,183 to 34,317 ha depending on source and year; I used SGV 2023 data (34,200 ha).",
+  "Tauxières percentage 99 is from secondary lists; Wein.plus names it Tauxières-Mutry.",
+  "Not fetched (blocked or not found): fr.wikipedia 'Échelle des crus' and 'Liste des communes de l'appellation champagne' (url_not_found), archived champagneinfo.net village list, vin-vigne.com Breuil-sur-Vesle page, eAmbrosia GI search API."
+ ],
+ "aoc": {
+  "vine_area_ha": 34200,
+  "vine_area_src": "SGV Champagne, Les chiffres du vignoble 2023",
+  "grape_share": [
+   [
+    "Pinot Noir",
+    38
+   ],
+   [
+    "Chardonnay",
+    31
+   ],
+   [
+    "Meunier",
+    30
+   ]
+  ],
+  "grape_share_note": "Of 34,200 ha planted: Pinot Noir 13,100 ha, Chardonnay 10,680 ha, Meunier 10,260 ha, other grapes 160 ha (Arbane, Petit Meslier, Pinot Blanc, Pinot Gris). SGV Champagne, 2023.",
+  "rules": [
+   [
+    "Grand cru",
+    "17 communes, rated 100 % on the old échelle des crus"
+   ],
+   [
+    "Premier cru",
+    "42 communes in the specification, rated 90 to 99 %"
+   ],
+   [
+    "Échelle des crus",
+    "A scale used to price grapes by village, from 80 to 100 %. Grape prices stopped following it in the 2000s; the grand and premier cru names stay in the specification."
+   ]
+  ]
+ },
+ "zones": {
+  "Montagne de Reims": {
+   "vine_area_ha": 7965.9,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "The wooded plateau between Reims and Épernay, with vines on its north, east and south slopes. Pinot Noir leads, above all in the nine grand cru villages of the Grande Montagne. The zone also takes in the Massif de Saint-Thierry, the Monts de Berru and the Vesle and Ardre valleys.",
+   "grape_share": [
+    [
+     "Pinot Noir",
+     40.54
+    ],
+    [
+     "Meunier",
+     32.96
+    ],
+    [
+     "Chardonnay",
+     26.37
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 7,
+   "rules": [
+    [
+     "UMC terroir Grande Montagne de Reims",
+     "4,040.5 ha"
+    ],
+    [
+     "UMC terroir Reims : Vesle & Ardre",
+     "2,555.9 ha"
+    ],
+    [
+     "UMC terroir Massif de Saint-Thierry",
+     "999.7 ha"
+    ],
+    [
+     "UMC terroir Monts de Berru",
+     "369.8 ha"
+    ]
+   ]
+  },
+  "Vallée de la Marne": {
+   "vine_area_ha": 12149.5,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "The largest zone. It follows the Marne from east of Épernay west into the Aisne and the Seine-et-Marne. Meunier leads on the clay slopes of the valley. The Grande Vallée around Aÿ is Pinot Noir country, with the grands crus of Aÿ and Tours-sur-Marne.",
+   "grape_share": [
+    [
+     "Meunier",
+     58.62
+    ],
+    [
+     "Pinot Noir",
+     23.22
+    ],
+    [
+     "Chardonnay",
+     18.05
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 7,
+   "rules": [
+    [
+     "UMC terroir Grande Vallée de la Marne",
+     "1,940.7 ha"
+    ],
+    [
+     "UMC terroir Coteaux Sud d'Épernay",
+     "1,266.8 ha"
+    ],
+    [
+     "UMC terroir Vallée de la Marne Rive Droite",
+     "3,070.5 ha"
+    ],
+    [
+     "UMC terroir Vallée de la Marne Rive Gauche",
+     "2,441.9 ha"
+    ],
+    [
+     "UMC terroir Terroir de Condé",
+     "729.2 ha"
+    ],
+    [
+     "UMC terroir Vallée de la Marne Ouest",
+     "2,700.4 ha"
+    ]
+   ]
+  },
+  "Côte des Blancs": {
+   "vine_area_ha": 3190.5,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "An east-facing chalk slope running south from Épernay to Vertus. It is almost all Chardonnay. Six of the 17 grand cru villages are here.",
+   "grape_share": [
+    [
+     "Chardonnay",
+     97.22
+    ],
+    [
+     "Pinot Noir",
+     1.99
+    ],
+    [
+     "Meunier",
+     0.75
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 7,
+   "vine_area_note": "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha."
+  },
+  "Val du Petit Morin": {
+   "vine_area_ha": 1029.0,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "Twenty communes around the marshes of Saint-Gond, between the Côte des Blancs and the Côte de Sézanne. Chardonnay leads, with much Meunier. The houses' union counts it in a wider Côte des Blancs.",
+   "grape_share": [
+    [
+     "Chardonnay",
+     52.87
+    ],
+    [
+     "Meunier",
+     37.01
+    ],
+    [
+     "Pinot Noir",
+     10.04
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 8
+  },
+  "Côte de Sézanne": {
+   "vine_area_ha": 1418.5,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "Slopes around Sézanne in the south of the Marne. Chardonnay leads. The houses' union counts it in a wider Côte des Blancs.",
+   "grape_share": [
+    [
+     "Chardonnay",
+     75.4
+    ],
+    [
+     "Pinot Noir",
+     18.43
+    ],
+    [
+     "Meunier",
+     6.1
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 8
+  },
+  "Vitryat": {
+   "vine_area_ha": 457.6,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "A small outlying area around Vitry-le-François in the east of the Marne. It is almost all Chardonnay. The houses' union counts it in a wider Côte des Blancs.",
+   "grape_share": [
+    [
+     "Chardonnay",
+     97.51
+    ],
+    [
+     "Pinot Noir",
+     1.29
+    ],
+    [
+     "Meunier",
+     1.16
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 8
+  },
+  "Montgueux": {
+   "vine_area_ha": 208.4,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "A single chalk hill just west of Troyes in the Aube, mostly Chardonnay. The houses' union counts it in a wider Côte des Blancs, far to the north.",
+   "grape_share": [
+    [
+     "Chardonnay",
+     90.4
+    ],
+    [
+     "Pinot Noir",
+     9.07
+    ],
+    [
+     "Meunier",
+     0.38
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 8
+  },
+  "Côte des Bar": {
+   "vine_area_ha": 7897.6,
+   "vine_area_src": "Union des Maisons de Champagne (UMC)",
+   "atlas_note": "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.",
+   "grape_share": [
+    [
+     "Pinot Noir",
+     83.9
+    ],
+    [
+     "Chardonnay",
+     11.64
+    ],
+    [
+     "Meunier",
+     3.17
+    ]
+   ],
+   "grape_share_note": "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.",
+   "refs": [
+    [
+     "UMC, aire géographique de l'appellation",
+     "https://www.maisons-champagne.com/fr/appellation/aire-geographique/"
+    ]
+   ],
+   "label_zoom": 7,
+   "rules": [
+    [
+     "UMC terroir Bar-sur-Aubois",
+     "2,425.2 ha"
+    ],
+    [
+     "UMC terroir Barséquanais",
+     "5,472.4 ha"
+    ]
+   ]
+  }
+ },
+ "communes": {
+  "Ailleville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Ailleville",
+   "vine_ha": 45.1,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Allemant": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Allemant",
+   "vine_ha": 65.6,
+   "terroir": "Sézannais"
+  },
+  "Ambonnay": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Ambonnay",
+   "pct": 100,
+   "vine_ha": 385.7,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Arcis-Le-Ponsart": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Arcis-le-Ponsart",
+   "vine_ha": 22.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Arconville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Arconville",
+   "vine_ha": 59.0,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Argançon": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Argançon",
+   "vine_ha": 43.8,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Arrentières": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Arrentières",
+   "vine_ha": 137.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Arsonval": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Arsonval",
+   "vine_ha": 27.3,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Aubilly": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Aubilly",
+   "vine_ha": 4.7,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Avenay-Val-D'Or": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Avenay-Val-d'Or",
+   "pct": 93,
+   "vine_ha": 236.3,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Avirey-Lingey": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Avirey-Lingey",
+   "vine_ha": 149.3,
+   "terroir": "Barséquanais"
+  },
+  "Avize": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Avize",
+   "pct": 100,
+   "vine_ha": 266.0,
+   "terroir": "Côte des Blancs"
+  },
+  "Azy-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Azy-sur-Marne",
+   "vine_ha": 88.0,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Aÿ-Champagne": {
+   "zone": "Vallée de la Marne",
+   "cru": "grand_cru",
+   "display": "Aÿ-Champagne",
+   "pct": 100,
+   "vine_ha": 775.8,
+   "terroir": "Grande Vallée de la Marne",
+   "rules": [
+    [
+     "Former commune Aÿ",
+     "Grand cru (100 %)"
+    ],
+    [
+     "Former commune Mareuil-sur-Aÿ",
+     "Premier cru (99 %)"
+    ],
+    [
+     "Former commune Bisseuil",
+     "Premier cru (95 %)"
+    ]
+   ],
+   "note": "Commune nouvelle created 1 January 2016 from Aÿ (grand cru), Mareuil-sur-Aÿ and Bisseuil (premier crus). The AOC specification still lists the cru status under the old commune names."
+  },
+  "Bagneux-La-Fosse": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bagneux-la-Fosse",
+   "vine_ha": 145.8,
+   "terroir": "Barséquanais"
+  },
+  "Balnot-Sur-Laignes": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Balnot-sur-Laignes",
+   "vine_ha": 146.7,
+   "terroir": "Barséquanais"
+  },
+  "Bar-Sur-Aube": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bar-sur-Aube",
+   "vine_ha": 95.4,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Bar-Sur-Seine": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bar-sur-Seine",
+   "vine_ha": 19.2,
+   "terroir": "Barséquanais"
+  },
+  "Barbonne-Fayel": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Barbonne-Fayel",
+   "vine_ha": 265.0,
+   "terroir": "Sézannais"
+  },
+  "Baroville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Baroville",
+   "vine_ha": 220.2,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Barzy-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Barzy-sur-Marne",
+   "vine_ha": 111.6,
+   "terroir": "Terroir de Condé"
+  },
+  "Baslieux-Sous-Châtillon": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Baslieux-sous-Châtillon",
+   "vine_ha": 77.8,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Bassu": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Bassu",
+   "vine_ha": 36.1,
+   "terroir": "Vitryat"
+  },
+  "Bassuet": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Bassuet",
+   "vine_ha": 89.6,
+   "terroir": "Vitryat"
+  },
+  "Baye": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Baye",
+   "vine_ha": 49.9,
+   "terroir": "Val du Petit Morin"
+  },
+  "Beaumont-Sur-Vesle": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Beaumont-sur-Vesle",
+   "pct": 100,
+   "vine_ha": 28.3,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Beaunay": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Beaunay",
+   "vine_ha": 40.1,
+   "terroir": "Val du Petit Morin"
+  },
+  "Belval-Sous-Châtillon": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Belval-sous-Châtillon",
+   "vine_ha": 78.4,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Bergères": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bergères",
+   "vine_ha": 95.2,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Bergères-Lès-Vertus": {
+   "zone": "Côte des Blancs",
+   "cru": "premier_cru",
+   "display": "Bergères-lès-Vertus",
+   "pct": 95,
+   "vine_ha": 220.3,
+   "terroir": "Côte des Blancs",
+   "note": "Rated 95%. One source (champagneclub.com) gives 95% for white grapes and 90% for black grapes."
+  },
+  "Bergères-Sous-Montmirail": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Bergères-sous-Montmirail",
+   "vine_ha": 41.7,
+   "terroir": "Sézannais"
+  },
+  "Berru": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Berru",
+   "vine_ha": 99.9,
+   "terroir": "Monts de Berru"
+  },
+  "Bertignolles": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bertignolles",
+   "vine_ha": 26.2,
+   "terroir": "Barséquanais"
+  },
+  "Bethon": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Bethon",
+   "vine_ha": 194.9,
+   "terroir": "Sézannais"
+  },
+  "Bezannes": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Bezannes",
+   "pct": 90,
+   "vine_ha": 7.0,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Billy-Le-Grand": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Billy-le-Grand",
+   "pct": 95,
+   "vine_ha": 64.2,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Binson-Et-Orquigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Binson-et-Orquigny",
+   "vine_ha": 156.6,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Blancs-Coteaux": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Blancs-Coteaux",
+   "pct": 100,
+   "vine_ha": 985.6,
+   "terroir": "Côte des Blancs + Val du Petit Morin",
+   "rules": [
+    [
+     "Former commune Oger",
+     "Grand cru (100 %)"
+    ],
+    [
+     "Former commune Vertus",
+     "Premier cru (95 %)"
+    ],
+    [
+     "Former commune Voipreux",
+     "Premier cru (95 %)"
+    ],
+    [
+     "Former commune Gionges",
+     "No cru rating"
+    ]
+   ],
+   "note": "Commune nouvelle created 1 January 2018 from Vertus, Oger, Voipreux and Gionges. Oger is grand cru, Vertus and Voipreux are premier cru. Gionges is not in the grape-growing zone per ABC du Vin. Voipreux is in the UMC Val du Petit Morin terroir."
+  },
+  "Blesmes": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Blesmes",
+   "vine_ha": 15.0,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Bligny (Aube)": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bligny",
+   "vine_ha": 160.4,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Bligny (Marne)": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Bligny",
+   "vine_ha": 5.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Bonneil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Bonneil",
+   "vine_ha": 76.7,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Bouilly": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Bouilly",
+   "vine_ha": 50.6,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Bouleuse": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Bouleuse",
+   "vine_ha": 14.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Boursault": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Boursault",
+   "vine_ha": 252.5,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Bouzy": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Bouzy",
+   "pct": 100,
+   "vine_ha": 373.4,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Bragelogne-Beauvoir": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Bragelogne-Beauvoir",
+   "vine_ha": 140.5,
+   "terroir": "Barséquanais"
+  },
+  "Branscourt": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Branscourt",
+   "vine_ha": 29.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Brasles": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Brasles",
+   "vine_ha": 80.5,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Breuil-Sur-Vesle": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Breuil-sur-Vesle",
+   "note": "Listed as 'Breuil' in the Marne grape-growing zone by ABC du Vin, but absent from the UMC terroir tables (319 communes). Lies on the Vesle near Jonchery-sur-Vesle; zone assigned by proximity to the UMC Vesle & Ardre terroir."
+  },
+  "Brimont": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Brimont",
+   "vine_ha": 44.3,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Brouillet": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Brouillet",
+   "vine_ha": 83.5,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Broussy-Le-Grand": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Broussy-le-Grand",
+   "vine_ha": 7.9,
+   "terroir": "Val du Petit Morin"
+  },
+  "Broyes": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Broyes",
+   "vine_ha": 140.1,
+   "terroir": "Sézannais"
+  },
+  "Brugny-Vaudancourt": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Brugny-Vaudancourt",
+   "vine_ha": 77.1,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Buxeuil": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Buxeuil",
+   "vine_ha": 135.6,
+   "terroir": "Barséquanais"
+  },
+  "Buxières-Sur-Arce": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Buxières-sur-Arce",
+   "vine_ha": 43.5,
+   "terroir": "Barséquanais"
+  },
+  "Bézu-Le-Guéry": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Bézu-le-Guéry",
+   "vine_ha": 25.3,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Cauroy-Lès-Hermonville": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Cauroy-lès-Hermonville",
+   "vine_ha": 15.3,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Celles-Lès-Condé": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Celles-lès-Condé",
+   "vine_ha": 40.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Celles-Sur-Ource": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Celles-sur-Ource",
+   "vine_ha": 309.1,
+   "terroir": "Barséquanais"
+  },
+  "Cernay-Lès-Reims": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Cernay-lès-Reims",
+   "vine_ha": 79.7,
+   "terroir": "Monts de Berru"
+  },
+  "Chacenay": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Chacenay",
+   "vine_ha": 67.0,
+   "terroir": "Barséquanais"
+  },
+  "Chambrecy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Chambrecy",
+   "vine_ha": 62.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Chamery": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Chamery",
+   "pct": 90,
+   "vine_ha": 204.8,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Champignol-Lez-Mondeville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Champignol-lez-Mondeville",
+   "vine_ha": 144.0,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Champillon": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Champillon",
+   "pct": 93,
+   "vine_ha": 72.8,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Champlat-Et-Boujacourt": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Champlat-et-Boujacourt",
+   "vine_ha": 3.5,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Champvoisy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Champvoisy",
+   "vine_ha": 38.3,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Changy": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Changy",
+   "vine_ha": 12.4,
+   "terroir": "Vitryat"
+  },
+  "Channes": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Channes",
+   "vine_ha": 70.2,
+   "terroir": "Barséquanais"
+  },
+  "Chantemerle": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Chantemerle",
+   "vine_ha": 33.3,
+   "terroir": "Sézannais"
+  },
+  "Charly-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Charly-sur-Marne",
+   "vine_ha": 364.4,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Chartèves": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Chartèves",
+   "vine_ha": 0.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Chaumuzy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Chaumuzy",
+   "vine_ha": 82.5,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Chavot-Courcourt": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Chavot-Courcourt",
+   "vine_ha": 124.6,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Chenay": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Chenay",
+   "vine_ha": 58.2,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Chervey": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Chervey",
+   "vine_ha": 144.7,
+   "terroir": "Barséquanais"
+  },
+  "Chierry": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Chierry",
+   "vine_ha": 15.3,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Chigny-Les-Roses": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Chigny-les-Roses",
+   "pct": 94,
+   "vine_ha": 131.7,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Chouilly": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Chouilly",
+   "pct": 100,
+   "vine_ha": 525.8,
+   "terroir": "Côte des Blancs",
+   "echelle_note": "Grand cru for one variety, premier cru (95 %) for the other: Pinot Noir only; Chardonnay is grand cru.",
+   "note": "Grand cru (100%) for Chardonnay. Pinot Noir was rated premier cru (95%)."
+  },
+  "Châlons-Sur-Vesle": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Châlons-sur-Vesle",
+   "vine_ha": 1.9,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Château-Thierry": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Château-Thierry",
+   "vine_ha": 44.4,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Châtillon-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Châtillon-sur-Marne",
+   "vine_ha": 238.8,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Chézy-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Chézy-sur-Marne",
+   "vine_ha": 162.2,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Citry": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Citry",
+   "vine_ha": 14.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Coizard-Joches": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Coizard-Joches",
+   "vine_ha": 32.1,
+   "terroir": "Val du Petit Morin"
+  },
+  "Colombey Les Deux Églises": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Colombey les Deux Églises",
+   "vine_ha": 40.1,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Colombé-La-Fosse": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Colombé-la-Fosse",
+   "vine_ha": 108.5,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Colombé-Le-Sec": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Colombé-le-Sec",
+   "vine_ha": 145.5,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Congy": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Congy",
+   "vine_ha": 78.1,
+   "terroir": "Val du Petit Morin"
+  },
+  "Connigis": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Connigis",
+   "vine_ha": 53.7,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Cormicy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Cormicy",
+   "vine_ha": 56.8,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Cormontreuil": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Cormontreuil",
+   "pct": 94,
+   "vine_ha": 5.4,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Cormoyeux": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Cormoyeux",
+   "vine_ha": 75.5,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Coulommes-La-Montagne": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Coulommes-la-Montagne",
+   "pct": 90,
+   "vine_ha": 77.0,
+   "terroir": "Reims : Vesle & Ardre",
+   "note": "Raised from 89% to 90% in 2003, the last change to the échelle."
+  },
+  "Courcelles-Sapicourt": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Courcelles-Sapicourt",
+   "vine_ha": 14.4,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Courjeonnet": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Courjeonnet",
+   "vine_ha": 19.6,
+   "terroir": "Val du Petit Morin"
+  },
+  "Courmas": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Courmas",
+   "vine_ha": 41.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Courtagnon": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Courtagnon",
+   "vine_ha": 10.3,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Courtemont-Varennes": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Courtemont-Varennes",
+   "vine_ha": 21.8,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Courteron": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Courteron",
+   "vine_ha": 87.5,
+   "terroir": "Barséquanais"
+  },
+  "Courthiézy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Courthiézy",
+   "vine_ha": 37.3,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Courville": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Courville",
+   "vine_ha": 37.3,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Couvignon": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Couvignon",
+   "vine_ha": 110.6,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Couvrot": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Couvrot",
+   "vine_ha": 21.8,
+   "terroir": "Vitryat"
+  },
+  "Cramant": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Cramant",
+   "pct": 100,
+   "vine_ha": 345.4,
+   "terroir": "Côte des Blancs"
+  },
+  "Crouttes-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Crouttes-sur-Marne",
+   "vine_ha": 172.5,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Crugny": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Crugny",
+   "vine_ha": 33.5,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Crézancy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Crézancy",
+   "vine_ha": 52.7,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Cuchery": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Cuchery",
+   "vine_ha": 142.2,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Cuis": {
+   "zone": "Côte des Blancs",
+   "cru": "premier_cru",
+   "display": "Cuis",
+   "pct": 95,
+   "vine_ha": 176.3,
+   "terroir": "Côte des Blancs",
+   "note": "Chardonnay rated 95%, Pinot Noir 90%."
+  },
+  "Cuisles": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Cuisles",
+   "vine_ha": 33.2,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Cumières": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Cumières",
+   "pct": 93,
+   "vine_ha": 172.7,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Cunfin": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Cunfin",
+   "vine_ha": 25.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Damery": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Damery",
+   "vine_ha": 416.4,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Dizy": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Dizy",
+   "pct": 95,
+   "vine_ha": 180.4,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Dolancourt": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Dolancourt",
+   "vine_ha": 28.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Domptin": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Domptin",
+   "vine_ha": 66.2,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Dormans": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Dormans",
+   "vine_ha": 346.9,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Engente": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Engente",
+   "vine_ha": 19.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Essoyes": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Essoyes",
+   "vine_ha": 493.1,
+   "terroir": "Barséquanais"
+  },
+  "Essômes-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Essômes-sur-Marne",
+   "vine_ha": 279.9,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Faverolles-Et-Coëmy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Faverolles-et-Coëmy",
+   "vine_ha": 76.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Festigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Festigny",
+   "vine_ha": 190.8,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Fleury-La-Rivière": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Fleury-la-Rivière",
+   "vine_ha": 225.4,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Fontaine": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Fontaine",
+   "vine_ha": 49.6,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Fontaine-Denis-Nuisy": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Fontaine-Denis-Nuisy",
+   "vine_ha": 120.0,
+   "terroir": "Sézannais"
+  },
+  "Fontaine-Sur-Ay": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Fontaine-sur-Ay",
+   "vine_ha": 29.9,
+   "terroir": "Grande Vallée de la Marne",
+   "note": "Rated 80% in 2003. Its parcel delimitation was approved in 1999."
+  },
+  "Fontette": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Fontette",
+   "vine_ha": 177.5,
+   "terroir": "Barséquanais"
+  },
+  "Fossoy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Fossoy",
+   "vine_ha": 62.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Fravaux": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Fravaux",
+   "vine_ha": 15.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Fèrebrianges": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Fèrebrianges",
+   "vine_ha": 116.2,
+   "terroir": "Val du Petit Morin"
+  },
+  "Germaine": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Germaine",
+   "vine_ha": 26.4,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Germigny": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Germigny",
+   "vine_ha": 31.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Givry-Lès-Loisy": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Givry-lès-Loisy",
+   "vine_ha": 26.1,
+   "terroir": "Val du Petit Morin"
+  },
+  "Gland": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Gland",
+   "vine_ha": 147.7,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Glannes": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Glannes",
+   "vine_ha": 19.3,
+   "terroir": "Vitryat"
+  },
+  "Grauves": {
+   "zone": "Côte des Blancs",
+   "cru": "premier_cru",
+   "display": "Grauves",
+   "pct": 95,
+   "vine_ha": 186.6,
+   "terroir": "Côte des Blancs",
+   "note": "Chardonnay rated 95%, Pinot Noir 90%."
+  },
+  "Gueux": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Gueux",
+   "vine_ha": 19.6,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Gyé-Sur-Seine": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Gyé-sur-Seine",
+   "vine_ha": 268.6,
+   "terroir": "Barséquanais"
+  },
+  "Hautvillers": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Hautvillers",
+   "pct": 93,
+   "vine_ha": 290.7,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Hermonville": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Hermonville",
+   "vine_ha": 103.4,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Hourges": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Hourges",
+   "vine_ha": 30.1,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Igny-Comblizy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Igny-Comblizy",
+   "vine_ha": 15.3,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Janvry": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Janvry",
+   "vine_ha": 35.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Jaucourt": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Jaucourt",
+   "vine_ha": 22.0,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Jaulgonne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Jaulgonne",
+   "vine_ha": 49.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Jonchery-Sur-Vesle": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Jonchery-sur-Vesle",
+   "vine_ha": 1.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Jonquery": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Jonquery",
+   "vine_ha": 42.3,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Jouy-Lès-Reims": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Jouy-lès-Reims",
+   "pct": 90,
+   "vine_ha": 95.6,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "La Celle-Sous-Chantemerle": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "La Celle-sous-Chantemerle",
+   "vine_ha": 88.9,
+   "terroir": "Sézannais"
+  },
+  "La Neuville-Aux-Larris": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "La Neuville-aux-Larris",
+   "vine_ha": 6.9,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Lagery": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Lagery",
+   "vine_ha": 47.5,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Landreville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Landreville",
+   "vine_ha": 283.0,
+   "terroir": "Barséquanais"
+  },
+  "Le Breuil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Le Breuil",
+   "vine_ha": 141.1,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Le Mesnil-Sur-Oger": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Le Mesnil-sur-Oger",
+   "pct": 100,
+   "vine_ha": 437.6,
+   "terroir": "Côte des Blancs"
+  },
+  "Les Mesneux": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Les Mesneux",
+   "pct": 90,
+   "vine_ha": 47.1,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Les Riceys": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Les Riceys",
+   "vine_ha": 838.0,
+   "terroir": "Barséquanais"
+  },
+  "Leuvrigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Leuvrigny",
+   "vine_ha": 140.8,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Lhéry": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Lhéry",
+   "vine_ha": 16.1,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Lignol-Le-Château": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Lignol-le-Château",
+   "vine_ha": 45.1,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Lisse-En-Champagne": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Lisse-en-Champagne",
+   "vine_ha": 31.4,
+   "terroir": "Vitryat"
+  },
+  "Loches-Sur-Ource": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Loches-sur-Ource",
+   "vine_ha": 331.0,
+   "terroir": "Barséquanais"
+  },
+  "Loisy-En-Brie": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Loisy-en-Brie",
+   "vine_ha": 71.2,
+   "terroir": "Val du Petit Morin"
+  },
+  "Loisy-Sur-Marne": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Loisy-sur-Marne",
+   "vine_ha": 5.8,
+   "terroir": "Vitryat"
+  },
+  "Ludes": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Ludes",
+   "pct": 94,
+   "vine_ha": 318.6,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Mailly-Champagne": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Mailly-Champagne",
+   "pct": 100,
+   "vine_ha": 284.5,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Mancy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Mancy",
+   "vine_ha": 189.7,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Mardeuil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Mardeuil",
+   "vine_ha": 193.9,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Mareuil-Le-Port": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Mareuil-le-Port",
+   "vine_ha": 396.4,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Marfaux": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Marfaux",
+   "vine_ha": 39.8,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Merfy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Merfy",
+   "vine_ha": 46.2,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Merlaut": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Merlaut",
+   "vine_ha": 6.7,
+   "terroir": "Vitryat"
+  },
+  "Merrey-Sur-Arce": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Merrey-sur-Arce",
+   "vine_ha": 131.2,
+   "terroir": "Barséquanais"
+  },
+  "Meurville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Meurville",
+   "vine_ha": 164.8,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Mondement-Montgivroux": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Mondement-Montgivroux",
+   "vine_ha": 6.8,
+   "terroir": "Val du Petit Morin"
+  },
+  "Mont-Saint-Père": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Mont-Saint-Père",
+   "vine_ha": 154.6,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Montbré": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Montbré",
+   "pct": 94,
+   "vine_ha": 42.4,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Montgenost": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Montgenost",
+   "vine_ha": 108.2,
+   "terroir": "Sézannais"
+  },
+  "Montgueux": {
+   "zone": "Montgueux",
+   "cru": "",
+   "display": "Montgueux",
+   "vine_ha": 208.4,
+   "terroir": "Montgueux",
+   "note": "Single-commune terroir near Troyes (Aube). UMC groups it with the Côte des Blancs zone; INAO calls it la Butte de Montgueux."
+  },
+  "Monthelon": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Monthelon",
+   "vine_ha": 104.0,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Monthurel": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Monthurel",
+   "vine_ha": 38.8,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Montier-En-L'Isle": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Montier-en-l'Isle",
+   "vine_ha": 59.2,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Montigny-Sur-Vesle": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Montigny-sur-Vesle",
+   "vine_ha": 23.6,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Montreuil-Aux-Lions": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Montreuil-aux-Lions",
+   "vine_ha": 18.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Morangis": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Morangis",
+   "vine_ha": 24.2,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Moslins": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Moslins",
+   "vine_ha": 14.7,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Moussy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Moussy",
+   "vine_ha": 135.4,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Mussy-Sur-Seine": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Mussy-sur-Seine",
+   "vine_ha": 48.9,
+   "terroir": "Barséquanais"
+  },
+  "Mutigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Mutigny",
+   "pct": 93,
+   "vine_ha": 103.4,
+   "terroir": "Grande Vallée de la Marne"
+  },
+  "Méry-Prémecy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Méry-Prémecy",
+   "vine_ha": 27.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Mézy-Moulins": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Mézy-Moulins",
+   "vine_ha": 23.4,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Nanteuil-La-Forêt": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Nanteuil-la-Forêt",
+   "vine_ha": 6.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Nanteuil-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Nanteuil-sur-Marne",
+   "vine_ha": 38.9,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Nesle-Le-Repons": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Nesle-le-Repons",
+   "vine_ha": 84.2,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Nesles-La-Montagne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Nesles-la-Montagne",
+   "vine_ha": 40.1,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Neuville-Sur-Seine": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Neuville-sur-Seine",
+   "vine_ha": 318.0,
+   "terroir": "Barséquanais"
+  },
+  "Nogent-L'Abbesse": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Nogent-l'Abbesse",
+   "vine_ha": 169.6,
+   "terroir": "Monts de Berru"
+  },
+  "Nogent-L'Artaud": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Nogent-l'Artaud",
+   "vine_ha": 2.2,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Nogentel": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Nogentel",
+   "vine_ha": 20.2,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Noé-Les-Mallets": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Noé-les-Mallets",
+   "vine_ha": 192.1,
+   "terroir": "Barséquanais"
+  },
+  "Oiry": {
+   "zone": "Côte des Blancs",
+   "cru": "grand_cru",
+   "display": "Oiry",
+   "pct": 100,
+   "vine_ha": 88.3,
+   "terroir": "Côte des Blancs"
+  },
+  "Olizy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Olizy",
+   "vine_ha": 50.9,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Orbais-L'Abbaye": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Orbais-l'Abbaye",
+   "vine_ha": 43.5,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Ormes": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Ormes",
+   "vine_ha": 8.4,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Oyes": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Oyes",
+   "vine_ha": 17.1,
+   "terroir": "Val du Petit Morin"
+  },
+  "Pargny-Lès-Reims": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Pargny-lès-Reims",
+   "pct": 90,
+   "vine_ha": 76.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Passy-Grigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Passy-Grigny",
+   "vine_ha": 196.2,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Passy-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Passy-sur-Marne",
+   "vine_ha": 171.3,
+   "terroir": "Terroir de Condé"
+  },
+  "Pavant": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Pavant",
+   "vine_ha": 24.2,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Pierry": {
+   "zone": "Vallée de la Marne",
+   "cru": "premier_cru",
+   "display": "Pierry",
+   "pct": 90,
+   "vine_ha": 109.8,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Plaines-Saint-Lange": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Plaines-Saint-Lange",
+   "vine_ha": 18.1,
+   "terroir": "Barséquanais"
+  },
+  "Poilly": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Poilly",
+   "vine_ha": 32.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Polisot": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Polisot",
+   "vine_ha": 71.4,
+   "terroir": "Barséquanais"
+  },
+  "Polisy": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Polisy",
+   "vine_ha": 161.5,
+   "terroir": "Barséquanais"
+  },
+  "Pontfaverger-Moronvilliers": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Pontfaverger-Moronvilliers",
+   "vine_ha": 10.6,
+   "terroir": "Monts de Berru"
+  },
+  "Pouillon": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Pouillon",
+   "vine_ha": 52.2,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Pourcy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Pourcy",
+   "vine_ha": 20.7,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Prouilly": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Prouilly",
+   "vine_ha": 138.3,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Proverville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Proverville",
+   "vine_ha": 24.6,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Puisieulx": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Puisieulx",
+   "pct": 100,
+   "vine_ha": 18.8,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Pévy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Pévy",
+   "vine_ha": 93.0,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Reims": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Reims",
+   "vine_ha": 54.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Reuil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Reuil",
+   "vine_ha": 192.2,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Reuilly-Sauvigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Reuilly-Sauvigny",
+   "vine_ha": 3.0,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Rilly-La-Montagne": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Rilly-la-Montagne",
+   "pct": 94,
+   "vine_ha": 313.1,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Rizaucourt-Buchey": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Rizaucourt-Buchey",
+   "vine_ha": 36.0,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Romeny-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Romeny-sur-Marne",
+   "vine_ha": 75.5,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Romery": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Romery",
+   "vine_ha": 72.4,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Romigny": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Romigny",
+   "vine_ha": 7.8,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Rosnay": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Rosnay",
+   "vine_ha": 14.7,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Rouvres-Les-Vignes": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Rouvres-les-Vignes",
+   "vine_ha": 101.0,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Sacy": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Sacy",
+   "pct": 90,
+   "vine_ha": 150.7,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Saint-Amand-Sur-Fion": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Saint-Amand-sur-Fion",
+   "vine_ha": 12.3,
+   "terroir": "Vitryat"
+  },
+  "Saint-Euphraise-Et-Clairizet": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Saint-Euphraise-et-Clairizet",
+   "vine_ha": 37.2,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Saint-Gilles": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Saint-Gilles",
+   "vine_ha": 3.1,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Saint-Lumier-En-Champagne": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Saint-Lumier-en-Champagne",
+   "vine_ha": 31.7,
+   "terroir": "Vitryat"
+  },
+  "Saint-Martin-D'Ablois": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Saint-Martin-d'Ablois",
+   "vine_ha": 82.1,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Saint-Thierry": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Saint-Thierry",
+   "vine_ha": 56.0,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Saint-Usage": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Saint-Usage",
+   "vine_ha": 60.5,
+   "terroir": "Barséquanais"
+  },
+  "Sainte-Gemme": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Sainte-Gemme",
+   "vine_ha": 64.6,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Sarcy": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Sarcy",
+   "vine_ha": 45.3,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Saudoy": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Saudoy",
+   "vine_ha": 78.2,
+   "terroir": "Sézannais"
+  },
+  "Saulchery": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Saulchery",
+   "vine_ha": 127.9,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Saulcy": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Saulcy",
+   "vine_ha": 26.8,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Savigny-Sur-Ardres": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Savigny-sur-Ardres",
+   "vine_ha": 92.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Saâcy-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Saâcy-sur-Marne",
+   "vine_ha": 39.5,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Selles": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Selles",
+   "vine_ha": 10.0,
+   "terroir": "Monts de Berru"
+  },
+  "Sermiers": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Sermiers",
+   "pct": 90,
+   "vine_ha": 166.6,
+   "terroir": "Reims : Vesle & Ardre",
+   "note": "Raised from 89% to 90% in 2003, the last change to the échelle."
+  },
+  "Serzy-Et-Prin": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Serzy-et-Prin",
+   "vine_ha": 75.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Sillery": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Sillery",
+   "pct": 100,
+   "vine_ha": 92.4,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Soulières": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Soulières",
+   "vine_ha": 32.6,
+   "terroir": "Val du Petit Morin"
+  },
+  "Spoy": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Spoy",
+   "vine_ha": 71.3,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Sézanne": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Sézanne",
+   "vine_ha": 207.1,
+   "terroir": "Sézannais"
+  },
+  "Taissy": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Taissy",
+   "pct": 94,
+   "vine_ha": 149.3,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Talus-Saint-Prix": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Talus-Saint-Prix",
+   "vine_ha": 40.6,
+   "terroir": "Val du Petit Morin"
+  },
+  "Thil": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Thil",
+   "vine_ha": 49.1,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Tours-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "grand_cru",
+   "display": "Tours-sur-Marne",
+   "pct": 100,
+   "vine_ha": 52.3,
+   "terroir": "Grande Vallée de la Marne",
+   "echelle_note": "Grand cru for one variety, premier cru (90 %) for the other: Chardonnay only; Pinot Noir is grand cru.",
+   "note": "Grand cru (100%) for Pinot Noir. Chardonnay was rated premier cru (90%). UMC places it in the Grande Vallée de la Marne terroir; many guides list it with the Montagne de Reims grands crus."
+  },
+  "Tramery": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Tramery",
+   "vine_ha": 10.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Trannes": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Trannes",
+   "vine_ha": 8.1,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Treslon": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Treslon",
+   "vine_ha": 27.6,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Trigny": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Trigny",
+   "vine_ha": 189.9,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Trois-Puits": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Trois-Puits",
+   "pct": 94,
+   "vine_ha": 39.7,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Troissy": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Troissy",
+   "vine_ha": 350.4,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Trélou-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Trélou-sur-Marne",
+   "vine_ha": 346.1,
+   "terroir": "Terroir de Condé"
+  },
+  "Trépail": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Trépail",
+   "pct": 95,
+   "vine_ha": 279.7,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Unchair": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Unchair",
+   "vine_ha": 42.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Urville": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Urville",
+   "vine_ha": 190.7,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Val De Livre": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Val de Livre",
+   "pct": 100,
+   "vine_ha": 281.2,
+   "terroir": "Grande Montagne de Reims",
+   "rules": [
+    [
+     "Former commune Louvois",
+     "Grand cru (100 %)"
+    ],
+    [
+     "Former commune Tauxières-Mutry",
+     "Premier cru (99 %)"
+    ]
+   ],
+   "note": "Commune nouvelle created 1 January 2016 from Louvois (grand cru) and Tauxières-Mutry (premier cru, listed as Tauxières)."
+  },
+  "Val-De-Vière": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Val-de-Vière",
+   "vine_ha": 31.6,
+   "terroir": "Vitryat"
+  },
+  "Val-Des-Marais": {
+   "zone": "Val du Petit Morin",
+   "cru": "premier_cru",
+   "display": "Val-des-Marais",
+   "pct": 90,
+   "vine_ha": 29.7,
+   "terroir": "Val du Petit Morin",
+   "rules": [
+    [
+     "Former commune Coligny",
+     "Premier cru (90 %)"
+    ],
+    [
+     "Former commune Aulnay-aux-Planches",
+     "No cru rating"
+    ],
+    [
+     "Former commune Aulnizeux",
+     "No cru rating"
+    ],
+    [
+     "Former commune Morains",
+     "No cru rating"
+    ]
+   ],
+   "note": "Coligny absorbed Aulnay-aux-Planches, Aulnizeux and Morains (prefectoral order of 30 September 1976) and took the name Val-des-Marais. The AOC specification lists the premier cru as 'Coligny (Val-des-Marais)'. Secondary sources say Chardonnay only."
+  },
+  "Vallées En Champagne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Vallées en Champagne",
+   "vine_ha": 238.6,
+   "terroir": "Terroir de Condé + Vallée de la Marne Ouest",
+   "rules": [
+    [
+     "Former commune Baulne-en-Brie",
+     "No cru rating"
+    ],
+    [
+     "Former commune La Chapelle-Monthodon",
+     "No cru rating"
+    ],
+    [
+     "Former commune Saint-Agnan",
+     "No cru rating"
+    ]
+   ],
+   "note": "Commune nouvelle created 1 January 2016 from Baulne-en-Brie, La Chapelle-Monthodon and Saint-Agnan (Aisne). None is classified. Baulne-en-Brie is in the UMC Terroir de Condé, the other two in Vallée de la Marne Ouest."
+  },
+  "Vanault-Le-Châtel": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Vanault-le-Châtel",
+   "vine_ha": 33.8,
+   "terroir": "Vitryat"
+  },
+  "Vandeuil": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Vandeuil",
+   "vine_ha": 34.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Vandières": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Vandières",
+   "vine_ha": 239.3,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Vauciennes": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Vauciennes",
+   "vine_ha": 109.0,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  },
+  "Vaudemange": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Vaudemange",
+   "pct": 95,
+   "vine_ha": 34.9,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Vavray-Le-Grand": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Vavray-le-Grand",
+   "vine_ha": 45.2,
+   "terroir": "Vitryat"
+  },
+  "Vavray-Le-Petit": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Vavray-le-Petit",
+   "vine_ha": 18.0,
+   "terroir": "Vitryat"
+  },
+  "Venteuil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Venteuil",
+   "vine_ha": 183.6,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Verneuil": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Verneuil",
+   "vine_ha": 356.2,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Verpillières-Sur-Ource": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Verpillières-sur-Ource",
+   "vine_ha": 75.1,
+   "terroir": "Barséquanais"
+  },
+  "Vert-Toulon": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Vert-Toulon",
+   "vine_ha": 98.6,
+   "terroir": "Val du Petit Morin"
+  },
+  "Verzenay": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Verzenay",
+   "pct": 100,
+   "vine_ha": 418.4,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Verzy": {
+   "zone": "Montagne de Reims",
+   "cru": "grand_cru",
+   "display": "Verzy",
+   "pct": 100,
+   "vine_ha": 404.0,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Ville-Dommange": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Ville-Dommange",
+   "pct": 90,
+   "vine_ha": 191.5,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Ville-En-Tardenois": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Ville-en-Tardenois",
+   "vine_ha": 5.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Ville-Sur-Arce": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Ville-sur-Arce",
+   "vine_ha": 224.3,
+   "terroir": "Barséquanais"
+  },
+  "Villenauxe-La-Grande": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Villenauxe-la-Grande",
+   "vine_ha": 101.8,
+   "terroir": "Barséquanais",
+   "note": "Aube commune next to the Côte de Sézanne, but UMC lists it in the Barséquanais terroir of the Côte des Bar."
+  },
+  "Villeneuve-Renneville-Chevigny": {
+   "zone": "Val du Petit Morin",
+   "cru": "premier_cru",
+   "display": "Villeneuve-Renneville-Chevigny",
+   "pct": 95,
+   "vine_ha": 96.7,
+   "terroir": "Val du Petit Morin",
+   "rules": [
+    [
+     "Former commune Villeneuve-Renneville",
+     "Premier cru (95 %)"
+    ],
+    [
+     "Former commune Chevigny",
+     "No cru rating"
+    ]
+   ],
+   "note": "Villeneuve-lès-Rouffy absorbed Renneville (1858) then Chevigny (1865). The AOC specification lists the premier cru as Villeneuve-Renneville."
+  },
+  "Villers-Allerand": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Villers-Allerand",
+   "pct": 90,
+   "vine_ha": 132.1,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Villers-Franqueux": {
+   "zone": "Montagne de Reims",
+   "cru": "",
+   "display": "Villers-Franqueux",
+   "vine_ha": 13.9,
+   "terroir": "Massif de Saint-Thierry"
+  },
+  "Villers-Marmery": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Villers-Marmery",
+   "pct": 95,
+   "vine_ha": 248.1,
+   "terroir": "Grande Montagne de Reims"
+  },
+  "Villers-Aux-Nœuds": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Villers-aux-Nœuds",
+   "pct": 90,
+   "vine_ha": 28.0,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Villers-Sous-Châtillon": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Villers-sous-Châtillon",
+   "vine_ha": 21.3,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Villevenard": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Villevenard",
+   "vine_ha": 123.7,
+   "terroir": "Val du Petit Morin"
+  },
+  "Villiers-Saint-Denis": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Villiers-Saint-Denis",
+   "vine_ha": 105.3,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Vinay": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Vinay",
+   "vine_ha": 148.0,
+   "terroir": "Coteaux Sud d'Épernay"
+  },
+  "Vincelles": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Vincelles",
+   "vine_ha": 150.7,
+   "terroir": "Vallée de la Marne Rive Droite"
+  },
+  "Vindey": {
+   "zone": "Côte de Sézanne",
+   "cru": "",
+   "display": "Vindey",
+   "vine_ha": 75.5,
+   "terroir": "Sézannais"
+  },
+  "Vitry-En-Perthois": {
+   "zone": "Vitryat",
+   "cru": "",
+   "display": "Vitry-en-Perthois",
+   "vine_ha": 61.9,
+   "terroir": "Vitryat"
+  },
+  "Vitry-Le-Croisé": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Vitry-le-Croisé",
+   "vine_ha": 92.7,
+   "terroir": "Barséquanais"
+  },
+  "Viviers-Sur-Artaut": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Viviers-sur-Artaut",
+   "vine_ha": 89.8,
+   "terroir": "Barséquanais"
+  },
+  "Voigny": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Voigny",
+   "vine_ha": 103.4,
+   "terroir": "Bar-sur-Aubois"
+  },
+  "Vrigny": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Vrigny",
+   "pct": 90,
+   "vine_ha": 90.4,
+   "terroir": "Reims : Vesle & Ardre",
+   "note": "Raised from 89% to 90% in 2003, the last change to the échelle."
+  },
+  "Écueil": {
+   "zone": "Montagne de Reims",
+   "cru": "premier_cru",
+   "display": "Écueil",
+   "pct": 90,
+   "vine_ha": 144.9,
+   "terroir": "Reims : Vesle & Ardre"
+  },
+  "Éguilly-Sous-Bois": {
+   "zone": "Côte des Bar",
+   "cru": "",
+   "display": "Éguilly-sous-Bois",
+   "vine_ha": 10.5,
+   "terroir": "Barséquanais"
+  },
+  "Épernay": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Épernay",
+   "vine_ha": 257.2,
+   "terroir": "Coteaux Sud d'Épernay",
+   "note": "Not a grand or premier cru commune in the AOC specification."
+  },
+  "Étampes-Sur-Marne": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Étampes-sur-Marne",
+   "vine_ha": 18.5,
+   "terroir": "Vallée de la Marne Ouest"
+  },
+  "Étoges": {
+   "zone": "Val du Petit Morin",
+   "cru": "",
+   "display": "Étoges",
+   "vine_ha": 91.0,
+   "terroir": "Val du Petit Morin"
+  },
+  "Étréchy": {
+   "zone": "Val du Petit Morin",
+   "cru": "premier_cru",
+   "display": "Étréchy",
+   "pct": 90,
+   "vine_ha": 9.6,
+   "terroir": "Val du Petit Morin",
+   "note": "Premier cru (90%) for Chardonnay only, per several secondary sources."
+  },
+  "Œuilly": {
+   "zone": "Vallée de la Marne",
+   "cru": "",
+   "display": "Œuilly",
+   "vine_ha": 139.8,
+   "terroir": "Vallée de la Marne Rive Gauche"
+  }
+ }
+}
