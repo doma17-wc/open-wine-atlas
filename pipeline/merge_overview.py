@@ -78,6 +78,7 @@ def prepare(path):
         for line in f:
             ft = json.loads(line)
             p = ft["properties"]
+            lz = p.pop("lz", None)  # optional label zoom of a place (Champagne zones label from zoom 7)
             g = shape(ft["geometry"])
             if g.is_empty:
                 continue
@@ -92,7 +93,7 @@ def prepare(path):
             ha = area_ha(g)
             out.append(("appellations", OUTLINE_MINZOOM.get(p["level"], 6), p, g.simplify(0.0008, preserve_topology=True)))
             q = dict(p, ha=top or round(ha), short=short_name(p))
-            out.append(("labels", min(MAXZ, label_minzoom(p["level"], ha, p["country"])), q, label_point(g)))
+            out.append(("labels", min(MAXZ, lz or label_minzoom(p["level"], ha, p["country"])), q, label_point(g)))
     return out
 
 

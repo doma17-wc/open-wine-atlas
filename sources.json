@@ -121,5 +121,19 @@
   "attribution": "Open Wine Atlas contributors, from the cantonal wine laws and vineyard statistics of every wine canton and BLW Das Weinjahr 2025; each figure carries its source in pipeline/lists/ch_regions.json",
   "url": "https://github.com/doma17-wc/open-wine-atlas/blob/main/pipeline/lists/ch_regions.json",
   "download_used": "pipeline/lists/ch_regions.json; npm package swiss-maps 4.7.0 (municipalities 2024 and 2010)"
+ },
+ "france_communes": {
+  "name": "French commune boundaries (IGN ADMIN EXPRESS, simplified)",
+  "license": "Licence Ouverte / Open Licence 2.0",
+  "attribution": "IGN, via github.com/gregoiredavid/france-geojson",
+  "download_used": "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements/<dept>/communes-<dept>.geojson",
+  "used_for": "outlines of the Champagne communes and vineyard zones (pipeline/champagne.py)"
+ },
+ "bordeaux_classified": {
+  "name": "Official classifications of Bordeaux wines",
+  "attribution": "1855 classification (Conseil des Grands Crus Classés en 1855), Graves 1959 (arrêté of 7 Aug 1953, revised 1959), Saint-Émilion 2022 (INAO)",
+  "license": "facts; CC BY 4.0 for the compilation",
+  "used_for": "pipeline/lists/bordeaux_classified.json, pipeline/bordeaux_deep.py",
+  "locations": "Wikipedia article coordinates (CC BY-SA) and OpenStreetMap winery points (ODbL)"
  }
 }
