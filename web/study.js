@@ -76,7 +76,7 @@ const dueKeys = () => Object.entries(ST().cards).filter(([, c]) => c.due <= Date
 let DATA = null, loading = null;
 function loadData() {
   if (DATA) return Promise.resolve(DATA);
-  if (!loading) loading = fetch("/data/study.json").then((r) => r.json()).then((d) => {
+  if (!loading) loading = fetch("/data/study.json" + (window.OWA_DATA_V && window.OWA_DATA_V !== "dev" ? "?v=" + window.OWA_DATA_V : "")).then((r) => r.json()).then((d) => {
     DATA = d;
     DATA.byLesson = new Map(); DATA.byPath = new Map();
     d.paths.forEach((p) => { DATA.byPath.set(p.id, p); p.lessons.forEach((l, i) => { l.path = p; l.n = i; DATA.byLesson.set(l.id, l); }); });

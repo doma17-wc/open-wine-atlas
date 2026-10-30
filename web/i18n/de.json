@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "Der Süden der Appellation, im Département Aube, mit zwei Gemeinden in der Haute-Marne. Pinot Noir bedeckt mehr als vier Fünftel der Reben, auf Kimmeridge-Mergel. Sie teilt sich in Bar-sur-Aubois und Barséquanais, zu dem Les Riceys gehört.",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "Die Gemeindegrenze: Die Appellation Champagne ist Gemeinde für Gemeinde abgegrenzt. Die Reben bedecken nur einen Teil davon: Die Rebflächen-Ebene der Karte zeigt, wo sie stehen.",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "Die eigentliche Côte des Blancs, 10 Gemeinden. Mit Val du Petit Morin, Côte de Sézanne, Vitryat und Montgueux umfasst die erweiterte Zone der Union des Maisons de Champagne 6.304 ha.",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Anteil an der bestockten Fläche der Zone. Union des Maisons de Champagne (UMC), Tabellen des geografischen Gebiets; das Jahr ist nicht angegeben."
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Anteil an der bestockten Fläche der Zone. Union des Maisons de Champagne (UMC), Tabellen des geografischen Gebiets; das Jahr ist nicht angegeben.",
+ "a classified estate": "ein klassifiziertes Weingut",
+ "a grand cru village": "eine Grand-Cru-Gemeinde",
+ "a premier cru village": "eine Premier-Cru-Gemeinde",
+ "a vineyard zone": "eine Weinbauzone",
+ "a village": "ein Dorf",
+ "{rank} in the {list}": "{rank} in der {list}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name} ist ein klassifiziertes Weingut der Appellation {parent}: {ranks}.",
+ "classified estates": "klassifizierte Weingüter"
 }

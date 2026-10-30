@@ -120,6 +120,24 @@ T = {
         "地区の植栽面積に占める割合。シャンパーニュ・メゾン組合（UMC）の地理的区域の表による。年は記載なし。",
         "占该区种植面积的比例。香槟酒商联合会（UMC）地理区域表；未注明年份。",
         "지구 재배 면적에서 차지하는 비율. 샹파뉴 메종 연합(UMC) 지리적 구역 표 기준이며 연도는 표시되지 않음."],
+    "a classified estate": ["un cru classé", "un cru classificato", "ein klassifiziertes Weingut", "una finca clasificada", "uma propriedade classificada",
+                            "een geklasseerd wijngoed", "格付けシャトー", "一座列级酒庄", "등급 샤토"],
+    "a grand cru village": ["un village grand cru", "un villaggio grand cru", "eine Grand-Cru-Gemeinde", "un pueblo grand cru", "uma aldeia grand cru",
+                            "een grand-crudorp", "グラン・クリュの村", "一个特级园村庄", "그랑 크뤼 마을"],
+    "a premier cru village": ["un village premier cru", "un villaggio premier cru", "eine Premier-Cru-Gemeinde", "un pueblo premier cru", "uma aldeia premier cru",
+                              "een premier-crudorp", "プルミエ・クリュの村", "一个一级园村庄", "프르미에 크뤼 마을"],
+    "a vineyard zone": ["une zone viticole", "una zona viticola", "eine Weinbauzone", "una zona vitícola", "uma zona vitícola", "een wijnbouwzone",
+                        "ブドウ栽培地区", "一个葡萄园区", "포도밭 지구"],
+    "a village": ["un village", "un villaggio", "ein Dorf", "un pueblo", "uma aldeia", "een dorp", "村", "一个村庄", "마을"],
+    "{rank} in the {list}": ["{rank} dans le {list}", "{rank} nella {list}", "{rank} in der {list}", "{rank} en la {list}", "{rank} na {list}",
+                             "{rank} in de {list}", "{list}の{rank}", "{list}中的{rank}", "{list}의 {rank}"],
+    "{name} is a classified estate of {parent}: {ranks}.": ["{name} est un cru classé de {parent} : {ranks}.", "{name} è un cru classificato di {parent}: {ranks}.",
+        "{name} ist ein klassifiziertes Weingut der Appellation {parent}: {ranks}.", "{name} es una finca clasificada de {parent}: {ranks}.",
+        "{name} é uma propriedade classificada de {parent}: {ranks}.", "{name} is een geklasseerd wijngoed van {parent}: {ranks}.",
+        "{name}は{parent}の格付けシャトー：{ranks}。", "{name}是{parent}的列级酒庄：{ranks}。", "{name}은(는) {parent}의 등급 샤토: {ranks}."],
+    "classified estates": ["crus classés", "cru classificati", "klassifizierte Weingüter", "fincas clasificadas", "propriedades classificadas",
+                           "geklasseerde wijngoederen", "格付けシャトー", "列级酒庄", "등급 샤토"],
+
 }
 
 

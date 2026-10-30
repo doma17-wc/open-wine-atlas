@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "O sul da denominação, no Aube, com duas comunas no Alto Marne. A Pinot Noir cobre mais de quatro quintos das vinhas, sobre margas kimeridgianas. Divide-se em Bar-sur-Aubois e Barséquanais, que inclui Les Riceys.",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "O limite da comuna: a denominação Champagne é delimitada comuna a comuna. As vinhas cobrem apenas uma parte: a camada de vinhas do mapa mostra onde estão.",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "A Côte des Blancs propriamente dita, 10 comunas. Com o Val du Petit Morin, a Côte de Sézanne, o Vitryat e Montgueux, a zona alargada da Union des Maisons de Champagne cobre 6304 ha.",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Parte da área plantada da zona. Union des Maisons de Champagne (UMC), tabelas da área geográfica; o ano não é indicado."
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Parte da área plantada da zona. Union des Maisons de Champagne (UMC), tabelas da área geográfica; o ano não é indicado.",
+ "a classified estate": "uma propriedade classificada",
+ "a grand cru village": "uma aldeia grand cru",
+ "a premier cru village": "uma aldeia premier cru",
+ "a vineyard zone": "uma zona vitícola",
+ "a village": "uma aldeia",
+ "{rank} in the {list}": "{rank} na {list}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name} é uma propriedade classificada de {parent}: {ranks}.",
+ "classified estates": "propriedades classificadas"
 }

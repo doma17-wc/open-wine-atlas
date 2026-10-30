@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "产区南部，位于奥布省，另有两个市镇在上马恩省。黑皮诺占葡萄园的五分之四以上，种植在启莫里阶泥灰岩上。分为奥布河畔巴尔区和包括里赛的塞纳河畔巴尔区。",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "市镇边界：香槟产区按市镇划定。葡萄园只占其中一部分：地图的葡萄园图层显示其位置。",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "狭义的白丘，共10个市镇。加上小莫兰河谷、塞扎讷丘、维特里亚和蒙格，香槟酒商联合会的广义产区共6,304公顷。",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "占该区种植面积的比例。香槟酒商联合会（UMC）地理区域表；未注明年份。"
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "占该区种植面积的比例。香槟酒商联合会（UMC）地理区域表；未注明年份。",
+ "a classified estate": "一座列级酒庄",
+ "a grand cru village": "一个特级园村庄",
+ "a premier cru village": "一个一级园村庄",
+ "a vineyard zone": "一个葡萄园区",
+ "a village": "一个村庄",
+ "{rank} in the {list}": "{list}中的{rank}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name}是{parent}的列级酒庄：{ranks}。",
+ "classified estates": "列级酒庄"
 }
