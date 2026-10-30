@@ -220,17 +220,19 @@
    "series": "",
    "not_before": "2026-10-30",
    "why": "Spain study path: the second DOCa (DOQ), llicorella slate, Garnacha and Cariñena",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-07 to 2026-10-30 on 2026-10-29 so the Sancerre outro 'Next deep dive: Priorat' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-07 to 2026-10-30 on 2026-10-29 so the Sancerre outro 'Next deep dive: Priorat' is true. Made 2026-10-30. Climate: AEMET normals 1981-2010 for Reus Aeropuerto (71 m, 27 km away; no official normals for a station inside the DOQ found, Meteocat Falset has none published), compared with Logroño (Rioja), period named on screen. Grapes and yield: DOQ Priorat Informe verema 2025. Map pass slow today (globe shot ~30 s per frame).",
+   "slot": "2026-10-30T17:50+01:00"
   },
   {
    "slug": "deep-alsace",
    "place": "Alsace",
    "atlas_id": "fr-inao-a1",
    "series": "",
-   "not_before": "2026-11-10",
+   "not_before": "2026-10-31",
    "why": "Alsace study path: rain shadow of the Vosges, Riesling, Gewurztraminer, Pinot Gris, the 51 Grands Crus",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-10 to 2026-10-31 on 2026-10-30 so the Priorat outro 'Next deep dive: Alsace' is true."
   },
   {
    "slug": "deep-kakheti",

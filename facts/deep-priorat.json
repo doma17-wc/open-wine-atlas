@@ -1,0 +1,284 @@
+{
+ "slug": "deep-priorat",
+ "place": "Priorat",
+ "atlas_id": "es-eupdo-PDO-ES-A1560",
+ "made": "2026-10-30",
+ "station": {
+  "name": "Reus Aeropuerto",
+  "id": "0016A",
+  "height_m": 71,
+  "lat": 41.145,
+  "lon": 1.1636,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0016A",
+  "note": "No official station normals inside the DOQ were reachable (Meteocat Falset station: no published normals found). Reus is the atlas near_city, 27 km from Priorat on the coastal plain. Same service and period as the comparison station (Logroño, values from facts/deep-rioja.json), named on screen."
+ },
+ "comparison_station": {
+  "name": "Logroño Aeropuerto",
+  "id": "9170",
+  "height_m": 353,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170",
+  "note": "values reused from facts/deep-rioja.json (fetched 2026-10-27)"
+ },
+ "monthly": {
+  "reus_precip_mm": [
+   29,
+   28,
+   28,
+   37,
+   54,
+   25,
+   15,
+   42,
+   77,
+   75,
+   53,
+   36
+  ],
+  "reus_precip_year": 500,
+  "reus_tmax": [
+   14.1,
+   14.9,
+   17.1,
+   19.0,
+   22.2,
+   26.3,
+   29.3,
+   29.4,
+   26.3,
+   22.3,
+   17.5,
+   14.6
+  ],
+  "reus_tmin": [
+   3.9,
+   4.5,
+   6.6,
+   8.6,
+   12.1,
+   16.1,
+   19.1,
+   19.7,
+   16.6,
+   12.7,
+   7.6,
+   4.7
+  ],
+  "reus_tmean": [
+   9.0,
+   9.7,
+   11.9,
+   13.8,
+   17.2,
+   21.2,
+   24.2,
+   24.6,
+   21.5,
+   17.5,
+   12.6,
+   9.7
+  ],
+  "reus_sun_h": [
+   157,
+   162,
+   197,
+   222,
+   251,
+   274,
+   306,
+   265,
+   209,
+   182,
+   157,
+   145
+  ],
+  "reus_sun_year": "not given by AEMET (-)",
+  "logrono_precip_mm": [
+   28,
+   23,
+   26,
+   46,
+   47,
+   44,
+   30,
+   21,
+   26,
+   37,
+   40,
+   38
+  ],
+  "logrono_precip_year": 405,
+  "logrono_sun_h": [
+   105,
+   133,
+   189,
+   198,
+   225,
+   270,
+   312,
+   285,
+   220,
+   164,
+   113,
+   93
+  ],
+  "logrono_sun_year": 2305
+ },
+ "derived": [
+  {
+   "claim": "April to October mean temperature at Reus",
+   "value": 20.0,
+   "shown": "20.0 °C",
+   "computation": "sum(reus_tmean[3:10])/7"
+  },
+  {
+   "claim": "Annual sunshine at Reus, sum of the monthly normals",
+   "value": 2527,
+   "shown": "2,527 hours",
+   "computation": "sum(reus_sun_h)"
+  },
+  {
+   "claim": "sum check monthly precip Reus",
+   "value": 499,
+   "note": "AEMET annual 500"
+  },
+  {
+   "claim": "Other varieties share of 2025 harvest",
+   "value": 8.08,
+   "computation": "100 - (41.82+27.33+9.02+7.73+6.02)"
+  },
+  {
+   "claim": "Terrain relief of the outline",
+   "value": 1089,
+   "computation": "e max 1146 - e min 57"
+  }
+ ],
+ "facts": [
+  {
+   "claim": "2,214 ha of vineyard in production in 2025 (2,262 ha total)",
+   "value": 2214,
+   "source": "DOQ Priorat, Informe verema 2025",
+   "url": "https://www.doqpriorat.org/wp-content/uploads/2025/12/DOQ-Informe-verema-2025.pdf"
+  },
+  {
+   "claim": "502 registered growers, 120 registered wineries",
+   "source": "DOQ Priorat, Informe verema 2025",
+   "url": "https://www.doqpriorat.org/wp-content/uploads/2025/12/DOQ-Informe-verema-2025.pdf"
+  },
+  {
+   "claim": "11 municipalities in the PDO",
+   "value": 11,
+   "source": "Priorat PDO, EU GI register (via Open Wine Atlas details-es.json)",
+   "url": "https://ec.europa.eu/info/food-farming-fisheries/food-safety-and-quality/certification/quality-labels/geographical-indications-register/details/8041"
+  },
+  {
+   "claim": "Spain's second DOCa after Rioja (DOQ in Catalan); only two DOCa",
+   "source": "Open Wine Atlas Study, Spain path",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "In the hills inland from Tarragona",
+   "source": "Open Wine Atlas Study, Spain lesson 4",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "Vineyards from about 100 m up to 750 m",
+   "source": "DOQ Priorat, Varietals page",
+   "url": "https://www.doqpriorat.org/en/varietals/"
+  },
+  {
+   "claim": "Outline elevation 57 to 1,146 m (mean 459)",
+   "source": "Open Wine Atlas terrain (details-es.json)",
+   "url": "https://openwineatlas.com/places/spain/priorat"
+  },
+  {
+   "claim": "Llicorella: dark, brittle slate that splits into thin layers, holds little water, roots go deep, yields very low",
+   "source": "Open Wine Atlas Study, Spain lesson 4",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "Reus 500 mm/yr, Logroño 405 mm/yr; Sept 77 and Oct 75 mm wettest at Reus",
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0016A"
+  },
+  {
+   "claim": "Reus July sun 306 h; Logroño annual 2,305 h",
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0016A"
+  },
+  {
+   "claim": "WSET bands: warm 18.5 to 21 °C growing-season average",
+   "source": "Open Wine Atlas Study",
+   "url": "https://openwineatlas.com"
+  },
+  {
+   "claim": "Reus August mean max 29.4 °C",
+   "source": "AEMET normals 1981-2010",
+   "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=0016A"
+  },
+  {
+   "claim": "2025 harvest shares by weight",
+   "value": {
+    "Garnatxa Negra": 41.82,
+    "Carinyena": 27.33,
+    "Garnatxa Blanca": 9.02,
+    "Syrah": 7.73,
+    "Cabernet Sauvignon": 6.02
+   },
+   "source": "DOQ Priorat, Informe verema 2025",
+   "url": "https://www.doqpriorat.org/wp-content/uploads/2025/12/DOQ-Informe-verema-2025.pdf"
+  },
+  {
+   "claim": "Average yield 2025: 2,481 kg/ha",
+   "value": 2481,
+   "source": "DOQ Priorat, Informe verema 2025",
+   "url": "https://www.doqpriorat.org/wp-content/uploads/2025/12/DOQ-Informe-verema-2025.pdf"
+  },
+  {
+   "claim": "Maximum yield 8,000 kg/ha",
+   "value": 8000,
+   "source": "Priorat PDO specification (via Open Wine Atlas details-es.json max_yield_kg_ha)",
+   "url": "https://openwineatlas.com/places/spain/priorat"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What is llicorella?",
+   "options": [
+    "Chalky clay",
+    "Dark slate",
+    "Volcanic ash"
+   ],
+   "answer": "B, dark slate",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "Which grape gave most of the 2025 harvest?",
+   "options": [
+    "Carinyena",
+    "Syrah",
+    "Garnatxa Negra"
+   ],
+   "answer": "C, Garnatxa Negra (41.8%)",
+   "source": "DOQ Priorat, Informe verema 2025"
+  },
+  {
+   "q": "Which is Spain's other DOCa?",
+   "options": [
+    "Rioja",
+    "Ribera del Duero",
+    "Rías Baixas"
+   ],
+   "answer": "A, Rioja",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "dropped": [
+  "Meteocat station normals for Falset (not found)",
+  "DOQ grant year (no reachable official source)",
+  "Atlas bedrock classes (generalised map, does not show llicorella)"
+ ]
+}

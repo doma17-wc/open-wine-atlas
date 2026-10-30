@@ -195,6 +195,18 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-priorat",
+   "place": "Priorat",
+   "slot": "2026-10-30T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=4736624584518156780",
+   "sources": [
+    "AEMET normals 1981-2010 (Reus Aeropuerto, Logroño Aeropuerto)",
+    "DOQ Priorat, Informe verema 2025",
+    "Priorat PDO specification (EU register)",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
