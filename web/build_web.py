@@ -34,6 +34,23 @@ HEAD = """<!doctype html>
 
 web = src.replace('const MODE = "artifact";', 'const MODE = "web";', 1)
 assert web != src, "MODE marker not found"
+# data version: a short hash of every file in web/data, so a release with new data gets new addresses and
+# browsers that cached the old tiles or place files for hours load the new ones at once
+import hashlib  # noqa: E402
+h = hashlib.sha256()
+data_dir = os.path.join(here, "data")
+for name in sorted(os.listdir(data_dir)):
+    fp = os.path.join(data_dir, name)
+    if os.path.isfile(fp):
+        h.update(name.encode())
+        with open(fp, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+data_v = h.hexdigest()[:10]
+web2 = web.replace('const DATA_V = "dev";', 'const DATA_V = "' + data_v + '";', 1)
+assert web2 != web, "DATA_V marker not found"
+web = web2
+print("data version", data_v)
 web = HEAD + web.replace('<div id="map"', '</head>\n<body>\n<div id="map"', 1) + "\n</body>\n</html>\n"
 open(os.path.join(here, "index.html"), "w", encoding="utf-8").write(web)
 open(os.path.join(here, "artifact.html"), "w", encoding="utf-8").write(src)

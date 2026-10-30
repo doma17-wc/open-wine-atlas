@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "アペラシオンの南部で、オーブ県にあり、オート＝マルヌ県の2つのコミューンを含む。キンメリッジ泥灰土の上で、ピノ・ノワールが畑の5分の4以上を占める。バール・シュル・オーボワと、レ・リセを含むバルセカネに分かれる。",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "コミューンの境界。シャンパーニュのアペラシオンはコミューン単位で定められている。ブドウ畑はその一部だけで、地図のブドウ畑レイヤーで場所がわかる。",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "本来のコート・デ・ブランで、10のコミューン。ヴァル・デュ・プティ・モラン、コート・ド・セザンヌ、ヴィトリア、モングーを合わせたメゾン組合の広い地区は6,304 ha。",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "地区の植栽面積に占める割合。シャンパーニュ・メゾン組合（UMC）の地理的区域の表による。年は記載なし。"
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "地区の植栽面積に占める割合。シャンパーニュ・メゾン組合（UMC）の地理的区域の表による。年は記載なし。",
+ "a classified estate": "格付けシャトー",
+ "a grand cru village": "グラン・クリュの村",
+ "a premier cru village": "プルミエ・クリュの村",
+ "a vineyard zone": "ブドウ栽培地区",
+ "a village": "村",
+ "{rank} in the {list}": "{list}の{rank}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name}は{parent}の格付けシャトー：{ranks}。",
+ "classified estates": "格付けシャトー"
 }

@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "El sur de la denominación, en el Aube, con dos municipios en el Alto Marne. La Pinot Noir cubre más de cuatro quintas partes de las viñas, sobre margas kimmeridgienses. Se divide en Bar-sur-Aubois y Barséquanais, que incluye Les Riceys.",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "El límite del municipio: la denominación Champagne se delimita municipio por municipio. Las viñas solo cubren una parte: la capa de viñedos del mapa muestra dónde están.",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "La Côte des Blancs propiamente dicha, 10 municipios. Con el Val du Petit Morin, la Côte de Sézanne, el Vitryat y Montgueux, la zona ampliada de la Union des Maisons de Champagne cubre 6304 ha.",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Parte de la superficie plantada de la zona. Union des Maisons de Champagne (UMC), tablas del área geográfica; no se indica el año."
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "Parte de la superficie plantada de la zona. Union des Maisons de Champagne (UMC), tablas del área geográfica; no se indica el año.",
+ "a classified estate": "una finca clasificada",
+ "a grand cru village": "un pueblo grand cru",
+ "a premier cru village": "un pueblo premier cru",
+ "a vineyard zone": "una zona vitícola",
+ "a village": "un pueblo",
+ "{rank} in the {list}": "{rank} en la {list}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name} es una finca clasificada de {parent}: {ranks}.",
+ "classified estates": "fincas clasificadas"
 }

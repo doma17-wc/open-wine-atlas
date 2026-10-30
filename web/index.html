@@ -938,6 +938,11 @@ const fmt = (n) => Number(n).toLocaleString(LOCALE);
 // "artifact": the claude.ai artifact host, which serves text only and blocks outside requests.
 const MODE = "web"; // set by build_web.py
 const WEB = MODE === "web";
+// data version, set by build_web.py from the content of web/data: every release gets new data addresses,
+// so no browser keeps tiles or place files of an older release (they are cached for hours, the tiles for a day)
+const DATA_V = "3aa32d75d6";
+const dv = (path) => WEB ? path + "?v=" + DATA_V : path;
+window.OWA_DATA_V = DATA_V;
 const QS = new URLSearchParams(location.search);
 const REPO = "https://github.com/doma17-wc/open-wine-atlas";
 // Terrain: Mapterhorn terrarium tiles (national lidar models where open, Copernicus GLO-30 elsewhere)
@@ -972,10 +977,10 @@ function loadArchive(file) {
     let p;
     if (WEB) {
       // read by HTTP range request; if the server ignores ranges, fall back to one full download
-      const pm = new pmtiles.PMTiles(base + "data/" + file);
+      const pm = new pmtiles.PMTiles(dv(base + "data/" + file));
       p = pm.getHeader().then(() => { protocol.add(pm); return file; }).catch(() =>
-        fetch(base + "data/" + file).then((r) => { if (!r.ok) throw new Error(file + " " + r.status); return r.arrayBuffer(); })
-          .then((buf) => { protocol.add(new pmtiles.PMTiles(new MemSource(base + "data/" + file, buf))); return file; }));
+        fetch(dv(base + "data/" + file)).then((r) => { if (!r.ok) throw new Error(file + " " + r.status); return r.arrayBuffer(); })
+          .then((buf) => { protocol.add(new pmtiles.PMTiles(new MemSource(dv(base + "data/" + file), buf))); return file; }));
     } else {
       p = fetchBin("data/" + file).then((buf) => { protocol.add(new pmtiles.PMTiles(new MemSource(file, buf))); return file; });
     }
@@ -984,7 +989,7 @@ function loadArchive(file) {
   return loaded.get(file);
 }
 // sources are registered as pmtiles://<key>; in web mode the key is the absolute file URL
-const pmUrl = (file) => "pmtiles://" + (WEB ? base + "data/" + file : file);
+const pmUrl = (file) => "pmtiles://" + (WEB ? dv(base + "data/" + file) : file);
 
 // ---------- map
 // globe or flat: the viewer's last choice, globe by default. MapLibre's globe turns into the flat map by itself around zoom 11-12.
@@ -1220,7 +1225,7 @@ const GEO_PICK = ["geo-river-labels", "geo-lake-labels", "geo-peaks", "geo-range
 const OSM_URL = QS.get("osm") || "https://tiles.openfreemap.org/planet"; // ?osm=<TileJSON URL> for testing
 let GEO = null, geoById = new Map(), geoLoading = null, HL = null, osmOk = true;
 function loadGeoIndex() {
-  if (!geoLoading) geoLoading = fetch("data/geo.json").then((r) => r.json()).then((d) => {
+  if (!geoLoading) geoLoading = fetch(dv("data/geo.json")).then((r) => r.json()).then((d) => {
     GEO = d.map((r) => ({ name: r[0], kind: r[1], gid: r[2], bbox: r[3], ele: r[4], alts: r[5] || [], _k: norm(r[0] + " " + (r[5] || []).join(" ")) }));
     GEO.forEach((g) => geoById.set(g.gid, g));
     return GEO;
@@ -2359,7 +2364,7 @@ async function fillWiki(p, token) {
 let VINTAGES = null;
 const SCORE_BG = { 1: "#4a3e2c", 2: "#75603a", 3: "#a2803f", 4: "#cfa04a", 5: "#f2c665" };
 const SCORE_FG = { 1: "#e6dccb", 2: "#f3ead9", 3: "#0b0b0d", 4: "#0b0b0d", 5: "#0b0b0d" };
-function loadVintages() { if (!VINTAGES) VINTAGES = fetch("data/vintages.json").then((r) => r.json()).catch(() => ({ regions: [] })); return VINTAGES; }
+function loadVintages() { if (!VINTAGES) VINTAGES = fetch(dv("data/vintages.json")).then((r) => r.json()).catch(() => ({ regions: [] })); return VINTAGES; }
 function vintageRegionsFor(p, d, pd, regions) {
   const office = (d.inao_office || pd.inao_office || "").toLowerCase(), n = norm(p.name), par = norm(p.parent || ""), reg = (d.region || "").toLowerCase();
   return regions.filter((r) => {
@@ -2954,7 +2959,7 @@ function markSelected(id) {
 let INDEX = [], byId = new Map(), byName = new Map(), children = new Map();
 const details = {};
 function getDetails(cc) {
-  if (!details[cc]) details[cc] = fetch("data/details-" + cc.toLowerCase() + ".json").then((r) => r.json()).catch(() => ({}));
+  if (!details[cc]) details[cc] = fetch(dv("data/details-" + cc.toLowerCase() + ".json")).then((r) => r.json()).catch(() => ({}));
   return details[cc];
 }
 
@@ -3112,6 +3117,7 @@ function badgeFor(p, d) {
   if (TOP.includes(p.rank)) return '<span class="badge top">' + esc(RANK_LABEL[p.rank]) + "</span>" + g(p.rank);
   if (p.rank === "premier_cru") return '<span class="badge pc">Premier cru</span>' + g("premier_cru");
   if (p.country === "DE" && p.level === "vineyard") return '<span class="badge de">Einzellage</span>' + g("einzellage");
+  if (p.src === "bxcc") return '<span class="badge top">' + esc(d.class_short || t_("Classified estate")) + "</span>";
   if (p.country === "US") return '<span class="badge std">AVA' + (p.level === "subzone" ? " · " + t_("nested") : "") + "</span>" + g("ava");
   return '<span class="badge std">' + esc(LEVEL_LABEL[p.level] || p.level) + "</span>" + g(p.level);
 }
@@ -3136,14 +3142,22 @@ const WHAT = { region: N_("a wine region"), appellation: N_("an appellation"), s
   "premier_cru appellation": N_("a premier cru appellation"), "premier_cru subzone": N_("a premier cru sub-zone"), "premier_cru vineyard": N_("a premier cru climat"),
   "docg appellation": N_("a DOCG appellation"), "doca appellation": N_("a DOCa appellation"), "pago appellation": N_("a Vino de Pago appellation"),
   "docg subzone": N_("a DOCG sub-zone"), "doca subzone": N_("a DOCa sub-zone") };
+const DEEP_WHAT = { grand_cru: N_("a grand cru village"), premier_cru: N_("a premier cru village") };
 // the sheet shows the planted area, measured live, instead of the area of the outline
 const liveVines = (d) => WEB && !d.vine_area_ha && d.outline_quality !== "point";
 function summary(p, d, pd) {
   const wt = worldType(p, d);
   const lvlKey = p.level === "vineyard" && p.country === "DE" ? "vineyard_DE" : p.level;
   const lc = (s) => p.src === "chreg" && UILANG === "en" ? s.toLowerCase() : s;
-  const what = wt ? t_("a {type}", { type: lc(t_(wt)) }) : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
-  const area = liveVines(d) ? null : d.area_ha ?? (p.src === "chreg" ? d.vine_area_ha : null) ?? null;
+  // a classified estate: its rank first, then the usual sentence about where it lies
+  if (p.src === "bxcc" && d.classifications?.length) {
+    const c = d.classifications.map(([cl, r]) => t_("{rank} in the {list}", { rank: esc(r), list: esc(t_(cl)) }));
+    const at = whereSentence(p, d);
+    return t_("{name} is a classified estate of {parent}: {ranks}.", { name: esc(p.name), parent: esc(p.parent), ranks: fmtList(c) }) + (at ? " " + at : "");
+  }
+  const what = wt ? t_("a {type}", { type: lc(t_(wt)) }) : p.src === "bxcc" ? t_("a classified estate") : p.src === "champ" ? t_(DEEP_WHAT[p.rank] || (/^fr-champ-z-/.test(p.id) ? N_("a vineyard zone") : N_("a village")))
+    : t_(WHAT[p.rank + " " + p.level] || WHAT[lvlKey] || WHAT.place);
+  const area = liveVines(d) ? null : d.area_ha ?? (p.src === "chreg" || p.src === "champ" ? d.vine_area_ha : null) ?? null;
   let towns = d.gemarkungen?.length ? d.gemarkungen : d.communes;
   if (towns?.length === 1 && norm(towns[0]) === norm(p.name)) towns = null;
   let t = t_("{name} is {what}{of} in {country}{area}{towns}.", {
@@ -3888,6 +3902,7 @@ function renderGroupSheet(k) {
   if (st.top) tiles.push([st.top, TOP_WORD[cc] || t_("top classified"), "top"]);
   if (st.pc) tiles.push([st.pc, t_("premiers crus"), "pc"]);
   if (st.vin && cc !== "FR") tiles.push([st.vin, cc === "DE" ? "Einzellagen" : t_("vineyard sites"), ""]);
+  else if (st.vin && k.startsWith("g:FR/bordeaux")) tiles.push([st.vin, t_("classified estates"), ""]);
   else if (st.vin) tiles.push([st.vin, t_("climats and lieux-dits"), ""]);
   html += '<div class="gtiles n' + Math.min(4, tiles.length) + '">' + tiles.slice(0, 4).map(([v, l, c]) => '<div class="' + c + '"><b>' + fmt(v) + "</b><span>" + l + "</span></div>").join("") + "</div>";
 
@@ -3930,7 +3945,7 @@ function renderGroupSheet(k) {
 let REELS = null, SET = null, setMarks = [];
 const SET_HASH = /^(r|set|vs):/;
 function loadReels() {
-  if (!REELS) REELS = fetch("data/reels.json").then((r) => r.ok ? r.json() : {}).then((j) => j.reels || []).catch(() => []);
+  if (!REELS) REELS = fetch(dv("data/reels.json")).then((r) => r.ok ? r.json() : {}).then((j) => j.reels || []).catch(() => []);
   return REELS;
 }
 async function specOf(h) {
@@ -4122,7 +4137,7 @@ LOCALIZE.push(WINE_KIND);
 const WINE_DOT = { r: "#8e3040", w: "#d9c88a", p: "#d39aa0", s: "#e9dfb4", f: "#6e2a2c", d: "#c9963f" };
 let PROD = null, prodLoading = null, WINES = null, winesLoading = null, prodAt = null, winesOf = null;
 function loadProducers() {
-  if (!prodLoading) prodLoading = fetch("data/producers.json").then((r) => r.ok ? r.json() : null).then((j) => {
+  if (!prodLoading) prodLoading = fetch(dv("data/producers.json")).then((r) => r.ok ? r.json() : null).then((j) => {
     if (!j || !j.p) return null;
     j.p.forEach((x, i) => { x._k = norm(x[0]); x._i = i; x._s = x._k.replace(/ /g, "-") + "-" + x[1].toLowerCase(); });
     PROD = j;
@@ -4131,7 +4146,7 @@ function loadProducers() {
   return prodLoading;
 }
 function loadWines() {
-  if (!winesLoading) winesLoading = Promise.all([loadProducers(), fetch("data/wines.json").then((r) => r.ok ? r.json() : null)]).then(([pj, j]) => {
+  if (!winesLoading) winesLoading = Promise.all([loadProducers(), fetch(dv("data/wines.json")).then((r) => r.ok ? r.json() : null)]).then(([pj, j]) => {
     if (!pj || !j || !j.w) return null;
     winesOf = new Map();
     j.w.forEach((w, i) => {
@@ -5017,7 +5032,7 @@ const REC_HINT = { highest: N_("mean elevation, outlines drawn on the wine area 
   largest: N_("area of the outline"), smallest: N_("measured area"), wineries: N_("OpenStreetMap wineries inside the outline"),
   inland: N_("from the centre to the nearest sea coast"), north: N_("latitude of the centre"), south: N_("latitude of the centre") };
 function loadRecords() {
-  if (!RECORDS) RECORDS = fetch("data/records.json").then((r) => r.json()).catch(() => null);
+  if (!RECORDS) RECORDS = fetch(dv("data/records.json")).then((r) => r.json()).catch(() => null);
   return RECORDS;
 }
 function recValue(cat, v) {
@@ -5151,8 +5166,8 @@ map.on("load", async () => {
   try {
     await I18N_READY;
     showLoading(t_("Loading the atlas…"));
-    const [m, idx, tree] = await Promise.all([fetch("data/manifest.json").then((r) => r.json()), fetch("data/search.json").then((r) => r.json()),
-      fetch("data/tree.json").then((r) => r.json()).catch(() => null), loadArchive("base.pmtiles")]);
+    const [m, idx, tree] = await Promise.all([fetch(dv("data/manifest.json")).then((r) => r.json()), fetch(dv("data/search.json")).then((r) => r.json()),
+      fetch(dv("data/tree.json")).then((r) => r.json()).catch(() => null), loadArchive("base.pmtiles")]);
     manifest = m;
     INDEX = idx;
     INDEX.forEach((r) => {

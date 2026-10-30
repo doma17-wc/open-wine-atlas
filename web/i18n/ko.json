@@ -1399,5 +1399,13 @@
  "The south of the appellation, in the Aube, with two communes in the Haute-Marne. Pinot Noir covers more than four fifths of the vines, on Kimmeridgian marl. It splits into the Bar-sur-Aubois and the Barséquanais, which includes Les Riceys.": "아펠라시옹의 남부로 오브 주에 있으며, 오트마른 주의 코뮌 2곳을 포함한다. 키메리지 이회토 위에서 피노 누아가 포도밭의 5분의 4 이상을 차지한다. 바르쉬르오부아와 레 리세를 포함하는 바르세카네로 나뉜다.",
  "The commune boundary: the Champagne appellation is delimited commune by commune. The vines are only part of it: the vineyard layer of the map shows where they are.": "코뮌 경계. 샹파뉴 아펠라시옹은 코뮌 단위로 정해진다. 포도밭은 그 일부일 뿐이며 지도의 포도밭 레이어에서 위치를 볼 수 있다.",
  "The Côte des Blancs proper, 10 communes. With the Val du Petit Morin, Côte de Sézanne, Vitryat and Montgueux, the wider zone of the Union des Maisons de Champagne covers 6,304 ha.": "본래의 코트 데 블랑으로 코뮌 10곳. 발 뒤 프티 모랭, 코트 드 세잔, 비트리아, 몽구를 합친 메종 연합의 넓은 지구는 6,304 ha다.",
- "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "지구 재배 면적에서 차지하는 비율. 샹파뉴 메종 연합(UMC) 지리적 구역 표 기준이며 연도는 표시되지 않음."
+ "Share of the planted area of the zone. Union des Maisons de Champagne (UMC), aire géographique tables; the year is not given.": "지구 재배 면적에서 차지하는 비율. 샹파뉴 메종 연합(UMC) 지리적 구역 표 기준이며 연도는 표시되지 않음.",
+ "a classified estate": "등급 샤토",
+ "a grand cru village": "그랑 크뤼 마을",
+ "a premier cru village": "프르미에 크뤼 마을",
+ "a vineyard zone": "포도밭 지구",
+ "a village": "마을",
+ "{rank} in the {list}": "{list}의 {rank}",
+ "{name} is a classified estate of {parent}: {ranks}.": "{name}은(는) {parent}의 등급 샤토: {ranks}.",
+ "classified estates": "등급 샤토"
 }
