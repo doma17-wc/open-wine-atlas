@@ -231,8 +231,9 @@
    "series": "",
    "not_before": "2026-10-31",
    "why": "Alsace study path: rain shadow of the Vosges, Riesling, Gewurztraminer, Pinot Gris, the 51 Grands Crus",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-10 to 2026-10-31 on 2026-10-30 so the Priorat outro 'Next deep dive: Alsace' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-10 to 2026-10-31 on 2026-10-30 so the Priorat outro 'Next deep dive: Alsace' is true. Made 2026-10-31. Climate: official Météo-France fiches 1991-2020 Colmar-Meyenheim 68205001 (207 m) vs Epinal 88136001 (317 m, west of the Vosges) for the rain shadow. Grapes layer: 4 noble grapes and 51 grands crus (Study lesson, INAO data in the atlas); no official variety shares fetched.",
+   "slot": "2026-10-31T17:50+01:00"
   },
   {
    "slug": "deep-kakheti",
@@ -241,6 +242,43 @@
    "series": "",
    "not_before": "2026-11-14",
    "why": "Georgia study path: qvevri wine, Rkatsiteli and Saperavi in the Alazani valley",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-chateauneuf",
+   "place": "Châteauneuf-du-Pape",
+   "atlas_id": "fr-inao-a267",
+   "series": "",
+   "not_before": "2026-11-01",
+   "why": "Rhône study path: galets roulés, Grenache-led blends, the Mistral",
+   "status": "planned",
+   "note": "Added 2026-10-31 so the Alsace outro 'Next deep dive: Châteauneuf-du-Pape' is true."
+  },
+  {
+   "slug": "deep-chianti-classico",
+   "place": "Chianti Classico",
+   "atlas_id": "it-eupdo-PDO-IT-A1235",
+   "series": "",
+   "not_before": "2026-11-02",
+   "why": "Italy study path: Sangiovese, galestro and alberese, the Gran Selezione tier",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-pauillac",
+   "place": "Pauillac",
+   "atlas_id": "fr-inao-a59",
+   "series": "",
+   "not_before": "2026-11-03",
+   "why": "Bordeaux study path: Left Bank gravel, Cabernet Sauvignon, the Gironde",
+   "status": "planned"
+  },
+  {
+   "slug": "deep-marlborough",
+   "place": "Marlborough",
+   "atlas_id": "nz-world-marlborough",
+   "series": "",
+   "not_before": "2026-11-05",
+   "why": "Southern Hemisphere study path: Sauvignon Blanc, Wairau and Awatere valleys, spring frost season",
    "status": "planned"
   }
  ]

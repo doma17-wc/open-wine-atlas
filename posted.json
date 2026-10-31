@@ -207,6 +207,18 @@
     "Priorat PDO specification (EU register)",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-alsace",
+   "place": "Alsace",
+   "slot": "2026-10-31T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=2949733762988460659",
+   "sources": [
+    "Météo-France normals 1991-2020 (Colmar-Meyenheim 68205001, Epinal 88136001)",
+    "INAO data (via Open Wine Atlas)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

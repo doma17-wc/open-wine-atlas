@@ -1,0 +1,305 @@
+{
+ "slug": "deep-alsace",
+ "place": "Alsace",
+ "atlas_id": "fr-inao-a1",
+ "made": "2026-10-31",
+ "station": {
+  "name": "Colmar-Meyenheim",
+  "id": "68205001",
+  "height_m": 207,
+  "lat": 47.92861111111111,
+  "lon": 7.407500000000001,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_68205001.pdf",
+  "note": "Official fiche climatologique, edited 06/06/2026. In the Rhine plain about 20 km from the atlas outline centre (Wintzenheim/Colmar)."
+ },
+ "comparison_station": {
+  "name": "Epinal",
+  "id": "88136001",
+  "height_m": 317,
+  "lat": 48.21055555555556,
+  "lon": 6.451666666666667,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_88136001.pdf",
+  "note": "West of the Vosges, windward side. Official fiche, edited 06/06/2026."
+ },
+ "monthly": {
+  "colmar_tmax": [
+   5.6,
+   7.6,
+   12.6,
+   17.1,
+   21,
+   24.7,
+   26.7,
+   26.5,
+   22,
+   16.3,
+   9.8,
+   6.3
+  ],
+  "colmar_tmin": [
+   -0.8,
+   -0.7,
+   1.9,
+   5.1,
+   9.4,
+   12.9,
+   14.4,
+   14,
+   10.2,
+   6.7,
+   2.7,
+   0.2
+  ],
+  "colmar_tmean": [
+   2.4,
+   3.5,
+   7.2,
+   11.1,
+   15.2,
+   18.8,
+   20.6,
+   20.3,
+   16.1,
+   11.5,
+   6.2,
+   3.2
+  ],
+  "colmar_precip_mm": [
+   33.1,
+   30.6,
+   34,
+   42.8,
+   69.8,
+   66.2,
+   62.8,
+   60.8,
+   51.3,
+   56.8,
+   43.6,
+   43.2
+  ],
+  "colmar_precip_year": 595,
+  "colmar_sun_h": [
+   71.3,
+   99.2,
+   156.3,
+   189.4,
+   210.1,
+   234.4,
+   251.3,
+   232.7,
+   181.1,
+   121.8,
+   72.2,
+   62.6
+  ],
+  "colmar_sun_year": 1882.2,
+  "colmar_frost_nights": [
+   16.9,
+   15.2,
+   10.7,
+   3.2,
+   0.1,
+   0,
+   0,
+   0,
+   0.0,
+   2.2,
+   7.9,
+   15.0
+  ],
+  "colmar_frost_nights_year": 71.3,
+  "colmar_tmax_year": 16.4,
+  "colmar_tmin_year": 6.3,
+  "colmar_tmean_year": 11.3,
+  "epinal_precip_mm": [
+   76.7,
+   65,
+   67.1,
+   61.8,
+   82.1,
+   73.1,
+   71.5,
+   72.6,
+   77.1,
+   88.8,
+   83.1,
+   88.1
+  ],
+  "epinal_precip_year": 907,
+  "epinal_sun_h": [
+   62.6,
+   86.5,
+   142.5,
+   177.5,
+   206.5,
+   225.1,
+   237.7,
+   220.5,
+   170.5,
+   112.8,
+   63.9,
+   53.8
+  ],
+  "epinal_sun_year": 1759.8
+ },
+ "derived": {
+  "aproct_tmean": 16.23,
+  "aproct_rain": 410.5,
+  "rain_sum": 595.0,
+  "epinal_rain_sum": 907.0,
+  "rain_diff_epinal": 312,
+  "rain_ratio_pct": 65.6,
+  "sun_sum": 1882.4,
+  "sun_diff_epinal": 122.4,
+  "frost_nights_sum": 71.2,
+  "relief_m": 348,
+  "km_colmar_station_to_outline_centre": 20.0,
+  "km_epinal_to_outline_centre": 63.2,
+  "km_epinal_to_colmar_station": 77.6
+ },
+ "derived_code": "mean(tmean[3:10]) April..October; sum(rr[3:10]); 907-595; 1882.2-1759.8; 514-166; haversine distances from fiche coordinates and atlas outline centre (48.08899, 7.2845)",
+ "facts": [
+  {
+   "claim": "Delimited area 20,108 ha",
+   "value": 20108,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-fr.json fr-inao-a1 area_ha (INAO data, 2026-08-31)"
+  },
+  {
+   "claim": "117 communes",
+   "value": 117,
+   "source": "Open Wine Atlas details-fr.json communes list (INAO data)"
+  },
+  {
+   "claim": "Outline about 140 km north to south",
+   "value": 139.54,
+   "unit": "km",
+   "source": "Open Wine Atlas details-fr.json extent_km"
+  },
+  {
+   "claim": "Between the Vosges (west) and the Rhine (east), lower slopes of the Vosges, mostly facing east and southeast",
+   "source": "Open Wine Atlas Study, lesson north-france-alsace"
+  },
+  {
+   "claim": "Terrain inside outline: min 166 m, mean 252 m, max 514 m",
+   "value": [
+    166,
+    252,
+    514,
+    190,
+    344
+   ],
+   "source": "Open Wine Atlas terrain e"
+  },
+  {
+   "claim": "Soils are a mosaic: granite, limestone, marl, sandstone, schist, volcanic rock",
+   "source": "Open Wine Atlas Study lesson"
+  },
+  {
+   "claim": "Bedrock shares in outline: unconsolidated sediments 24%, carbonate sedimentary 24%, mixed sedimentary 22%",
+   "source": "Open Wine Atlas details-fr.json bedrock"
+  },
+  {
+   "claim": "Colmar-Meyenheim (207 m) 595 mm precipitation a year, 1991-2020",
+   "value": 595,
+   "unit": "mm",
+   "source": "Météo-France fiche 68205001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_68205001.pdf"
+  },
+  {
+   "claim": "Epinal (317 m) 907 mm a year, 1991-2020",
+   "value": 907,
+   "unit": "mm",
+   "source": "Météo-France fiche 88136001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_88136001.pdf"
+  },
+  {
+   "claim": "Colmar-Meyenheim sunshine 1,882 h a year; Epinal 1,760 h",
+   "value": [
+    1882.2,
+    1759.8
+   ],
+   "unit": "h",
+   "source": "Météo-France fiches 68205001, 88136001"
+  },
+  {
+   "claim": "April to October mean temperature at Colmar-Meyenheim 16.2 °C (derived)",
+   "value": 16.23,
+   "unit": "°C",
+   "source": "derived from Météo-France fiche 68205001"
+  },
+  {
+   "claim": "July mean max 26.7 °C",
+   "value": 26.7,
+   "source": "Météo-France fiche 68205001"
+  },
+  {
+   "claim": "71 nights a year with Tn <= 0 °C",
+   "value": 71.3,
+   "source": "Météo-France fiche 68205001"
+  },
+  {
+   "claim": "WSET cool climate band: growing season average up to 16.5 °C",
+   "source": "Open Wine Atlas Study (WSET bands), as used in deep-sancerre"
+  },
+  {
+   "claim": "Four noble grapes: Riesling, Gewurztraminer, Pinot Gris, Muscat; Pinot Noir the only red",
+   "source": "Open Wine Atlas Study lesson; INAO grape list in details-fr.json"
+  },
+  {
+   "claim": "13 varieties listed for AOC Alsace",
+   "value": 13,
+   "source": "Open Wine Atlas details-fr.json grapes (INAO data)"
+  },
+  {
+   "claim": "51 Alsace Grand Cru appellations",
+   "value": 51,
+   "source": "Open Wine Atlas search.json (51 'Alsace grand cru' appellations) and Study lesson"
+  },
+  {
+   "claim": "Alsace AOC 1962, Alsace Grand Cru 1975",
+   "source": "Open Wine Atlas Study lesson"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which mountains put Alsace in a rain shadow?",
+   "options": [
+    "Jura",
+    "Vosges",
+    "Black Forest"
+   ],
+   "answer": "B Vosges",
+   "source": "Open Wine Atlas Study lesson"
+  },
+  {
+   "q": "Which of these is a noble grape of Alsace?",
+   "options": [
+    "Sylvaner",
+    "Pinot Blanc",
+    "Muscat"
+   ],
+   "answer": "C Muscat",
+   "source": "Open Wine Atlas Study lesson"
+  },
+  {
+   "q": "About how much rain falls a year at Colmar-Meyenheim?",
+   "options": [
+    "About 600 mm",
+    "About 900 mm",
+    "About 1,200 mm"
+   ],
+   "answer": "A About 600 mm (595 mm)",
+   "source": "Météo-France fiche 68205001"
+  }
+ ],
+ "dropped": [
+  "Variety shares (no official CIVA/Agreste figure fetched this run)",
+  "'Colmar is one of the driest towns in France' ranking (not shown, number used instead)"
+ ]
+}

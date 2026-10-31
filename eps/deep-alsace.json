@@ -1,0 +1,535 @@
+{
+ "slug": "deep-alsace",
+ "id": "fr-inao-a1",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "alpine",
+  57
+ ],
+ "markers": [
+  {
+   "lng": 7.4075,
+   "lat": 47.9286,
+   "label": "Colmar-Meyenheim",
+   "shots": [
+    3,
+    4
+   ]
+  },
+  {
+   "lng": 6.4517,
+   "lat": 48.2106,
+   "label": "Epinal",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     4.0,
+     47.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     4.5,
+     47.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     7.52,
+     48.42,
+     6.4,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 7.5,
+   "pad": {
+    "top": 140,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     7.52,
+     48.42,
+     6.75,
+     0,
+     0
+    ],
+    [
+     7.5,
+     7.52,
+     48.42,
+     6.95,
+     6,
+     24
+    ]
+   ],
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     7.275,
+     48.12,
+     11.35,
+     -80,
+     62
+    ],
+    [
+     8.5,
+     7.27,
+     48.125,
+     11.55,
+     -70,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 16.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     6.98,
+     48.2,
+     7.35,
+     0,
+     0
+    ],
+    [
+     16.5,
+     6.98,
+     48.2,
+     7.5,
+     -4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.5,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     7.2,
+     48.1,
+     7.9,
+     4,
+     10
+    ],
+    [
+     7.5,
+     7.2,
+     48.1,
+     8.05,
+     8,
+     14
+    ]
+   ],
+   "labels": false,
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     7.3,
+     48.13,
+     10.3,
+     20,
+     34
+    ],
+    [
+     8.5,
+     7.3,
+     48.13,
+     10.5,
+     28,
+     40
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     7.52,
+     48.42,
+     6.8,
+     0,
+     0
+    ],
+    [
+     10.5,
+     7.52,
+     48.42,
+     6.95,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Alsace",
+   "sub": "Dry side<br>of the Vosges"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.7,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     13.0
+    ],
+    [
+     13.0,
+     21.0
+    ],
+    [
+     21.0,
+     29.6
+    ],
+    [
+     29.6,
+     37.0
+    ],
+    [
+     37.0,
+     44.0
+    ],
+    [
+     44.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 12.6,
+   "kicker": "Layer 1 · The place",
+   "n": "20,108",
+   "u": "ha",
+   "c": "delimited in 117 communes, a strip about 140&nbsp;km long between the Vosges and the Rhine.",
+   "src": "INAO data via Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 13.6,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "514",
+   "u": "m",
+   "c": "the highest ground in the outline, on the Vosges foothills. The lowest is 166&nbsp;m, out on the plain.",
+   "src": "Terrain: Open Wine Atlas"
+  },
+  {
+   "kind": "card",
+   "t0": 17.5,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "A mosaic of soils: granite, limestone, marl, sandstone, schist and even volcanic rock. Same grape, very different wines.",
+   "src": "Open Wine Atlas Study · bedrock"
+  },
+  {
+   "kind": "card",
+   "t0": 21.6,
+   "t1": 29.4,
+   "kicker": "Layer 3 · Rain",
+   "n": "595",
+   "u": "mm",
+   "count": {
+    "v": 595,
+    "d": 0
+   },
+   "c": "a year at Colmar&#8209;Meyenheim (207&nbsp;m). Epinal (317&nbsp;m), west of the Vosges: 907&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     33,
+     31,
+     34,
+     43,
+     70,
+     66,
+     63,
+     61,
+     51,
+     57,
+     44,
+     43
+    ],
+    "b": [
+     77,
+     65,
+     67,
+     62,
+     82,
+     73,
+     72,
+     73,
+     77,
+     89,
+     83,
+     88
+    ],
+    "max": 95,
+    "bands": [],
+    "hot": [],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Colmar-Meyenheim &nbsp; ▢ Epinal &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Météo-France normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 36.6,
+   "kicker": "Layer 4 · Sun",
+   "n": "1,882",
+   "u": "h",
+   "count": {
+    "v": 1882.2,
+    "d": 0
+   },
+   "c": "of sunshine a year at Colmar&#8209;Meyenheim, about 120&nbsp;h more than Epinal.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Colmar-Meyenheim",
+      "v": 1882.2
+     },
+     {
+      "label": "Epinal",
+      "v": 1759.8
+     }
+    ]
+   },
+   "src": "Météo-France normals 1991–2020"
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.6,
+   "kicker": "Layer 5 · Heat",
+   "n": "16.2",
+   "u": "°C",
+   "count": {
+    "v": 16.2,
+    "d": 1
+   },
+   "c": "the April to October average at Colmar&#8209;Meyenheim. Just under 16.5&nbsp;°C: cool in WSET terms.",
+   "chart": {
+    "type": "range",
+    "max": [
+     5.6,
+     7.6,
+     12.6,
+     17.1,
+     21,
+     24.7,
+     26.7,
+     26.5,
+     22,
+     16.3,
+     9.8,
+     6.3
+    ],
+    "min": [
+     -0.8,
+     -0.7,
+     1.9,
+     5.1,
+     9.4,
+     12.9,
+     14.4,
+     14,
+     10.2,
+     6.7,
+     2.7,
+     0.2
+    ],
+    "hl": 6,
+    "lo": -3,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July high 26.7 °C"
+   },
+   "src": "Météo-France normals 1991–2020 · WSET bands: Open Wine Atlas Study"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "4",
+   "u": "noble grapes",
+   "c": "Riesling, Gewurztraminer, Pinot Gris and Muscat. Pinot Noir is the only red.",
+   "src": "Open Wine Atlas Study · INAO data"
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 51.6,
+   "kicker": "Layer 6 · Grapes",
+   "n": "51",
+   "u": "grands crus",
+   "c": "each with its own appellation, mostly limited to the four noble grapes.",
+   "src": "INAO data via Open Wine Atlas · Study"
+  },
+  {
+   "kind": "card",
+   "t0": 52.3,
+   "t1": 55.5,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which mountains put Alsace in a rain shadow?<br>A&nbsp;&nbsp;Jura<br>B&nbsp;&nbsp;Vosges<br>C&nbsp;&nbsp;Black Forest",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.6,
+   "t1": 58.8,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "Which of these is a noble grape of Alsace?<br>A&nbsp;&nbsp;Sylvaner<br>B&nbsp;&nbsp;Pinot Blanc<br>C&nbsp;&nbsp;Muscat",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 58.9,
+   "t1": 62.1,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls a year at Colmar&#8209;Meyenheim?<br>A&nbsp;&nbsp;About 600&nbsp;mm<br>B&nbsp;&nbsp;About 900&nbsp;mm<br>C&nbsp;&nbsp;About 1,200&nbsp;mm",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.3,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Alsace",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Châteauneuf-du-Pape",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Colmar-Meyenheim, Epinal) · INAO data · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Alsace",
+  "sub": "Dry side<br>of the Vosges"
+ }
+}
