@@ -219,6 +219,18 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-chateauneuf",
+   "place": "Châteauneuf-du-Pape",
+   "slot": "2026-11-01T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-6514284448863335485",
+   "sources": [
+    "Météo-France normals 1991-2020 (Orange 84087001, Paris-Montsouris)",
+    "INAO data (via Open Wine Atlas)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

@@ -251,8 +251,9 @@
    "series": "",
    "not_before": "2026-11-01",
    "why": "Rhône study path: galets roulés, Grenache-led blends, the Mistral",
-   "status": "planned",
-   "note": "Added 2026-10-31 so the Alsace outro 'Next deep dive: Châteauneuf-du-Pape' is true."
+   "status": "posted",
+   "note": "Added 2026-10-31 so the Alsace outro 'Next deep dive: Châteauneuf-du-Pape' is true. Made 2026-11-01. Hook = study path, no event. Climate: official Météo-France fiche 84087001 Orange (57 m, 8 km from the outline centre), 1991-2020; no sunshine at Orange or Avignon, so the Sun layer was swapped for Wind (days with gusts >= 58 km/h); mistral named from the Study lesson. Rain vs Paris-Montsouris 1991-2020. Grapes: Study lesson (13/18 varieties) and INAO yield.",
+   "slot": "2026-11-01T17:50+01:00"
   },
   {
    "slug": "deep-chianti-classico",
@@ -280,6 +281,16 @@
    "not_before": "2026-11-05",
    "why": "Southern Hemisphere study path: Sauvignon Blanc, Wairau and Awatere valleys, spring frost season",
    "status": "planned"
+  },
+  {
+   "slug": "deep-hermitage",
+   "place": "Hermitage",
+   "atlas_id": "fr-inao-a282",
+   "series": "",
+   "not_before": "2026-11-09",
+   "why": "Rhône study path: Northern Rhône, granite hill, Syrah with Marsanne and Roussanne",
+   "status": "planned",
+   "note": "Added 2026-11-01 to keep 6+ planned."
   }
  ]
 }

@@ -1,0 +1,304 @@
+{
+ "slug": "deep-chateauneuf",
+ "place": "Châteauneuf-du-Pape",
+ "atlas_id": "fr-inao-a267",
+ "made": "2026-11-01",
+ "hook": "Rhône study path (no event): galets roulés, Grenache-led blends, the mistral",
+ "station": {
+  "name": "Orange",
+  "id": "84087001",
+  "height_m": 57,
+  "lat": 44.144444444444446,
+  "lon": 4.860833333333333,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_84087001.pdf",
+  "note": "Official fiche climatologique, edited 06/06/2026, statistics 1991-2020 (ETP 2001-2020, not used). No sunshine at this station ('Données non disponibles'), so the Sun layer is swapped for Wind. 8.4 km from the outline centre."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+  "note": "Monthly precipitation reused from facts/deep-chablis.json (same fiche)."
+ },
+ "checked_not_used": {
+  "Avignon 84007005": "Fiche read too (34 m): temperature 1993-2020, precipitation 1994-2020 (648.8 mm), no sunshine. Not used because periods are not 1991-2020."
+ },
+ "monthly": {
+  "orange_tmax": [
+   10.3,
+   11.9,
+   16.2,
+   19.3,
+   23.6,
+   28.1,
+   31.1,
+   30.8,
+   25.5,
+   20.3,
+   14.2,
+   10.6
+  ],
+  "orange_tmax_year": 20.2,
+  "orange_tmin": [
+   2.1,
+   2.4,
+   5.3,
+   7.9,
+   11.9,
+   15.6,
+   18,
+   17.7,
+   14,
+   10.6,
+   6,
+   2.8
+  ],
+  "orange_tmin_year": 9.5,
+  "orange_tmean": [
+   6.2,
+   7.2,
+   10.8,
+   13.6,
+   17.7,
+   21.9,
+   24.5,
+   24.2,
+   19.7,
+   15.4,
+   10.1,
+   6.7
+  ],
+  "orange_tmean_year": 14.8,
+  "orange_precip_mm": [
+   54.8,
+   36.6,
+   44.5,
+   63,
+   60.1,
+   37.4,
+   38.4,
+   40.2,
+   105.3,
+   94.5,
+   96.6,
+   48.2
+  ],
+  "orange_precip_year": 719.6,
+  "orange_frost_nights": [
+   9.2,
+   7.4,
+   2.1,
+   0.0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   2.3,
+   8.1
+  ],
+  "orange_frost_nights_year": 29.3,
+  "orange_gust16_days": [
+   12.1,
+   12.8,
+   12.8,
+   10.3,
+   9.2,
+   9.1,
+   9.8,
+   8.3,
+   9.0,
+   9.4,
+   11.4,
+   11.4
+  ],
+  "orange_gust16_days_year": 125.7,
+  "orange_gust28_days_year": 7.4,
+  "orange_wind_mean_ms_year": 4.5,
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3
+ },
+ "derived": {
+  "aproct_tmean": 19.57,
+  "rain_sum": 719.6,
+  "son_rain": 296.4,
+  "son_share_pct": 41.2,
+  "jja_rain": 116.0,
+  "paris_sum": 634.3,
+  "paris_jja": 168.7,
+  "g16_sum": 125.6,
+  "relief_m": 108,
+  "station_lat": 44.144444444444446,
+  "station_lon": 4.860833333333333,
+  "km_station_to_outline_centre": 8.4
+ },
+ "derived_code": "work/deep-chateauneuf/derive.py: mean(tmean[3:10]) April..October; sum(rr[8:11]) Sep-Nov and share of annual; sum(rr[5:8]) Jun-Aug; 128-20 relief; haversine station to atlas outline centre (44.0709, 4.83574)",
+ "facts": [
+  {
+   "claim": "Delimited area 3,737 ha",
+   "value": 3737.3,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-fr.json fr-inao-a267 area_ha (INAO data, 2026-08-31)"
+  },
+  {
+   "claim": "4 communes: Châteauneuf-du-Pape, Courthézon, Bédarrides, Orange",
+   "value": 4,
+   "source": "Open Wine Atlas details-fr.json communes (INAO data)"
+  },
+  {
+   "claim": "On the east bank of the Rhône between Orange and Avignon",
+   "source": "Open Wine Atlas Study, lesson rhone-south-southern-rhone"
+  },
+  {
+   "claim": "Rhône 2.6 km from the outline",
+   "value": 2.6,
+   "unit": "km",
+   "source": "Open Wine Atlas details-fr.json rivers"
+  },
+  {
+   "claim": "Terrain in outline: min 20 m, mean 75 m, max 128 m",
+   "value": [
+    20,
+    75,
+    128,
+    34,
+    115
+   ],
+   "unit": "m",
+   "source": "Open Wine Atlas terrain e"
+  },
+  {
+   "claim": "Galets roulés: large rounded stones that store heat by day and release it at night; other sectors have sand or limestone",
+   "source": "Open Wine Atlas Study, lesson rhone-south-southern-rhone"
+  },
+  {
+   "claim": "Orange (57 m) 720 mm precipitation a year, 1991-2020",
+   "value": 719.6,
+   "unit": "mm",
+   "source": "Météo-France fiche 84087001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_84087001.pdf"
+  },
+  {
+   "claim": "Paris-Montsouris 634 mm a year, 1991-2020",
+   "value": 634.3,
+   "unit": "mm",
+   "source": "Météo-France fiche 75114001",
+   "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf"
+  },
+  {
+   "claim": "September to November 296 mm at Orange, 41% of the year (derived)",
+   "value": [
+    296.4,
+    41.2
+   ],
+   "source": "derived from fiche 84087001"
+  },
+  {
+   "claim": "June to August 116 mm at Orange vs 169 mm at Paris-Montsouris (derived)",
+   "value": [
+    116.0,
+    168.7
+   ],
+   "source": "derived from fiches 84087001, 75114001"
+  },
+  {
+   "claim": "Mediterranean climate, much of the rain in autumn, can arrive as storms at harvest",
+   "source": "Open Wine Atlas Study, lesson rhone-south-southern-rhone"
+  },
+  {
+   "claim": "126 days a year with gusts >= 16 m/s (58 km/h) at Orange, 1991-2020",
+   "value": 125.7,
+   "unit": "days",
+   "source": "Météo-France fiche 84087001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_84087001.pdf"
+  },
+  {
+   "claim": "Mistral: cold, dry wind from the north down the valley, dries vines after rain, limits rot and mildew, can break shoots; low bush vines (gobelet)",
+   "source": "Open Wine Atlas Study, lesson rhone-south-southern-rhone"
+  },
+  {
+   "claim": "April to October mean temperature at Orange 19.6 °C (derived)",
+   "value": 19.57,
+   "unit": "°C",
+   "source": "derived from fiche 84087001"
+  },
+  {
+   "claim": "WSET bands: cool up to about 16.5, moderate 16.5-18.5, warm 18.5-21, hot above 21 °C",
+   "source": "Open Wine Atlas Study, foundations climate lesson"
+  },
+  {
+   "claim": "July mean max 31.1 °C",
+   "value": 31.1,
+   "unit": "°C",
+   "source": "Météo-France fiche 84087001"
+  },
+  {
+   "claim": "13 permitted varieties, 18 if colour variants counted; reds usually Grenache-led; red and white, no rosé",
+   "source": "Open Wine Atlas Study lesson; INAO grape list in details-fr.json (18 names)"
+  },
+  {
+   "claim": "Maximum yield 35 hl/ha",
+   "value": 35,
+   "unit": "hl/ha",
+   "source": "Open Wine Atlas details-fr.json max_yield_hl_ha (INAO data)"
+  },
+  {
+   "claim": "1923 Baron Le Roy rules, model for the French AOC system; appellation created 1936",
+   "source": "Open Wine Atlas Study lesson"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which wind dries the vines after rain?",
+   "options": [
+    "A Sirocco",
+    "B Mistral",
+    "C Föhn"
+   ],
+   "answer": "B Mistral",
+   "source": "Open Wine Atlas Study, rhone-south-southern-rhone"
+  },
+  {
+   "q": "What are galets roulés?",
+   "options": [
+    "A Large rounded stones",
+    "B Granite terraces",
+    "C Clay pots"
+   ],
+   "answer": "A Large rounded stones",
+   "source": "Open Wine Atlas Study, rhone-south-southern-rhone"
+  },
+  {
+   "q": "In which season does most rain fall at Orange?",
+   "options": [
+    "A Summer",
+    "B Autumn",
+    "C Spring"
+   ],
+   "answer": "B Autumn (Sep-Nov 296 mm, 41%)",
+   "source": "Météo-France fiche 84087001, derived"
+  }
+ ],
+ "dropped": [
+  "Sunshine hours: no normal at Orange or Avignon fiches",
+  "Mistral speed or frequency as such: the fiche counts gusts from any direction, so the card says gusts, and names the mistral from the Study lesson only"
+ ]
+}
