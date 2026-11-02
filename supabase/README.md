@@ -10,6 +10,9 @@ Two parts, both in one Supabase project (region Zurich, `eu-central-2`):
 * `migrations/20261018010000_accounts.sql` and `web/account.js`: accounts. Profiles and everything from My atlas
   (saved places, tastings, notes, recent, compare) in `atlas_items`, each user limited to their own rows by row level
   security.
+* `migrations/20261102000000_last_seen.sql`: Last seen and active accounts on the admin page. The map and the admin
+  page call `touch_seen()` while they are open and visible; `account_activity` keeps the latest time per account.
+  The sign-in date alone says little, because a session stays open for weeks.
 
 The browser reads the project URL and the publishable key from `web/config.js`, with two switches: `accountsOpen`
 (sign-in, profile, sync) and `foundingOpen` (the Founding form). Both stay `false` until the email settings below
