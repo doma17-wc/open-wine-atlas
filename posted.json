@@ -231,6 +231,20 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-chianti-classico",
+   "place": "Chianti Classico",
+   "slot": "2026-11-02T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-4326622217471309160",
+   "sources": [
+    "LaMMA Toscana normals 1991-2020 (Siena, SIR Toscana; Firenze Peretola, Aeronautica Militare)",
+    "Chianti Classico Production Code 2023",
+    "Consorzio Vino Chianti Classico tasting booklet 2024",
+    "Decanter (soils)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

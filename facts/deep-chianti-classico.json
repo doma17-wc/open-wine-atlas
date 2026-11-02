@@ -1,0 +1,223 @@
+{
+ "slug": "deep-chianti-classico",
+ "place": "Chianti Classico",
+ "atlas_id": "it-eupdo-PDO-IT-A1235",
+ "map_outline_id": "it-eupdo-PDO-IT-A1514",
+ "made": "2026-11-02",
+ "hook": "Italy study path (no event): Sangiovese, galestro and alberese, the Gran Selezione tier",
+ "station": {
+  "name": "Siena",
+  "height_m": 350,
+  "lat": 43.32,
+  "lon": 11.31,
+  "service": "Servizio Idrologico Regionale (SIR) Toscana, published by Consorzio LaMMA",
+  "period": "1991-2020",
+  "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena",
+  "note": "No sunshine on the page, so the Sun layer is swapped for Soil. Station at the southern edge of the zone."
+ },
+ "comparison_station": {
+  "name": "Firenze Peretola",
+  "height_m": 40,
+  "lat": 43.8,
+  "lon": 11.2,
+  "service": "Servizio Meteorologico Aeronautica Militare, published by Consorzio LaMMA",
+  "period": "1991-2020",
+  "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-firenze"
+ },
+ "monthly": {
+  "siena_precip_mm": [
+   53,
+   61,
+   59,
+   71,
+   70,
+   52,
+   29,
+   39,
+   81,
+   106,
+   125,
+   77
+  ],
+  "siena_precip_year": 823,
+  "firenze_precip_mm": [
+   64,
+   64,
+   62,
+   67,
+   66,
+   48,
+   26,
+   40,
+   74,
+   104,
+   118,
+   88
+  ],
+  "firenze_precip_year": 821,
+  "siena_tmax": [
+   9.8,
+   11.0,
+   14.6,
+   18.1,
+   22.7,
+   27.1,
+   30.5,
+   30.7,
+   25.0,
+   19.8,
+   14.2,
+   10.3
+  ],
+  "siena_tmax_year": 19.5,
+  "siena_tmin": [
+   3.1,
+   3.0,
+   5.3,
+   7.9,
+   11.6,
+   15.2,
+   17.7,
+   18.0,
+   14.4,
+   11.1,
+   7.2,
+   3.9
+  ],
+  "siena_tmin_year": 9.9,
+  "siena_tmean": [
+   6.4,
+   7.0,
+   9.9,
+   13.0,
+   17.1,
+   21.1,
+   24.1,
+   24.4,
+   19.7,
+   15.5,
+   10.7,
+   7.1
+  ],
+  "siena_tmean_year": 14.7,
+  "siena_days_over_34C": 10,
+  "firenze_days_over_34C": 24,
+  "firenze_tmax_aug": 32.5
+ },
+ "derived": {
+  "apr_oct_mean_siena_C": 19.3,
+  "autumn_sep_nov_mm": 312,
+  "autumn_share_pct": 38,
+  "registered_share_of_territory_pct": 10.0,
+  "aug_diurnal_range_C": 12.7
+ },
+ "derived_code": "sum(Tm[3:10])/7; sum(SR[8:11]); 100*312/823; 100*7200/71800; Tx[7]-Tn[7]",
+ "facts": [
+  {
+   "claim": "Territory 71,800 ha (Florence 30,400, Siena 41,400)",
+   "source": "Chianti Classico Production Code 2023, Art. 9 A1",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Vineyards registered as Chianti Classico 7,200 ha",
+   "source": "Consorzio Vino Chianti Classico tasting booklet 2024",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Chianti-Classico-tasting-booklet.pdf",
+   "note": "Booklet gives territory 70,000 ha; the Production Code figure 71,800 is used."
+  },
+  {
+   "claim": "Boundaries recognised 1716 by Grand Duke Cosimo III",
+   "source": "Production Code Art. 9; booklet",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Autonomous DOCG with own production code, decree 5 August 1996",
+   "source": "Production Code Art. 9, Art. 3",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Vineyards on hill slopes, not above 700 m; valley floors and damp soils unsuitable",
+   "source": "Production Code Art. 4(3), 4(4)",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Highest ground 882 m inside the commune outline",
+   "source": "Open Wine Atlas terrain of it-eupdo-PDO-IT-A1514 e=[73,353,882,182,557]",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Alberese: stony Eocene limestone, common on higher slopes in the centre. Galestro: grey flaky shale of calcareous clay. Macigno: hard non-calcareous sandstone, base rock of the Monti del Chianti, important at Lamole",
+   "source": "Decanter, Chianti Classico: the Unita Geografiche Aggiuntive (sponsored feature, updated 2 May 2024)",
+   "url": "https://www.decanter.com/sponsored/chianti-classico-the-unita-geografiche-aggiuntive-490497/",
+   "note": "Soils only, wine publication named on screen."
+  },
+  {
+   "claim": "Sangiovese 80 to 100%, other red grapes up to 20%; no white grapes in the permitted list",
+   "source": "Production Code Art. 2(1), Attachment 1",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Gran Selezione at least 90% Sangiovese, rest from named native grapes",
+   "source": "Production Code Art. 2(2), 2(3)",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf",
+   "note": "Art. 2(3) applies it from the fifth harvest after approval of the amendment, so on screen it is called the new rule. The Study lesson says 'since 2023'; flagged to Stefano."
+  },
+  {
+   "claim": "Riserva 24 months, Gran Selezione 30 months, each with at least 3 in bottle",
+   "source": "Production Code Art. 5(13), 5(14)",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "Gran Selezione uses estate-grown grapes",
+   "source": "Open Wine Atlas Study, italy-toscana; Consorzio",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Maximum yield 7.5 t/ha, 52.5 hl/ha",
+   "source": "Production Code Art. 4(7), Art. 9 A2; Open Wine Atlas",
+   "url": "https://www.chianticlassico.com/wp-content/uploads/2024/01/Production-Code-2023.pdf"
+  },
+  {
+   "claim": "WSET bands: warm 18.5 to 21 °C",
+   "source": "Open Wine Atlas Study, foundations climate lesson",
+   "url": "web/data/study.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Minimum Sangiovese in Chianti Classico?",
+   "options": [
+    "70%",
+    "80%",
+    "100%"
+   ],
+   "answer": "B, 80%",
+   "source": "Production Code Art. 2(1); Study"
+  },
+  {
+   "q": "What is galestro?",
+   "options": [
+    "Flaky shale",
+    "Hard sandstone",
+    "Volcanic tuff"
+   ],
+   "answer": "A, flaky shale",
+   "source": "Decanter"
+  },
+  {
+   "q": "Minimum ageing for Gran Selezione?",
+   "options": [
+    "12 months",
+    "24 months",
+    "30 months"
+   ],
+   "answer": "C, 30 months",
+   "source": "Production Code Art. 5(14)"
+  }
+ ],
+ "dropped": [
+  "Atlas outline and figures for it-eupdo-PDO-IT-A1235 (733,352 ha, 76 communes, 12 to 1,664 m) not used: they cover far more than the legal zone (Marradi, Montalcino, Abbadia San Salvatore). Map uses the Vin Santo del Chianti Classico outline (8 communes), whole communes, larger than the legal zone.",
+  "Sunshine: no 1991-2020 figure on the LaMMA pages. Sun swapped for Soil.",
+  "Sangiovese share of actual plantings: no official figure found, so the legal rule is shown.",
+  "70,000 vs 75,000 ha territory figures in other sources: Production Code value used."
+ ]
+}

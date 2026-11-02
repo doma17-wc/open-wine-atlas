@@ -85,7 +85,7 @@
    "not_before": "2026-11-08",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
    "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report. 2026-10-27: postponed again. ISPRA (station normals app and PDF host), NOAA NCEI and nodc hosts are blocked from the run's shell, WebFetch of the NCEI folder needs approval; only SIMN 1951-1991 tables (Regione Piemonte PTA 2004) found. Rioja made instead. Needs a reachable 1991-2020 source (e.g. Stefano pastes the Cuneo Levaldigi WMO CSV or ARPA Piemonte table into the repo)."
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report. 2026-10-27: postponed again. ISPRA (station normals app and PDF host), NOAA NCEI and nodc hosts are blocked from the run's shell, WebFetch of the NCEI folder needs approval; only SIMN 1951-1991 tables (Regione Piemonte PTA 2004) found. Rioja made instead. Needs a reachable 1991-2020 source (e.g. Stefano pastes the Cuneo Levaldigi WMO CSV or ARPA Piemonte table into the repo). 2026-11-02: Tuscany worked through the regional LaMMA 1991-2020 pages; look for the same kind of regional climatology page for Piedmont."
   },
   {
    "slug": "deep-sauternes",
@@ -262,7 +262,9 @@
    "series": "",
    "not_before": "2026-11-02",
    "why": "Italy study path: Sangiovese, galestro and alberese, the Gran Selezione tier",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-11-02T17:50+01:00",
+   "note": "Made 2026-11-02. Hook = study path, no event. Atlas record A1235 is wrong for this place (733,352 ha, 76 communes incl. Marradi and Montalcino), so the map uses the Vin Santo del Chianti Classico outline A1514 (8 communes, whole commune borders, stated on screen) and the area comes from the Production Code. Climate: LaMMA 1991-2020 pages, Siena 350 m (SIR Toscana) vs Firenze Peretola 40 m (Aeronautica Militare). No sunshine there, so Sun swapped for Soil (soils from Decanter). Cover from shot 7 because town markers clashed with the title on shot 2."
   },
   {
    "slug": "deep-pauillac",
