@@ -161,6 +161,11 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
       </div>
     </section>
 
+    <section class="sec card chart">
+      <div class="sec-h"><h2>Active accounts</h2><p>Accounts that opened the atlas each day, counted since 2 November 2026</p></div>
+      <div id="chartActive"></div>
+    </section>
+
     <section class="sec grid three">
       <div class="card"><div class="sec-h"><h2>Where accounts start</h2></div><ul class="rows" id="sources"></ul></div>
       <div class="card"><div class="sec-h"><h2>Who they are</h2></div><ul class="rows" id="levels"></ul></div>
@@ -179,7 +184,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
       </div>
       <div class="table"><table>
         <thead><tr>
-          <th data-sort="email">Account</th><th data-sort="created_at" aria-sort="descending">Joined</th><th data-sort="last_sign_in_at">Last seen</th>
+          <th data-sort="email">Account</th><th data-sort="created_at" aria-sort="descending">Joined</th><th data-sort="last_seen_at">Last seen</th>
           <th data-sort="founding_spot">Founding</th><th data-sort="level">Profile</th><th data-sort="signup_source">From</th>
           <th data-sort="saved">Saved</th><th data-sort="tastings">Tastings</th><th data-sort="notes">Notes</th><th data-sort="study">Study</th>
         </tr></thead>
@@ -207,9 +212,11 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     if (s < 90) return "just now";
     if (s < 3600) return Math.round(s / 60) + " min ago";
     if (s < 86400) return Math.round(s / 3600) + " h ago";
-    if (s < 86400 * 30) return Math.round(s / 86400) + " days ago";
+    if (s < 86400 * 2) return "1 day ago";
+    if (s < 86400 * 30) return Math.floor(s / 86400) + " days ago";
     return day(d);
   };
+  const stamp = (d) => d ? new Date(d).toLocaleString("en-GB", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Zurich" }) : "";
   const SOURCES = { deep_wall: "Deep Region wall (Burgundy, Champagne, Bordeaux, Switzerland)", founding: "Founding page", account: "My atlas › Account", direct: "Before tracking" };
   const LEVELS = { enthusiast: "Wine lover", student: "Student", sommelier: "Sommelier", trade: "Trade", winemaker: "Winemaker", other: "Other", "not set": "Not set" };
   const show = (id) => ["gate", "denied", "app"].forEach((x) => { $(x).hidden = x !== id; });
@@ -259,6 +266,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     if (error || !ok) { $("deniedEmail").textContent = user.email; show("denied"); return; }
     $("whoEmail").textContent = user.email; $("who").hidden = false;
     show("app");
+    sb.rpc("touch_seen").then(() => {}, () => {});
     await load();
     clearInterval(timer); timer = setInterval(() => { if (!document.hidden) load(); }, 60000);
   }
@@ -276,7 +284,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     const [{ data: o, error: e1 }, { data: users, error: e2 }] = await Promise.all([sb.rpc("admin_overview"), sb.rpc("admin_users")]);
     if (e1 || e2) { $("updated").textContent = "could not load"; console.warn(e1 || e2); return; }
     USERS = users || [];
-    renderKpis(o); renderChart(o); renderFunnel(o); renderLists(o, await names()); renderUsers();
+    renderKpis(o); renderChart(o); renderActive(o); renderFunnel(o); renderLists(o, await names()); renderUsers();
     $("updated").textContent = "updated " + new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
   }
 
@@ -285,9 +293,9 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     const k = (num, label, delta, cls = "") => '<div class="card kpi"><div class="n ' + cls + '">' + num + '</div><div class="l">' + label + "</div>" +
       (delta != null ? '<div class="d' + (delta ? "" : " zero") + '">' + delta + "</div>" : "") + "</div>";
     $("kpis").innerHTML =
-      k(n(o.users), "Accounts", "+" + n(o.users_today) + " today") +
+      k(n(o.users), "Accounts", "+" + n(o.users_today) + " today · " + n(o.users_confirmed) + " confirmed their email") +
       k(n(o.users_7d), "New in 7 days", n(o.users_30d) + " in 30 days") +
-      k(n(o.active_7d), "Active in 7 days", n(o.users_confirmed) + " ever confirmed their email") +
+      k(n(o.active_7d), "Active in 7 days", n(o.active_today) + " today · " + n(o.active_30d) + " in 30 days") +
       '<div class="card kpi"><div class="n gold">' + n(o.founding) + '<span style="font-size:20px;color:var(--muted)"> / 1,000</span></div><div class="l">Founding spots</div>' +
         '<div class="bar1k"><i style="width:' + Math.min(100, (o.founding || 0) / 10).toFixed(1) + '%"></i></div></div>' +
       k(n(items.saved), "Places saved") + k(n(items.tasting), "Tastings logged") + k(n(items.note), "Notes written") + k(n(items.study), "Study cards in progress");
@@ -317,6 +325,29 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     [0, 29, 59].forEach((i) => svg += '<text x="' + (pad + i * bw + bw / 2) + '" y="' + (H - 4) + '" fill="#8d877c" font-family="IBM Plex Mono" font-size="10" text-anchor="' + (i === 0 ? "start" : i === 59 ? "end" : "middle") + '">' +
       new Date(list[i][0]).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) + "</text>");
     $("chartSignups").innerHTML = svg + "</svg>";
+  }
+
+  // one bar per day: accounts that opened the atlas (site_events.active_accounts, each account once a day)
+  function renderActive(o) {
+    const days = 30, W = 1180, H = 150, pad = 26, by = new Map();
+    (o.events_by_day || []).forEach((r) => { if (r.name === "active_accounts") by.set(r.day, r.n); });
+    const list = [];
+    for (let i = days - 1; i >= 0; i--) {
+      const d = new Date(Date.now() - i * 864e5).toLocaleDateString("sv-SE", { timeZone: "Europe/Zurich" });
+      list.push([d, by.get(d) || 0]);
+    }
+    const max = Math.max(4, ...list.map((x) => x[1]));
+    const bw = (W - pad) / days;
+    const y = (v) => H - 20 - (H - 34) * v / max;
+    let svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Active accounts per day">';
+    [0, 0.5, 1].forEach((t) => { const v = Math.round(max * t), yy = y(v);
+      svg += '<line x1="' + pad + '" x2="' + W + '" y1="' + yy + '" y2="' + yy + '" stroke="#24242a"/><text x="0" y="' + (yy + 4) + '" fill="#8d877c" font-family="IBM Plex Mono" font-size="10">' + v + "</text>"; });
+    list.forEach(([d, a], i) => {
+      if (a) svg += '<rect x="' + (pad + i * bw + 2) + '" y="' + y(a) + '" width="' + (bw - 4) + '" height="' + (H - 20 - y(a)) + '" rx="1.5" fill="#8fae86"><title>' + d + ": " + a + " active accounts</title></rect>";
+    });
+    [0, days - 1].forEach((i) => svg += '<text x="' + (pad + i * bw + bw / 2) + '" y="' + (H - 4) + '" fill="#8d877c" font-family="IBM Plex Mono" font-size="10" text-anchor="' + (i ? "end" : "start") + '">' +
+      new Date(list[i][0]).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) + "</text>");
+    $("chartActive").innerHTML = svg + "</svg>";
   }
 
   function renderFunnel(o) {
@@ -364,7 +395,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     $("users").innerHTML = list.map((u) => "<tr>" +
       '<td><span class="em">' + esc(u.email) + "</span>" + (u.display_name ? '<span class="sub">' + esc(u.display_name) + "</span>" : "") + (u.confirmed ? "" : ' <span class="pill no">code never entered</span>') + "</td>" +
       '<td class="mono">' + day(u.created_at) + "</td>" +
-      '<td class="mono">' + ago(u.last_sign_in_at) + "</td>" +
+      '<td class="mono" title="' + esc(stamp(u.last_seen_at)) + '">' + ago(u.last_seen_at) + "</td>" +
       "<td>" + (u.founding_spot ? '<span class="pill ' + (u.founding_spot <= 1000 ? "f" : "w") + '">#' + n(u.founding_spot) + "</span>" : '<span class="pill">no</span>') + "</td>" +
       "<td>" + esc(LEVELS[u.level] || "") + (u.studying ? '<span class="sub">' + esc(u.studying) + "</span>" : "") + (u.location ? '<span class="sub">' + esc(u.location) + "</span>" : "") + "</td>" +
       "<td>" + esc(SOURCES[u.signup_source] || u.signup_source) + "</td>" +
@@ -380,7 +411,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     renderUsers();
   }));
   $("csv").onclick = () => {
-    const cols = ["email", "display_name", "created_at", "last_sign_in_at", "confirmed", "founding_spot", "level", "studying", "location", "signup_source", "saved", "tastings", "notes", "study"];
+    const cols = ["email", "display_name", "created_at", "last_seen_at", "last_sign_in_at", "confirmed", "founding_spot", "level", "studying", "location", "signup_source", "saved", "tastings", "notes", "study"];
     const cell = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
     const csv = [cols.join(",")].concat(USERS.map((u) => cols.map((c) => cell(u[c])).join(","))).join("\n");
     const a = document.createElement("a");

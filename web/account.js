@@ -90,6 +90,7 @@ async function onSession(session, ev) {
     }
     await Promise.all([loadProfile(), loadFounding()]);
     rerender();
+    touchSeen();
     // the map reopens a place that was behind the Burgundy wall
     window.dispatchEvent(new CustomEvent("owa:auth", { detail: { signedIn: true } }));
     fullSync();
@@ -98,6 +99,14 @@ async function onSession(session, ev) {
     S.user = null; S.profile = null; S.founding = null; S.sync = "idle"; stopPolling(); rerender();
     window.dispatchEvent(new CustomEvent("owa:auth", { detail: { signedIn: false } }));
   } else if (ev === "INITIAL_SESSION") rerender();
+}
+
+// ---------- last seen: a session stays open for weeks, so the sign-in date says nothing about who still comes back
+let seenAt = 0;
+function touchSeen() {
+  if (!S.user || document.visibilityState !== "visible" || Date.now() - seenAt < 300000) return;
+  seenAt = Date.now();
+  S.sb.rpc("touch_seen").then(() => {}, () => {});
 }
 
 // ---------- profile
@@ -205,10 +214,10 @@ O.onSave((k) => {
 });
 function startPolling() {
   stopPolling();
-  S.poll = setInterval(() => { if (document.visibilityState === "visible") fullSync(); else if (S.sync === "ok") setSync("ok"); }, 90000);
+  S.poll = setInterval(() => { touchSeen(); if (document.visibilityState === "visible") fullSync(); else if (S.sync === "ok") setSync("ok"); }, 90000);
 }
 function stopPolling() { clearInterval(S.poll); S.poll = 0; }
-document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && S.user && Date.now() - S.lastSync > 20000) fullSync(); });
+document.addEventListener("visibilitychange", () => { touchSeen(); if (document.visibilityState === "visible" && S.user && Date.now() - S.lastSync > 20000) fullSync(); });
 
 // ---------- views
 const LEVELS = [["", N("Choose")], ["enthusiast", N("Wine lover")], ["student", N("Wine student")], ["sommelier", N("Sommelier")],
