@@ -273,16 +273,19 @@
    "series": "",
    "not_before": "2026-11-03",
    "why": "Bordeaux study path: Left Bank gravel, Cabernet Sauvignon, the Gironde",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-11-03T17:50+01:00",
+   "note": "Made 2026-11-03. Hook = study path, no event. Climate: official Météo-France fiches 1991-2020, Pauillac 33314005 (26 m, inside the AOC; sunshine only 2004-2020, shown on screen) vs Bordeaux-Mérignac 33281001. Soils, area and classified growths from the INAO specification (draft modification adopted 27 Nov 2025, the yields, density and varieties also match the earlier PNO text). Slope layer added to the 3D shot to show the croupes on flat ground. No official variety shares found."
   },
   {
    "slug": "deep-marlborough",
    "place": "Marlborough",
    "atlas_id": "nz-world-marlborough",
    "series": "",
-   "not_before": "2026-11-05",
+   "not_before": "2026-11-04",
    "why": "Southern Hemisphere study path: Sauvignon Blanc, Wairau and Awatere valleys, spring frost season",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-05 to 2026-11-04 on 2026-11-03 so the Pauillac outro 'Next deep dive: Marlborough' is true."
   },
   {
    "slug": "deep-hermitage",

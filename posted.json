@@ -245,6 +245,18 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-pauillac",
+   "place": "Pauillac",
+   "slot": "2026-11-03T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-329976654358099237",
+   "sources": [
+    "Météo-France normals 1991-2020 (Pauillac 33314005, sunshine 2004-2020; Bordeaux-Mérignac 33281001)",
+    "INAO specification Pauillac (draft modification 27 Nov 2025; earlier PNO text)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

@@ -1,0 +1,573 @@
+{
+ "slug": "deep-pauillac",
+ "id": "fr-inao-a59",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  43
+ ],
+ "markers": [
+  {
+   "lng": -0.7828,
+   "lat": 45.2142,
+   "label": "Pauillac · 26 m",
+   "shots": [
+    3,
+    4
+   ]
+  },
+  {
+   "lng": -0.77306,
+   "lat": 45.225,
+   "label": "Lafite",
+   "shots": [
+    1,
+    2
+   ]
+  },
+  {
+   "lng": -0.7684,
+   "lat": 45.2153,
+   "label": "Mouton",
+   "shots": [
+    1
+   ]
+  },
+  {
+   "lng": -0.745,
+   "lat": 45.17667,
+   "label": "Latour",
+   "shots": [
+    1,
+    2
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -3.5,
+     44.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     -3.1,
+     44.2,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -0.782,
+     45.2,
+     11.0,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -0.782,
+     45.2,
+     11.0,
+     0,
+     0
+    ],
+    [
+     9.5,
+     -0.782,
+     45.2,
+     11.25,
+     6,
+     24
+    ]
+   ],
+   "layers": {
+    "markers": true
+   },
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 200
+   },
+   "cam": [
+    [
+     0,
+     -0.775,
+     45.2,
+     12.0,
+     74,
+     62
+    ],
+    [
+     8.5,
+     -0.77,
+     45.2,
+     12.2,
+     86,
+     62
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -0.78,
+     45.25,
+     9.55,
+     0,
+     0
+    ],
+    [
+     15.5,
+     -0.78,
+     45.25,
+     9.7,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -0.78,
+     45.24,
+     9.95,
+     6,
+     10
+    ],
+    [
+     7.0,
+     -0.78,
+     45.24,
+     10.1,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -0.782,
+     45.2,
+     11.6,
+     -10,
+     38
+    ],
+    [
+     8.5,
+     -0.782,
+     45.2,
+     11.8,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.782,
+     45.2,
+     10.6,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -0.782,
+     45.2,
+     10.75,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Pauillac",
+   "sub": "Gravel, Cabernet<br>and the Gironde"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "n": "1,250",
+   "u": "ha",
+   "c": "of vines, roughly, on the left bank of the Gironde, 50&nbsp;km north of Bordeaux.",
+   "src": "INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "n": "3 of 5",
+   "u": "",
+   "c": "first growths: Lafite, Latour and Mouton, promoted in 1973. 18 classified growths in all.",
+   "src": "INAO specification · Study"
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "n": "34",
+   "u": "m",
+   "c": "the highest ground here. Gravel terraces, 10&nbsp;m thick, line the estuary at 3 to 30&nbsp;m.",
+   "src": "Terrain: Open Wine Atlas · INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "nt": "<i>Croupes</i>: draining gravel mounds. Modern alluvium and badly drained plots are <i>excluded</i> from the AOC.",
+   "src": "INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "n": "857",
+   "u": "mm",
+   "count": {
+    "v": 857,
+    "d": 0
+   },
+   "c": "a year at Pauillac, Bordeaux-Mérignac 925&nbsp;mm. Rainy autumns or warm ones: a marked vintage effect.",
+   "chart": {
+    "type": "months",
+    "a": [
+     87.3,
+     60.2,
+     56.7,
+     67.4,
+     61,
+     59.2,
+     42,
+     53.7,
+     70,
+     88.2,
+     110.9,
+     100.4
+    ],
+    "b": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "max": 125,
+    "bands": [],
+    "hot": [
+     8,
+     9
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Pauillac &nbsp; ▢ Bordeaux-Mérignac &nbsp;·&nbsp; mm per month"
+   },
+   "src": "Météo-France, normals 1991–2020 · INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Sun",
+   "n": "2,175",
+   "u": "h",
+   "count": {
+    "v": 2175.2,
+    "d": 0
+   },
+   "c": "of sunshine a year at Pauillac, measured over 2004–2020. July alone: 273&nbsp;h.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Pauillac 2004–20",
+      "v": 2175.2
+     },
+     {
+      "label": "Mérignac 1991–2020",
+      "v": 2069.8
+     }
+    ]
+   },
+   "src": "Météo-France, periods as shown"
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "n": "17.8",
+   "u": "°C",
+   "count": {
+    "v": 17.81,
+    "d": 1
+   },
+   "c": "April to October at Pauillac: moderate in WSET terms. Maritime, with just 20 frost nights a year.",
+   "chart": {
+    "type": "range",
+    "max": [
+     10.1,
+     11.5,
+     15,
+     17.8,
+     21.5,
+     24.7,
+     26.7,
+     27,
+     23.9,
+     19.3,
+     13.9,
+     10.7
+    ],
+    "min": [
+     4,
+     3.7,
+     5.9,
+     8,
+     11.4,
+     14.2,
+     15.8,
+     15.6,
+     13.1,
+     10.5,
+     6.8,
+     4.5
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 32,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 27.0 to 15.6",
+    "lblPos": "tb"
+   },
+   "src": "Météo-France, normals 1991–2020 · WSET bands: Study"
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "n": "6",
+   "u": "grapes",
+   "c": "allowed, all red. Cabernet Sauvignon dominates, with Merlot, Cabernet Franc, Petit Verdot, Malbec, Carmenère.",
+   "src": "INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "n": "7,000",
+   "u": "vines/ha",
+   "c": "minimum density. Yield: 57&nbsp;hl/ha. Aged until at least 1 June after harvest.",
+   "src": "INAO specification"
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape dominates a Pauillac blend?<br>A&nbsp;&nbsp;Merlot<br>B&nbsp;&nbsp;Cabernet Sauvignon<br>C&nbsp;&nbsp;Malbec",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "n": "Q2",
+   "u": "",
+   "c": "What are the croupes of Pauillac?<br>A&nbsp;&nbsp;Gravel mounds<br>B&nbsp;&nbsp;Clay marshes<br>C&nbsp;&nbsp;Chalk cliffs",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "n": "Q3",
+   "u": "",
+   "c": "Which estate became a first growth in 1973?<br>A&nbsp;&nbsp;Latour<br>B&nbsp;&nbsp;Lafite<br>C&nbsp;&nbsp;Mouton",
+   "src": "Answers in the first comment"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Pauillac",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Marlborough",
+   "srcs": "Sources: Météo-France normals 1991–2020, sunshine at Pauillac 2004–2020 · INAO specification · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Pauillac",
+  "sub": "Gravel, Cabernet<br>and the Gironde"
+ }
+}

@@ -1,0 +1,284 @@
+{
+ "slug": "deep-pauillac",
+ "place": "Pauillac",
+ "atlas_id": "fr-inao-a59",
+ "made": "2026-11-03",
+ "hook": "Bordeaux study path (no event): Left Bank gravel, Cabernet Sauvignon, the Gironde",
+ "station": {
+  "name": "Pauillac",
+  "id": "33314005",
+  "height_m": 26,
+  "lat": 45.2142,
+  "lon": -0.7828,
+  "service": "Météo-France",
+  "period": "1991-2020 (sunshine and wind 2004-2020)",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33314005.pdf"
+ },
+ "comparison_station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "lat": 44.8306,
+  "lon": -0.6911,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "distance_km_from_pauillac_station": 43.3
+ },
+ "monthly": {
+  "pauillac_precip_mm": [
+   87.3,
+   60.2,
+   56.7,
+   67.4,
+   61,
+   59.2,
+   42,
+   53.7,
+   70,
+   88.2,
+   110.9,
+   100.4
+  ],
+  "pauillac_precip_year": 857,
+  "pauillac_tmax": [
+   10.1,
+   11.5,
+   15,
+   17.8,
+   21.5,
+   24.7,
+   26.7,
+   27,
+   23.9,
+   19.3,
+   13.9,
+   10.7
+  ],
+  "pauillac_tmin": [
+   4,
+   3.7,
+   5.9,
+   8,
+   11.4,
+   14.2,
+   15.8,
+   15.6,
+   13.1,
+   10.5,
+   6.8,
+   4.5
+  ],
+  "pauillac_tmean": [
+   7.1,
+   7.6,
+   10.5,
+   12.9,
+   16.4,
+   19.5,
+   21.2,
+   21.3,
+   18.5,
+   14.9,
+   10.3,
+   7.6
+  ],
+  "pauillac_sun_h": [
+   83.9,
+   126.2,
+   170.9,
+   204.5,
+   232.2,
+   251.1,
+   272.7,
+   254.7,
+   223.3,
+   158.2,
+   106,
+   91.6
+  ],
+  "pauillac_sun_year_2004_2020": 2175.2,
+  "pauillac_frost_days": [
+   6.5,
+   5.5,
+   1.2,
+   0.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   1.5,
+   5.0
+  ],
+  "pauillac_frost_year": 19.9,
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9,
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ],
+  "merignac_sun_year_1991_2020": 2069.8
+ },
+ "derived": {
+  "tmean_apr_oct_C": {
+   "value": 17.81,
+   "how": "mean of the Apr to Oct monthly mean temperatures (Pauillac)"
+  },
+  "precip_apr_oct_mm": {
+   "value": 441.5,
+   "how": "sum of Apr to Oct monthly precipitation (Pauillac)"
+  },
+  "precip_sep_oct_mm": {
+   "value": 158.2,
+   "how": "Sep + Oct precipitation (Pauillac)"
+  },
+  "checks": {
+   "precip_sum_12_months": 857.0,
+   "sun_sum_12_months": 2175.3
+  }
+ },
+ "claims": [
+  {
+   "claim": "about 1,250 ha of vines",
+   "value": "près de 1 250 hectares",
+   "source": "INAO specification Pauillac, draft modification adopted 27 Nov 2025, X.1b",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "Left bank of the estuary, 50 km north of Bordeaux",
+   "source": "INAO specification, X.1a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "18 classified growths; first growths Lafite-Rothschild and Latour (1855), Mouton-Rothschild (1973)",
+   "source": "INAO specification, X.3; Open Wine Atlas Study (1855 Classification)",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf",
+   "note": "Spec also says most classified growths of any commune, but the Study says Margaux has more: left out."
+  },
+  {
+   "claim": "3 of the 5 first growths",
+   "source": "Open Wine Atlas Study, Bordeaux path",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "First growth locations on map",
+   "source": "Open Wine Atlas search.json",
+   "value": {
+    "Lafite": [
+     -0.77306,
+     45.225
+    ],
+    "Mouton": [
+     -0.7684,
+     45.2153
+    ],
+    "Latour": [
+     -0.745,
+     45.17667
+    ]
+   }
+  },
+  {
+   "claim": "Ground in the outline 2 to 34 m, mean 19 m",
+   "source": "Open Wine Atlas terrain e=[2,19,34,10,26]",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Gravel terraces along the estuary at 3 to 30 m, about 10 m thick, Quaternary",
+   "source": "INAO specification, X.1a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "Croupes: gravel mounds, draining soils; plots on modern alluvium or badly drained are excluded",
+   "source": "INAO specification, X.1a and X.3",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "Autumn rain depressions or warm late seasons give a marked vintage effect",
+   "source": "INAO specification, X.1a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "Maritime climate",
+   "source": "INAO specification (climat océanique tempéré); Open Wine Atlas Study",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "WSET moderate band 16.5 to 18.5 C",
+   "source": "Open Wine Atlas Study",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "6 permitted red varieties: Cabernet Franc, Cabernet Sauvignon, Carmenère, Cot (Malbec), Merlot, Petit Verdot; Cabernet Sauvignon particularly dominant in the blend; no percentage rule",
+   "source": "INAO specification V, X.2",
+   "url": "https://extranet.inao.gouv.fr/fichier/2--CDC-PAUILLAC-202510.pdf"
+  },
+  {
+   "claim": "Min 7,000 vines/ha; yield 57 hl/ha (ceiling 63); ageing until at least 1 June after harvest",
+   "source": "INAO specification VI, VIII, IX, same in the earlier PNO text",
+   "url": "https://extranet.inao.gouv.fr/fichier/PNOCDCPauillac.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape dominates a Pauillac blend?",
+   "options": [
+    "A Merlot",
+    "B Cabernet Sauvignon",
+    "C Malbec"
+   ],
+   "answer": "B Cabernet Sauvignon",
+   "source": "INAO specification X.2"
+  },
+  {
+   "q": "What are the croupes of Pauillac?",
+   "options": [
+    "A Gravel mounds",
+    "B Clay marshes",
+    "C Chalk cliffs"
+   ],
+   "answer": "A Gravel mounds",
+   "source": "INAO specification X.1a"
+  },
+  {
+   "q": "Which estate became a first growth in 1973?",
+   "options": [
+    "A Latour",
+    "B Lafite",
+    "C Mouton"
+   ],
+   "answer": "C Mouton Rothschild",
+   "source": "INAO specification X.3, Study"
+  }
+ ],
+ "dropped": [
+  "Share of Cabernet Sauvignon in plantings: no official figure found, spec has no percentage",
+  "'Most classified growths of any commune': spec contradicts the Study (Margaux)",
+  "Fog days: not available in the Météo-France fiches"
+ ]
+}
