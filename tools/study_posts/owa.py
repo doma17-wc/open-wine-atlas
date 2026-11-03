@@ -236,7 +236,7 @@ async def wait_atlas(pg, extra=2000):
 
 
 IDLE = "() => new Promise((res) => { const m = window.__map; const t = setTimeout(res, 20000); m.once('idle', () => { clearTimeout(t); res(); }); m.triggerRepaint(); })"
-HIDE_UI = (".rail,.sheet,.viewbar,.attrib,.mcrumbs,.showpanels,.maplibregl-control-container,.loading,.tag,.readout,#dash,.modal,.quiz,"
+HIDE_UI = (".deep-key,.rail,.sheet,.viewbar,.attrib,.mcrumbs,.showpanels,.maplibregl-control-container,.loading,.tag,.readout,#dash,.modal,.quiz,"
            ".relief-btn,.mapsel,.toast{display:none!important}")
 
 

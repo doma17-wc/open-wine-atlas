@@ -1,1 +1,205 @@
-[]
+[
+ {
+  "date": "2026-11-03",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Pauillac deep dive teaser",
+  "places": [
+   "Pauillac"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7884139657989801245"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "title": "Rhône quiz",
+  "places": [
+   "Cornas",
+   "Crozes-Hermitage",
+   "Châteauneuf-du-Pape",
+   "Beaumes-de-Venise"
+  ],
+  "question_keys": [
+   "rhone-south-northern-rhone#q2",
+   "rhone-south-northern-rhone#q6",
+   "rhone-south-southern-rhone#q4",
+   "rhone-south-southern-rhone#q7"
+  ],
+  "experiment": "",
+  "metricool_uuid": "7183031024246014009"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Rhône quiz teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3987932090635303965"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "cluster",
+  "title": "Red to white in 12 km",
+  "places": [
+   "Pommard",
+   "Volnay",
+   "Meursault",
+   "Puligny-Montrachet",
+   "Chassagne-Montrachet"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2766820538476836119"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "11:00",
+  "type": "story",
+  "format": "teaser",
+  "title": "Red to white teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2541149923448566805"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "12:50",
+  "type": "story",
+  "format": "question",
+  "title": "Haut-Brion in both classifications",
+  "places": [
+   "Pessac-Léognan"
+  ],
+  "question_keys": [
+   "bordeaux-graves-sauternes#q3"
+  ],
+  "experiment": "",
+  "metricool_uuid": "3397725350014634528"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "13:05",
+  "type": "reel",
+  "format": "vs (released stock draft, media not viewed: static.metricool.com blocked from the run)",
+  "title": "Barossa Valley vs Napa Valley",
+  "places": [
+   "Barossa Valley",
+   "Napa Valley"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-67747092383250973"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "13:30",
+  "type": "post",
+  "format": "cluster",
+  "title": "From Haut-Brion to Yquem",
+  "places": [
+   "Pessac-Léognan",
+   "Graves",
+   "Cérons",
+   "Barsac",
+   "Sauternes"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1753965782413455931"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "13:50",
+  "type": "story",
+  "format": "member",
+  "title": "Founding Member",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-7428173148105324714"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "title": "From Haut-Brion to Yquem teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7658966449333290523"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "title": "Barossa vs Napa teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2599681998881731403"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "title": "Which village is the biggest?",
+  "places": [
+   "Nuits-Saint-Georges",
+   "Vosne-Romanée",
+   "Vougeot",
+   "Chambolle-Musigny",
+   "Morey-Saint-Denis",
+   "Gevrey-Chambertin"
+  ],
+  "question_keys": [],
+  "experiment": "Guess-the-biggest hook: cluster carousel with the answer held to the last map slide",
+  "metricool_uuid": "3427663809612038484"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Which village teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4813638643887160928"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "20:20",
+  "type": "story",
+  "format": "stock",
+  "title": "Released stock draft, media not viewed",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-598594420639447599"
+ },
+ {
+  "date": "2026-11-03",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "title": "Founding Member, spots still open",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7056100648200785145"
+ }
+]
