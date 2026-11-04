@@ -284,18 +284,29 @@
    "series": "",
    "not_before": "2026-11-04",
    "why": "Southern Hemisphere study path: Sauvignon Blanc, Wairau and Awatere valleys, spring frost season",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-05 to 2026-11-04 on 2026-11-03 so the Pauillac outro 'Next deep dive: Marlborough' is true."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-05 to 2026-11-04 on 2026-11-03 so the Pauillac outro 'Next deep dive: Marlborough' is true. Made 2026-11-04. Hook 'spring frost season' kept only as a normal (2.2 ground frost days in October); title hook 'Sun, stones and Sauvignon Blanc'; no 2026 frost report found. Climate: NIWA 1991-2020 normals for Blenheim vs Wellington, Wikipedia table cross-checked on Figure.NZ (which also gave the frost days). Blenheim height 4 m from NIWA's Marlborough climatology, read through a tool extraction. Grapes: NZ Winegrowers Vineyard Report 2026 (2025 planted area). Cover from shot 6 because the Blenheim marker clashed with the title on shot 2.",
+   "slot": "2026-11-04T17:50+01:00"
   },
   {
    "slug": "deep-hermitage",
    "place": "Hermitage",
    "atlas_id": "fr-inao-a282",
    "series": "",
-   "not_before": "2026-11-09",
+   "not_before": "2026-11-05",
    "why": "Rhône study path: Northern Rhône, granite hill, Syrah with Marsanne and Roussanne",
    "status": "planned",
-   "note": "Added 2026-11-01 to keep 6+ planned."
+   "note": "Added 2026-11-01 to keep 6+ planned. not_before moved from 2026-11-09 to 2026-11-05 on 2026-11-04 so the Marlborough outro 'Next deep dive: Hermitage' is true."
+  },
+  {
+   "slug": "deep-barossa",
+   "place": "Barossa Valley",
+   "atlas_id": "au-world-barossa-valley",
+   "series": "",
+   "not_before": "2026-11-06",
+   "why": "Southern Hemisphere study path: old-vine Shiraz, Barossa and Eden valleys",
+   "status": "planned",
+   "note": "Added 2026-11-04 to keep 6+ planned."
   }
  ]
 }

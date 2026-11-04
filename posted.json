@@ -257,6 +257,20 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-marlborough",
+   "place": "Marlborough",
+   "slot": "2026-11-04T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-308985424343381912",
+   "sources": [
+    "NIWA normals 1991-2020 (Blenheim, Wellington; via Wikipedia climate table and Figure.NZ)",
+    "NIWA, The climate and weather of Marlborough (2016)",
+    "NZ Winegrowers Vineyard Report 2026 (2025 planted area)",
+    "NZ Winegrowers Marlborough region page",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

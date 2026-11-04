@@ -1,0 +1,241 @@
+{
+ "slug": "deep-marlborough",
+ "place": "Marlborough",
+ "atlas_id": "nz-world-marlborough",
+ "station": {
+  "name": "Blenheim",
+  "service": "NIWA (New Zealand national climate database)",
+  "period": "1991-2020",
+  "height_m": 4,
+  "height_source": "NIWA, The climate and weather of Marlborough, Tables 13 and 20 (Blenheim Research + EWS, 4 m); read through the fetch tool's extraction of the second half of the PDF, not as verbatim text",
+  "marker_coords": [
+   173.9612,
+   -41.5134
+  ],
+  "marker_note": "town coordinates; Figure.NZ and Wikipedia name the location 'Blenheim' without a station number (NIWA agents 4322, 4326, 4331, 4333, 4411, 12430 cited on Wikipedia)"
+ },
+ "comparison_station": {
+  "name": "Wellington",
+  "service": "NIWA",
+  "period": "1991-2020",
+  "source": "Figure.NZ"
+ },
+ "monthly": {
+  "blenheim_rain_mm": [
+   43.0,
+   44.6,
+   39.4,
+   53.8,
+   56.9,
+   68.6,
+   64.2,
+   57.9,
+   54.4,
+   57.2,
+   49.1,
+   49.7
+  ],
+  "wellington_rain_mm": [
+   79.2,
+   55.5,
+   99.6,
+   126.7,
+   144.9,
+   123.8,
+   147.1,
+   139.1,
+   108,
+   118.7,
+   85.4,
+   91.1
+  ],
+  "blenheim_tmax": [
+   23.4,
+   23.3,
+   21.5,
+   18.8,
+   16.6,
+   13.9,
+   13.3,
+   14.4,
+   16.3,
+   18.4,
+   19.9,
+   21.8
+  ],
+  "blenheim_tmin": [
+   12.9,
+   12.5,
+   10.7,
+   8.2,
+   5.9,
+   3.6,
+   2.9,
+   4.0,
+   6.2,
+   7.9,
+   9.6,
+   11.8
+  ],
+  "blenheim_tmean": [
+   18.1,
+   17.9,
+   16.1,
+   13.5,
+   11.2,
+   8.8,
+   8.1,
+   9.2,
+   11.2,
+   13.1,
+   14.7,
+   16.8
+  ],
+  "blenheim_ground_frost_days": [
+   0,
+   0,
+   0.08333333333333,
+   1,
+   4.826086956522,
+   11.16,
+   14,
+   9.64,
+   4.318181818182,
+   2.208333333333,
+   0.6,
+   0
+  ],
+  "sources": {
+   "rain_blenheim": "https://en.wikipedia.org/wiki/Blenheim,_New_Zealand (table: NIWA, 1991-2020 normals); annual 638.8 mm cross-checked at https://figure.nz/chart/ZTxszXEFmV4KmKP2",
+   "rain_wellington": "https://figure.nz/chart/5IuPMt4ZwD9Sdkf7-i5tMObPLNTTTTixD (NIWA Climate Averages 1991-2020)",
+   "temp": "https://figure.nz/chart/suDfDLV40cwPuZWq-Vpe2VxwimqWDXyL0 (NIWA 1991-2020), same as Wikipedia table",
+   "frost": "https://figure.nz/chart/xhIApPqblK6MAEwe-wH0WBxBsnoLMaYUx (NIWA 1991-2020)"
+  }
+ },
+ "claims": [
+  {
+   "text": "32,042 ha planted, 2025",
+   "value": 32042,
+   "unit": "ha",
+   "source": "NZ Winegrowers, Vineyard Report 2026, table 1.1 p.3 (2025 Biosecurity Vineyard Register)",
+   "url": "https://www.nzwine.com/media/5fzng52v/vineyard-report-2026-final.pdf"
+  },
+  {
+   "text": "73% of New Zealand's vineyard",
+   "value": 73,
+   "unit": "%",
+   "source": "same table: 32,042 of 44,184 ha, printed as 73%; computed 72.5",
+   "computation": "32042/44184*100=72.52 (report prints 73%)"
+  },
+  {
+   "text": "Commercial planting began in 1973; Cloudy Bay first made in 1985",
+   "source": "Open Wine Atlas Study, lesson southern-new-zealand",
+   "url": "web/data/study.json"
+  },
+  {
+   "text": "Mt Tapuaenuku 2,885 m; rain shadow east of the Main Divide; sheltered from the south",
+   "source": "NIWA, The climate and weather of Marlborough (2nd ed., 2016)",
+   "url": "https://niwa.co.nz/sites/default/files/Marlborough-Climatology.pdf"
+  },
+  {
+   "text": "Wairau old gravelly riverbed soils; Southern Valleys heavier, more clay; Awatere cooler, drier, windier",
+   "source": "New Zealand Winegrowers, Marlborough region page",
+   "url": "https://www.nzwine.com/en/regions/marlborough/"
+  },
+  {
+   "text": "639 mm a year at Blenheim",
+   "value": 638.8,
+   "unit": "mm",
+   "source": "NIWA 1991-2020"
+  },
+  {
+   "text": "337 mm October to April",
+   "value": 336.8,
+   "unit": "mm",
+   "source": "NIWA 1991-2020",
+   "computation": "57.2+49.1+49.7+43.0+44.6+39.4+53.8=336.8"
+  },
+  {
+   "text": "Wellington 1,319 mm, 73 km away",
+   "value": 1319.1,
+   "unit": "mm",
+   "source": "NIWA 1991-2020 via Figure.NZ",
+   "computation": "great-circle Blenheim (-41.5134,173.9612) to Wellington (-41.2865,174.7762) = 72.5 km, rounded to 73"
+  },
+  {
+   "text": "2,521 h of sunshine, the most of the 21 places in the NIWA table",
+   "value": 2521.4,
+   "unit": "h",
+   "source": "NIWA 1991-2020 via Figure.NZ",
+   "url": "https://figure.nz/chart/KCFvVXndcpjM8Rfx",
+   "other": {
+    "Nelson": 2497.1,
+    "Lake Tekapo": 2504.6,
+    "Wellington": 2094.1
+   }
+  },
+  {
+   "text": "15.7 °C October to April, cool in WSET terms",
+   "value": 15.74,
+   "unit": "C",
+   "source": "NIWA 1991-2020; WSET bands from Open Wine Atlas Study (cool up to about 16.5 °C)",
+   "computation": "mean(13.1,14.7,16.8,18.1,17.9,16.1,13.5)=15.74"
+  },
+  {
+   "text": "2.2 ground frost days in October",
+   "value": 2.208,
+   "unit": "days",
+   "source": "NIWA 1991-2020 via Figure.NZ"
+  },
+  {
+   "text": "January 23.4 to 12.9 °C",
+   "source": "NIWA 1991-2020"
+  },
+  {
+   "text": "85% of vines are Sauvignon Blanc; 89% of NZ Sauvignon Blanc",
+   "source": "Vineyard Report 2026, table 4.8 p.16 and 2.1 p.4 (2025 planted)",
+   "computation": "27165.94/32042=84.8%; 27165.94/30592=88.8%; Pinot Noir 2190.99=6.8, Pinot Gris 1191.39=3.7, Chardonnay 1083.53=3.4, Other (Riesling 198.00 + rest)=1.3; shown rounded to 85/7/4/3/1"
+  },
+  {
+   "text": "Classic style: pungent, high acid, passion fruit, gooseberry, green bell pepper; stainless steel, drunk young",
+   "source": "Open Wine Atlas Study, lesson southern-new-zealand"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape covers 85% of Marlborough's vines?",
+   "options": [
+    "Pinot Noir",
+    "Sauvignon Blanc",
+    "Chardonnay"
+   ],
+   "answer": "Sauvignon Blanc",
+   "source": "Vineyard Report 2026"
+  },
+  {
+   "q": "Which valley is cooler, drier and windier?",
+   "options": [
+    "Wairau",
+    "Southern Valleys",
+    "Awatere"
+   ],
+   "answer": "Awatere",
+   "source": "NZ Winegrowers"
+  },
+  {
+   "q": "About how much rain falls at Blenheim in a year?",
+   "options": [
+    "640 mm",
+    "1,320 mm",
+    "2,000 mm"
+   ],
+   "answer": "640 mm",
+   "source": "NIWA 1991-2020"
+  }
+ ],
+ "dropped": [
+  "Producer-only frost notes and the hook wording of 'spring frost season' as a 2026 event: no 2026 Marlborough frost report found; frost shown as a normal instead",
+  "Harvest month claim (not sourced)",
+  "Soil detail for Awatere (no source page)"
+ ]
+}

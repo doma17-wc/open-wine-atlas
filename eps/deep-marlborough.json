@@ -1,0 +1,598 @@
+{
+ "slug": "deep-marlborough",
+ "id": "nz-world-marlborough",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  61
+ ],
+ "markers": [
+  {
+   "lng": 173.9612,
+   "lat": -41.5134,
+   "label": "Blenheim · 4 m",
+   "shots": [
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "lng": 173.54,
+   "lat": -41.56,
+   "label": "Wairau",
+   "shots": [
+    1
+   ]
+  },
+  {
+   "lng": 173.97,
+   "lat": -41.72,
+   "label": "Awatere",
+   "shots": [
+    1
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     171.0,
+     -38.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1,
+     171.6,
+     -39.0,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     173.6,
+     -41.6,
+     7.3,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     173.6,
+     -41.6,
+     7.4,
+     0,
+     0
+    ],
+    [
+     9.5,
+     173.65,
+     -41.6,
+     7.75,
+     6,
+     20
+    ]
+   ],
+   "layers": {
+    "markers": true
+   },
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 220
+   },
+   "cam": [
+    [
+     0,
+     173.92,
+     -41.5,
+     9.7,
+     232,
+     64
+    ],
+    [
+     8.5,
+     173.86,
+     -41.53,
+     9.95,
+     222,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     173.8,
+     -41.4,
+     8.3,
+     0,
+     0
+    ],
+    [
+     15.5,
+     173.8,
+     -41.4,
+     8.5,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     173.9,
+     -41.42,
+     9.0,
+     6,
+     10
+    ],
+    [
+     7.0,
+     173.9,
+     -41.42,
+     9.2,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     173.85,
+     -41.45,
+     10.3,
+     -10,
+     38
+    ],
+    [
+     8.5,
+     173.85,
+     -41.45,
+     10.5,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     173.7,
+     -41.62,
+     7.9,
+     0,
+     0
+    ],
+    [
+     10.5,
+     173.7,
+     -41.62,
+     8.05,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "New Zealand · Deep dive",
+   "title": "Marlborough",
+   "sub": "Sun, stones and<br>Sauvignon Blanc"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "NZ Winegrowers Vineyard Report 2026, 2025 planted area",
+   "n": "32,042",
+   "u": "ha",
+   "c": "of vines: 73% of New Zealand's vineyard, at the north-east tip of the South Island."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas Study",
+   "n": "1973",
+   "u": "",
+   "c": "Commercial planting began. Cloudy Bay, first made in 1985, brought the style world fame."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "NIWA, The climate and weather of Marlborough",
+   "n": "2,885",
+   "u": "m",
+   "c": "Mt Tapuaenuku. Mountains to the west and south put the valleys in a rain shadow."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "NZ Winegrowers, Marlborough region",
+   "nt": "<i>Wairau</i>: old, gravelly riverbed soils. <i>Southern Valleys</i>: heavier, more clay. <i>Awatere</i>: cooler, drier, windier."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "NIWA, normals 1991–2020",
+   "n": "639",
+   "u": "mm",
+   "count": {
+    "v": 638.8,
+    "d": 0
+   },
+   "c": "a year at Blenheim, 337&nbsp;mm of it October to April. Wellington, 73&nbsp;km away: 1,319&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     43.0,
+     44.6,
+     39.4,
+     53.8,
+     56.9,
+     68.6,
+     64.2,
+     57.9,
+     54.4,
+     57.2,
+     49.1,
+     49.7
+    ],
+    "b": [
+     79.2,
+     55.5,
+     99.6,
+     126.7,
+     144.9,
+     123.8,
+     147.1,
+     139.1,
+     108,
+     118.7,
+     85.4,
+     91.1
+    ],
+    "max": 160,
+    "bands": [],
+    "hot": [
+     2
+    ],
+    "labels": [
+     {
+      "m": 2,
+      "v": 39.4,
+      "text": "39"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Blenheim &nbsp; ▢ Wellington &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Sun",
+   "src": "NIWA, normals 1991–2020, via Figure.NZ",
+   "n": "2,521",
+   "u": "h",
+   "count": {
+    "v": 2521.4,
+    "d": 0
+   },
+   "c": "of sunshine a year at Blenheim, the most of the 21 New Zealand places in NIWA's table.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Blenheim",
+      "v": 2521.4
+     },
+     {
+      "label": "Nelson",
+      "v": 2497.1
+     },
+     {
+      "label": "Wellington",
+      "v": 2094.1
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "NIWA, normals 1991–2020 · WSET bands: Study",
+   "n": "15.7",
+   "u": "°C",
+   "count": {
+    "v": 15.74,
+    "d": 1
+   },
+   "c": "October to April at Blenheim: cool in WSET terms. Ground frost in spring: 2.2 days in October.",
+   "chart": {
+    "type": "range",
+    "max": [
+     23.4,
+     23.3,
+     21.5,
+     18.8,
+     16.6,
+     13.9,
+     13.3,
+     14.4,
+     16.3,
+     18.4,
+     19.9,
+     21.8
+    ],
+    "min": [
+     12.9,
+     12.5,
+     10.7,
+     8.2,
+     5.9,
+     3.6,
+     2.9,
+     4.0,
+     6.2,
+     7.9,
+     9.6,
+     11.8
+    ],
+    "hl": 0,
+    "lo": 0,
+    "hi": 28,
+    "grid": [
+     0,
+     10,
+     20
+    ],
+    "legend": "Daily low to high, °C · January: 23.4 to 12.9",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 49.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "NZ Winegrowers Vineyard Report 2026, 2025 planted area",
+   "n": "85",
+   "u": "%",
+   "count": {
+    "v": 84.8,
+    "d": 0
+   },
+   "c": "of Marlborough's vines are Sauvignon Blanc: 89% of all the Sauvignon Blanc in New Zealand.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Sauvignon Blanc",
+      "v": 85
+     },
+     {
+      "label": "Pinot Noir",
+      "v": 7
+     },
+     {
+      "label": "Pinot Gris",
+      "v": 4
+     },
+     {
+      "label": "Chardonnay",
+      "v": 3
+     },
+     {
+      "label": "Other",
+      "v": 1
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 49.2,
+   "t1": 52.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "nt": "Classic style: <i>pungent, high acid</i>. Passion fruit, gooseberry, green bell pepper. Most is fermented in stainless steel and drunk young."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape covers 85% of Marlborough's vines?<br>A&nbsp;&nbsp;Pinot Noir<br>B&nbsp;&nbsp;Sauvignon Blanc<br>C&nbsp;&nbsp;Chardonnay"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which valley is cooler, drier and windier?<br>A&nbsp;&nbsp;Wairau<br>B&nbsp;&nbsp;Southern Valleys<br>C&nbsp;&nbsp;Awatere"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls at Blenheim in a year?<br>A&nbsp;&nbsp;640 mm<br>B&nbsp;&nbsp;1,320 mm<br>C&nbsp;&nbsp;2,000 mm"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Marlborough",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Hermitage",
+   "srcs": "Sources: NIWA normals 1991–2020 and Marlborough climatology · Figure.NZ · NZ Winegrowers Vineyard Report 2026 · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 6,
+  "at": 0.5,
+  "kicker": "Deep dive · New Zealand",
+  "title": "Marlborough",
+  "sub": "Sun, stones and<br>Sauvignon Blanc"
+ }
+}
