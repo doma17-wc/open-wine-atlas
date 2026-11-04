@@ -45,6 +45,7 @@ CSS = f"""
 """
 
 
+NOLABELS = False  # spec "no_labels": true hides every map label, e.g. estate names behind a title
 NOAREA = False  # spec "no_area": true, for outlines drawn from whole communes, whose area is not the appellation's
 
 
@@ -102,6 +103,8 @@ class Mapper:
         await self.pg.add_style_tag(content=owa.HIDE_UI)
         await self.pg.evaluate("() => { const m = window.__map; m.setPadding({top:0,bottom:0,left:0,right:0}); ['wineries','winery-labels'].forEach((l) => m.getLayer(l) && m.setLayoutProperty(l,'visibility','none')); }")
         await self.pg.evaluate(GOLD_PAINT)
+        if NOLABELS:
+            await self.pg.evaluate("() => { const m = window.__map; m.getStyle().layers.filter((l) => l.type === 'symbol').forEach((l) => m.setLayoutProperty(l.id, 'visibility', 'none')); }")
         return self
 
     async def __aexit__(self, *e):
@@ -163,7 +166,7 @@ def video(frames, out, preset, seed):
 async def reel_cluster(s, a, atlas, br, base):
     ids, tmp, frames = s["places"], tempfile.mkdtemp(), []
     async with Mapper(br, base, a.libs, atlas, ids[0], RW, RH) as m:
-        await m.fit(union(atlas, ids), {"top": 300, "bottom": 900, "left": 110, "right": 170})
+        await m.fit(union(atlas, ids), {"top": 300, "bottom": 900, "left": 110, "right": 170}, s.get("maxzoom", 13.5))
         for i in range(len(ids) + 1):
             p = os.path.join(tmp, f"m{i}.jpg")
             await m.shot(ids[:i], p)
@@ -268,8 +271,9 @@ async def run(a):
     s = json.load(open(a.spec, encoding="utf-8"))
     if s.get("member"):
         MEMBER.update(s["member"])
-    global NOAREA
+    global NOAREA, NOLABELS
     NOAREA = bool(s.get("no_area"))
+    NOLABELS = bool(s.get("no_labels"))
     try:
         async with async_playwright() as p:
             br = await owa.launch(p)
