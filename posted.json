@@ -271,6 +271,19 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-hermitage",
+   "place": "Hermitage",
+   "slot": "2026-11-05T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=6593911107874081027",
+   "sources": [
+    "Météo-France normals 1991-2020 (Romans 26281001, Orange 84087001)",
+    "INAO Hermitage specification (BO 6 Dec 2013, modification text 2024)",
+    "Vins Rhône key figures 2025",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

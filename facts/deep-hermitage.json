@@ -1,0 +1,304 @@
+{
+ "slug": "deep-hermitage",
+ "place": "Hermitage",
+ "atlas_id": "fr-inao-a282",
+ "made": "2026-11-05",
+ "hook": "Rhône study path (no event): Northern Rhône, granite hill, Syrah with Marsanne and Roussanne",
+ "station": {
+  "name": "Romans (ROMANS_SAPC)",
+  "id": "26281001",
+  "height_m": 156,
+  "lat": 45.05,
+  "lon": 4.9986,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_26281001.pdf",
+  "note": "Official fiche, edited 06/06/2026. Precipitation and temperature 1991-2020. No sunshine or gust days at this station ('Données non disponibles'). 12.3 km east of the outline centre."
+ },
+ "comparison_station": {
+  "name": "Orange",
+  "id": "84087001",
+  "height_m": 57,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_84087001.pdf",
+  "note": "Monthly precipitation and mean temperature reused from facts/deep-chateauneuf.json (same fiche). No sunshine there either."
+ },
+ "checked_not_used": {
+  "Valence-Chabeuil 26064001": "163 m, 20 km away. Precipitation, temperature and wind cover only 1997-2020, no sunshine. Not used: period not 1991-2020.",
+  "Sunshine hours": "No official 1991-2020 sunshine at Romans, Valence-Chabeuil or Orange, so no sunshine hours on screen. The Sun layer uses the atlas slope and aspect with the atlas clear-sky model instead.",
+  "Red and white shares": "Specification gives red 70% of production in 2009 only. Too old, left out.",
+  "Mean aspect wording": "Wikipedia says south west, specification says exposé plein sud, atlas mean aspect 186°. Used south."
+ },
+ "monthly": {
+  "romans_tmax": [
+   8.1,
+   9.9,
+   14.7,
+   18.2,
+   22.4,
+   26.6,
+   29.3,
+   29,
+   24,
+   18.7,
+   12.4,
+   8.4
+  ],
+  "romans_tmin": [
+   0.8,
+   0.9,
+   3.5,
+   6.2,
+   10.3,
+   13.7,
+   15.4,
+   15.1,
+   11.7,
+   8.8,
+   4.4,
+   1.5
+  ],
+  "romans_tmean": [
+   4.4,
+   5.4,
+   9.1,
+   12.2,
+   16.3,
+   20.2,
+   22.3,
+   22.1,
+   17.9,
+   13.7,
+   8.4,
+   5
+  ],
+  "romans_precip_mm": [
+   52.3,
+   41.8,
+   51.5,
+   72.9,
+   83.7,
+   66.1,
+   59,
+   68.8,
+   104.4,
+   115.8,
+   106,
+   54.4
+  ],
+  "romans_precip_year": 876.7,
+  "romans_tmean_year": 13.1,
+  "romans_frost_nights_year": 48.8,
+  "orange_precip_mm": [
+   54.8,
+   36.6,
+   44.5,
+   63,
+   60.1,
+   37.4,
+   38.4,
+   40.2,
+   105.3,
+   94.5,
+   96.6,
+   48.2
+  ],
+  "orange_precip_year": 719.6,
+  "orange_tmean": [
+   6.2,
+   7.2,
+   10.8,
+   13.6,
+   17.7,
+   21.9,
+   24.5,
+   24.2,
+   19.7,
+   15.4,
+   10.1,
+   6.7
+  ]
+ },
+ "derived": {
+  "rain_sum": 876.7,
+  "jja_rain": 193.9,
+  "orange_jja": 116.0,
+  "son_rain": 326.2,
+  "son_share": 37.2,
+  "aproct_tmean": 17.81,
+  "aproct_tmean_orange": 19.57,
+  "relief_m": 206,
+  "station_lat": 45.05,
+  "station_lon": 4.9986,
+  "km_station_to_centre": 12.3,
+  "km_orange": 104.0,
+  "bbox_len_km": 2.76,
+  "sun_south14": 1.0876,
+  "sun_north14": 0.8535
+ },
+ "derived_code": "work/deep-hermitage/derive.py (copied below): mean(tmean[3:10]) April to October for Romans and Orange; sum(rr[5:8]) June to August; haversine for distances; sun factor from the atlas sunLUT formula (web/index.html, Apr to Oct, lat 45) for slope 14 deg, aspect 186 and 6, relative to flat.",
+ "derive_py": "import json,math\nromans=dict(tx=[8.1,9.9,14.7,18.2,22.4,26.6,29.3,29,24,18.7,12.4,8.4],tn=[0.8,0.9,3.5,6.2,10.3,13.7,15.4,15.1,11.7,8.8,4.4,1.5],\n tm=[4.4,5.4,9.1,12.2,16.3,20.2,22.3,22.1,17.9,13.7,8.4,5],rr=[52.3,41.8,51.5,72.9,83.7,66.1,59,68.8,104.4,115.8,106,54.4])\norange=json.load(open('facts/deep-chateauneuf.json'))['monthly']\no_rr=orange['orange_precip_mm']; o_tm=orange['orange_tmean']\ndef hav(a,b,c,d):\n    R=6371;p=math.radians\n    x=math.sin(p(c-a)/2)**2+math.cos(p(a))*math.cos(p(c))*math.sin(p(d-b)/2)**2\n    return 2*R*math.asin(math.sqrt(x))\nR_=math.pi/180\ndef sun(lat,slope,aspect):\n    phi=lat*R_;flat=0;tot=0;s=slope*R_;A0=aspect*R_;n=91\n    while n<=304:\n        dec=23.44*R_*math.sin(2*math.pi*(284+n)/365);t=4\n        while t<=20:\n            h=(t-12)*15*R_;sa=math.sin(phi)*math.sin(dec)+math.cos(phi)*math.cos(dec)*math.cos(h)\n            if sa>0.02:\n                ca=math.sqrt(1-sa*sa);A=math.acos(max(-1,min(1,(math.sin(dec)-sa*math.sin(phi))/(ca*math.cos(phi)))))\n                if h>0:A=2*math.pi-A\n                I=0.7**((1/sa)**0.678);flat+=I*sa\n                c=math.cos(s)*sa+math.sin(s)*ca*math.cos(A-A0)\n                if c>0:tot+=I*c\n            t+=.25\n        n+=7\n    return tot/flat\nrlat,rlon=45.05,4+59/60+55/3600\nd=dict(rain_sum=round(sum(romans['rr']),1),jja_rain=round(sum(romans['rr'][5:8]),1),orange_jja=round(sum(o_rr[5:8]),1),\n son_rain=round(sum(romans['rr'][8:11]),1),son_share=round(100*sum(romans['rr'][8:11])/sum(romans['rr']),1),\n aproct_tmean=round(sum(romans['tm'][3:10])/7,2),aproct_tmean_orange=round(sum(o_tm[3:10])/7,2),\n relief_m=325-119,station_lat=rlat,station_lon=round(rlon,4),km_station_to_centre=round(hav(rlat,rlon,45.07683,4.84662),1),\n km_orange=round(hav(44.14444,4.86083,45.07683,4.84662),0),\n bbox_len_km=round(hav(45.0764,4.83,45.0764,4.8652),2),\n sun_south14=round(sun(45,14,186),4),sun_north14=round(sun(45,14,6),4))\nprint(json.dumps(d,indent=1))\njson.dump(dict(derived=d,romans=romans),open('work/deep-hermitage/derived.json','w'),indent=1)\n",
+ "facts": [
+  {
+   "claim": "Delimited area 145.5 ha",
+   "value": 145.5,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-fr.json fr-inao-a282 (INAO data, 2026-08-31)"
+  },
+  {
+   "claim": "137 ha in production in 2025",
+   "value": 137,
+   "unit": "ha",
+   "source": "Vins Rhône (Inter Rhône) key figures",
+   "url": "https://vins-rhone.com/en/cotes-du-rhone-cru-aoc-hermitage"
+  },
+  {
+   "claim": "East bank, above Tain-l'Hermitage",
+   "source": "Open Wine Atlas study.json, rhone-south-northern-rhone"
+  },
+  {
+   "claim": "AOC since 1937 (decree of 4 March 1937)",
+   "value": 1937,
+   "source": "Hermitage specification, Bulletin officiel 6 Dec 2013",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf"
+  },
+  {
+   "claim": "Top of the outline 325 m, lowest 119 m",
+   "value": [
+    325,
+    119
+   ],
+   "unit": "m",
+   "source": "Open Wine Atlas details-fr.json fr-inao-a282 (INAO data, 2026-08-31) terrain.e"
+  },
+  {
+   "claim": "Rhône 300 m from the outline",
+   "value": 0.3,
+   "unit": "km",
+   "source": "Open Wine Atlas details-fr.json fr-inao-a282 (INAO data, 2026-08-31) rivers"
+  },
+  {
+   "claim": "Scrap of granite massif the Rhône cut off from the Ardèche mountains",
+   "source": "Specification X.1.a: 'lambeau de massif granitique que le Rhône a séparé de la montagne ardéchoise'",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf"
+  },
+  {
+   "claim": "Syrah mostly on the west of the hill, white grapes on more calcareous soils",
+   "source": "Specification X: 'implanté majoritairement dans la partie ouest du coteau granitique' / 'concentrés sur les sols plus calcaires'",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf"
+  },
+  {
+   "claim": "Rain at Romans 876.7 mm a year, 156 m, 12 km east",
+   "value": 876.7,
+   "unit": "mm",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_26281001.pdf"
+  },
+  {
+   "claim": "Orange 719.6 mm",
+   "value": 719.6,
+   "unit": "mm",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_84087001.pdf"
+  },
+  {
+   "claim": "June to August rain: Romans 193.9 mm, Orange 116.0 mm",
+   "value": [
+    193.9,
+    116.0
+   ],
+   "unit": "mm",
+   "source": "derived from the monthly normals"
+  },
+  {
+   "claim": "Mean slope 14 deg, mean aspect 186 deg",
+   "value": [
+    14.0,
+    186
+   ],
+   "source": "Open Wine Atlas details-fr.json fr-inao-a282 (INAO data, 2026-08-31) terrain.s, terrain.asp"
+  },
+  {
+   "claim": "Direct sun April to October relative to flat: 14 deg south +8.8% (+9), 14 deg north -14.7% (15% less)",
+   "value": [
+    1.0876,
+    0.8535
+   ],
+   "source": "Open Wine Atlas clear-sky model (sunLUT, web/index.html), derived"
+  },
+  {
+   "claim": "April to October mean 17.8 C at Romans, 19.6 C at Orange",
+   "value": [
+    17.81,
+    19.57
+   ],
+   "unit": "C",
+   "source": "derived from Météo-France normals 1991-2020"
+  },
+  {
+   "claim": "July high 29.3 C at Romans",
+   "value": 29.3,
+   "unit": "C",
+   "source": "Météo-France normals 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_26281001.pdf"
+  },
+  {
+   "claim": "WSET bands: moderate 16.5 to 18.5, warm 18.5 to 21",
+   "source": "Open Wine Atlas study.json"
+  },
+  {
+   "claim": "Red Hermitage at least 85% Syrah, accessory Marsanne and Roussanne up to 15%",
+   "value": 85,
+   "unit": "%",
+   "source": "Specification V.1 and IX.1.a (same in the 2024 modification text)",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf",
+   "url2": "https://extranet.inao.gouv.fr/fichier/PNO2024AOPHermitage.pdf"
+  },
+  {
+   "claim": "Vin de paille from Marsanne and Roussanne, sweet white, at least 45 days drying between harvest and pressing",
+   "value": 45,
+   "unit": "days",
+   "source": "Specification III.2 (same in the 2024 modification text)",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf",
+   "url2": "https://extranet.inao.gouv.fr/fichier/PNO2024AOPHermitage.pdf"
+  },
+  {
+   "claim": "White Hermitage from Marsanne and Roussanne",
+   "source": "Specification V.1",
+   "url": "https://bubblyprofessor.com/wp-content/uploads/2020/07/cahier-des-charges-hermitage.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "On which bank of the Rhône is Hermitage?",
+   "options": [
+    "East",
+    "West",
+    "Both banks"
+   ],
+   "answer": "East",
+   "source": "Open Wine Atlas study.json, rhone-south-northern-rhone"
+  },
+  {
+   "q": "Minimum Syrah in red Hermitage?",
+   "options": [
+    "75%",
+    "85%",
+    "100%"
+   ],
+   "answer": "85%",
+   "source": "Specification IX.1.a"
+  },
+  {
+   "q": "Which grapes make white Hermitage?",
+   "options": [
+    "Viognier",
+    "Chardonnay",
+    "Marsanne, Roussanne"
+   ],
+   "answer": "Marsanne and Roussanne",
+   "source": "Specification V.1"
+  }
+ ]
+}

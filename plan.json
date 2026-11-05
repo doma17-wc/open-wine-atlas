@@ -295,8 +295,9 @@
    "series": "",
    "not_before": "2026-11-05",
    "why": "Rhône study path: Northern Rhône, granite hill, Syrah with Marsanne and Roussanne",
-   "status": "planned",
-   "note": "Added 2026-11-01 to keep 6+ planned. not_before moved from 2026-11-09 to 2026-11-05 on 2026-11-04 so the Marlborough outro 'Next deep dive: Hermitage' is true."
+   "status": "posted",
+   "note": "Made 2026-11-05. Study-path hook, no event. Climate: Météo-France 1991-2020 normals for Romans (156 m, 12 km east), compared with Orange; Valence-Chabeuil rejected because its temperature and rain cover only 1997-2020. No official sunshine at Romans, so the Sun layer uses atlas slope and aspect with the atlas clear-sky model. Grapes and vin de paille from the INAO specification (2013 text, checked against the 2024 modification).",
+   "slot": "2026-11-05T17:50+01:00"
   },
   {
    "slug": "deep-barossa",
