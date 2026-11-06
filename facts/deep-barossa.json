@@ -1,0 +1,280 @@
+{
+ "slug": "deep-barossa",
+ "place": "Barossa Valley",
+ "atlas_id": "au-world-barossa-valley",
+ "station": {
+  "name": "Nuriootpa PIRSA",
+  "number": "023373",
+  "service": "Australian Bureau of Meteorology",
+  "height_m": 275,
+  "coords": [
+   139.01,
+   -34.48
+  ],
+  "period_temp": "1996-2026, 30 years",
+  "period_rain": "1996-2026, 25 years",
+  "period_sun": "1999-2020, 18 years",
+  "url": "https://www.bom.gov.au/climate/averages/tables/cw_023373.shtml",
+  "note": "No 1991-2020 normals for this station (BoM: '30 year period not available', opened 1996). All-years statistics, period named on screen. Temperatures read verbatim. Rain and sunshine rows came from two separate tool extractions of the page that agree exactly; sum of months 467.3 vs printed annual 468.7 (BoM computes the annual separately). Cross-check: Wikipedia BoM box 1996-2024 474.8 mm, 2,869.7 h a year (7.9 h a day); Elders Weather 467.3 mm."
+ },
+ "comparison_station": {
+  "name": "Adelaide (Kent Town)",
+  "number": "023090",
+  "service": "Australian Bureau of Meteorology",
+  "height_m": 48,
+  "period_rain": "1977-2020, 41 years",
+  "period_sun": "38 years, 1977-2015",
+  "url": "https://www.bom.gov.au/climate/averages/tables/cw_023090_All.shtml",
+  "note": "Station closed 31 Jul 2020. Rain verbatim. Sunshine from two tool extractions that agree (7.6 h, 38 years, period end read by the tool); same service, different period, named on screen."
+ },
+ "monthly": {
+  "months": [
+   "Jan",
+   "Feb",
+   "Mar",
+   "Apr",
+   "May",
+   "Jun",
+   "Jul",
+   "Aug",
+   "Sep",
+   "Oct",
+   "Nov",
+   "Dec"
+  ],
+  "nuriootpa_max_C": [
+   30.3,
+   29.5,
+   26.2,
+   22.1,
+   17.5,
+   14.1,
+   13.6,
+   14.9,
+   18.0,
+   21.5,
+   25.0,
+   27.6
+  ],
+  "nuriootpa_min_C": [
+   14.7,
+   14.4,
+   12.2,
+   9.1,
+   6.8,
+   5.2,
+   4.7,
+   5.1,
+   6.6,
+   8.4,
+   10.7,
+   12.4
+  ],
+  "nuriootpa_rain_mm": [
+   15.5,
+   21.7,
+   24.4,
+   31.5,
+   46.8,
+   55.5,
+   57.9,
+   58.0,
+   53.0,
+   38.7,
+   35.8,
+   28.5
+  ],
+  "nuriootpa_sun_h_day": [
+   10.6,
+   10.0,
+   8.7,
+   7.5,
+   5.7,
+   4.9,
+   5.1,
+   6.5,
+   7.2,
+   8.7,
+   9.6,
+   9.9
+  ],
+  "adelaide_kent_town_rain_mm": [
+   20.1,
+   16.1,
+   25.9,
+   39.5,
+   61.4,
+   78.1,
+   75.3,
+   67.7,
+   58.5,
+   40.9,
+   29.6,
+   28.4
+  ]
+ },
+ "annual": {
+  "nuriootpa_rain_mm": 468.7,
+  "adelaide_rain_mm": 547.1,
+  "nuriootpa_sun_h_day": 7.9,
+  "adelaide_sun_h_day": 7.6
+ },
+ "derived": {
+  "oct_apr_mean_temp_C": 18.86,
+  "oct_apr_rain_mm": 196.1,
+  "gi_vine_share_pct": 20.3,
+  "shares_pct_of_11918_ha": {
+   "Shiraz": 64.8,
+   "Cabernet Sauvignon": 14.3,
+   "Grenache": 6.7,
+   "Mataro": 2.8
+  },
+  "other_pct_after_rounding": 11,
+  "computation": "oct_apr_mean = mean((max+min)/2) over Oct,Nov,Dec,Jan,Feb,Mar,Apr; oct_apr_rain = sum of the same months; shares = variety ha / 11,918 ha (region including 212 ha Barossa zone other). See work/mk_facts.py logic: values computed in Python."
+ },
+ "claims": [
+  {
+   "id": "area_vines",
+   "value": "11,705 ha",
+   "text": "Barossa Valley plantings at 30 April 2026 (11,918 ha including 212 ha Barossa zone other)",
+   "source": "Wine Australia, SA Winegrape Crush Survey 2026, p.19 and p.34",
+   "url": "https://riverlandwine.com.au/content/uploads/2026/08/sa_full_report_2026.pdf"
+  },
+  {
+   "id": "area_gi",
+   "value": "57,774 ha",
+   "text": "GI outline area",
+   "source": "Open Wine Atlas (Wine Australia GI register outline); Wine Australia page gives 578 km2",
+   "url": "https://wineaustralia.com/discover-australian-wine/south-australia-wines/barossa"
+  },
+  {
+   "id": "registered",
+   "value": "1997",
+   "source": "Open Wine Atlas (registered 1997-08-15)"
+  },
+  {
+   "id": "adelaide",
+   "value": "54 km NE of Adelaide",
+   "source": "Open Wine Atlas near_city"
+  },
+  {
+   "id": "settlers",
+   "value": "1840s, German-speaking Lutherans from Silesia",
+   "source": "Open Wine Atlas Study, Australia lesson"
+  },
+  {
+   "id": "oldest_shiraz",
+   "value": "Some of the oldest Shiraz vines in the world dating back to 1843",
+   "source": "Wine Australia, Barossa Valley page",
+   "url": "https://wineaustralia.com/discover-australian-wine/south-australia-wines/barossa"
+  },
+  {
+   "id": "height",
+   "value": "mean 275 m, min 107, max 580",
+   "source": "Open Wine Atlas terrain.e"
+  },
+  {
+   "id": "climate_range",
+   "value": "warm on the valley floor to cool at the higher altitudes in the hills",
+   "source": "Wine Australia",
+   "url": "https://wineaustralia.com/discover-australian-wine/south-australia-wines/barossa"
+  },
+  {
+   "id": "soils",
+   "value": "relatively low-fertility clay loam through to more sandy soils, grey to brown to red",
+   "source": "Wine Australia",
+   "url": "https://wineaustralia.com/discover-australian-wine/south-australia-wines/barossa"
+  },
+  {
+   "id": "soils_ns",
+   "value": "alluvial sands and rich black soils in Southern Barossa, red clay loams in Northern Barossa",
+   "source": "Barossa Grounds Project, barossa.com (Barossa Grape & Wine Association)",
+   "url": "https://www.barossa.com/?p=2520"
+  },
+  {
+   "id": "eden",
+   "value": "Eden Valley ground averages 408 m; days 2-3 C lower, nights up to 7 C cooler than Barossa Valley",
+   "source": "Open Wine Atlas terrain.e; barossa.com Climate & seasons",
+   "url": "https://www.barossa.com/?p=2563"
+  },
+  {
+   "id": "wset",
+   "value": "warm = 18.5 to 21 C",
+   "source": "Open Wine Atlas Study (WSET bands)"
+  },
+  {
+   "id": "shiraz_style",
+   "value": "full-bodied Shiraz with ripe black fruit",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "id": "mataro",
+   "value": "Mataro = Mourvedre",
+   "source": "Wine Australia crush survey variety label 'Mataro/Mourvedre'",
+   "url": "https://riverlandwine.com.au/content/uploads/2026/08/sa_full_report_2026.pdf"
+  },
+  {
+   "id": "shares",
+   "value": "Shiraz 7,724, Cabernet Sauvignon 1,700, Grenache 798, Mataro 335 of 11,918 ha",
+   "source": "Wine Australia, SA Winegrape Crush Survey 2026, plantings tables",
+   "url": "https://riverlandwine.com.au/content/uploads/2026/08/sa_full_report_2026.pdf",
+   "note": "Two tool extractions agree and add up to the verbatim total; 2024 regional report verbatim gives Shiraz 7,729 of 11,930 ha: https://vinehealth.com.au/wp-content/uploads/Barossa-Valley-report-2024.pdf"
+  },
+  {
+   "id": "phylloxera",
+   "value": "South Australia has never had phylloxera; many Barossa vines are very old and on their own roots",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "id": "charter",
+   "value": "Old Vine 35+, Survivor 70+, Centenarian 100+, Ancestor 125+ years; introduced 2009",
+   "source": "Barossa Old Vine Charter, barossa.com",
+   "url": "https://www.barossa.com/?p=2542"
+  },
+  {
+   "id": "harvest",
+   "value": "mid-February to late April",
+   "source": "barossa.com Climate & seasons",
+   "url": "https://www.barossa.com/?p=2563"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape covers 65% of the Barossa Valley's vines?",
+   "options": [
+    "A Grenache",
+    "B Shiraz",
+    "C Cabernet Sauvignon"
+   ],
+   "answer": "B Shiraz",
+   "source": "Wine Australia Crush Survey 2026"
+  },
+  {
+   "q": "Why do many old Barossa vines grow on their own roots?",
+   "options": [
+    "A Phylloxera never came",
+    "B Grafting is banned",
+    "C The soil is all sand"
+   ],
+   "answer": "A Phylloxera never came",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "Under the Old Vine Charter, a Survivor Vine is at least how old?",
+   "options": [
+    "A 35 years",
+    "B 70 years",
+    "C 125 years"
+   ],
+   "answer": "B 70 years",
+   "source": "Barossa Old Vine Charter"
+  }
+ ],
+ "dropped": [
+  "Barossa Range / Mount Lofty rain-shadow claim (no source)",
+  "Turkey Flat 1847 (Wikipedia only, a producer)",
+  "Days over 30/35 C at Nuriootpa (rows not readable)",
+  "Geological ages (no source)",
+  "Vine age statistics (survey has planting-year columns, no age bands)"
+ ]
+}

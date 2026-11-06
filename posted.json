@@ -284,6 +284,21 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-barossa",
+   "place": "Barossa Valley",
+   "slot": "2026-11-06T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-4532190236134848726",
+   "sources": [
+    "Australian Bureau of Meteorology (Nuriootpa PIRSA 023373, Adelaide Kent Town 023090, all years of record)",
+    "Wine Australia, SA Winegrape Crush Survey 2026",
+    "Wine Australia, Barossa Valley page",
+    "Barossa Grounds Project (barossa.com)",
+    "Barossa Old Vine Charter (barossa.com)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

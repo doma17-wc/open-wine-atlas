@@ -306,8 +306,39 @@
    "series": "",
    "not_before": "2026-11-06",
    "why": "Southern Hemisphere study path: old-vine Shiraz, Barossa and Eden valleys",
+   "status": "posted",
+   "note": "Added 2026-11-04 to keep 6+ planned. Made 2026-11-06. Study-path hook, no event. Climate: BoM Nuriootpa PIRSA 023373 (275 m), all-years statistics 1996-2026 (sun 1999-2020), since the station has no 1991-2020 period; Adelaide (Kent Town) 023090 for rain 1977-2020 and sun to 2015; periods named on screen. Rain and sun rows came from two matching tool extractions, cross-checked on the Wikipedia BoM box. Grapes: SA Winegrape Crush Survey 2026 (plantings read twice, match the 2024 report). 3D terrain 2.0 because the relief is gentle. Cover from shot 6 because the marker dimmed on shot 2. Climate and heat cameras moved north so the station sits between chips and card.",
+   "slot": "2026-11-06T17:50+01:00"
+  },
+  {
+   "slug": "deep-napa-valley",
+   "place": "Napa Valley",
+   "atlas_id": "us-ava-napa_valley",
+   "series": "",
+   "not_before": "2026-11-07",
+   "why": "USA study path: Cabernet Sauvignon, Mayacamas and Vaca ranges, fog from San Pablo Bay",
    "status": "planned",
-   "note": "Added 2026-11-04 to keep 6+ planned."
+   "note": "Added 2026-11-06 so the Barossa outro 'Next deep dive: Napa Valley' is true."
+  },
+  {
+   "slug": "deep-stellenbosch",
+   "place": "Stellenbosch",
+   "atlas_id": "za-world-stellenbosch",
+   "series": "",
+   "not_before": "2026-11-09",
+   "why": "Southern Hemisphere study path: Cabernet Sauvignon, Pinotage, False Bay breezes",
+   "status": "planned",
+   "note": "Added 2026-11-06."
+  },
+  {
+   "slug": "deep-mendoza",
+   "place": "Mendoza",
+   "atlas_id": "ar-world-mendoza",
+   "series": "",
+   "not_before": "2026-11-10",
+   "why": "Southern Hemisphere study path: high-altitude Malbec under the Andes",
+   "status": "planned",
+   "note": "Added 2026-11-06. Whole province outline: frame Luján de Cuyo and Uco Valley."
   }
  ]
 }
