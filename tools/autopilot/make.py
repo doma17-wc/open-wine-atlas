@@ -176,7 +176,7 @@ async def reel_cluster(s, a, atlas, br, base):
                   <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
                 sec = 2.4
             else:
-                t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="kick">{i} / {len(ids)}</div><div class="h2">{esc(atlas.index[ids[i - 1]][0])}</div>
+                t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="kick">{i} / {len(ids)}</div><div class="h2">{esc(atlas.index[ids[i - 1]][0].replace(s.get('strip', '\0'), ''))}</div>
                   <div class="ha">{esc(fmt_ha(area(atlas, ids[i - 1])))}</div></div>"""
                 sec = 1.7
             frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, f"c{i}.jpg")), sec))
@@ -200,8 +200,10 @@ async def reel_vs(s, a, atlas, br, base):
     big = x if ax >= ay else y
     W, H = RW, 620
     async with Mapper(br, base, a.libs, atlas, big, W, H) as m:
-        await m.fit(atlas.index[big][6], 70)
-        z = await m.pg.evaluate("() => window.__map.getZoom()")
+        z = 99
+        for pid in (x, y):  # a zoom at which both fit, or the long thin one gets cut
+            await m.fit(atlas.index[pid][6], 70)
+            z = min(z, await m.pg.evaluate("() => window.__map.getZoom()"))
         shots = {}
         for pid in (x, y):
             b = atlas.index[pid][6]
@@ -243,7 +245,7 @@ async def carousel(s, a, atlas, br, base):
             await m.shot([pid], p)
             o = os.path.join(a.out, f"{s['name']}-{i + 2}.jpg")
             files.append(await card(br, atlas, a.libs, FW, FH, bg(p) + f"""<div class="shade" style="height:620px"></div><div class="fb" data-fit="t" style="bottom:70px;height:320px;overflow:hidden">
-              <div class="kick">{i + 1} / {len(ids)}</div><div class="h2">{esc(atlas.index[pid][0])}</div><div class="ha">{esc(fmt_ha(area(atlas, pid)))}</div></div>""", o))
+              <div class="kick">{i + 1 + s.get('kick_from', 0)} / {s.get('kick_of', len(ids))}</div><div class="h2">{esc(s.get('rename', {}).get(atlas.index[pid][0], atlas.index[pid][0]))}</div><div class="ha">{esc(fmt_ha(area(atlas, pid)))}</div></div>""", o))
     o = os.path.join(a.out, f"{s['name']}-{len(ids) + 2}.jpg")
     files.append(await card(br, atlas, a.libs, FW, FH, member_block(330), o))
     return {"files": files, "areas": {atlas.index[i][0]: area(atlas, i) for i in ids}}
