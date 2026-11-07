@@ -249,6 +249,9 @@ def main():
         return out
 
     def world_type(r, d):
+        if r[1].startswith("it-deep-") and d.get("type"):
+            t = d["type"]
+            return t if t.isupper() else t.lower()
         return re.sub(r"\s*\(.*\)\s*$", "", d.get("type", "")) if "-world-" in r[1] and d.get("type") else ""
 
     def summary(r, d, pd):
@@ -371,7 +374,7 @@ def main():
         add("Category", esc(d.get("category", "")))
         add("Protected since", esc(d.get("registered", "")))
         outline_kind = ("outline of the administrative units" if d.get("admin_units") else
-                        "registered outline" if d.get("outline_quality") and not ((pid.startswith("ch-reg-") or pid.startswith("fr-champ-")) and d.get("communes"))
+                        "registered outline" if d.get("outline_quality") and not ((pid.startswith("ch-reg-") or pid.startswith("fr-champ-") or pid.startswith("it-deep-")) and d.get("communes"))
                         else "outline of listed communes")
         add("Area", (f"{fmt_n(d['area_ha'], 1)} ha" if d.get("area_ha") else
                      (f"{fmt_n(d['outline_area_ha'])} ha {outline_kind}" if d.get("outline_area_ha") else ""))
