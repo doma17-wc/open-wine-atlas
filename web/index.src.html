@@ -1574,12 +1574,12 @@ const DEEP_REGIONS = [
   { key: "piemonte", root: "g:IT/piemonte", cc: "IT", haField: "vine_area_ha", hash: "piedmont", name: "Piemonte",
     go: N_("Piedmont in depth"), keyHead: N_("Piemonte · 4 levels"),
     levels: [["itdocg", N_("DOCG")], ["itdoc", N_("DOC")], ["itcru", N_("Cru commune")], ["itregional", N_("Regional DOC")]],
-    fit: ["g:IT/piemonte/langhe-and-roero"], fitZ: 9.6, inView: 7.4 },
+    fit: ["g:IT/piemonte/langhe-and-roero"], box: [7.72, 44.52, 8.22, 44.84], fitZ: 10, inView: 7.4 },
   // Toscana: DOCG, DOC, the sub-zones of Chianti, the UGA of Chianti Classico and the Pievi of Montepulciano
   { key: "toscana", root: "g:IT/toscana", cc: "IT", haField: "vine_area_ha", hash: "tuscany", name: "Toscana",
     go: N_("Tuscany in depth"), keyHead: N_("Toscana · 4 levels"),
     levels: [["itdocg", N_("DOCG")], ["itdoc", N_("DOC")], ["itsub", N_("Sub-zone, UGA and Pieve")], ["itregional", N_("Regional DOC")]],
-    fit: ["g:IT/toscana/chianti-and-central-tuscany", "g:IT/toscana/montalcino-montepulciano-and-southern-tuscany"], fitZ: 8.6, inView: 7.2 },
+    fit: ["g:IT/toscana/chianti-and-central-tuscany"], box: [10.95, 42.98, 11.95, 43.75], fitZ: 9.4, inView: 7.2 },
 ];
 // Italy: the umbrella DOCs sit in the region's "Regional appellations" group
 const IT_DEEP = ["g:IT/piemonte", "g:IT/toscana"];
@@ -1688,7 +1688,7 @@ function deepStyleLayers() {
   const cvil = inIds("cvillage"), zone = inIds("zone"), bxc = inIds("communal"), bxs = inIds("subregional"), est = inIds("estate");
   const itg = inIds("itdocg"), itd = inIds("itdoc"), itc = inIds("itcru"), its = inIds("itsub"), itr = inIds("itregional");
   setP("ov-fill", "fill-opacity", fillOpacityByLevel(["case", gc, 0.22, pc, 0.12, vill, 0.05, area, 0.07, comm, 0.045, cant, 0.015,
-    cvil, 0.05, zone, 0.03, bxc, 0.08, bxs, 0.03, itc, 0.09, its, 0.07, itg, 0.12, itd, 0.035, itr, 0.012, top, 0.07, INAO, 0.02, 0.025]));
+    cvil, 0.05, zone, 0.03, bxc, 0.08, bxs, 0.03, itc, 0.1, its, 0.08, itg, 0.06, itd, 0.025, itr, 0.01, top, 0.07, INAO, 0.02, 0.025]));
   // classified Bordeaux estates: gold markers
   if (map.getLayer("ov-pts")) setP("ov-pts", "circle-color", ["case", est, P.gold, ["==", ["get", "level"], "subzone"], P.copper, P.parchment]);
   setP("ov-labels", "text-color", ["case", ["any", top, est], P.gold, P.label]);
@@ -1776,7 +1776,7 @@ function openDeep(key) {
   if (!R || !TREE || !tnode(R.root) || QUIZ_ON) return;
   openGroup(R.root, false);
   const bb = R.fit.map((k) => tnode(k) && tnode(k)[2]).filter(Boolean);
-  const b = bb.length ? [Math.min(...bb.map((x) => x[0])), Math.min(...bb.map((x) => x[1])), Math.max(...bb.map((x) => x[2])), Math.max(...bb.map((x) => x[3]))] : tnode(R.root)[2];
+  const b = R.box ? R.box : bb.length ? [Math.min(...bb.map((x) => x[0])), Math.min(...bb.map((x) => x[1])), Math.max(...bb.map((x) => x[2])), Math.max(...bb.map((x) => x[3]))] : tnode(R.root)[2];
   map.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: fitPad(), maxZoom: R.fitZ, pitch: Math.min(map.getPitch(), pitchCap(10)), duration: REDUCED ? 0 : 2600, essential: true });
   ensureDeepHa(key);
   if (WEB) try { history.replaceState(null, "", "#" + R.hash); } catch (e) {}
@@ -3165,8 +3165,9 @@ const WHAT = { region: N_("a wine region"), appellation: N_("an appellation"), s
   "docg subzone": N_("a DOCG sub-zone"), "doca subzone": N_("a DOCa sub-zone") };
 const DEEP_WHAT = { grand_cru: N_("a grand cru village"), premier_cru: N_("a premier cru village") };
 // lists of named sites on a sheet (Italy: MGA)
-const NAMED_HEAD = { MGA: N_("MGA · {n}") };
-const NAMED_NOTE = { MGA: N_("Menzioni geografiche aggiuntive: the named vineyard areas of the specification, which may appear on the label. Listed, not drawn on the map.") };
+const NAMED_HEAD = { MGA: N_("MGA · {n}"), Pieve: N_("Pievi · {n}") };
+const NAMED_NOTE = { MGA: N_("Menzioni geografiche aggiuntive: the named vineyard areas of the specification, which may appear on the label. Listed, not drawn on the map."),
+  Pieve: N_("The twelve Pievi of the specification (2025), named on the label of Vino Nobile di Montepulciano Pieve. Those with a known village are markers on the map.") };
 // the sheet shows the planted area, measured live, instead of the area of the outline
 const liveVines = (d) => WEB && !d.vine_area_ha && d.outline_quality !== "point";
 function summary(p, d, pd) {
@@ -3393,6 +3394,8 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
     html += '<div class="sec"><h3>' + t_(NAMED_HEAD[ns.kind] || NAMED_HEAD.MGA, { n: ns.items.length }) + '</h3><div class="communes">' +
       ns.items.map(([n, c]) => esc(n) + (c ? ' <span class="note">' + esc(c) + "</span>" : "")).join(", ") + "</div>" +
       '<p class="note">' + t_(ns.note || NAMED_NOTE[ns.kind] || NAMED_NOTE.MGA) + "</p></div>";
+    if (ns.notes?.length) html += '<div class="sec"><h3>' + t_("Best known MGA") + '</h3><dl class="facts">' +
+      ns.notes.map(([n, t]) => "<dt>" + esc(n) + "</dt><dd>" + esc(t_(t)) + "</dd>").join("") + "</dl></div>";
   }
 
   // bedrock
@@ -3506,7 +3509,7 @@ function goTo(r) {
   const p = { name: r[0], id: r[1], country: r[2], level: r[3], rank: r[4], parent: r[5], src: srcOf(r[1]) };
   select(p, null);
 }
-const srcOf = (id) => id.split("-")[1] === "canton" ? "bfs" : id.split("-")[1];
+const srcOf = (id) => id.split("-")[1] === "canton" ? "bfs" : id.startsWith("it-deep-") ? "itdeep" : id.split("-")[1];
 
 // ---------- search
 const qEl = $("q"), resEl = $("results");

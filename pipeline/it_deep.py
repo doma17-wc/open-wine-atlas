@@ -206,7 +206,8 @@ def main():
                 if cv.get("atlas_note"):
                     d["atlas_note"] = cv["atlas_note"]
                 if mga:
-                    d["named_sites"] = {"kind": "MGA", "items": [[m, ""] for m in mga]}
+                    d["named_sites"] = {"kind": "MGA", "items": [[m, ""] for m in mga],
+                                        "notes": (cv.get("mga_notes") or {}).get(a, [])}
                 d["refs"] = cv.get("refs") or apps.get(a, {}).get("refs") or []
                 d["outline_quality"] = "approx"
                 d["outline"] = (PARTIAL_OUTLINE if partial else COMMUNE_OUTLINE).format(app=nameof[k])

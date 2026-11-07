@@ -59,6 +59,68 @@ def main():
     d = sys.argv[1]
     load = lambda n: json.load(open(os.path.join(d, n), encoding="utf-8"))
     pa, pc, tt = load("piemonte_appellations.json"), load("piemonte_crus.json"), load("toscana.json")
+    regional = {reg: set(dict(GROUPS[reg])["Regional appellations"]) for reg in GROUPS}
+
+    def app_rec(reg, name, v):
+        v = dict(v)
+        v["deep_level"] = "regional" if name in regional[reg] else ("docg" if v.get("rank") == "docg" else "doc")
+        if v.get("vine_area_year") and str(v["vine_area_year"]) not in v.get("vine_area_src", ""):
+            v["vine_area_src"] = v.get("vine_area_src", "") + f" ({v['vine_area_year']})"
+        return v
+
+    # Piemonte: one record per commune; the MGA of each appellation listed on its sheet, notes for the best known
+    p_apps = {k: app_rec("piemonte", k, v) for k, v in pa["appellations"].items()}
+    communes = {}
+    mga_of = {}  # appellation -> [[MGA, commune]]
+    for cname, cv in pc["communes"].items():
+        of = cv["of"]
+        rec = {"of": of, "partial": of if cv.get("partial") else [], "mga": cv.get("mga", {}),
+               "vine_area_ha": cv.get("vine_area_ha", {}), "vine_area_src": cv.get("vine_area_src", ""),
+               "atlas_note": cv.get("atlas_note"), "refs": cv.get("refs")}
+        rules = {}
+        for a, lab in (cv.get("menzione_comunale") or {}).items():
+            rules.setdefault(a, []).append(["Commune name on the label", lab])
+        for a, n in (cv.get("mga_count") or {}).items():
+            rules.setdefault(a, []).append(["MGA in this commune", str(n)])
+        rec["rules"] = rules
+        communes[cname] = rec
+        for a, ms in cv.get("mga", {}).items():
+            for m in ms:
+                mga_of.setdefault(a, []).append([m, cname])
+    notes = {}  # appellation -> [[MGA, note]]
+    for key, sv in pc.get("subzones", {}).items():
+        if sv.get("type") == "MGA" and sv.get("atlas_note"):
+            notes.setdefault(sv["of"], []).append([key.split(" / ", 1)[-1], sv["atlas_note"]])
+    for a, items in list(mga_of.items()):
+        merged = {}
+        for m, c in items:  # an MGA across two communes is one name
+            merged.setdefault(m, []).append(c)
+        items = mga_of[a] = sorted([[m, ", ".join(cs)] for m, cs in merged.items()], key=lambda x: x[0].lower())
+        p_apps[a]["named_sites"] = {"kind": "MGA", "items": items, "notes": sorted(notes.get(a, []))}
+    for cname, rec in communes.items():
+        for a in rec["of"]:
+            if notes.get(a):
+                rec.setdefault("mga_notes", {})[a] = [n for n in notes[a] if n[0] in rec["mga"].get(a, [])]
+
+    # Toscana: sub-zones drawn on whole communes, else a marker on their village; Pievi without a location listed only
+    t_apps = {k: app_rec("toscana", k, v) for k, v in tt["appellations"].items()}
+    subs, pievi = {}, []
+    for name, sv in tt.get("subzones", {}).items():
+        sv = dict(sv)
+        sv["display"] = name
+        if sv["type"] == "Pieve":
+            pievi.append([name, sv.get("village") if sv.get("village") and sv.get("village") != name else ""])
+        if sv["type"] == "UGA" and sv.get("vine_area_ha"):
+            sv["vine_area_note"] = ("The eleven UGA figures add up to about 9,800 ha, more than the area registered for Chianti Classico: "
+                                    "read them as the vineyard area of each UGA, not as Chianti Classico hectares.")
+        if sv["type"] == "Sottozona" or (sv["type"] == "UGA" and sv.get("whole_communes")):
+            sv["draw"] = "communes"
+        elif sv.get("lat") is None:
+            continue
+        subs[name] = sv
+    if pievi:
+        t_apps["Vino Nobile di Montepulciano"]["named_sites"] = {"kind": "Pieve", "items": sorted(pievi)}
+
     out = {
         "_note": ("Piemonte and Toscana in depth (pipeline/it_deep.py), merged by pipeline/it_combine.py from three research files. "
                   "Figures carry their source on each record; open questions are listed in doubts."),
@@ -68,9 +130,9 @@ def main():
         "commune_alias": COMMUNE_ALIAS,
         "regions": {
             "piemonte": {"region": pa.get("region", {}), "groups": [{"name": n, "members": m} for n, m in GROUPS["piemonte"]],
-                         "appellations": pa["appellations"], "communes": pc.get("communes", {}), "subzones": {}},
+                         "appellations": p_apps, "communes": communes, "subzones": {}},
             "toscana": {"region": tt.get("region", {}), "groups": [{"name": n, "members": m} for n, m in GROUPS["toscana"]],
-                        "appellations": tt["appellations"], "subzones": tt.get("subzones", {})},
+                        "appellations": t_apps, "subzones": subs},
         },
     }
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
