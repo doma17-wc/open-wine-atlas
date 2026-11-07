@@ -101,21 +101,24 @@ def main():
             notes.setdefault(sv["of"], []).append([key.split(" / ", 1)[-1], sv["atlas_note"]])
     mga = pc.get("mga", {})
 
-    def mga_extra(a, m, with_communes):
-        r = mga.get(a + " / " + m) or {}
+    def mga_extra(a, m, with_communes, commune=None):
+        r = mga.get(a + " / " + m) or (mga.get(f"{a} / {m} ({commune})") if commune else None) or {}
         bits = [", ".join(r.get("communes") or [])] if with_communes and r.get("communes") else []
         if r.get("vine_area_ha"):
             bits.append(f"{r['vine_area_ha']:g} ha")
+        elif r.get("area_ha"):  # press figures, not a registered area
+            bits.append(f"about {r['area_ha']:g} ha")
         if r.get("altitude_m"):
             bits.append(f"{r['altitude_m'][0]} to {r['altitude_m'][1]} m")
         if r.get("aspect"):
             bits.append(str(r["aspect"]))
         return bits
     for key, r in mga.items():
-        if r.get("atlas_note") and not any(n[0] == key.split(" / ", 1)[-1] for n in notes.get(r["of"], [])):
+        physical = any(r.get(f) for f in ("altitude_m", "aspect", "soil", "area_ha"))
+        if r.get("atlas_note") and physical and not any(n[0] == key.split(" / ", 1)[-1] for n in notes.get(r["of"], [])):
             notes.setdefault(r["of"], []).append([key.split(" / ", 1)[-1], r["atlas_note"]])
     for cname, rec in communes.items():
-        rec["mga_items"] = {a: [[m, " · ".join(mga_extra(a, m, False))] for m in ms] for a, ms in rec["mga"].items()}
+        rec["mga_items"] = {a: [[m, " · ".join(mga_extra(a, m, False, cname))] for m in ms] for a, ms in rec["mga"].items()}
     for a, items in list(mga_of.items()):
         merged = {}
         for m, c in items:  # an MGA across two communes is one name
