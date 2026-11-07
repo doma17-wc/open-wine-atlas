@@ -162,11 +162,20 @@ def main():
             # a rank the EU inventory does not know yet (Terre Alfieri, DOCG since 2020)
             want = "docg" if v.get("rank") == "docg" else ""
             geom = None
-            if v.get("communes"):  # communes corrected by the specification (Chianti Classico)
+            if v.get("communes") and all(com.key(c) for c in v["communes"]):
+                # communes from art. 3 of the specification: drawn again only where the EU inventory lists other ones
+                # (Chianti Classico had the 76 communes of Chianti)
+                old = {com.key(c) or norm(c) for c in d.get("communes") or []}
+                new = {com.key(c) for c in v["communes"]}
                 d["communes"] = v["communes"]
                 if v.get("partial_communes"):
                     d["partial_communes"] = v["partial_communes"]
-                geom = com.union(v["communes"])
+                if old != new:
+                    print(f"  {a}: communes {len(old)} -> {len(new)}, redrawn (+{len(new - old)} -{len(old - new)})")
+                    geom = com.union(v["communes"])
+            elif v.get("communes"):
+                print(f"  {a}: communes of the specification not all in ISTAT, outline kept: "
+                      f"{[c for c in v['communes'] if not com.key(c)]}")
             if row_of[k][4] != want or geom is not None:
                 if geom is None:
                     cs = d.get("communes") or []
@@ -206,7 +215,7 @@ def main():
                 if cv.get("atlas_note"):
                     d["atlas_note"] = cv["atlas_note"]
                 if mga:
-                    d["named_sites"] = {"kind": "MGA", "items": [[m, ""] for m in mga],
+                    d["named_sites"] = {"kind": "MGA", "items": (cv.get("mga_items") or {}).get(a) or [[m, ""] for m in mga],
                                         "notes": (cv.get("mga_notes") or {}).get(a, [])}
                 d["refs"] = cv.get("refs") or apps.get(a, {}).get("refs") or []
                 d["outline_quality"] = "approx"
@@ -313,6 +322,17 @@ def main():
         for ft in feats:
             f.write(json.dumps(ft, ensure_ascii=False, separators=(",", ":")) + "\n")
     print(f"  wrote {len(places)} new places and {len(redraw)} redrawn appellations -> build/it_deep.geojsonl")
+
+    # regional context (geology, climate, history, study points) for the group and place sheets
+    ctx = {}
+    for key, items in spec.get("context", {}).items():
+        k = key
+        if not key.startswith("g:"):
+            k = next((r[1] for r in rows if r[2] == "IT" and r[0] == key and r[1].startswith("it-eupdo-")), None)
+        assert k and (k in nodes or k in pub or k in details), f"context target not found: {key}"
+        ctx[k] = items
+    json.dump(ctx, open(os.path.join(WEB, "context.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print(f"  context.json: {len(ctx)} sheets")
 
     pub.update(details)
     with open(os.path.join(WEB, "details-it.json"), "w", encoding="utf-8") as f:
