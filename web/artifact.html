@@ -293,6 +293,10 @@ svg.pair .sb text { fill: var(--muted); font: 500 10px var(--f-mono); }
 .atlas-note .an-h { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .atlas-note p { margin: 0; font: italic 500 17px/1.4 var(--f-display); color: var(--parchment); }
 .atlas-note .an-f { font-size: 11.5px; color: var(--muted); }
+.ctx .ctx-h { margin: 12px 0 4px; font: 500 10.5px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--copper); }
+.ctx .ctx-p { margin: 0 0 6px; line-height: 1.5; }
+.ctx .ctx-list { margin: 0; padding-left: 16px; display: grid; gap: 4px; line-height: 1.45; }
+.ctx .ctx-list b { color: var(--parchment); font-weight: 600; }
 .q { all: unset; cursor: pointer; display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; border: 1px solid #4a463f;
   font: 500 10px var(--f-mono); color: var(--muted); vertical-align: middle; margin-left: 4px; }
 .q:hover, .q:focus-visible { color: var(--parchment); border-color: var(--parchment); }
@@ -2352,6 +2356,32 @@ async function fillSoil(p, d, rec, token) {
 
 // ---------- Wikipedia summary, only when the article is clearly about this wine place
 const WINE_WORD = /\b(vin|vins|vign|vigne|vignoble|wine|wines|wein|weinbau|weinlage|vino|vini|vigneto|viñedo|vinho|wijn|wijnbouw|cru|appellation|denominaci|denominazione|viticultur|viticult|rebe|reben|winery|aoc|doc|docg|ava)|ワイン|葡萄酒|葡萄园|ブドウ|와인|포도/i;
+// ---------- regional context: geology, climate, history and study points for a region, an area or a key appellation
+// (data/context.json, keyed by tree node or place id; written by pipeline/it_deep.py from sourced research)
+let CTX = null;
+const CTX_HEAD = { geology: N_("Geology and soils"), climate: N_("Climate"), history: N_("History"), grapes: N_("Grapes"), study_points: N_("Study points") };
+LOCALIZE.push(CTX_HEAD);
+async function fillContext(k, token) {
+  if (!CTX) CTX = fetch(dv("data/context.json")).then((r) => r.ok ? r.json() : {}).catch(() => ({}));
+  const all = await CTX, list = all[k];
+  const box = token === sheetToken ? $("ctx-sec") : null;
+  if (!box || !list || !list.length) return;
+  const li = (xs) => "<ul class=\"ctx-list\">" + xs.map((x) => "<li>" + (Array.isArray(x) ? "<b>" + esc(x[0]) + "</b> " + esc(t_(x[1])) : esc(t_(x))) + "</li>").join("") + "</ul>";
+  box.innerHTML = list.map((c) => {
+    let h = '<div class="sec ctx"><h3>' + esc(c.title) + "</h3>";
+    if (c.atlas_note) h += '<p class="ctx-p">' + esc(t_(c.atlas_note)) + "</p>";
+    if (c.altitude_m) h += '<p class="note">' + t_("Vineyards mostly at {a} to {b} m.", { a: fmt(c.altitude_m[0]), b: fmt(c.altitude_m[1]) }) +
+      (c.altitude_text ? " " + esc(t_(c.altitude_text)) : "") + "</p>";
+    for (const f of ["geology", "climate", "history", "grapes", "study_points"]) {
+      const v = c[f];
+      if (!v || (Array.isArray(v) && !v.length)) continue;
+      h += '<h4 class="ctx-h">' + t_(CTX_HEAD[f]) + "</h4>" + (Array.isArray(v) ? li(v) : '<p class="ctx-p">' + esc(t_(v)) + "</p>");
+    }
+    if (c.refs?.length) h += '<p class="note">' + t_("Sources") + ": " + c.refs.slice(0, 8).map(([t, u]) => '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(t) + "</a>").join(" · ") + "</p>";
+    return h + "</div>";
+  }).join("");
+}
+
 async function fillWiki(p, token) {
   const box = () => (token === sheetToken ? $("wiki-sec") : null);
   // the summary in the reader's language first, then the place's own language, then English
@@ -3100,6 +3130,7 @@ async function select(p, feature) {
   trackView("place", p.id);
   if (MY.saved[p.id]) { const s = snapshot(p, d, rec); MY.saved[p.id] = { ...MY.saved[p.id], lat: s.lat, lon: s.lon, area: s.area }; saveMY("saved"); }
   if (!feature && rec) fitTo(rec[6], p.level);
+  fillContext(p.id, sheetToken);
   if (WEB) {
     const tok = sheetToken;
     fillTerrain(p, tok).then((t) => fillClimate(p, d, rec, tok, t));
@@ -3444,6 +3475,7 @@ function renderSheet(p, d, rec, pd = {}, parentRec = null) {
   if (d.note) html += '<p class="note">' + esc(d.note) + "</p>";
   if (d.boundary_text) html += '<details class="sec2"><summary>' + t_("Legal boundary description") + '</summary><p class="note" style="white-space:pre-line">' + esc(d.boundary_text) + "</p></details>";
 
+  html += '<div id="ctx-sec"></div>';
   if (WEB) html += '<div class="sec" id="wiki-sec"></div>';
   // read more
   const lang = LANG[p.country] || "en";
@@ -3962,6 +3994,7 @@ function renderGroupSheet(k) {
       (tops.length > 80 ? '<p class="note">' + t_("and {n} more", { n: tops.length - 80 }) + "</p>" : "") + "</div>";
   }
   if (n[1] !== "country") html += '<div class="sec" id="prod-sec" hidden></div>';
+  html += '<div id="ctx-sec"></div>';
   if (WEB && n[1] !== "country" && !/appellations|^Other|^Großlagenfrei/.test(n[0])) html += '<div class="sec" id="wiki-sec"></div>';
   const how = ADMIN_CC.has(cc) && n[1] === "region" ? t_("Grouped by the administrative region that holds the centre of each appellation (geoBoundaries). Appellations that cross a border sit in one region only.")
     : TREE_SOURCE[cc] || t_("Grouped by the hierarchy published with each register.");
@@ -3970,6 +4003,7 @@ function renderGroupSheet(k) {
   $("sh-body").scrollTop = 0;
   $("sheet").classList.add("open");
   if (n[1] !== "country") fillProducers(k, sheetToken);
+  fillContext(k, sheetToken);
   if (WEB && n[1] !== "country") fillWiki({ name: n[0].replace(/^Bereich /, ""), parent: "", country: cc }, sheetToken);
 }
 

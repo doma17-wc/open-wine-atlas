@@ -1442,5 +1442,12 @@
  "Chianti and central Tuscany": "키안티와 토스카나 중부",
  "Montalcino, Montepulciano and southern Tuscany": "몬탈치노, 몬테풀치아노와 토스카나 남부",
  "Maremma and the coast": "마렘마와 해안",
- "Northern Tuscany": "토스카나 북부"
+ "Northern Tuscany": "토스카나 북부",
+ "Geology and soils": "지질과 토양",
+ "History": "역사",
+ "Grapes": "포도 품종",
+ "Study points": "학습 포인트",
+ "Vineyards mostly at {a} to {b} m.": "포도밭은 주로 해발 {a}~{b} m.",
+ "Sources": "출처",
+ "Production": "생산량"
 }

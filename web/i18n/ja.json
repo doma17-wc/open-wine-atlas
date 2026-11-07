@@ -1442,5 +1442,12 @@
  "Chianti and central Tuscany": "キアンティとトスカーナ中部",
  "Montalcino, Montepulciano and southern Tuscany": "モンタルチーノ、モンテプルチアーノとトスカーナ南部",
  "Maremma and the coast": "マレンマと海岸",
- "Northern Tuscany": "トスカーナ北部"
+ "Northern Tuscany": "トスカーナ北部",
+ "Geology and soils": "地質と土壌",
+ "History": "歴史",
+ "Grapes": "ブドウ品種",
+ "Study points": "学習ポイント",
+ "Vineyards mostly at {a} to {b} m.": "畑はおもに標高{a}〜{b} m。",
+ "Sources": "出典",
+ "Production": "生産量"
 }

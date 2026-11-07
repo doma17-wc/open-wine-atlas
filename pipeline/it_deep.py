@@ -170,7 +170,8 @@ def main():
                 d["communes"] = v["communes"]
                 if v.get("partial_communes"):
                     d["partial_communes"] = v["partial_communes"]
-                if old != new:
+                part = {com.key(c) for c in v.get("partial_communes") or [] if com.key(c)}
+                if (new - old - part) or (old - new):  # a commune only partly in the zone does not redraw the outline
                     print(f"  {a}: communes {len(old)} -> {len(new)}, redrawn (+{len(new - old)} -{len(old - new)})")
                     geom = com.union(v["communes"])
             elif v.get("communes"):
