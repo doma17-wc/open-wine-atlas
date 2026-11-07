@@ -78,6 +78,21 @@ def main():
 
     # Piemonte: one record per commune; the MGA of each appellation listed on its sheet, notes for the best known
     p_apps = {k: app_rec("piemonte", k, v) for k, v in pa["appellations"].items()}
+    # communes checked by hand against art. 3 (7 Nov 2026); where the text is ambiguous the EU inventory outline is kept
+    KEEP_OUTLINE = {
+        "Cortese dell'Alto Monferrato": ("Art. 3 prints 'Carosio', which may be Carrosio or Cartosio; the EU inventory has Cartosio. "
+                                         "Outline and commune list kept as in the EU inventory."),
+    }
+    hand_doubts = [
+        "Barbera del Monferrato: art. 3 prints 'Serole Sessame' without a comma; read as the two communes Serole and Sessame.",
+        "Grignolino d'Asti: art. 3 prints 'Castiglione' among the communes of the province of Asti; the EU inventory read it as "
+        "Castiglione Tinella (province of Cuneo), dropped here.",
+        "Canavese: Traversella is in the EU inventory but not in art. 3 (DM 12.09.1996 text); dropped.",
+    ]
+    for a, why in KEEP_OUTLINE.items():
+        p_apps[a].pop("communes", None)
+        p_apps[a].pop("partial_communes", None)
+        hand_doubts.append(a + ": " + why)
     communes = {}
     mga_of = {}  # appellation -> [[MGA, commune]]
     for cname, cv in pc["communes"].items():
@@ -220,7 +235,7 @@ def main():
                   "Figures carry their source on each record; open questions are listed in doubts."),
         "sources": pa.get("sources", []) + pc.get("sources", []) + tt.get("sources", []),
         "doubts": ["Piemonte appellations: " + x for x in pa.get("doubts", [])] + ["Langhe and Roero crus: " + x for x in pc.get("doubts", [])]
-                  + ["Toscana: " + x for x in tt.get("doubts", [])],
+                  + ["Toscana: " + x for x in tt.get("doubts", [])] + ["Checked by hand: " + x for x in hand_doubts],
         "changes": [x for f in (pa, pc, tt) for x in f.get("changes", [])],
         "commune_alias": COMMUNE_ALIAS,
         "context": context,
