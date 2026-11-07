@@ -150,34 +150,67 @@ def main():
     # regional context: the region, its areas on their group or key appellation
     AREA_TO = {
         "Langhe": "g:IT/piemonte/langhe-and-roero", "Roero": "g:IT/piemonte/langhe-and-roero",
-        "Monferrato": "g:IT/piemonte/asti-and-monferrato", "Gavi and Colli Tortonesi": "g:IT/piemonte/asti-and-monferrato",
-        "Alto Piemonte": "g:IT/piemonte/alto-piemonte", "Canavese and Carema": "g:IT/piemonte/turin-canavese-and-pinerolese",
-        "Chianti Classico": "Chianti Classico", "Chianti": "Chianti", "Montalcino": "Brunello di Montalcino",
-        "Montepulciano": "Vino Nobile di Montepulciano", "San Gimignano": "Vernaccia di San Gimignano", "Bolgheri": "Bolgheri",
-        "Maremma": "g:IT/toscana/maremma-and-the-coast", "Carmignano": "Carmignano", "Rufina": "Chianti",
+        "Monferrato (Astigiano and Casalese)": "g:IT/piemonte/asti-and-monferrato", "Gavi and Colli Tortonesi": "g:IT/piemonte/asti-and-monferrato",
+        "Alto Piemonte (Novara and Vercelli hills)": "g:IT/piemonte/alto-piemonte", "Canavese and Carema": "g:IT/piemonte/turin-canavese-and-pinerolese",
+        "Chianti Classico": "Chianti Classico", "Chianti (outer zones)": "Chianti", "Montalcino": "Brunello di Montalcino",
+        "Montepulciano": "Vino Nobile di Montepulciano", "San Gimignano": "Vernaccia di San Gimignano",
+        "Bolgheri and the Etruscan coast": "Bolgheri", "Maremma (Scansano, Montecucco)": "g:IT/toscana/maremma-and-the-coast",
+        "Carmignano": "Carmignano", "Rufina": "it-deep-chianti-rufina",
     }
     context = {}
+    sec = lambda x: " (secondary source)" if (x or {}).get("src_kind") == "secondary" else ""
+
+    def norm_ctx(c):
+        """The research record as the sheet shows it: plain text, [label, text] pairs and strings."""
+        o = {}
+        if c.get("atlas_note"):
+            o["atlas_note"] = c["atlas_note"]
+        g = c.get("geology") or {}
+        if isinstance(g, dict):
+            o["geology"] = ([g["summary"]] if g.get("summary") else []) + [
+                [f["name"] + (" (" + f["age"] + ")" if f.get("age") else ""), (f.get("note") or "") + sec(f)] for f in g.get("formations") or []]
+        cl = c.get("climate") or {}
+        if isinstance(cl, dict):
+            items = [["Type", cl["type"]]] if cl.get("type") else []
+            for st in cl.get("stations") or []:
+                v = ", ".join(x for x in [f"{st['mean_temp_c']} °C mean" if st.get("mean_temp_c") is not None else "",
+                                         f"{st['rain_mm']:,} mm rain a year" if st.get("rain_mm") else ""] if x)
+                lab = st.get("station", "") + (" · " + st["period"] if st.get("period") and st["period"] != "not stated" else "")
+                items.append([lab, (v + ". " if v else "") + (st.get("note") or "") + sec(st)])
+            for f in cl.get("influences") or []:
+                items.append([f.get("factor", ""), (f.get("note") or "") + sec(f)])
+            o["climate"] = items
+        al = c.get("altitude_m")
+        if isinstance(al, dict) and al.get("min") is not None and al.get("max") is not None:
+            o["altitude_m"] = [al["min"], al["max"]]
+            if al.get("text"):
+                o["altitude_text"] = al["text"]
+        o["history"] = [[str(h.get("year", "")), h.get("fact", "") + sec(h)] for h in c.get("history") or []]
+        o["grapes"] = [[x.get("grape", ""), x.get("fact", "") + sec(x)] for x in c.get("grapes") or []]
+        o["study_points"] = [x.get("point", "") + sec(x) if isinstance(x, dict) else x for x in c.get("study_points") or []]
+        o["refs"] = c.get("refs") or []
+        return o
 
     def put(target, title, c):
-        c = {k: v for k, v in c.items() if k in ("atlas_note", "altitude_m", "geology", "climate", "history", "grapes", "study_points", "refs") and v}
+        c = {k: v for k, v in c.items() if v}
         if c:
             context.setdefault(target, []).append({"title": title, **c})
     for reg, R in (cx.get("regions") or {}).items():
         base = {"piemonte": pa, "toscana": tt}[reg].get("region", {})
-        r = dict(R)
+        r = norm_ctx(R)
         facts = []
         if base.get("vine_area_ha"):
             facts.append(["Vineyard area", f"{base['vine_area_ha']:,} ha. " + base.get("vine_area_src", "")])
         if base.get("grape_share"):
             facts.append(["Main grapes", ", ".join(f"{g} {p}%" for g, p in base["grape_share"][:8]) + ". " + base.get("grape_share_note", "")])
-        r["grapes"] = facts + list(r.get("grapes") or [])
+        r["grapes"] = facts + r.get("grapes", [])
         put("g:IT/" + reg, {"piemonte": "Piemonte", "toscana": "Toscana"}[reg], r)
     for area, A in (cx.get("areas") or {}).items():
-        t = next((v for k, v in AREA_TO.items() if k.lower() == area.lower()), None)
+        t = AREA_TO.get(area)
         if not t:
             print("  context area not placed:", area)
             continue
-        put(t, area, A)
+        put(t, area, norm_ctx(A))
 
     out = {
         "_note": ("Piemonte and Toscana in depth (pipeline/it_deep.py), merged by pipeline/it_combine.py from three research files. "

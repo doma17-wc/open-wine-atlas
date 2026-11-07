@@ -327,7 +327,7 @@ def main():
     ctx = {}
     for key, items in spec.get("context", {}).items():
         k = key
-        if not key.startswith("g:"):
+        if not key.startswith(("g:", "it-")):
             k = next((r[1] for r in rows if r[2] == "IT" and r[0] == key and r[1].startswith("it-eupdo-")), None)
         assert k and (k in nodes or k in pub or k in details), f"context target not found: {key}"
         ctx[k] = items

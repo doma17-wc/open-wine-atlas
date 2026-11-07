@@ -2370,7 +2370,8 @@ async function fillContext(k, token) {
   box.innerHTML = list.map((c) => {
     let h = '<div class="sec ctx"><h3>' + esc(c.title) + "</h3>";
     if (c.atlas_note) h += '<p class="ctx-p">' + esc(t_(c.atlas_note)) + "</p>";
-    if (c.altitude_m) h += '<p class="note">' + t_("Vineyards mostly at {a} to {b} m.", { a: fmt(c.altitude_m[0]), b: fmt(c.altitude_m[1]) }) + "</p>";
+    if (c.altitude_m) h += '<p class="note">' + t_("Vineyards mostly at {a} to {b} m.", { a: fmt(c.altitude_m[0]), b: fmt(c.altitude_m[1]) }) +
+      (c.altitude_text ? " " + esc(t_(c.altitude_text)) : "") + "</p>";
     for (const f of ["geology", "climate", "history", "grapes", "study_points"]) {
       const v = c[f];
       if (!v || (Array.isArray(v) && !v.length)) continue;
