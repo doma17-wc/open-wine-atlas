@@ -1,0 +1,259 @@
+{
+ "slug": "deep-napa-valley",
+ "place": "Napa Valley",
+ "atlas_id": "us-ava-napa_valley",
+ "station": {
+  "name": "St. Helena",
+  "service": "NOAA (NCEI 1991-2020 normals, NWS cooperative station)",
+  "period": "1991-2020",
+  "url": "https://en.wikipedia.org/wiki/St._Helena,_California",
+  "republisher": "Wikipedia climate box 'Climate data for St. Helena, California, 1991–2020 normals', Source 1: NOAA, Source 2: National Weather Service",
+  "height_note": "Station height not reachable (NCEI blocked from the shell, station pages not fetchable). Marker shows the town height 77 m (253 ft) from the same Wikipedia article infobox, labelled as town.",
+  "town_height_m": 77,
+  "coords": [
+   -122.47,
+   38.51
+  ],
+  "crosscheck": "usclimatedata.com St. Helena 1991-2020: highs 58..89 F match (Jul 89 vs 88.7); its rain 36.64 in differs (likely another gauge), so only the Wikipedia/NOAA box is used; monthly inches sum exactly to the printed 33.97 in. Wikipedia prose also says 33.97 in (863 mm), 68 days."
+ },
+ "comparison_station": {
+  "used": false,
+  "note": "No 1991-2020 table for Napa State Hospital or SF Downtown reachable (climate-charts tables are 2006-2020, Wikipedia Napa page not fetchable, NCEI blocked). Rain chart shows St. Helena only; north-south contrast taken from Napa Valley Vintners instead."
+ },
+ "monthly": {
+  "max_C": [
+   14.9,
+   16.9,
+   19.3,
+   22.1,
+   25.6,
+   29.7,
+   31.5,
+   31.6,
+   30.3,
+   25.6,
+   18.8,
+   14.6
+  ],
+  "min_C": [
+   4.6,
+   5.5,
+   6.6,
+   7.9,
+   10.3,
+   12.3,
+   13.3,
+   13.2,
+   12.1,
+   9.7,
+   6.5,
+   4.2
+  ],
+  "mean_C": [
+   9.7,
+   11.2,
+   13.0,
+   15.0,
+   17.9,
+   21.0,
+   22.4,
+   22.4,
+   21.2,
+   17.6,
+   12.6,
+   9.4
+  ],
+  "rain_mm": [
+   164,
+   170,
+   126,
+   50,
+   33,
+   8.9,
+   0.25,
+   1.0,
+   1.5,
+   42,
+   82,
+   182
+  ],
+  "rain_in": [
+   6.47,
+   6.71,
+   4.98,
+   1.97,
+   1.31,
+   0.35,
+   0.01,
+   0.04,
+   0.06,
+   1.65,
+   3.24,
+   7.18
+  ],
+  "precip_days": [
+   13.3,
+   10.6,
+   10.4,
+   5.5,
+   3.4,
+   0.8,
+   0.2,
+   0.1,
+   0.5,
+   3.3,
+   8.1,
+   12.9
+  ]
+ },
+ "annual": {
+  "rain_in": 33.97,
+  "rain_mm": 863,
+  "precip_days": 69.1,
+  "mean_max_C": 23.4,
+  "mean_min_C": 8.8
+ },
+ "derived": {
+  "annual_rain_in_sum": 33.97,
+  "annual_rain_mm_from_in": 862.8,
+  "apr_oct_rain_mm": 136.9,
+  "nov_mar_rain_mm": 725.9,
+  "nov_mar_share_pct": 84.1,
+  "apr_oct_mean_C": 19.64,
+  "apr_oct_mean_C_from_maxmin": 19.66,
+  "july_swing_C": 18.2,
+  "vineyard_ha_from_acres": 19108.0,
+  "avg_height_m": 266,
+  "south_north_summer_high_gap_C": 8,
+  "nass_2023_cab_share_pct": 50.4,
+  "shares_2024_other_pct": 15
+ },
+ "derived_code": "import json\nWP=\"https://en.wikipedia.org/wiki/St._Helena,_California\"\nNV=\"https://napavintners.com/press/docs/napa_valley_fast_facts.pdf\"\nNASS=\"https://www.nass.usda.gov/Statistics_by_State/California/Publications/Specialty_and_Other_Releases/Grapes/Acreage/2024/grpacDETAILED2023Crop.pdf\"\ntx=[14.9,16.9,19.3,22.1,25.6,29.7,31.5,31.6,30.3,25.6,18.8,14.6]\ntn=[4.6,5.5,6.6,7.9,10.3,12.3,13.3,13.2,12.1,9.7,6.5,4.2]\ntm=[9.7,11.2,13.0,15.0,17.9,21.0,22.4,22.4,21.2,17.6,12.6,9.4]\nrr=[164,170,126,50,33,8.9,0.25,1.0,1.5,42,82,182]\nrr_in=[6.47,6.71,4.98,1.97,1.31,0.35,0.01,0.04,0.06,1.65,3.24,7.18]\nd={}\nd['annual_rain_in_sum']=round(sum(rr_in),2)\nd['annual_rain_mm_from_in']=round(sum(rr_in)*25.4,1)\nd['apr_oct_rain_mm']=round(sum(x*25.4 for x in rr_in[3:10]),1)\nd['nov_mar_rain_mm']=round(sum(x*25.4 for x in rr_in[:3]+rr_in[10:]),1)\nd['nov_mar_share_pct']=round(100*d['nov_mar_rain_mm']/d['annual_rain_mm_from_in'],1)\nd['apr_oct_mean_C']=round(sum(tm[3:10])/7,2)\nd['apr_oct_mean_C_from_maxmin']=round(sum((tx[i]+tn[i])/2 for i in range(3,10))/7,2)\nd['july_swing_C']=round(tx[6]-tn[6],1)\nd['vineyard_ha_from_acres']=round(47216*0.40468564,0)\nd['avg_height_m']=266\nd['south_north_summer_high_gap_C']=35-27\nd['nass_2023_cab_share_pct']=round(100*22945/45483,1)\nd['shares_2024_other_pct']=100-(54+13+8+5+5)\nfacts=dict(slug=\"deep-napa-valley\",place=\"Napa Valley\",atlas_id=\"us-ava-napa_valley\",\nstation=dict(name=\"St. Helena\",service=\"NOAA (NCEI 1991-2020 normals, NWS cooperative station)\",period=\"1991-2020\",url=WP,\n republisher=\"Wikipedia climate box 'Climate data for St. Helena, California, 1991–2020 normals', Source 1: NOAA, Source 2: National Weather Service\",\n height_note=\"Station height not reachable (NCEI blocked from the shell, station pages not fetchable). Marker shows the town height 77 m (253 ft) from the same Wikipedia article infobox, labelled as town.\",\n town_height_m=77,coords=[-122.47,38.51],\n crosscheck=\"usclimatedata.com St. Helena 1991-2020: highs 58..89 F match (Jul 89 vs 88.7); its rain 36.64 in differs (likely another gauge), so only the Wikipedia/NOAA box is used; monthly inches sum exactly to the printed 33.97 in. Wikipedia prose also says 33.97 in (863 mm), 68 days.\"),\ncomparison_station=dict(used=False,note=\"No 1991-2020 table for Napa State Hospital or SF Downtown reachable (climate-charts tables are 2006-2020, Wikipedia Napa page not fetchable, NCEI blocked). Rain chart shows St. Helena only; north-south contrast taken from Napa Valley Vintners instead.\"),\nmonthly=dict(max_C=tx,min_C=tn,mean_C=tm,rain_mm=rr,rain_in=rr_in,precip_days=[13.3,10.6,10.4,5.5,3.4,0.8,0.2,0.1,0.5,3.3,8.1,12.9]),\nannual=dict(rain_in=33.97,rain_mm=863,precip_days=69.1,mean_max_C=23.4,mean_min_C=8.8),\nderived=d,\nderived_code=open(__file__).read(),\nfacts=[\n dict(claim=\"AVA registered 27 Feb 1981, first AVA in California (first US AVA Augusta, Missouri, 1980)\",source=\"Open Wine Atlas details-us.json (27 CFR 9.23) · Open Wine Atlas Study usa-law\",url=\"https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.23\"),\n dict(claim=\"AVA area 162,108 ha\",value=162108,unit=\"ha\",source=\"Open Wine Atlas details-us.json\"),\n dict(claim=\"47,216 acres (19,108 ha) under vine\",value=19108,unit=\"ha\",source=\"Napa Valley Vintners, Napa Valley Fast Facts\",url=NV),\n dict(claim=\"17 nested AVAs\",value=17,source=\"Napa Valley Vintners Fast Facts; Open Wine Atlas details-us.json contains list (17)\",url=NV),\n dict(claim=\"Valley about 30 miles (50 km) from Calistoga to Napa; Mayacamas west, Vaca Range east, San Pablo Bay south\",source=\"Open Wine Atlas Study, usa napa lesson; Napa Valley Vintners (valley floor 30 miles long, 5 miles wide)\",url=NV),\n dict(claim=\"AVA terrain mean 266 m, min 0, max 1,281 m\",value=[0,266,1281],unit=\"m\",source=\"Open Wine Atlas details-us.json terrain.e\"),\n dict(claim=\"Vineyards from sea level to 2,600 ft (800 m)\",source=\"Napa Valley Vintners Fast Facts\",url=NV),\n dict(claim=\"Half of the world's 12 soil orders are found here\",source=\"Napa Valley Vintners Fast Facts (interprofession)\",url=NV),\n dict(claim=\"St. Helena rain 863 mm a year; Apr-Oct 137 mm\",value=[863,d['apr_oct_rain_mm']],unit=\"mm\",source=\"NOAA 1991-2020 normals via Wikipedia\",url=WP),\n dict(claim=\"Summer highs 80 F (27 C) in the south, 95 F (35 C) in the north; fog brings summer nights to about 53 F (12 C)\",source=\"Napa Valley Vintners Fast Facts\",url=NV),\n dict(claim=\"Fog and cool air come up from San Pablo Bay; south coolest, Calistoga warmest\",source=\"Open Wine Atlas Study\"),\n dict(claim=\"Apr-Oct mean 19.6 C at St. Helena = warm in WSET bands (18.5-21)\",value=d['apr_oct_mean_C'],unit=\"C\",source=\"NOAA via Wikipedia; WSET bands from Open Wine Atlas Study\"),\n dict(claim=\"July: 31.5 C by day, 13.3 C at night (swing 18.2 C)\",source=\"NOAA via Wikipedia\",url=WP),\n dict(claim=\"Napa County grapes 2024: Cabernet Sauvignon 54%, Chardonnay 13%, Merlot 8%, Sauvignon Blanc 5%, Pinot Noir 5%; 80% red\",source=\"Napa Valley Vintners citing the 2024 Napa County Crop Report\",url=NV,crosscheck=f\"NASS/CDFA Grape Acreage Report 2023 crop, District 4: Cabernet Sauvignon 22,945 of 45,483 acres = {d['nass_2023_cab_share_pct']}%\"),\n dict(claim=\"1976 Judgment of Paris: Stag's Leap Wine Cellars 1973 Cabernet Sauvignon and Chateau Montelena 1973 Chardonnay placed first\",source=\"Open Wine Atlas Study\"),\n],\nquiz=[\n dict(q=\"Which mountains form the western side of Napa Valley?\",options=[\"A Vaca Range\",\"B Mayacamas Mountains\",\"C Sierra Nevada\"],answer=\"B, the Mayacamas Mountains\",source=\"Open Wine Atlas Study\"),\n dict(q=\"Which grape covers 54% of Napa County's vines?\",options=[\"A Chardonnay\",\"B Merlot\",\"C Cabernet Sauvignon\"],answer=\"C, Cabernet Sauvignon\",source=\"Napa Valley Vintners / 2024 Napa County Crop Report\"),\n dict(q=\"Where does the cooling fog come from?\",options=[\"A San Pablo Bay\",\"B Lake Berryessa\",\"C The Sierra Nevada\"],answer=\"A, San Pablo Bay\",source=\"Open Wine Atlas Study\"),\n],\ndropped=[\"Station height (NCEI not reachable); comparison station 1991-2020 (none reachable); sunshine hours (no NOAA sunshine normals for this station), Sun layer replaced by Fog\",\"Napa share of California harvest (Fast Facts prints both 2% and 4%)\"])\njson.dump(facts,open('work/deep-napa-valley/facts.json','w'),indent=1,ensure_ascii=False)\nprint(json.dumps(d,indent=1))\n",
+ "facts": [
+  {
+   "claim": "AVA registered 27 Feb 1981, first AVA in California (first US AVA Augusta, Missouri, 1980)",
+   "source": "Open Wine Atlas details-us.json (27 CFR 9.23) · Open Wine Atlas Study usa-law",
+   "url": "https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-9/subpart-C/section-9.23"
+  },
+  {
+   "claim": "AVA area 162,108 ha",
+   "value": 162108,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-us.json"
+  },
+  {
+   "claim": "47,216 acres (19,108 ha) under vine",
+   "value": 19108,
+   "unit": "ha",
+   "source": "Napa Valley Vintners, Napa Valley Fast Facts",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "17 nested AVAs",
+   "value": 17,
+   "source": "Napa Valley Vintners Fast Facts; Open Wine Atlas details-us.json contains list (17)",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "Valley about 30 miles (50 km) from Calistoga to Napa; Mayacamas west, Vaca Range east, San Pablo Bay south",
+   "source": "Open Wine Atlas Study, usa napa lesson; Napa Valley Vintners (valley floor 30 miles long, 5 miles wide)",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "AVA terrain mean 266 m, min 0, max 1,281 m",
+   "value": [
+    0,
+    266,
+    1281
+   ],
+   "unit": "m",
+   "source": "Open Wine Atlas details-us.json terrain.e"
+  },
+  {
+   "claim": "Vineyards from sea level to 2,600 ft (800 m)",
+   "source": "Napa Valley Vintners Fast Facts",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "Half of the world's 12 soil orders are found here",
+   "source": "Napa Valley Vintners Fast Facts (interprofession)",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "St. Helena rain 863 mm a year; Apr-Oct 137 mm",
+   "value": [
+    863,
+    136.9
+   ],
+   "unit": "mm",
+   "source": "NOAA 1991-2020 normals via Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/St._Helena,_California"
+  },
+  {
+   "claim": "Summer highs 80 F (27 C) in the south, 95 F (35 C) in the north; fog brings summer nights to about 53 F (12 C)",
+   "source": "Napa Valley Vintners Fast Facts",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf"
+  },
+  {
+   "claim": "Fog and cool air come up from San Pablo Bay; south coolest, Calistoga warmest",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "claim": "Apr-Oct mean 19.6 C at St. Helena = warm in WSET bands (18.5-21)",
+   "value": 19.64,
+   "unit": "C",
+   "source": "NOAA via Wikipedia; WSET bands from Open Wine Atlas Study"
+  },
+  {
+   "claim": "July: 31.5 C by day, 13.3 C at night (swing 18.2 C)",
+   "source": "NOAA via Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/St._Helena,_California"
+  },
+  {
+   "claim": "Napa County grapes 2024: Cabernet Sauvignon 54%, Chardonnay 13%, Merlot 8%, Sauvignon Blanc 5%, Pinot Noir 5%; 80% red",
+   "source": "Napa Valley Vintners citing the 2024 Napa County Crop Report",
+   "url": "https://napavintners.com/press/docs/napa_valley_fast_facts.pdf",
+   "crosscheck": "NASS/CDFA Grape Acreage Report 2023 crop, District 4: Cabernet Sauvignon 22,945 of 45,483 acres = 50.4%"
+  },
+  {
+   "claim": "1976 Judgment of Paris: Stag's Leap Wine Cellars 1973 Cabernet Sauvignon and Chateau Montelena 1973 Chardonnay placed first",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which mountains form the western side of Napa Valley?",
+   "options": [
+    "A Vaca Range",
+    "B Mayacamas Mountains",
+    "C Sierra Nevada"
+   ],
+   "answer": "B, the Mayacamas Mountains",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "Which grape covers 54% of Napa County's vines?",
+   "options": [
+    "A Chardonnay",
+    "B Merlot",
+    "C Cabernet Sauvignon"
+   ],
+   "answer": "C, Cabernet Sauvignon",
+   "source": "Napa Valley Vintners / 2024 Napa County Crop Report"
+  },
+  {
+   "q": "Where does the cooling fog come from?",
+   "options": [
+    "A San Pablo Bay",
+    "B Lake Berryessa",
+    "C The Sierra Nevada"
+   ],
+   "answer": "A, San Pablo Bay",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "dropped": [
+  "Station height (NCEI not reachable); comparison station 1991-2020 (none reachable); sunshine hours (no NOAA sunshine normals for this station), Sun layer replaced by Fog",
+  "Napa share of California harvest (Fast Facts prints both 2% and 4%)"
+ ]
+}

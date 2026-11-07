@@ -317,8 +317,9 @@
    "series": "",
    "not_before": "2026-11-07",
    "why": "USA study path: Cabernet Sauvignon, Mayacamas and Vaca ranges, fog from San Pablo Bay",
-   "status": "planned",
-   "note": "Added 2026-11-06 so the Barossa outro 'Next deep dive: Napa Valley' is true."
+   "status": "posted",
+   "note": "Added 2026-11-06 so the Barossa outro 'Next deep dive: Napa Valley' is true. Made 2026-11-07. Study-path hook, no event. Climate: NOAA 1991-2020 normals for St. Helena via the Wikipedia climate box (NCEI blocked from the shell); station height not reachable, marker labelled 'St. Helena · NOAA station' without height. No 1991-2020 comparison station reachable (climate-charts tables are 2006-2020), so rain chart is St. Helena only. No sunshine normals: Sun layer swapped for Fog, using Napa Valley Vintners summer highs north 35 vs south 27 °C. Grapes: 2024 Napa County Crop Report via Napa Valley Vintners Fast Facts, cross-checked with NASS/CDFA 2023 acreage (Cabernet 50.4%). Marker removed from the 3D shot (clashed with chips); cover from shot 6.",
+   "slot": "2026-11-07T17:50+01:00"
   },
   {
    "slug": "deep-stellenbosch",

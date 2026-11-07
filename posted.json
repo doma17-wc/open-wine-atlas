@@ -299,6 +299,20 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-napa-valley",
+   "place": "Napa Valley",
+   "slot": "2026-11-07T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=5458286444570691799",
+   "sources": [
+    "NOAA 1991-2020 normals, St. Helena (via Wikipedia climate box)",
+    "Napa Valley Vintners, Napa Valley Fast Facts",
+    "2024 Napa County Crop Report (via Napa Valley Vintners)",
+    "USDA NASS / CDFA Grape Acreage Report 2023 crop (cross-check)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

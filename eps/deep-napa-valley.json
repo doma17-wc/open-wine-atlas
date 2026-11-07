@@ -1,0 +1,586 @@
+{
+ "slug": "deep-napa-valley",
+ "id": "us-ava-napa_valley",
+ "duration": 69.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  53
+ ],
+ "markers": [
+  {
+   "lng": -122.47,
+   "lat": 38.505,
+   "label": "St. Helena · NOAA station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -100.0,
+     40.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1,
+     -102.0,
+     39.8,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -122.35,
+     38.46,
+     7.9,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 8.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -122.35,
+     38.46,
+     8.55,
+     0,
+     0
+    ],
+    [
+     8.5,
+     -122.35,
+     38.46,
+     8.8,
+     -6,
+     20
+    ]
+   ],
+   "layers": {
+    "markers": true
+   },
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 11.0,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 260
+   },
+   "cam": [
+    [
+     0,
+     -122.34,
+     38.37,
+     10.3,
+     -28,
+     64
+    ],
+    [
+     11,
+     -122.36,
+     38.4,
+     10.5,
+     -36,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 13.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -122.4,
+     38.625,
+     9.4,
+     0,
+     0
+    ],
+    [
+     13.5,
+     -122.4,
+     38.625,
+     9.6,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 6.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -122.42,
+     38.59,
+     9.9,
+     -6,
+     10
+    ],
+    [
+     6.5,
+     -122.42,
+     38.59,
+     10.1,
+     -10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 11.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -122.4,
+     38.43,
+     10.4,
+     -20,
+     38
+    ],
+    [
+     11.5,
+     -122.4,
+     38.43,
+     10.65,
+     -12,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -122.35,
+     38.46,
+     8.6,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -122.35,
+     38.46,
+     8.72,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "USA · Deep dive",
+   "title": "Napa Valley",
+   "sub": "Cabernet between<br>two mountain ranges"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 54.4,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Fog",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     14.2
+    ],
+    [
+     14.2,
+     24.7
+    ],
+    [
+     24.7,
+     32.0
+    ],
+    [
+     32.0,
+     37.7
+    ],
+    [
+     37.7,
+     43.7
+    ],
+    [
+     43.7,
+     99
+    ]
+   ]
+  },
+  {
+   "t0": 6.9,
+   "t1": 10.3,
+   "kicker": "Layer 1 · The place",
+   "src": "Napa Valley Vintners, Fast Facts · Open Wine Atlas",
+   "n": "19,108",
+   "u": "ha",
+   "c": "of vines in a 162,108&nbsp;ha AVA. Registered in 1981, the first AVA in California.",
+   "kind": "card"
+  },
+  {
+   "t0": 10.5,
+   "t1": 13.9,
+   "kicker": "Layer 1 · The place",
+   "src": "Napa Valley Vintners · Open Wine Atlas",
+   "n": "17",
+   "u": "AVAs",
+   "c": "nested inside, from Calistoga in the north to Los Carneros on the bay.",
+   "kind": "card"
+  },
+  {
+   "t0": 14.4,
+   "t1": 17.6,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas · Napa Valley Vintners",
+   "n": "266",
+   "u": "m",
+   "c": "the AVA's average height, from sea level to 1,281&nbsp;m. Vines climb to about 800&nbsp;m.",
+   "kind": "card"
+  },
+  {
+   "t0": 17.8,
+   "t1": 21.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas Study",
+   "nt": "<i>Mayacamas Mountains</i> to the west, <i>Vaca Range</i> to the east. The valley floor runs about 50&nbsp;km.",
+   "kind": "card"
+  },
+  {
+   "t0": 21.2,
+   "t1": 24.4,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Napa Valley Vintners · Open Wine Atlas Study",
+   "nt": "Half of the world's <i>12 soil orders</i> occur here. Deep <i>alluvial fans</i> on the floor, thin soils on the slopes.",
+   "kind": "card"
+  },
+  {
+   "t0": 25.0,
+   "t1": 31.8,
+   "kicker": "Layer 3 · Rain",
+   "src": "NOAA 1991–2020 normals: St. Helena (via Wikipedia)",
+   "n": "863",
+   "u": "mm",
+   "count": {
+    "v": 862.8,
+    "d": 0
+   },
+   "c": "a year at St. Helena, 84% of it November to March. April to October: 137&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     164,
+     170,
+     126,
+     50,
+     33,
+     8.9,
+     0.25,
+     1.0,
+     1.5,
+     42,
+     82,
+     182
+    ],
+    "max": 200,
+    "bands": [],
+    "hot": [
+     11
+    ],
+    "labels": [
+     {
+      "m": 11,
+      "v": 182,
+      "text": "182"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> St. Helena &nbsp;·&nbsp; mm per month"
+   },
+   "kind": "card"
+  },
+  {
+   "t0": 32.2,
+   "t1": 37.2,
+   "kicker": "Layer 4 · Fog",
+   "src": "Napa Valley Vintners, Fast Facts · Open Wine Atlas Study",
+   "n": "35",
+   "u": "°C",
+   "count": {
+    "v": 35,
+    "d": 0
+   },
+   "c": "summer highs in the north, 27&nbsp;°C in the south. Fog from San Pablo Bay cools the south first.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "North valley",
+      "v": 35,
+      "d": 0
+     },
+     {
+      "label": "South valley",
+      "v": 27,
+      "d": 0
+     }
+    ]
+   },
+   "kind": "card"
+  },
+  {
+   "t0": 38.0,
+   "t1": 43.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "NOAA 1991–2020: St. Helena · WSET bands: Study",
+   "n": "19.6",
+   "u": "°C",
+   "count": {
+    "v": 19.64,
+    "d": 1
+   },
+   "c": "April to October at St. Helena: warm in WSET terms. July nights fall to 13.3&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     14.9,
+     16.9,
+     19.3,
+     22.1,
+     25.6,
+     29.7,
+     31.5,
+     31.6,
+     30.3,
+     25.6,
+     18.8,
+     14.6
+    ],
+    "min": [
+     4.6,
+     5.5,
+     6.6,
+     7.9,
+     10.3,
+     12.3,
+     13.3,
+     13.2,
+     12.1,
+     9.7,
+     6.5,
+     4.2
+    ],
+    "hl": 6,
+    "lo": 0,
+    "hi": 34,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 31.5 to 13.3",
+    "lblPos": "tb"
+   },
+   "kind": "card"
+  },
+  {
+   "t0": 44.0,
+   "t1": 48.4,
+   "kicker": "Layer 6 · Grapes",
+   "src": "2024 Napa County Crop Report, via Napa Valley Vintners · Study",
+   "n": "54",
+   "u": "%",
+   "count": {
+    "v": 54,
+    "d": 0
+   },
+   "c": "of Napa County's vines are Cabernet Sauvignon: full bodied, ripe black fruit, firm tannins.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Cabernet Sauvignon",
+      "v": 54
+     },
+     {
+      "label": "Chardonnay",
+      "v": 13
+     },
+     {
+      "label": "Merlot",
+      "v": 8
+     },
+     {
+      "label": "Sauvignon Blanc",
+      "v": 5
+     },
+     {
+      "label": "Pinot Noir",
+      "v": 5
+     },
+     {
+      "label": "Other",
+      "v": 15
+     }
+    ]
+   },
+   "kind": "card"
+  },
+  {
+   "t0": 48.6,
+   "t1": 51.3,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "nt": "1976, <i>Judgment of Paris</i>: French judges put Stag's Leap 1973 Cabernet and Montelena 1973 Chardonnay first.",
+   "kind": "card"
+  },
+  {
+   "t0": 51.5,
+   "t1": 54.5,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "nt": "<i>Los Carneros</i>, cool and windy on the bay: Chardonnay, Pinot Noir and sparkling wine.",
+   "kind": "card"
+  },
+  {
+   "t0": 54.8,
+   "t1": 57.9,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which mountains form the western side of Napa Valley?<br>A&nbsp;&nbsp;Vaca Range<br>B&nbsp;&nbsp;Mayacamas Mountains<br>C&nbsp;&nbsp;Sierra Nevada",
+   "kind": "card"
+  },
+  {
+   "t0": 58.0,
+   "t1": 61.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which grape covers 54% of Napa County's vines?<br>A&nbsp;&nbsp;Chardonnay<br>B&nbsp;&nbsp;Merlot<br>C&nbsp;&nbsp;Cabernet Sauvignon",
+   "kind": "card"
+  },
+  {
+   "t0": 61.2,
+   "t1": 64.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Where does Napa's cooling fog come from?<br>A&nbsp;&nbsp;San Pablo Bay<br>B&nbsp;&nbsp;Lake Berryessa<br>C&nbsp;&nbsp;The Sierra Nevada",
+   "kind": "card"
+  },
+  {
+   "kind": "outro",
+   "t0": 64.5,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Napa Valley",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Barolo",
+   "srcs": "Sources: NOAA 1991–2020 normals · Napa Valley Vintners · 2024 Napa County Crop Report · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 6,
+  "at": 0.5,
+  "kicker": "Deep dive · USA",
+  "title": "Napa Valley",
+  "sub": "Cabernet between<br>two mountain ranges"
+ }
+}
