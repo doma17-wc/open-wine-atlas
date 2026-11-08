@@ -1,0 +1,219 @@
+{
+ "slug": "deep-barolo",
+ "place": "Barolo",
+ "atlas_id": "it-eupdo-PDO-IT-A1389",
+ "station": {
+  "name": "Bra",
+  "service": "ISPRA, Valori climatici normali in Italia (1991-2020)",
+  "period": "1991-2020",
+  "url": "https://en.wikipedia.org/wiki/Bra,_Piedmont",
+  "republisher": "Wikipedia climate box 'Climate data for Bra (1991–2020)', source line ISPRA, reference to valori-climatici-normali.isprambiente.it (archived 17 Sep 2023)",
+  "height_note": "Station height not given in the table; town elevation 285 m from the article infobox, not shown on screen.",
+  "coords": [
+   7.855,
+   44.697
+  ],
+  "distance_note": "Atlas near_town: Bra 8.7 km from the Barolo outline",
+  "crosscheck": "Monthly precipitation sums to 624.8 mm vs printed 624.8 mm. ISPRA station app not reachable for a second-page check."
+ },
+ "comparison_station": {
+  "name": "Torino Caselle",
+  "service": "ISPRA 1991-2020 (temperature only)",
+  "url": "https://en.wikipedia.org/wiki/Turin",
+  "note": "Precipitation and sunshine in that table are Aeronautica Militare 1971-2000, so not used (period mismatch). Only July mean max used.",
+  "jul_max_C": 29.0,
+  "max_C": [
+   8.0,
+   10.2,
+   14.8,
+   18.0,
+   22.2,
+   26.4,
+   29.0,
+   28.6,
+   23.9,
+   18.1,
+   12.2,
+   8.3
+  ],
+  "min_C": [
+   -1.5,
+   -0.3,
+   3.7,
+   7.2,
+   11.6,
+   15.5,
+   17.4,
+   17.1,
+   13.3,
+   8.9,
+   3.5,
+   -0.7
+  ]
+ },
+ "monthly": {
+  "max_C": [
+   7.6,
+   10.2,
+   15.4,
+   18.9,
+   23.2,
+   27.7,
+   30.4,
+   29.7,
+   24.8,
+   18.5,
+   11.8,
+   7.9
+  ],
+  "min_C": [
+   -1.0,
+   0.2,
+   3.8,
+   7.5,
+   12.0,
+   16.0,
+   18.1,
+   17.8,
+   13.6,
+   9.3,
+   4.1,
+   0.0
+  ],
+  "mean_C": [
+   3.3,
+   5.2,
+   9.6,
+   13.2,
+   17.6,
+   21.9,
+   24.3,
+   23.8,
+   19.2,
+   13.9,
+   8.0,
+   3.9
+  ],
+  "rain_mm": [
+   23.4,
+   26.8,
+   37.1,
+   71.5,
+   82.6,
+   52.6,
+   40.7,
+   46.3,
+   62.0,
+   61.3,
+   86.4,
+   34.1
+  ],
+  "precip_days": [
+   3.7,
+   3.4,
+   4.2,
+   7.4,
+   7.9,
+   6.1,
+   4.5,
+   5.1,
+   5.5,
+   5.4,
+   7.0,
+   4.1
+  ]
+ },
+ "annual": {
+  "rain_mm": 624.8,
+  "precip_days": 64.3,
+  "mean_max_C": 18.8,
+  "mean_min_C": 8.5,
+  "mean_C": 13.7
+ },
+ "derived": {
+  "rain_sum": 624.8,
+  "apr_oct_rain": 417.0,
+  "apr_oct_share": 66.7,
+  "apr_oct_mean": 19.13,
+  "apr_oct_mean_maxmin": 19.11,
+  "july_swing": 12.3,
+  "turin_apr_oct_mean_maxmin": 18.37,
+  "jul_max_diff_bra_turin": 1.4,
+  "vine_share_of_outline_pct": 11.3,
+  "relief_m": 389
+ },
+ "derived_code": "apr_oct = months 4-10 (index 3..9); means of the printed monthly daily mean; diffs and shares from printed values; computed in Python in this run.",
+ "atlas": {
+  "source": "Open Wine Atlas, web/data/details-it.json it-eupdo-PDO-IT-A1389",
+  "outline_area_ha": 19946,
+  "vine_area_ha": 2258,
+  "vine_area_src": "Consorzio key figure for the 2022 harvest via Gazzetta d'Alba (Jan 2026), secondary source as stated in the atlas",
+  "communes": 11,
+  "terrain_e": [
+   166,
+   295,
+   555,
+   203,
+   406
+  ],
+  "river": "Tanaro, 1.2 km",
+  "grapes": "Nebbiolo 100% (disciplinare art. 2)",
+  "ageing": "38 months from 1 November of the harvest year, 18 in wood (art. 5)",
+  "riserva": "62 months, 18 in wood (art. 5)",
+  "max_yield": "8 t/ha (art. 4)",
+  "mga": "180 entries in art. 8 (atlas count: 169 vineyard names, 11 commune names)",
+  "docg": "DOC 1966, DOCG 1980",
+  "bedrock": "63% carbonate sedimentary rocks (limestone, marl), 37% unconsolidated sediments (atlas bedrock layer)",
+  "disciplinare_url": "https://www.regione.piemonte.it/web/media/6424/download"
+ },
+ "study": {
+  "source": "Open Wine Atlas Study, Piemonte lesson",
+  "soils": "West around La Morra and Barolo: younger Tortonian marls, more perfumed wines. East around Serralunga and Monforte: older Helvetian soils with more sandstone, firmer, more structured wines.",
+  "langhe": "Langhe are the hills south of the Tanaro around Alba; Roero north of the river, sandier.",
+  "nebbiolo": "buds early, ripens late; pale, high acidity and tannin, rose and tar aromas; name said to come from nebbia, fog."
+ },
+ "hook": {
+  "text": "Alba White Truffle Fair runs 10 October to 6 December 2026",
+  "url": "https://www.visitlmr.it/en/events/top-events/the-international-alba-white-truffle-fair-alba",
+  "source": "Ente Turismo Langhe Monferrato Roero (visitlmr.it)",
+  "use": "caption only"
+ },
+ "quiz": [
+  {
+   "q": "Which grape is Barolo made from?",
+   "options": [
+    "A Barbera",
+    "B Nebbiolo",
+    "C Sangiovese"
+   ],
+   "answer": "B Nebbiolo",
+   "source": "Disciplinare art. 2 via atlas"
+  },
+  {
+   "q": "Minimum ageing for Barolo (not Riserva)?",
+   "options": [
+    "A 24 months",
+    "B 38 months",
+    "C 62 months"
+   ],
+   "answer": "B 38 months, 18 in wood",
+   "source": "Disciplinare art. 5 via atlas"
+  },
+  {
+   "q": "Which soils give the more perfumed Barolo of La Morra?",
+   "options": [
+    "A Tortonian marls",
+    "B Helvetian sandstone",
+    "C Volcanic tuff"
+   ],
+   "answer": "A Tortonian marls",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "dropped": [
+  "Sunshine (no ISPRA sunshine at Bra; Turin sun is 1971-2000): Sun layer swapped for Soil",
+  "Rain comparison with Turin (rain there is 1971-2000)",
+  "Fog: no measured data",
+  "Station height"
+ ]
+}

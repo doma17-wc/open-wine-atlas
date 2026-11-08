@@ -84,8 +84,9 @@
    "series": "",
    "not_before": "2026-11-08",
    "why": "Alba White Truffle Fair season (check the 2026 dates)",
-   "status": "planned",
-   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report. 2026-10-27: postponed again. ISPRA (station normals app and PDF host), NOAA NCEI and nodc hosts are blocked from the run's shell, WebFetch of the NCEI folder needs approval; only SIMN 1951-1991 tables (Regione Piemonte PTA 2004) found. Rioja made instead. Needs a reachable 1991-2020 source (e.g. Stefano pastes the Cuneo Levaldigi WMO CSV or ARPA Piemonte table into the repo). 2026-11-02: Tuscany worked through the regional LaMMA 1991-2020 pages; look for the same kind of regional climatology page for Piedmont."
+   "status": "posted",
+   "note": "Postponed on 2026-10-20: official 1991-2020 normals (Aeronautica Militare / ISPRA station tables) for a station near the vineyards could not be reached in that run. Try ARPA Piemonte or the WMO 1991-2020 CSV for Cuneo Levaldigi. Still pending on 2026-10-21 (not attempted; Tokaj made). Postponed again on 2026-10-22: no official 1991-2020 normals reachable for Cuneo Levaldigi or another Langhe station (NOAA WMO Italy folder listing failed, Cuneo CSV name unknown, ARPA Piemonte tables not found). Douro made instead. Alba truffle fair runs into December 2026, hook still valid. 2026-10-26: Chablis outro says 'Next deep dive: Barolo'. If Barolo fails again, say so in the report. 2026-10-27: postponed again. ISPRA (station normals app and PDF host), NOAA NCEI and nodc hosts are blocked from the run's shell, WebFetch of the NCEI folder needs approval; only SIMN 1951-1991 tables (Regione Piemonte PTA 2004) found. Rioja made instead. Needs a reachable 1991-2020 source (e.g. Stefano pastes the Cuneo Levaldigi WMO CSV or ARPA Piemonte table into the repo). 2026-11-02: Tuscany worked through the regional LaMMA 1991-2020 pages; look for the same kind of regional climatology page for Piedmont. 2026-11-08: made. Climate: ISPRA 1991-2020 normals for Bra (via the Wikipedia climate box citing ISPRA valori climatici normali); Torino Caselle rain/sun in that box are 1971-2000, so no comparison station. No sunshine: Sun layer swapped for Soil (atlas bedrock + Study lesson Tortonian/Helvetian). Truffle fair (10 Oct to 6 Dec 2026, visitlmr.it) not used on screen. Station marker label sits high in the top UI zone; place shot map labels close to the chips.",
+   "slot": "2026-11-08T17:50+01:00"
   },
   {
    "slug": "deep-sauternes",
@@ -340,6 +341,26 @@
    "why": "Southern Hemisphere study path: high-altitude Malbec under the Andes",
    "status": "planned",
    "note": "Added 2026-11-06. Whole province outline: frame Luján de Cuyo and Uco Valley."
+  },
+  {
+   "slug": "deep-santorini",
+   "place": "Santorini",
+   "atlas_id": "gr-eupdo-PDO-GR-A1065",
+   "series": "",
+   "not_before": "2026-11-15",
+   "why": "Greece study path: Assyrtiko on volcanic soils, kouloura basket-trained vines, Vinsanto",
+   "status": "planned",
+   "note": "Added 2026-11-08 to keep 6+ planned. Slot 17:50."
+  },
+  {
+   "slug": "deep-barbaresco",
+   "place": "Barbaresco",
+   "atlas_id": "it-eupdo-PDO-IT-A1399",
+   "series": "",
+   "not_before": "2026-11-18",
+   "why": "Italy study path: Nebbiolo north-east of Alba, 26 months of ageing, the Barolo comparison",
+   "status": "planned",
+   "note": "Added 2026-11-08. Bra ISPRA 1991-2020 box worked for Barolo; look for an ISPRA box nearer Barbaresco (Alba/Asti) or reuse Bra."
   }
  ]
 }

@@ -313,6 +313,19 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-barolo",
+   "place": "Barolo",
+   "slot": "2026-11-08T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-8313173682442646323",
+   "sources": [
+    "ISPRA, Valori climatici normali 1991-2020 (Bra, via Wikipedia climate box)",
+    "Barolo DOCG disciplinare (Regione Piemonte consolidated text)",
+    "Consorzio key figure via Gazzetta d'Alba (Jan 2026)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
