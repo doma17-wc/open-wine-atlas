@@ -1002,5 +1002,214 @@
   "question_keys": [],
   "experiment": "",
   "metricool_uuid": "5892356728425368479"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Rhône quiz teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3919434405427852716"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "title": "Rhône quiz: 4 questions most students miss",
+  "places": [
+   "Château-Grillet",
+   "Hermitage",
+   "Saint-Péray",
+   "Châteauneuf-du-Pape"
+  ],
+  "question_keys": [
+   "rhone-south-northern-rhone#q3",
+   "rhone-south-northern-rhone#q4",
+   "rhone-south-northern-rhone#q5",
+   "rhone-south-southern-rhone#q3"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-3281088146701463764"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Not only Châteauneuf teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1435329021007148146"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "cluster",
+  "title": "Not only Châteauneuf",
+  "places": [
+   "Beaumes de Venise",
+   "Vacqueyras",
+   "Gigondas",
+   "Rasteau",
+   "Cairanne"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-474208345616134647"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "11:20",
+  "type": "story",
+  "format": "stock",
+  "title": "Released stock draft, media not viewed (static.metricool.com blocked from the run)",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "8913063402606841301"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "vs",
+  "title": "Musigny vs Clos de Vougeot",
+  "places": [
+   "Musigny",
+   "Clos de Vougeot"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-470020691105986142"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "12:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Musigny vs Clos de Vougeot teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4716401818017745083"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "title": "Burgundy's quiet middle",
+  "places": [
+   "Bouzeron",
+   "Rully",
+   "Mercurey",
+   "Givry",
+   "Montagny"
+  ],
+  "question_keys": [],
+  "experiment": "Question hook in the first caption line (which village makes only Aligoté); Côte Chalonnaise, a lesser-known Burgundy area. make.py hung after slide 3, slides 4 to 7 rendered one place at a time with kick_from",
+  "metricool_uuid": "-6347764951880676739"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "13:50",
+  "type": "story",
+  "format": "member",
+  "title": "Founding Member",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "1378140430797653059"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "title": "Burgundy's quiet middle teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "6239641918518087374"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "title": "Barolo deep dive teaser",
+  "places": [
+   "Barolo"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-786010564323097007"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "title": "Sancerre has four cousins",
+  "places": [
+   "Sancerre",
+   "Pouilly-Fumé",
+   "Menetou-Salon",
+   "Quincy",
+   "Reuilly"
+  ],
+  "question_keys": [],
+  "experiment": "First Loire cluster post: Centre-Loire Sauvignon Blanc",
+  "metricool_uuid": "4517234130082220537"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "title": "Sancerre cousins teaser",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5026414569558422811"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "20:20",
+  "type": "story",
+  "format": "stock",
+  "title": "Released stock draft, media not viewed (static.metricool.com blocked from the run)",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5790817962451224097"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "title": "Founding Member, spots still open",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5849413377808549354"
+ },
+ {
+  "date": "2026-11-08",
+  "slot": "13:05",
+  "type": "note",
+  "format": "stock draft kept",
+  "title": "Saint-Emilion satellites draft left as draft: same place set as the 2026-11-07 13:30 post",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2776776925443833293"
  }
 ]
