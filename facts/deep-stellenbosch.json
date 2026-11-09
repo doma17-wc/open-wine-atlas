@@ -1,0 +1,181 @@
+{
+ "slug": "deep-stellenbosch",
+ "place": "Stellenbosch",
+ "atlas_id": "za-world-stellenbosch",
+ "station": {
+  "name": "Cape Town (Cape Town International Airport)",
+  "wmo": "68816",
+  "service": "Japan Meteorological Agency, World Climate normals (WMO CLIMAT based), period 1991-2020",
+  "period": "1991-2020",
+  "url": "https://ds.data.jma.go.jp/cpd/monitor/nrmlist/NrmMonth.php?stn=68816",
+  "height_m": 46,
+  "coords": [
+   18.6,
+   -33.97
+  ],
+  "note": "JMA page gives only monthly mean temperature and precipitation; the period 1991-2020 is stated on the JMA normals index page (https://ds.data.jma.go.jp/cpd/monitor/nrmlist/index.html). No South African Weather Service 1991-2020 normals for a Stellenbosch station could be found or fetched. Station about 10 km west of the atlas outline's western edge (bbox west 18.708).",
+  "crosscheck": "weatherandclimate.eu/climate/68816 (no period or source stated) gives similar monthly precipitation 9,10,13,40,61,92,85,72,44,28,25,13 and means 21.8..12.7; consistent, not used."
+ },
+ "comparison_station": null,
+ "monthly": {
+  "rain_mm": [
+   9.6,
+   10.6,
+   13.1,
+   41.4,
+   63.1,
+   89.0,
+   81.2,
+   73.0,
+   44.1,
+   29.0,
+   26.4,
+   12.1
+  ],
+  "mean_C": [
+   21.6,
+   21.7,
+   20.2,
+   17.7,
+   15.3,
+   13.1,
+   12.5,
+   12.9,
+   14.4,
+   16.8,
+   18.5,
+   20.6
+  ]
+ },
+ "derived": {
+  "annual_rain": 492.6,
+  "may_aug_rain": 306.3,
+  "may_aug_share": 62.2,
+  "oct_apr_rain": 142.2,
+  "oct_apr_share": 28.9,
+  "oct_apr_mean_C": 19.59,
+  "shares": {
+   "Cabernet Sauvignon": 19.9,
+   "Shiraz": 12.0,
+   "Merlot": 12.2,
+   "Pinotage": 8.7,
+   "Chenin Blanc": 10.7,
+   "Sauvignon Blanc": 13.1,
+   "Chardonnay": 8.1,
+   "Colombard": 0.3,
+   "Muscat d'Alexandrie": 0.2,
+   "Semillon": 0.8,
+   "Muscat blanc": 0.1,
+   "Viognier": 0.7,
+   "Other white": 2.0,
+   "Ruby Cabernet": 0.2,
+   "Cinsaut": 0.9,
+   "Pinot noir": 2.1,
+   "Cabernet Franc": 3.0,
+   "Other red": 5.2
+  },
+  "red_share": 64.0,
+  "vine_share_of_outline": 14.2,
+  "national_share_pct": 13.45,
+  "relief": 1583
+ },
+ "derived_code": "annual_rain=sum(rain); may_aug=sum(rain[4:8]); oct_apr indices [9,10,11,0,1,2,3]: rain sum and mean of monthly means; shares = SAWIS cultivar ha / 11815 *100; red_share=7562/11815; relief=1593-10",
+ "grapes": {
+  "source": "SAWIS, SA Wine Industry Statistics 2023 (NR 48), section 5.8 'Wine grape cultivars per wine region for 2023', p.12; section 5.2 p.8; section 5.6/5.7 p.11-12",
+  "url": "https://wosa.co.za/wosadocs/92024/Book_2023_Final_19_Jul_24.pdf",
+  "stellenbosch_total_ha": 11815,
+  "stellenbosch_share_of_national_pct": 13.45,
+  "national_total_ha": 87848,
+  "stellenbosch_ha": {
+   "Cabernet Sauvignon": 2351,
+   "Shiraz": 1415,
+   "Merlot": 1436,
+   "Pinotage": 1022,
+   "Chenin Blanc": 1270,
+   "Sauvignon Blanc": 1548,
+   "Chardonnay": 961,
+   "Colombard": 36,
+   "Muscat d'Alexandrie": 25,
+   "Semillon": 92,
+   "Muscat blanc": 6,
+   "Viognier": 83,
+   "Other white": 233,
+   "Ruby Cabernet": 28,
+   "Cinsaut": 106,
+   "Pinot noir": 243,
+   "Cabernet Franc": 350,
+   "Other red": 610
+  },
+  "stellenbosch_red_ha": 7562,
+  "stellenbosch_white_ha": 4254,
+  "national_chenin": {
+   "ha": 16192,
+   "pct": 18.4
+  },
+  "note": "SAWIS 'Stellenbosch' is a statistical wine region; used as the district figure. Cultivar rows sum to 11,815."
+ },
+ "atlas": {
+  "type": "Wine of Origin district",
+  "outline_area_ha": 83134,
+  "outline_quality": "approx (municipal ADM3 outline)",
+  "terrain_e": [
+   10,
+   432,
+   1593,
+   107,
+   1036
+  ],
+  "near_city": "Stellenbosch",
+  "atlas_note": "between the Simonsberg, Helderberg and Jonkershoek mountains; granite and sandstone soils"
+ },
+ "study": {
+  "lesson": "Southern Hemisphere path, lesson 'South Africa: Wine of Origin and the Cape'",
+  "facts": [
+   "Stellenbosch is a district of the Coastal Region; wards include Simonsberg-Stellenbosch, Jonkershoek Valley, Banghoek",
+   "breezes from False Bay cool the vineyards",
+   "soils on the slopes mostly granite-derived, sandstone elsewhere",
+   "Pinotage = Pinot Noir x Cinsaut, Abraham Perold, 1925, Stellenbosch University",
+   "Chenin Blanc is South Africa's most planted grape",
+   "WSET bands: cool up to about 16.5, moderate 16.5-18.5, warm 18.5-21 C"
+  ]
+ },
+ "hook": "Southern Hemisphere study path (no event). Title hook 'Cabernet under the mountains': Cabernet Sauvignon is the most planted grape (SAWIS 2023), mountains per atlas note.",
+ "quiz": [
+  {
+   "q": "Which grape is most planted in Stellenbosch?",
+   "options": [
+    "Chenin Blanc",
+    "Cabernet Sauvignon",
+    "Pinotage"
+   ],
+   "answer": "B, Cabernet Sauvignon (19.9%)",
+   "source": "SAWIS 2023 section 5.8"
+  },
+  {
+   "q": "Pinotage is Pinot Noir crossed with...",
+   "options": [
+    "Cinsaut",
+    "Syrah",
+    "Merlot"
+   ],
+   "answer": "A, Cinsaut",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "When does most of the rain fall?",
+   "options": [
+    "December to February",
+    "May to August",
+    "September to November"
+   ],
+   "answer": "B, May to August (62% of the year at Cape Town airport)",
+   "source": "JMA/WMO 1991-2020 Cape Town"
+  }
+ ],
+ "dropped": [
+  "Sun layer: no official 1991-2020 sunshine normals found for a Stellenbosch-area or Cape Town station; swapped for Soil (study lesson).",
+  "Comparison station: none from the same service with usable data; rain card uses one station only.",
+  "Mean max/min temperatures: JMA page gives monthly means only; heat card uses monthly means.",
+  "Wikipedia Stellenbosch climate box: unsourced, implausible values (August max 7.3 C); not used."
+ ]
+}

@@ -1,0 +1,565 @@
+{
+ "slug": "deep-stellenbosch",
+ "id": "za-world-stellenbosch",
+ "duration": 69.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  52
+ ],
+ "markers": [
+  {
+   "lng": 18.6,
+   "lat": -33.97,
+   "label": "Cape Town airport · 46 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     10.0,
+     -20.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1,
+     11.5,
+     -21.5,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     18.95,
+     -33.92,
+     8.9,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 8.5,
+   "pad": {
+    "top": 100,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     18.95,
+     -33.92,
+     9.45,
+     0,
+     0
+    ],
+    [
+     8.5,
+     18.95,
+     -33.92,
+     9.7,
+     6,
+     22
+    ]
+   ],
+   "layers": {
+    "markers": true
+   },
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 11.0,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 260
+   },
+   "cam": [
+    [
+     0,
+     18.86,
+     -33.95,
+     11.3,
+     70,
+     64
+    ],
+    [
+     11,
+     18.87,
+     -33.945,
+     11.5,
+     80,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 13.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     18.85,
+     -33.93,
+     9.05,
+     0,
+     0
+    ],
+    [
+     13.5,
+     18.85,
+     -33.93,
+     9.2,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 6.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     18.83,
+     -33.93,
+     9.1,
+     0,
+     8
+    ],
+    [
+     6.5,
+     18.83,
+     -33.93,
+     9.2,
+     3,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 11.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     18.88,
+     -33.89,
+     10.8,
+     -10,
+     38
+    ],
+    [
+     11.5,
+     18.88,
+     -33.89,
+     11.0,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     18.95,
+     -33.92,
+     9.5,
+     0,
+     0
+    ],
+    [
+     10.5,
+     18.95,
+     -33.92,
+     9.62,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "South Africa · Deep dive",
+   "title": "Stellenbosch",
+   "sub": "Cabernet under<br>the mountains"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 54.4,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Soil",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     14.2
+    ],
+    [
+     14.2,
+     24.7
+    ],
+    [
+     24.7,
+     32.0
+    ],
+    [
+     32.0,
+     37.7
+    ],
+    [
+     37.7,
+     43.7
+    ],
+    [
+     43.7,
+     99
+    ]
+   ]
+  },
+  {
+   "t0": 6.9,
+   "t1": 10.3,
+   "kind": "card",
+   "kicker": "Layer 1 · The place",
+   "src": "SAWIS, SA Wine Industry Statistics 2023 · Open Wine Atlas",
+   "n": "11,815",
+   "u": "ha",
+   "c": "of vines in 2023: 13% of South Africa's vineyard, east of Cape Town."
+  },
+  {
+   "t0": 10.5,
+   "t1": 13.9,
+   "kind": "card",
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas Study",
+   "nt": "A <i>Wine of Origin district</i> in the Coastal Region. Its wards include <i>Simonsberg-Stellenbosch</i> and <i>Jonkershoek Valley</i>."
+  },
+  {
+   "t0": 14.4,
+   "t1": 17.6,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain",
+   "n": "432",
+   "u": "m",
+   "c": "on average inside the atlas outline, from 10 to 1,593&nbsp;m."
+  },
+  {
+   "t0": 17.8,
+   "t1": 21.0,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas",
+   "nt": "Slopes and valleys between the <i>Simonsberg</i>, <i>Helderberg</i> and <i>Jonkershoek</i> mountains."
+  },
+  {
+   "t0": 21.2,
+   "t1": 24.4,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas Study",
+   "nt": "Breezes from <i>False Bay</i> to the south cool the vineyards."
+  },
+  {
+   "t0": 25.0,
+   "t1": 31.8,
+   "kind": "card",
+   "kicker": "Layer 3 · Rain",
+   "src": "JMA, WMO 1991–2020 normals: Cape Town (68816)",
+   "n": "493",
+   "u": "mm",
+   "count": {
+    "v": 492.6,
+    "d": 0
+   },
+   "c": "a year at Cape Town airport, 62% of it May to August. October to April: 142&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     9.6,
+     10.6,
+     13.1,
+     41.4,
+     63.1,
+     89.0,
+     81.2,
+     73.0,
+     44.1,
+     29.0,
+     26.4,
+     12.1
+    ],
+    "max": 100,
+    "bands": [],
+    "hot": [
+     5
+    ],
+    "labels": [
+     {
+      "m": 5,
+      "v": 89.0,
+      "text": "89"
+     },
+     {
+      "m": 0,
+      "v": 9.6,
+      "text": "10"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Cape Town airport &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "t0": 32.2,
+   "t1": 37.2,
+   "kind": "card",
+   "kicker": "Layer 4 · Soil",
+   "src": "Open Wine Atlas Study",
+   "nt": "On the slopes, soils are mostly <i>granite-derived</i>. Elsewhere, <i>sandstone</i>."
+  },
+  {
+   "t0": 38.0,
+   "t1": 43.4,
+   "kind": "card",
+   "kicker": "Layer 5 · Heat",
+   "src": "JMA, WMO 1991–2020: Cape Town · WSET bands: Study",
+   "n": "19.6",
+   "u": "°C",
+   "count": {
+    "v": 19.59,
+    "d": 1
+   },
+   "c": "average October to April at Cape Town airport: warm in WSET terms.",
+   "chart": {
+    "type": "months",
+    "a": [
+     21.6,
+     21.7,
+     20.2,
+     17.7,
+     15.3,
+     13.1,
+     12.5,
+     12.9,
+     14.4,
+     16.8,
+     18.5,
+     20.6
+    ],
+    "max": 25,
+    "bands": [],
+    "hot": [
+     0,
+     1
+    ],
+    "labels": [
+     {
+      "m": 1,
+      "v": 21.7,
+      "text": "21.7"
+     },
+     {
+      "m": 6,
+      "v": 12.5,
+      "text": "12.5"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Cape Town airport &nbsp;·&nbsp; mean °C per month"
+   }
+  },
+  {
+   "t0": 44.0,
+   "t1": 48.4,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "SAWIS, SA Wine Industry Statistics 2023",
+   "n": "20",
+   "u": "%",
+   "count": {
+    "v": 19.9,
+    "d": 0
+   },
+   "c": "of the vines are Cabernet Sauvignon, the most planted grape. Reds: 64%.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Cabernet Sauvignon",
+      "v": 20
+     },
+     {
+      "label": "Sauvignon Blanc",
+      "v": 13
+     },
+     {
+      "label": "Merlot",
+      "v": 12
+     },
+     {
+      "label": "Shiraz",
+      "v": 12
+     },
+     {
+      "label": "Chenin Blanc",
+      "v": 11
+     },
+     {
+      "label": "Pinotage",
+      "v": 9
+     },
+     {
+      "label": "Other",
+      "v": 23
+     }
+    ]
+   }
+  },
+  {
+   "t0": 48.6,
+   "t1": 51.3,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "SAWIS, SA Wine Industry Statistics 2023",
+   "nt": "Across South Africa, <i>Chenin Blanc</i> leads with 18.4% of the vines. Here: 10.7%."
+  },
+  {
+   "t0": 51.5,
+   "t1": 54.5,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "nt": "<i>Pinotage</i>: Pinot Noir × Cinsaut, bred in 1925 by Abraham Perold at Stellenbosch University."
+  },
+  {
+   "t0": 54.8,
+   "t1": 57.9,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape is most planted in Stellenbosch?<br>A&nbsp;&nbsp;Chenin Blanc<br>B&nbsp;&nbsp;Cabernet Sauvignon<br>C&nbsp;&nbsp;Pinotage",
+   "kind": "card"
+  },
+  {
+   "t0": 58.0,
+   "t1": 61.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Pinotage is Pinot Noir crossed with...<br>A&nbsp;&nbsp;Cinsaut<br>B&nbsp;&nbsp;Syrah<br>C&nbsp;&nbsp;Merlot",
+   "kind": "card"
+  },
+  {
+   "t0": 61.2,
+   "t1": 64.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "When does most of the rain fall?<br>A&nbsp;&nbsp;December to February<br>B&nbsp;&nbsp;May to August<br>C&nbsp;&nbsp;September to November",
+   "kind": "card"
+  },
+  {
+   "kind": "outro",
+   "t0": 64.5,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Stellenbosch",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Mendoza",
+   "srcs": "Sources: JMA / WMO 1991–2020 normals · SAWIS SA Wine Industry Statistics 2023 · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · South Africa",
+  "title": "Stellenbosch",
+  "sub": "Cabernet under<br>the mountains"
+ }
+}

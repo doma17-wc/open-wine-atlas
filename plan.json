@@ -329,8 +329,9 @@
    "series": "",
    "not_before": "2026-11-09",
    "why": "Southern Hemisphere study path: Cabernet Sauvignon, Pinotage, False Bay breezes",
-   "status": "planned",
-   "note": "Added 2026-11-06."
+   "status": "posted",
+   "note": "Added 2026-11-06. Made 2026-11-09. Study-path hook, no event. Climate: JMA (WMO CLIMAT) 1991-2020 normals for Cape Town airport 68816, 46 m (monthly mean temperature and rain only); no SAWS normals for a Stellenbosch station found. Sun layer swapped for Soil (study lesson). Grapes: SAWIS SA Wine Industry Statistics 2023, table 5.8.",
+   "slot": "2026-11-09T17:50+01:00"
   },
   {
    "slug": "deep-mendoza",

@@ -326,6 +326,18 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-stellenbosch",
+   "place": "Stellenbosch",
+   "slot": "2026-11-09T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=4098493148140291499",
+   "sources": [
+    "JMA World Climate normals 1991-2020 (WMO CLIMAT), Cape Town 68816",
+    "SAWIS, SA Wine Industry Statistics 2023 (NR 48), via wosa.co.za",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
