@@ -1,0 +1,184 @@
+{
+ "slug": "deep-mendoza",
+ "place": "Mendoza",
+ "atlas_id": "ar-world-mendoza",
+ "station": {
+  "name": "Mendoza Airport (Mendoza Aero)",
+  "wmo": "87418",
+  "service": "Japan Meteorological Agency, World Climate normals (WMO CLIMAT based), period 1991-2020",
+  "period": "1991-2020",
+  "url": "https://ds.data.jma.go.jp/cpd/monitor/nrmlist/NrmMonth.php?stn=87418",
+  "height_m": 705,
+  "coords": [
+   -68.78,
+   -32.83
+  ],
+  "note": "JMA page gives monthly mean temperature and precipitation only (no sunshine, no max/min). Period 1991-2020 as stated on the JMA normals index (https://ds.data.jma.go.jp/cpd/monitor/nrmlist/index.html), same basis as deep-stellenbosch. SMN's own 1991-2020 normals PDF (repositorio.smn.gob.ar) and datos.gob.ar dataset could not be fetched (server error). Sun layer therefore dropped and replaced by Hazards (Study)."
+ },
+ "comparison_station": {
+  "name": "Buenos Aires",
+  "wmo": "87585",
+  "service": "JMA World Climate normals",
+  "url": "https://ds.data.jma.go.jp/cpd/monitor/nrmlist/NrmMonth.php?stn=87585",
+  "rain_mm": [
+   153.1,
+   115.3,
+   125.1,
+   139.3,
+   101.5,
+   67.2,
+   67.9,
+   72.8,
+   65.9,
+   115.7,
+   117.8,
+   114.5
+  ],
+  "crosscheck": "identical row on https://ds.data.jma.go.jp/tcc/tcc/products/climate/mainstn/nrmlist.php"
+ },
+ "monthly": {
+  "rain_mm": [
+   43.6,
+   39.7,
+   32.8,
+   18.3,
+   9.1,
+   4.3,
+   4.9,
+   6.7,
+   10.5,
+   11.1,
+   19.9,
+   24.4
+  ],
+  "mean_C": [
+   25.9,
+   24.0,
+   21.5,
+   16.6,
+   12.2,
+   8.7,
+   8.0,
+   10.9,
+   14.5,
+   18.7,
+   22.2,
+   25.0
+  ]
+ },
+ "derived": {
+  "annual_rain": 225.3,
+  "ba_annual_rain": 1256.1,
+  "ba_ratio": 5.58,
+  "oct_apr_rain": 189.8,
+  "oct_apr_share": 84.2,
+  "jun_aug_rain": 15.9,
+  "oct_apr_mean_C": 21.99,
+  "mza_share_of_national_vines": 71.4,
+  "mza_share_of_national_malbec": 84.7,
+  "uco_share_of_mza_malbec": 41.6,
+  "other_share": 38.6,
+  "relief": 6305
+ },
+ "derived_code": "annual=sum(rain); oct_apr idx [9,10,11,0,1,2,3] rain sum and mean of monthly means; shares from INV p.20; other=100-sum(top5); uco=(5863+5679+5042)/39856; mza share=142785.5/199945.9; relief=6626-321",
+ "grapes": {
+  "source": "INV, Informe anual de superficie 2024 (data at 31/12/2024), p.4, p.14, p.17, p.20, p.32",
+  "url": "https://argentina.gob.ar/sites/default/files/2018/10/anuario_superficie_2024.pdf",
+  "mendoza_total_ha": 142785,
+  "argentina_total_ha": 199946,
+  "mendoza_share_pct": 71.4,
+  "mendoza_shares_pct": {
+   "Malbec": 27.9,
+   "Bonarda": 9.8,
+   "Cereza": 8.9,
+   "Criolla Grande": 7.9,
+   "Cabernet Sauvignon": 6.9
+  },
+  "mendoza_malbec_ha": 39856,
+  "malbec_growth_2015_2024_ha": 5761,
+  "mendoza_reds_share_of_winemaking_area_pct": 64.8,
+  "rosadas_pct": 20.6,
+  "blancas_pct": 14.5,
+  "national_malbec_ha": 47064,
+  "national_malbec_share_pct": 23.5
+ },
+ "malbec_report": {
+  "source": "INV, Informe de variedades Malbec, Mendoza, Argentina, abril 2025 (data 2024), p.4-5",
+  "url": "https://argentina.gob.ar/sites/default/files/2018/10/informe_malbec-2025-inv.pdf",
+  "mendoza_malbec_share_of_national_pct": 84.7,
+  "dept_malbec_ha": {
+   "Luján de Cuyo": 8920,
+   "San Carlos": 5863,
+   "Tunuyán": 5679,
+   "Tupungato": 5042,
+   "Maipú": 4070
+  },
+  "uco_share_pct": 41.6,
+  "lujan_malbec_share_of_dept_vineyard_pct": 58.6
+ },
+ "atlas": {
+  "type": "IG (provincial)",
+  "register_ref": "Res. INV C.32/2002",
+  "law": "Ley 25.163 (1999)",
+  "outline_area_ha": 14909594,
+  "terrain_e": [
+   321,
+   1358,
+   6626,
+   425,
+   2920
+  ],
+  "atlas_note": "Argentina's main wine province, producing most of the country's wine in an irrigated high desert at the foot of the Andes. Malbec is its signature."
+ },
+ "study": {
+  "lesson": "Southern Hemisphere path, 'Argentina: altitude, Malbec and Torrontés'",
+  "facts": [
+   "Vineyards in the Andean rain shadow, irrigated with Andean snowmelt",
+   "Primera Zona = Luján de Cuyo and Maipú",
+   "Luján de Cuyo and San Rafael are the DOCs (1999 law: IP, IG, DOC)",
+   "Valle de Uco = Tupungato, Tunuyán, San Carlos; in the Valle de Uco many vineyards lie above 1,000 m",
+   "Temperature falls about 0.6 C per 100 m; height lets growers make fresh wines",
+   "Hail: many vineyards use nets; Zonda, hot dry wind from the Andes, can damage flowering in spring",
+   "Michel Aimé Pouget brought Malbec to Mendoza in the mid-nineteenth century",
+   "Bonarda is the second red grape",
+   "WSET bands: hot above 21 C"
+  ]
+ },
+ "hook": "Southern Hemisphere study path (no event this week). Hook 'Malbec at the foot of the Andes': Malbec most planted (INV 2024), Andes per atlas note.",
+ "quiz": [
+  {
+   "q": "Which grape is second most planted in Mendoza?",
+   "options": [
+    "Bonarda",
+    "Cabernet Sauvignon",
+    "Torrontés"
+   ],
+   "answer": "A, Bonarda (9.8%)",
+   "source": "INV Informe anual de superficie 2024 p.20"
+  },
+  {
+   "q": "Which three departments make up the Valle de Uco?",
+   "options": [
+    "Luján de Cuyo, Maipú, San Rafael",
+    "Tupungato, Tunuyán, San Carlos",
+    "San Martín, Junín, Rivadavia"
+   ],
+   "answer": "B, Tupungato, Tunuyán and San Carlos",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "About how much rain falls a year at Mendoza airport?",
+   "options": [
+    "About 225 mm",
+    "About 600 mm",
+    "About 1,250 mm"
+   ],
+   "answer": "A, about 225 mm (225.3 mm)",
+   "source": "JMA 1991-2020 normals, 87418"
+  }
+ ],
+ "dropped": [
+  "Sun layer: no sunshine normals obtainable (SMN normals PDF failed to load; JMA page has none)",
+  "Max/min temperatures and diurnal range figures (no fetched source)"
+ ]
+}

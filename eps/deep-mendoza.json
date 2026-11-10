@@ -1,0 +1,575 @@
+{
+ "slug": "deep-mendoza",
+ "id": "ar-world-mendoza",
+ "duration": 69.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "alpine",
+  61
+ ],
+ "markers": [
+  {
+   "lng": -68.78,
+   "lat": -32.83,
+   "label": "Mendoza airport · 705 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -40,
+     -20,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1,
+     -42,
+     -21.5,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -68.6,
+     -34.5,
+     6.2,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 8.5,
+   "pad": {
+    "top": 100,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -68.55,
+     -34.75,
+     6.15,
+     0,
+     0
+    ],
+    [
+     8.5,
+     -68.55,
+     -34.75,
+     6.35,
+     6,
+     22
+    ]
+   ],
+   "layers": {
+    "markers": true
+   },
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 11.0,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 260
+   },
+   "cam": [
+    [
+     0,
+     -69.15,
+     -33.35,
+     9.1,
+     265,
+     64
+    ],
+    [
+     11,
+     -69.17,
+     -33.33,
+     9.3,
+     275,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 13.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -68.95,
+     -33.25,
+     7.7,
+     0,
+     0
+    ],
+    [
+     13.5,
+     -68.95,
+     -33.25,
+     7.85,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 6.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -68.95,
+     -33.25,
+     7.75,
+     0,
+     8
+    ],
+    [
+     6.5,
+     -68.95,
+     -33.25,
+     7.85,
+     3,
+     12
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 11.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -69.0,
+     -33.35,
+     8.5,
+     -10,
+     38
+    ],
+    [
+     11.5,
+     -69.0,
+     -33.35,
+     8.7,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -68.55,
+     -34.75,
+     6.15,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -68.55,
+     -34.75,
+     6.27,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Argentina · Deep dive",
+   "title": "Mendoza",
+   "sub": "Malbec at the foot<br>of the Andes"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 54.4,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Hazards",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     14.2
+    ],
+    [
+     14.2,
+     24.7
+    ],
+    [
+     24.7,
+     32.0
+    ],
+    [
+     32.0,
+     37.7
+    ],
+    [
+     37.7,
+     43.7
+    ],
+    [
+     43.7,
+     99
+    ]
+   ]
+  },
+  {
+   "t0": 6.9,
+   "t1": 10.3,
+   "kind": "card",
+   "kicker": "Layer 1 · The place",
+   "src": "INV, Informe anual de superficie 2024",
+   "n": "142,785",
+   "u": "ha",
+   "c": "of vines in 2024: 71% of Argentina's vineyard, in one province."
+  },
+  {
+   "t0": 10.5,
+   "t1": 13.9,
+   "kind": "card",
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas Study",
+   "nt": "A provincial <i>IG</i>. Its fine-wine heart, the <i>Primera Zona</i>, is Luján de Cuyo and Maipú."
+  },
+  {
+   "t0": 14.4,
+   "t1": 17.6,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain",
+   "n": "1,358",
+   "u": "m",
+   "c": "on average inside the atlas outline, from 321 to 6,626&nbsp;m."
+  },
+  {
+   "t0": 17.8,
+   "t1": 21.0,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas Study",
+   "nt": "In the <i>Valle de Uco</i>, many vineyards lie above <i>1,000&nbsp;m</i>."
+  },
+  {
+   "t0": 21.2,
+   "t1": 24.4,
+   "kind": "card",
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas Study",
+   "nt": "Air cools by about <i>0.6&nbsp;°C</i> every 100&nbsp;m. Height keeps the wines fresh."
+  },
+  {
+   "t0": 25.0,
+   "t1": 31.8,
+   "kind": "card",
+   "kicker": "Layer 3 · Rain",
+   "src": "JMA, WMO 1991–2020 normals: Mendoza airport (87418) · Buenos Aires (87585)",
+   "n": "225",
+   "u": "mm",
+   "count": {
+    "v": 225.3,
+    "d": 0
+   },
+   "c": "a year at Mendoza airport, 705&nbsp;m, against 1,256&nbsp;mm in Buenos Aires.",
+   "chart": {
+    "type": "months",
+    "a": [
+     43.6,
+     39.7,
+     32.8,
+     18.3,
+     9.1,
+     4.3,
+     4.9,
+     6.7,
+     10.5,
+     11.1,
+     19.9,
+     24.4
+    ],
+    "b": [
+     153.1,
+     115.3,
+     125.1,
+     139.3,
+     101.5,
+     67.2,
+     67.9,
+     72.8,
+     65.9,
+     115.7,
+     117.8,
+     114.5
+    ],
+    "max": 165,
+    "bands": [],
+    "hot": [
+     0
+    ],
+    "labels": [
+     {
+      "m": 0,
+      "v": 43.6,
+      "text": "44"
+     },
+     {
+      "m": 5,
+      "v": 4.3,
+      "text": "4"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Mendoza airport &nbsp; ▢ Buenos Aires &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "t0": 32.2,
+   "t1": 37.2,
+   "kind": "card",
+   "kicker": "Layer 4 · Hazards",
+   "src": "Open Wine Atlas Study",
+   "nt": "<i>Hail</i>: many vineyards hang nets. The hot, dry <i>Zonda</i> wind can hit flowering."
+  },
+  {
+   "t0": 38.0,
+   "t1": 43.4,
+   "kind": "card",
+   "kicker": "Layer 5 · Heat",
+   "src": "JMA, WMO 1991–2020 normals: Mendoza airport (87418) · WSET bands: Study",
+   "n": "22.0",
+   "u": "°C",
+   "count": {
+    "v": 21.99,
+    "d": 1
+   },
+   "c": "average October to April at Mendoza airport: hot in WSET terms. Higher vineyards are cooler.",
+   "chart": {
+    "type": "months",
+    "a": [
+     25.9,
+     24.0,
+     21.5,
+     16.6,
+     12.2,
+     8.7,
+     8.0,
+     10.9,
+     14.5,
+     18.7,
+     22.2,
+     25.0
+    ],
+    "max": 30,
+    "bands": [],
+    "hot": [
+     0,
+     11
+    ],
+    "labels": [
+     {
+      "m": 0,
+      "v": 25.9,
+      "text": "25.9"
+     },
+     {
+      "m": 6,
+      "v": 8.0,
+      "text": "8.0"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Mendoza airport &nbsp;·&nbsp; mean °C per month"
+   }
+  },
+  {
+   "t0": 44.0,
+   "t1": 48.4,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "INV, Informe anual de superficie 2024",
+   "n": "27.9",
+   "u": "%",
+   "count": {
+    "v": 27.9,
+    "d": 1
+   },
+   "c": "of the vines are Malbec: 39,856&nbsp;ha, 85% of all Argentine Malbec.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Malbec",
+      "v": 27.9
+     },
+     {
+      "label": "Bonarda",
+      "v": 9.8
+     },
+     {
+      "label": "Cereza",
+      "v": 8.9
+     },
+     {
+      "label": "Criolla Grande",
+      "v": 7.9
+     },
+     {
+      "label": "Cabernet Sauvignon",
+      "v": 6.9
+     },
+     {
+      "label": "Other",
+      "v": 38.6
+     }
+    ]
+   }
+  },
+  {
+   "t0": 48.6,
+   "t1": 51.3,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "INV, Informe Malbec 2025 (data 2024)",
+   "nt": "Top Malbec department: <i>Luján de Cuyo</i>, 8,920&nbsp;ha. The three Valle de Uco departments hold <i>42%</i>."
+  },
+  {
+   "t0": 51.5,
+   "t1": 54.5,
+   "kind": "card",
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "nt": "French agronomist <i>Michel Aimé Pouget</i> brought Malbec to Mendoza in the mid-1800s."
+  },
+  {
+   "t0": 54.8,
+   "t1": 57.9,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape is second most planted in Mendoza?<br>A&nbsp;&nbsp;Bonarda<br>B&nbsp;&nbsp;Cabernet Sauvignon<br>C&nbsp;&nbsp;Torrontés",
+   "kind": "card"
+  },
+  {
+   "t0": 58.0,
+   "t1": 61.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which departments make up the Valle de Uco?<br>A&nbsp;&nbsp;Luján de Cuyo, Maipú, San Rafael<br>B&nbsp;&nbsp;Tupungato, Tunuyán, San Carlos<br>C&nbsp;&nbsp;San Martín, Junín, Rivadavia",
+   "kind": "card"
+  },
+  {
+   "t0": 61.2,
+   "t1": 64.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls a year at Mendoza airport?<br>A&nbsp;&nbsp;About 225 mm<br>B&nbsp;&nbsp;About 600 mm<br>C&nbsp;&nbsp;About 1,250 mm",
+   "kind": "card"
+  },
+  {
+   "kind": "outro",
+   "t0": 64.5,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Mendoza",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Saint-Émilion",
+   "srcs": "Sources: JMA / WMO 1991–2020 normals · INV Informe anual de superficie 2024 · INV Informe Malbec 2025 · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Argentina",
+  "title": "Mendoza",
+  "sub": "Malbec at the foot<br>of the Andes"
+ }
+}

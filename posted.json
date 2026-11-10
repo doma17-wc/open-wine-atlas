@@ -338,6 +338,19 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-mendoza",
+   "place": "Mendoza",
+   "slot": "2026-11-10T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=7572531819567403005",
+   "sources": [
+    "JMA World Climate normals 1991-2020 (WMO CLIMAT), Mendoza Aero 87418 and Buenos Aires 87585",
+    "INV, Informe anual de superficie 2024",
+    "INV, Informe de variedades Malbec 2025 (data 2024)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

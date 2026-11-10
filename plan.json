@@ -340,8 +340,9 @@
    "series": "",
    "not_before": "2026-11-10",
    "why": "Southern Hemisphere study path: high-altitude Malbec under the Andes",
-   "status": "planned",
-   "note": "Added 2026-11-06. Whole province outline: frame Luján de Cuyo and Uco Valley."
+   "status": "posted",
+   "note": "Added 2026-11-06. Whole province outline: frame Luján de Cuyo and Uco Valley.",
+   "slot": "2026-11-10T17:50+01:00"
   },
   {
    "slug": "deep-santorini",
@@ -362,6 +363,16 @@
    "why": "Italy study path: Nebbiolo north-east of Alba, 26 months of ageing, the Barolo comparison",
    "status": "planned",
    "note": "Added 2026-11-08. Bra ISPRA 1991-2020 box worked for Barolo; look for an ISPRA box nearer Barbaresco (Alba/Asti) or reuse Bra."
+  },
+  {
+   "slug": "deep-saint-emilion",
+   "place": "Saint-Émilion",
+   "atlas_id": "fr-inao-a67",
+   "series": "",
+   "not_before": "2026-11-11",
+   "why": "Bordeaux study path: Merlot and Cabernet Franc on the limestone plateau of the Right Bank",
+   "status": "planned",
+   "note": "Added 2026-11-10 and announced as next in the Mendoza outro. Slot 17:50."
   }
  ]
 }
