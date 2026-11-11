@@ -1,0 +1,304 @@
+{
+ "slug": "deep-saint-emilion",
+ "place": "Saint-Émilion",
+ "atlas_id": "fr-inao-a67",
+ "made": "2026-11-11",
+ "hook": "Bordeaux study path (no event): Merlot and Cabernet Franc on the limestone plateau of the Right Bank",
+ "station": {
+  "name": "St Emilion",
+  "id": "33394002",
+  "height_m": 38,
+  "lat": 44.9175,
+  "lon": -0.18777777777777777,
+  "service": "Météo-France",
+  "period": "sheet 1991-2020, but temperature and precipitation 1995-2020, sunshine 2006-2020 (footnote)",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33394002.pdf",
+  "edited": "2026-06-06"
+ },
+ "comparison_station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "values reused from facts/deep-pauillac.json",
+  "distance_km": 40.8
+ },
+ "monthly": {
+  "tx": [
+   9.9,
+   11.6,
+   15.4,
+   18.6,
+   22.2,
+   25.9,
+   27.8,
+   28,
+   24.7,
+   20.1,
+   13.8,
+   10.5
+  ],
+  "tn": [
+   3.3,
+   3.1,
+   5.2,
+   7.6,
+   11,
+   13.8,
+   15.1,
+   14.9,
+   11.8,
+   9.6,
+   5.8,
+   3.6
+  ],
+  "tm": [
+   6.6,
+   7.3,
+   10.3,
+   13.1,
+   16.6,
+   19.8,
+   21.5,
+   21.5,
+   18.2,
+   14.9,
+   9.8,
+   7.1
+  ],
+  "precip_mm_1995_2020": [
+   78.2,
+   61.5,
+   58,
+   72.4,
+   68.1,
+   58.2,
+   47.7,
+   55.2,
+   62,
+   61.4,
+   91.4,
+   84
+  ],
+  "precip_year": 798.1,
+  "sun_h_2006_2020": [
+   77.8,
+   125.8,
+   164.2,
+   199,
+   222,
+   248.7,
+   272.9,
+   255,
+   226.9,
+   156,
+   101.5,
+   92.4
+  ],
+  "sun_year": 2142.0,
+  "frost_days_tn_le0": [
+   8.4,
+   7.6,
+   2.8,
+   0.2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.9,
+   3.8,
+   8.2
+  ],
+  "frost_year": 31.9,
+  "days_tx_ge30": [
+   0,
+   0,
+   0,
+   0.1,
+   1.5,
+   6.3,
+   9.5,
+   9.5,
+   3.5,
+   0.1,
+   0,
+   0
+  ],
+  "tx30_year": 30.6,
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9,
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ],
+  "merignac_sun_year": 2069.8
+ },
+ "derived": {
+  "tmean_apr_oct_C": {
+   "value": 17.94,
+   "how": "mean of Apr..Oct monthly Tm, St Emilion 1995-2020"
+  },
+  "precip_apr_oct_mm": {
+   "value": 425.0,
+   "how": "sum Apr..Oct precipitation"
+  },
+  "nov_dec_precip_mm": {
+   "value": 175.4,
+   "how": "Nov + Dec"
+  },
+  "rain_less_than_merignac_mm": {
+   "value": 126.8,
+   "how": "924.9 - 798.1 (different periods)"
+  },
+  "checks": {
+   "precip_sum": 798.1,
+   "sun_sum": 2142.2
+  }
+ },
+ "claims": [
+  {
+   "claim": "7,103 ha inside the appellation outline (delimited area, not vines)",
+   "value": 7102.9,
+   "source": "Open Wine Atlas, INAO geodata",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "9 communes: 8 plus part of Libourne",
+   "source": "EU single document PDO-FR-A0988 (2018 amendment file), 2.6; atlas communes list",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "35 km east of Bordeaux; Dordogne 5.5 km",
+   "source": "Open Wine Atlas near_city, rivers",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Two appellations on the same area: Saint-Émilion max 65 hl/ha, Saint-Émilion Grand Cru max 55 hl/ha; Grand Cru is an appellation, not a rank",
+   "source": "INAO data in the atlas (max_yield_hl_ha); Open Wine Atlas Study, Right Bank lesson",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Ground 2 to 108 m, mean 32 m",
+   "source": "Open Wine Atlas terrain e=[2,32,108,8,75]",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "a limestone plateau overlooking the Dordogne to the south, bounded by the Barbanne stream to the north",
+   "value": "un plateau calcaire dominant la Dordogne au sud et limité par le ruisseau de la Barbanne au nord",
+   "source": "EU single document, 2.8",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "Soils mostly limestone and clay-limestone; Merlot on clay soils, Cabernet Franc on limestone or sand and gravel",
+   "value": "sont en majorité calcaires et argilo-calcaires",
+   "source": "EU single document, 2.8",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "Côtes: steep clay-limestone slopes edging the plateau; sandier soils towards the Dordogne",
+   "source": "Open Wine Atlas Study, Right Bank lesson",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Climate oceanic but more continental, east of the Gironde department",
+   "value": "climat océanique tempéré du Bordelais, mais plus continental",
+   "source": "EU single document, 2.8",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "WSET moderate band 16.5 to 18.5 °C",
+   "source": "Open Wine Atlas Study",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "6 red grapes allowed: Merlot, Cabernet Franc, Cabernet Sauvignon, Cot (Malbec), Carmenère, Petit Verdot (secondary)",
+   "source": "INAO data in the atlas",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Merlot is very largely predominant",
+   "value": "Le cépage très largement majoritaire est le cépage merlot N.",
+   "source": "EU single document, 2.7",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "Min density 5,500 vines/ha",
+   "source": "EU single document 2.5.1; atlas",
+   "url": "https://webgate.ec.europa.eu/eambrosia-api/api/v1/attachments/47784"
+  },
+  {
+   "claim": "Classification first 1955, revised about every ten years, only Saint-Émilion Grand Cru wines; ranks Premier Grand Cru Classé A, B, Grand Cru Classé",
+   "source": "Open Wine Atlas Study, Right Bank lesson",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Cabernet Franc is called Bouchet locally",
+   "source": "Open Wine Atlas Study",
+   "url": "web/data/study.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape is very largely predominant in Saint-Émilion?",
+   "options": [
+    "A Cabernet Sauvignon",
+    "B Merlot",
+    "C Malbec"
+   ],
+   "answer": "B Merlot",
+   "source": "EU single document 2.7"
+  },
+  {
+   "q": "Which stream bounds the plateau to the north?",
+   "options": [
+    "A Barbanne",
+    "B Ciron",
+    "C Gironde"
+   ],
+   "answer": "A Barbanne",
+   "source": "EU single document 2.8"
+  },
+  {
+   "q": "Which wines can enter the classification?",
+   "options": [
+    "A Saint-Émilion",
+    "B Saint-Émilion Grand Cru",
+    "C Both"
+   ],
+   "answer": "B Saint-Émilion Grand Cru",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "dropped": [
+  "Vineyard area in vines (no official figure fetched; the 7,103 ha is the outline)",
+  "Calcaire à astéries name (not in the single document)",
+  "Official variety shares",
+  "Full national cahier des charges (élevage, release date) not read"
+ ]
+}

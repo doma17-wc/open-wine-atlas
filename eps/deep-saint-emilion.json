@@ -1,0 +1,544 @@
+{
+ "slug": "deep-saint-emilion",
+ "id": "fr-inao-a67",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  52
+ ],
+ "markers": [
+  {
+   "lng": -0.1878,
+   "lat": 44.9175,
+   "label": "St-Émilion station · 38 m",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     -3.5,
+     44.0,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     -3.1,
+     44.2,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     -0.157,
+     44.884,
+     10.3,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     -0.157,
+     44.884,
+     10.3,
+     0,
+     0
+    ],
+    [
+     9.5,
+     -0.157,
+     44.884,
+     10.55,
+     6,
+     24
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 200
+   },
+   "cam": [
+    [
+     0,
+     -0.165,
+     44.885,
+     11.85,
+     -12,
+     62
+    ],
+    [
+     8.5,
+     -0.155,
+     44.888,
+     12.05,
+     2,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -0.16,
+     44.93,
+     8.95,
+     0,
+     0
+    ],
+    [
+     15.5,
+     -0.16,
+     44.93,
+     9.1,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     -0.16,
+     44.92,
+     9.35,
+     6,
+     10
+    ],
+    [
+     7.0,
+     -0.16,
+     44.92,
+     9.5,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -0.157,
+     44.884,
+     10.9,
+     -10,
+     38
+    ],
+    [
+     8.5,
+     -0.157,
+     44.884,
+     11.1,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "wineries": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.157,
+     44.884,
+     9.9,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -0.157,
+     44.884,
+     10.05,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Saint-Émilion",
+   "sub": "Merlot on a<br>limestone plateau"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas · EU single document",
+   "n": "7,103",
+   "u": "ha",
+   "c": "inside the outline: 9 communes around a medieval hill town, 35&nbsp;km east of Bordeaux."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "INAO data · Study",
+   "n": "2",
+   "u": "appellations",
+   "c": "on the same land: Saint-Émilion (65&nbsp;hl/ha) and Saint-Émilion Grand Cru (55&nbsp;hl/ha). Grand Cru is an appellation, not a rank."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Terrain: Open Wine Atlas · EU single document",
+   "n": "108",
+   "u": "m",
+   "c": "the highest ground. A limestone plateau above the Dordogne, bounded by the Barbanne stream to the north."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "EU single document",
+   "nt": "Soils are mostly <i>limestone</i> and <i>clay-limestone</i>. Merlot takes the cool clay, Cabernet Franc limestone, sand and gravel."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "Météo-France normals, periods as shown",
+   "n": "798",
+   "u": "mm",
+   "count": {
+    "v": 798.1,
+    "d": 0
+   },
+   "c": "a year at Saint-Émilion, 127&nbsp;mm less than Bordeaux-Mérignac. The wettest months: November and December.",
+   "chart": {
+    "type": "months",
+    "a": [
+     78.2,
+     61.5,
+     58,
+     72.4,
+     68.1,
+     58.2,
+     47.7,
+     55.2,
+     62,
+     61.4,
+     91.4,
+     84
+    ],
+    "b": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "max": 125,
+    "bands": [],
+    "hot": [
+     10,
+     11
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Saint-Émilion 1995–2020 &nbsp; ▢ Mérignac 1991–2020 &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Sun",
+   "src": "Météo-France, periods as shown",
+   "n": "2,142",
+   "u": "h",
+   "count": {
+    "v": 2142.0,
+    "d": 0
+   },
+   "c": "of sunshine a year at Saint-Émilion, measured over 2006–2020. July alone: 273&nbsp;h.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "St-Émilion 2006–20",
+      "v": 2142.0
+     },
+     {
+      "label": "Mérignac 1991–2020",
+      "v": 2069.8
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France, normals 1995–2020 · EU single document · Study",
+   "n": "17.9",
+   "u": "°C",
+   "count": {
+    "v": 17.94,
+    "d": 1
+   },
+   "c": "April to October: moderate in WSET terms. More continental than the coast: 32 frost nights, 31 days above 30&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     9.9,
+     11.6,
+     15.4,
+     18.6,
+     22.2,
+     25.9,
+     27.8,
+     28,
+     24.7,
+     20.1,
+     13.8,
+     10.5
+    ],
+    "min": [
+     3.3,
+     3.1,
+     5.2,
+     7.6,
+     11,
+     13.8,
+     15.1,
+     14.9,
+     11.8,
+     9.6,
+     5.8,
+     3.6
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 32,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 28.0 to 14.9",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO data · EU single document",
+   "n": "6",
+   "u": "grapes",
+   "c": "allowed, all red. Merlot is <i>very largely</i> predominant, with Cabernet Franc (Bouchet) and Cabernet Sauvignon."
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Study",
+   "n": "3",
+   "u": "ranks",
+   "c": "Premier Grand Cru Classé A, B and Grand Cru Classé. Since 1955, revised about every ten years."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape is very largely predominant here?<br>A&nbsp;&nbsp;Cabernet Sauvignon<br>B&nbsp;&nbsp;Merlot<br>C&nbsp;&nbsp;Malbec"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which stream bounds the plateau to the north?<br>A&nbsp;&nbsp;Barbanne<br>B&nbsp;&nbsp;Ciron<br>C&nbsp;&nbsp;Gironde"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Which wines can enter the classification?<br>A&nbsp;&nbsp;Saint-Émilion<br>B&nbsp;&nbsp;Saint-Émilion Grand Cru<br>C&nbsp;&nbsp;Both"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Saint-Émilion",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Côte de Beaune",
+   "srcs": "Sources: Météo-France normals (Saint-Émilion 1995–2020, sunshine 2006–2020; Mérignac 1991–2020) · EU single document PDO-FR-A0988 · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Saint-Émilion",
+  "sub": "Merlot on a<br>limestone plateau"
+ }
+}

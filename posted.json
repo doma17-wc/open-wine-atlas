@@ -351,6 +351,20 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-saint-emilion",
+   "place": "Saint-Émilion",
+   "slot": "2026-11-11T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-6707566452595735537",
+   "sources": [
+    "Météo-France fiche climatologique 33394002 St Emilion (temp/rain 1995-2020, sun 2006-2020)",
+    "Météo-France fiche 33281001 Bordeaux-Mérignac 1991-2020",
+    "EU single document PDO-FR-A0988 (amendment file 2018, eAmbrosia)",
+    "INAO data in the atlas",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }
