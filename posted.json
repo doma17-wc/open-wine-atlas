@@ -365,6 +365,20 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-cote-de-beaune",
+   "place": "Côte de Beaune",
+   "slot": "2026-11-12T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=4937451918447822677",
+   "sources": [
+    "Météo-France fiche climatologique 21590001 Savigny-lès-Beaune 1991-2020",
+    "Météo-France fiche 21473001 Dijon-Longvic 1991-2020",
+    "INAO data in the atlas",
+    "Beaune tourism office / onivapp (auction 15 Nov 2026)",
+    "Open Wine Atlas Study",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

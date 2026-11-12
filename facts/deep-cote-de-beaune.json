@@ -1,0 +1,278 @@
+{
+ "slug": "deep-cote-de-beaune",
+ "place": "Côte de Beaune",
+ "atlas_id": "fr-inao-a167",
+ "made": "2026-11-12",
+ "hook": "Hospices de Beaune wine auction, Sunday 15 November 2026, 14:30, under the Halles (166th sale)",
+ "hook_sources": [
+  {
+   "name": "onivapp.com",
+   "url": "https://onivapp.com/blog/vente-des-vins-hospices-de-beaune-2026"
+  },
+  {
+   "name": "Beaune tourism office events 13-15 Nov 2026",
+   "url": "https://www.beaune-tourism.com/organize-your-stay/events/cellier-de-la-cabiote-vente-des-vins-des-hospices-de-beaune-2026-beaune-en-3860617/"
+  },
+  {
+   "name": "La Gazette France, 166e vente",
+   "url": "https://www.lagazettefrance.fr/article/les-hospices-civils-de-beaune-preparent-leur-166e-vente-des-vins"
+  }
+ ],
+ "station": {
+  "name": "Savigny-lès-Beaune",
+  "id": "21590001",
+  "height_m": 246,
+  "lat": 47.0561,
+  "lon": 4.8367,
+  "service": "Météo-France",
+  "period": "1991-2020 (temperature and precipitation); no sunshine at this station",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21590001.pdf",
+  "edited": "2026-06-06",
+  "read_via": "WebFetch (web-fetch agent), numbers copied as printed"
+ },
+ "comparison_station": {
+  "name": "Dijon-Longvic",
+  "id": "21473001",
+  "height_m": 219,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf",
+  "edited": "2026-06-06",
+  "sun_year_h": 1890.0
+ },
+ "monthly": {
+  "tx": [
+   5.9,
+   7.9,
+   12.8,
+   16.5,
+   20.5,
+   24.5,
+   26.8,
+   26.5,
+   21.9,
+   16.4,
+   10,
+   6.4
+  ],
+  "tn": [
+   0.3,
+   0.6,
+   3.6,
+   6.4,
+   10.4,
+   13.8,
+   15.6,
+   15.3,
+   11.7,
+   8.1,
+   3.7,
+   1
+  ],
+  "tm": [
+   3.1,
+   4.3,
+   8.2,
+   11.5,
+   15.4,
+   19.1,
+   21.2,
+   20.9,
+   16.8,
+   12.2,
+   6.9,
+   3.7
+  ],
+  "precip_mm": [
+   58.9,
+   49.2,
+   52,
+   57.3,
+   69.2,
+   62.1,
+   67.4,
+   56.3,
+   55.3,
+   76,
+   80.3,
+   68.9
+  ],
+  "precip_year_printed": 752.9,
+  "frost_days_tn_le0": [
+   14.1,
+   11.9,
+   4.6,
+   0.6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.5,
+   4.9,
+   12.4
+  ],
+  "frost_year_printed": 49.0,
+  "days_tx_ge30": [
+   0,
+   0,
+   0,
+   0,
+   0.5,
+   4.1,
+   8.0,
+   7.7,
+   0.8,
+   0,
+   0,
+   0
+  ],
+  "tx30_year_printed": 21.1,
+  "dijon_precip_mm": [
+   56.8,
+   42.9,
+   48.2,
+   57.5,
+   76.1,
+   65.8,
+   64.9,
+   62,
+   56.4,
+   73.6,
+   77.6,
+   61.6
+  ],
+  "dijon_precip_year_printed": 743.4,
+  "dijon_frost_days": [
+   16.0,
+   14.6,
+   7.7,
+   2.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1.1,
+   6.5,
+   13.6
+  ],
+  "dijon_frost_year_printed": 61.5
+ },
+ "derived": {
+  "tmean_apr_oct_C": {
+   "value": 16.73,
+   "how": "mean of Apr..Oct monthly mean temperature, Savigny 1991-2020"
+  },
+  "precip_apr_oct_mm": {
+   "value": 443.6,
+   "how": "sum Apr..Oct precipitation, Savigny"
+  },
+  "checks": {
+   "precip_sum": 752.9,
+   "dijon_precip_sum": 743.4,
+   "frost_sum": 49.0,
+   "dijon_frost_sum": 61.6,
+   "t30_sum": 21.1
+  },
+  "frost_fewer_than_dijon": {
+   "value": 12.5,
+   "how": "61.5 - 49.0"
+  },
+  "station_to_aoc_centre_km": {
+   "value": 3.0,
+   "how": "haversine from sheet coordinates to atlas centre of fr-inao-a167"
+  }
+ },
+ "claims": [
+  {
+   "claim": "Côte de Beaune AOC: 539 ha delimited area, all in the commune of Beaune",
+   "value": 539.4,
+   "source": "Open Wine Atlas, INAO geodata (details-fr.json fr-inao-a167)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "The Côte de Beaune district runs from Ladoix-Serrigny / hill of Corton to the Maranges, south half of the Côte d'Or",
+   "source": "Open Wine Atlas Study, Côte de Beaune lesson",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Hospices de Beaune founded 1443 by Nicolas Rolin, chancellor to the Duke of Burgundy; famous wine auction each November",
+   "source": "Open Wine Atlas Study",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Auction Sunday 15 November 2026",
+   "source": "onivapp.com, beaune-tourism.com",
+   "url": "https://onivapp.com/blog/vente-des-vins-hospices-de-beaune-2026"
+  },
+  {
+   "claim": "Terrain 216 to 360 m, mean 266 m, dominant aspect SE",
+   "value": [
+    216,
+    266,
+    360
+   ],
+   "source": "Open Wine Atlas terrain (Mapterhorn DEM)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Bedrock 62% carbonate sedimentary rocks (limestone, marl), 38% unconsolidated sediments",
+   "source": "Open Wine Atlas bedrock layer",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Red Côte de Beaune: Pinot Noir main; white: Chardonnay and Pinot Blanc main; max yields red 58, white 64 hl/ha; 9,000 vines/ha",
+   "source": "INAO data in the atlas",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Corton: only red grand cru of the Côte de Beaune, largest grand cru in Burgundy, 160.5 ha delimited",
+   "value": 160.5,
+   "source": "Open Wine Atlas Study + INAO data in the atlas (fr-inao-a165)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Montrachet 8.0 ha, shared by Puligny-Montrachet and Chassagne-Montrachet",
+   "value": 8.0,
+   "source": "INAO data in the atlas (fr-inao-a207, 2 communes) + Study",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Pommard and Volnay red only, no grands crus; Meursault mostly white, no grands crus",
+   "source": "Open Wine Atlas Study"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which is the only red grand cru of the Côte de Beaune?",
+   "options": [
+    "Montrachet",
+    "Corton",
+    "Pommard"
+   ],
+   "answer": "B, Corton",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "Who founded the Hospices de Beaune in 1443?",
+   "options": [
+    "Nicolas Rolin",
+    "Charlemagne",
+    "The monks of Cîteaux"
+   ],
+   "answer": "A, Nicolas Rolin",
+   "source": "Open Wine Atlas Study"
+  },
+  {
+   "q": "Frost nights a year at Savigny-lès-Beaune?",
+   "options": [
+    "About 15",
+    "About 50",
+    "About 90"
+   ],
+   "answer": "B, about 50 (49.0)",
+   "source": "Météo-France 21590001, 1991-2020"
+  }
+ ]
+}

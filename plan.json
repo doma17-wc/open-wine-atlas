@@ -139,8 +139,9 @@
    "series": "",
    "not_before": "2026-11-12",
    "why": "Hospices de Beaune charity auction (third Sunday of November, check the 2026 date)",
-   "status": "planned",
-   "note": "Hospices de Beaune auction confirmed for Sunday 15 November 2026, 14:30 (onivapp.com, beaune-tourism.com). Announced as next in the Saint-Émilion outro."
+   "status": "posted",
+   "note": "Hospices de Beaune auction confirmed for Sunday 15 November 2026, 14:30 (onivapp.com, beaune-tourism.com). Announced as next in the Saint-Émilion outro. Made 2026-11-12. Hook kept: Hospices de Beaune auction Sunday 15 November 2026. Map outline = AOC Côte de Beaune (539 ha, Beaune commune only), stated on screen as 'not the whole district'; Corton shown on the grapes shot. Climate: official Météo-France fiches 1991-2020 Savigny-lès-Beaune 21590001 (246 m, 3 km from the outline) vs Dijon-Longvic 21473001; no sunshine at Savigny, so Sun swapped for Frost (49.0 vs 61.5 nights Tn<=0). 3D shot at terrain 2.0 is hazy; station and Corton marker labels sit in the chip row. Map pass ~80 min (globe ~22 s/frame).",
+   "slot": "2026-11-12T17:50+01:00"
   },
   {
    "slug": "deep-beaujolais",
@@ -242,9 +243,10 @@
    "place": "Kakheti",
    "atlas_id": "ge-world-kakheti",
    "series": "",
-   "not_before": "2026-11-14",
+   "not_before": "2026-11-13",
    "why": "Georgia study path: qvevri wine, Rkatsiteli and Saperavi in the Alazani valley",
-   "status": "planned"
+   "status": "planned",
+   "note": "not_before moved from 2026-11-14 to 2026-11-13 on 2026-11-12 so the Côte de Beaune outro 'Next deep dive: Kakheti' is true. Slot 17:50."
   },
   {
    "slug": "deep-chateauneuf",
@@ -385,6 +387,16 @@
    "why": "Bordeaux study path: Merlot on clay and gravel, no official classification, the Barbanne border with the satellites",
    "status": "planned",
    "note": "Added 2026-11-11 to keep 6+ planned. Slot 17:50. St Emilion 33394002 fiche may serve as nearby station."
+  },
+  {
+   "slug": "deep-rias-baixas",
+   "place": "Rías Baixas",
+   "atlas_id": "es-eupdo-PDO-ES-A1119",
+   "series": "",
+   "not_before": "2026-11-21",
+   "why": "Spain study path: Albariño, Atlantic rain, granite and pergola training",
+   "status": "planned",
+   "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50."
   }
  ]
 }

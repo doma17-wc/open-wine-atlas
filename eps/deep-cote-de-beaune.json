@@ -1,0 +1,551 @@
+{
+ "slug": "deep-cote-de-beaune",
+ "id": "fr-inao-a167",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  23
+ ],
+ "markers": [
+  {
+   "lng": 4.8367,
+   "lat": 47.0561,
+   "label": "Savigny station · 246 m",
+   "shots": [
+    3,
+    4
+   ]
+  },
+  {
+   "lng": 4.863,
+   "lat": 47.0735,
+   "label": "Hill of Corton",
+   "shots": [
+    5
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     1.5,
+     45.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     1.9,
+     45.7,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     4.819,
+     47.032,
+     12.2,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     4.819,
+     47.032,
+     12.2,
+     0,
+     0
+    ],
+    [
+     9.5,
+     4.819,
+     47.032,
+     12.45,
+     6,
+     24
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 2.0,
+   "pad": {
+    "top": 0,
+    "bottom": 200
+   },
+   "cam": [
+    [
+     0,
+     4.806,
+     47.036,
+     13.2,
+     -42,
+     62
+    ],
+    [
+     8.5,
+     4.803,
+     47.039,
+     13.4,
+     -28,
+     65
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     4.8,
+     47.06,
+     11.0,
+     0,
+     0
+    ],
+    [
+     15.5,
+     4.8,
+     47.06,
+     11.15,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     4.8,
+     47.055,
+     11.4,
+     6,
+     10
+    ],
+    [
+     7.0,
+     4.8,
+     47.055,
+     11.55,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     4.863,
+     47.07,
+     13.0,
+     -10,
+     38
+    ],
+    [
+     8.5,
+     4.863,
+     47.07,
+     13.2,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.78,
+     47.0,
+     10.9,
+     0,
+     0
+    ],
+    [
+     10.5,
+     4.78,
+     47.0,
+     11.05,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Côte de Beaune",
+   "sub": "Auction week<br>in Beaune"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Frost",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas · INAO data",
+   "n": "539",
+   "u": "ha",
+   "c": "The AOC Côte de Beaune itself: a small appellation on the hills above the town of Beaune. Not the whole district."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas Study · Beaune tourism office",
+   "n": "1443",
+   "u": "",
+   "c": "Nicolas Rolin founds the Hospices de Beaune. Its charity wine auction is this Sunday, 15&nbsp;November."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Terrain: Open Wine Atlas · Mapterhorn",
+   "n": "360",
+   "u": "m",
+   "c": "the highest ground, 216&nbsp;m at the foot. The slopes face south-east."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas bedrock · Study",
+   "nt": "Under the outline: 62% <i>limestone and marl</i>. The district runs from the hill of Corton to the Maranges."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "Météo-France normals 1991–2020",
+   "n": "753",
+   "u": "mm",
+   "count": {
+    "v": 752.9,
+    "d": 0
+   },
+   "c": "a year at Savigny-lès-Beaune, close to Dijon (743&nbsp;mm). The wettest months: October and November.",
+   "chart": {
+    "type": "months",
+    "a": [
+     58.9,
+     49.2,
+     52,
+     57.3,
+     69.2,
+     62.1,
+     67.4,
+     56.3,
+     55.3,
+     76,
+     80.3,
+     68.9
+    ],
+    "b": [
+     56.8,
+     42.9,
+     48.2,
+     57.5,
+     76.1,
+     65.8,
+     64.9,
+     62,
+     56.4,
+     73.6,
+     77.6,
+     61.6
+    ],
+    "max": 90,
+    "bands": [],
+    "hot": [
+     9,
+     10
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Savigny 246&nbsp;m &nbsp; ▢ Dijon-Longvic 219&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Frost",
+   "src": "Météo-France normals 1991–2020",
+   "n": "49",
+   "u": "nights",
+   "count": {
+    "v": 49.0,
+    "d": 0
+   },
+   "c": "a year at or below 0&nbsp;°C at Savigny-lès-Beaune. Dijon-Longvic, out on the plain: about 62.",
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Savigny 246 m",
+      "v": 49.0
+     },
+     {
+      "label": "Dijon-Longvic 219 m",
+      "v": 61.5
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France normals 1991–2020, Savigny-lès-Beaune",
+   "n": "16.7",
+   "u": "°C",
+   "count": {
+    "v": 16.73,
+    "d": 1
+   },
+   "c": "April to October average. July days reach 26.8&nbsp;°C, and 21 days a year hit 30&nbsp;°C or more.",
+   "chart": {
+    "type": "range",
+    "max": [
+     5.9,
+     7.9,
+     12.8,
+     16.5,
+     20.5,
+     24.5,
+     26.8,
+     26.5,
+     21.9,
+     16.4,
+     10,
+     6.4
+    ],
+    "min": [
+     0.3,
+     0.6,
+     3.6,
+     6.4,
+     10.4,
+     13.8,
+     15.6,
+     15.3,
+     11.7,
+     8.1,
+     3.7,
+     1
+    ],
+    "hl": 6,
+    "lo": -4,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 26.8 to 15.6",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO data in the atlas",
+   "n": "2",
+   "u": "grapes",
+   "c": "lead: Pinot Noir for red, Chardonnay with Pinot Blanc for white. At least 9,000 vines per hectare."
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO data · Open Wine Atlas Study",
+   "n": "160.5",
+   "u": "ha",
+   "c": "Corton, the only red grand cru of the Côte de Beaune and the largest in Burgundy."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which is the only red grand cru of the Côte de Beaune?<br>A&nbsp;&nbsp;Montrachet<br>B&nbsp;&nbsp;Corton<br>C&nbsp;&nbsp;Pommard"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Who founded the Hospices de Beaune in 1443?<br>A&nbsp;&nbsp;Nicolas Rolin<br>B&nbsp;&nbsp;Charlemagne<br>C&nbsp;&nbsp;The monks of Cîteaux"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "How many frost nights a year at Savigny-lès-Beaune?<br>A&nbsp;&nbsp;About 15<br>B&nbsp;&nbsp;About 50<br>C&nbsp;&nbsp;About 90"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Côte de Beaune",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Kakheti",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Savigny-lès-Beaune, Dijon-Longvic) · INAO data · Beaune tourism office · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Côte de Beaune",
+  "sub": "Auction week<br>in Beaune"
+ }
+}
