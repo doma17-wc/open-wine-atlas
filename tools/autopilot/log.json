@@ -2087,5 +2087,228 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Champagne quiz teaser (17, 25 or 42?)",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "8489986685562670987"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Champagne quiz: 4 questions most students miss",
+    "places": [
+      "Champagne",
+      "Montagne de Reims"
+    ],
+    "question_keys": [
+      "north-france-champagne-region#q5",
+      "north-france-champagne-region#q1",
+      "north-france-champagne-method#q1",
+      "north-france-champagne-method#q3"
+    ],
+    "experiment": "First Champagne quiz (new region for quizzes); member card as slide 7",
+    "metricool_uuid": "8313275635158827136"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Montagne de Reims reel teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "3007202449270982765"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "cluster",
+    "title": "Five grand crus. Mostly Pinot Noir.",
+    "places": [
+      "Mailly-Champagne",
+      "Verzenay",
+      "Verzy",
+      "Ambonnay",
+      "Bouzy"
+    ],
+    "question_keys": [],
+    "experiment": "Champagne cluster second run (Pinot Noir side, after Côte des Blancs 11-05); vine areas UMC via local make.py patch (vine_area_ha, total labelled vines); preset alpine seed 83",
+    "metricool_uuid": "-365307918405319367"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Blanc de Noirs grapes, with the Prugnolo Gentile answer (B) on top",
+    "places": [],
+    "question_keys": [
+      "north-france-champagne-method#q6"
+    ],
+    "experiment": "",
+    "metricool_uuid": "6074112207407892934"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "12:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Loire Cabernet Franc reel teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2296386282048041536"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "13:05",
+    "type": "reel",
+    "format": "cluster (released stock draft, media not viewed: static.metricool.com 403)",
+    "title": "The Loire's Cabernet Franc: four names along the river",
+    "places": [
+      "Chinon",
+      "Bourgueil",
+      "Saint-Nicolas-de-Bourgueil",
+      "Saumur-Champigny"
+    ],
+    "question_keys": [],
+    "experiment": "Caption fixed on release: /r/ link replaced by places/france/chinon, geography line corrected, member line and #winestudy added",
+    "metricool_uuid": "-345441221229985391"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "13:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "One famous hill. Three neighbours.",
+    "places": [
+      "Hermitage",
+      "Crozes-Hermitage",
+      "Cornas",
+      "Saint-Péray"
+    ],
+    "question_keys": [],
+    "experiment": "Moved from 13:05 (stock reel took the slot)",
+    "metricool_uuid": "7656152709316362595"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "13:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-6176886980306842464"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Hermitage post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "7153296650605774095"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "17:20",
+    "type": "story",
+    "format": "teaser",
+    "title": "Kakheti deep dive teaser",
+    "places": [
+      "Kakheti"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-1359078596544345793"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "This vineyard gave the town its name.",
+    "places": [
+      "Les Saints-Georges",
+      "Les Vaucrains",
+      "Les Cailles",
+      "Les Porrets-Saint-Georges",
+      "Les Pruliers"
+    ],
+    "question_keys": [],
+    "experiment": "Name-origin hook (Nuits took Saint-Georges in 1892), first run",
+    "metricool_uuid": "4768270630288180929"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Nuits-Saint-Georges post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-5128268495109077635"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Clos de Vougeot wall, with the Blanc de Noirs answer (C) on top (render.py label \"This morning\" in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "bourgogne-cote-de-nuits#q7"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-6409541700803214826"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member, 860+ spots still open",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "4257583426195340"
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 139. Followers 4,297 on 2026-11-12.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-13",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Clos de Vougeot answer (A, Cistercian monks) still to show. Shape quiz final-round answer still unknown to the autopilot. auto-media force-pushed and cleared (force-push worked today).",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]
