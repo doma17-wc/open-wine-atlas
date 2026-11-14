@@ -2310,5 +2310,237 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Burgundy quiz teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7294724521848386967"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Burgundy quiz: 4 questions most students miss",
+    "places": [
+      "Gevrey-Chambertin",
+      "Clos de Vougeot"
+    ],
+    "question_keys": [
+      "bourgogne-overview#q2",
+      "bourgogne-overview#q4",
+      "bourgogne-overview#q5",
+      "bourgogne-overview#q6"
+    ],
+    "experiment": "Overview questions (label rule, mid-slope, clos, inheritance); member card added as slide 7",
+    "metricool_uuid": "8962949193589542878"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Beaujolais north reel teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7612288875735660312"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "cluster",
+    "title": "These five never make Nouveau.",
+    "places": [
+      "Saint-Amour",
+      "Juliénas",
+      "Chénas",
+      "Moulin-à-Vent",
+      "Fleurie"
+    ],
+    "question_keys": [],
+    "experiment": "Event-timing hook (Beaujolais Nouveau on Thursday 19 Nov), first Beaujolais cluster in a while; preset south seed 47",
+    "metricool_uuid": "3576175807189762210"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Pouilly-sur-Loire grape, with the Clos de Vougeot answer (A) on top",
+    "places": [],
+    "question_keys": [
+      "north-france-loire-centre#q6"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-3562406341610224809"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "12:10",
+    "type": "reel",
+    "format": "vs",
+    "title": "Corton vs Montrachet (20.1x)",
+    "places": [
+      "Corton",
+      "Montrachet"
+    ],
+    "question_keys": [],
+    "experiment": "Extreme ratio hook (20x); preset dusk seed 19",
+    "metricool_uuid": "-8423364395410569561"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "12:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Corton vs Montrachet teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2633119823611278291"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "13:05",
+    "type": "post",
+    "format": "cluster",
+    "title": "The other side of Gevrey.",
+    "places": [
+      "Clos Saint-Jacques",
+      "Lavaut Saint-Jacques",
+      "Estournelles-Saint-Jacques",
+      "Les Cazetiers",
+      "Combe au Moine"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "5617904368252961734"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "13:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7794672289982166702"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Gevrey premier crus teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-6708135769099188967"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "17:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: red Sancerre grape, with the Pouilly-sur-Loire answer (D) on top (label 'Earlier today' in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "north-france-loire-centre#q4"
+    ],
+    "experiment": "",
+    "metricool_uuid": "8784486618889473843"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "Which one is the biggest? Four Beaujolais crus",
+    "places": [
+      "Chiroubles",
+      "Morgon",
+      "Régnié",
+      "Côte de Brouilly"
+    ],
+    "question_keys": [],
+    "experiment": "Guess hook plus Nouveau week; Brouilly dropped because make.py hangs on its outline",
+    "metricool_uuid": "-5437011299998350010"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Beaujolais south post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "5964581509587028288"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Mâconnais red grape, with the red Sancerre answer (C) on top (label 'Earlier today' in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "bourgogne-chalonnaise-maconnais#q6"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-7809898585313558332"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member, 850+ spots still open",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "9141538044198735038"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "13:05",
+    "type": "note",
+    "format": "stock draft kept",
+    "title": "Côte de Beaune reds carousel (2026-10-29) left as draft: media on static.metricool.com cannot be viewed (403), old caption with /r/ link and no member card",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2777671366759527879"
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 146. Followers 4,650 on 2026-11-13.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-14",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Mâconnais Gamay answer (D) still to show. Shape quiz final-round answer still unknown. Deep dive topic for today unknown (Kakheti reel not yet in analytics), so no deep-dive teaser. make.py carousel hangs on Brouilly (fr-inao-a145) and runs very slowly on Beaujolais outlines. auto-media force-pushed and cleared.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]
