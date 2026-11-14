@@ -245,8 +245,9 @@
    "series": "",
    "not_before": "2026-11-13",
    "why": "Georgia study path: qvevri wine, Rkatsiteli and Saperavi in the Alazani valley",
-   "status": "planned",
-   "note": "not_before moved from 2026-11-14 to 2026-11-13 on 2026-11-12 so the Côte de Beaune outro 'Next deep dive: Kakheti' is true. Slot 17:50."
+   "status": "posted",
+   "note": "not_before moved from 2026-11-14 to 2026-11-13 on 2026-11-12 so the Côte de Beaune outro 'Next deep dive: Kakheti' is true. Slot 17:50. Made 2026-11-14 (no deep dive went out on 2026-11-13). Study-path hook, no event; no Georgia lesson in study.json yet. Climate: WMO 1991-2020 normals Telavi 37553 (NOAA NCEI) via the Wikipedia climate box; station height not given, marker 'Telavi · WMO station'. No sunshine normals and no clean Tbilisi 1991-2020 box, so no comparison station; Sun from the Kakheti PDO specification (2,100-2,300 h). Grapes, altitude, soils, alcohol from the Kakheti PDO specification (National Wine Agency, UK GI register copy). Grape shares dropped (no official census table found). Station label sits in the chip row on the climate shot.",
+   "slot": "2026-11-14T17:50+01:00"
   },
   {
    "slug": "deep-chateauneuf",

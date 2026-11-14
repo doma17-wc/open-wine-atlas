@@ -379,6 +379,18 @@
     "Open Wine Atlas Study",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-kakheti",
+   "place": "Kakheti",
+   "slot": "2026-11-14T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-4693795520294992372",
+   "sources": [
+    "WMO Climate Normals 1991-2020 Telavi 37553 (NOAA NCEI) via en.wikipedia.org/wiki/Telavi",
+    "Kakheti PDO specification, National Wine Agency of Georgia (assets.publishing.service.gov.uk)",
+    "UNESCO ICH element 00870",
+    "Open Wine Atlas details-ge.json"
+   ]
   }
  ]
 }

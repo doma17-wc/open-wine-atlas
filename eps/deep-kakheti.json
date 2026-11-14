@@ -1,0 +1,510 @@
+{
+ "slug": "deep-kakheti",
+ "id": "ge-world-kakheti",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  37
+ ],
+ "markers": [
+  {
+   "lng": 45.4731,
+   "lat": 41.9198,
+   "label": "Telavi · WMO station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     40,
+     38,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     40.6,
+     38.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     45.88,
+     41.82,
+     7.8,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     45.88,
+     41.82,
+     7.8,
+     0,
+     0
+    ],
+    [
+     9.5,
+     45.88,
+     41.82,
+     8.0,
+     6,
+     22
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 220
+   },
+   "cam": [
+    [
+     0,
+     45.58,
+     41.93,
+     9.6,
+     32,
+     64
+    ],
+    [
+     8.5,
+     45.62,
+     41.96,
+     9.75,
+     42,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     45.62,
+     41.98,
+     8.6,
+     0,
+     0
+    ],
+    [
+     15.5,
+     45.62,
+     41.98,
+     8.75,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     45.6,
+     41.97,
+     8.9,
+     6,
+     10
+    ],
+    [
+     7.0,
+     45.6,
+     41.97,
+     9.05,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     45.65,
+     41.88,
+     9.2,
+     30,
+     38
+    ],
+    [
+     8.5,
+     45.65,
+     41.88,
+     9.4,
+     38,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     45.88,
+     41.82,
+     7.7,
+     0,
+     0
+    ],
+    [
+     10.5,
+     45.88,
+     41.82,
+     7.85,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Georgia · Deep dive",
+   "title": "Kakheti",
+   "sub": "Wine from clay jars<br>under the Caucasus"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Kakheti PDO specification · National Wine Agency",
+   "n": "8",
+   "u": "municipalities",
+   "c": "make up the Kakheti appellation in eastern Georgia, along the Alazani and Iori rivers."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "UNESCO Intangible Cultural Heritage",
+   "n": "2013",
+   "u": "",
+   "c": "UNESCO lists the Georgian qvevri method: egg-shaped clay jars, sealed and buried in the ground."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Kakheti PDO specification · Open Wine Atlas terrain",
+   "n": "750",
+   "u": "m",
+   "c": "the top of the vineyards in the rules, 200&nbsp;m at the bottom. The Caucasus behind rises to 4,123&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Kakheti PDO specification · National Wine Agency",
+   "nt": "Along the Alazani: <i>brown, meadow and alluvial soils</i>, mostly slightly alkaline (pH 7.2 to 8.2)."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "WMO normals 1991–2020, Telavi (NOAA NCEI)",
+   "n": "754",
+   "u": "mm",
+   "count": {
+    "v": 753.9,
+    "d": 0
+   },
+   "c": "a year at Telavi. May is the wettest month, with 119&nbsp;mm. Winters are dry.",
+   "chart": {
+    "type": "months",
+    "a": [
+     28.0,
+     28.0,
+     51.5,
+     90.3,
+     119.1,
+     96.2,
+     67.1,
+     66.7,
+     69.5,
+     61.6,
+     46.5,
+     29.4
+    ],
+    "max": 130,
+    "bands": [],
+    "hot": [
+     4
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Telavi &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Sun",
+   "src": "Kakheti PDO specification · National Wine Agency",
+   "n": "2,300",
+   "u": "hours",
+   "c": "of sun a year at most, 2,100 at least. Hail in spring and autumn, drought in late summer."
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "WMO normals 1991–2020, Telavi (NOAA NCEI)",
+   "n": "19.3",
+   "u": "°C",
+   "count": {
+    "v": 19.34,
+    "d": 1
+   },
+   "c": "April to October average at Telavi. August days reach 30.4&nbsp;°C, nights 18.8&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     6.3,
+     7.9,
+     12.6,
+     17.8,
+     22.7,
+     27.3,
+     30.2,
+     30.4,
+     25.4,
+     19.2,
+     12.3,
+     8.0
+    ],
+    "min": [
+     -1.7,
+     -0.9,
+     2.9,
+     7.4,
+     12.1,
+     16.1,
+     18.9,
+     18.8,
+     14.7,
+     9.8,
+     3.7,
+     -0.1
+    ],
+    "hl": 7,
+    "lo": -4,
+    "hi": 34,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 30.4 to 18.8",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Kakheti PDO specification · National Wine Agency",
+   "n": "9",
+   "u": "grapes",
+   "c": "allowed for white, amber and red: Rkatsiteli, Mtsvane and Kisi, Saperavi and more. No others."
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Kakheti PDO specification · National Wine Agency",
+   "n": "12",
+   "u": "%",
+   "c": "minimum alcohol for Kakheti amber wine, made on the skins. Dry wines: at least 11%."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which river runs through Inner Kakheti?<br>A&nbsp;&nbsp;Alazani<br>B&nbsp;&nbsp;Rioni<br>C&nbsp;&nbsp;Danube"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "When did UNESCO list the Georgian qvevri method?<br>A&nbsp;&nbsp;1996<br>B&nbsp;&nbsp;2013<br>C&nbsp;&nbsp;2020"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls in a year at Telavi?<br>A&nbsp;&nbsp;About 350&nbsp;mm<br>B&nbsp;&nbsp;About 750&nbsp;mm<br>C&nbsp;&nbsp;About 1,200&nbsp;mm"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Kakheti",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Santorini",
+   "srcs": "Sources: WMO normals 1991–2020 (Telavi, NOAA NCEI) · Kakheti PDO specification (National Wine Agency) · UNESCO · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Georgia",
+  "title": "Kakheti",
+  "sub": "Wine from clay jars<br>under the Caucasus"
+ }
+}

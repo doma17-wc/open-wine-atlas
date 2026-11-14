@@ -1,0 +1,260 @@
+{
+ "slug": "deep-kakheti",
+ "place": "Kakheti",
+ "atlas_id": "ge-world-kakheti",
+ "facts": [
+  {
+   "k": "municipalities",
+   "v": 8,
+   "text": "Akhmeta, Telavi, Gurjaani, Sighnaghi, Dedoplistskaro, Kvareli, Lagodekhi and Sagarejo",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "rivers",
+   "v": "Inner Kakheti on both banks of the Alazani; Outer Kakheti on terraces of the Iori",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "atlas outline area",
+   "v": 1134877,
+   "u": "ha",
+   "note": "administrative outline, larger than the real area; not shown on screen",
+   "src": {
+    "name": "Open Wine Atlas, web/data/details-ge.json, ge-world-kakheti",
+    "url": "https://openwineatlas.com/places/georgia/kakheti"
+   }
+  },
+  {
+   "k": "unesco qvevri",
+   "v": 2013,
+   "text": "Ancient Georgian traditional Qvevri wine-making method, inscribed 2013 (8.COM) on the Representative List; egg-shaped earthenware vessel, sealed and buried in the ground; juice, skins, stalks and pips go in",
+   "src": {
+    "name": "UNESCO Intangible Cultural Heritage, element 00870",
+    "url": "https://ich.unesco.org/en/RL/ancient-georgian-traditional-qvevri-wine-making-method-00870"
+   }
+  },
+  {
+   "k": "vineyard altitude",
+   "v": [
+    200,
+    750
+   ],
+   "u": "m",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "terrain max in outline",
+   "v": 4123,
+   "u": "m",
+   "src": {
+    "name": "Open Wine Atlas, web/data/details-ge.json, ge-world-kakheti",
+    "url": "https://openwineatlas.com/places/georgia/kakheti"
+   },
+   "note": "terrain.e max"
+  },
+  {
+   "k": "soils Inner Kakheti",
+   "v": "brown, meadow-brown, humus and alluvial soils; pH mostly 7.2 to 8.2 (moderately and slightly alkaline)",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "sunshine",
+   "v": [
+    2100,
+    2300
+   ],
+   "u": "h per year",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "hazards",
+   "v": "hail in spring and autumn; long droughts in the second half of summer",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "Telavi monthly precipitation",
+   "v": [
+    28.0,
+    28.0,
+    51.5,
+    90.3,
+    119.1,
+    96.2,
+    67.1,
+    66.7,
+    69.5,
+    61.6,
+    46.5,
+    29.4
+   ],
+   "u": "mm",
+   "year": 753.9,
+   "src": {
+    "name": "WMO Climate Normals 1991-2020, Telavi 37553 (NOAA NCEI archive), via the English Wikipedia Telavi climate table citing it",
+    "url": "https://en.wikipedia.org/wiki/Telavi",
+    "primary": "https://www.nodc.noaa.gov/archive/arc0216/0253808/2.2/data/0-data/Region-6-WMO-Normals-9120/Georgia/CSV/Telavi_37553.csv"
+   }
+  },
+  {
+   "k": "Telavi mean daily max",
+   "v": [
+    6.3,
+    7.9,
+    12.6,
+    17.8,
+    22.7,
+    27.3,
+    30.2,
+    30.4,
+    25.4,
+    19.2,
+    12.3,
+    8.0
+   ],
+   "u": "C",
+   "year": 18.3,
+   "src": {
+    "name": "WMO Climate Normals 1991-2020, Telavi 37553 (NOAA NCEI archive), via the English Wikipedia Telavi climate table citing it",
+    "url": "https://en.wikipedia.org/wiki/Telavi",
+    "primary": "https://www.nodc.noaa.gov/archive/arc0216/0253808/2.2/data/0-data/Region-6-WMO-Normals-9120/Georgia/CSV/Telavi_37553.csv"
+   }
+  },
+  {
+   "k": "Telavi mean daily min",
+   "v": [
+    -1.7,
+    -0.9,
+    2.9,
+    7.4,
+    12.1,
+    16.1,
+    18.9,
+    18.8,
+    14.7,
+    9.8,
+    3.7,
+    -0.1
+   ],
+   "u": "C",
+   "year": 8.5,
+   "src": {
+    "name": "WMO Climate Normals 1991-2020, Telavi 37553 (NOAA NCEI archive), via the English Wikipedia Telavi climate table citing it",
+    "url": "https://en.wikipedia.org/wiki/Telavi",
+    "primary": "https://www.nodc.noaa.gov/archive/arc0216/0253808/2.2/data/0-data/Region-6-WMO-Normals-9120/Georgia/CSV/Telavi_37553.csv"
+   }
+  },
+  {
+   "k": "Telavi station elevation",
+   "v": null,
+   "note": "not given in the source table; town infobox 490 m is not the station, so no height on screen"
+  },
+  {
+   "k": "April-October mean temperature Telavi",
+   "v": 19.34,
+   "u": "C",
+   "calc": "mean over Apr..Oct of (tmax+tmin)/2 = 19.34",
+   "src": {
+    "name": "WMO Climate Normals 1991-2020, Telavi 37553 (NOAA NCEI archive), via the English Wikipedia Telavi climate table citing it",
+    "url": "https://en.wikipedia.org/wiki/Telavi",
+    "primary": "https://www.nodc.noaa.gov/archive/arc0216/0253808/2.2/data/0-data/Region-6-WMO-Normals-9120/Georgia/CSV/Telavi_37553.csv"
+   }
+  },
+  {
+   "k": "permitted varieties",
+   "v": 9,
+   "text": "Rkatsiteli, Kakhuri Mtsvane, Kisi, Khikhvi, Mtsvivani Kakhuri, Chitistvala, Saperavi, Saperavi-Budeshuri-like, Cabernet Sauvignon (plus Rkatsiteli Rose for rosé, counted as 10 names); usage of other varieties is prohibited",
+   "note": "On screen we say 'nine grapes for white, amber and red' -- check: whites 6 + reds 3 = 9; rosé list adds Rkatsiteli Rose",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "min alcohol amber",
+   "v": 12,
+   "u": "%",
+   "also": "dry at least 11%",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "k": "yield caps",
+   "v": {
+    "Rkatsiteli": 12,
+    "Saperavi": 10
+   },
+   "u": "t/ha",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which river runs through Inner Kakheti?",
+   "opts": [
+    "Alazani",
+    "Rioni",
+    "Danube"
+   ],
+   "a": "A, Alazani",
+   "src": {
+    "name": "Kakheti PDO product specification (applicant and control body: LEPL National Wine Agency of Georgia; registered in Georgia as Appellation of Origin N789, 2007), as filed on the UK GI register",
+    "url": "https://assets.publishing.service.gov.uk/media/641461b6d3bf7f79dbd3db34/Kakheti__Kakhuri_wine.pdf"
+   }
+  },
+  {
+   "q": "When did UNESCO list the Georgian qvevri method?",
+   "opts": [
+    "1996",
+    "2013",
+    "2020"
+   ],
+   "a": "B, 2013",
+   "src": {
+    "name": "UNESCO Intangible Cultural Heritage, element 00870",
+    "url": "https://ich.unesco.org/en/RL/ancient-georgian-traditional-qvevri-wine-making-method-00870"
+   }
+  },
+  {
+   "q": "About how much rain falls in a year at Telavi?",
+   "opts": [
+    "About 350 mm",
+    "About 750 mm",
+    "About 1,200 mm"
+   ],
+   "a": "B, about 750 mm (753.9 mm)",
+   "src": {
+    "name": "WMO Climate Normals 1991-2020, Telavi 37553 (NOAA NCEI archive), via the English Wikipedia Telavi climate table citing it",
+    "url": "https://en.wikipedia.org/wiki/Telavi",
+    "primary": "https://www.nodc.noaa.gov/archive/arc0216/0253808/2.2/data/0-data/Region-6-WMO-Normals-9120/Georgia/CSV/Telavi_37553.csv"
+   }
+  }
+ ],
+ "dropped": [
+  "Grape plantings shares (no official National Wine Agency census table found)",
+  "Tbilisi comparison station (Wikipedia Tbilisi table mixes Pogoda.ru/NOAA and 1961-1990 sunshine; NOAA CSV not reachable)",
+  "Telavi station height"
+ ]
+}
