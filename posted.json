@@ -391,6 +391,18 @@
     "UNESCO ICH element 00870",
     "Open Wine Atlas details-ge.json"
    ]
+  },
+  {
+   "slug": "deep-santorini",
+   "place": "Santorini",
+   "slot": "2026-11-15T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-5253227110607728834",
+   "sources": [
+    "National Observatory of Athens monthly bulletins, Santorini 183 m, Jul 2013-Mar 2025, via en.wikipedia.org/wiki/Santorini",
+    "Wines of Greece, PDO Santorini (winesofgreece.org/pdo/pdo-santorini/)",
+    "Harper's Wine & Spirit, 10 Aug 2022 (cross-check)",
+    "Open Wine Atlas details-gr.json"
+   ]
   }
  ]
 }

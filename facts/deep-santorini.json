@@ -1,0 +1,311 @@
+{
+ "slug": "deep-santorini",
+ "place": "Santorini",
+ "atlas_id": "gr-eupdo-PDO-GR-A1065",
+ "facts": [
+  {
+   "k": "islands",
+   "v": "Santorini (Thira) and Thirasia",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "production zone established",
+   "v": 1971,
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "phylloxera",
+   "v": "self-rooted vineyard, never affected by phylloxera (sandy soil)",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   },
+   "cross": {
+    "name": "Harper's Wine & Spirit, 'PDO Santorini: A mythological terroir', 10 Aug 2022",
+    "url": "https://harpers.co.uk/news/fullstory.php/aid/30534/PDO_Santorini:_A_mythological_terroir.html"
+   }
+  },
+  {
+   "k": "atlas outline area",
+   "v": 9053,
+   "u": "ha",
+   "src": {
+    "name": "Open Wine Atlas, web/data/details-gr.json, gr-eupdo-PDO-GR-A1065",
+    "url": "https://openwineatlas.com/places/greece/place-gr-eupdo-pdo-gr-a1065"
+   }
+  },
+  {
+   "k": "terrain max in outline",
+   "v": 551,
+   "u": "m",
+   "src": {
+    "name": "Open Wine Atlas, web/data/details-gr.json, gr-eupdo-PDO-GR-A1065",
+    "url": "https://openwineatlas.com/places/greece/place-gr-eupdo-pdo-gr-a1065"
+   },
+   "note": "terrain.e max"
+  },
+  {
+   "k": "vineyard altitude",
+   "v": "from sea level to terraces up to about 300 m",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "soils",
+   "v": "volcanic: basalt, volcanic ash, sand, pumice, andesite; sandy with very little clay",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   },
+   "cross": {
+    "name": "Harper's Wine & Spirit, 'PDO Santorini: A mythological terroir', 10 Aug 2022",
+    "url": "https://harpers.co.uk/news/fullstory.php/aid/30534/PDO_Santorini:_A_mythological_terroir.html"
+   }
+  },
+  {
+   "k": "wind",
+   "v": "strong northerly winds (meltemia); kouloura basket training, grapes grow inside the basket",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "mist",
+   "v": "in prolonged drought, morning mists from the caldera supply moisture",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "monthly rain",
+   "v": [
+    52.7,
+    40.7,
+    44.9,
+    12.1,
+    8.2,
+    3.6,
+    0.03,
+    2.5,
+    3.0,
+    15.1,
+    33.7,
+    54.6
+   ],
+   "u": "mm",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  },
+  {
+   "k": "annual rain",
+   "v": 271.13,
+   "u": "mm",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   },
+   "calc": "sum(monthly rain)",
+   "shown": "271"
+  },
+  {
+   "k": "May to September rain",
+   "v": 17.33,
+   "u": "mm",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   },
+   "calc": "sum(rain[4:9])",
+   "shown": "17"
+  },
+  {
+   "k": "monthly mean max",
+   "v": [
+    14.3,
+    14.7,
+    16.1,
+    19.6,
+    23.3,
+    27.9,
+    30.1,
+    30.2,
+    27.2,
+    22.8,
+    19.4,
+    15.6
+   ],
+   "u": "°C",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  },
+  {
+   "k": "monthly mean min",
+   "v": [
+    10.1,
+    10.3,
+    11.3,
+    13.6,
+    16.9,
+    21.0,
+    23.3,
+    23.5,
+    21.3,
+    17.5,
+    14.7,
+    11.5
+   ],
+   "u": "°C",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  },
+  {
+   "k": "monthly daily mean",
+   "v": [
+    12.2,
+    12.5,
+    13.7,
+    16.9,
+    20.1,
+    24.4,
+    26.7,
+    26.8,
+    24.3,
+    20.2,
+    17.0,
+    13.6
+   ],
+   "u": "°C",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  },
+  {
+   "k": "April to October mean temperature",
+   "v": 22.77,
+   "u": "°C",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   },
+   "calc": "sum(tmean[3:10])/7",
+   "shown": "22.8"
+  },
+  {
+   "k": "August max/min",
+   "v": [
+    30.2,
+    23.5
+   ],
+   "u": "°C",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  },
+  {
+   "k": "dry wines Assyrtiko minimum",
+   "v": 85,
+   "u": "%",
+   "text": "Athiri and Aidani up to 15%",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   },
+   "cross": {
+    "name": "Harper's Wine & Spirit, 'PDO Santorini: A mythological terroir', 10 Aug 2022",
+    "url": "https://harpers.co.uk/news/fullstory.php/aid/30534/PDO_Santorini:_A_mythological_terroir.html"
+   }
+  },
+  {
+   "k": "sweet wines Assyrtiko minimum",
+   "v": 51,
+   "u": "%",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "Vinsanto",
+   "v": "sun-dried grapes, at least 370 g/l sugar, at least 24 months oxidative ageing",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "k": "allowed grapes",
+   "v": "Aidani, Assyrtiko, Athiri, Gaidouria, Katsano, Monemvassia, Moschato Aspro, Platani, Potamissi, Roditis",
+   "src": {
+    "name": "Open Wine Atlas, web/data/details-gr.json, gr-eupdo-PDO-GR-A1065",
+    "url": "https://openwineatlas.com/places/greece/place-gr-eupdo-pdo-gr-a1065"
+   }
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What is the basket-shaped vine training called?",
+   "options": [
+    "Kouloura",
+    "Pergola",
+    "Guyot"
+   ],
+   "answer": "A, Kouloura",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "q": "Minimum share of Assyrtiko in dry PDO Santorini?",
+   "options": [
+    "51%",
+    "75%",
+    "85%"
+   ],
+   "answer": "C, 85%",
+   "src": {
+    "name": "Wines of Greece, PDO Santorini",
+    "url": "https://winesofgreece.org/pdo/pdo-santorini/"
+   }
+  },
+  {
+   "q": "About how much rain falls in a year?",
+   "options": [
+    "About 270 mm",
+    "About 700 mm",
+    "About 1,200 mm"
+   ],
+   "answer": "A, about 270 mm",
+   "src": {
+    "name": "National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025, as tabulated on en.wikipedia.org/wiki/Santorini",
+    "url": "https://en.wikipedia.org/wiki/Santorini"
+   }
+  }
+ ],
+ "dropped": [
+  "Official HNMS or WMO 1991-2020 normals (NCEI blocked, no 1991-2020 table found); NOA 2013-2025 used and named",
+  "Sunshine hours (none sourced): Sun layer swapped for Wind",
+  "Comparison station",
+  "Weather station marker (station coordinates not sourced)",
+  "Assyrtiko share of plantings (only a magazine figure)",
+  "Max yield (atlas 60 hl/ha vs Harper's 55 hl/ha, not shown)"
+ ]
+}

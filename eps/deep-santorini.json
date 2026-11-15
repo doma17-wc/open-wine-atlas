@@ -1,0 +1,497 @@
+{
+ "slug": "deep-santorini",
+ "id": "gr-eupdo-PDO-GR-A1065",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  53
+ ],
+ "markers": [],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     20,
+     32,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     20.6,
+     32.6,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     25.4,
+     36.39,
+     9.6,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     25.4,
+     36.39,
+     9.6,
+     0,
+     0
+    ],
+    [
+     9.5,
+     25.4,
+     36.39,
+     9.8,
+     6,
+     22
+    ]
+   ],
+   "layers": {},
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 220
+   },
+   "cam": [
+    [
+     0,
+     25.415,
+     36.405,
+     11.6,
+     80,
+     64
+    ],
+    [
+     8.5,
+     25.42,
+     36.4,
+     11.75,
+     92,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     25.42,
+     36.4,
+     10.2,
+     0,
+     0
+    ],
+    [
+     15.5,
+     25.42,
+     36.4,
+     10.35,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 660
+   },
+   "cam": [
+    [
+     0,
+     25.43,
+     36.39,
+     10.4,
+     6,
+     10
+    ],
+    [
+     7.0,
+     25.43,
+     36.39,
+     10.55,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     25.44,
+     36.37,
+     10.9,
+     30,
+     38
+    ],
+    [
+     8.5,
+     25.44,
+     36.37,
+     11.1,
+     38,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     25.4,
+     36.39,
+     9.6,
+     0,
+     0
+    ],
+    [
+     10.5,
+     25.4,
+     36.39,
+     9.75,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Greece · Deep dive",
+   "title": "Santorini",
+   "sub": "Assyrtiko in baskets<br>on a volcano"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Wind",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Wines of Greece · Open Wine Atlas",
+   "n": "2",
+   "u": "islands",
+   "c": "Santorini (Thira) and Thirasia make up the PDO, in the Cyclades."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "Wines of Greece",
+   "n": "1971",
+   "u": "",
+   "c": "the wine zone was established. The vines are self-rooted: phylloxera never arrived."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain · Wines of Greece",
+   "n": "551",
+   "u": "m",
+   "c": "the highest point. Vineyards run from sea level to terraces of about 300&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Wines of Greece",
+   "nt": "Volcanic soil: <i>basalt, ash, sand, pumice and andesite</i>. Sandy, with very little clay."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "National Observatory of Athens, 183 m station, 2013–2025",
+   "n": "271",
+   "u": "mm",
+   "count": {
+    "v": 271.13,
+    "d": 0
+   },
+   "c": "a year. May to September brings only 17&nbsp;mm in total.",
+   "chart": {
+    "type": "months",
+    "a": [
+     52.7,
+     40.7,
+     44.9,
+     12.1,
+     8.2,
+     3.6,
+     0.03,
+     2.5,
+     3.0,
+     15.1,
+     33.7,
+     54.6
+    ],
+    "max": 60,
+    "bands": [],
+    "hot": [
+     11
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Santorini, 183 m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Wind",
+   "src": "Wines of Greece",
+   "n": "Kouloura",
+   "u": "",
+   "c": "Against the strong north winds, vines are trained low into a basket, grapes inside."
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "National Observatory of Athens, 183 m station, 2013–2025",
+   "n": "22.8",
+   "u": "°C",
+   "count": {
+    "v": 22.77,
+    "d": 1
+   },
+   "c": "April to October average. August days reach 30.2&nbsp;°C, nights 23.5&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     14.3,
+     14.7,
+     16.1,
+     19.6,
+     23.3,
+     27.9,
+     30.1,
+     30.2,
+     27.2,
+     22.8,
+     19.4,
+     15.6
+    ],
+    "min": [
+     10.1,
+     10.3,
+     11.3,
+     13.6,
+     16.9,
+     21.0,
+     23.3,
+     23.5,
+     21.3,
+     17.5,
+     14.7,
+     11.5
+    ],
+    "hl": 7,
+    "lo": 5,
+    "hi": 34,
+    "grid": [
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 30.2 to 23.5",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Wines of Greece",
+   "n": "85",
+   "u": "%",
+   "c": "minimum Assyrtiko in dry Santorini. Athiri and Aidani make up the rest."
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Wines of Greece",
+   "n": "24",
+   "u": "months",
+   "c": "minimum ageing for Vinsanto, from sun-dried grapes with at least 370&nbsp;g/l sugar."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "What is the basket-shaped vine training called?<br>A&nbsp;&nbsp;Kouloura<br>B&nbsp;&nbsp;Pergola<br>C&nbsp;&nbsp;Guyot"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Minimum share of Assyrtiko in dry PDO Santorini?<br>A&nbsp;&nbsp;51%<br>B&nbsp;&nbsp;75%<br>C&nbsp;&nbsp;85%"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "About how much rain falls in a year?<br>A&nbsp;&nbsp;About 270&nbsp;mm<br>B&nbsp;&nbsp;About 700&nbsp;mm<br>C&nbsp;&nbsp;About 1,200&nbsp;mm"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Santorini",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Beaujolais",
+   "srcs": "Sources: National Observatory of Athens (Santorini, 2013–2025) · Wines of Greece · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Greece",
+  "title": "Santorini",
+  "sub": "Assyrtiko in baskets<br>on a volcano"
+ }
+}

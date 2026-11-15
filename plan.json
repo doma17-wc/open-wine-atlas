@@ -355,8 +355,9 @@
    "series": "",
    "not_before": "2026-11-15",
    "why": "Greece study path: Assyrtiko on volcanic soils, kouloura basket-trained vines, Vinsanto",
-   "status": "planned",
-   "note": "Added 2026-11-08 to keep 6+ planned. Slot 17:50."
+   "status": "posted",
+   "note": "Added 2026-11-08 to keep 6+ planned. Slot 17:50. Made 2026-11-15. Study-path hook, no event; no Greece lesson in study.json yet. Climate: no HNMS or WMO 1991-2020 normals reachable (NCEI blocked from the shell), so National Observatory of Athens monthly bulletins, Santorini station 183 m, Jul 2013 to Mar 2025 (Wikipedia climate box), period named on screen; no sunshine, no comparison station, no marker (station coordinates not sourced). Sun swapped for Wind (kouloura). Rules, soils, 1971 zone, phylloxera from Wines of Greece PDO page; 85% Assyrtiko cross-checked with Harper's 2022. Place shot labels off (Greek map label).",
+   "slot": "2026-11-15T17:50+01:00"
   },
   {
    "slug": "deep-barbaresco",
@@ -398,6 +399,16 @@
    "why": "Spain study path: Albariño, Atlantic rain, granite and pergola training",
    "status": "planned",
    "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50."
+  },
+  {
+   "slug": "deep-rheingau",
+   "place": "Rheingau",
+   "atlas_id": "de-eupdo-PDO-DE-A1273",
+   "series": "",
+   "not_before": "2026-11-23",
+   "why": "Germany study path: Riesling on south-facing slopes above the Rhine, the Taunus shelter, Prädikat levels",
+   "status": "planned",
+   "note": "Added 2026-11-15 to keep 6+ planned. Slot 17:50."
   }
  ]
 }
