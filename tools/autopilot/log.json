@@ -2542,5 +2542,239 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Côte de Beaune quiz teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2114005936840816910"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Côte de Beaune quiz: 4 questions most students miss",
+    "places": [
+      "Beaune",
+      "Côte de Beaune"
+    ],
+    "question_keys": [
+      "bourgogne-cote-de-beaune#q4",
+      "bourgogne-cote-de-beaune#q5",
+      "bourgogne-cote-de-beaune#q6",
+      "bourgogne-cote-de-beaune#q2"
+    ],
+    "experiment": "Hospices auction day tie-in; member card added as slide 7",
+    "metricool_uuid": "4492141757367601231"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Beaune reel teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2067599305124919151"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "cluster",
+    "title": "Today, Beaune sells its wine.",
+    "places": [
+      "Savigny-lès-Beaune",
+      "Chorey-lès-Beaune",
+      "Beaune",
+      "Pommard"
+    ],
+    "question_keys": [],
+    "experiment": "Event-day hook (Hospices de Beaune auction, 3rd Sunday of November); preset warm seed 23",
+    "metricool_uuid": "1079923721940648289"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Gironde rivers, with the Mâconnais Gamay answer (D) on top",
+    "places": [],
+    "question_keys": [
+      "bordeaux-overview#q1"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-1430070632839233079"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "12:10",
+    "type": "reel",
+    "format": "vs",
+    "title": "Meursault vs Puligny-Montrachet (1.9x): Twice the size. Zero grand crus.",
+    "places": [
+      "Meursault",
+      "Puligny-Montrachet"
+    ],
+    "question_keys": [],
+    "experiment": "Famous white Burgundy rivalry, 'zero grand crus' hook; preset alpine seed 31",
+    "metricool_uuid": "-7690990983928919755"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "12:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7817317593133004200"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "13:05",
+    "type": "post",
+    "format": "cluster",
+    "title": "Napa's famous names. Guess the smallest.",
+    "places": [
+      "St. Helena",
+      "Rutherford",
+      "Oakville",
+      "Yountville",
+      "Stags Leap District"
+    ],
+    "question_keys": [],
+    "experiment": "EXPERIMENT: first Napa sub-AVA cluster (US region, guess hook)",
+    "metricool_uuid": "-1830345185455879226"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "13:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Napa post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "4333770256802595947"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Meursault vs Puligny teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-240242986180654064"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "17:20",
+    "type": "story",
+    "format": "teaser",
+    "title": "Santorini deep dive teaser",
+    "places": [
+      "Santorini"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "7371625357910427834"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "One grape. Dry or sweet. Anjou Chenin",
+    "places": [
+      "Savennières",
+      "Coteaux du Layon",
+      "Quarts de Chaume",
+      "Bonnezeaux"
+    ],
+    "question_keys": [],
+    "experiment": "First Anjou Chenin cluster; Bonnezeaux slide rendered separately because make.py crashes after the Layon outline",
+    "metricool_uuid": "283075090222107475"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Chenin post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1899440499656314276"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: 'haut' in Haut-Médoc, with the Gironde answer (A) on top (label 'Earlier today' in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "bordeaux-left-bank#q1"
+    ],
+    "experiment": "",
+    "metricool_uuid": "2883047978756032592"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member, 840 spots still open",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "8429649414583371629"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 159. Followers 4,788 on 2026-11-14.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "06:00",
+    "type": "note",
+    "format": "stock draft kept",
+    "title": "Montrachet vs Romanée-Conti reel (2026-10-29) left as draft: Montrachet used yesterday, media on static.metricool.com 403 (cannot view), old caption with /r/ link",
+    "places": [
+      "Montrachet",
+      "Romanée-Conti"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-6448958692017618010"
+  },
+  {
+    "date": "2026-11-15",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Haut-Médoc answer (C, the upstream part nearer the city) still to show. Shape quiz final-round answer still unknown. make.py crashes (page crash) on carousels after heavy outlines (Coteaux du Layon), render the rest as a separate spec. 2 CPUs only: run renders one at a time. auto-media force-pushed and cleared.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]
