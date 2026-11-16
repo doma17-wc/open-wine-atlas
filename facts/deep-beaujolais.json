@@ -1,0 +1,257 @@
+{
+ "slug": "deep-beaujolais",
+ "place": "Beaujolais",
+ "atlas_id": "fr-inao-a1032",
+ "made": "2026-11-16",
+ "hook": "Beaujolais Nouveau release, Thursday 19 November 2026 (third Thursday of November)",
+ "hook_sources": [
+  {
+   "name": "LyonMag, Beaujolais Nouveau 2026 : rendez-vous le 19 novembre",
+   "url": "https://www.lyonmag.com/article/154026/beaujolais-nouveau-2026-rendez-vous-le-19-novembre-pour-le-lancement-du-nouveau-millesime"
+  },
+  {
+   "name": "raisin.digital, Fêtons le Beaujolais nouveau jeudi 19 novembre 2026",
+   "url": "https://www.raisin.digital/fr/actualites/fetons-le-beaujolais-nouveau-jeudi-19-novembre-2026-1209/"
+  },
+  {
+   "name": "Inter Beaujolais handbook: 1985 decree sets the third Thursday of November",
+   "url": "https://carnet.beaujolais.com/en"
+  }
+ ],
+ "station": {
+  "name": "Le Breuil",
+  "id": "69026001",
+  "height_m": 275,
+  "lat": 45.8958,
+  "lon": 4.5828,
+  "lat_printed": "45°53'45\"N",
+  "lon_printed": "4°34'58\"E",
+  "service": "Météo-France",
+  "period": "1991-2020 (no sunshine at this station)",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69026001.pdf",
+  "edited": "2026-06-06",
+  "read_via": "WebFetch (web-fetch agent), values as printed"
+ },
+ "comparison_station": {
+  "name": "Lyon-Bron",
+  "id": "69029001",
+  "height_m": 202,
+  "lat": 45.7211,
+  "lon": 4.9492,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf",
+  "edited": "2026-06-06",
+  "sun_year_h": 2049.5,
+  "precip_year_printed": 820.8,
+  "precip_mm": [
+   49.8,
+   41.6,
+   49.4,
+   68.9,
+   80.9,
+   74.1,
+   67.4,
+   65.5,
+   82.5,
+   99.8,
+   87.2,
+   53.7
+  ],
+  "frost_year_printed": 42.4
+ },
+ "monthly": {
+  "tx": [
+   7.1,
+   9,
+   13.7,
+   17.1,
+   21.3,
+   25.4,
+   27.9,
+   27.6,
+   22.9,
+   17.5,
+   11.2,
+   7.4
+  ],
+  "tn": [
+   -0.7,
+   -0.5,
+   1.8,
+   4.4,
+   8.3,
+   11.8,
+   13.6,
+   13.2,
+   9.7,
+   6.8,
+   2.8,
+   0
+  ],
+  "tm": [
+   3.2,
+   4.2,
+   7.8,
+   10.8,
+   14.8,
+   18.6,
+   20.7,
+   20.4,
+   16.3,
+   12.2,
+   7,
+   3.7
+  ],
+  "precip_mm": [
+   45.6,
+   37.1,
+   42.4,
+   57.9,
+   72.4,
+   73.3,
+   71.1,
+   69.6,
+   67.7,
+   80,
+   82.6,
+   50.1
+  ],
+  "precip_year_printed": 749.8,
+  "frost_days_tn_le0_year_printed": 71.9,
+  "tx_ge30_year_printed": 28.3,
+  "rr_ge1_year_printed": 103.0
+ },
+ "derived": {
+  "apr_oct_mean_tm": {
+   "value": 16.26,
+   "code": "sum(tm[3:10])/7 over Apr..Oct mean temperature, Le Breuil"
+  },
+  "precip_sum_check": 749.8,
+  "lyon_precip_sum_check": 820.8,
+  "wettest_months": "Oct 80.0, Nov 82.6"
+ },
+ "atlas": {
+  "source": "web/data/details-fr.json fr-inao-a1032",
+  "type": "AOC",
+  "registered": "1973-09-18",
+  "outline_area_ha": 39656,
+  "terrain_e": [
+   172,
+   335,
+   745,
+   220,
+   469
+  ],
+  "bedrock": [
+   [
+    "granite",
+    34
+   ],
+   [
+    "limestone, marl, dolomite",
+    22
+   ],
+   [
+    "unconsolidated sediments",
+    12
+   ]
+  ],
+  "rivers": [
+   [
+    "Saône",
+    10.7
+   ]
+  ],
+  "near_town": [
+   "Villefranche-sur-Saône",
+   11.4
+  ],
+  "main_grape_red": "Gamay N",
+  "main_grape_white": "Chardonnay B",
+  "yield_red_hl_ha": 65,
+  "min_density": 5000
+ },
+ "claims": [
+  {
+   "k": "vineyard_area",
+   "v": "about 13,000 ha claimed in the 12 Beaujolais AOCs, 5-year average 2019-2023",
+   "src": "Inter Beaujolais handbook",
+   "url": "https://carnet.beaujolais.com/en"
+  },
+  {
+   "k": "appellations",
+   "v": "12 AOCs: Beaujolais, Beaujolais Villages and 10 crus (Brouilly, Côte de Brouilly, Régnié, Morgon, Chiroubles, Fleurie, Moulin-à-Vent, Chénas, Juliénas, Saint-Amour)",
+   "src": "Inter Beaujolais",
+   "url": "https://www.beaujolais.com/en/discover/nos-12-appellations/"
+  },
+  {
+   "k": "gamay_share",
+   "v": "96% of the areas producing Beaujolais wine; Chardonnay 4%",
+   "src": "Inter Beaujolais handbook and press kit 2023 (2022 figures)",
+   "url": "https://www.beaujolais.com/wp-content/uploads/sites/2/2023/10/Dossier-de-presse-Beaujolais-Nouveaux-Millesime-2023.pdf"
+  },
+  {
+   "k": "soils",
+   "v": "north: often sandy, granitic in origin; south: often clayey, sometimes chalky (limestone)",
+   "src": "Inter Beaujolais",
+   "url": "https://www.beaujolais.com/en/discover/nos-12-appellations/"
+  },
+  {
+   "k": "saone",
+   "v": "vineyard bordered to the east by the Saône river plain",
+   "src": "Inter Beaujolais handbook",
+   "url": "https://carnet.beaujolais.com/en"
+  },
+  {
+   "k": "release_rule",
+   "v": "1985 decree sets the third Thursday of November as release date",
+   "src": "Inter Beaujolais handbook",
+   "url": "https://carnet.beaujolais.com/en"
+  },
+  {
+   "k": "nouveau_share",
+   "v": "about 25% of the vineyard's wines (5-year average)",
+   "src": "Inter Beaujolais press kit 2023",
+   "url": "https://www.beaujolais.com/wp-content/uploads/sites/2/2023/10/Dossier-de-presse-Beaujolais-Nouveaux-Millesime-2023.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape covers 96% of the Beaujolais vineyard?",
+   "opts": [
+    "Pinot Noir",
+    "Gamay",
+    "Syrah"
+   ],
+   "a": "B, Gamay",
+   "src": "Inter Beaujolais"
+  },
+  {
+   "q": "When is Beaujolais Nouveau released?",
+   "opts": [
+    "Third Thursday of November",
+    "First Sunday of December",
+    "11 November"
+   ],
+   "a": "A, the third Thursday of November",
+   "src": "Inter Beaujolais (1985 decree)"
+  },
+  {
+   "q": "Which rock lies under the northern crus?",
+   "opts": [
+    "Chalk",
+    "Granite",
+    "Basalt"
+   ],
+   "a": "B, granite",
+   "src": "Inter Beaujolais, atlas bedrock"
+  }
+ ],
+ "dropped": [
+  "Sunshine: no sunshine normals at Le Breuil (Lyon-Bron 2,049.5 h exists but is not in the vineyards), so Sun swapped for Soil",
+  "Vineyard 13,500 ha (Inter Beaujolais web page) vs 13,000 ha (handbook 5-year avg): used 'about 13,000'",
+  "Production volumes: only from summarised text, not used",
+  "Semi-carbonic maceration: sourced but left off screen for length"
+ ]
+}

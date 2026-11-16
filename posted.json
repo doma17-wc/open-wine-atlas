@@ -403,6 +403,19 @@
     "Harper's Wine & Spirit, 10 Aug 2022 (cross-check)",
     "Open Wine Atlas details-gr.json"
    ]
+  },
+  {
+   "slug": "deep-beaujolais",
+   "place": "Beaujolais",
+   "slot": "2026-11-16T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3671788573102391726",
+   "sources": [
+    "Météo-France fiche climatologique 69026001 Le Breuil 1991-2020",
+    "Météo-France fiche 69029001 Lyon-Bron 1991-2020",
+    "Inter Beaujolais (beaujolais.com, handbook carnet.beaujolais.com, press kit 2023)",
+    "LyonMag (Nouveau 19 Nov 2026)",
+    "Open Wine Atlas details-fr.json"
+   ]
   }
  ]
 }

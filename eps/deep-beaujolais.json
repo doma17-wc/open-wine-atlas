@@ -1,0 +1,555 @@
+{
+ "slug": "deep-beaujolais",
+ "id": "fr-inao-a1032",
+ "duration": 67.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  41
+ ],
+ "markers": [
+  {
+   "lng": 4.5828,
+   "lat": 45.8958,
+   "label": "Le Breuil station · 275 m",
+   "shots": [
+    3,
+    4
+   ]
+  },
+  {
+   "lng": 4.694,
+   "lat": 46.195,
+   "label": "Fleurie",
+   "shots": [
+    5
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     1.5,
+     45.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1.0,
+     1.9,
+     45.7,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     4.608,
+     46.06,
+     8.5,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.5,
+   "pad": {
+    "top": 60,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     4.608,
+     46.06,
+     8.5,
+     0,
+     0
+    ],
+    [
+     9.5,
+     4.608,
+     46.06,
+     8.7,
+     6,
+     24
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     4.665,
+     46.165,
+     11.2,
+     -80,
+     62
+    ],
+    [
+     8.5,
+     4.66,
+     46.17,
+     11.4,
+     -66,
+     65
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.5,
+   "pad": {
+    "top": 0,
+    "bottom": 484
+   },
+   "cam": [
+    [
+     0,
+     4.64,
+     46.06,
+     7.35,
+     0,
+     0
+    ],
+    [
+     15.5,
+     4.64,
+     46.06,
+     7.45,
+     -4,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.6,
+     45.98,
+     9.0,
+     6,
+     10
+    ],
+    [
+     7.0,
+     4.6,
+     45.98,
+     9.15,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     4.69,
+     46.19,
+     10.6,
+     -10,
+     38
+    ],
+    [
+     8.5,
+     4.69,
+     46.19,
+     10.8,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.608,
+     46.06,
+     8.4,
+     0,
+     0
+    ],
+    [
+     10.5,
+     4.608,
+     46.06,
+     8.55,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "France · Deep dive",
+   "title": "Beaujolais",
+   "sub": "Nouveau week,<br>Gamay on granite"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 51.9,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Soil",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     15.2
+    ],
+    [
+     15.2,
+     23.2
+    ],
+    [
+     23.2,
+     31.2
+    ],
+    [
+     31.2,
+     38.2
+    ],
+    [
+     38.2,
+     44.2
+    ],
+    [
+     44.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Inter Beaujolais · Open Wine Atlas",
+   "n": "13,000",
+   "u": "ha",
+   "c": "of vines in 12 appellations, a five-year average. On the map: the AOC Beaujolais outline."
+  },
+  {
+   "kind": "card",
+   "t0": 11.0,
+   "t1": 15.0,
+   "kicker": "Layer 1 · The place",
+   "src": "Inter Beaujolais · LyonMag",
+   "n": "19",
+   "u": "Nov",
+   "c": "This Thursday: Beaujolais Nouveau day. The third Thursday of November, by a 1985&nbsp;decree."
+  },
+  {
+   "kind": "card",
+   "t0": 15.6,
+   "t1": 19.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Terrain: Open Wine Atlas · Mapterhorn",
+   "n": "745",
+   "u": "m",
+   "c": "the highest ground in the outline, 172&nbsp;m down on the plain. The hills rise to the west."
+  },
+  {
+   "kind": "card",
+   "t0": 19.5,
+   "t1": 23.0,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Inter Beaujolais · Open Wine Atlas",
+   "nt": "West: the Haut-Beaujolais hills. East: the <i>Saône</i> river plain, which borders the vineyard."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 31.0,
+   "kicker": "Layer 3 · Rain",
+   "src": "Météo-France normals 1991–2020",
+   "n": "750",
+   "u": "mm",
+   "count": {
+    "v": 749.8,
+    "d": 0
+   },
+   "c": "a year at Le Breuil, in the south. Lyon-Bron: 821&nbsp;mm. The wettest months: October and November.",
+   "chart": {
+    "type": "months",
+    "a": [
+     45.6,
+     37.1,
+     42.4,
+     57.9,
+     72.4,
+     73.3,
+     71.1,
+     69.6,
+     67.7,
+     80,
+     82.6,
+     50.1
+    ],
+    "b": [
+     49.8,
+     41.6,
+     49.4,
+     68.9,
+     80.9,
+     74.1,
+     67.4,
+     65.5,
+     82.5,
+     99.8,
+     87.2,
+     53.7
+    ],
+    "max": 110,
+    "bands": [],
+    "hot": [
+     9,
+     10
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Le Breuil 275&nbsp;m &nbsp; ▢ Lyon-Bron 202&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.4,
+   "t1": 38.0,
+   "kicker": "Layer 4 · Soil",
+   "src": "Open Wine Atlas bedrock · Inter Beaujolais",
+   "n": "34",
+   "u": "%",
+   "c": "granite under the outline. Granite in the north, clay and limestone in the south.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Granite",
+      "v": 34
+     },
+     {
+      "label": "Limestone, marl",
+      "v": 22
+     },
+     {
+      "label": "Sediments",
+      "v": 12
+     },
+     {
+      "label": "Other",
+      "v": 32
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 38.6,
+   "t1": 44.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France normals 1991–2020, Le Breuil",
+   "n": "16.3",
+   "u": "°C",
+   "count": {
+    "v": 16.26,
+    "d": 1
+   },
+   "c": "April to October average. July days reach 27.9&nbsp;°C, nights 13.6&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     7.1,
+     9,
+     13.7,
+     17.1,
+     21.3,
+     25.4,
+     27.9,
+     27.6,
+     22.9,
+     17.5,
+     11.2,
+     7.4
+    ],
+    "min": [
+     -0.7,
+     -0.5,
+     1.8,
+     4.4,
+     8.3,
+     11.8,
+     13.6,
+     13.2,
+     9.7,
+     6.8,
+     2.8,
+     0
+    ],
+    "hl": 6,
+    "lo": -4,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 27.9 to 13.6",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 48.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Inter Beaujolais, 2022 figures",
+   "n": "96",
+   "u": "%",
+   "c": "of the vineyard is Gamay. Chardonnay, about 4%, makes the whites."
+  },
+  {
+   "kind": "card",
+   "t0": 48.4,
+   "t1": 52.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Inter Beaujolais",
+   "n": "10",
+   "u": "crus",
+   "c": "on the granite hills of the north, from Brouilly to Saint-Amour."
+  },
+  {
+   "kind": "card",
+   "t0": 52.6,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape covers 96% of the Beaujolais vineyard?<br>A&nbsp;&nbsp;Pinot Noir<br>B&nbsp;&nbsp;Gamay<br>C&nbsp;&nbsp;Syrah"
+  },
+  {
+   "kind": "card",
+   "t0": 55.9,
+   "t1": 59.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "When is Beaujolais Nouveau released?<br>A&nbsp;&nbsp;Third Thursday of November<br>B&nbsp;&nbsp;First Sunday of December<br>C&nbsp;&nbsp;11 November"
+  },
+  {
+   "kind": "card",
+   "t0": 59.2,
+   "t1": 62.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Which rock lies under the northern crus?<br>A&nbsp;&nbsp;Chalk<br>B&nbsp;&nbsp;Granite<br>C&nbsp;&nbsp;Basalt"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.6,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Beaujolais",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Barbaresco",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Le Breuil, Lyon-Bron) · Inter Beaujolais · LyonMag · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Beaujolais",
+  "sub": "Nouveau week,<br>Gamay on granite"
+ }
+}

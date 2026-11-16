@@ -150,7 +150,9 @@
    "series": "",
    "not_before": "2026-11-16",
    "why": "Beaujolais Nouveau day, third Thursday of November",
-   "status": "planned"
+   "status": "posted",
+   "slot": "2026-11-16T17:50+01:00",
+   "note": "Made 2026-11-16. Hook kept: Beaujolais Nouveau Thursday 19 November 2026 (LyonMag, raisin.digital; 1985 decree from Inter Beaujolais). Climate: official Météo-France fiches 1991-2020 Le Breuil 69026001 (275 m, inside the AOC communes, south) vs Lyon-Bron 69029001. No sunshine at Le Breuil (or any Beaujolais station checked: Vauxrenard, St-Georges-de-Reneins, Liergues, Monsols), so Sun swapped for Soil (atlas bedrock 34% granite + Inter Beaujolais north/south split). Lyon-Bron marker dropped (climate shot too tight). Grapes: Inter Beaujolais 96% Gamay (2022). Fleurie label sits in the chip row on the grapes shot."
   },
   {
    "slug": "deep-niagara",
@@ -409,6 +411,16 @@
    "why": "Germany study path: Riesling on south-facing slopes above the Rhine, the Taunus shelter, Prädikat levels",
    "status": "planned",
    "note": "Added 2026-11-15 to keep 6+ planned. Slot 17:50."
+  },
+  {
+   "slug": "deep-ribera-del-duero",
+   "place": "Ribera del Duero",
+   "atlas_id": "es-eupdo-PDO-ES-A0626",
+   "series": "",
+   "not_before": "2026-11-24",
+   "why": "Spain study path: Tempranillo (Tinto Fino) on the high Duero plateau, cold nights, the Rioja comparison",
+   "status": "planned",
+   "note": "Added 2026-11-16 to keep 6+ planned. Slot 17:50."
   }
  ]
 }
