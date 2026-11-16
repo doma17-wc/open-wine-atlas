@@ -2776,5 +2776,243 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Bordeaux quiz teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "5935977503674943596"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Bordeaux quiz: 4 questions most students miss",
+    "places": [
+      "Pessac-Léognan",
+      "Médoc"
+    ],
+    "question_keys": [
+      "bordeaux-left-bank#q4",
+      "bordeaux-graves-sauternes#q1",
+      "bordeaux-right-bank#q3",
+      "bordeaux-overview#q6"
+    ],
+    "experiment": "Member card as slide 7",
+    "metricool_uuid": "153967884138202563"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Volnay reel teaser (plain, no background image: covers with text overlapped)",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "8431053304078356397"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "cluster",
+    "title": "This Volnay grows in Meursault.",
+    "places": [
+      "Volnay premier cru Santenots",
+      "Volnay premier cru Les Caillerets",
+      "Volnay premier cru Clos des Chênes",
+      "Volnay premier cru Champans",
+      "Volnay premier cru Taille Pieds"
+    ],
+    "question_keys": [],
+    "experiment": "Surprising-location hook (Santenots lies in Meursault); maxzoom 15; preset south seed 41",
+    "metricool_uuid": "-101875060520104727"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: galets roulés, with the Haut-Médoc answer (C) on top",
+    "places": [],
+    "question_keys": [
+      "rhone-south-southern-rhone#q2"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-7219771001815875200"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "12:10",
+    "type": "reel",
+    "format": "vs",
+    "title": "Châteauneuf-du-Pape vs Gigondas (2.2x): one was an AOC in 1936, the other in 1971",
+    "places": [
+      "Châteauneuf-du-Pape",
+      "Gigondas"
+    ],
+    "question_keys": [],
+    "experiment": "Date hook on a vs instead of size alone; preset japan seed 12",
+    "metricool_uuid": "4877348896927793532"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "12:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1233538390800288625"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "13:05",
+    "type": "post",
+    "format": "cluster",
+    "title": "Dom Pérignon worked here. Vallée de la Marne",
+    "places": [
+      "Hautvillers",
+      "Cumières",
+      "Dizy",
+      "Aÿ-Champagne"
+    ],
+    "question_keys": [],
+    "experiment": "History-person hook on Champagne; no_area (commune outlines), no numbers in caption",
+    "metricool_uuid": "4837347799694459334"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "13:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Châteauneuf-du-Pape vs Gigondas teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-6377530673843909225"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Marne post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1873728712015561301"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "17:20",
+    "type": "story",
+    "format": "teaser",
+    "title": "Beaujolais deep dive teaser (topic from the Santorini caption: Next deep dive: Beaujolais)",
+    "places": [
+      "Beaujolais"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-3040278673033313375"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "Wine borders, 300 years ago. Tuscany 1716 edict zones",
+    "places": [
+      "Chianti Classico",
+      "Pomino",
+      "Carmignano",
+      "Val d'Arno di Sopra"
+    ],
+    "question_keys": [],
+    "experiment": "EXPERIMENT: history hook (Cosimo III 1716 edict), lesser-known Tuscan DOCs; no_area and no_labels (map labels Rufina/Montalbano sat on Pomino/Carmignano)",
+    "metricool_uuid": "-4640914017686368799"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Tuscany 1716 post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1386488702030464964"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Rolle in Italy, with the galets roulés answer (C) on top (label 'Earlier today' in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "rhone-south-provence#q6"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-7942006254661907340"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-8905617228588300229"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 168. Followers 4,915 on 2026-11-15.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "06:00",
+    "type": "note",
+    "format": "stock draft kept",
+    "title": "Côte de Nuits villages carousel (2026-10-29) left as draft: same six villages as the 2026-11-03 post, media on static.metricool.com 403, old caption with /r/ link",
+    "places": [
+      "Gevrey-Chambertin",
+      "Morey-Saint-Denis",
+      "Chambolle-Musigny",
+      "Vougeot",
+      "Vosne-Romanée",
+      "Nuits-Saint-Georges"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-1331820942467250694"
+  },
+  {
+    "date": "2026-11-16",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Rolle answer (B, Vermentino) still to show. Shape quiz final-round answer still unknown. Weekly report sent (Monday). auto-media force-pushed and cleared (clean orphan commit from a fresh folder).",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]
