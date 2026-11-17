@@ -442,6 +442,19 @@ body.maponly .deep-key { display: none !important; }
 .deep-wall .acts button { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: #1b1b1f; color: var(--parchment); font: 500 14px var(--f-body); cursor: pointer; }
 .deep-wall .acts button.primary { background: var(--gold); color: #17130b; border-color: transparent; font-weight: 600; }
 .deep-wall .fine { font-size: 12.5px; color: var(--muted); }
+.deep-form { display: grid; gap: 10px; margin-top: 4px; }
+.deep-form .deep-in { width: 100%; box-sizing: border-box; padding: 12px 12px; border-radius: 10px; border: 1px solid var(--line); background: #1b1b1f; color: var(--parchment); font: 16px var(--f-body); }
+.deep-form .deep-in.code { letter-spacing: .3em; font: 500 22px var(--f-mono); text-align: center; }
+.deep-form .deep-in:focus { outline: none; border-color: var(--gold); }
+.deep-form .deep-lab { display: grid; gap: 8px; font-size: 13.5px; color: #cfc6b6; }
+.deep-form .deep-agree { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; line-height: 1.45; color: #c9c0b1; cursor: pointer; }
+.deep-form .deep-agree input { flex: none; margin: 2px 0 0; accent-color: var(--gold); }
+.deep-form .deep-agree a { color: inherit; }
+.deep-form button.primary { padding: 13px 16px; border-radius: 10px; border: 0; background: var(--gold); color: #17130b; font: 600 15px var(--f-body); cursor: pointer; }
+.deep-form button.primary:disabled { opacity: .6; cursor: default; }
+.deep-form .deep-msg { min-height: 1em; font-size: 12.5px; color: var(--gold); }
+.deep-form .deep-msg:empty { display: none; }
+.deep-wall .deep-have { background: none; border: 0; padding: 0; font: inherit; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start; }
 .deep-lock { position: relative; max-height: 320px; overflow: hidden; filter: blur(5px); opacity: .45; pointer-events: none; user-select: none;
   -webkit-mask-image: linear-gradient(#000 20%, transparent); mask-image: linear-gradient(#000 20%, transparent); }
 /* notebook */
@@ -3090,14 +3103,78 @@ function deepGate(p, d) {
   const wall = document.createElement("div");
   wall.className = "deep-wall";
   wall.innerHTML = '<span class="ey">' + t_("Deep Region") + " · " + esc(R.name) + "</span><h3>" + t_(T.title) + "</h3><p>" +
-    t_(T.wall, { n: DEEP.free, total: fmt(total) }) +
-    '</p><div class="acts"><button type="button" class="primary" data-deep-join>' + t_("Create my free account") + '</button><button type="button" data-deep-join>' + t_("I already have an account") + "</button></div>" +
-    '<p class="fine">' + t_("No card, no password: we email you a code. Grand crus stay open for everyone.") + "</p>";
+    t_(T.wall, { n: DEEP.free, total: fmt(total) }) + "</p>" +
+    // sign up right here: email and the Terms in one step, then the code, then this place opens by itself
+    (WEB ? '<form class="deep-form" data-deep-form novalidate>' + deepFormStep(R) + "</form>"
+      : '<div class="acts"><button type="button" class="primary" data-deep-join>' + t_("Create my free account") + "</button></div>") +
+    '<p class="fine">' + t_("No card, no password: we email you a code. Grand crus stay open for everyone.") +
+    ' <button type="button" class="deep-have" data-deep-join>' + t_("I already have an account") + "</button></p>";
   body.appendChild(wall);
   body.appendChild(lock);
   owaTrack("deep_wall");
   try { window.va && window.va("event", { name: "deep_wall", data: { region: R.key } }); } catch (e) {}
+  if (WEB) loadAccount();
 }
+const DEEP_FORM = { step: "email", email: "", msg: "" };
+// the short English name of each Deep Region, for the buttons of the wall
+const DEEP_SHORT = { bourgogne: N_("Burgundy"), suisse: N_("Switzerland"), champagne: N_("Champagne"), bordeaux: N_("Bordeaux"), piemonte: N_("Piedmont"), toscana: N_("Tuscany") };
+const deepShort = (R) => R ? (DEEP_SHORT[R.key] ? t_(DEEP_SHORT[R.key]) : R.name) : "";
+function deepFormStep(R) {
+  const msg = '<p class="deep-msg" role="status">' + esc(DEEP_FORM.msg) + "</p>";
+  if (DEEP_FORM.step === "code") return '<label class="deep-lab"><span>' + t_("We sent a 6-digit code to {email}. Enter it here.", { email: "<b>" + esc(DEEP_FORM.email) + "</b>" }) + "</span>" +
+    '<input name="code" class="deep-in code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="••••••" required></label>' +
+    '<button type="submit" class="primary">' + t_("Open {region}", { region: esc(deepShort(R)) }) + "</button>" +
+    '<button type="button" class="deep-have" data-deep-back>' + t_("Use another email") + "</button>" + msg;
+  return '<input name="email" class="deep-in" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com" value="' + esc(DEEP_FORM.email) + '" aria-label="' + esc(t_("Email")) + '">' +
+    '<label class="deep-agree"><input name="agree" type="checkbox" required><span>' +
+    t_("I am 18 or older and accept the {terms}.", { terms: '<a href="/terms" target="_blank" rel="noopener">' + t_("Terms of Use") + "</a>" }) + "</span></label>" +
+    '<button type="submit" class="primary">' + t_("Unlock {region} free", { region: esc(deepShort(R)) }) + "</button>" + msg;
+}
+function deepFormRedraw(form) {
+  const R = DEEP.gated && deepRegionOf(DEEP.gated.id);
+  if (!R) return;
+  form.innerHTML = deepFormStep(R);
+  const f = form.querySelector(DEEP_FORM.step === "code" ? "input[name=code]" : "input[name=email]");
+  if (f && DEEP_FORM.step === "code") f.focus();
+}
+document.addEventListener("submit", async (e) => {
+  const form = e.target.closest && e.target.closest("[data-deep-form]");
+  if (!form) return;
+  e.preventDefault();
+  const btn = form.querySelector("button[type=submit]"), say = (t) => { DEEP_FORM.msg = t; const m = form.querySelector(".deep-msg"); if (m) m.textContent = t; };
+  await loadAccount();
+  const A = window.OWA_ACCOUNT;
+  if (!A || !A.quickSend) return say(t_("The account service could not load. Check your connection."));
+  if (DEEP_FORM.step === "email") {
+    const email = form.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { form.email.focus(); return say(t_("Please enter a valid email address.")); }
+    if (!form.agree.checked) { form.agree.focus(); return say(t_("Please confirm that you are 18 or older and accept the Terms of Use.")); }
+    btn.disabled = true; say(t_("Sending your code…"));
+    try { window.va && window.va("event", { name: "deep_join", data: { region: (deepRegionOf(DEEP.gated?.id || "") || {}).key || "" } }); } catch (e2) {}
+    owaTrack("deep_join");
+    const r = await A.quickSend(email, "deep_wall");
+    btn.disabled = false;
+    if (r !== "ok") return say(r === "rate" ? t_("Please wait a minute before asking for another code.") : t_("Could not send the code. Please try again."));
+    DEEP_FORM.step = "code"; DEEP_FORM.email = email; DEEP_FORM.msg = t_("Check your inbox, and the spam folder too.");
+    return deepFormRedraw(form);
+  }
+  const code = form.code.value.replace(/\D/g, "");
+  if (code.length < 6) { form.code.focus(); return say(t_("Enter the code from the email.")); }
+  btn.disabled = true; say(t_("Opening…"));
+  const r = await A.quickVerify(code);
+  btn.disabled = false;
+  if (r !== "ok") return say(r === "invalid" ? t_("That code is wrong or has expired. Ask for a new one.") : t_("Could not sign in. Please try again."));
+  // signed in: account.js fires owa:auth and the place behind the wall opens (listener below)
+  DEEP_FORM.step = "email"; DEEP_FORM.msg = "";
+  toast(t_("Welcome. {region} is open.", { region: esc(deepShort(deepRegionOf(DEEP.gated?.id || ""))) }));
+});
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-deep-back]");
+  if (!b) return;
+  e.preventDefault();
+  DEEP_FORM.step = "email"; DEEP_FORM.msg = "";
+  deepFormRedraw(b.closest("[data-deep-form]"));
+});
 document.addEventListener("click", (e) => {
   if (!e.target.closest("[data-deep-join]")) return;
   e.preventDefault();
