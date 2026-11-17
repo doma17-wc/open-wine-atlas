@@ -83,6 +83,15 @@ h2 { font: 500 26px/1.15 var(--f-display); margin: 0; }
 .rows li:last-child { border-bottom: 0; }
 .rows li span:last-child { font: 500 13px var(--f-mono); color: var(--text); font-variant-numeric: tabular-nums; }
 .rows .empty { color: var(--muted); justify-content: flex-start; }
+.rep { border-top: 1px solid var(--line); padding: 14px 0; display: grid; gap: 6px; font-size: 14px; }
+.rep:first-child { border-top: 0; padding-top: 0; }
+.rep-h { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.rep-note { margin: 0; color: var(--muted); white-space: pre-line; max-height: 120px; overflow: auto; }
+.rep-why { margin: 0; padding-left: 18px; color: var(--text); }
+.rep-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.rep .sub { color: var(--muted); font-size: 12px; }
+.rep-acts button { padding: 7px 12px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--text); font: 500 13px var(--f-body, inherit); cursor: pointer; }
+.rep-acts button:hover { border-color: var(--gold); }
 
 /* users */
 .tools { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -175,6 +184,11 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     <section class="sec grid two">
       <div class="card"><div class="sec-h"><h2>Most saved places</h2></div><ul class="rows" id="topSaved"></ul></div>
       <div class="card"><div class="sec-h"><h2>In their atlas</h2></div><ul class="rows" id="items"></ul></div>
+    </section>
+
+    <section class="sec card">
+      <div class="sec-h"><h2>Reports <span id="repCount" style="color:var(--muted)"></span></h2><p>Public tasting notes and Passports that visitors reported. Hide a note, block a member's public presence, or dismiss.</p></div>
+      <div id="reports"></div>
     </section>
 
     <section class="sec">
@@ -285,6 +299,7 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
     if (e1 || e2) { $("updated").textContent = "could not load"; console.warn(e1 || e2); return; }
     USERS = users || [];
     renderKpis(o); renderChart(o); renderActive(o); renderFunnel(o); renderLists(o, await names()); renderUsers();
+    loadReports();
     $("updated").textContent = "updated " + new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
   }
 
@@ -368,6 +383,35 @@ footer { margin-top: 40px; color: var(--muted); font-size: 12.5px; }
       '<div class="step" style="--c:var(--sage);margin-top:8px"><b>Founding page views</b><span class="v">' + n(ev.founding_view || 0) + '</span><div class="track"><i style="width:' + (100 * (ev.founding_view || 0) / Math.max(top, ev.founding_view || 0)).toFixed(1) + '%"></i></div></div>' +
       '<div class="step" style="--c:var(--sage)"><b>Accounts created on the Founding page</b><span class="v">' + n(foundingAcc) + "<small>" + pct(foundingAcc, ev.founding_view || 0) + '</small></span><div class="track"><i style="width:' + (100 * foundingAcc / Math.max(top, ev.founding_view || 0, 1)).toFixed(1) + '%"></i></div></div>';
   }
+
+  // ---------- reports on public content (supabase/migrations/…_passport.sql)
+  async function loadReports() {
+    const { data, error } = await sb.rpc("admin_reports");
+    if (error) { $("reports").innerHTML = '<p style="color:var(--muted)">Could not load the reports.</p>'; return; }
+    const list = data || [];
+    $("repCount").textContent = list.length ? "· " + n(list.length) + " open" : "";
+    $("reports").innerHTML = list.length ? list.map((r) => {
+      const c = r.content || {};
+      const what = r.kind === "tasting"
+        ? "<b>" + esc([c.wine, c.vintage].filter(Boolean).join(" ") || c.place || "(note deleted)") + "</b>" + (c.place ? ' <span class="sub">' + esc(c.place) + "</span>" : "") + (c.note ? '<p class="rep-note">' + esc(c.note) + "</p>" : "")
+        : "<b>Passport</b>" + (c.bio ? '<p class="rep-note">' + esc(c.bio) + "</p>" : "");
+      return '<div class="rep">' +
+        '<div class="rep-h"><span class="pill">' + (r.kind === "tasting" ? "Tasting note" : "Passport") + '</span> <a href="/u/' + esc(r.handle) + '" target="_blank" rel="noopener">@' + esc(r.handle) + "</a>" +
+        (r.name ? ' <span class="sub">' + esc(r.name) + "</span>" : "") + ' <span class="sub">' + n(r.count) + " report" + (r.count > 1 ? "s" : "") + " · " + ago(r.last) + "</span>" + (r.blocked ? ' <span class="pill no">blocked</span>' : "") + "</div>" +
+        what + ((r.reasons || []).length ? '<ul class="rep-why">' + r.reasons.map((x) => "<li>" + esc(x) + "</li>").join("") + "</ul>" : "") +
+        '<div class="rep-acts">' + (r.kind === "tasting" ? '<button data-mod="hide" data-h="' + esc(r.handle) + '" data-i="' + esc(r.item) + '">Hide this note</button>' : "") +
+        '<button data-mod="' + (r.blocked ? "unblock" : "block") + '" data-h="' + esc(r.handle) + '">' + (r.blocked ? "Unblock member" : "Block member's public page") + "</button>" +
+        '<button data-mod="dismiss" data-h="' + esc(r.handle) + '" data-i="' + esc(r.item || "") + '">Dismiss</button></div></div>';
+    }).join("") : '<p style="color:var(--muted);margin:0">No open reports.</p>';
+  }
+  document.addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-mod]"); if (!b) return;
+    if (b.dataset.mod === "block" && !confirm("Block @" + b.dataset.h + "? Their Passport and every shared note disappear from the site.")) return;
+    b.disabled = true;
+    const { error } = await sb.rpc("admin_moderate", { p_action: b.dataset.mod, p_handle: b.dataset.h, p_item: b.dataset.i || null, p_reason: null });
+    if (error) { alert("Could not do it: " + error.message); b.disabled = false; return; }
+    loadReports();
+  });
 
   function rows(el, pairs, label = (k) => k) {
     $(el).innerHTML = pairs.length ? pairs.map(([k, v]) => "<li><span>" + esc(label(k)) + "</span><span>" + n(v) + "</span></li>").join("") : '<li class="empty">Nothing yet</li>';
