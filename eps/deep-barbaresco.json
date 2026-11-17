@@ -1,0 +1,537 @@
+{
+ "slug": "deep-barbaresco",
+ "id": "it-eupdo-PDO-IT-A1399",
+ "duration": 68.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  83
+ ],
+ "markers": [
+  {
+   "lng": 7.855,
+   "lat": 44.697,
+   "label": "Bra · ISPRA station",
+   "shots": [
+    3,
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "globe",
+   "dur": 6.5,
+   "globe": true,
+   "pad": {
+    "top": 250,
+    "bottom": 0
+   },
+   "cam": [
+    [
+     0,
+     2.0,
+     45.5,
+     2.3,
+     0,
+     0
+    ],
+    [
+     1,
+     3.0,
+     45.4,
+     2.6,
+     0,
+     0
+    ],
+    [
+     6.5,
+     8.059,
+     44.7,
+     9.6,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 9.0,
+   "pad": {
+    "top": 100,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     8.059,
+     44.7,
+     10.3,
+     0,
+     0
+    ],
+    [
+     9.0,
+     8.059,
+     44.7,
+     10.5,
+     6,
+     22
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 1.6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     8.07,
+     44.7,
+     11.7,
+     150,
+     64
+    ],
+    [
+     8.5,
+     8.07,
+     44.698,
+     11.9,
+     138,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.0,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     8.0,
+     44.725,
+     9.75,
+     0,
+     0
+    ],
+    [
+     15.0,
+     8.0,
+     44.725,
+     9.9,
+     -4,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     7.98,
+     44.7,
+     10.0,
+     6,
+     10
+    ],
+    [
+     7.0,
+     7.98,
+     44.7,
+     10.15,
+     10,
+     14
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.5,
+    "markers": true
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "grapes",
+   "dur": 9.5,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     8.08,
+     44.71,
+     11.2,
+     -10,
+     38
+    ],
+    [
+     9.5,
+     8.08,
+     44.71,
+     11.4,
+     -2,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false,
+   "fps": 6
+  },
+  {
+   "name": "quiz",
+   "dur": 11.0,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     8.059,
+     44.7,
+     10.2,
+     0,
+     0
+    ],
+    [
+     11.0,
+     8.059,
+     44.7,
+     10.35,
+     4,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45
+   },
+   "labels": false,
+   "fps": 6
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": 0.3,
+   "t1": 5.6,
+   "kicker": "Italy · Deep dive",
+   "title": "Barbaresco",
+   "sub": "Nebbiolo's other<br>great address"
+  },
+  {
+   "kind": "chips",
+   "t0": 6.2,
+   "t1": 52.4,
+   "items": [
+    "Place",
+    "Terrain",
+    "Rain",
+    "Soil",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     6.2,
+     14.7
+    ],
+    [
+     14.7,
+     22.7
+    ],
+    [
+     22.7,
+     30.8
+    ],
+    [
+     30.8,
+     37.2
+    ],
+    [
+     37.2,
+     43.8
+    ],
+    [
+     43.8,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 6.9,
+   "t1": 10.5,
+   "kicker": "Layer 1 · The place",
+   "src": "Gazzetta d'Alba (Consorzio figures) · Open Wine Atlas",
+   "n": "814",
+   "u": "ha",
+   "c": "of Nebbiolo for Barbaresco at the 2023 harvest, inside a 9,231&nbsp;ha outline."
+  },
+  {
+   "kind": "card",
+   "t0": 10.7,
+   "t1": 14.4,
+   "kicker": "Layer 1 · The place",
+   "src": "Barbaresco disciplinare, art. 3 · Open Wine Atlas",
+   "nt": "Three whole communes, <i>Barbaresco</i>, <i>Neive</i> and <i>Treiso</i>, plus a slice of Alba. Barolo has 11."
+  },
+  {
+   "kind": "card",
+   "t0": 15.0,
+   "t1": 18.6,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain · disciplinare art. 4",
+   "n": "237",
+   "u": "m",
+   "c": "average height, 58&nbsp;m lower than Barolo. Vineyards may not lie above 550&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 18.8,
+   "t1": 22.4,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas · Open Wine Atlas Study",
+   "nt": "The <i>Tanaro</i> runs 2&nbsp;km away. Lower and closer to it, Nebbiolo ripens a little earlier than in Barolo."
+  },
+  {
+   "kind": "card",
+   "t0": 23.1,
+   "t1": 30.5,
+   "kicker": "Layer 3 · Rain",
+   "src": "ISPRA 1991–2020 normals: Bra (via Wikipedia)",
+   "n": "625",
+   "u": "mm",
+   "count": {
+    "v": 624.8,
+    "d": 0
+   },
+   "c": "a year at Bra, west of the zone, with peaks in May and November. April to October: 417&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     23.4,
+     26.8,
+     37.1,
+     71.5,
+     82.6,
+     52.6,
+     40.7,
+     46.3,
+     62.0,
+     61.3,
+     86.4,
+     34.1
+    ],
+    "max": 100,
+    "bands": [],
+    "hot": [
+     4,
+     10
+    ],
+    "labels": [
+     {
+      "m": 4,
+      "v": 82.6,
+      "text": "83"
+     },
+     {
+      "m": 10,
+      "v": 86.4,
+      "text": "86"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Bra &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 31.0,
+   "t1": 36.9,
+   "kicker": "Layer 4 · Soil",
+   "src": "Open Wine Atlas bedrock layer",
+   "n": "68",
+   "u": "%",
+   "count": {
+    "v": 68,
+    "d": 0
+   },
+   "c": "of the outline lies on carbonate rocks: limestone and marl. The rest is loose sediment.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Limestone and marl",
+      "v": 68
+     },
+     {
+      "label": "Loose sediments",
+      "v": 32
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 37.6,
+   "t1": 43.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "ISPRA 1991–2020 normals: Bra",
+   "n": "19.1",
+   "u": "°C",
+   "count": {
+    "v": 19.13,
+    "d": 1
+   },
+   "c": "April to October average at Bra. July days reach 30.4&nbsp;°C, nights 18.1&nbsp;°C.",
+   "chart": {
+    "type": "range",
+    "max": [
+     7.6,
+     10.2,
+     15.4,
+     18.9,
+     23.2,
+     27.7,
+     30.4,
+     29.7,
+     24.8,
+     18.5,
+     11.8,
+     7.9
+    ],
+    "min": [
+     -1.0,
+     0.2,
+     3.8,
+     7.5,
+     12.0,
+     16.0,
+     18.1,
+     17.8,
+     13.6,
+     9.3,
+     4.1,
+     0.0
+    ],
+    "hl": 6,
+    "lo": -4,
+    "hi": 34,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 30.4 to 18.1",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 44.1,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Barbaresco and Barolo disciplinari, art. 2 and 5",
+   "n": "26",
+   "u": "months",
+   "c": "minimum ageing, 9 in wood, 100% Nebbiolo. Barolo: 38 months, 18 in wood."
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 52.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Barbaresco disciplinare, art. 7",
+   "n": "66",
+   "u": "MGA",
+   "c": "official named areas may go on the label, such as <i>Asili</i> and <i>Rabajà</i>."
+  },
+  {
+   "kind": "card",
+   "t0": 52.8,
+   "t1": 56.0,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Minimum ageing for Barbaresco, not Riserva?<br>A&nbsp;&nbsp;18 months<br>B&nbsp;&nbsp;26 months<br>C&nbsp;&nbsp;38 months"
+  },
+  {
+   "kind": "card",
+   "t0": 56.1,
+   "t1": 59.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which river flows past the Barbaresco hills?<br>A&nbsp;&nbsp;Tanaro<br>B&nbsp;&nbsp;Po<br>C&nbsp;&nbsp;Adige"
+  },
+  {
+   "kind": "card",
+   "t0": 59.4,
+   "t1": 62.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Which commune is NOT in Barbaresco?<br>A&nbsp;&nbsp;Neive<br>B&nbsp;&nbsp;Treiso<br>C&nbsp;&nbsp;La Morra"
+  },
+  {
+   "kind": "outro",
+   "t0": 62.8,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Barbaresco",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Pomerol",
+   "srcs": "Sources: ISPRA 1991–2020 normals · Barbaresco disciplinare · Consorzio via Gazzetta d'Alba · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Italy",
+  "title": "Barbaresco",
+  "sub": "Nebbiolo's other<br>great address"
+ }
+}

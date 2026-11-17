@@ -1,0 +1,198 @@
+{
+ "slug": "deep-barbaresco",
+ "place": "Barbaresco",
+ "atlas_id": "it-eupdo-PDO-IT-A1399",
+ "made": "2026-11-17",
+ "hook": {
+  "text": "Italy study path; announced as next deep dive in the Beaujolais outro (16 Nov 2026). No event hook.",
+  "use": "none"
+ },
+ "station": {
+  "name": "Bra",
+  "service": "ISPRA, Valori climatici normali in Italia (1991-2020)",
+  "period": "1991-2020",
+  "url": "https://en.wikipedia.org/wiki/Bra,_Piedmont",
+  "republisher": "Wikipedia climate box 'Climate data for Bra (1991–2020)', source line ISPRA, reference to valori-climatici-normali.isprambiente.it (archived 17 Sep 2023)",
+  "height_note": "Station height not given in the table; town elevation 285 m from the article infobox, not shown on screen.",
+  "coords": [
+   7.855,
+   44.697
+  ],
+  "distance_note": "Atlas near_town: Bra 8.7 km from the Barolo outline",
+  "crosscheck": "Monthly precipitation sums to 624.8 mm vs printed 624.8 mm. ISPRA station app not reachable for a second-page check.",
+  "reuse_note": "Same ISPRA 1991-2020 Bra box as facts/deep-barolo.json (Wikipedia climate box citing ISPRA). No ISPRA box nearer Barbaresco (Alba/Asti) could be fetched in this run. Bra lies west of the Barbaresco outline; named on screen."
+ },
+ "monthly": {
+  "max_C": [
+   7.6,
+   10.2,
+   15.4,
+   18.9,
+   23.2,
+   27.7,
+   30.4,
+   29.7,
+   24.8,
+   18.5,
+   11.8,
+   7.9
+  ],
+  "min_C": [
+   -1.0,
+   0.2,
+   3.8,
+   7.5,
+   12.0,
+   16.0,
+   18.1,
+   17.8,
+   13.6,
+   9.3,
+   4.1,
+   0.0
+  ],
+  "mean_C": [
+   3.3,
+   5.2,
+   9.6,
+   13.2,
+   17.6,
+   21.9,
+   24.3,
+   23.8,
+   19.2,
+   13.9,
+   8.0,
+   3.9
+  ],
+  "rain_mm": [
+   23.4,
+   26.8,
+   37.1,
+   71.5,
+   82.6,
+   52.6,
+   40.7,
+   46.3,
+   62.0,
+   61.3,
+   86.4,
+   34.1
+  ],
+  "precip_days": [
+   3.7,
+   3.4,
+   4.2,
+   7.4,
+   7.9,
+   6.1,
+   4.5,
+   5.1,
+   5.5,
+   5.4,
+   7.0,
+   4.1
+  ]
+ },
+ "annual": {
+  "rain_mm": 624.8,
+  "precip_days": 64.3,
+  "mean_max_C": 18.8,
+  "mean_min_C": 8.5,
+  "mean_C": 13.7
+ },
+ "derived": {
+  "rain_sum": 624.8,
+  "apr_oct_rain": 417.0,
+  "apr_oct_mean": 19.13,
+  "barolo_mean_alt_m": 295,
+  "barbaresco_mean_alt_m": 237,
+  "mean_alt_diff_m": 58,
+  "vine_share_of_outline_pct": 8.8,
+  "ageing_diff_months_vs_barolo": 12
+ },
+ "derived_code": "rain_sum=sum(rain); apr_oct = months 4-10 (index 3..9); apr_oct_mean = mean of printed monthly daily means; mean_alt_diff = Barolo terrain mean 295 m minus Barbaresco 237 m (atlas terrain e[1]); computed in Python in this run.",
+ "atlas": {
+  "source": "Open Wine Atlas web/data/details-it.json it-eupdo-PDO-IT-A1399",
+  "outline_area_ha": 9231,
+  "vine_area_ha": 814,
+  "vine_area_src": "Nebbiolo da Barbaresco area claimed at the 2023 harvest, G. Montaldo, Gazzetta d'Alba, 26 Jan 2026 (secondary source, Consorzio figures): https://www.gazzettadalba.it/2026/01/lanalisi-le-nuove-annate-di-barbaresco-barolo-e-roero/",
+  "terrain_e": [
+   136,
+   237,
+   568,
+   159,
+   354
+  ],
+  "river": "Tanaro, 2.1 km",
+  "near_town": "Alba 0.4 km E",
+  "bedrock": "68% carbonate sedimentary rocks (limestone, marl, dolomite), 32% unconsolidated sediments (atlas bedrock layer)",
+  "barolo_communes": 11
+ },
+ "disciplinare": {
+  "source": "Regione Piemonte, disciplinare Barbaresco DOCG, last amendment DM 17.04.2015",
+  "url": "https://www.regione.piemonte.it/web/media/6408/download",
+  "art2": "exclusively Nebbiolo",
+  "art3": "whole communes of Barbaresco, Neive, Treiso plus part of frazione San Rocco Seno d'Elvio (now in Alba), province of Cuneo",
+  "art4": "vineyards not above 550 m; max 8 t/ha (7.2 with MGA + vigna); min natural alcohol 12.00% vol",
+  "art5": "Barbaresco 26 months, 9 in wood, from 1 Nov of harvest year, release 1 Jan of 3rd year; Riserva 50 months, 9 in wood, release 1 Jan of 5th year",
+  "art7": "66 menzioni geografiche aggiuntive (count of names in art. 7 comma 1)",
+  "recognition": "DOC DPR 23.04.1966, DOCG DPR 03.10.1980"
+ },
+ "barolo_compare": {
+  "source": "facts/deep-barolo.json (Barolo disciplinare art. 5, atlas)",
+  "ageing": "38 months, 18 in wood",
+  "communes": 11,
+  "terrain_mean_m": 295
+ },
+ "study": {
+  "source": "Open Wine Atlas Study, Piemonte lesson",
+  "text": "The zone is lower and closer to the Tanaro, so it is a little warmer and Nebbiolo ripens slightly earlier. MGA such as Rabajà may appear on the label."
+ },
+ "mga_examples": {
+  "names": [
+   "Asili",
+   "Rabajà"
+  ],
+  "source": "disciplinare art. 7 (printed 'Rabaja'') via atlas named_sites"
+ },
+ "quiz": [
+  {
+   "q": "Minimum ageing for Barbaresco, not Riserva?",
+   "options": [
+    "A 18 months",
+    "B 26 months",
+    "C 38 months"
+   ],
+   "answer": "B 26 months, 9 in wood",
+   "source": "Disciplinare art. 5"
+  },
+  {
+   "q": "Which river flows past the Barbaresco hills?",
+   "options": [
+    "A Tanaro",
+    "B Po",
+    "C Adige"
+   ],
+   "answer": "A Tanaro",
+   "source": "Open Wine Atlas (Tanaro 2.1 km) and Study lesson"
+  },
+  {
+   "q": "Which commune is NOT in Barbaresco?",
+   "options": [
+    "A Neive",
+    "B Treiso",
+    "C La Morra"
+   ],
+   "answer": "C La Morra",
+   "source": "Disciplinare art. 3"
+  }
+ ],
+ "dropped": [
+  "Sunshine (no ISPRA 1991-2020 sun for Bra): Sun layer swapped for Soil",
+  "Rain comparison with Turin (1971-2000 only)",
+  "Station height (not in table)",
+  "Climate station inside the zone: none fetched; Bra reused",
+  "Vine areas of Barolo vs Barbaresco side by side (different harvest years)"
+ ]
+}

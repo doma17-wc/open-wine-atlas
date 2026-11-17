@@ -368,8 +368,9 @@
    "series": "",
    "not_before": "2026-11-18",
    "why": "Italy study path: Nebbiolo north-east of Alba, 26 months of ageing, the Barolo comparison",
-   "status": "planned",
-   "note": "Added 2026-11-08. Bra ISPRA 1991-2020 box worked for Barolo; look for an ISPRA box nearer Barbaresco (Alba/Asti) or reuse Bra."
+   "status": "posted",
+   "note": "Added 2026-11-08. Bra ISPRA 1991-2020 box worked for Barolo; look for an ISPRA box nearer Barbaresco (Alba/Asti) or reuse Bra. Made 2026-11-17 (one day before not_before, because the Beaujolais outro announced it as next and no entry was due). Climate: reused ISPRA 1991-2020 Bra box (Wikipedia) from deep-barolo; no Alba/Asti box fetched. Sun swapped for Soil. Rules verified in the Regione Piemonte disciplinare (DM 17.04.2015). Bra marker label slightly cut at the left edge in the heat shot.",
+   "slot": "2026-11-17T17:50+01:00"
   },
   {
    "slug": "deep-saint-emilion",
@@ -387,10 +388,10 @@
    "place": "Pomerol",
    "atlas_id": "fr-inao-a62",
    "series": "",
-   "not_before": "2026-11-20",
+   "not_before": "2026-11-18",
    "why": "Bordeaux study path: Merlot on clay and gravel, no official classification, the Barbanne border with the satellites",
    "status": "planned",
-   "note": "Added 2026-11-11 to keep 6+ planned. Slot 17:50. St Emilion 33394002 fiche may serve as nearby station."
+   "note": "Added 2026-11-11 to keep 6+ planned. Slot 17:50. St Emilion 33394002 fiche may serve as nearby station. Moved to 2026-11-18 on 2026-11-17: announced as next in the Barbaresco outro."
   },
   {
    "slug": "deep-rias-baixas",
@@ -421,6 +422,26 @@
    "why": "Spain study path: Tempranillo (Tinto Fino) on the high Duero plateau, cold nights, the Rioja comparison",
    "status": "planned",
    "note": "Added 2026-11-16 to keep 6+ planned. Slot 17:50."
+  },
+  {
+   "slug": "deep-valpolicella",
+   "place": "Valpolicella",
+   "atlas_id": "it-eupdo-PDO-IT-A0442",
+   "series": "",
+   "not_before": "2026-11-25",
+   "why": "Italy study path: Corvina, appassimento in the fruttai, Amarone and Ripasso",
+   "status": "planned",
+   "note": "Added 2026-11-17 to keep 6+ planned. Slot 17:50. Amarone outline it-eupdo-PDO-IT-A0435 is an option."
+  },
+  {
+   "slug": "deep-jerez",
+   "place": "Jerez",
+   "atlas_id": "es-eupdo-PDO-ES-A1483",
+   "series": "",
+   "not_before": "2026-11-26",
+   "why": "Spain study path: albariza, Palomino, flor and the solera, poniente and levante",
+   "status": "planned",
+   "note": "Added 2026-11-17. Slot 17:50. Outline is the 248,264 ha production zone of 9 municipalities, not vineyard area."
   }
  ]
 }

@@ -416,6 +416,19 @@
     "LyonMag (Nouveau 19 Nov 2026)",
     "Open Wine Atlas details-fr.json"
    ]
+  },
+  {
+   "slug": "deep-barbaresco",
+   "place": "Barbaresco",
+   "slot": "2026-11-17T17:50+01:00",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3800834015815812659",
+   "sources": [
+    "ISPRA 1991-2020 normals, Bra (via Wikipedia)",
+    "Regione Piemonte, Barbaresco DOCG disciplinare (DM 17.04.2015)",
+    "Gazzetta d'Alba (Consorzio figures, 2023 harvest)",
+    "Open Wine Atlas details-it.json, bedrock and terrain",
+    "Open Wine Atlas Study, Piemonte lesson"
+   ]
   }
  ]
 }
