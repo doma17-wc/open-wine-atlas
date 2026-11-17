@@ -6,7 +6,7 @@ States, and since October 2026 Australia, New Zealand, South Africa, South Ameri
 the Balkans, the Middle East and Asia. It is built only from data published under open licences, so anyone can
 check it, reuse it and extend it.
 
-Live: https://open-wine-atlas.vercel.app
+Live: https://www.openwineatlas.com
 
 ## What is in it (v0.2, October 2026)
 

@@ -75,6 +75,17 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "open-wine-atlas.vercel.app"
+        }
+      ],
+      "destination": "https://www.openwineatlas.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/u/:handle",
       "destination": "/?u=:handle",
       "permanent": false

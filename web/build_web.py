@@ -21,19 +21,37 @@ HEAD = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0b0d">
-<meta name="description" content="An open map of the world's wine appellations, crus and vineyard sites, from official registers: outlines, grape rules, terrain, climate and vintages for 4,600 places in 45 countries.">
-<link rel="canonical" href="https://openwineatlas.com/">
-<meta property="og:url" content="https://openwineatlas.com/">
-<meta property="og:title" content="Open Wine Atlas">
-<meta property="og:description" content="Wine appellations, geographical indications, crus and single vineyards of 45 countries from open data, with terrain, climate, vintages and soil for each place.">
+<title>Open Wine Atlas: map of the world's wine appellations</title>
+<meta name="description" content="Open map of the world's wine appellations, crus and vineyards: {N_PLACES} places in {N_COUNTRIES} countries with official outlines, grape rules, terrain and vintages.">
+<link rel="canonical" href="https://www.openwineatlas.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Open Wine Atlas">
+<meta property="og:url" content="https://www.openwineatlas.com/">
+<meta property="og:title" content="Open Wine Atlas: map of the world's wine appellations">
+<meta property="og:description" content="Wine appellations, geographical indications, crus and single vineyards of {N_COUNTRIES} countries from official registers, with terrain, climate, vintages and soil for each place.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{LD}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0d'/%3E%3Cpath d='M7 22l6-9 4 5 3-4 5 8z' fill='none' stroke='%23e7c06a' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
 <!-- Vercel Web Analytics -->
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 """
 
-web = src.replace('const MODE = "artifact";', 'const MODE = "web";', 1)
-assert web != src, "MODE marker not found"
+# the web page takes its title and description from HEAD; the artifact keeps the ones in index.src.html
+import json  # noqa: E402
+import re  # noqa: E402
+_idx = json.load(open(os.path.join(here, "data", "search.json"), encoding="utf-8"))
+HEAD = (HEAD.replace("{N_PLACES}", f"{len(_idx):,}").replace("{N_COUNTRIES}", str(len({r[2] for r in _idx})))
+        .replace("{LD}", json.dumps({"@context": "https://schema.org", "@graph": [
+            {"@type": "WebSite", "@id": "https://www.openwineatlas.com/#website", "url": "https://www.openwineatlas.com/",
+             "name": "Open Wine Atlas", "inLanguage": "en", "publisher": {"@id": "https://www.openwineatlas.com/#org"}},
+            {"@type": "Organization", "@id": "https://www.openwineatlas.com/#org", "name": "Open Wine Atlas",
+             "url": "https://www.openwineatlas.com/", "email": "hello@openwineatlas.com",
+             "sameAs": ["https://www.instagram.com/openwineatlas/", "https://www.pinterest.com/openwineatlas/"]}]}, ensure_ascii=False)))
+web_src, n_head = re.subn(r"\A<title>.*?</title>\n<meta name=\"description\"[^>]*>\n", "", src, count=1)
+assert n_head == 1, "title and description at the top of index.src.html not found"
+web = web_src.replace('const MODE = "artifact";', 'const MODE = "web";', 1)
+assert web != web_src, "MODE marker not found"
 # data version: a short hash of every file in web/data, so a release with new data gets new addresses and
 # browsers that cached the old tiles or place files for hours load the new ones at once
 import hashlib  # noqa: E402

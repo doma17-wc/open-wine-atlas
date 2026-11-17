@@ -7,3 +7,4 @@ __pycache__/
 # base64 copies are only for the claude.ai artifact host
 web/**/*.txt
 !web/robots.txt
+!web/llms.txt
