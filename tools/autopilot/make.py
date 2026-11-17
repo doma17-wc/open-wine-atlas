@@ -176,7 +176,7 @@ async def reel_cluster(s, a, atlas, br, base):
                   <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
                 sec = 2.4
             else:
-                t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="kick">{i} / {len(ids)}</div><div class="h2">{esc(atlas.index[ids[i - 1]][0].replace(s.get('strip', '\0'), ''))}</div>
+                t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="kick">{i} / {len(ids)}</div><div class="h2">{esc(s.get('rename', {}).get(ids[i - 1]) or atlas.index[ids[i - 1]][0].replace(s.get('strip', '\0'), ''))}</div>
                   <div class="ha">{esc(fmt_ha(area(atlas, ids[i - 1])))}</div></div>"""
                 sec = 1.7
             frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, f"c{i}.jpg")), sec))

@@ -3014,5 +3014,238 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Loire quiz teaser (plain)",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1831254686624862008"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Loire quiz: 4 questions most students miss",
+    "places": [
+      "Vouvray",
+      "Anjou"
+    ],
+    "question_keys": [
+      "north-france-loire-west#q2",
+      "north-france-loire-west#q6",
+      "north-france-loire-centre#q2",
+      "north-france-loire-centre#q5"
+    ],
+    "experiment": "First Loire quiz; member card as slide 7",
+    "metricool_uuid": "5810220769439860607"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Mosel reel teaser (plain)",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-408264033373829911"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "cluster",
+    "title": "Four famous slopes. Side by side. (Middle Mosel)",
+    "places": [
+      "Doctor",
+      "Domprobst",
+      "Himmelreich",
+      "Sonnenuhr (Wehlen)"
+    ],
+    "question_keys": [],
+    "experiment": "EXPERIMENT: first German einzellage reel (Bernkastel to Wehlen, Riesling); rename by id in make.py; maxzoom 15; preset alpine seed 53",
+    "metricool_uuid": "-8555782277707577916"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: Bandol Mourvèdre, with the Rolle answer (B, Vermentino) on top",
+    "places": [],
+    "question_keys": [
+      "rhone-south-provence#q2"
+    ],
+    "experiment": "",
+    "metricool_uuid": "-6520610059494013807"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "12:10",
+    "type": "reel",
+    "format": "vs",
+    "title": "Gevrey-Chambertin vs Vosne-Romanée (2.3x): Nine grand crus vs six",
+    "places": [
+      "Gevrey-Chambertin",
+      "Vosne-Romanée"
+    ],
+    "question_keys": [],
+    "experiment": "Grand cru count hook on a famous vs; preset dusk seed 64",
+    "metricool_uuid": "8081403598991411247"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "12:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-5400156334220360402"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "13:05",
+    "type": "post",
+    "format": "cluster",
+    "title": "No grand cru. Two famous names. Pommard Rugiens and Epenots",
+    "places": [
+      "Les Rugiens Hauts",
+      "Les Rugiens Bas",
+      "Les Grands Epenots",
+      "Les Petits Epenots",
+      "Les Pézerolles"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7035715963195143587"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "13:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Gevrey vs Vosne teaser (plain)",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "1708677242817826794"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Pommard post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7566170576701078400"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "17:20",
+    "type": "story",
+    "format": "teaser",
+    "title": "Barbaresco deep dive teaser (topic from the Beaujolais caption: Next deep dive: Barbaresco)",
+    "places": [
+      "Barbaresco"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "6583527430074286628"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "One appellation. One estate. Côte Rôtie, Condrieu, Château-Grillet",
+    "places": [
+      "Côte Rôtie",
+      "Condrieu",
+      "Château-Grillet"
+    ],
+    "question_keys": [],
+    "experiment": "Single-estate hook",
+    "metricool_uuid": "-1209566729235184437"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Northern Rhône post teaser",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-4705332647353955149"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: why Alsace is dry, with the Bandol answer (D, Mourvèdre) on top (label 'Earlier today' in a temp copy)",
+    "places": [],
+    "question_keys": [
+      "north-france-alsace#q1"
+    ],
+    "experiment": "",
+    "metricool_uuid": "1217344580324576161"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "7881492151936763521"
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 177. Followers 4,977 on 2026-11-16.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "06:00",
+    "type": "note",
+    "format": "stock draft kept",
+    "title": "Saint-Emilion vs Pomerol reel (2026-10-29, 13:05) left as draft: media on static.metricool.com 403 (cannot view), old caption with /r/ link, no member card",
+    "places": [
+      "Saint-Emilion",
+      "Pomerol"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-17",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Alsace answer (A, the Vosges rain shadow) still to show. Shape quiz final-round answer still unknown. Week 10 to 16 Nov: best reel Meursault vs Puligny 4,160 views, best post Chablis quiz 3,601; quizzes still lead posts, clusters about 1,000. Teasers made from covers with text show ghost text: use plain teasers or text-free images. auto-media force-pushed and cleared.",
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]
