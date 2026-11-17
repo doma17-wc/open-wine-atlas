@@ -429,7 +429,26 @@ async function signOut(clear) {
   O.toast(clear ? t_("Signed out. This device is cleared.") : t_("Signed out. Your atlas stays on this device."));
 }
 
-window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user };
+// ---------- quick sign-up from the Deep Region wall (index.src.html): the same email code, without leaving the place.
+// The wall asks for the Terms and the age up front, so one call both creates a new account and signs in an existing one
+// (Supabase only stores the metadata when it creates the user). Returns "ok", "rate", "invalid" or "error".
+async function quickSend(email, src) {
+  try { await client(); } catch (e) { return "error"; }
+  const { error } = await S.sb.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + "/?signin=1",
+    data: { terms_version: TERMS_VERSION, terms_accepted_at: new Date().toISOString(), adult_confirmed: true, signup_source: src || "deep_wall" } } });
+  if (error) return /rate|seconds|too many/i.test(error.message) ? "rate" : "error";
+  S.email = email; S.step = "code"; S.isNew = false; S.msg = "";
+  return "ok";
+}
+async function quickVerify(code) {
+  if (!S.sb || !S.email) return "error";
+  const { error } = await S.sb.auth.verifyOtp({ email: S.email, token: code, type: "email" });
+  if (error) return /expired|invalid/i.test(error.message) ? "invalid" : "error";
+  S.step = "email";
+  return "ok";
+}
+
+window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user, quickSend, quickVerify };
 
 // ---------- boot: restore a session only when there is one (or a sign-in link was just opened)
 const url = new URL(location.href);

@@ -1449,5 +1449,16 @@
  "Study points": "Puntos de estudio",
  "Vineyards mostly at {a} to {b} m.": "Viñedos sobre todo entre {a} y {b} m.",
  "Sources": "Fuentes",
- "Production": "Producción"
+ "Production": "Producción",
+ "Burgundy": "Borgoña",
+ "Piedmont": "Piamonte",
+ "Tuscany": "Toscana",
+ "Unlock {region} free": "Desbloquea {region} gratis",
+ "Open {region}": "Abrir {region}",
+ "I am 18 or older and accept the {terms}.": "Tengo 18 años o más y acepto los {terms}.",
+ "We sent a 6-digit code to {email}. Enter it here.": "Hemos enviado un código de 6 cifras a {email}. Introdúcelo aquí.",
+ "Sending your code…": "Enviando el código…",
+ "Check your inbox, and the spam folder too.": "Revisa tu bandeja de entrada, también la carpeta de spam.",
+ "Opening…": "Abriendo…",
+ "Welcome. {region} is open.": "Bienvenido. {region} está abierta."
 }
