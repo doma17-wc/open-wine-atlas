@@ -91,6 +91,8 @@ async function onSession(session, ev) {
     await Promise.all([loadProfile(), loadFounding()]);
     rerender();
     touchSeen();
+    // two quick questions the first time: what you study, and your Passport
+    if (S.profile && !S.profile.onboarded_at) setTimeout(onboard, 600);
     // the map reopens a place that was behind the Burgundy wall
     window.dispatchEvent(new CustomEvent("owa:auth", { detail: { signedIn: true } }));
     fullSync();
@@ -111,7 +113,7 @@ function touchSeen() {
 
 // ---------- profile
 async function loadProfile() {
-  const { data, error } = await S.sb.from("profiles").select("display_name,level,studying,location,bio,favourite_places").eq("id", S.user.id).maybeSingle();
+  const { data, error } = await S.sb.from("profiles").select("display_name,level,studying,location,bio,favourite_places,handle,is_public,onboarded_at").eq("id", S.user.id).maybeSingle();
   if (!error) { S.profile = data || {}; S.fav = [...(S.profile.favourite_places || [])]; }
 }
 async function loadFounding() {
@@ -281,12 +283,13 @@ function signedIn() {
       '</span></div><button class="primary" id="acct-founding">' + t_("Reserve my spot") + "</button></div>") +
     '<div class="row"><span class="acct-sync' + (S.sync === "error" ? " err" : "") + '" id="acct-sync">' + esc(syncText()) + '</span><button class="mini-btn" id="acct-syncnow">' + t_("Sync now") + "</button>" +
     '<button class="mini-btn" id="acct-out">' + t_("Sign out") + "</button></div></div>" +
+    passportCard() +
     '<div><h3>' + t_("Profile") + '</h3><form class="jform acct-card" id="acct-profile" autocomplete="off">' +
     '<label>' + t_("Name") + '<input id="pf-name" maxlength="60" value="' + esc(p.display_name || "") + '" placeholder="' + esc(t_("How you want to be called")) + '"></label>' +
     '<label>' + t_("I am") + '<select id="pf-level">' + LEVELS.map(([v, l]) => '<option value="' + v + '"' + (v === (p.level || "") ? " selected" : "") + ">" + esc(t_(l)) + "</option>").join("") + "</select></label>" +
     '<label>' + t_("Studying or certified") + '<input id="pf-study" maxlength="60" list="pf-study-list" value="' + esc(p.studying || "") + '" placeholder="WSET Level 3"><datalist id="pf-study-list">' + STUDY.map((s) => '<option value="' + esc(s) + '">').join("") + "</datalist></label>" +
     '<label>' + t_("Where you live") + '<input id="pf-loc" maxlength="60" value="' + esc(p.location || "") + '" placeholder="Zurich, Switzerland"></label>' +
-    '<label class="wide">' + t_("About you") + '<textarea id="pf-bio" maxlength="500" placeholder="' + esc(t_("What you drink, what you study, where you love to go")) + '">' + esc(p.bio || "") + "</textarea></label>" +
+    '<label class="wide">' + t_("About you") + '<textarea id="pf-bio" maxlength="500" placeholder="' + esc(t_("What you taste, what you study, where you love to go")) + '">' + esc(p.bio || "") + "</textarea></label>" +
     '<label class="wide">' + t_("Favourite places (up to 12)") + '<div class="chips-edit" id="pf-favs">' + favs.map((f) => '<button type="button" class="mini-btn on" data-unfav="' + esc(f.id) + '">' + esc(f.name) + " ✕</button>").join("") + "</div>" +
     (S.fav.length < 12 ? '<input id="pf-fav-add" placeholder="' + esc(t_("Add a place: Musigny, Barolo, Mosel…")) + '"><ul class="sugg" id="pf-fav-sugg" hidden></ul>' : "") + "</label>" +
     '<div class="row wide"><button class="primary" type="submit">' + t_("Save profile") + '</button><span class="note" id="pf-msg"></span></div></form></div>' +
@@ -370,6 +373,7 @@ function wire() {
     clearMeta(); S.user = null; S.profile = null; S.founding = null; stopPolling(); rerender();
     O.toast(t_("Your account is deleted. Your atlas stays on this device."));
   };
+  wirePassport();
   const pf = $("acct-profile");
   pf.onsubmit = async (e) => {
     e.preventDefault();
@@ -429,6 +433,111 @@ async function signOut(clear) {
   O.toast(clear ? t_("Signed out. This device is cleared.") : t_("Signed out. Your atlas stays on this device."));
 }
 
+// ---------- Wine Passport: a public page at /u/<handle>, private until its owner turns it on
+const slug = (v) => String(v || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 30);
+function suggestHandle() {
+  const p = S.profile || {};
+  let h = slug(p.display_name) || slug(String(S.user?.email || "").split("@")[0]);
+  if (h.length < 3) h = (h + "-taster").slice(0, 30);
+  return h;
+}
+const passportUrl = (h) => location.origin + "/u/" + h;
+function passportCard() {
+  const p = S.profile || {}, h = p.handle || "";
+  const pub = !!p.is_public, shared = MY.journal.filter((j) => j.public).length;
+  return '<div><h3>' + t_("Wine Passport") + '</h3><form class="jform acct-card" id="acct-passport" autocomplete="off">' +
+    '<p class="lead wide" style="margin:0">' + t_("Your public page as a taster: what you study, the origins you have tasted on a map, your shared tasting notes and your badges. Private until you turn it on.") + "</p>" +
+    '<label class="wide">' + t_("Your address") + '<span class="pp-addr"><span>openwineatlas.com/u/</span><input id="pp-handle" maxlength="30" value="' + esc(h || suggestHandle()) + '" pattern="[a-z0-9][a-z0-9_-]{2,29}" spellcheck="false" autocapitalize="off"></span></label>' +
+    '<label class="wide acct-agree"><input id="pp-public" type="checkbox"' + (pub ? " checked" : "") + "><span>" +
+      t_("Make my Passport public. Anyone with the link can see my name, studies, badges and the tasting notes I choose to share. My email stays private.") + "</span></label>" +
+    '<div class="row wide"><button class="primary" type="submit">' + t_("Save Passport") + "</button>" +
+    (h && pub ? '<a class="mini-btn" href="/u/' + esc(h) + '" data-passport="' + esc(h) + '">' + t_("View my Passport") + '</a><button class="mini-btn" type="button" id="pp-share">' + t_("Share") + "</button>" : "") +
+    '<span class="note" id="pp-msg">' + (pub ? t_("Tasting notes shared: {n}.", { n: shared }) : "") + "</span></div></form></div>";
+}
+function wirePassport() {
+  const f = $("acct-passport"); if (!f) return;
+  const hi = $("pp-handle");
+  hi.oninput = () => { const v = slug(hi.value); if (v !== hi.value) hi.value = v; };
+  f.onsubmit = async (e) => {
+    e.preventDefault();
+    const handle = slug(hi.value), is_public = $("pp-public").checked, m = $("pp-msg");
+    if (!/^[a-z0-9][a-z0-9_-]{2,29}$/.test(handle)) { m.textContent = t_("3 to 30 letters, numbers or dashes."); return; }
+    m.textContent = t_("Saving…");
+    const { data: free } = await S.sb.rpc("handle_free", { p_handle: handle });
+    if (free === false) { m.textContent = t_("This address is taken. Try another one."); return; }
+    const { error } = await S.sb.from("profiles").update({ handle, is_public }).eq("id", S.user.id);
+    if (error) { m.textContent = /handle not allowed/.test(error.message) ? t_("This address is reserved. Try another one.") : /duplicate|unique/.test(error.message) ? t_("This address is taken. Try another one.") : t_("Could not save. Please try again."); return; }
+    S.profile = { ...S.profile, handle, is_public }; rerender();
+    O.toast(is_public ? t_("Your Passport is public.") : t_("Your Passport is private."));
+  };
+  const sh = $("pp-share");
+  if (sh) sh.onclick = () => sharePassport(S.profile.handle, S.profile.display_name);
+}
+async function sharePassport(h, name) {
+  const url = passportUrl(h), title = t_("{name} on Open Wine Atlas", { name: name || h });
+  try { if (navigator.share) { await navigator.share({ title, url }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+  try { await navigator.clipboard.writeText(url); O.toast(t_("Link copied.")); } catch (e) { prompt(t_("Copy this link"), url); }
+}
+
+// ---------- onboarding: asked once, right after the first sign-in (and once to members who joined before it existed)
+const ROLES = [["student", N("Wine student")], ["sommelier", N("Sommelier")], ["enthusiast", N("Wine lover")], ["trade", N("Wine trade")], ["winemaker", N("Winemaker")]];
+const COURSES = ["WSET Level 1", "WSET Level 2", "WSET Level 3", "WSET Diploma", "Court of Master Sommeliers", "Master of Wine", "AIS", "ASI", N("Other course"), N("No course")];
+function onboard() {
+  if (!S.user || document.getElementById("onb") || (S.profile && S.profile.onboarded_at)) return;
+  const p = S.profile || {};
+  const st = { step: 1, level: p.level || "", studying: p.studying || "", name: p.display_name || "", handle: p.handle || "", pub: !!p.is_public };
+  const box = document.createElement("div");
+  box.id = "onb"; box.className = "onb"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true");
+  document.body.appendChild(box);
+  const chips = (list, key) => list.map(([v, l]) => '<button type="button" class="onb-chip' + (st[key] === v ? " on" : "") + '" data-k="' + key + '" data-v="' + esc(v) + '">' + esc(t_(l)) + "</button>").join("");
+  const draw = () => {
+    if (st.step === 1) box.innerHTML = '<div class="onb-card"><span class="ey">' + t_("Welcome to the atlas") + "</span><h3>" + t_("What brings you here?") + "</h3>" +
+      '<p class="onb-q">' + t_("I am") + '</p><div class="onb-chips">' + chips(ROLES, "level") + "</div>" +
+      '<p class="onb-q">' + t_("Studying or certified") + '</p><div class="onb-chips">' + chips(COURSES.map((c) => [c, c]), "studying") + "</div>" +
+      '<div class="onb-acts"><button type="button" class="onb-skip" data-onb="skip">' + t_("Skip") + '</button><button type="button" class="primary" data-onb="next"' + (st.level ? "" : " disabled") + ">" + t_("Next") + "</button></div></div>";
+    else box.innerHTML = '<div class="onb-card"><span class="ey">' + t_("Wine Passport") + "</span><h3>" + t_("Your page as a taster") + "</h3>" +
+      '<p class="onb-lead">' + t_("A Passport shows what you study, the origins you have tasted on a map and the tasting notes you choose to share. It stays private until you turn it on.") + "</p>" +
+      '<label class="onb-lab">' + t_("Your name") + '<input id="onb-name" maxlength="60" value="' + esc(st.name) + '" placeholder="' + esc(t_("How you want to be called")) + '"></label>' +
+      '<label class="onb-lab">' + t_("Your address") + '<span class="pp-addr"><span>openwineatlas.com/u/</span><input id="onb-handle" maxlength="30" spellcheck="false" autocapitalize="off" value="' + esc(st.handle || suggestHandle()) + '"></span></label>' +
+      '<label class="onb-agree"><input id="onb-pub" type="checkbox"' + (st.pub ? " checked" : "") + "><span>" + t_("Make my Passport public now. My email stays private.") + "</span></label>" +
+      '<p class="onb-msg" id="onb-msg"></p>' +
+      '<div class="onb-acts"><button type="button" class="onb-skip" data-onb="back">' + t_("Back") + '</button><button type="button" class="primary" data-onb="save">' + t_("Done") + "</button></div></div>";
+    const hi = box.querySelector("#onb-handle"), ni = box.querySelector("#onb-name");
+    if (hi) hi.oninput = () => { st.handleEdited = true; const v = slug(hi.value); if (v !== hi.value) hi.value = v; };
+    // the address follows the name until it is edited by hand
+    if (ni && hi) ni.oninput = () => { if (!st.handleEdited && !(S.profile && S.profile.handle)) { const v = slug(ni.value); if (v.length >= 3) hi.value = v; } };
+  };
+  const close = () => box.remove();
+  const save = async (row) => {
+    const { error } = await S.sb.from("profiles").update({ ...row, onboarded_at: new Date().toISOString() }).eq("id", S.user.id);
+    if (error) return error;
+    S.profile = { ...S.profile, ...row, onboarded_at: new Date().toISOString() }; rerender(); return null;
+  };
+  box.addEventListener("click", async (e) => {
+    const c = e.target.closest(".onb-chip");
+    if (c) { st[c.dataset.k] = st[c.dataset.k] === c.dataset.v ? "" : c.dataset.v; return draw(); }
+    const a = e.target.closest("[data-onb]"); if (!a) return;
+    const act = a.dataset.onb;
+    if (act === "skip") { await save({}); close(); return; }
+    if (act === "next") { st.step = 2; return draw(); }
+    if (act === "back") { st.name = $("onb-name").value; st.handle = $("onb-handle").value; st.pub = $("onb-pub").checked; st.step = 1; return draw(); }
+    if (act === "save") {
+      const name = $("onb-name").value.trim(), handle = slug($("onb-handle").value), pub = $("onb-pub").checked, m = $("onb-msg");
+      if (!/^[a-z0-9][a-z0-9_-]{2,29}$/.test(handle)) { m.textContent = t_("3 to 30 letters, numbers or dashes."); return; }
+      a.disabled = true;
+      const { data: free } = await S.sb.rpc("handle_free", { p_handle: handle });
+      if (free === false) { a.disabled = false; m.textContent = t_("This address is taken. Try another one."); return; }
+      const studying = st.studying === "No course" ? null : st.studying || null;
+      const err = await save({ level: st.level || null, studying, display_name: name || null, handle, is_public: pub });
+      a.disabled = false;
+      if (err) { m.textContent = /handle not allowed/.test(err.message) ? t_("This address is reserved. Try another one.") : t_("Could not save. Please try again."); return; }
+      close();
+      O.toast(pub ? t_("Your Passport is public. Share your tasting notes from the Journal.") : t_("Saved. You can make your Passport public in Account."));
+    }
+  });
+  draw();
+}
+
 // ---------- quick sign-up from the Deep Region wall (index.src.html): the same email code, without leaving the place.
 // The wall asks for the Terms and the age up front, so one call both creates a new account and signs in an existing one
 // (Supabase only stores the metadata when it creates the user). Returns "ok", "rate", "invalid" or "error".
@@ -448,7 +557,8 @@ async function quickVerify(code) {
   return "ok";
 }
 
-window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user, quickSend, quickVerify };
+window.OWA_ACCOUNT = { render, wire, line, sync: fullSync, signedIn: () => !!S.user, quickSend, quickVerify,
+  profile: () => (S.user ? { ...(S.profile || {}) } : null), sharePassport, onboard };
 
 // ---------- boot: restore a session only when there is one (or a sign-in link was just opened)
 const url = new URL(location.href);

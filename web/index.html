@@ -472,6 +472,53 @@ body.maponly .deep-key { display: none !important; }
 .deep-wall .deep-have { background: none; border: 0; padding: 0; font: inherit; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; justify-self: start; }
 .deep-lock { position: relative; max-height: 320px; overflow: hidden; filter: blur(5px); opacity: .45; pointer-events: none; user-select: none;
   -webkit-mask-image: linear-gradient(#000 20%, transparent); mask-image: linear-gradient(#000 20%, transparent); }
+/* Wine Passport (passport.js) and onboarding (account.js) */
+.pp-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.pp-badge { font: 500 11px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--parchment); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.pp-badge.gold { color: #17130b; background: var(--gold); border-color: transparent; }
+.pp-notes { display: grid; gap: 10px; }
+.pp-note { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 6px; background: rgba(255,255,255,.02); }
+.pp-note-top { display: flex; gap: 8px; align-items: baseline; }
+.pp-note-top b { font: 600 16px/1.25 var(--f-display); color: var(--parchment); }
+.pp-note-top .sc { font: 600 12px var(--f-mono); color: var(--night); background: var(--gold); border-radius: 4px; padding: 1px 6px; flex: none; }
+.pp-note-meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: var(--muted); }
+.pp-note p { margin: 0; color: #cfc6b6; font-size: 13.5px; line-height: 1.55; white-space: pre-line; }
+.pp-note-foot { display: flex; justify-content: space-between; align-items: center; }
+.pp-origin, .pp-by, .pp-report { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
+.pp-origin { color: var(--gold); }
+.pp-by { color: var(--parchment); font-size: 12.5px; text-decoration: underline; text-underline-offset: 3px; }
+.pp-report { color: var(--muted); font-size: 12px; }
+.pp-report:hover { color: var(--parchment); text-decoration: underline; }
+.pp-empty { margin: 0; color: var(--muted); font-size: 13px; }
+.pp-cta { margin: 10px 0 0; }
+.pp-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.pp-actions .primary { padding: 10px 14px; border-radius: 10px; border: 0; background: var(--gold); color: #17130b; font: 600 14px var(--f-body); cursor: pointer; }
+.pp-legend { margin: 8px 0 0; font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.pp-legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; border: 1.5px solid #0b0b0d; }
+.pp-legend i.o { background: var(--gold); } .pp-legend i.t { background: var(--parchment); margin-left: 8px; }
+.pp-addr { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: #1b1b1f; overflow: hidden; }
+.pp-addr span { padding: 0 2px 0 10px; color: var(--muted); font: 13px var(--f-mono); white-space: nowrap; }
+.pp-addr input, .jform .pp-addr input { border: 0 !important; background: none !important; padding-left: 0 !important; font: 13px var(--f-mono) !important; min-width: 0; flex: 1; }
+.onb { position: fixed; inset: 0; z-index: 30; background: rgba(5,5,7,.7); display: grid; place-items: center; padding: 16px; }
+.onb-card { width: min(520px, 100%); max-height: calc(100% - 32px); overflow: auto; background: #121215; border: 1px solid #5a4a2a; border-radius: 14px; padding: 22px 20px; display: grid; gap: 10px; color: var(--parchment); }
+.onb-card .ey { font: 500 11px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.onb-card h3 { margin: 0; font: 500 26px/1.15 var(--f-display); }
+.onb-lead { margin: 0; color: #cfc6b6; font-size: 14px; line-height: 1.55; }
+.onb-q { margin: 6px 0 0; font: 500 11px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.onb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.onb-chip { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: #1b1b1f; color: var(--parchment); font: 500 13.5px var(--f-body); cursor: pointer; }
+.onb-chip.on { background: var(--gold); color: #17130b; border-color: transparent; }
+.onb-lab { display: grid; gap: 6px; font-size: 13px; color: #cfc6b6; }
+.onb-lab > input, .onb-lab textarea { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: #1b1b1f; color: var(--parchment); font: 15px var(--f-body); }
+.onb-lab .pp-addr input { padding: 10px 12px 10px 0; color: var(--parchment); }
+.onb-agree { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: #cfc6b6; line-height: 1.45; }
+.onb-agree input { accent-color: var(--gold); margin-top: 2px; }
+.onb-msg { margin: 0; min-height: 1em; font-size: 12.5px; color: var(--gold); }
+.onb-msg:empty { display: none; }
+.onb-acts { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+.onb-acts .primary { padding: 11px 18px; border-radius: 10px; border: 0; background: var(--gold); color: #17130b; font: 600 15px var(--f-body); cursor: pointer; }
+.onb-acts .primary:disabled { opacity: .45; cursor: default; }
+.onb-skip { background: none; border: 0; color: var(--muted); font: 14px var(--f-body); cursor: pointer; padding: 0; }
 /* notebook */
 .nb { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 22px; align-items: start; }
 .nb-list { display: grid; gap: 10px; align-content: start; }
@@ -596,6 +643,11 @@ body.quizzing .mcrumbs, body.quizzing .sheet, body.quizzing #tag, body.quizzing 
 .jentry b { font: 600 17px var(--f-display); }
 .jentry .sc { font: 600 12px var(--f-mono); color: var(--night); background: var(--gold); border-radius: 4px; padding: 1px 6px; }
 .jentry p { margin: 0; color: #c9c0b1; font-size: 13.5px; white-space: pre-line; }
+.jentry .j-acts { margin-left: auto; display: flex; gap: 6px; }
+.jentry .j-pub { font: 500 10.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gold); border: 1px solid #5a4a2a; border-radius: 999px; padding: 2px 8px; }
+.jentry .j-at { font-size: 12.5px; color: var(--muted); }
+.jform .j-share { align-self: center; }
+.jform label { position: relative; }
 .lchart { width: 100%; height: auto; display: block; }
 .lchart text { font: 10px var(--f-mono); fill: #8d877c; }
 .lchart .lbl { font: 600 11px var(--f-body); }
@@ -964,7 +1016,7 @@ const MODE = "web"; // set by build_web.py
 const WEB = MODE === "web";
 // data version, set by build_web.py from the content of web/data: every release gets new data addresses,
 // so no browser keeps tiles or place files of an older release (they are cached for hours, the tiles for a day)
-const DATA_V = "c73787246a";
+const DATA_V = "b9f436ec59";
 const dv = (path) => WEB ? path + "?v=" + DATA_V : path;
 window.OWA_DATA_V = DATA_V;
 const QS = new URLSearchParams(location.search);
@@ -1021,7 +1073,7 @@ const startGlobe = (() => { try { return localStorage.getItem("owa.proj") !== "f
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 // after a change of language the page reloads where it was
 const SAVED_VIEW = (() => { try { const v = JSON.parse(sessionStorage.getItem("owa.view")); sessionStorage.removeItem("owa.view"); return v; } catch (e) { return null; } })();
-const INTRO = startGlobe && !REDUCED && !location.hash.slice(1) && !SAVED_VIEW;
+const INTRO = startGlobe && !REDUCED && !location.hash.slice(1) && !QS.get("u") && !SAVED_VIEW;
 const map = new maplibregl.Map({
   container: "map",
   style: {
@@ -3215,6 +3267,8 @@ async function select(p, feature) {
   const pd = parentRec ? ((await getDetails(parentRec[2]))[parentRec[1]] || {}) : {};
   renderSheet(p, d, rec, pd, parentRec);
   deepGate(p, d);
+  // tasting notes members shared about wines from here (passport.js), under the place
+  if (WEB && !DEEP.gated) { const tk = sheetToken; loadPassport().then(() => window.OWA_PASSPORT && window.OWA_PASSPORT.placeNotes(p, tk, (k) => k === sheetToken)); }
   deepForce(p.id);
   if (deepClasses() && deepClasses().has(p.id)) { const R = deepRegionOf(p.id); if (R) ensureDeepHa(R.key); }
   // a place of the open reel keeps the reel lit and a way back to it; any other place closes the reel
@@ -4917,20 +4971,40 @@ function dashJournal() {
   const pre = dashPrefill ? placeOf(dashPrefill) : null;
   const list = [...MY.journal].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   const scored = list.filter((j) => j.score), avg = scored.length ? scored.reduce((s, j) => s + +j.score, 0) / scored.length : null;
-  return '<div><h3>' + t_("Log a tasting") + '</h3><form class="jform" id="jform" autocomplete="off">' +
-    '<label class="wide">' + t_("Place") + '<input id="j-place" required placeholder="' + esc(t_("Start typing: Musigny, Barolo, Oakville…")) + '" value="' + esc(pre ? pre.name : "") + '" data-id="' + esc(pre ? pre.id : "") + '"><ul class="sugg" id="j-sugg" hidden></ul></label>' +
+  const shareOk = WEB && window.OWA_ACCOUNT && window.OWA_ACCOUNT.signedIn();
+  return '<div><h3>' + t_("Log a tasting note") + '</h3><form class="jform" id="jform" autocomplete="off">' +
+    '<label class="wide">' + t_("Origin of the wine") + '<input id="j-place" required placeholder="' + esc(t_("Start typing: Musigny, Barolo, Oakville…")) + '" value="' + esc(pre ? pre.name : "") + '" data-id="' + esc(pre ? pre.id : "") + '"><ul class="sugg" id="j-sugg" hidden></ul></label>' +
     '<label>' + t_("Producer and wine") + '<input id="j-wine" maxlength="140" placeholder="Domaine, cuvée"></label>' +
     '<label>' + t_("Vintage") + '<input id="j-vint" type="number" min="1900" max="2030" placeholder="2019"></label>' +
     '<label>' + t_("Score /100") + '<input id="j-score" type="number" min="50" max="100" placeholder="93"></label>' +
     '<label>' + t_("Date") + '<input id="j-date" type="date" value="' + new Date().toISOString().slice(0, 10) + '"></label>' +
-    '<label class="wide">' + t_("Notes") + '<textarea id="j-note" maxlength="3000" placeholder="' + esc(t_("Nose, palate, structure, when to drink")) + '"></textarea></label>' +
+    '<label>' + t_("Tasted at") + '<input id="j-venue" maxlength="80" placeholder="' + esc(t_("Venue, tasting, fair or at home")) + '"></label>' +
+    '<label>' + t_("Town") + '<input id="j-city" maxlength="80" placeholder="Zurich" autocomplete="off"><ul class="sugg" id="j-city-sugg" hidden></ul></label>' +
+    '<label class="wide">' + t_("Tasting note") + '<textarea id="j-note" maxlength="3000" placeholder="' + esc(t_("Appearance, nose, palate, structure, finish, ageing potential")) + '"></textarea></label>' +
+    (WEB ? '<label class="wide acct-agree j-share"><input id="j-public" type="checkbox"' + (shareOk ? "" : " disabled") + "><span>" +
+      (shareOk ? t_("Share this note on my Wine Passport. It shows only the town, never an exact location.") : t_("Sign in to share your notes on a Wine Passport.")) + "</span></label>" : "") +
     '<div class="row wide"><button class="primary" type="submit">' + t_("Add to journal") + '</button><span class="note" id="j-msg"></span></div></form></div>' +
     '<div><div class="fbar" style="justify-content:space-between"><h3 style="margin:0">Your journal · ' + list.length + (avg ? " · average " + fmtN(avg, 1) : "") + "</h3>" +
     '<div class="row"><button class="mini-btn" id="j-csv">' + t_("Export CSV") + '</button><button class="mini-btn" id="j-json">' + t_("Export JSON") + '</button><label class="mini-btn" style="cursor:pointer">' + t_("Import JSON") + '<input id="j-imp" type="file" accept="application/json" hidden></label></div></div>' +
     (list.length ? '<div style="display:grid;gap:8px;margin-top:10px">' + list.map((j) => '<div class="jentry"><div class="top">' + (j.score ? '<span class="sc">' + esc(j.score) + "</span>" : "") +
       "<b>" + esc([j.wine, j.vintage].filter(Boolean).join(" ") || j.place) + '</b><button class="mini-btn" data-go="' + esc(j.placeId) + '">' + esc(j.place) + '</button><span class="note">' + esc(j.date || "") + "</span>" +
-      '<button class="mini-btn warn" data-jdel="' + esc(j.at) + '" style="margin-left:auto">' + t_("Delete") + '</button></div>' + (j.note ? "<p>" + esc(j.note) + "</p>" : "") + "</div>").join("") + "</div>"
+      (j.public ? '<span class="j-pub">' + t_("On my Passport") + "</span>" : "") +
+      '<span class="j-acts">' + (shareOk ? '<button class="mini-btn" data-jpub="' + esc(j.at) + '">' + (j.public ? t_("Make private") : t_("Share")) + "</button>" : "") +
+      '<button class="mini-btn warn" data-jdel="' + esc(j.at) + '">' + t_("Delete") + "</button></span></div>" +
+      (tastedAtTxt(j) ? '<span class="j-at">' + esc(tastedAtTxt(j)) + "</span>" : "") + (j.note ? "<p>" + esc(j.note) + "</p>" : "") + "</div>").join("") + "</div>"
       : '<div class="empty" style="margin-top:10px">' + t_("No tastings yet. Every note is pinned to its vineyard on the map in copper.") + '</div>') + "</div>";
+}
+// "Tasted at Kronenhalle, Zurich": a venue and a town, never a precise position
+const tastedAtTxt = (j) => { const a = j.tastedAt || {}; const s = [a.venue, a.city].filter(Boolean).join(", "); return s ? t_("Tasted at {where}", { where: s }) : ""; };
+// towns for "Tasted at" (pipeline/cities.py), loaded the first time someone types in the field
+let citiesLoading = null;
+function loadCities() { return citiesLoading || (citiesLoading = fetch(base + "data/cities.json").then((r) => r.json()).catch(() => { citiesLoading = null; return []; })); }
+async function searchCities(q) {
+  const n = norm(q); if (n.length < 2) return [];
+  const all = await loadCities(), out = [];
+  for (const c of all) { const m = norm(c[0]); if (m.startsWith(n)) { out.push(c); if (out.length >= 8) break; } }
+  if (out.length < 8) for (const c of all) { if (out.length >= 8) break; const m = norm(c[0]); if (!m.startsWith(n) && m.includes(n)) out.push(c); }
+  return out;
 }
 function download(name, type, text) {
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name;
@@ -4945,6 +5019,16 @@ function wireJournal() {
     sg.hidden = !opts.length;
   });
   sg.addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (!b) return; const r = opts[+b.dataset.i]; inp.value = r[0]; inp.dataset.id = r[1]; sg.hidden = true; $("j-wine").focus(); });
+  const ci = $("j-city"), cs = $("j-city-sugg");
+  let copts = [], cpick = null;
+  ci.addEventListener("input", async () => {
+    cpick = null; const q = ci.value;
+    copts = await searchCities(q);
+    if (ci.value !== q) return;
+    cs.innerHTML = copts.map((c, i) => '<li><button type="button" data-ci="' + i + '">' + esc(c[0]) + "<small>" + esc(cname(c[1]) || c[1]) + "</small></button></li>").join("");
+    cs.hidden = !copts.length;
+  });
+  cs.addEventListener("click", (e) => { const b = e.target.closest("button[data-ci]"); if (!b) return; cpick = copts[+b.dataset.ci]; ci.value = cpick[0]; cs.hidden = true; });
   $("jform").addEventListener("submit", (e) => {
     e.preventDefault();
     let id = inp.dataset.id;
@@ -4952,9 +5036,13 @@ function wireJournal() {
     const r = recOf(id);
     if (!r) { $("j-msg").textContent = t_("Pick a place from the list."); return; }
     const s = MY.saved[id], pt = s && s.lat != null ? [s.lat, s.lon] : [(r[6][1] + r[6][3]) / 2, (r[6][0] + r[6][2]) / 2];
+    const venue = $("j-venue").value.trim(), city = ci.value.trim();
+    const c = cpick && cpick[0] === city ? cpick : null;
+    const tastedAt = venue || city ? { venue: venue || undefined, city: city || undefined, cc: c ? c[1] : undefined, lat: c ? c[2] : undefined, lon: c ? c[3] : undefined } : undefined;
+    const pub = !!($("j-public") && $("j-public").checked);
     MY.journal.push({ at: new Date().toISOString(), placeId: id, place: r[0], country: r[2], lat: pt[0], lon: pt[1], wine: $("j-wine").value.trim(),
-      vintage: $("j-vint").value, score: $("j-score").value, date: $("j-date").value, note: $("j-note").value.trim() });
-    saveMY("journal"); dashPrefill = null; renderDash(); toast(t_("Tasting logged."));
+      vintage: $("j-vint").value, score: $("j-score").value, date: $("j-date").value, note: $("j-note").value.trim(), tastedAt, public: pub || undefined });
+    saveMY("journal"); dashPrefill = null; renderDash(); toast(pub ? t_("Tasting note logged and shared on your Passport.") : t_("Tasting note logged."));
   });
   $("j-csv").onclick = () => {
     const q = (v) => '"' + String(v ?? "").replace(/"/g, '""') + '"';
@@ -4974,6 +5062,13 @@ function wireJournal() {
   };
 }
 document.addEventListener("click", (e) => { const b = e.target.closest("[data-jdel]"); if (b) { MY.journal = MY.journal.filter((j) => j.at !== b.dataset.jdel); saveMY("journal"); renderDash(); } });
+// share a note on the Passport, or take it back: the change syncs like any other edit of the journal
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-jpub]"); if (!b) return;
+  const j = MY.journal.find((x) => x.at === b.dataset.jpub); if (!j) return;
+  if (j.public) delete j.public; else j.public = true;
+  saveMY("journal"); renderDash(); toast(j.public ? t_("Shared on your Passport.") : t_("This note is private again."));
+});
 // ---------- notebook: notes on regions, crus, producers and wines, pinned to a place when there is one
 const NB = { sel: null, q: "", tag: "", place: "", dirty: false, confirmDel: false };
 const newNoteId = () => "n" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
@@ -5283,6 +5378,20 @@ function loadAccount() {
     const sc = document.createElement("script"); sc.src = "/account.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
   }));
 }
+// Wine Passport and members' tasting notes live in /passport.js, loaded when a place or a Passport opens
+let ppLoading = null;
+function loadPassport() {
+  if (!WEB) return Promise.resolve();
+  if (window.OWA_PASSPORT) return Promise.resolve();
+  return ppLoading || (ppLoading = new Promise((ok) => {
+    const sc = document.createElement("script"); sc.src = "/passport.js"; sc.async = true; sc.onload = ok; sc.onerror = ok; document.head.appendChild(sc);
+  }));
+}
+function openPassport(h) { loadPassport().then(() => window.OWA_PASSPORT && window.OWA_PASSPORT.open(h)); }
+document.addEventListener("click", (e) => {
+  const b = !window.OWA_PASSPORT && e.target.closest("[data-passport]");
+  if (b) { e.preventDefault(); closeDash(); openPassport(b.dataset.passport); }
+});
 // the study section lives in /study.js, loaded the first time it is opened
 let studyLoading = null;
 function loadStudy() {
@@ -5308,7 +5417,7 @@ if (WEB) {
     // for study.js
     get INDEX() { return INDEX; }, byId, getDetails, fitTo, markSelected, clearSelected, quizMode, placesAt, closeDash, goTo,
     tnode: (k) => tnode(k), kidsOf: (k) => kidsOf(k), pathOf: (k) => pathOf(k), get TREE() { return TREE; },
-    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy };
+    RANK_LABEL, LEVEL_LABEL, TOP, fmtN, get map() { return map; }, loadStudy, openPassport };
   loadAccount();
 }
 
@@ -5386,6 +5495,8 @@ map.on("load", async () => {
     else if (GEO_HASH.test(hid)) geoReady.then(() => openGeo(hid));
     else if (SET_HASH.test(hid)) openSetHash(hid);
     else if (PROD_HASH.test(hid)) openProducerHash(hid);
+    // a Passport: /u/<handle> redirects to /?u=<handle> (vercel.json)
+    if (WEB && QS.get("u")) openPassport(QS.get("u"));
     // a link to #<place id> followed inside the open map (or an edited address) flies there too;
     // the map itself writes the address with replaceState, which does not fire hashchange
     window.addEventListener("hashchange", () => {

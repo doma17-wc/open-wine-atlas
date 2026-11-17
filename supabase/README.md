@@ -10,6 +10,12 @@ Two parts, both in one Supabase project (region Zurich, `eu-central-2`):
 * `migrations/20261018010000_accounts.sql` and `web/account.js`: accounts. Profiles and everything from My atlas
   (saved places, tastings, notes, recent, compare) in `atlas_items`, each user limited to their own rows by row level
   security.
+* `migrations/20261117000000_passport.sql` and `web/passport.js`: the Wine Passport. A member can turn on a public page
+  (`/u/<handle>`, redirected to `/?u=<handle>`) and share single tasting notes. Notes stay in `atlas_items`; the public
+  reads `passport()` and `place_tastings()`, which apply the public switches and moderation. Reports go to `reports`
+  through `report_content()`; the admin page lists them (`admin_reports()`) and can hide a note or block a member
+  (`admin_moderate()`). The place a note was tasted at is a venue name and a town from `web/data/cities.json`, never a
+  precise position.
 * `migrations/20261102000000_last_seen.sql`: Last seen and active accounts on the admin page. The map and the admin
   page call `touch_seen()` while they are open and visible; `account_activity` keeps the latest time per account.
   The sign-in date alone says little, because a session stays open for weeks.
