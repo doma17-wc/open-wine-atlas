@@ -3247,5 +3247,261 @@
     "question_keys": [],
     "experiment": "",
     "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "08:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Study buddy quiz teaser (plain)",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-7161259912788557191"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "09:05",
+    "type": "post",
+    "format": "quiz",
+    "title": "Bordeaux study buddy quiz: Who gets 3 out of 3? (Wednesday)",
+    "hook": "Tag the friend you study with. Who gets 3 out of 3?",
+    "places": [
+      "Saint-Emilion",
+      "Pomerol"
+    ],
+    "question_keys": [
+      "bordeaux-right-bank#q6",
+      "bordeaux-right-bank#q4",
+      "bordeaux-right-bank#q1"
+    ],
+    "experiment": "Member card as slide 6. bordeaux-right-bank#q7 (Barbanne) overflows the quiz slide: skip it or shorten",
+    "metricool_uuid": "-7279694446794486215"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "09:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Hermitage or Cornas game reel teaser (plain)",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "8281470062683311167"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "10:05",
+    "type": "reel",
+    "format": "vs game",
+    "title": "Which one is bigger? Hermitage vs Cornas (Cornas 3.7x)",
+    "hook": "Which one is bigger?",
+    "places": [
+      "Hermitage",
+      "Cornas"
+    ],
+    "question_keys": [],
+    "experiment": "EXPERIMENT: new make.py game mode for reel-vs (spec game true + hook): first frame shows the question with each place fitted on its own, so sizes look alike; then same zoom with areas, ratio, member card. Preset japan seed 27",
+    "metricool_uuid": "-3948759115705792878",
+    "music": "japan 27"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "11:00",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: number of Alsace grand crus, with the Alsace dryness answer (A, Vosges rain shadow) on top",
+    "hook": null,
+    "places": [],
+    "question_keys": [
+      "north-france-alsace#q3"
+    ],
+    "experiment": "",
+    "metricool_uuid": "8641418741559280077"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "12:10",
+    "type": "reel",
+    "format": "cluster",
+    "title": "Five grand crus. Four tiny villages. (Alsace, around Riquewihr)",
+    "hook": "Five grand crus. Four tiny villages.",
+    "places": [
+      "Alsace grand cru Rosacker",
+      "Alsace grand cru Schoenenbourg",
+      "Alsace grand cru Froehn",
+      "Alsace grand cru Sonnenglanz",
+      "Alsace grand cru Sporen"
+    ],
+    "question_keys": [],
+    "experiment": "EXPERIMENT: first Alsace reel; new make.py hook frame (spec hook): all places drawn on frame 1 with the hook. maxzoom 15; preset south seed 71. Caption answers the 11:00 story (51)",
+    "metricool_uuid": "-6472409550599077600",
+    "music": "south 71"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "12:50",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "3435248928879364284"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "13:05",
+    "type": "post",
+    "format": "cluster",
+    "title": "Same grape. Opposite banks. Vouvray and Montlouis-sur-Loire",
+    "hook": "Same grape. Opposite banks.",
+    "places": [
+      "Vouvray",
+      "Montlouis-sur-Loire"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "4833316084944489775"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "13:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Alsace reel teaser (plain)",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-3269948865889284402"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "15:00",
+    "type": "story",
+    "format": "teaser",
+    "title": "Vouvray post teaser (plain)",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-5252649662087936897"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "17:20",
+    "type": "story",
+    "format": "teaser",
+    "title": "Pomerol deep dive teaser (topic from the Barbaresco caption: Next deep dive: Pomerol)",
+    "hook": null,
+    "places": [
+      "Pomerol"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "61709396615709859"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "18:30",
+    "type": "post",
+    "format": "cluster",
+    "title": "Seven grand crus. Guess the biggest. Chablis Grand Cru climats",
+    "hook": "Seven grand crus. Guess the biggest.",
+    "places": [
+      "Bougros",
+      "Preuses",
+      "Vaudésir",
+      "Grenouilles",
+      "Valmur",
+      "Les Clos",
+      "Blanchot"
+    ],
+    "question_keys": [],
+    "experiment": "Guess-the-biggest angle on the Chablis grand crus (best October reel topic) as a carousel",
+    "metricool_uuid": "-4177455305910825907"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "18:50",
+    "type": "story",
+    "format": "teaser",
+    "title": "Chablis post teaser (plain)",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "-2827786540141297247"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "20:20",
+    "type": "story",
+    "format": "question",
+    "title": "Question story: the mistral, with the Alsace 51 answer (B) on top (label 'Earlier today' in a temp copy)",
+    "hook": null,
+    "places": [],
+    "question_keys": [
+      "rhone-south-southern-rhone#q1"
+    ],
+    "experiment": "",
+    "metricool_uuid": "7030469806074318423"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "21:45",
+    "type": "story",
+    "format": "member",
+    "title": "Founding Member, 810 spots still open",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "7325944609222315665"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "06:00",
+    "type": "note",
+    "format": "founding count",
+    "title": "Founding Members confirmed: 189. Followers 5,026 on 2026-11-17.",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "06:00",
+    "type": "note",
+    "format": "stock draft kept",
+    "title": "Burgundy white villages carousel (2026-10-29, 13:05) left as draft: Meursault and Puligny used on 2026-11-15 and 2026-11-03, old caption with /r/ link, no member card",
+    "hook": null,
+    "places": [
+      "Meursault",
+      "Puligny-Montrachet",
+      "Chassagne-Montrachet",
+      "Saint-Aubin"
+    ],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": "834857395404885168"
+  },
+  {
+    "date": "2026-11-18",
+    "slot": "06:00",
+    "type": "note",
+    "format": "open items",
+    "title": "Mistral answer (B, cold dry northerly wind) still to show. Shape quiz final-round answer still unknown. Week so far: shape quiz reel (11 Nov) has the best watch time (10.8 s) and a low skip rate (63.5%); Puligny premier crus 59.4%; vs and deep dives 69 to 80%. Game reels and hook-first frames now in make.py. Share prompt today: Send this to your study group (tomorrow: Save this for your exam). auto-media force-pushed and cleared.",
+    "hook": null,
+    "places": [],
+    "question_keys": [],
+    "experiment": "",
+    "metricool_uuid": ""
   }
 ]

@@ -169,8 +169,14 @@ async def reel_cluster(s, a, atlas, br, base):
         await m.fit(union(atlas, ids), {"top": 300, "bottom": 900, "left": 110, "right": 170}, s.get("maxzoom", 13.5))
         for i in range(len(ids) + 1):
             p = os.path.join(tmp, f"m{i}.jpg")
-            await m.shot(ids[:i], p)
             hd = '<div class="brand">Open Wine Atlas</div><div class="shade" style="height:1000px"></div>'
+            if i == 0 and s.get("hook"):  # hook first: every place already drawn, the challenge in big text
+                await m.shot(ids, p)
+                t = f"""<div class="block" data-fit="t" style="top:1010px;height:480px;overflow:hidden"><div class="kick">{esc(s.get('eyebrow', ''))}</div><div class="h">{esc(s['hook'])}</div>
+                  <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
+                frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, "c0.jpg")), 2.2))
+                continue
+            await m.shot(ids[:i], p)
             if i == 0:
                 t = f"""<div class="block" data-fit="t" style="top:1010px;height:480px;overflow:hidden"><div class="kick">{esc(s['eyebrow'])}</div><div class="h">{esc(s['title'])}</div>
                   <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
@@ -204,6 +210,12 @@ async def reel_vs(s, a, atlas, br, base):
         for pid in (x, y):  # a zoom at which both fit, or the long thin one gets cut
             await m.fit(atlas.index[pid][6], 70)
             z = min(z, await m.pg.evaluate("() => window.__map.getZoom()"))
+        solo = {}
+        if s.get("game"):  # each place fitted on its own, so the first frame does not give the answer away
+            for pid in (x, y):
+                await m.fit(atlas.index[pid][6], 90)
+                solo[pid] = os.path.join(tmp, pid + "-solo.jpg")
+                await m.shot([pid], solo[pid])
         shots = {}
         for pid in (x, y):
             b = atlas.index[pid][6]
@@ -217,7 +229,21 @@ async def reel_vs(s, a, atlas, br, base):
       <div class="h">{esc(atlas.index[x][0])}</div><div class="sub" style="margin:0">vs</div><div class="h">{esc(atlas.index[y][0])}</div><div class="sub">{esc(s.get('sub', 'drawn at the same zoom'))}</div></div>"""
     r = max(ax, ay) / min(ax, ay)
     head = '<div class="brand" style="top:150px">Open Wine Atlas</div>'
-    frames = [(await card(br, atlas, a.libs, RW, RH, hook, os.path.join(tmp, "h.jpg")), 2.4),
+    if s.get("hook"):
+        img = solo or shots
+        def tile(pid, top, h2=470):
+            return f"""<div class="block" style="top:{top}px;left:60px;right:60px;font:500 64px 'Cormorant Garamond';color:#f6eedd">{esc(atlas.index[pid][0])}</div>
+              <div style="position:absolute;left:0;right:0;top:{top + 86}px;height:{h2}px"><img style="width:100%;height:100%;object-fit:cover" src="{owa.data_uri(img[pid])}"></div>"""
+        hk = f"""<div class="block" data-fit="t" style="top:210px;height:300px;left:60px;right:60px;overflow:hidden"><div class="h" style="font-size:104px;margin:0">{esc(s['hook'])}</div>
+          <div class="sub" style="font-size:46px;margin-top:10px">{esc(s.get('sub', ''))}</div></div>""" + tile(x, 520) + tile(y, 1100)
+        same = '<div class="kick" style="position:absolute;left:0;right:0;top:1700px;text-align:center">Now at the same zoom</div>' if solo else ''
+        frames = [(await card(br, atlas, a.libs, RW, RH, hk, os.path.join(tmp, "h.jpg")), 3.2 if solo else 2.2),
+                  (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230) + panel(y, 950) + same, os.path.join(tmp, "b.jpg")), 3.0),
+                  (await card(br, atlas, a.libs, RW, RH, f"""<div class="block" data-fit="t" style="top:680px;height:560px;overflow:hidden"><div class="big">{r:.1f}×</div>
+                    <div class="h2" style="font-size:66px">{esc(atlas.index[big][0])} is {r:.1f}× bigger</div><div class="note">Delimited areas, not vineyard planted</div></div>""", os.path.join(tmp, "r.jpg")), 2.4),
+                  (await card(br, atlas, a.libs, RW, RH, member_block(620), os.path.join(tmp, "e.jpg")), 2.8)]
+    else:
+      frames = [(await card(br, atlas, a.libs, RW, RH, hook, os.path.join(tmp, "h.jpg")), 2.4),
               (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230), os.path.join(tmp, "a.jpg")), 1.7),
               (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230) + panel(y, 950), os.path.join(tmp, "b.jpg")), 3.0),
               (await card(br, atlas, a.libs, RW, RH, f"""<div class="block" data-fit="t" style="top:680px;height:560px;overflow:hidden"><div class="big">{r:.1f}×</div>
