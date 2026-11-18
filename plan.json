@@ -390,8 +390,9 @@
    "series": "",
    "not_before": "2026-11-18",
    "why": "Bordeaux study path: Merlot on clay and gravel, no official classification, the Barbanne border with the satellites",
-   "status": "planned",
-   "note": "Added 2026-11-11 to keep 6+ planned. Slot 17:50. St Emilion 33394002 fiche may serve as nearby station. Moved to 2026-11-18 on 2026-11-17: announced as next in the Barbaresco outro."
+   "status": "posted",
+   "note": "Added 2026-11-11 to keep 6+ planned. Slot 17:50. St Emilion 33394002 fiche may serve as nearby station. Moved to 2026-11-18 on 2026-11-17: announced as next in the Barbaresco outro. Made 2026-11-18. Hook 'What is Pomerol's crasse de fer?' from the INAO cahier des charges (X, lien à l'origine). Climate: reused Météo-France fiche 33394002 St Emilion (38 m, on the Pomerol edge; rain 1995-2020, sun 2006-2020) vs Mérignac 1991-2020. Heat layer dropped for Soil. First voiced deep dive (bm_george). deep_map.mjs: layers.pts false hides the Saint-Émilion classified-estate markers.",
+   "slot": "2026-11-18T17:50+01:00"
   },
   {
    "slug": "deep-rias-baixas",
@@ -442,6 +443,56 @@
    "why": "Spain study path: albariza, Palomino, flor and the solera, poniente and levante",
    "status": "planned",
    "note": "Added 2026-11-17. Slot 17:50. Outline is the 248,264 ha production zone of 9 municipalities, not vineyard area."
+  },
+  {
+   "slug": "deep-margaux",
+   "place": "Margaux",
+   "atlas_id": "fr-inao-a52",
+   "series": "",
+   "not_before": "2026-11-19",
+   "why": "Bordeaux study path: the Left Bank commune with the most 1855 classified growths, deep gravel, Cabernet Sauvignon",
+   "status": "planned",
+   "note": "Added 2026-11-18 and announced as next in the Pomerol outro. Slot 17:50. Check the 1855 count in the atlas bxcc data."
+  },
+  {
+   "slug": "deep-pommard",
+   "place": "Pommard",
+   "atlas_id": "fr-inao-a215",
+   "series": "",
+   "not_before": "2026-11-20",
+   "why": "Burgundy study path: Côte de Beaune village of red Pinot Noir, 28 premiers crus, iron-rich clay",
+   "status": "planned",
+   "note": "Added 2026-11-18. Slot 17:50. Verify the premier cru count in the INAO data."
+  },
+  {
+   "slug": "deep-brunello",
+   "place": "Brunello di Montalcino",
+   "atlas_id": "it-eupdo-PDO-IT-A1199",
+   "series": "",
+   "not_before": "2026-11-22",
+   "why": "Tuscany study path: 100% Sangiovese, long ageing, the hill of Montalcino",
+   "status": "planned",
+   "note": "Added 2026-11-18. Slot 17:50."
+  },
+  {
+   "slug": "deep-vouvray",
+   "place": "Vouvray",
+   "atlas_id": "fr-inao-a119",
+   "series": "",
+   "not_before": "2026-11-27",
+   "why": "Loire study path: Chenin Blanc on tuffeau, dry to sweet and sparkling",
+   "status": "planned",
+   "note": "Added 2026-11-18. Slot 17:50."
+  },
+  {
+   "slug": "deep-cote-rotie",
+   "place": "Côte Rôtie",
+   "atlas_id": "fr-inao-a272",
+   "series": "",
+   "not_before": "2026-11-28",
+   "why": "Rhône study path: Syrah with up to 20% Viognier on steep schist terraces",
+   "status": "planned",
+   "note": "Added 2026-11-18. Slot 17:50."
   }
  ]
 }

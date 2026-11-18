@@ -429,6 +429,23 @@
     "Open Wine Atlas details-it.json, bedrock and terrain",
     "Open Wine Atlas Study, Piemonte lesson"
    ]
+  },
+  {
+   "slug": "deep-pomerol",
+   "place": "Pomerol",
+   "slot": "2026-11-18T17:50+01:00",
+   "hook": "What is Pomerol's crasse de fer?",
+   "classic": true,
+   "style": "Short country-level fly-in (3 s, no globe), hook on screen from frame 0; layers Place, Terrain, Soil, Rain, Sun, Grapes (Heat dropped); 3D shot terrain 3.0 with altitude tint plus Slope, slow orbit bearing 200 to 232; Soil shot with Slope overlay; rain and sun as monthly bar charts; classified-estate markers hidden after the place shot; music warm seed 67; first voiceover.",
+   "voice": "bm_george",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-7375869419998065512",
+   "sources": [
+    "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33394002.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+    "web/data/details-fr.json",
+    "web/data/study.json"
+   ]
   }
  ]
 }

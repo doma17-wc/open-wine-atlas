@@ -60,6 +60,8 @@ async function setLayers(shot, idx) {
     for (const [k, list] of Object.entries(ids)) for (const id of list) if (m.getLayer(id)) m.setLayoutProperty(id, "visibility", L[k] ? "visible" : "none");
     if (L.altOpacity != null && m.getLayer("alt")) m.setPaintProperty("alt", "color-relief-opacity", L.altOpacity);
     // labels off gives a clean plate under a busy chart
+    // pts false hides the classified-estate markers (ov-pts), e.g. on a neighbour of Saint-Émilion
+    if (m.getLayer("ov-pts")) m.setLayoutProperty("ov-pts", "visibility", L.pts === false ? "none" : "visible");
     for (const id of ["wineries"]) if (m.getLayer(id)) m.setLayoutProperty(id, "visibility", L.wineries ? "visible" : "none");
     for (const l of m.getStyle().layers) {
       if (l.type !== "symbol" || l.id.startsWith("dd-mk")) continue;

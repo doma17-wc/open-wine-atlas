@@ -1,0 +1,98 @@
+{
+ "voice": "bm_george",
+ "lang": "en-gb",
+ "speed_note": "per line",
+ "duck_db": 6,
+ "music_gain": 0.55,
+ "lines": [
+  {
+   "start": 0.15,
+   "end": 3.6,
+   "text": "What is Pomerol's crasse de fer?",
+   "ph": "wˌɒt ɪz pˈɒmɛɹˌɒlz kɹˈas də fˈɛɹ?",
+   "dur": 2.23
+  },
+  {
+   "start": 4.55,
+   "end": 7.6,
+   "text": "Just nine hundred and sixty-four hectares.",
+   "ph": "dʒˈʌst nˈaɪn hˈʌndɹɪd and sˈɪkstifˈɔː hˈɛkteəz.",
+   "dur": 2.89,
+   "speed": 1.05
+  },
+  {
+   "start": 8.15,
+   "end": 10.2,
+   "text": "Red only, and unranked.",
+   "ph": "ɹˈɛd ˈəʊnli, and ʌnɹˈaŋkt.",
+   "dur": 1.86,
+   "speed": 1.05
+  },
+  {
+   "start": 10.85,
+   "end": 14.3,
+   "text": "The ground averages just twenty-four metres.",
+   "ph": "ðə ɡɹˈaʊnd ˈavɹɪdʒɪz dʒˈʌst twˈɛntifˈɔː mˈiːtəz.",
+   "dur": 2.9
+  },
+  {
+   "start": 14.95,
+   "end": 18.3,
+   "text": "A gentle plateau, sloping down to the river Isle.",
+   "ph": "ɐ dʒˈɛntəl plˈatəʊ, slˈəʊpɪŋ dˌaʊn tə ðə ɹˈɪvəɹ ˈiːl.",
+   "dur": 3.22
+  },
+  {
+   "start": 19.25,
+   "end": 24.8,
+   "text": "Crasse de fer means iron oxides in the subsoil, under gravel, sand and clay.",
+   "ph": "kɹˈas də fˈɛɹ mˈiːnz ˈaɪən ˈɒksaɪdz ɪnðə sˈʌbsɔɪl, ˌʌndə ɡɹˈavəl, sˈand and klˈeɪ.",
+   "dur": 5.47
+  },
+  {
+   "start": 25.55,
+   "end": 32.1,
+   "text": "Seven hundred and ninety-eight millimetres of rain next door. Less than Bordeaux-Mérignac.",
+   "ph": "sˈɛvən hˈʌndɹɪd and nˈaɪntiˈeɪt mˈɪlɪmˌiːtəz ɒv ɹˈeɪn nˈɛkst dˈɔː. lˈɛs ðɐn bˈɔːdəʊ mˌeɪɹiːnjˈak.",
+   "dur": 5.88,
+   "speed": 1.05
+  },
+  {
+   "start": 33.05,
+   "end": 39.3,
+   "text": "Over two thousand one hundred hours of sun a year, and seventy-two more than Bordeaux-Mérignac.",
+   "ph": "ˌəʊvə tˈuː θˈaʊzənd wˈɒn hˈʌndɹɪd ˈaʊəz ɒv sˈʌn ɐ jˈiə, and sˈɛvəntitˈuː mˈɔː ðɐn bˈɔːdəʊ mˌeɪɹiːnjˈak.",
+   "dur": 5.89
+  },
+  {
+   "start": 40.25,
+   "end": 43.9,
+   "text": "Five grapes are allowed, all red. Merlot dominates.",
+   "ph": "fˈaɪv ɡɹˈeɪps ɑːɹ ɐlˈaʊd, ˈɔːl ɹˈɛd. mɜːlˈəʊ dˈɒmɪnˌeɪts.",
+   "dur": 3.48,
+   "speed": 1.05
+  },
+  {
+   "start": 44.55,
+   "end": 47.7,
+   "text": "Base yield: forty-nine hectolitres per hectare.",
+   "ph": "bˈeɪs jˈiːld: fˈɔːtinˈaɪn hˈɛktəlˌiːtəz pɜː hˈɛkteə.",
+   "dur": 3.05
+  },
+  {
+   "start": 48.35,
+   "end": 52.3,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "ph": "tˈɛst jɔːsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈansəz ɪnðə fˈɜːst kˈɒmɛnt.",
+   "dur": 3.76,
+   "speed": 1.1
+  },
+  {
+   "start": 58.65,
+   "end": 62.7,
+   "text": "Study it free at open wine atlas dot com.",
+   "ph": "stˈʌdi ɪt fɹˈiː at ˈəʊpən wˈaɪn ˈatləs dˈɒt kˈɒm.",
+   "dur": 3.29
+  }
+ ]
+}

@@ -1,0 +1,494 @@
+{
+ "slug": "deep-pomerol",
+ "id": "fr-inao-a62",
+ "duration": 63.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  67
+ ],
+ "markers": [
+  {
+   "lng": -0.1878,
+   "lat": 44.9175,
+   "label": "St Emilion station · 38 m",
+   "shots": [
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 3.0,
+   "pad": {
+    "top": 100,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -0.45,
+     44.9,
+     7.4,
+     0,
+     0
+    ],
+    [
+     3.0,
+     -0.2056,
+     44.9296,
+     11.2,
+     0,
+     10
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 8.0,
+   "pad": {
+    "top": 100,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     -0.2056,
+     44.9296,
+     11.2,
+     0,
+     10
+    ],
+    [
+     8.0,
+     -0.2056,
+     44.9296,
+     11.45,
+     8,
+     26
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 9.0,
+   "fps": 6,
+   "terrain": 3.0,
+   "pad": {
+    "top": 0,
+    "bottom": 320
+   },
+   "cam": [
+    [
+     0,
+     -0.207,
+     44.927,
+     12.6,
+     200,
+     62
+    ],
+    [
+     9.0,
+     -0.207,
+     44.927,
+     12.75,
+     232,
+     64
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true
+   },
+   "labels": false
+  },
+  {
+   "name": "soil",
+   "dur": 7.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 300
+   },
+   "cam": [
+    [
+     0,
+     -0.207,
+     44.933,
+     12.2,
+     -15,
+     25
+    ],
+    [
+     7.0,
+     -0.207,
+     44.933,
+     12.35,
+     -8,
+     32
+    ]
+   ],
+   "layers": {
+    "slope": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 15.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 620
+   },
+   "cam": [
+    [
+     0,
+     -0.205,
+     44.954,
+     11.0,
+     0,
+     0
+    ],
+    [
+     15.0,
+     -0.205,
+     44.954,
+     11.12,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 340
+   },
+   "cam": [
+    [
+     0,
+     -0.207,
+     44.933,
+     11.9,
+     25,
+     40
+    ],
+    [
+     9.0,
+     -0.207,
+     44.933,
+     12.05,
+     18,
+     45
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 10.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.2,
+     44.95,
+     10.4,
+     0,
+     0
+    ],
+    [
+     10.5,
+     -0.2,
+     44.95,
+     10.55,
+     -4,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Pomerol",
+   "sub": "What is Pomerol's<br><i>crasse de fer</i>?"
+  },
+  {
+   "kind": "chips",
+   "t0": 4.2,
+   "t1": 48.2,
+   "items": [
+    "Place",
+    "Terrain",
+    "Soil",
+    "Rain",
+    "Sun",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     4.2,
+     10.5
+    ],
+    [
+     10.5,
+     18.8
+    ],
+    [
+     18.8,
+     25.3
+    ],
+    [
+     25.3,
+     32.6
+    ],
+    [
+     32.6,
+     39.8
+    ],
+    [
+     39.8,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.4,
+   "t1": 7.9,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (INAO geodata) · INAO specification",
+   "n": "964",
+   "u": "ha",
+   "c": "inside the outline: Pomerol plus part of Libourne. Saint-Émilion's is 7 times larger."
+  },
+  {
+   "kind": "card",
+   "t0": 8.0,
+   "t1": 10.5,
+   "kicker": "Layer 1 · The place",
+   "src": "INAO Pomerol specification · Open Wine Atlas Study",
+   "nt": "<i>Red wine only</i>, and <i>no official classification</i>. Its fame rests on reputation alone."
+  },
+  {
+   "kind": "card",
+   "t0": 10.7,
+   "t1": 14.6,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain",
+   "n": "24",
+   "u": "m",
+   "c": "average height. The highest ground reaches only 40&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 14.8,
+   "t1": 18.6,
+   "kicker": "Layer 2 · Terrain",
+   "src": "INAO Pomerol specification",
+   "nt": "A gentle plateau, its top terrace 30 to 40&nbsp;m high, sloping down to the <i>Isle</i>."
+  },
+  {
+   "kind": "card",
+   "t0": 19.1,
+   "t1": 25.1,
+   "kicker": "Layer 3 · Soil",
+   "src": "INAO Pomerol specification",
+   "nt": "<i>Crasse de fer</i>: iron oxides in the subsoil, under gravel, sand and clay."
+  },
+  {
+   "kind": "card",
+   "t0": 25.4,
+   "t1": 32.4,
+   "kicker": "Layer 4 · Rain",
+   "src": "Météo-France: St Emilion 1995–2020, Mérignac 1991–2020",
+   "n": "798",
+   "u": "mm",
+   "count": {
+    "v": 798.1,
+    "d": 0
+   },
+   "c": "a year at the station on the Pomerol edge, 127&nbsp;mm less than Bordeaux-Mérignac. April to October: 425&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     78.2,
+     61.5,
+     58,
+     72.4,
+     68.1,
+     58.2,
+     47.7,
+     55.2,
+     62,
+     61.4,
+     91.4,
+     84
+    ],
+    "max": 100,
+    "bands": [],
+    "hot": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> St Emilion · mm per month · April to October lit"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 32.9,
+   "t1": 39.6,
+   "kicker": "Layer 5 · Sun",
+   "src": "Météo-France: St Emilion 2006–2020, Mérignac 1991–2020",
+   "n": "2,142",
+   "u": "h",
+   "count": {
+    "v": 2142.0,
+    "d": 0
+   },
+   "c": "of sunshine a year, 72&nbsp;h more than Bordeaux-Mérignac. July alone: 273&nbsp;h.",
+   "chart": {
+    "type": "months",
+    "a": [
+     77.8,
+     125.8,
+     164.2,
+     199,
+     222,
+     248.7,
+     272.9,
+     255,
+     226.9,
+     156,
+     101.5,
+     92.4
+    ],
+    "max": 300,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 272.9,
+      "text": "273"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> St Emilion · hours of sun per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 40.1,
+   "t1": 44.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Pomerol specification · Open Wine Atlas Study",
+   "n": "5",
+   "u": "grapes",
+   "c": "allowed, all red: Merlot, Cabernet Franc, Cabernet Sauvignon, Malbec, Petit Verdot. Merlot dominates."
+  },
+  {
+   "kind": "card",
+   "t0": 44.4,
+   "t1": 48.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Pomerol specification",
+   "n": "49",
+   "u": "hl/ha",
+   "c": "base yield, 60 at the most. At least 5,500 vines per hectare."
+  },
+  {
+   "kind": "card",
+   "t0": 48.2,
+   "t1": 52.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which stream marks Pomerol's northern border?<br>A&nbsp;&nbsp;Barbanne<br>B&nbsp;&nbsp;Ciron<br>C&nbsp;&nbsp;Garonne"
+  },
+  {
+   "kind": "card",
+   "t0": 52.7,
+   "t1": 55.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which wines may be labelled Pomerol?<br>A&nbsp;&nbsp;Red only<br>B&nbsp;&nbsp;Red and white<br>C&nbsp;&nbsp;Red, white and rosé"
+  },
+  {
+   "kind": "card",
+   "t0": 55.7,
+   "t1": 58.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "How are Pomerol's top estates officially ranked?<br>A&nbsp;&nbsp;Premier Grand Cru Classé<br>B&nbsp;&nbsp;In the 1855 ranking<br>C&nbsp;&nbsp;They are not ranked"
+  },
+  {
+   "kind": "outro",
+   "t0": 58.5,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Pomerol",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Margaux",
+   "srcs": "Sources: INAO Pomerol specification · Météo-France normals · Open Wine Atlas Study · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Pomerol",
+  "sub": "What is Pomerol's<br><i>crasse de fer</i>?"
+ }
+}

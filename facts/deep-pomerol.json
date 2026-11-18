@@ -1,0 +1,219 @@
+{
+ "slug": "deep-pomerol",
+ "place": "Pomerol",
+ "atlas_id": "fr-inao-a62",
+ "made": "2026-11-18",
+ "hook": {
+  "text": "What is Pomerol's crasse de fer?",
+  "answer": "iron oxides in the subsoil ('sous-sol comportant des oxydes de fer ou « crasse de fer »')",
+  "source": "INAO cahier des charges AOC Pomerol (decree 2011-1613, mod. 2014-904; 2021 PNO file), X.1",
+  "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+ },
+ "station": {
+  "name": "St Emilion",
+  "id": "33394002",
+  "height_m": 38,
+  "lat": 44.9175,
+  "lon": -0.18777777777777777,
+  "service": "Météo-France",
+  "period": "sheet 1991-2020, but temperature and precipitation 1995-2020, sunshine 2006-2020 (footnote)",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33394002.pdf",
+  "edited": "2026-06-06"
+ },
+ "comparison_station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "values reused from facts/deep-pauillac.json",
+  "distance_km": 40.8
+ },
+ "station_note": "Values reused from facts/deep-saint-emilion.json (official Météo-France fiche read on 2026-11-11). Station at 44.9175 N, -0.1878 E, about 2 km from the Pomerol outline centre, at the Pomerol / Saint-Émilion edge.",
+ "monthly": {
+  "precip_mm_1995_2020": [
+   78.2,
+   61.5,
+   58,
+   72.4,
+   68.1,
+   58.2,
+   47.7,
+   55.2,
+   62,
+   61.4,
+   91.4,
+   84
+  ],
+  "sun_h_2006_2020": [
+   77.8,
+   125.8,
+   164.2,
+   199,
+   222,
+   248.7,
+   272.9,
+   255,
+   226.9,
+   156,
+   101.5,
+   92.4
+  ],
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ]
+ },
+ "derived": {
+  "precip_year_mm": {
+   "value": 798.1,
+   "how": "sum of monthly precip St Emilion 1995-2020 (fiche total 798.1)"
+  },
+  "precip_apr_oct_mm": {
+   "value": 425.0,
+   "how": "sum Apr..Oct"
+  },
+  "rain_less_than_merignac_mm": {
+   "value": 126.8,
+   "how": "924.9 - 798.1 (different periods, named)"
+  },
+  "sun_more_than_merignac_h": {
+   "value": 72.2,
+   "how": "2142.0 (2006-2020) - 2069.8 (1991-2020)"
+  },
+  "saint_emilion_outline_ratio": {
+   "value": 7.37,
+   "how": "7102.9 ha / 963.9 ha atlas outlines"
+  }
+ },
+ "claims": [
+  {
+   "claim": "Outline 964 ha (963.9)",
+   "source": "Open Wine Atlas, INAO geodata",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Area: commune of Pomerol plus part of Libourne (1928 judgment), north limit the Barbanne",
+   "source": "INAO cahier des charges, IV.1",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Red still wines only",
+   "value": "réservée aux vins rouges tranquilles",
+   "source": "INAO cahier des charges, III",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "No official classification",
+   "source": "Open Wine Atlas Study, Right Bank lesson",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "3.2 km from Libourne; Dordogne 3.4 km; Bordeaux 31 km",
+   "source": "Open Wine Atlas near_town, rivers, near_city",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Ground 8 to 40 m, mean 24 m; 85% flat",
+   "source": "Open Wine Atlas terrain e=[8,24,40,15,36], flat 0.85",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Relatively flat relief sloping towards the Isle valley; Günz terrace 30 to 40 m, Riss terraces 20 to 25 m",
+   "source": "INAO cahier des charges, X.1",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Soils: gravels, sands, reddened pebbles, smectite-rich Tertiary clays; subsoil with iron oxides (crasse de fer)",
+   "source": "INAO cahier des charges, X.1",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Merlot dominates",
+   "source": "Open Wine Atlas Study, Right Bank lesson",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "5 varieties allowed: Cabernet Franc, Cabernet Sauvignon, Cot (Malbec), Merlot, Petit Verdot; no proportion rules",
+   "source": "INAO cahier des charges, V",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Yield 49 hl/ha, rendement butoir 60 hl/ha",
+   "source": "INAO cahier des charges, VIII",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Min density 5,500 vines/ha",
+   "source": "INAO cahier des charges, VI.1",
+   "url": "https://extranet.inao.gouv.fr/fichier/4-CDC-Pomerol-PNO.pdf"
+  },
+  {
+   "claim": "Lalande-de-Pomerol lies north across the Barbanne",
+   "source": "Open Wine Atlas Study",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Saint-Émilion outline about 7 times larger (7,103 ha)",
+   "source": "Open Wine Atlas",
+   "url": "web/data/details-fr.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which stream marks Pomerol's northern border?",
+   "options": [
+    "Barbanne",
+    "Ciron",
+    "Garonne"
+   ],
+   "answer": "A Barbanne",
+   "source": "INAO cahier des charges IV.1; Study lesson"
+  },
+  {
+   "q": "Which wines may be labelled Pomerol?",
+   "options": [
+    "Red only",
+    "Red and white",
+    "Red, white and rosé"
+   ],
+   "answer": "A Red only",
+   "source": "INAO cahier des charges III"
+  },
+  {
+   "q": "How are Pomerol's top estates officially ranked?",
+   "options": [
+    "Premier Grand Cru Classé",
+    "In the 1855 ranking",
+    "They are not: no classification"
+   ],
+   "answer": "C They are not: Pomerol has no official classification",
+   "source": "Open Wine Atlas Study"
+  }
+ ]
+}
