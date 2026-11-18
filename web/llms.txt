@@ -1,0 +1,40 @@
+# Open Wine Atlas
+
+> An open, interactive map of the world's wine appellations, crus and vineyard sites, built only from official registers and open data. 5,407 places in 46 countries, each with its official outline, grape rules, terrain, bedrock, climate and vintages.
+
+Open Wine Atlas is a reference for wine students and wine professionals. Every outline and rule comes from a public source, named with its licence on each place page.
+
+## Explore
+
+- [All wine places](https://www.openwineatlas.com/places/): every country and wine region in the atlas
+- [France](https://www.openwineatlas.com/places/france/): wine map of France
+- [Italy](https://www.openwineatlas.com/places/italy/): wine map of Italy
+- [Germany](https://www.openwineatlas.com/places/germany/): wine map of Germany
+- [Spain](https://www.openwineatlas.com/places/spain/): wine map of Spain
+- [Switzerland](https://www.openwineatlas.com/places/switzerland/): wine map of Switzerland
+- [United States](https://www.openwineatlas.com/places/united-states/): wine map of United States
+- [Australia](https://www.openwineatlas.com/places/australia/): wine map of Australia
+- [Wine records](https://www.openwineatlas.com/records/): the highest, steepest, largest and northernmost wine places
+- [From the reels](https://www.openwineatlas.com/reels/): every place shown in our videos
+
+## What each place page contains
+
+- Official name, type (AOC, DOC, DOCG, DO, PDO, AVA, Einzellage, premier cru, grand cru), parent region, date of protection
+- Outline area and vineyard area, centre coordinates, distance to nearby towns
+- Terrain measured on elevation data: elevation range, mean elevation, mean slope, main exposure
+- Grape rules, bedrock, communes, neighbouring places, vintages
+- Sources and their licences
+
+## Sources
+
+- EU register of geographical indications
+- INAO, Délimitation parcellaire des AOC viticoles (Licence Ouverte 2.0)
+- US TTB American Viticultural Areas (27 CFR part 9), digitised by the UC Davis Library
+- swisstopo and BFS GEOSTAT
+- OpenStreetMap (ODbL)
+- GLiM global lithological map (Hartmann and Moosdorf, 2012)
+
+## Contact
+
+- hello@openwineatlas.com
+- Instagram and Pinterest: @openwineatlas

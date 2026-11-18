@@ -22,9 +22,29 @@ from datetime import date
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
 OUT = os.path.join(HERE, "places")
-SITE = "https://openwineatlas.com"
+SITE = "https://www.openwineatlas.com"
 
 esc = lambda s: html.escape(str(s), quote=True)
+
+
+def clip(s, n=155):
+    """A meta description that ends on a whole word, never mid-word."""
+    s = " ".join(str(s).split())
+    if len(s) <= n:
+        return s
+    cut = s[:n].rsplit(" ", 1)[0].rstrip(",;:·")
+    return cut + "…"
+
+
+def fit_title(*cands, n=60):
+    """The first title that fits the length search results show, else the shortest."""
+    for c in cands:
+        if len(c) <= n:
+            return c
+    return min(cands, key=len)
+
+
+SAME_AS = ["https://www.instagram.com/openwineatlas/", "https://www.pinterest.com/openwineatlas/"]
 
 
 def slugify(s):
@@ -123,8 +143,11 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-si
 
 
 
-def page(title, desc, path, body, jsonld=None):
+def page(title, desc, path, body, jsonld=None, image=None):
     url = SITE + path
+    img = (f'<meta property="og:image" content="{esc(image)}">\n<meta property="og:image:width" content="1080">\n'
+           f'<meta property="og:image:height" content="1080">\n<meta name="twitter:card" content="summary_large_image">'
+           if image else '<meta name="twitter:card" content="summary">')
     ld = "".join('<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>" for j in (jsonld or []))
     return f"""<!doctype html>
 <html lang="en">
@@ -140,7 +163,7 @@ def page(title, desc, path, body, jsonld=None):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary">
+{img}
 <link rel="icon" href="/places/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/places/style.css">
 <script>window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};</script>
@@ -351,8 +374,10 @@ def main():
         typ = d.get("type") or LEVEL.get(level, "")
         st = short_type(r, d)
         summ = summary(r, d, pd)
-        title = f"{name}{' ' + st if st and st not in name and st not in ('Appellation', 'Sub-zone', 'Vineyard site', 'Wine region') else ''}: wine map, rules and terrain | Open Wine Atlas"
-        desc = summ if len(summ) <= 158 else summ[:155].rsplit(" ", 1)[0] + "…"
+        tn = f"{name}{' ' + st if st and st.lower() not in name.lower() and st not in ('Appellation', 'Sub-zone', 'Vineyard site', 'Wine region') else ''}"
+        title = fit_title(f"{tn}: wine map, rules and terrain | Open Wine Atlas", f"{tn}: wine map, rules and terrain",
+                          f"{tn}: wine map and terrain", f"{tn}: wine map", tn)
+        desc = clip(summ)
 
         badges = ""
         if rank in RANK:
@@ -471,10 +496,10 @@ def main():
         if vr:
             yrs = vint["years"][-20:]
             for v in vr:
-                cells = "".join(f'<div><span class="s" style="background:{SCORE_BG[v["scores"][str(y)]]};color:{SCORE_FG[v["scores"][str(y)]]}">{v["scores"][str(y)]}</span>{str(y)[2:]}</div>'
-                                if v["scores"].get(str(y)) else f'<div><span class="s">–</span>{str(y)[2:]}</div>' for y in yrs)
+                cells = "".join(f'<div title="{y}: {v["scores"][str(y)]} of 5"><span class="s" style="background:{SCORE_BG[v["scores"][str(y)]]};color:{SCORE_FG[v["scores"][str(y)]]}">{v["scores"][str(y)]}</span>’{str(y)[2:]}</div>'
+                                if v["scores"].get(str(y)) else f'<div title="{y}: no score"><span class="s">–</span>’{str(y)[2:]}</div>' for y in yrs)
                 b.append(f'<h2>Vintages: {esc(v["name"])}</h2><div class="vgrid">{cells}</div>')
-            b.append(f'<p class="note">{esc(vint.get("note", ""))} Scale 1 to 5.</p>')
+            b.append(f'<p class="note">{esc(vint.get("note", ""))} Each cell shows the score, from 1 to 5, above the vintage year.</p>')
 
         if d.get("bedrock"):
             b.append("<h2>Bedrock</h2><ul class=\"cols\">" + "".join(f"<li>{esc(x[0])}<span class=\"k\">{x[1]}%</span></li>" for x in d["bedrock"]) + "</ul>"
@@ -534,7 +559,12 @@ def main():
                "containedInPlace": {"@type": "Country", "name": cname(cc)}}, crumbs_ld(pid, name, path)]
         if d.get("lat") is not None:
             ld[0]["geo"] = {"@type": "GeoCoordinates", "latitude": d["lat"], "longitude": d["lon"]}
-        write(path, page(title, desc, path, "\n".join(b), ld))
+        if d.get("official_name") and d["official_name"] != name:
+            ld[0]["alternateName"] = d["official_name"]
+        if prec and prec[1] in url_of:
+            ld[0]["containedInPlace"] = {"@type": "Place", "name": prec[0], "url": SITE + url_of[prec[1]],
+                                         "containedInPlace": {"@type": "Country", "name": cname(cc)}}
+        write(path, page(title, desc, path, "\n".join(b), ld, image=f"{SITE}/api/story?id={pid}&format=square"))
         urls.append((path, "monthly", "0.6" if level == "vineyard" else "0.7"))
 
     # ---------- region pages from the country tree
@@ -556,7 +586,7 @@ def main():
         lead = f"{name} is a wine region of {cname_run(cc)} with {count} wine places in the atlas: appellations, sub-zones, crus and vineyard sites from the official registers."
         body = (crumbs_html(k) + f'<div class="eyebrow">{esc(cname(cc))} · Wine region</div><h1>{esc(name)}</h1><p class="lead">{esc(lead)}</p>'
                 f'<a class="cta" href="/">Explore {esc(name)} on the map →</a><h2>Places in {esc(name)}</h2>' + list_node_children(k))
-        write(path, page(f"{name} wine region: appellations map | Open Wine Atlas", lead[:158], path, body, [crumbs_ld(k, name, path)]))
+        write(path, page(fit_title(f"{name} wine region: appellations map | Open Wine Atlas", f"{name} wine region: appellations map", f"{name} wine map"), clip(lead), path, body, [crumbs_ld(k, name, path)]))
         urls.append((path, "monthly", "0.8"))
 
     # ---------- country pages
@@ -573,7 +603,7 @@ def main():
                     f"from the official registers, with outlines, rules, grapes, terrain and climate on the map.")
             body = (crumbs_html(g) + f'<div class="eyebrow">{esc(root_name)}</div><h1>Wine map of {esc(cname(cc))}</h1><p class="lead">{esc(lead)}</p>'
                     f'<a class="cta" href="/">Open the map →</a><h2>Regions and places</h2>' + list_node_children(g))
-            write(path, page(f"{cname(cc)} wine map: {count} appellations and wine regions | Open Wine Atlas", lead[:158], path, body, [crumbs_ld(g, cname(cc), path)]))
+            write(path, page(fit_title(f"{cname(cc)} wine map: {count} appellations and wine regions | Open Wine Atlas", f"{cname(cc)} wine map: {count} appellations and wine regions", f"{cname(cc)} wine map: {count} appellations"), clip(lead), path, body, [crumbs_ld(g, cname(cc), path)]))
             urls.append((path, "monthly", "0.9"))
             countries.append((root_name, cc, count))
 
@@ -588,7 +618,20 @@ def main():
                     + "</ul>" for g, v in groups.items()))
     write("/places/", page("All wine places: appellations of the world by country | Open Wine Atlas",
                            f"{len(idx):,} wine appellations, protected origins, crus and vineyard sites in {len(countries)} countries, from official open registers, on one map.",
-                           "/places/", body))
+                           "/places/", body, [{
+                               "@context": "https://schema.org", "@type": "Dataset",
+                               "name": "Open Wine Atlas: wine appellations, crus and vineyard sites of the world",
+                               "description": (f"Official outlines, grape rules, terrain, bedrock, climate and vintages for {len(idx):,} wine appellations, "
+                                               f"protected origins, crus and vineyard sites in {len(countries)} countries. Built only from official registers "
+                                               "and open data, with the source and its licence named on every place page."),
+                               "url": SITE + "/places/", "isAccessibleForFree": True,
+                               "creator": {"@type": "Organization", "name": "Open Wine Atlas", "url": SITE + "/"},
+                               "license": "https://github.com/doma17-wc/open-wine-atlas/blob/main/DATA_LICENSE.md",
+                               "spatialCoverage": f"Worldwide, {len(countries)} countries",
+                               "keywords": ["wine appellations", "AOC", "DOC", "DOCG", "PDO", "AVA", "Einzellage", "vineyards", "terroir", "wine map"],
+                               "isBasedOn": ["EU register of geographical indications", "INAO, Délimitation parcellaire des AOC viticoles",
+                                             "US TTB American Viticultural Areas (27 CFR part 9)", "OpenStreetMap"]}]))
+    counts = (len(idx), len(countries))
 
     # ---------- records (pipeline/records.py)
     rec_path = os.path.join(DATA, "records.json")
@@ -628,7 +671,7 @@ def main():
                 '<p class="note">Regions are left out, and so are places drawn from the districts that contain them. Outlines made of whole '
                 "communes include land that is not vineyard. Elevation and slope records use only outlines drawn on the wine area itself: French parcels, "
                 "German vineyard sites, US AVAs and Australian subregions. Terrain: Mapterhorn. Towns: GeoNames. Coast: Natural Earth.</p>")
-        write("/records/", page("Wine records: the highest, steepest and largest vineyards and appellations | Open Wine Atlas", lead[:158], "/records/", body))
+        write("/records/", page("Wine records: highest, steepest and largest vineyards", clip(lead), "/records/", body))
         urls.append(("/records/", "weekly", "0.9"))
 
     # ---------- reels (pipeline/reels.py): /reels/ lists them, /r/<slug> is the short link a video points to
@@ -678,13 +721,15 @@ def main():
                 "and the map shows it with its terrain, climate and neighbours.")
         body = ('<p class="eyebrow">From the reels</p><h1>Seen it in a video? Find it here.</h1><p class="lead">' + esc(lead) + "</p>" +
                 '<div class="reels">' + "".join(card(r) for r in reels) + "</div>" +
-                '<p class="note">New videos every day on Instagram, TikTok and YouTube: @openwineatlas. '
+                '<p class="note">New videos every day on <a href="https://www.instagram.com/openwineatlas/" rel="noopener">Instagram @openwineatlas</a> and YouTube. '
                 'Areas are the delimited areas of the registers, not the vineyard planted.</p>'
                 # a reel scheduled for later is already in the build: it shows from its time on
                 "<script>(function(){var now=Date.now();document.querySelectorAll('.reel[data-at]').forEach(function(a){"
                 "var t=Date.parse(a.dataset.at);if(t>now)a.hidden=true;else{var d=new Date(t);a.querySelector('time').textContent="
                 "d.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short'})}})})();</script>")
-        write("/reels/", page("From the reels: every place from our wine map videos | Open Wine Atlas", lead[:158], "/reels/", body))
+        write("/reels/", page("From the reels: every place from our wine map videos", clip(lead), "/reels/", body,
+                               [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "From the reels", "url": SITE + "/reels/",
+                                 "isPartOf": {"@id": SITE + "/#website"}}]))
         urls.append(("/reels/", "daily", "0.8"))
 
     # ---------- id -> page, for the map and the social cards
@@ -698,7 +743,40 @@ def main():
     sm.append("</urlset>")
     open(os.path.join(HERE, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(sm) + "\n")
     open(os.path.join(HERE, "robots.txt"), "w", encoding="utf-8").write(f"User-agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: {SITE}/sitemap.xml\n")
-    print(f"pages: {len(urls)} urls, sitemap.xml, robots.txt")
+    n_places, n_countries = counts
+    top = [("france", "France"), ("italy", "Italy"), ("germany", "Germany"), ("spain", "Spain"), ("switzerland", "Switzerland"),
+           ("united-states", "United States"), ("australia", "Australia")]
+    llms = [
+        "# Open Wine Atlas", "",
+        f"> An open, interactive map of the world's wine appellations, crus and vineyard sites, built only from official registers "
+        f"and open data. {n_places:,} places in {n_countries} countries, each with its official outline, grape rules, terrain, bedrock, "
+        "climate and vintages.", "",
+        "Open Wine Atlas is a reference for wine students and wine professionals. Every outline and rule comes from a public source, "
+        "named with its licence on each place page.", "",
+        "## Explore", "",
+        f"- [All wine places]({SITE}/places/): every country and wine region in the atlas",
+    ] + [f"- [{n}]({SITE}/places/{s}/): wine map of {n}" for s, n in top if os.path.isdir(os.path.join(OUT, s))] + [
+        f"- [Wine records]({SITE}/records/): the highest, steepest, largest and northernmost wine places",
+        f"- [From the reels]({SITE}/reels/): every place shown in our videos", "",
+        "## What each place page contains", "",
+        "- Official name, type (AOC, DOC, DOCG, DO, PDO, AVA, Einzellage, premier cru, grand cru), parent region, date of protection",
+        "- Outline area and vineyard area, centre coordinates, distance to nearby towns",
+        "- Terrain measured on elevation data: elevation range, mean elevation, mean slope, main exposure",
+        "- Grape rules, bedrock, communes, neighbouring places, vintages",
+        "- Sources and their licences", "",
+        "## Sources", "",
+        "- EU register of geographical indications",
+        "- INAO, Délimitation parcellaire des AOC viticoles (Licence Ouverte 2.0)",
+        "- US TTB American Viticultural Areas (27 CFR part 9), digitised by the UC Davis Library",
+        "- swisstopo and BFS GEOSTAT",
+        "- OpenStreetMap (ODbL)",
+        "- GLiM global lithological map (Hartmann and Moosdorf, 2012)", "",
+        "## Contact", "",
+        "- hello@openwineatlas.com",
+        "- Instagram and Pinterest: @openwineatlas", "",
+    ]
+    open(os.path.join(HERE, "llms.txt"), "w", encoding="utf-8").write("\n".join(llms))
+    print(f"pages: {len(urls)} urls, sitemap.xml, robots.txt, llms.txt")
 
 
 if __name__ == "__main__":
