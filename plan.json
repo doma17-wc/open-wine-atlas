@@ -451,8 +451,9 @@
    "series": "",
    "not_before": "2026-11-19",
    "why": "Bordeaux study path: the Left Bank commune with the most 1855 classified growths, deep gravel, Cabernet Sauvignon",
-   "status": "planned",
-   "note": "Added 2026-11-18 and announced as next in the Pomerol outro. Slot 17:50. Check the 1855 count in the atlas bxcc data."
+   "status": "posted",
+   "note": "Added 2026-11-18 and announced as next in the Pomerol outro. Slot 17:50. Check the 1855 count in the atlas bxcc data. Made 2026-11-19. Hook '21 of the 61 classified growths' from atlas 1855 data (21 also in INAO and EU OJ). Climate: no Météo-France fiche inside Margaux; Bordeaux-Mérignac 33281001 (47 m, 22 km S) for rain, sun and heat, Pauillac 33314005 (26 m, 22 km N) for rain comparison, both 1991-2020. Soils and grapes from the PDO single document, EU OJ C 254 of 19.7.2023 (INAO extranet PDF blocked for fetching).",
+   "slot": "2026-11-19T17:50+01:00"
   },
   {
    "slug": "deep-pommard",

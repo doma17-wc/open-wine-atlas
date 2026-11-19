@@ -1,0 +1,266 @@
+{
+ "slug": "deep-margaux",
+ "place": "Margaux",
+ "atlas_id": "fr-inao-a52",
+ "made": "2026-11-19",
+ "hook": {
+  "text": "21 of the 61 classified growths.",
+  "source": "Open Wine Atlas details-fr.json estates (1855 red classification: Margaux 21 of 61); INAO product page and EU OJ C 254/2023 single document both say 21 crus classés en 1855",
+  "urls": [
+   "web/data/details-fr.json",
+   "https://www.inao.gouv.fr/produit/margaux-17485",
+   "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf"
+  ]
+ },
+ "station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "lat": "44°49'50\"N",
+  "lon": "0°41'28\"W",
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "No Météo-France fiche found inside the Margaux AOC; Mérignac and Pauillac are 22.2 and 22.5 km from the atlas centre of Margaux, on either side."
+ },
+ "comparison_station": {
+  "name": "Pauillac",
+  "id": "33314005",
+  "height_m": 26,
+  "lat": "45°12'51\"N",
+  "lon": "0°46'58\"W",
+  "service": "Météo-France",
+  "period": "1991-2020 (precipitation)",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33314005.pdf"
+ },
+ "monthly": {
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9,
+  "pauillac_precip_mm": [
+   87.3,
+   60.2,
+   56.7,
+   67.4,
+   61,
+   59.2,
+   42,
+   53.7,
+   70,
+   88.2,
+   110.9,
+   100.4
+  ],
+  "pauillac_precip_year": 857,
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ],
+  "merignac_sun_year": 2069.8,
+  "merignac_tmax": [
+   10.5,
+   12,
+   15.5,
+   18,
+   21.7,
+   25,
+   27.1,
+   27.6,
+   24.2,
+   19.6,
+   14.1,
+   11
+  ],
+  "merignac_tmin": [
+   3.7,
+   3.6,
+   5.8,
+   8,
+   11.4,
+   14.6,
+   16.2,
+   16.3,
+   13.3,
+   10.7,
+   6.7,
+   4.4
+  ],
+  "merignac_tmean": [
+   7.1,
+   7.8,
+   10.7,
+   13,
+   16.6,
+   19.8,
+   21.7,
+   21.9,
+   18.8,
+   15.2,
+   10.4,
+   7.7
+  ],
+  "cross_check": "Mérignac monthly and annual values identical to facts/deep-pauillac.json, deep-sauternes.json and deep-saint-emilion.json (read from the same fiche on earlier days); Pauillac identical to facts/deep-pauillac.json."
+ },
+ "derived": {
+  "dist_margaux_to_merignac_km": {
+   "value": 22.2,
+   "how": "haversine from atlas Margaux centre (45.02898,-0.66621) to Mérignac station 44°49'50\"N 0°41'28\"W"
+  },
+  "dist_margaux_to_pauillac_station_km": {
+   "value": 22.5,
+   "how": "haversine to Pauillac station 45°12'51\"N 0°46'58\"W"
+  },
+  "merignac_precip_apr_oct_mm": {
+   "value": 486.9,
+   "how": "sum Apr-Oct Mérignac"
+  },
+  "pauillac_precip_apr_oct_mm": {
+   "value": 441.5,
+   "how": "sum Apr-Oct Pauillac"
+  },
+  "precip_diff_mer_minus_pau_mm": {
+   "value": 67.9,
+   "how": "924.9-857"
+  },
+  "merignac_tmean_apr_oct_C": {
+   "value": 18.14,
+   "how": "mean of Apr-Oct monthly mean temperatures, Mérignac"
+  },
+  "merignac_sun_apr_sep_h": {
+   "value": 1358.1,
+   "how": "sum Apr-Sep"
+  },
+  "checks": {
+   "P_sum": 924.9,
+   "PP_sum": 857.0,
+   "S_sum": 2069.9
+  },
+  "atlas_1855_red_total": {
+   "value": 61,
+   "how": "count of estates labelled 1855 (1er..5e, excluding Sauternes/Barsac) in details-fr.json estates: Margaux 21, Pauillac 18, Saint-Julien 11, Saint-Estèphe 5, Haut-Médoc 5, Pessac-Léognan 1"
+  },
+  "atlas_third_growths_total": {
+   "value": 14,
+   "how": "count of '1855 · 3e' labels in details-fr.json estates"
+  },
+  "margaux_tiers": {
+   "value": {
+    "1er": 1,
+    "2e": 5,
+    "3e": 10,
+    "4e": 3,
+    "5e": 2
+   },
+   "how": "Margaux estates in details-fr.json by label"
+  }
+ },
+ "claims": [
+  {
+   "claim": "21 red classified growths of 1855 in Margaux, of 61; Pauillac 18, Saint-Julien 11",
+   "source": "Open Wine Atlas details-fr.json estates; 21 also in INAO product page and EU OJ",
+   "urls": [
+    "web/data/details-fr.json",
+    "https://www.inao.gouv.fr/produit/margaux-17485",
+    "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf"
+   ]
+  },
+  {
+   "claim": "10 of the 14 third growths; 1 first, 5 second, 3 fourth, 2 fifth",
+   "source": "Open Wine Atlas details-fr.json estates labels",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "average height 15 m, highest 34 m",
+   "value": "terrain e=[2,15,34,7,20]",
+   "source": "Open Wine Atlas terrain",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "croupes: terraces and mounds of Garonne fluvial gravel between 6 and 33 m, on the left bank of the Gironde estuary",
+   "source": "Margaux PDO single document, EU OJ C 254 of 19.7.2023 (2023/C 254/10), point 8",
+   "url": "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf"
+  },
+  {
+   "claim": "gravel drains freely; Cabernet Sauvignon is late-ripening",
+   "source": "Open Wine Atlas Study, Bordeaux path lesson 1 section 1",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Cabernet Sauvignon covers nearly 60% of the vineyard; Merlot rarely more than 30% of blends",
+   "value": "occupe près de 60 % / ne représente que rarement plus de 30 % des assemblages",
+   "source": "EU OJ C 254/2023 single document",
+   "url": "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf"
+  },
+  {
+   "claim": "red still wines only; minimum 7,000 vines/ha; maximum yield 63 hl/ha",
+   "source": "EU OJ C 254/2023 single document; Open Wine Atlas details-fr.json (max_yield 63, density 7000)",
+   "url": "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf"
+  },
+  {
+   "claim": "Margaux is the southernmost of the four great Médoc communes; most classified growths of any commune",
+   "source": "Open Wine Atlas Study (used as background, not on screen)",
+   "url": "web/data/study.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "How many 1855 classified growths are in Margaux?",
+   "options": [
+    "A 5",
+    "B 18",
+    "C 21"
+   ],
+   "answer": "C 21",
+   "source": "atlas details-fr.json, INAO"
+  },
+  {
+   "q": "Which rank holds most of Margaux's growths?",
+   "options": [
+    "A First",
+    "B Third",
+    "C Fifth"
+   ],
+   "answer": "B Third (10 of them)",
+   "source": "atlas details-fr.json"
+  },
+  {
+   "q": "Which grape covers about 60% of the vineyard?",
+   "options": [
+    "A Merlot",
+    "B Cabernet Sauvignon",
+    "C Petit Verdot"
+   ],
+   "answer": "B Cabernet Sauvignon",
+   "source": "EU OJ C 254/2023"
+  }
+ ],
+ "dropped": [
+  "Vineyard area in hectares: not in the EU single document or INAO page (atlas area_ha 1,873.8 is the delimited outline, not vines)",
+  "Number of communes: INAO page says 5, OJ lists 4 (Margaux-Cantenac merged): left out",
+  "Castets added in 2023 (5% of plantings): left out to keep the grapes card short",
+  "Margaux own weather station: none found, used the two official stations 22 km either side",
+  "Hook 'most classified growths of any commune' kept only as numbers (21 vs 18), since the Pauillac spec claims otherwise"
+ ]
+}

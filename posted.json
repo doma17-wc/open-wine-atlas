@@ -446,6 +446,24 @@
     "web/data/details-fr.json",
     "web/data/study.json"
    ]
+  },
+  {
+   "slug": "deep-margaux",
+   "place": "Margaux",
+   "slot": "2026-11-19T17:50+01:00",
+   "hook": "21 of the 61 classified growths.",
+   "classic": true,
+   "style": "Fast 2 s fly-in from the Gironde (no globe), hook on screen from frame 0; layers Place, Gravel, Rain, Sun, Heat, Grapes (Soil folded into Gravel, Heat back); place shot shows the 1855 estate markers; 3D shot terrain 4.0 looking across the Gironde at the Margaux gravel, alt tint plus Slope, bearing 228 to 248; new wide Médoc climate shot with two station markers either side of Margaux (Pauillac and Mérignac), rain as a two-station months comparison; music dusk seed 23; voice bf_emma.",
+   "voice": "bf_emma",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-4358972880631346735",
+   "sources": [
+    "https://winewitandwisdomswe.com/wp-content/uploads/2023/07/EU-Official-Journal%e2%80%94Margaux-AOC%e2%80%94July-2023.pdf (EU OJ C 254, 19.7.2023)",
+    "https://www.inao.gouv.fr/produit/margaux-17485",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33314005.pdf",
+    "web/data/details-fr.json",
+    "web/data/study.json"
+   ]
   }
  ]
 }

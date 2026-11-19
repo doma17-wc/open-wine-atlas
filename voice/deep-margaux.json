@@ -1,0 +1,138 @@
+{
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "lines": [
+  {
+   "i": 0,
+   "seg_t0": -0.1,
+   "seg_t1": 3.6,
+   "start": 0.15,
+   "dur": 2.77,
+   "avail": 3.15,
+   "speed": 1.0,
+   "text": "Twenty-one of the sixty-one classified growths.",
+   "phonemes": "twˈɛntiwˈɒn ɒvðə sˈɪkstiwˈɒn klˈasɪfˌaɪd ɡɹˈəʊθs."
+  },
+  {
+   "i": 1,
+   "seg_t0": 3.9,
+   "seg_t1": 8.0,
+   "start": 4.05,
+   "dur": 3.46,
+   "avail": 3.65,
+   "speed": 1.0,
+   "text": "The reds ranked in eighteen fifty-five. Pauillac has eighteen.",
+   "phonemes": "ðə ɹˈɛdz ɹˈaŋkt ɪn ˈeɪtiːn fˈɪftifˈaɪv. pəʊjˈæk hɐz ˈeɪtiːn."
+  },
+  {
+   "i": 2,
+   "seg_t0": 8.1,
+   "seg_t1": 11.4,
+   "start": 8.25,
+   "dur": 2.33,
+   "avail": 2.85,
+   "speed": 1.0,
+   "text": "Ten of the fourteen third growths are here.",
+   "phonemes": "tˈɛn ɒvðə fˈɔːtiːn θˈɜːd ɡɹˈəʊθs ɑː hˈiə."
+  },
+  {
+   "i": 3,
+   "seg_t0": 11.7,
+   "seg_t1": 15.4,
+   "start": 11.85,
+   "dur": 2.24,
+   "avail": 3.25,
+   "speed": 1.0,
+   "text": "Low land. Fifteen metres on average.",
+   "phonemes": "lˈəʊ lˈand. fˈɪftiːn mˈiːtəz ˌɒn ˈavɹɪdʒ."
+  },
+  {
+   "i": 4,
+   "seg_t0": 15.5,
+   "seg_t1": 19.4,
+   "start": 15.65,
+   "dur": 2.65,
+   "avail": 3.45,
+   "speed": 1.0,
+   "text": "Vines on croupes: mounds of Garonne gravel.",
+   "phonemes": "vˈaɪnz ˌɒn kɹˈuːps: mˈaʊndz ɒv ɡaɹˈɒn ɡɹˈavəl."
+  },
+  {
+   "i": 5,
+   "seg_t0": 19.7,
+   "seg_t1": 26.5,
+   "start": 19.85,
+   "dur": 6.25,
+   "avail": 6.35,
+   "speed": 1.0,
+   "text": "Mérignac, twenty-two kilometres south, gets nine hundred and twenty-five millimetres. Pauillac gets less.",
+   "phonemes": "meɪɹiːnjˈæk, twˈɛntitˈuː kˈɪləmˌiːtəz sˈaʊθ, ɡˈɛts nˈaɪn hˈʌndɹɪd and twˈɛntifˈaɪv mˈɪlɪmˌiːtəz. pəʊjˈæk ɡˈɛts lˈɛs."
+  },
+  {
+   "i": 6,
+   "seg_t0": 26.8,
+   "seg_t1": 32.0,
+   "start": 26.95,
+   "dur": 2.52,
+   "avail": 4.75,
+   "speed": 1.0,
+   "text": "Two thousand and seventy hours of sun a year.",
+   "phonemes": "tˈuː θˈaʊzənd and sˈɛvənti ˈaʊəz ɒv sˈʌn ɐ jˈiə."
+  },
+  {
+   "i": 7,
+   "seg_t0": 32.3,
+   "seg_t1": 38.0,
+   "start": 32.45,
+   "dur": 4.39,
+   "avail": 5.25,
+   "speed": 1.0,
+   "text": "Eighteen degrees from April to October. A long season for late Cabernet.",
+   "phonemes": "ˈeɪtiːn dɪɡɹˈiːz fɹɒm ˈeɪpɹəl tʊ ɒktˈəʊbə. ɐ lˈɒŋ sˈiːzən fɔː lˈeɪt kˌabənˈeɪ."
+  },
+  {
+   "i": 8,
+   "seg_t0": 38.3,
+   "seg_t1": 42.4,
+   "start": 38.45,
+   "dur": 3.11,
+   "avail": 3.65,
+   "speed": 1.0,
+   "text": "Cabernet Sauvignon: nearly sixty percent of the vines.",
+   "phonemes": "kˌabənˈeɪ sˈəʊvinjˌɒn: nˌiəli sˈɪksti pəsˈɛnt ɒvðə vˈaɪnz."
+  },
+  {
+   "i": 9,
+   "seg_t0": 42.5,
+   "seg_t1": 46.0,
+   "start": 42.65,
+   "dur": 2.97,
+   "avail": 3.05,
+   "speed": 1.1,
+   "text": "Red only. Seven thousand vines a hectare, at least.",
+   "phonemes": "ɹˈɛd ˈəʊnli. sˈɛvən θˈaʊzənd vˈaɪnz ɐ hˈɛkteə, at lˈiːst."
+  },
+  {
+   "i": 10,
+   "seg_t0": 46.2,
+   "seg_t1": 55.8,
+   "start": 46.35,
+   "dur": 3.41,
+   "avail": 9.15,
+   "speed": 1.0,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "phonemes": "tˈɛst jɔːsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈansəz ɪnðə fˈɜːst kˈɒmɛnt."
+  },
+  {
+   "i": 11,
+   "seg_t0": 55.9,
+   "seg_t1": 60.5,
+   "start": 56.05,
+   "dur": 2.56,
+   "avail": 4.0,
+   "speed": 1.0,
+   "text": "Study it free at open wine atlas dot com.",
+   "phonemes": "stˈʌdi ɪt fɹˈiː at ˈəʊpən wˈaɪn ˈatləs dˈɒt kˈɒm."
+  }
+ ]
+}

@@ -1,0 +1,528 @@
+{
+ "slug": "deep-margaux",
+ "id": "fr-inao-a52",
+ "duration": 60.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  23
+ ],
+ "markers": [
+  {
+   "lng": -0.6911,
+   "lat": 44.8306,
+   "label": "Bordeaux-Mérignac · 47 m",
+   "shots": [
+    3
+   ]
+  },
+  {
+   "lng": -0.7828,
+   "lat": 45.2142,
+   "label": "Pauillac station · 26 m",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     -0.8,
+     45.05,
+     8.6,
+     0,
+     0
+    ],
+    [
+     2.0,
+     -0.675,
+     45.028,
+     10.9,
+     0,
+     8
+    ]
+   ],
+   "labels": true,
+   "fps": 15
+  },
+  {
+   "name": "place",
+   "dur": 10.0,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     -0.675,
+     45.028,
+     10.9,
+     0,
+     8
+    ],
+    [
+     10.0,
+     -0.675,
+     45.028,
+     11.2,
+     -10,
+     28
+    ]
+   ],
+   "layers": {},
+   "labels": true,
+   "fps": 6
+  },
+  {
+   "name": "terrain3d",
+   "dur": 8.5,
+   "fps": 6,
+   "terrain": 4.0,
+   "pad": {
+    "top": 0,
+    "bottom": 340
+   },
+   "cam": [
+    [
+     0,
+     -0.675,
+     45.03,
+     12.75,
+     228,
+     62
+    ],
+    [
+     8.5,
+     -0.675,
+     45.03,
+     12.9,
+     248,
+     65
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 19.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 430
+   },
+   "cam": [
+    [
+     0,
+     -0.7,
+     45.022,
+     7.22,
+     0,
+     0
+    ],
+    [
+     19.0,
+     -0.7,
+     45.022,
+     7.28,
+     3,
+     5
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     -0.672,
+     45.03,
+     11.8,
+     -30,
+     42
+    ],
+    [
+     8.5,
+     -0.672,
+     45.03,
+     11.95,
+     -22,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 15.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -0.68,
+     45.03,
+     10.5,
+     0,
+     0
+    ],
+    [
+     15.0,
+     -0.68,
+     45.03,
+     10.65,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.6,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Margaux",
+   "sub": "21 of the 61<br>classified growths."
+  },
+  {
+   "kind": "chips",
+   "t0": 3.8,
+   "t1": 46.0,
+   "items": [
+    "Place",
+    "Gravel",
+    "Rain",
+    "Sun",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     3.8,
+     11.6
+    ],
+    [
+     11.6,
+     19.6
+    ],
+    [
+     19.6,
+     26.7
+    ],
+    [
+     26.7,
+     32.2
+    ],
+    [
+     32.2,
+     38.2
+    ],
+    [
+     38.2,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 3.9,
+   "t1": 8.0,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (1855 Classification) · INAO",
+   "n": "21",
+   "u": "of 61",
+   "c": "red classified growths of 1855 lie in Margaux. Pauillac has 18, Saint-Julien 11."
+  },
+  {
+   "kind": "card",
+   "t0": 8.1,
+   "t1": 11.4,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (1855 Classification)",
+   "n": "10",
+   "u": "of 14",
+   "c": "third growths are in Margaux, plus 1 first, 5 second, 3 fourth and 2 fifth."
+  },
+  {
+   "kind": "card",
+   "t0": 11.7,
+   "t1": 15.4,
+   "kicker": "Layer 2 · Gravel",
+   "src": "Open Wine Atlas terrain",
+   "n": "15",
+   "u": "m",
+   "c": "average height. The highest ground reaches only 34&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 15.5,
+   "t1": 19.4,
+   "kicker": "Layer 2 · Gravel",
+   "src": "Margaux PDO specification (EU OJ C 254, 2023)",
+   "nt": "<i>Croupes</i>: low mounds of Garonne gravel, 6 to 33&nbsp;m high, beside the Gironde estuary."
+  },
+  {
+   "kind": "card",
+   "t0": 19.7,
+   "t1": 26.5,
+   "kicker": "Layer 3 · Rain",
+   "src": "Météo-France normals 1991–2020",
+   "n": "925",
+   "u": "mm",
+   "count": {
+    "v": 924.9,
+    "d": 0
+   },
+   "c": "a year at Bordeaux-Mérignac, 22&nbsp;km south. Pauillac, 22&nbsp;km north: 857&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "b": [
+     87.3,
+     60.2,
+     56.7,
+     67.4,
+     61,
+     59.2,
+     42,
+     53.7,
+     70,
+     88.2,
+     110.9,
+     100.4
+    ],
+    "max": 125,
+    "bands": [],
+    "hot": [
+     10
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Mérignac 47&nbsp;m &nbsp; ▢ Pauillac 26&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 26.8,
+   "t1": 32.0,
+   "kicker": "Layer 4 · Sun",
+   "src": "Météo-France, Bordeaux-Mérignac 1991–2020",
+   "n": "2,070",
+   "u": "h",
+   "count": {
+    "v": 2069.8,
+    "d": 0
+   },
+   "c": "of sunshine a year. July alone: 256&nbsp;h.",
+   "chart": {
+    "type": "months",
+    "a": [
+     89.8,
+     117.4,
+     170.2,
+     186,
+     220.8,
+     237.7,
+     256,
+     248.8,
+     208.8,
+     150.3,
+     100,
+     84.1
+    ],
+    "max": 290,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [
+     {
+      "m": 6,
+      "v": 256,
+      "text": "256"
+     }
+    ],
+    "legend": "<span style='color:#e2b45f'>■</span> Mérignac · hours of sun per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 32.3,
+   "t1": 38.0,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France, Bordeaux-Mérignac 1991–2020",
+   "n": "18.1",
+   "u": "°C",
+   "count": {
+    "v": 18.14,
+    "d": 1
+   },
+   "c": "average from April to October, a long, mild season for late Cabernet Sauvignon.",
+   "chart": {
+    "type": "range",
+    "max": [
+     10.5,
+     12,
+     15.5,
+     18,
+     21.7,
+     25,
+     27.1,
+     27.6,
+     24.2,
+     19.6,
+     14.1,
+     11
+    ],
+    "min": [
+     3.7,
+     3.6,
+     5.8,
+     8,
+     11.4,
+     14.6,
+     16.2,
+     16.3,
+     13.3,
+     10.7,
+     6.7,
+     4.4
+    ],
+    "hl": 6,
+    "lo": 0,
+    "hi": 32,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 16.2 to 27.1",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 38.3,
+   "t1": 42.4,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Margaux PDO specification (EU OJ C 254, 2023)",
+   "n": "60",
+   "u": "%",
+   "c": "of the vineyard is Cabernet Sauvignon. Merlot rarely makes more than 30% of a blend."
+  },
+  {
+   "kind": "card",
+   "t0": 42.5,
+   "t1": 46.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Margaux PDO specification (EU OJ C 254, 2023)",
+   "n": "7,000",
+   "u": "vines/ha",
+   "c": "at least. Red wine only, 63&nbsp;hl/ha at most."
+  },
+  {
+   "kind": "card",
+   "t0": 46.2,
+   "t1": 49.4,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "How many 1855 classified growths are in Margaux?<br>A&nbsp;&nbsp;5<br>B&nbsp;&nbsp;18<br>C&nbsp;&nbsp;21"
+  },
+  {
+   "kind": "card",
+   "t0": 49.5,
+   "t1": 52.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which rank holds most of Margaux's growths?<br>A&nbsp;&nbsp;First<br>B&nbsp;&nbsp;Third<br>C&nbsp;&nbsp;Fifth"
+  },
+  {
+   "kind": "card",
+   "t0": 52.7,
+   "t1": 55.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Which grape covers about 60% of the vineyard?<br>A&nbsp;&nbsp;Merlot<br>B&nbsp;&nbsp;Cabernet Sauvignon<br>C&nbsp;&nbsp;Petit Verdot"
+  },
+  {
+   "kind": "outro",
+   "t0": 55.9,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Margaux",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Pommard",
+   "srcs": "Sources: Margaux PDO specification (EU OJ) · INAO · Météo-France normals · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Margaux",
+  "sub": "21 of the 61<br>classified growths."
+ }
+}
