@@ -1,8 +1,12 @@
 """Original ambient score of any length for the deep dives: slow plucked melody over warm pads, long reverb.
 usage: music2.py preset out.wav seconds [seed]
 Presets pick the scale and chords: japan (in scale on D), warm (D major), dusk (E minor), alpine (G lydian), south (A dorian).
+Since 20 Nov 2026 (asked by Stefano) there is a second style, an original harpsichord waltz with a warm vintage feel
+(own chords and melody, not a copy of any song). It is now the main style: every seed that is not a multiple of 3 gives the
+waltz, in a key chosen by the preset; seeds that are multiples of 3 give the older ambient score. Preset "harpsi" is always
+the waltz. Set OWA_MUSIC=ambient or OWA_MUSIC=harpsi to force one style. Atlas videos only: runs started by wc.py stay ambient.
 Everything is synthesised here (no samples), so the music is original and free to publish."""
-import sys
+import os, sys
 import numpy as np
 from scipy.signal import fftconvolve, butter, sosfilt
 from scipy.io import wavfile
@@ -28,8 +32,6 @@ PRESETS = {
     "south": ([[45, 52, 57, 60, 64, 66], [43, 50, 55, 59, 62, 67], [41, 48, 53, 57, 60, 64], [40, 47, 52, 56, 59, 64]],
               [64, 66, 67, 69, 71, 72, 74, 76], 6.0, 1.5),
 }
-chords, scale, CH, DEC = PRESETS[preset]
-
 def env(start, length, a, r):
     e = np.zeros(N); i0 = int(max(0, start) * SR); i1 = min(N, int((start + length) * SR))
     if i0 >= N or i1 <= i0: return e
@@ -37,6 +39,98 @@ def env(start, length, a, r):
     att = np.clip(seg / a, 0, 1); rel = np.clip((length - seg) / r, 0, 1)
     e[i0:i1] = np.sin(att * np.pi / 2) ** 2 * np.sin(rel * np.pi / 2) ** 2
     return e
+
+
+def harpsi():
+    """Original harpsichord waltz: plucked arpeggios in 3/4, a slow tune on top, soft bass and organ underneath."""
+    beat = float(rng.choice([0.33, 0.345, 0.36])); bar = 3 * beat
+    # (bass, chord tones) in D minor; two bars per chord
+    prog = [(38, [62, 65, 69]), (34, [62, 65, 70]), (31, [62, 67, 70]), (33, [61, 64, 69]),
+            (38, [62, 65, 69]), (41, [60, 65, 69]), (36, [60, 64, 67]), (33, [61, 64, 67])]
+    rot = int(rng.integers(0, 2)) * 4
+    prog = prog[rot:] + prog[:rot]
+    shapes = [[0, 1, 2, 1, 2, 1], [0, 2, 1, 2, 0, 1], [0, 1, 2, 2, 1, 0]]
+    L = np.zeros(N); R = np.zeros(N); low = np.zeros(N)
+    def pluck(st, n, vel, pan, dec=0.55):
+        i0 = int(st * SR); ln = min(N - i0, int(2.2 * SR))
+        if i0 < 0 or ln <= 0: return
+        s = np.arange(ln) / SR; f = hz(n + TR); v = np.zeros(ln)
+        for h in range(1, 15):
+            if f * h > 9000: break
+            v += (1.0 / h ** 0.8) * np.sin(2 * np.pi * f * h * s + 0.3 * h) * np.exp(-s * (1 / dec + 0.55 * h))
+        v += 0.22 * np.sin(2 * np.pi * 2 * f * s) * np.exp(-s / (dec * 0.6))  # quiet octave stop
+        click = rng.standard_normal(min(ln, 220)) * np.exp(-np.arange(min(ln, 220)) / 40.0) * 0.25
+        v[:len(click)] += click
+        v *= np.minimum(1, s / 0.0015) * vel
+        L[i0:i0 + ln] += v * (1 - pan); R[i0:i0 + ln] += v * pan
+    nb = int(DUR / bar) + 1
+    mel_scale = [62, 64, 65, 67, 69, 70, 72, 74, 76, 77, 79, 81]
+    idx = 6
+    for b in range(nb):
+        bass, tones = prog[(b // 2) % len(prog)]
+        t0 = 0.12 + b * bar
+        sh = shapes[int(rng.integers(0, len(shapes)))] if b % 2 else shapes[0]
+        for e in range(6):
+            st = t0 + e * beat / 2 + float(rng.normal(0, 0.004))
+            if e == 0:
+                pluck(st, bass + 12, 0.34, 0.42, 0.7)
+                i0 = int(st * SR); ln = min(N - i0, int(bar * SR))
+                if ln > 0:
+                    s = np.arange(ln) / SR
+                    low[i0:i0 + ln] += np.sin(2 * np.pi * hz(bass + TR) * s) * np.minimum(1, s / 0.02) * np.exp(-s / 0.9) * 0.3
+            else:
+                pluck(st, tones[sh[e]], 0.2 if e % 2 else 0.24, 0.5 + 0.18 * (sh[e] - 1), 0.45)
+        # tune: one to three notes a bar, landing on a chord tone on the downbeat
+        if t0 < DUR - 2.5 and b >= 1:
+            on = [x for x in range(len(mel_scale)) if (mel_scale[x] - tones[0]) % 12 in {(q - tones[0]) % 12 for q in tones}]
+            near = min(on, key=lambda x: abs(x - idx) + 0.3 * abs(x - 7))
+            idx = near; adj = 1 if any((q % 12) == 1 for q in tones) and mel_scale[idx] % 12 == 0 else 0
+            pluck(t0, mel_scale[idx] + 12 + adj, 0.3, 0.6, 0.9)
+            kind = int(rng.integers(0, 4))
+            if kind >= 1:
+                idx = int(np.clip(idx + rng.choice([-1, 1, 2, -2]), 2, len(mel_scale) - 2))
+                n2 = mel_scale[idx] + 12
+                if n2 % 12 == 0 and any((q % 12) == 1 for q in tones): n2 += 1
+                pluck(t0 + (2 if kind == 1 else 1) * beat, n2, 0.24, 0.62, 0.8)
+            if kind == 3:
+                idx = int(np.clip(idx + rng.choice([-1, 1]), 2, len(mel_scale) - 2))
+                n3 = mel_scale[idx] + 12
+                if n3 % 12 == 0 and any((q % 12) == 1 for q in tones): n3 += 1
+                pluck(t0 + 2 * beat, n3, 0.22, 0.64, 0.8)
+    # soft organ bed, two bars per chord
+    bed = np.zeros(N)
+    for c in range(nb // 2 + 1):
+        bass, tones = prog[c % len(prog)]
+        e = env(0.12 + c * 2 * bar - 0.1, 2 * bar + 0.2, 0.25, 0.35)
+        for n in tones:
+            f = hz(n - 12 + TR)
+            bed += (np.sin(2 * np.pi * f * t) + 0.3 * np.sin(2 * np.pi * 2 * f * t)) * e * 0.035
+    bed = sosfilt(butter(2, 1200, "low", fs=SR, output="sos"), bed)
+    dry = np.stack([L, R], axis=1)
+    dry = sosfilt(butter(2, 7000, "low", fs=SR, output="sos"), dry, axis=0)  # take the edge off, vintage tape feel
+    dry += (bed + low)[:, None]
+    Lr = int(1.4 * SR); s = np.arange(Lr) / SR
+    ir = [sosfilt(butter(1, 4200, "low", fs=SR, output="sos"), rng.standard_normal(Lr) * np.exp(-s / 0.35)) for _ in range(2)]
+    wet = np.stack([fftconvolve(dry[:, c], ir[c])[:N] for c in range(2)], axis=1)
+    wet /= np.max(np.abs(wet)) + 1e-9
+    mix = 0.8 * dry / (np.max(np.abs(dry)) + 1e-9) + 0.22 * wet
+    mix = np.tanh(mix * 1.6) / np.tanh(1.6)
+    mix *= (np.clip(t / 0.25, 0, 1) * np.clip((DUR - t) / 2.5, 0, 1))[:, None]
+    mix = mix / np.max(np.abs(mix)) * 0.84
+    wavfile.write(out, SR, (mix * 32767).astype(np.int16))
+    print("wrote", out, DUR, "s, harpsi waltz, beat", beat)
+
+TR = {"harpsi": 0, "japan": 0, "warm": 2, "dusk": -3, "alpine": 5, "south": -2}.get(preset, 0)
+FORCE = os.environ.get("OWA_MUSIC", "")
+if not FORCE:
+    # the waltz is for the atlas' own videos; renders started by Winecore's wc.py keep the ambient score
+    try:
+        if "wc.py" in open(f"/proc/{os.getppid()}/cmdline", "rb").read().decode("utf-8", "ignore"): FORCE = "ambient"
+    except OSError: pass
+if FORCE != "ambient" and (preset == "harpsi" or FORCE == "harpsi" or seed % 3 != 0):
+    harpsi(); sys.exit(0)
+if preset == "harpsi": preset = "warm"
+chords, scale, CH, DEC = PRESETS[preset]
 
 pad = np.zeros((N, 2)); organ = np.zeros(N)
 k = 0
