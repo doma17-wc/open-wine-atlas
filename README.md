@@ -10,7 +10,7 @@ Separate from the short "Where exactly is…" reels.
 - `plan.json` the queue of upcoming topics with the date they fit (events, harvests, series). `posted.json` what went out.
 - `deep_map.mjs` pass 1: map footage per shot from `web/index.html` of the main branch (headless Chromium). Shots run at 10 fps (6 fps for 3D terrain shots) and are interpolated to 30 fps.
 - `deep_ovl.mjs` pass 2: text and charts as transparent PNG frames at 30 fps. `--at 3,10,25` renders preview stills.
-- `music2.py preset out.wav seconds seed` original score (presets: japan, warm, dusk, alpine, south).
+- `music2.py preset out.wav seconds seed` original score (presets: japan, warm, dusk, alpine, south). Since 20 Nov 2026 Stefano wants a vintage harpsichord waltz feel in the atlas videos: every seed that is not a multiple of 3 now gives that original waltz (the preset sets the key), seeds that are multiples of 3 give the older ambient score. Use the waltz for about two deep dives in three. Preset `harpsi` always gives the waltz. Never use commercial songs. Note `music: waltz` or `music: ambient` in posted.json.
 - `deep_cover.mjs` cover image. `deep_make.py eps/<slug>.json` runs everything and writes `work/<slug>/<slug>.mp4` and `cover.jpg`.
 
 ## Setup
