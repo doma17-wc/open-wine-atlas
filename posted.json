@@ -464,6 +464,25 @@
     "web/data/details-fr.json",
     "web/data/study.json"
    ]
+  },
+  {
+   "slug": "deep-pommard",
+   "place": "Pommard",
+   "slot": "2026-11-20T17:50+01:00",
+   "hook": "28 premiers crus. Not one grand cru.",
+   "classic": true,
+   "style": "2 s fly-in from the Côte de Nuits/Beaune at zoom 9.9 (no globe), hook on screen from frame 0; layers Place, Slope, Soil, Rain, Frost, Grapes (Sun and Heat swapped for Soil and Frost); 3D shot terrain 2.4 looking WNW up the slope over the village with altitude tint plus the Aspect overlay, bearing 284 to 306; climate shot with Savigny station; frost as two-station months comparison; grapes shot pitched 40-46 with Slope overlay; quiz on wide calm shot; music harpsi seed 41.",
+   "music": "waltz",
+   "voice": "af_heart",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=1188892743808797298",
+   "sources": [
+    "https://www.burgundywine.com/appellations/pommard/",
+    "https://www.inao.gouv.fr/produit/pommard-premier-cru-8599",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21590001.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf",
+    "web/data/details-fr.json",
+    "web/data/study.json"
+   ]
   }
  ]
 }

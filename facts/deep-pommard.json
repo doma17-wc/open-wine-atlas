@@ -1,0 +1,246 @@
+{
+ "slug": "deep-pommard",
+ "place": "Pommard",
+ "atlas_id": "fr-inao-a215",
+ "made": "2026-11-20",
+ "hook": {
+  "text": "28 premiers crus. Not one grand cru.",
+  "sources": [
+   {
+    "name": "BIVB (burgundywine.com), Pommard: 'includes 28 premiers crus', 'There are no grands crus'",
+    "url": "https://www.burgundywine.com/appellations/pommard/"
+   },
+   {
+    "name": "INAO product sheet Pommard premier cru: 28 lieux-dits classés en premiers crus",
+    "url": "https://www.inao.gouv.fr/produit/pommard-premier-cru-8599"
+   },
+   {
+    "name": "Open Wine Atlas search.json: 28 Pommard premier cru vineyards (fr-inao-d1026..d1053)",
+    "url": "web/data/search.json"
+   }
+  ],
+  "note": "A grand cru application for Rugiens and Epenots has been with INAO since autumn 2013 (Vins et Millésimes, 8 Jul 2014); BIVB page (2025) still says no grands crus. Not mentioned in video."
+ },
+ "topical": "No dated event this week; plan 'why' was the Burgundy study path, kept as is.",
+ "station": {
+  "name": "Savigny-lès-Beaune",
+  "id": "21590001",
+  "height_m": 246,
+  "lat": 47.0561,
+  "lon": 4.8367,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "sun": "not available at this station",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21590001.pdf",
+  "edited": "2026-06-06"
+ },
+ "comparison_station": {
+  "name": "Dijon-Longvic",
+  "id": "21473001",
+  "height_m": 219,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf",
+  "sun_year_h": 1890.0
+ },
+ "monthly": {
+  "precip_mm": [
+   58.9,
+   49.2,
+   52,
+   57.3,
+   69.2,
+   62.1,
+   67.4,
+   56.3,
+   55.3,
+   76,
+   80.3,
+   68.9
+  ],
+  "precip_year_printed": 752.9,
+  "frost_days_tn_le0": [
+   14.1,
+   11.9,
+   4.6,
+   0.6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.5,
+   4.9,
+   12.4
+  ],
+  "frost_year_printed": 49.0,
+  "tx": [
+   5.9,
+   7.9,
+   12.8,
+   16.5,
+   20.5,
+   24.5,
+   26.8,
+   26.5,
+   21.9,
+   16.4,
+   10,
+   6.4
+  ],
+  "tn": [
+   0.3,
+   0.6,
+   3.6,
+   6.4,
+   10.4,
+   13.8,
+   15.6,
+   15.3,
+   11.7,
+   8.1,
+   3.7,
+   1
+  ],
+  "dijon_precip_mm": [
+   56.8,
+   42.9,
+   48.2,
+   57.5,
+   76.1,
+   65.8,
+   64.9,
+   62,
+   56.4,
+   73.6,
+   77.6,
+   61.6
+  ],
+  "dijon_precip_year_printed": 743.4,
+  "dijon_frost_days": [
+   16.0,
+   14.6,
+   7.7,
+   2.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1.1,
+   6.5,
+   13.6
+  ],
+  "dijon_frost_year_printed": 61.5
+ },
+ "derived": {
+  "precip_sum_check": 752.9,
+  "precip_apr_oct_mm": {
+   "value": 443.6,
+   "how": "sum(P[3:10])"
+  },
+  "tmean_apr_oct_C": {
+   "value": 16.73,
+   "how": "mean of Apr..Oct monthly mean T"
+  },
+  "frost_fewer_than_dijon": {
+   "value": 12.5,
+   "how": "61.5 - 49.0 (printed annual values)"
+  },
+  "station_to_pommard_km": {
+   "value": 5.77,
+   "how": "haversine sheet coords 47°03'22N 4°50'12E to atlas centre 47.01237, 4.79581"
+  }
+ },
+ "claims": [
+  {
+   "claim": "Pommard is red wine only",
+   "source": "BIVB 'There are no white Pommard wines, only red'; INAO 'uniquement rouge'",
+   "url": "https://www.burgundywine.com/appellations/pommard/"
+  },
+  {
+   "claim": "28 premiers crus, no grands crus",
+   "source": "BIVB; INAO; atlas",
+   "url": "https://www.burgundywine.com/appellations/pommard/"
+  },
+  {
+   "claim": "336 ha delimited AOC area, commune of Pommard",
+   "value": 336.1,
+   "source": "Open Wine Atlas, INAO geodata, details-fr.json fr-inao-a215",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "3.5 km from Beaune",
+   "value": 3.5,
+   "source": "Open Wine Atlas near_town",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "terrain 233 to 378 m, mean 276 m; mean aspect 146° (south-east), dominant S",
+   "value": [
+    233,
+    276,
+    378
+   ],
+   "source": "Open Wine Atlas terrain (Mapterhorn DEM)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Soils: ancient alluvium low down, clay-limestone mid-slope, Oxfordian marls higher; in places red with iron",
+   "source": "BIVB Pommard page (interprofession)",
+   "url": "https://www.burgundywine.com/appellations/pommard/"
+  },
+  {
+   "claim": "Rain 753 mm a year at Savigny-lès-Beaune, 743 mm at Dijon-Longvic",
+   "source": "Météo-France 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21590001.pdf"
+  },
+  {
+   "claim": "49 frost days (Tn<=0) a year at Savigny, 61.5 at Dijon-Longvic; April 0.6 at Savigny",
+   "source": "Météo-France 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21590001.pdf"
+  },
+  {
+   "claim": "Pinot Noir main grape; Chardonnay, Pinot Blanc, Pinot Gris accessory; at least 9,000 vines/ha; max yield 58 hl/ha village, 56 premier cru",
+   "source": "INAO data in the atlas (details-fr.json)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Dijon-Longvic lies further north than Pommard (47°16'N vs 47.01°N); 61.5 frost days is more than sixty",
+   "source": "Météo-France sheet coordinates; atlas centre",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "How many premiers crus does Pommard have?",
+   "options": [
+    "12",
+    "28",
+    "41"
+   ],
+   "answer": "B, 28",
+   "source": "https://www.burgundywine.com/appellations/pommard/"
+  },
+  {
+   "q": "Which colour is Pommard AOC?",
+   "options": [
+    "Red only",
+    "White only",
+    "Red and white"
+   ],
+   "answer": "A, red only",
+   "source": "https://www.burgundywine.com/appellations/pommard/"
+  },
+  {
+   "q": "What turns some Pommard soils red?",
+   "options": [
+    "Iron",
+    "Slate",
+    "Volcanic ash"
+   ],
+   "answer": "A, iron",
+   "source": "https://www.burgundywine.com/appellations/pommard/"
+  }
+ ]
+}

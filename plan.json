@@ -399,10 +399,10 @@
    "place": "Rías Baixas",
    "atlas_id": "es-eupdo-PDO-ES-A1119",
    "series": "",
-   "not_before": "2026-11-21",
+   "not_before": "2026-11-23",
    "why": "Spain study path: Albariño, Atlantic rain, granite and pergola training",
    "status": "planned",
-   "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50."
+   "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50. Moved to 23 Nov on 2026-11-20: Kakheti (14 Nov) and Santorini (15 Nov) fill the 2 non-classic slots until 22 Nov."
   },
   {
    "slug": "deep-rheingau",
@@ -462,18 +462,19 @@
    "series": "",
    "not_before": "2026-11-20",
    "why": "Burgundy study path: Côte de Beaune village of red Pinot Noir, 28 premiers crus, iron-rich clay",
-   "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50. Verify the premier cru count in the INAO data."
+   "status": "posted",
+   "note": "Added 2026-11-18. Slot 17:50. Verify the premier cru count in the INAO data.",
+   "slot": "2026-11-20T17:50+01:00"
   },
   {
    "slug": "deep-brunello",
    "place": "Brunello di Montalcino",
    "atlas_id": "it-eupdo-PDO-IT-A1199",
    "series": "",
-   "not_before": "2026-11-22",
+   "not_before": "2026-11-21",
    "why": "Tuscany study path: 100% Sangiovese, long ageing, the hill of Montalcino",
    "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50."
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 21 Nov on 2026-11-20 (Rías Baixas would be the 3rd non-classic in 7 days)."
   },
   {
    "slug": "deep-vouvray",
@@ -494,6 +495,16 @@
    "why": "Rhône study path: Syrah with up to 20% Viognier on steep schist terraces",
    "status": "planned",
    "note": "Added 2026-11-18. Slot 17:50."
+  },
+  {
+   "slug": "deep-gevrey-chambertin",
+   "place": "Gevrey-Chambertin",
+   "atlas_id": "fr-inao-a182",
+   "series": "",
+   "not_before": "2026-11-29",
+   "why": "Burgundy study path: Côte de Nuits village with nine grands crus including Chambertin",
+   "status": "planned",
+   "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data."
   }
  ]
 }

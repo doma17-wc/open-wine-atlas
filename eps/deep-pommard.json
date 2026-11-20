@@ -1,0 +1,479 @@
+{
+ "slug": "deep-pommard",
+ "id": "fr-inao-a215",
+ "duration": 56.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "harpsi",
+  41
+ ],
+ "markers": [
+  {
+   "lng": 4.8367,
+   "lat": 47.0561,
+   "label": "Savigny-lès-Beaune · 246 m",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.88,
+     47.09,
+     9.9,
+     0,
+     0
+    ],
+    [
+     2.0,
+     4.794,
+     47.0116,
+     12.45,
+     0,
+     10
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "place",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.794,
+     47.0116,
+     12.45,
+     0,
+     10
+    ],
+    [
+     9.0,
+     4.794,
+     47.0116,
+     12.75,
+     12,
+     30
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     4.787,
+     47.0105,
+     13.7,
+     284,
+     62
+    ],
+    [
+     9.0,
+     4.787,
+     47.0105,
+     13.9,
+     306,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 2.4
+  },
+  {
+   "name": "climate",
+   "dur": 14.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 440
+   },
+   "cam": [
+    [
+     0,
+     4.815,
+     47.034,
+     11.75,
+     0,
+     0
+    ],
+    [
+     14.5,
+     4.815,
+     47.034,
+     11.85,
+     -4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 380
+   },
+   "cam": [
+    [
+     0,
+     4.795,
+     47.012,
+     13.2,
+     24,
+     40
+    ],
+    [
+     9.0,
+     4.795,
+     47.012,
+     13.4,
+     34,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 15.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.794,
+     47.0116,
+     11.6,
+     0,
+     0
+    ],
+    [
+     15.0,
+     4.794,
+     47.0116,
+     11.75,
+     4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.4,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Pommard",
+   "sub": "28 premiers crus.<br>Not one grand cru."
+  },
+  {
+   "kind": "chips",
+   "t0": 3.5,
+   "t1": 51.3,
+   "items": [
+    "Place",
+    "Slope",
+    "Soil",
+    "Rain",
+    "Frost",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     3.5,
+     10.5
+    ],
+    [
+     10.5,
+     14.7
+    ],
+    [
+     14.7,
+     18.8
+    ],
+    [
+     18.8,
+     25.7
+    ],
+    [
+     25.7,
+     32.7
+    ],
+    [
+     32.7,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 3.6,
+   "t1": 6.9,
+   "kicker": "Layer 1 · The place",
+   "src": "BIVB · INAO",
+   "n": "28",
+   "u": "premiers crus",
+   "c": "and no grand cru. Pommard is red wine only."
+  },
+  {
+   "kind": "card",
+   "t0": 7.0,
+   "t1": 10.3,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (INAO geodata)",
+   "n": "336",
+   "u": "ha",
+   "count": {
+    "v": 336.1,
+    "d": 0
+   },
+   "c": "of appellation land, 3.5&nbsp;km from Beaune."
+  },
+  {
+   "kind": "card",
+   "t0": 10.6,
+   "t1": 14.6,
+   "kicker": "Layer 2 · Slope",
+   "src": "Open Wine Atlas terrain",
+   "n": "276",
+   "u": "m",
+   "c": "average height, from 233 to 378&nbsp;m. The slope faces south-east."
+  },
+  {
+   "kind": "card",
+   "t0": 14.7,
+   "t1": 18.7,
+   "kicker": "Layer 3 · Soil",
+   "src": "BIVB (Burgundy wine board)",
+   "nt": "Clay-limestone at mid-slope, marls higher up. In places the soil is <i>red with iron</i>."
+  },
+  {
+   "kind": "card",
+   "t0": 18.9,
+   "t1": 25.6,
+   "kicker": "Layer 4 · Rain",
+   "src": "Météo-France normals 1991–2020",
+   "n": "753",
+   "u": "mm",
+   "count": {
+    "v": 752.9,
+    "d": 0
+   },
+   "c": "a year at Savigny-lès-Beaune, 6&nbsp;km north. Dijon: 743&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     58.9,
+     49.2,
+     52,
+     57.3,
+     69.2,
+     62.1,
+     67.4,
+     56.3,
+     55.3,
+     76,
+     80.3,
+     68.9
+    ],
+    "b": [
+     56.8,
+     42.9,
+     48.2,
+     57.5,
+     76.1,
+     65.8,
+     64.9,
+     62,
+     56.4,
+     73.6,
+     77.6,
+     61.6
+    ],
+    "max": 90,
+    "bands": [],
+    "hot": [
+     10
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Savigny 246&nbsp;m &nbsp; ▢ Dijon-Longvic 219&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 25.8,
+   "t1": 32.6,
+   "kicker": "Layer 5 · Frost",
+   "src": "Météo-France normals 1991–2020",
+   "n": "49",
+   "u": "frost days",
+   "count": {
+    "v": 49.0,
+    "d": 0
+   },
+   "c": "a year at Savigny (low ≤&nbsp;0&nbsp;°C). Dijon: 61.5.",
+   "chart": {
+    "type": "months",
+    "a": [
+     14.1,
+     11.9,
+     4.6,
+     0.6,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0.5,
+     4.9,
+     12.4
+    ],
+    "b": [
+     16.0,
+     14.6,
+     7.7,
+     2.1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1.1,
+     6.5,
+     13.6
+    ],
+    "max": 18,
+    "bands": [],
+    "hot": [
+     0
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Savigny &nbsp; ▢ Dijon-Longvic &nbsp;·&nbsp; days per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 32.9,
+   "t1": 37.1,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO rules (Open Wine Atlas)",
+   "n": "9,000",
+   "u": "vines/ha",
+   "c": "at least. Pinot Noir is the main grape."
+  },
+  {
+   "kind": "card",
+   "t0": 37.2,
+   "t1": 41.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO rules (Open Wine Atlas)",
+   "n": "58",
+   "u": "hl/ha",
+   "c": "maximum yield for village Pommard, 56 for premier cru."
+  },
+  {
+   "kind": "card",
+   "t0": 41.5,
+   "t1": 44.7,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "How many premiers crus does Pommard have?<br>A&nbsp;&nbsp;12<br>B&nbsp;&nbsp;28<br>C&nbsp;&nbsp;41"
+  },
+  {
+   "kind": "card",
+   "t0": 44.8,
+   "t1": 48.0,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Which colour is Pommard AOC?<br>A&nbsp;&nbsp;Red only<br>B&nbsp;&nbsp;White only<br>C&nbsp;&nbsp;Red and white"
+  },
+  {
+   "kind": "card",
+   "t0": 48.1,
+   "t1": 51.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "What turns some Pommard soils red?<br>A&nbsp;&nbsp;Iron<br>B&nbsp;&nbsp;Slate<br>C&nbsp;&nbsp;Volcanic ash"
+  },
+  {
+   "kind": "outro",
+   "t0": 51.4,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Pommard",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Brunello di Montalcino",
+   "srcs": "Sources: BIVB · INAO · Météo-France normals · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Pommard",
+  "sub": "28 premiers crus.<br>Not one grand cru."
+ }
+}
