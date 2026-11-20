@@ -3798,5 +3798,301 @@
   "experiment": "",
   "metricool_uuid": null,
   "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Sauternes quiz teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1535138783761119444",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Sauternes quiz: 4 questions. Can you get all 4?",
+  "hook": "4 questions. Can you get all 4?",
+  "places": [
+   "Sauternes",
+   "Barsac"
+  ],
+  "question_keys": [
+   "bordeaux-graves-sauternes#q4",
+   "bordeaux-graves-sauternes#q5",
+   "bordeaux-graves-sauternes#q6",
+   "bordeaux-graves-sauternes#q7"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-4131585962260282464",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Saint-Julien or Saint-Estèphe game reel teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-6479960963112877461",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, labels off, slower pacing for voice (hook 4.0 s), waltz",
+  "title": "Saint-Julien or Saint-Estèphe? Which one is bigger? (Saint-Estèphe 1,555 ha vs Saint-Julien 1,049 ha, 1.5x)",
+  "hook": "Saint-Julien or Saint-Estèphe? Which one is bigger?",
+  "places": [
+   "Saint-Julien",
+   "Saint-Estèphe"
+  ],
+  "question_keys": [],
+  "experiment": "First Bordeaux game reel; British male voice",
+  "metricool_uuid": "6975442663618266393",
+  "voice": "bm_george",
+  "music": "dusk 44 (waltz)"
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Gevrey added which name in 1847 (answer B, Chambertin, given in the 12:10 reel caption), with the Petit Chablis answer (C) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "bourgogne-overview#q1"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-2603897077030567109",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, slow pacing (place 3.3 s), ambient score",
+  "title": "Five grand crus. All named Chambertin. (Ruchottes, Mazis, Clos de Bèze, Chapelle, Griotte)",
+  "hook": "Five grand crus. All named Chambertin.",
+  "places": [
+   "Ruchottes-Chambertin",
+   "Mazis-Chambertin",
+   "Chambertin-Clos de Bèze",
+   "Chapelle-Chambertin",
+   "Griotte-Chambertin"
+  ],
+  "question_keys": [],
+  "experiment": "Recreates the Montrachet 'All named' hook (7 Nov, 3,297 views) with Gevrey; voice lines with French IPA",
+  "metricool_uuid": "-7459524820978351129",
+  "voice": "af_heart",
+  "music": "alpine 51 (ambient)"
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "2312751817932885437",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel, no_area (commune outlines)",
+  "title": "Five grand crus. Almost all Chardonnay. (Côte des Blancs: Chouilly, Oiry, Cramant, Avize, Le Mesnil-sur-Oger)",
+  "hook": "Five grand crus. Almost all Chardonnay.",
+  "places": [
+   "Chouilly",
+   "Oiry",
+   "Cramant",
+   "Avize",
+   "Le Mesnil-sur-Oger"
+  ],
+  "question_keys": [],
+  "experiment": "Mirror of the Montagne de Reims post (13 Nov). Oger has no outline of its own in the atlas, leaves a gap",
+  "metricool_uuid": "-5253318660767791394",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Gevrey reel teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2302591653186550514",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Côte des Blancs post teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7132152006552339586",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Pommard deep dive teaser (topic from the Margaux caption: Next deep dive: Pommard)",
+  "hook": "",
+  "places": [
+   "Pommard"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4664332425985966009",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "18:30",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Veneto quiz: 4 questions. Can you get all 4?",
+  "hook": "4 questions. Can you get all 4?",
+  "places": [
+   "Valpolicella",
+   "Amarone della Valpolicella"
+  ],
+  "question_keys": [
+   "italy-veneto#q1",
+   "italy-veneto#q3",
+   "italy-veneto#q4",
+   "italy-veneto#q5"
+  ],
+  "experiment": "EXPERIMENT: second quiz of the day in place of a cluster (quizzes lead posts 1,400 to 2,200 vs clusters 400 to 1,900); first Veneto quiz",
+  "metricool_uuid": "8333180586872753644",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Veneto quiz teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-8510299332319690515",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Kimmeridgian period, with the Gevrey answer (B, Chambertin) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "bourgogne-chablis#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-8505224063927695316",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, 790 spots still open",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-7687960040345288323",
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members confirmed: 203. Followers 5,223 on 2026-11-19.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Loire Cabernet Franc carousel (2026-10-29, 13:05) left as draft: same place set published on 2026-11-13, old caption with /r/ link, no member card",
+  "hook": "",
+  "places": [
+   "Chinon",
+   "Bourgueil",
+   "Saint-Nicolas-de-Bourgueil",
+   "Saumur-Champigny"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-20",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Kimmeridgian answer (A, Upper Jurassic) still to show. make.py now takes spec 'secs' for card durations (voice timing). Voice tools this run: /home/claude/voice/tts.py and mix.py pattern (per-line kokoro with IPA overrides, 6 dB duck, loudnorm -14). Voices so far: am_michael, bf_emma, bm_george, af_heart. 19 Nov voiced reels: Alsace 996 views skip 64.7%, Chambolle 905 skip 71.7%. Pomerol deep dive 8,243 views, skip 58.8%, 12.4 s watch. Cinematic explainer not made yet this week. Share prompt today: Send this to your study group (tomorrow: Save this for your exam). Game reels this week: 18, 19, 20 Nov. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
  }
 ]

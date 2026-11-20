@@ -46,6 +46,7 @@ CSS = f"""
 
 
 NOLABELS = False  # spec "no_labels": true hides every map label, e.g. estate names behind a title
+SECS = {}  # spec "secs": card durations, e.g. {"hook": 3.0, "place": 2.4, "total": 2.6, "member": 3.4} (vs: hook, both, ratio, member)
 NOAREA = False  # spec "no_area": true, for outlines drawn from whole communes, whose area is not the appellation's
 
 
@@ -174,24 +175,24 @@ async def reel_cluster(s, a, atlas, br, base):
                 await m.shot(ids, p)
                 t = f"""<div class="block" data-fit="t" style="top:1010px;height:480px;overflow:hidden"><div class="kick">{esc(s.get('eyebrow', ''))}</div><div class="h">{esc(s['hook'])}</div>
                   <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
-                frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, "c0.jpg")), 2.2))
+                frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, "c0.jpg")), SECS.get("hook", 2.2)))
                 continue
             await m.shot(ids[:i], p)
             if i == 0:
                 t = f"""<div class="block" data-fit="t" style="top:1010px;height:480px;overflow:hidden"><div class="kick">{esc(s['eyebrow'])}</div><div class="h">{esc(s['title'])}</div>
                   <div class="sub">{esc(s.get('sub', ''))}</div></div>"""
-                sec = 2.4
+                sec = SECS.get("title", 2.4)
             else:
                 t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="kick">{i} / {len(ids)}</div><div class="h2">{esc(s.get('rename', {}).get(ids[i - 1]) or atlas.index[ids[i - 1]][0].replace(s.get('strip', '\0'), ''))}</div>
                   <div class="ha">{esc(fmt_ha(area(atlas, ids[i - 1])))}</div></div>"""
-                sec = 1.7
+                sec = SECS.get("place", 1.7)
             frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + hd + t, os.path.join(tmp, f"c{i}.jpg")), sec))
     tot = [area(atlas, i) for i in ids]
     if all(tot) and s.get("total", True):
         t = f"""<div class="block" data-fit="t" style="top:1060px;height:400px;overflow:hidden"><div class="big">{esc(fmt_ha(sum(tot)))}</div><div class="sub">all {len(ids)} together</div>
           <div class="note">Delimited area, not vineyard planted</div></div>"""
-        frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + '<div class="brand">Open Wine Atlas</div><div class="shade" style="height:1000px"></div>' + t, os.path.join(tmp, "t.jpg")), 2.2))
-    frames.append((await card(br, atlas, a.libs, RW, RH, member_block(620), os.path.join(tmp, "e.jpg")), 2.8))
+        frames.append((await card(br, atlas, a.libs, RW, RH, bg(p) + '<div class="brand">Open Wine Atlas</div><div class="shade" style="height:1000px"></div>' + t, os.path.join(tmp, "t.jpg")), SECS.get("total", 2.2)))
+    frames.append((await card(br, atlas, a.libs, RW, RH, member_block(620), os.path.join(tmp, "e.jpg")), SECS.get("member", 2.8)))
     out = os.path.join(a.out, s["name"] + ".mp4")
     dur = video(frames, out, s.get("preset", "warm"), s.get("seed", 7))
     cover = os.path.join(a.out, s["name"] + "-cover.jpg")
@@ -237,11 +238,11 @@ async def reel_vs(s, a, atlas, br, base):
         hk = f"""<div class="block" data-fit="t" style="top:210px;height:300px;left:60px;right:60px;overflow:hidden"><div class="h" style="font-size:104px;margin:0">{esc(s['hook'])}</div>
           <div class="sub" style="font-size:46px;margin-top:10px">{esc(s.get('sub', ''))}</div></div>""" + tile(x, 520) + tile(y, 1100)
         same = '<div class="kick" style="position:absolute;left:0;right:0;top:1700px;text-align:center">Now at the same zoom</div>' if solo else ''
-        frames = [(await card(br, atlas, a.libs, RW, RH, hk, os.path.join(tmp, "h.jpg")), 3.2 if solo else 2.2),
-                  (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230) + panel(y, 950) + same, os.path.join(tmp, "b.jpg")), 3.0),
+        frames = [(await card(br, atlas, a.libs, RW, RH, hk, os.path.join(tmp, "h.jpg")), SECS.get("hook", 3.2 if solo else 2.2)),
+                  (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230) + panel(y, 950) + same, os.path.join(tmp, "b.jpg")), SECS.get("both", 3.0)),
                   (await card(br, atlas, a.libs, RW, RH, f"""<div class="block" data-fit="t" style="top:680px;height:560px;overflow:hidden"><div class="big">{r:.1f}×</div>
-                    <div class="h2" style="font-size:66px">{esc(atlas.index[big][0])} is {r:.1f}× bigger</div><div class="note">Delimited areas, not vineyard planted</div></div>""", os.path.join(tmp, "r.jpg")), 2.4),
-                  (await card(br, atlas, a.libs, RW, RH, member_block(620), os.path.join(tmp, "e.jpg")), 2.8)]
+                    <div class="h2" style="font-size:66px">{esc(atlas.index[big][0])} is {r:.1f}× bigger</div><div class="note">Delimited areas, not vineyard planted</div></div>""", os.path.join(tmp, "r.jpg")), SECS.get("ratio", 2.4)),
+                  (await card(br, atlas, a.libs, RW, RH, member_block(620), os.path.join(tmp, "e.jpg")), SECS.get("member", 2.8))]
     else:
       frames = [(await card(br, atlas, a.libs, RW, RH, hook, os.path.join(tmp, "h.jpg")), 2.4),
               (await card(br, atlas, a.libs, RW, RH, head + panel(x, 230), os.path.join(tmp, "a.jpg")), 1.7),
@@ -300,6 +301,7 @@ async def run(a):
     if s.get("member"):
         MEMBER.update(s["member"])
     global NOAREA, NOLABELS
+    SECS.update(s.get("secs") or {})
     NOAREA = bool(s.get("no_area"))
     NOLABELS = bool(s.get("no_labels"))
     try:
