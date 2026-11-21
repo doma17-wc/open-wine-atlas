@@ -483,6 +483,25 @@
     "web/data/details-fr.json",
     "web/data/study.json"
    ]
+  },
+  {
+   "slug": "deep-brunello",
+   "place": "Brunello di Montalcino",
+   "slot": "2026-11-21T17:50+01:00",
+   "hook": "Picked in 2021. Released in 2026.",
+   "classic": true,
+   "style": "2 s fly-in from Tuscany at zoom 8 (no globe), hook on screen from frame 0; layers Place, Terrain, Soil, Rain, Heat, Grapes (Sun swapped for Soil, no sunshine in LaMMA normals); 3D slow orbit terrain 1.8 over the Montalcino hill, alt tint plus Slope overlay, bearing 200 to 245; wide climate shot zoomed out to show Siena station, Montalcino and the Tyrrhenian coast; grapes shot pitched 42-48 with Aspect overlay; quiz on wide calm shot; music south seed 33 (ambient); voice am_michael (male).",
+   "music": "ambient",
+   "voice": "am_michael",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=3108408198119311956",
+   "sources": [
+    "Disciplinare Brunello di Montalcino DOCG (MASAF consolidated text, AIS copy)",
+    "ARTEA schedario viticolo, Regione Toscana 2024",
+    "SIR Toscana and Aeronautica Militare via LaMMA, normals 1991-2020 (Siena, Firenze Peretola)",
+    "GLiM, Hartmann & Moosdorf 2012",
+    "Consorzio del Vino Brunello di Montalcino, Benvenuto Brunello 2026",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

@@ -1,0 +1,230 @@
+{
+ "slug": "deep-brunello",
+ "place": "Brunello di Montalcino",
+ "atlas_id": "it-eupdo-PDO-IT-A1199",
+ "made": "2026-11-21",
+ "hook": {
+  "text": "Picked in 2021. Released in 2026.",
+  "basis": "Disciplinare art. 5: release from 1 January of the fifth year after harvest; 2021 harvest -> 1 Jan 2026 (computed). Atlas rules, AIS copy of the MASAF consolidated disciplinare.",
+  "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+ },
+ "topical": {
+  "event": "Benvenuto Brunello 2026, 35th edition, Montalcino, 19 to 23 November 2026, presents the new vintage of Brunello di Montalcino",
+  "source": "Consorzio del Vino Brunello di Montalcino",
+  "url": "https://www.consorziobrunellodimontalcino.it/en/2169/benvenuto-brunello-2026",
+  "note": "The page does not name the vintage year, so the video does not say which vintage is presented; the 2021 example is derived from the release rule only."
+ },
+ "station": {
+  "name": "Siena",
+  "height_m": 350,
+  "lat": 43.32,
+  "lon": 11.31,
+  "service": "Servizio Idrologico Regionale (SIR) Toscana, published by Consorzio LaMMA",
+  "period": "1991-2020",
+  "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena",
+  "note": "Values reused from facts/deep-chianti-classico.json (fetched 2026-11-02). No official 1991-2020 normals for a station inside the Montalcino commune were found in this run. Siena lies about 30 km NNW of the outline centre; named on screen. No sunshine on the page, so the Sun layer is swapped for Soil."
+ },
+ "comparison_station": {
+  "name": "Firenze Peretola",
+  "height_m": 40,
+  "service": "Servizio Meteorologico Aeronautica Militare, published by Consorzio LaMMA",
+  "period": "1991-2020",
+  "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-firenze",
+  "note": "Same publisher (LaMMA) and same period; the observing network differs (AM vs SIR)."
+ },
+ "monthly": {
+  "siena_precip_mm": [
+   53,
+   61,
+   59,
+   71,
+   70,
+   52,
+   29,
+   39,
+   81,
+   106,
+   125,
+   77
+  ],
+  "siena_precip_year": 823,
+  "firenze_precip_mm": [
+   64,
+   64,
+   62,
+   67,
+   66,
+   48,
+   26,
+   40,
+   74,
+   104,
+   118,
+   88
+  ],
+  "firenze_precip_year": 821,
+  "siena_tmax": [
+   9.8,
+   11.0,
+   14.6,
+   18.1,
+   22.7,
+   27.1,
+   30.5,
+   30.7,
+   25.0,
+   19.8,
+   14.2,
+   10.3
+  ],
+  "siena_tmin": [
+   3.1,
+   3.0,
+   5.3,
+   7.9,
+   11.6,
+   15.2,
+   17.7,
+   18.0,
+   14.4,
+   11.1,
+   7.2,
+   3.9
+  ],
+  "siena_tmean": [
+   6.4,
+   7.0,
+   9.9,
+   13.0,
+   17.1,
+   21.1,
+   24.1,
+   24.4,
+   19.7,
+   15.5,
+   10.7,
+   7.1
+  ]
+ },
+ "derived": {
+  "siena_rain_sum": 823,
+  "apr_oct_rain_siena_mm": 448,
+  "apr_oct_mean_siena_C": 19.3,
+  "aug_diurnal_range_C": 12.7,
+  "vine_share_of_outline_pct": 6.8,
+  "siena_station_to_outline_centre_km": 30.3,
+  "release_year_for_2021_harvest": 2026
+ },
+ "derived_code": "siena_rain_sum=sum(rain); apr_oct=sum(rain[3:10]); apr_oct_mean=sum(Tmean[3:10])/7; aug range=Tx[7]-Tn[7]; share=100*2117/31023; haversine(Siena 43.32,11.31 to outline centre 43.07104,11.46223); release: 1 Jan of the fifth year after harvest -> 2021+5",
+ "facts": [
+  {
+   "claim": "DOCG since 1980 (DPR 1 Jul 1980), DOC since 1966",
+   "source": "Open Wine Atlas rules (MASAF / disciplinare)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Brunello, Vino Nobile, Barolo and Barbaresco were the first DOCGs, approved in 1980",
+   "source": "Open Wine Atlas study lesson (web/data/study.json)",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Zone = territory of the commune of Montalcino",
+   "source": "Disciplinare art. 3",
+   "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+  },
+  {
+   "claim": "Outline area 31,023 ha",
+   "source": "Open Wine Atlas (Candiago et al. 2022 outline)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "2,117 ha of vineyards registered as claimable for Brunello at 31 July 2024",
+   "source": "Regione Toscana, ARTEA schedario viticolo (Giliberti, 3 Feb 2025)",
+   "url": "https://ancitoscana.it/wp-content/uploads/2025/02/Le-politiche-regionali-di-sostegno-alla-viticoltura-di-frontiera-Gliberti.pdf"
+  },
+  {
+   "claim": "Terrain e=[69,287,657,150,448] m (min, mean, max, p10, p90)",
+   "source": "Open Wine Atlas terrain (Mapterhorn)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Bedrock: 75% carbonate sedimentary rocks (limestone, marl, dolomite), 13% mixed sedimentary, 12% unconsolidated sediments",
+   "source": "GLiM, Hartmann & Moosdorf 2012, via Open Wine Atlas",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Sea 58 km away",
+   "source": "Open Wine Atlas (Natural Earth coastline)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Sangiovese only",
+   "source": "Disciplinare art. 2",
+   "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+  },
+  {
+   "claim": "Max yield 8 t/ha (54.4 hl/ha)",
+   "source": "Disciplinare art. 4",
+   "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+  },
+  {
+   "claim": "At least 2 years in oak of any size and at least 4 months in bottle",
+   "source": "Disciplinare art. 5",
+   "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+  },
+  {
+   "claim": "Release from 1 January of the fifth year after harvest; Riserva from 1 January of the sixth year",
+   "source": "Disciplinare art. 5",
+   "url": "https://aisitalia.it/Disciplinari/Toscana/DOCG/Brunello%20di%20Montalcino.pdf"
+  },
+  {
+   "claim": "Siena rain 823 mm/yr, Florence 821; July 29 mm; November 125 mm",
+   "source": "SIR Toscana / Aeronautica Militare via LaMMA, 1991-2020",
+   "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena"
+  },
+  {
+   "claim": "Siena August mean max 30.7 C, mean min 18.0 C",
+   "source": "SIR Toscana via LaMMA, 1991-2020",
+   "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape makes Brunello di Montalcino?",
+   "options": [
+    "A Nebbiolo",
+    "B Sangiovese",
+    "C Montepulciano"
+   ],
+   "answer": "B Sangiovese",
+   "source": "Disciplinare art. 2"
+  },
+  {
+   "q": "Minimum time in oak?",
+   "options": [
+    "A 6 months",
+    "B 1 year",
+    "C 2 years"
+   ],
+   "answer": "C 2 years",
+   "source": "Disciplinare art. 5"
+  },
+  {
+   "q": "When did Brunello become a DOCG?",
+   "options": [
+    "A 1966",
+    "B 1980",
+    "C 1992"
+   ],
+   "answer": "B 1980",
+   "source": "DPR 1 Jul 1980 (atlas rules)"
+  }
+ ],
+ "dropped": [
+  "Sunshine: LaMMA page has none, Sun layer swapped for Soil",
+  "Vintage presented at Benvenuto Brunello 2026: not named by the Consorzio page",
+  "116 producers at Benvenuto Brunello: only a third-party listing",
+  "2025 bottle numbers: secondary source only",
+  "Producer names: never used"
+ ]
+}

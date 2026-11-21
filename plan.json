@@ -473,8 +473,9 @@
    "series": "",
    "not_before": "2026-11-21",
    "why": "Tuscany study path: 100% Sangiovese, long ageing, the hill of Montalcino",
-   "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50. Moved to 21 Nov on 2026-11-20 (Rías Baixas would be the 3rd non-classic in 7 days)."
+   "status": "posted",
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 21 Nov on 2026-11-20 (Rías Baixas would be the 3rd non-classic in 7 days).",
+   "slot": "2026-11-21T17:50+01:00"
   },
   {
    "slug": "deep-vouvray",
@@ -505,6 +506,16 @@
    "why": "Burgundy study path: Côte de Nuits village with nine grands crus including Chambertin",
    "status": "planned",
    "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data."
+  },
+  {
+   "slug": "deep-vino-nobile",
+   "place": "Vino Nobile di Montepulciano",
+   "atlas_id": "it-eupdo-PDO-IT-A1308",
+   "series": "Tuscany 2/2",
+   "not_before": "2026-11-22",
+   "why": "Tuscany study path: Sangiovese (Prugnolo Gentile) in Montepulciano, one of the first four DOCGs of 1980, next to Montalcino; announced in the Brunello outro",
+   "status": "planned",
+   "note": "Added 2026-11-21 so the 22 Nov slot has a classic. Slot 17:50."
   }
  ]
 }

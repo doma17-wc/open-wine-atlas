@@ -1,0 +1,485 @@
+{
+ "slug": "deep-brunello",
+ "id": "it-eupdo-PDO-IT-A1199",
+ "duration": 55.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "south",
+  33
+ ],
+ "markers": [
+  {
+   "lng": 11.31,
+   "lat": 43.32,
+   "label": "Siena · 350 m",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     11.25,
+     43.35,
+     8.0,
+     0,
+     0
+    ],
+    [
+     2.0,
+     11.5195,
+     43.0712,
+     10.2,
+     0,
+     8
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "place",
+   "dur": 8.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     11.5195,
+     43.0712,
+     10.2,
+     0,
+     8
+    ],
+    [
+     8.0,
+     11.5195,
+     43.0712,
+     10.45,
+     8,
+     24
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 9.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     11.485,
+     43.06,
+     11.8,
+     200,
+     62
+    ],
+    [
+     9.5,
+     11.485,
+     43.06,
+     12.0,
+     245,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 1.8
+  },
+  {
+   "name": "climate",
+   "dur": 14.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     11.39,
+     43.2,
+     8.3,
+     0,
+     0
+    ],
+    [
+     14.5,
+     11.39,
+     43.2,
+     8.42,
+     -5,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 420
+   },
+   "cam": [
+    [
+     0,
+     11.49,
+     43.055,
+     12.2,
+     30,
+     42
+    ],
+    [
+     9.0,
+     11.49,
+     43.055,
+     12.4,
+     40,
+     48
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 15.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     11.5195,
+     43.0712,
+     9.9,
+     0,
+     0
+    ],
+    [
+     15.0,
+     11.5195,
+     43.0712,
+     10.05,
+     -4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "Italy · Deep dive",
+   "title": "Brunello di<br>Montalcino",
+   "sub": "Picked in 2021.<br>Released in 2026."
+  },
+  {
+   "kind": "chips",
+   "t0": 4.0,
+   "t1": 51.3,
+   "items": [
+    "Place",
+    "Terrain",
+    "Soil",
+    "Rain",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     4.0,
+     9.9
+    ],
+    [
+     9.9,
+     14.2
+    ],
+    [
+     14.2,
+     18.5
+    ],
+    [
+     18.5,
+     25.4
+    ],
+    [
+     25.4,
+     32.4
+    ],
+    [
+     32.4,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.1,
+   "t1": 6.8,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (MASAF rules)",
+   "n": "1980",
+   "u": "DOCG",
+   "c": "one of Italy's first four DOCGs, with Barolo. One commune: Montalcino."
+  },
+  {
+   "kind": "card",
+   "t0": 6.9,
+   "t1": 9.8,
+   "kicker": "Layer 1 · The place",
+   "src": "ARTEA, Regione Toscana 2024",
+   "n": "2,117",
+   "u": "ha",
+   "count": {
+    "v": 2117,
+    "d": 0
+   },
+   "c": "of vines registered for Brunello: about 7% of the 31,023&nbsp;ha commune."
+  },
+  {
+   "kind": "card",
+   "t0": 10.0,
+   "t1": 14.1,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain",
+   "n": "287",
+   "u": "m",
+   "c": "average height, from 69 to 657&nbsp;m. Most of the land lies between 150 and 448&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 14.3,
+   "t1": 18.4,
+   "kicker": "Layer 3 · Soil",
+   "src": "GLiM bedrock (Open Wine Atlas)",
+   "n": "75",
+   "u": "%",
+   "c": "limestone, marl and dolomite bedrock. The rest is mixed sediments."
+  },
+  {
+   "kind": "card",
+   "t0": 18.6,
+   "t1": 25.3,
+   "kicker": "Layer 4 · Rain",
+   "src": "SIR Toscana, Aeronautica Militare via LaMMA, normals 1991–2020",
+   "n": "823",
+   "u": "mm",
+   "count": {
+    "v": 823,
+    "d": 0
+   },
+   "c": "a year at Siena (350&nbsp;m), 30&nbsp;km north. July gets just 29&nbsp;mm, November 125.",
+   "chart": {
+    "type": "months",
+    "a": [
+     53,
+     61,
+     59,
+     71,
+     70,
+     52,
+     29,
+     39,
+     81,
+     106,
+     125,
+     77
+    ],
+    "b": [
+     64,
+     64,
+     62,
+     67,
+     66,
+     48,
+     26,
+     40,
+     74,
+     104,
+     118,
+     88
+    ],
+    "max": 135,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Siena 350&nbsp;m &nbsp; ▢ Florence 40&nbsp;m &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 25.5,
+   "t1": 32.3,
+   "kicker": "Layer 5 · Heat",
+   "src": "SIR Toscana via LaMMA, normals 1991–2020",
+   "n": "19.3",
+   "u": "°C",
+   "count": {
+    "v": 19.3,
+    "d": 1
+   },
+   "c": "mean from April to October at Siena. August days reach 30.7&nbsp;°C, nights fall to 18.0.",
+   "chart": {
+    "type": "range",
+    "max": [
+     9.8,
+     11.0,
+     14.6,
+     18.1,
+     22.7,
+     27.1,
+     30.5,
+     30.7,
+     25.0,
+     19.8,
+     14.2,
+     10.3
+    ],
+    "min": [
+     3.1,
+     3.0,
+     5.3,
+     7.9,
+     11.6,
+     15.2,
+     17.7,
+     18.0,
+     14.4,
+     11.1,
+     7.2,
+     3.9
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 35,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 30.7 to 18.0",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 32.6,
+   "t1": 36.8,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Disciplinare Brunello di Montalcino, art. 2 and 4",
+   "n": "100",
+   "u": "% Sangiovese",
+   "c": "no other grape allowed. At most 8 tonnes of grapes per hectare."
+  },
+  {
+   "kind": "card",
+   "t0": 36.9,
+   "t1": 41.2,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Disciplinare Brunello di Montalcino, art. 5",
+   "n": "2",
+   "u": "years in oak",
+   "c": "at least, then 4 months in bottle. Release from 1 January of the fifth year."
+  },
+  {
+   "kind": "card",
+   "t0": 41.5,
+   "t1": 44.7,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape makes Brunello?<br>A&nbsp;&nbsp;Nebbiolo<br>B&nbsp;&nbsp;Sangiovese<br>C&nbsp;&nbsp;Montepulciano"
+  },
+  {
+   "kind": "card",
+   "t0": 44.8,
+   "t1": 48.0,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Minimum time in oak?<br>A&nbsp;&nbsp;6 months<br>B&nbsp;&nbsp;1 year<br>C&nbsp;&nbsp;2 years"
+  },
+  {
+   "kind": "card",
+   "t0": 48.1,
+   "t1": 51.3,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "When did Brunello become a DOCG?<br>A&nbsp;&nbsp;1966<br>B&nbsp;&nbsp;1980<br>C&nbsp;&nbsp;1992"
+  },
+  {
+   "kind": "outro",
+   "t0": 51.4,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Brunello di Montalcino",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Vino Nobile di Montepulciano",
+   "srcs": "Sources: Disciplinare (MASAF) · ARTEA Regione Toscana · SIR Toscana and Aeronautica Militare via LaMMA, normals 1991–2020 · GLiM · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · Italy",
+  "title": "Brunello di<br>Montalcino",
+  "sub": "Picked in 2021.<br>Released in 2026."
+ }
+}
