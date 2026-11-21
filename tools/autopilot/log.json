@@ -4094,5 +4094,303 @@
   "experiment": "",
   "metricool_uuid": null,
   "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Rioja quiz teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "2092469468477735817",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Rioja quiz: 4 questions. Can you get all 4?",
+  "hook": "4 questions. Can you get all 4?",
+  "places": [
+   "Rioja"
+  ],
+  "question_keys": [
+   "iberia-rioja-navarra#q1",
+   "iberia-rioja-navarra#q4",
+   "iberia-rioja-navarra#q5",
+   "iberia-rioja-navarra#q7"
+  ],
+  "experiment": "First Spain quiz",
+  "metricool_uuid": "6424927110477988431",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Corton reel teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "6650060489839755513",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, maxzoom 15, labels on, place 2.7 s, waltz",
+  "title": "Five names. One grand cru. (Corton climats: Les Pougets, Le Corton, Le Clos du Roi, Les Bressandes, Les Renardes, 63.9 ha)",
+  "hook": "Five names. One grand cru.",
+  "places": [
+   "Corton Les Pougets",
+   "Corton Le Corton",
+   "Corton Le Clos du Roi",
+   "Corton Les Bressandes",
+   "Corton Les Renardes"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first reel on climats inside one grand cru (label names from the Côte de Beaune lesson)",
+  "metricool_uuid": "-135895068550872490",
+  "voice": "am_fenrir",
+  "music": "harpsi 23 (waltz)"
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Hermitage soil (answer A, Granite, given in the 12:10 reel caption), with the Kimmeridgian answer (A) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-site#q7"
+  ],
+  "experiment": "",
+  "metricool_uuid": "238541833399782023",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "vs",
+  "style": "vs, hook first, same-zoom tiles (new spec fit_tiles: contain instead of crop), labels off, ambient",
+  "title": "Same name. One is 29 times bigger. (Hermitage 146 ha vs Crozes-Hermitage 4,226 ha, 29.0x)",
+  "hook": "Same name. One is 29 times bigger.",
+  "places": [
+   "Hermitage",
+   "Crozes-Hermitage"
+  ],
+  "question_keys": [],
+  "experiment": "Same-name pair with a huge ratio, from the hook rules example",
+  "metricool_uuid": "6225223380796198759",
+  "voice": "af_bella",
+  "music": "japan 33 (ambient)"
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1448252095948961075",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Five grand crus. Only one allows blends. (Alsace: Kaefferkopf, Schlossberg, Furstentum, Mambourg, Marckrain)",
+  "hook": "Five grand crus. Only one allows blends.",
+  "places": [
+   "Kaefferkopf",
+   "Schlossberg",
+   "Furstentum",
+   "Mambourg",
+   "Marckrain"
+  ],
+  "question_keys": [],
+  "experiment": "Guess-which hook; facts from north-france-alsace lesson",
+  "metricool_uuid": "705136010969957080",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Hermitage reel teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "1106313043433377275",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Alsace post teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "3076121188544301153",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Brunello di Montalcino deep dive teaser (topic from the Pommard caption: Next deep dive: Brunello di Montalcino)",
+  "hook": "",
+  "places": [
+   "Brunello di Montalcino"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5393724611163800177",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Napa's five mountains. Guess the biggest. (Diamond Mountain, Spring Mountain, Mt. Veeder, Howell Mountain, Atlas Peak)",
+  "hook": "Napa's five mountains. Guess the biggest.",
+  "places": [
+   "Diamond Mountain District",
+   "Spring Mountain District",
+   "Mt. Veeder",
+   "Howell Mountain",
+   "Atlas Peak"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: Napa mountain AVAs; facts from usa-napa lesson",
+  "metricool_uuid": "-4673564544445168475",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Napa post teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "6401792534154725015",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: galets roulés of Châteauneuf-du-Pape, with the Hermitage answer (A, Granite) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-site#q3"
+  ],
+  "experiment": "",
+  "metricool_uuid": "8103782965833516390",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, 780 spots still open",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-8847122562426780801",
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members confirmed: 216. Followers 5,346 on 2026-11-20.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Willamette Valley sub-AVAs reel (2026-10-29, 13:05) left as draft: Oregon is not a famous reel region, far-away lists did worst, old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [
+   "Tualatin Hills",
+   "Laurelwood District",
+   "Chehalem Mountains",
+   "Ribbon Ridge",
+   "Dundee Hills",
+   "Yamhill-Carlton",
+   "McMinnville",
+   "Eola-Amity Hills",
+   "Van Duzer Corridor"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-21",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Galets answer (B, they store heat by day and release it at night) still to show. Cinematic explainer still not made this week: no renderer exists yet in social/tools, it has to be built (terrain stills, overlays, zoom-out); try it on Sunday 22 Nov as the 12:10 reel, after the rest is scheduled. 20 Nov: Gevrey 'All named Chambertin' cluster 4,291 views (skip 64.1%, 41 saves), best new reel of the week; Saint-Julien game 1,826 (watch 4.7 s); Pommard deep dive 689. Pomerol deep dive 9,181. Posts: Champagne quiz 2,210, the rest 600 to 1,000. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella. Share prompt today: Save this for your exam (tomorrow: Send this to your study group). Game reels this week: 18, 19, 20 Nov. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
  }
 ]

@@ -234,7 +234,7 @@ async def reel_vs(s, a, atlas, br, base):
         img = solo or shots
         def tile(pid, top, h2=470):
             return f"""<div class="block" style="top:{top}px;left:60px;right:60px;font:500 64px 'Cormorant Garamond';color:#f6eedd">{esc(atlas.index[pid][0])}</div>
-              <div style="position:absolute;left:0;right:0;top:{top + 86}px;height:{h2}px"><img style="width:100%;height:100%;object-fit:cover" src="{owa.data_uri(img[pid])}"></div>"""
+              <div style="position:absolute;left:0;right:0;top:{top + 86}px;height:{h2}px"><img style="width:100%;height:100%;object-fit:{'contain' if s.get('fit_tiles') else 'cover'}" src="{owa.data_uri(img[pid])}"></div>"""
         hk = f"""<div class="block" data-fit="t" style="top:210px;height:300px;left:60px;right:60px;overflow:hidden"><div class="h" style="font-size:104px;margin:0">{esc(s['hook'])}</div>
           <div class="sub" style="font-size:46px;margin-top:10px">{esc(s.get('sub', ''))}</div></div>""" + tile(x, 520) + tile(y, 1100)
         same = '<div class="kick" style="position:absolute;left:0;right:0;top:1700px;text-align:center">Now at the same zoom</div>' if solo else ''
