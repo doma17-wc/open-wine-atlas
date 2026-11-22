@@ -514,8 +514,29 @@
    "series": "Tuscany 2/2",
    "not_before": "2026-11-22",
    "why": "Tuscany study path: Sangiovese (Prugnolo Gentile) in Montepulciano, one of the first four DOCGs of 1980, next to Montalcino; announced in the Brunello outro",
+   "status": "posted",
+   "note": "Added 2026-11-21 so the 22 Nov slot has a classic. Slot 17:50. Made 2026-11-22. Study-path hook, no event. Climate: no official Montepulciano normals found, Siena (SIR Toscana via LaMMA 1991-2020, 48 km WNW) reused and named on screen.",
+   "slot": "2026-11-22T17:50+01:00"
+  },
+  {
+   "slug": "deep-meursault",
+   "place": "Meursault",
+   "atlas_id": "fr-inao-a204",
+   "series": "",
+   "not_before": "2026-11-30",
+   "why": "Burgundy study path: Côte de Beaune white wine village, Chardonnay, premiers crus such as Perrières, Charmes and Genevrières, no grand cru",
    "status": "planned",
-   "note": "Added 2026-11-21 so the 22 Nov slot has a classic. Slot 17:50."
+   "note": "Added 2026-11-22 to keep 4+ classics planned. Slot 17:50. Verify the premier cru list in the INAO data."
+  },
+  {
+   "slug": "deep-saint-julien",
+   "place": "Saint-Julien",
+   "atlas_id": "fr-inao-a71",
+   "series": "",
+   "not_before": "2026-12-01",
+   "why": "Bordeaux study path: Left Bank commune between Pauillac and Margaux, gravel, Cabernet Sauvignon, 1855 classified growths",
+   "status": "planned",
+   "note": "Added 2026-11-22. Slot 17:50. Verify the classified growth count."
   }
  ]
 }

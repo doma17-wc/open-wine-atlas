@@ -502,6 +502,24 @@
     "Consorzio del Vino Brunello di Montalcino, Benvenuto Brunello 2026",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-vino-nobile",
+   "place": "Vino Nobile di Montepulciano",
+   "slot": "2026-11-22T17:50+01:00",
+   "hook": "Montepulciano is a town, not a grape.",
+   "classic": true,
+   "style": "2 s fly-in from Tuscany at zoom 8 with map labels off (clean hook from frame 0); layers reordered Place, Grapes, Terrain, Soil, Rain, Heat (Grapes second, tied to the hook); grapes shot pitched 38-44 over the town with Slope overlay; 3D shot terrain 2.6 from the Val di Chiana looking west over the Montepulciano hills, alt tint plus Slope, bearing 255 to 285; wide climate shot with Siena station and a Montalcino marker (neighbour comparison); single-station rain chart; quiz on wide calm shot; music warm seed 34 (waltz); voice af_bella.",
+   "music": "waltz",
+   "voice": "af_bella",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-5368028550756021741",
+   "sources": [
+    "Disciplinare Vino Nobile di Montepulciano DOCG (DM 21 Jan 2025, GU 29 of 5 Feb 2025), via Open Wine Atlas rules",
+    "ARTEA schedario viticolo, Regione Toscana 2024",
+    "SIR Toscana via LaMMA, normals 1991-2020 (Siena)",
+    "GLiM, Hartmann & Moosdorf 2012",
+    "Open Wine Atlas"
+   ]
   }
  ]
 }

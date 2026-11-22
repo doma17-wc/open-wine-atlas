@@ -1,0 +1,210 @@
+{
+ "slug": "deep-vino-nobile",
+ "place": "Vino Nobile di Montepulciano",
+ "atlas_id": "it-eupdo-PDO-IT-A1308",
+ "made": "2026-11-22",
+ "hook": {
+  "text": "Montepulciano is a town, not a grape.",
+  "basis": "Open Wine Atlas atlas_note and study lesson italy-toscana: Sangiovese, locally called Prugnolo Gentile, from the town of Montepulciano; not related to the Montepulciano grape (grown mainly in Abruzzo).",
+  "url": "web/data/details-it.json; web/data/study.json"
+ },
+ "topical": {
+  "event": "none; Tuscany study path, Tuscany 2/2 after Brunello (announced in the Brunello outro)",
+  "note": "No event hook used."
+ },
+ "station": {
+  "name": "Siena",
+  "height_m": 350,
+  "lat": 43.32,
+  "lon": 11.31,
+  "service": "Servizio Idrologico Regionale (SIR) Toscana, published by Consorzio LaMMA",
+  "period": "1991-2020",
+  "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena",
+  "note": "Values reused from facts/deep-chianti-classico.json and facts/deep-brunello.json (LaMMA Siena page, 1991-2020). No official 1991-2020 normals for a station in Montepulciano were found in this run (searches returned only model-based weather sites). Siena is about 48 km WNW of the outline centre; named on screen. No sunshine on the page, so no Sun layer."
+ },
+ "monthly": {
+  "siena_precip_mm": [
+   53,
+   61,
+   59,
+   71,
+   70,
+   52,
+   29,
+   39,
+   81,
+   106,
+   125,
+   77
+  ],
+  "siena_precip_year": 823,
+  "siena_tmax": [
+   9.8,
+   11.0,
+   14.6,
+   18.1,
+   22.7,
+   27.1,
+   30.5,
+   30.7,
+   25.0,
+   19.8,
+   14.2,
+   10.3
+  ],
+  "siena_tmin": [
+   3.1,
+   3.0,
+   5.3,
+   7.9,
+   11.6,
+   15.2,
+   17.7,
+   18.0,
+   14.4,
+   11.1,
+   7.2,
+   3.9
+  ],
+  "siena_tmean": [
+   6.4,
+   7.0,
+   9.9,
+   13.0,
+   17.1,
+   21.1,
+   24.1,
+   24.4,
+   19.7,
+   15.5,
+   10.7,
+   7.1
+  ]
+ },
+ "derived": {
+  "siena_rain_sum": 823,
+  "apr_oct_rain_siena_mm": 448,
+  "apr_oct_mean_siena_C": 19.3,
+  "aug_diurnal_range_C": 12.7,
+  "vine_share_of_outline_pct": 8.4,
+  "siena_station_to_outline_centre_km": 48.3,
+  "montalcino_centre_to_montepulciano_centre_km": 30.5
+ },
+ "derived_code": "sum(rain); sum(rain[3:10]); mean(Tmean[3:10]); Tx[7]-Tn[7]; 100*1389/16525; haversine Siena (43.32,11.31) and Montalcino outline centre (43.07104,11.46223) to Montepulciano outline centre (43.11191,11.83388)",
+ "facts": [
+  {
+   "claim": "DOC 1966 (DPR 12 Jul 1966), DOCG 1980 (DPR 1 Jul 1980)",
+   "source": "Open Wine Atlas rules (MASAF, GU)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "First DOCGs approved in 1980: Brunello di Montalcino, Vino Nobile di Montepulciano, Barolo, Barbaresco",
+   "source": "Open Wine Atlas study lesson italy-wine-law",
+   "url": "web/data/study.json"
+  },
+  {
+   "claim": "Zone: commune of Montepulciano (part)",
+   "source": "Open Wine Atlas (communes, partial_communes)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Outline area 16,525 ha",
+   "source": "Open Wine Atlas outline",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "1,389 ha registered as claimable for Vino Nobile at 31 July 2024, 258 farms",
+   "source": "Regione Toscana, ARTEA schedario viticolo (Giliberti, 3 Feb 2025)",
+   "url": "https://ancitoscana.it/wp-content/uploads/2025/02/Le-politiche-regionali-di-sostegno-alla-viticoltura-di-frontiera-Gliberti.pdf"
+  },
+  {
+   "claim": "Sangiovese (Prugnolo Gentile) at least 70%; up to 30% other varieties",
+   "source": "Disciplinare art. 2 (DM 21 Jan 2025, GU 29 of 5 Feb 2025) via Open Wine Atlas rules",
+   "url": "https://www.consorziovinonobile.it/wp-content/uploads/2025/04/G.U.-n-29-del-05.02.2025_Decreto-di-mod.-ordinaria-Vino-Nobile-di-Montepulciano.pdf"
+  },
+  {
+   "claim": "Pieve: 12 UGA (named areas), Sangiovese at least 85%, estate grapes, vines at least 15 years old",
+   "source": "Disciplinare art. 1, 2, 4, 5, Annex A via Open Wine Atlas rules",
+   "url": "https://www.consorziovinonobile.it/wp-content/uploads/2025/04/G.U.-n-29-del-05.02.2025_Decreto-di-mod.-ordinaria-Vino-Nobile-di-Montepulciano.pdf"
+  },
+  {
+   "claim": "Vineyards between 250 and 600 m",
+   "source": "Disciplinare art. 4 via Open Wine Atlas rules",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Minimum ageing 2 years from 1 January after harvest, at least 1 year in wood; Riserva 3 years",
+   "source": "Disciplinare art. 5 via Open Wine Atlas rules",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Terrain e=[246,330,707,250,502] m (min, mean, max, p10, p90)",
+   "source": "Open Wine Atlas terrain (Mapterhorn)",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Bedrock: 60% carbonate sedimentary (limestone, marl, dolomite), 27% unconsolidated sediments, 13% siliciclastic (sandstone, shale)",
+   "source": "GLiM, Hartmann & Moosdorf 2012, via Open Wine Atlas",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Lake Trasimeno 16.8 km away",
+   "source": "Open Wine Atlas",
+   "url": "web/data/details-it.json"
+  },
+  {
+   "claim": "Siena rain 823 mm/yr; July 29 mm; November 125 mm",
+   "source": "SIR Toscana via LaMMA, 1991-2020",
+   "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena"
+  },
+  {
+   "claim": "Siena April-October mean 19.3 C; August mean max 30.7 C, mean min 18.0 C",
+   "source": "SIR Toscana via LaMMA, 1991-2020 (mean computed)",
+   "url": "https://www.lamma.toscana.it/clima-e-energia/climatologia/clima-siena"
+  },
+  {
+   "claim": "Montalcino lies about 31 km west of Montepulciano (outline centres)",
+   "source": "Open Wine Atlas outlines (computed)",
+   "url": "web/data/details-it.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "In Vino Nobile di Montepulciano, what is Montepulciano?",
+   "options": [
+    "A A grape",
+    "B A town",
+    "C A river"
+   ],
+   "answer": "B A town",
+   "source": "Open Wine Atlas atlas_note and study lesson"
+  },
+  {
+   "q": "Minimum share of Sangiovese?",
+   "options": [
+    "A 70%",
+    "B 85%",
+    "C 100%"
+   ],
+   "answer": "A 70%",
+   "source": "Disciplinare art. 2"
+  },
+  {
+   "q": "How many Pieve areas?",
+   "options": [
+    "A 6",
+    "B 12",
+    "C 20"
+   ],
+   "answer": "B 12",
+   "source": "Disciplinare Annex A"
+  }
+ ],
+ "dropped": [
+  "Montepulciano station normals: none official found, Siena used",
+  "Sunshine: not on the LaMMA page",
+  "Bottle numbers: press-reported 2025 figure only",
+  "Producer names: never used",
+  "Year the Pieve tier was introduced: not in the atlas data, not said"
+ ]
+}

@@ -1,0 +1,480 @@
+{
+ "slug": "deep-vino-nobile",
+ "id": "it-eupdo-PDO-IT-A1308",
+ "duration": 55.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  34
+ ],
+ "markers": [
+  {
+   "lng": 11.31,
+   "lat": 43.32,
+   "label": "Siena · 350 m",
+   "shots": [
+    4
+   ]
+  },
+  {
+   "lng": 11.4622,
+   "lat": 43.071,
+   "label": "Montalcino",
+   "shots": [
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     11.55,
+     43.25,
+     8.0,
+     0,
+     0
+    ],
+    [
+     2.0,
+     11.8487,
+     43.112,
+     10.3,
+     -6,
+     6
+    ]
+   ],
+   "layers": {},
+   "labels": false
+  },
+  {
+   "name": "place",
+   "dur": 8.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     11.8487,
+     43.112,
+     10.3,
+     -6,
+     6
+    ],
+    [
+     8.0,
+     11.8487,
+     43.112,
+     10.5,
+     -14,
+     22
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 440
+   },
+   "cam": [
+    [
+     0,
+     11.79,
+     43.085,
+     11.7,
+     -25,
+     38
+    ],
+    [
+     8.5,
+     11.79,
+     43.085,
+     11.9,
+     -12,
+     44
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "terrain3d",
+   "dur": 10.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     11.79,
+     43.095,
+     11.0,
+     255,
+     64
+    ],
+    [
+     10.0,
+     11.79,
+     43.095,
+     11.2,
+     285,
+     68
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 2.6
+  },
+  {
+   "name": "climate",
+   "dur": 14.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     11.58,
+     43.19,
+     8.25,
+     0,
+     0
+    ],
+    [
+     14.0,
+     11.58,
+     43.19,
+     8.38,
+     6,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 15.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     11.8487,
+     43.112,
+     10.0,
+     0,
+     0
+    ],
+    [
+     15.0,
+     11.8487,
+     43.112,
+     10.12,
+     5,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "Italy · Deep dive",
+   "title": "Vino Nobile di<br>Montepulciano",
+   "sub": "Montepulciano is a town,<br>not a grape."
+  },
+  {
+   "kind": "chips",
+   "t0": 4.0,
+   "t1": 50.1,
+   "items": [
+    "Place",
+    "Grapes",
+    "Terrain",
+    "Soil",
+    "Rain",
+    "Heat"
+   ],
+   "spans": [
+    [
+     4.0,
+     9.3
+    ],
+    [
+     9.3,
+     17.5
+    ],
+    [
+     17.5,
+     22.2
+    ],
+    [
+     22.2,
+     27.0
+    ],
+    [
+     27.0,
+     33.5
+    ],
+    [
+     33.5,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.1,
+   "t1": 6.6,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (MASAF rules)",
+   "n": "1980",
+   "u": "DOCG",
+   "c": "one of Italy's first four DOCGs, with Brunello, Barolo and Barbaresco."
+  },
+  {
+   "kind": "card",
+   "t0": 6.7,
+   "t1": 9.2,
+   "kicker": "Layer 1 · The place",
+   "src": "ARTEA, Regione Toscana 2024",
+   "n": "1,389",
+   "u": "ha",
+   "count": {
+    "v": 1389,
+    "d": 0
+   },
+   "c": "of vines registered for Vino Nobile: about 8% of the 16,525&nbsp;ha zone."
+  },
+  {
+   "kind": "card",
+   "t0": 9.5,
+   "t1": 13.4,
+   "kicker": "Layer 2 · Grapes",
+   "src": "Disciplinare Vino Nobile (GU 5 Feb 2025), art. 2",
+   "n": "70",
+   "u": "% Sangiovese",
+   "c": "at least. Here it is called Prugnolo Gentile. The Montepulciano grape is another variety."
+  },
+  {
+   "kind": "card",
+   "t0": 13.5,
+   "t1": 17.3,
+   "kicker": "Layer 2 · Grapes",
+   "src": "Disciplinare Vino Nobile (GU 5 Feb 2025), Annex A",
+   "n": "12",
+   "u": "Pieve",
+   "c": "named areas for the Pieve label: at least 85% Sangiovese, estate grapes."
+  },
+  {
+   "kind": "card",
+   "t0": 17.6,
+   "t1": 22.1,
+   "kicker": "Layer 3 · Terrain",
+   "src": "Open Wine Atlas terrain · Disciplinare Vino Nobile (GU 5 Feb 2025), art. 4",
+   "n": "330",
+   "u": "m",
+   "c": "average height, from 246 to 707&nbsp;m. Vineyards must lie between 250 and 600&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 22.3,
+   "t1": 26.9,
+   "kicker": "Layer 4 · Soil",
+   "src": "GLiM bedrock (Open Wine Atlas)",
+   "n": "60",
+   "u": "%",
+   "c": "limestone, marl and dolomite bedrock. 27% loose sediments, 13% sandstone and shale."
+  },
+  {
+   "kind": "card",
+   "t0": 27.1,
+   "t1": 33.4,
+   "kicker": "Layer 5 · Rain",
+   "src": "SIR Toscana via LaMMA, normals 1991–2020",
+   "n": "823",
+   "u": "mm",
+   "count": {
+    "v": 823,
+    "d": 0
+   },
+   "c": "a year at Siena (350&nbsp;m), 48&nbsp;km north-west. July gets just 29&nbsp;mm, November 125.",
+   "chart": {
+    "type": "months",
+    "a": [
+     53,
+     61,
+     59,
+     71,
+     70,
+     52,
+     29,
+     39,
+     81,
+     106,
+     125,
+     77
+    ],
+    "max": 135,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Siena 350&nbsp;m &nbsp;·&nbsp; mm per month"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 33.6,
+   "t1": 40.0,
+   "kicker": "Layer 6 · Heat",
+   "src": "SIR Toscana via LaMMA, normals 1991–2020",
+   "n": "19.3",
+   "u": "°C",
+   "count": {
+    "v": 19.3,
+    "d": 1
+   },
+   "c": "mean from April to October at Siena. August days reach 30.7&nbsp;°C, nights fall to 18.0.",
+   "chart": {
+    "type": "range",
+    "max": [
+     9.8,
+     11.0,
+     14.6,
+     18.1,
+     22.7,
+     27.1,
+     30.5,
+     30.7,
+     25.0,
+     19.8,
+     14.2,
+     10.3
+    ],
+    "min": [
+     3.1,
+     3.0,
+     5.3,
+     7.9,
+     11.6,
+     15.2,
+     17.7,
+     18.0,
+     14.4,
+     11.1,
+     7.2,
+     3.9
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 35,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 30.7 to 18.0",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 40.4,
+   "t1": 43.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "In Vino Nobile di Montepulciano,<br>what is Montepulciano?<br>A&nbsp;&nbsp;A grape<br>B&nbsp;&nbsp;A town<br>C&nbsp;&nbsp;A river"
+  },
+  {
+   "kind": "card",
+   "t0": 43.7,
+   "t1": 46.9,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Minimum share of Sangiovese?<br>A&nbsp;&nbsp;70%<br>B&nbsp;&nbsp;85%<br>C&nbsp;&nbsp;100%"
+  },
+  {
+   "kind": "card",
+   "t0": 47.0,
+   "t1": 50.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "How many Pieve areas?<br>A&nbsp;&nbsp;6<br>B&nbsp;&nbsp;12<br>C&nbsp;&nbsp;20"
+  },
+  {
+   "kind": "outro",
+   "t0": 50.2,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Vino Nobile di Montepulciano",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Rías Baixas",
+   "srcs": "Sources: Disciplinare (GU 2025) · ARTEA Regione Toscana · SIR Toscana via LaMMA, normals 1991–2020 · GLiM · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 3,
+  "at": 0.7,
+  "kicker": "Deep dive · Italy",
+  "title": "Vino Nobile di<br>Montepulciano",
+  "sub": "Montepulciano is a town,<br>not a grape.",
+  "size": 140
+ }
+}
