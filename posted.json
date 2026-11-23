@@ -520,6 +520,24 @@
     "GLiM, Hartmann & Moosdorf 2012",
     "Open Wine Atlas"
    ]
+  },
+  {
+   "slug": "deep-rias-baixas",
+   "place": "Rías Baixas",
+   "slot": "2026-11-23T17:50+01:00",
+   "hook": "Four times the rain of Rioja.",
+   "classic": false,
+   "style": "2 s fly-in from western Iberia at zoom 5.8 (no globe), hook on screen from frame 0; layers Place, Rain, Sun, Terrain, Heat, Grapes (Rain and Sun moved early to back the hook, Soil folded into Terrain); new zoom-out climate shot over northern Spain with Vigo and Logroño (Rioja) markers, two-station rain months chart and sun compare; 3D shot terrain 1.8 from the Atlantic looking ENE into the rías, alt tint plus Slope, bearing 62 to 92; heat shot on Vigo station; grapes shot over Val do Salnés pitched 40-46 with Aspect overlay; quiz on wide calm shot; music dusk seed 52 (waltz); voice bm_fable (male), music ducked under voice at -10 dB base.",
+   "music": "waltz",
+   "voice": "bm_fable",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=1530139994477577536",
+   "sources": [
+    "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=1495",
+    "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170",
+    "https://agacal.xunta.gal/sites/default/files/calidade-alimentaria/vinos/PC_DOP_Rias_Baixas_julio_2024_ESP.pdf",
+    "https://agacal.xunta.gal/sites/default/files/Ficha%20t%C3%A9cnica%20DO%20R%C3%ADas%20Baixas%202025.pdf",
+    "Open Wine Atlas details-es.json (terrain, GLiM bedrock)"
+   ]
   }
  ]
 }

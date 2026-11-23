@@ -1,0 +1,238 @@
+{
+ "slug": "deep-rias-baixas",
+ "place": "Rías Baixas",
+ "atlas_id": "es-eupdo-PDO-ES-A1119",
+ "made": "2026-11-23",
+ "hook": {
+  "text": "Four times the rain of Rioja.",
+  "basis": "Vigo Aeropuerto 1791 mm vs Logroño Aeropuerto 405 mm a year, AEMET normals 1981-2010, ratio 4.42",
+  "source": "AEMET valores climatológicos normales 1495 and 9170"
+ },
+ "station": {
+  "name": "Vigo Aeropuerto",
+  "id": "1495",
+  "municipality": "Redondela",
+  "height_m": 255,
+  "lat": 42.2386,
+  "lon": -8.6239,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=1495",
+  "note": "AEMET publishes station normals for 1981-2010 on this page; no 1991-2020 station table used. Comparison station from the same service and period."
+ },
+ "comparison_station": {
+  "name": "Logroño Aeropuerto",
+  "id": "9170",
+  "height_m": 353,
+  "lat": 42.4522,
+  "lon": -2.3311,
+  "service": "AEMET",
+  "period": "1981-2010",
+  "url": "https://www.aemet.es/es/serviciosclimaticos/datosclimatologicos/valoresclimatologicos?l=9170",
+  "note": "values reused from facts/deep-rioja.json (same page, read 2026-10-27)"
+ },
+ "monthly": {
+  "vigo_tmean": [
+   8.6,
+   9.6,
+   11.5,
+   12.4,
+   14.6,
+   17.9,
+   19.6,
+   19.8,
+   18.3,
+   15.0,
+   11.5,
+   9.3
+  ],
+  "vigo_tmax": [
+   11.9,
+   13.3,
+   15.7,
+   16.6,
+   18.8,
+   22.5,
+   24.4,
+   24.7,
+   22.8,
+   18.8,
+   14.9,
+   12.4
+  ],
+  "vigo_tmin": [
+   5.4,
+   5.8,
+   7.3,
+   8.2,
+   10.4,
+   13.2,
+   14.8,
+   15.0,
+   13.8,
+   11.2,
+   8.2,
+   6.3
+  ],
+  "vigo_precip_mm": [
+   208,
+   162,
+   141,
+   157,
+   127,
+   62,
+   44,
+   45,
+   102,
+   231,
+   246,
+   262
+  ],
+  "vigo_precip_year": 1791,
+  "vigo_sun_h": [
+   114,
+   131,
+   178,
+   193,
+   228,
+   273,
+   296,
+   287,
+   212,
+   154,
+   112,
+   101
+  ],
+  "vigo_sun_year": 2269,
+  "logrono_precip_mm": [
+   28,
+   23,
+   26,
+   46,
+   47,
+   44,
+   30,
+   21,
+   26,
+   37,
+   40,
+   38
+  ],
+  "logrono_precip_year": 405,
+  "logrono_sun_year": 2305
+ },
+ "derived": [
+  {
+   "claim": "rain ratio Vigo/Logroño",
+   "value": 4.42,
+   "computation": "1791/405"
+  },
+  {
+   "claim": "April to October mean temperature at Vigo",
+   "value": 16.8,
+   "shown": "16.8 °C",
+   "computation": "sum(vigo_tmean[3:10])/7"
+  },
+  {
+   "claim": "sum check Vigo precip",
+   "value": 1787,
+   "note": "AEMET annual 1791"
+  },
+  {
+   "claim": "sum check Vigo sun",
+   "value": 2279,
+   "note": "AEMET annual 2269"
+  },
+  {
+   "claim": "April to October rain at Vigo",
+   "value": 768,
+   "computation": "sum(vigo_precip_mm[3:10])",
+   "note": "not shown"
+  }
+ ],
+ "facts": [
+  {
+   "claim": "Registered area 4,848 ha, 4,949 growers, 177 wineries (industrias), as at 31 Dec 2025",
+   "source": "AGACAL Xunta de Galicia, Ficha técnica DO Rías Baixas 2025",
+   "url": "https://agacal.xunta.gal/sites/default/files/Ficha%20t%C3%A9cnica%20DO%20R%C3%ADas%20Baixas%202025.pdf"
+  },
+  {
+   "claim": "Five subzones: Val do Salnés, Condado do Tea, O Rosal, Ribeira do Ulla, Soutomaior",
+   "source": "Pliego de condiciones DOP Rías Baixas, July 2024, sec. 4 and 7.1a",
+   "url": "https://agacal.xunta.gal/sites/default/files/calidade-alimentaria/vinos/PC_DOP_Rias_Baixas_julio_2024_ESP.pdf"
+  },
+  {
+   "claim": "'Rías Baixas Albariño' = 100% Albariño",
+   "source": "Pliego July 2024, sec. 3.3",
+   "url": "same"
+  },
+  {
+   "claim": "Albariño min acquired alcohol 11.30% vol",
+   "source": "Pliego July 2024, sec. 2.1",
+   "url": "same"
+  },
+  {
+   "claim": "Max yield 12,000 kg/ha for Albariño",
+   "source": "Pliego July 2024, sec. 5",
+   "url": "same"
+  },
+  {
+   "claim": "Traditional training system is the emparrado (raised pergola), justified by limiting fungal disease; newer systems always raised",
+   "source": "Pliego July 2024, sec. 7.1b",
+   "url": "same"
+  },
+  {
+   "claim": "Altitude rarely exceeds 300 m; soils on granite, also schist; sandy, acid, shallow",
+   "source": "Pliego July 2024, sec. 7.1a",
+   "url": "same"
+  },
+  {
+   "claim": "Terrain mean 243 m in the outline (min -1, max 1038, p10 30, p90 515)",
+   "source": "Open Wine Atlas details-es.json terrain e",
+   "url": "https://openwineatlas.com/places/spain/rias-baixas"
+  },
+  {
+   "claim": "Bedrock 65% acid plutonic (granite), 30% metamorphic (schist, slate, gneiss)",
+   "source": "Open Wine Atlas details-es.json bedrock (GLiM)",
+   "url": "https://openwineatlas.com/places/spain/rias-baixas"
+  },
+  {
+   "claim": "Vigo 1,791 mm/yr, 2,269 h sun; Logroño 405 mm, 2,305 h; Vigo Aug mean max 24.7, min 15.0",
+   "source": "AEMET normals 1981-2010",
+   "url": "see station"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "About how much rain falls a year at Vigo airport?",
+   "options": [
+    "400 mm",
+    "900 mm",
+    "1,800 mm"
+   ],
+   "answer": "C, 1,800 mm (1,791 mm, AEMET 1981-2010)"
+  },
+  {
+   "q": "Main bedrock of the zone?",
+   "options": [
+    "Limestone",
+    "Granite",
+    "Chalk"
+   ],
+   "answer": "B, granite (65%, GLiM; pliego sec. 7.1a)"
+  },
+  {
+   "q": "Traditional way to train the vines?",
+   "options": [
+    "Bush vines",
+    "High pergola",
+    "Low cordon"
+   ],
+   "answer": "B, high pergola, the emparrado (pliego sec. 7.1b)"
+  }
+ ],
+ "dropped": [
+  "Albariño share of plantings (no official breakdown found; 2025 fact sheet page 4 not readable)",
+  "subzone climate differences from the Study lesson (not sourced with numbers)"
+ ]
+}

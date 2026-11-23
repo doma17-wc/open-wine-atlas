@@ -1,0 +1,554 @@
+{
+ "slug": "deep-rias-baixas",
+ "id": "es-eupdo-PDO-ES-A1119",
+ "duration": 58.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  52
+ ],
+ "markers": [
+  {
+   "lng": -8.6239,
+   "lat": 42.2386,
+   "label": "Vigo · 255 m",
+   "shots": [
+    2,
+    4
+   ]
+  },
+  {
+   "lng": -2.3311,
+   "lat": 42.4522,
+   "label": "Logroño · 353 m",
+   "shots": [
+    2
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     -7.2,
+     42.2,
+     5.8,
+     0,
+     0
+    ],
+    [
+     2.0,
+     -8.53,
+     42.4,
+     7.45,
+     -4,
+     4
+    ]
+   ],
+   "layers": {},
+   "labels": false
+  },
+  {
+   "name": "place",
+   "dur": 8.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     -8.53,
+     42.4,
+     7.45,
+     -4,
+     4
+    ],
+    [
+     8.0,
+     -8.53,
+     42.4,
+     7.65,
+     -10,
+     18
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "climate",
+   "dur": 12.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     -5.5,
+     42.35,
+     5.05,
+     0,
+     0
+    ],
+    [
+     12.0,
+     -5.5,
+     42.35,
+     5.15,
+     3,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "terrain3d",
+   "dur": 10.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     -8.68,
+     42.42,
+     9.2,
+     62,
+     64
+    ],
+    [
+     10.0,
+     -8.68,
+     42.42,
+     9.4,
+     92,
+     67
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 1.8
+  },
+  {
+   "name": "heat",
+   "dur": 7.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 600
+   },
+   "cam": [
+    [
+     0,
+     -8.62,
+     42.3,
+     8.5,
+     0,
+     0
+    ],
+    [
+     7.0,
+     -8.62,
+     42.3,
+     8.62,
+     -4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 8.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 440
+   },
+   "cam": [
+    [
+     0,
+     -8.8,
+     42.5,
+     10.4,
+     20,
+     40
+    ],
+    [
+     8.0,
+     -8.8,
+     42.5,
+     10.6,
+     32,
+     46
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 14.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     -8.53,
+     42.4,
+     7.3,
+     0,
+     0
+    ],
+    [
+     14.0,
+     -8.53,
+     42.4,
+     7.42,
+     5,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "Spain · Deep dive",
+   "title": "Rías Baixas",
+   "sub": "Four times the rain<br>of Rioja."
+  },
+  {
+   "kind": "chips",
+   "t0": 4.0,
+   "t1": 53.9,
+   "items": [
+    "Place",
+    "Rain",
+    "Sun",
+    "Terrain",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     4.0,
+     9.4
+    ],
+    [
+     9.4,
+     15.5
+    ],
+    [
+     15.5,
+     20.5
+    ],
+    [
+     20.5,
+     30.1
+    ],
+    [
+     30.1,
+     36.5
+    ],
+    [
+     36.5,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.1,
+   "t1": 6.8,
+   "kicker": "Layer 1 · The place",
+   "src": "AGACAL, Xunta de Galicia, fact sheet 2025",
+   "n": "4,848",
+   "u": "ha",
+   "c": "registered at the end of 2025, farmed by 4,949&nbsp;growers.",
+   "count": {
+    "v": 4848,
+    "d": 0
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 6.9,
+   "t1": 9.4,
+   "kicker": "Layer 1 · The place",
+   "src": "Pliego de condiciones DOP Rías Baixas (2024)",
+   "n": "5",
+   "u": "subzones",
+   "c": "Val do Salnés, O Rosal, Condado do Tea, Soutomaior and Ribeira do Ulla."
+  },
+  {
+   "kind": "card",
+   "t0": 9.5,
+   "t1": 15.3,
+   "kicker": "Layer 2 · Rain",
+   "src": "AEMET normals 1981–2010",
+   "n": "1,791",
+   "u": "mm",
+   "c": "a year at Vigo airport, next to the vines. Logroño in Rioja gets 405&nbsp;mm.",
+   "count": {
+    "v": 1791,
+    "d": 0
+   },
+   "chart": {
+    "type": "months",
+    "a": [
+     208,
+     162,
+     141,
+     157,
+     127,
+     62,
+     44,
+     45,
+     102,
+     231,
+     246,
+     262
+    ],
+    "b": [
+     28,
+     23,
+     26,
+     46,
+     47,
+     44,
+     30,
+     21,
+     26,
+     37,
+     40,
+     38
+    ],
+    "max": 280,
+    "bands": [],
+    "hot": [
+     11
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Vigo 255&nbsp;m &nbsp; ▢ Logroño 353&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 15.5,
+   "t1": 20.4,
+   "kicker": "Layer 3 · Sun",
+   "src": "AEMET normals 1981–2010",
+   "n": "2,269",
+   "u": "h",
+   "c": "of sun a year at Vigo, almost as much as Logroño. Wet, but not dark.",
+   "count": {
+    "v": 2269,
+    "d": 0
+   },
+   "chart": {
+    "type": "compare",
+    "rows": [
+     {
+      "label": "Vigo",
+      "v": 2269
+     },
+     {
+      "label": "Logroño",
+      "v": 2305
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 20.6,
+   "t1": 25.3,
+   "kicker": "Layer 4 · Terrain",
+   "src": "Open Wine Atlas terrain · Pliego de condiciones DOP Rías Baixas (2024)",
+   "n": "243",
+   "u": "m",
+   "c": "average height of the zone. The vines rarely go above 300&nbsp;m."
+  },
+  {
+   "kind": "card",
+   "t0": 25.4,
+   "t1": 30.0,
+   "kicker": "Layer 4 · Terrain",
+   "src": "GLiM bedrock (Open Wine Atlas) · Pliego de condiciones DOP Rías Baixas (2024)",
+   "n": "65",
+   "u": "% granite",
+   "c": "bedrock, plus 30% schist and gneiss. Soils are sandy, acid and shallow."
+  },
+  {
+   "kind": "card",
+   "t0": 30.2,
+   "t1": 36.4,
+   "kicker": "Layer 5 · Heat",
+   "src": "AEMET normals 1981–2010",
+   "n": "16.8",
+   "u": "°C",
+   "c": "mean from April to October at Vigo. August days reach 24.7&nbsp;°C, nights 15.0.",
+   "count": {
+    "v": 16.8,
+    "d": 1
+   },
+   "chart": {
+    "type": "range",
+    "max": [
+     11.9,
+     13.3,
+     15.7,
+     16.6,
+     18.8,
+     22.5,
+     24.4,
+     24.7,
+     22.8,
+     18.8,
+     14.9,
+     12.4
+    ],
+    "min": [
+     5.4,
+     5.8,
+     7.3,
+     8.2,
+     10.4,
+     13.2,
+     14.8,
+     15.0,
+     13.8,
+     11.2,
+     8.2,
+     6.3
+    ],
+    "hl": 7,
+    "lo": 0,
+    "hi": 30,
+    "grid": [
+     0,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · August: 24.7 to 15.0",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 36.6,
+   "t1": 40.8,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Pliego de condiciones DOP Rías Baixas (2024)",
+   "n": "100",
+   "u": "% Albariño",
+   "c": "for a wine labelled Rías Baixas Albariño, with at least 11.3% alcohol."
+  },
+  {
+   "kind": "card",
+   "t0": 40.9,
+   "t1": 44.4,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Pliego de condiciones DOP Rías Baixas (2024)",
+   "n": "12,000",
+   "u": "kg/ha",
+   "c": "Albariño yield limit. Vines grow high on the emparrado pergola, against fungal disease."
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 47.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "About how much rain falls<br>a year at Vigo airport?<br>A&nbsp;&nbsp;400 mm<br>B&nbsp;&nbsp;900 mm<br>C&nbsp;&nbsp;1,800 mm"
+  },
+  {
+   "kind": "card",
+   "t0": 47.7,
+   "t1": 50.7,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Main bedrock of the zone?<br>A&nbsp;&nbsp;Limestone<br>B&nbsp;&nbsp;Granite<br>C&nbsp;&nbsp;Chalk"
+  },
+  {
+   "kind": "card",
+   "t0": 50.8,
+   "t1": 53.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Traditional way to train<br>the vines?<br>A&nbsp;&nbsp;Bush vines<br>B&nbsp;&nbsp;High pergola<br>C&nbsp;&nbsp;Low cordon"
+  },
+  {
+   "kind": "outro",
+   "t0": 54.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Rías Baixas",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Rheingau",
+   "srcs": "Sources: AEMET normals 1981–2010 · Pliego DOP Rías Baixas (2024) · AGACAL fact sheet 2025 · GLiM · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 3,
+  "at": 0.7,
+  "kicker": "Deep dive · Spain",
+  "title": "Rías Baixas",
+  "sub": "Four times the rain<br>of Rioja.",
+  "size": 150
+ }
+}

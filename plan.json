@@ -401,8 +401,9 @@
    "series": "",
    "not_before": "2026-11-23",
    "why": "Spain study path: Albariño, Atlantic rain, granite and pergola training",
-   "status": "planned",
-   "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50. Moved to 23 Nov on 2026-11-20: Kakheti (14 Nov) and Santorini (15 Nov) fill the 2 non-classic slots until 22 Nov."
+   "status": "posted",
+   "note": "Added 2026-11-12 to keep 6+ planned. Slot 17:50. Moved to 23 Nov on 2026-11-20: Kakheti (14 Nov) and Santorini (15 Nov) fill the 2 non-classic slots until 22 Nov. Made 2026-11-23 (only non-classic in the last 7 days). Study-path hook replaced by 'Four times the rain of Rioja' (Vigo 1,791 vs Logroño 405 mm). Climate: AEMET normals 1981-2010 Vigo Aeropuerto 1495 (255 m, Redondela) vs Logroño Aeropuerto 9170 (from deep-rioja facts), period named on screen; no 1991-2020 station table. Area 4,848 ha registered (AGACAL fact sheet 2025). Rules from the Pliego de condiciones July 2024. Albariño planting share dropped (no official breakdown readable). Climate shot zoomed out to northern Spain with both stations.",
+   "slot": "2026-11-23T17:50+01:00"
   },
   {
    "slug": "deep-rheingau",
