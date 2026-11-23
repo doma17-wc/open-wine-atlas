@@ -4677,5 +4677,299 @@
   "experiment": "",
   "metricool_uuid": null,
   "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Burgundy south quiz teaser (plain, quiz cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "777227055732903454",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Burgundy quiz: Burgundy's south. Can you get all 4?",
+  "hook": "Burgundy's south. Can you get all 4?",
+  "places": [
+   "Mercurey",
+   "Pouilly-Fuissé"
+  ],
+  "question_keys": [
+   "bourgogne-chalonnaise-maconnais#q1",
+   "bourgogne-chalonnaise-maconnais#q3",
+   "bourgogne-chalonnaise-maconnais#q5",
+   "bourgogne-chalonnaise-maconnais#q8"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-5574064061253924578",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Chablis vs Sancerre game teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2699123941729482747",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, fit_tiles, labels off, hook 3.4 s, preset warm seed 14 = waltz",
+  "title": "Chablis or Sancerre. Which one is bigger? (Chablis 5,282 ha vs Sancerre 3,625 ha, 1.5x)",
+  "hook": "Chablis or Sancerre. Which one is bigger?",
+  "places": [
+   "Chablis",
+   "Sancerre"
+  ],
+  "question_keys": [],
+  "experiment": "Game pair of two famous whites from different regions (not neighbours). Voice names only on the both card, no numbers read out",
+  "metricool_uuid": "-7356630080848703620",
+  "voice": "af_bella",
+  "music": "warm 14 (waltz)"
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: albariza of Jerez (answer C, shown in the 20:20 story), with the mid-slope answer (B) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-site#q8"
+  ],
+  "experiment": "",
+  "metricool_uuid": "114746159927740557",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, labels on, maxzoom 13.5, place 2.2 s, preset japan seed 12 = ambient",
+  "title": "Five sweet wines. One river. (Cérons 1,818, Barsac 844, Sauternes 3,057, Loupiac 619, Sainte-Croix-du-Mont 614; total off, Barsac inside Sauternes)",
+  "hook": "Five sweet wines. One river.",
+  "places": [
+   "Cérons",
+   "Barsac",
+   "Sauternes",
+   "Loupiac",
+   "Sainte-Croix-du-Mont"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first sweet-wine cluster reel, both banks of a river. Cadillac dropped: its 7,661 ha outline covers Loupiac and Sainte-Croix",
+  "metricool_uuid": "-4951463118041298376",
+  "voice": "am_michael",
+  "music": "japan 12 (ambient)"
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4203079508778501116",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Three Loire appellations. One is just 6.8 hectares. (Savennières 350, Roche aux Moines 34.6, Coulée de Serrant 6.8)",
+  "hook": "Three Loire appellations. One is just 6.8 hectares.",
+  "places": [
+   "Savennières",
+   "Savennières Roche aux Moines",
+   "Coulée de Serrant"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "100990969492687957",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Garonne sweet wines reel teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3890523098835890973",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Savennières post teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1802927402952342866",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Rías Baixas deep dive teaser (topic from the Vino Nobile caption: Next deep dive: Rías Baixas)",
+  "hook": "",
+  "places": [
+   "Rías Baixas"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "426778857705589355",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel, no_area",
+  "title": "Five grand crus. One lighthouse. (Montagne de Reims north side: Puisieulx, Sillery, Mailly-Champagne, Verzenay, Verzy; no_area)",
+  "hook": "Five grand crus. One lighthouse.",
+  "places": [
+   "Puisieulx",
+   "Sillery",
+   "Mailly-Champagne",
+   "Verzenay",
+   "Verzy"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: curiosity hook (Verzenay lighthouse) instead of a size hook",
+  "metricool_uuid": "4587705060723215497",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Montagne de Reims post teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-87586109381785781",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: llicorella of Priorat (answer D, still to show), with the albariza answer (C) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-site#q6"
+  ],
+  "experiment": "",
+  "metricool_uuid": "1600073560698339579",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, 770 spots still open",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2843544542608994457",
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members confirmed: 230. Followers 5,625 on 2026-11-22.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Côte de Nuits villages reel (2026-10-29, 13:05) left as draft: Morey and Chambolle used on 2026-11-19 (game), Vosne and Gevrey on 2026-11-17, old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [
+   "Gevrey-Chambertin",
+   "Morey-Saint-Denis",
+   "Chambolle-Musigny",
+   "Vougeot",
+   "Vosne-Romanée",
+   "Nuits-Saint-Georges"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
+ },
+ {
+  "date": "2026-11-23",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Llicorella answer (D, a dark slate with quartz) still to show. Pauillac first growths (fr-bxcc ids) are points, not outlines: not usable for cluster reels. Used in the last 30 days and so not available: Pauillac vs Margaux, Vosne grand crus, Morey 'All called Clos', Saint-Emilion satellites, Côte Chalonnaise villages, Pouilly set. foundations-site questions left unused: only q2 (Coonawarra). Burgundy questions left unused: only bourgogne-chalonnaise-maconnais q2, q4, q7. Cinematic explainer not made yet this week (start it first thing in a run). Week 16 to 22 Nov: average skip rate 65.9% (week before 70.5%); voiced reels 19 to 22 Nov average 3,142 views and skip 63.2% vs 1,901 and 69.4% for the unvoiced ones of 16 to 18 Nov. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable. Share prompt today: Save this for your exam (tomorrow: Send this to your study group). Game reels this week: 23 Nov. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": null,
+  "voice": false
  }
 ]
