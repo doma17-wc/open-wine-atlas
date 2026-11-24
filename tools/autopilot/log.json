@@ -4971,5 +4971,293 @@
   "experiment": "",
   "metricool_uuid": null,
   "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Bordeaux quiz teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "3020497479431113749",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Bordeaux quiz: Rivers, gravel, Cabernet. Get all 4?",
+  "hook": "Rivers, gravel, Cabernet. Get all 4?",
+  "places": [
+   "Entre-deux-Mers",
+   "Bordeaux"
+  ],
+  "question_keys": [
+   "bordeaux-overview#q2",
+   "bordeaux-overview#q5",
+   "bordeaux-left-bank#q3",
+   "bordeaux-graves-sauternes#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-2734498139897312339",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Montrachet vs Romanée-Conti game teaser (plain-ish, cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4608827872488014874",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, labels off, hook 3.5 s, preset south seed 20 = waltz, music: waltz",
+  "title": "Two legends. Which is bigger? (Montrachet 8.0 ha vs Romanée-Conti 1.8 ha, 4.4x)",
+  "hook": "Two legends. Which is bigger?",
+  "places": [
+   "Montrachet",
+   "Romanée-Conti"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: two legendary grand crus far apart (white vs red, Côte de Beaune vs Côte de Nuits), hook without place names",
+  "metricool_uuid": "-4432714023920710299",
+  "voice": "bm_george"
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Coonawarra terra rossa (answer A, shown in the 20:20 story), with the llicorella answer (D) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-site#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "5971252563902352785",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, labels off, maxzoom 15, place 3.0 s, preset dusk seed 15 = ambient, music: ambient",
+  "title": "No grand cru. Guess the biggest premier cru. (Beaune: Marconnets 9.4, Fèves 4.7, Bressandes 17.2, Cents Vignes 23.5, Grèves 31.3; 86.1 ha)",
+  "hook": "No grand cru. Guess the biggest premier cru.",
+  "places": [
+   "Beaune premier cru Les Marconnets",
+   "Beaune premier cru Les Fèves",
+   "Beaune premier cru Les Bressandes",
+   "Beaune premier cru Les Cents Vignes",
+   "Beaune premier cru Les Grèves"
+  ],
+  "question_keys": [],
+  "experiment": "Voice reads each name with its area",
+  "metricool_uuid": "4249983209798780045",
+  "voice": "af_heart"
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count: founding_count check failed)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5000407248270769560",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Five grand crus. Guess the smallest. (Alsace: Brand 56.7, Hengst 75.8, Steingrubler 23.0, Pfersigberg 71.4, Eichberg 59.2)",
+  "hook": "Five grand crus. Guess the smallest.",
+  "places": [
+   "Alsace grand cru Brand",
+   "Alsace grand cru Hengst",
+   "Alsace grand cru Steingrubler",
+   "Alsace grand cru Pfersigberg",
+   "Alsace grand cru Eichberg"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4839098338579333553",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Beaune premiers crus reel teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4838399770185254286",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Alsace post teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "2197193468366375856",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Rheingau deep dive teaser (topic from the Rías Baixas caption: Next deep dive: Rheingau)",
+  "hook": "",
+  "places": [
+   "Rheingau"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5779612627178179670",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "18:30",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Champagne quiz: Chalk, marl, Meunier. Get all 4?",
+  "hook": "Chalk, marl, Meunier. Get all 4?",
+  "places": [
+   "Champagne"
+  ],
+  "question_keys": [
+   "north-france-champagne-region#q4",
+   "north-france-champagne-region#q2",
+   "north-france-champagne-region#q6",
+   "north-france-champagne-method#q8"
+  ],
+  "experiment": "EXPERIMENT: two quiz carousels in one day (quizzes lead the posts), no cluster at 18:30",
+  "metricool_uuid": "-5423523474140479028",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Champagne quiz teaser (plain)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "1511000331289708341",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Bordeaux maritime climate (answer D, still to show), with the Coonawarra answer (A) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-climate#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-7699249764126603704",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3563571860196343582",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members: check failed today (Supabase execute_sql: no permission). Followers 5,770 on 2026-11-23.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Saint-Emilion satellites reel (2026-10-29, 13:05) left as draft: Saint-Emilion satellites used in the last 30 days, old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-24",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Maritime answer (D, Bordeaux is maritime, moderated by the Atlantic and the Gulf Stream) still to show. foundations-site questions now all used; foundations-climate started (q2 used). Cinematic explainer still not made this week: skipped again to keep the quota safe; start it first thing in a run (try 540x960 3D stills or 2D overlay stills). 23 Nov: Sauternes cluster 3,597 views (skip 68.1%), Chablis vs Sancerre game 3,114 (skip 61.2%), Rías Baixas deep dive 2,566. 22 Nov: Vougeot cluster 3,125, Pomerol vs Saint-Emilion 2,818 (skip 61.9%). Posts: Burgundy quizzes 2,054 and 1,588, Meursault cluster 2,350, the rest 600 to 1,300. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable. Share prompt today: Send this to your study group (tomorrow: Save this for your exam). Game reels this week: 23, 24 Nov. Tomorrow is Wednesday: study buddy quiz. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
  }
 ]
