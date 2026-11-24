@@ -538,6 +538,22 @@
     "https://agacal.xunta.gal/sites/default/files/Ficha%20t%C3%A9cnica%20DO%20R%C3%ADas%20Baixas%202025.pdf",
     "Open Wine Atlas details-es.json (terrain, GLiM bedrock)"
    ]
+  },
+  {
+   "slug": "deep-rheingau",
+   "place": "Rheingau",
+   "slot": "2026-11-24T17:50+01:00",
+   "hook": "Why does Rheingau Riesling face south?",
+   "classic": false,
+   "style": "2 s fly-in from the Main valley at zoom 6.9 to 9.0 (no globe, labels off), hook on screen from frame 0; layers Place, Terrain, Heat, Sun, Rain, Grapes (climate moved after terrain, Heat before Sun and Rain); 3D shot terrain 2.2 looking north across the Rhine at the south-facing slope with the Aspect overlay (ties to the hook), bearing -20 to 14, pitch 64 to 67; heat shot on the Geisenheim station; one shared climate shot for Sun and Rain with single-station month charts (no comparison station); grapes shot over Rüdesheim and Assmannshausen pitched 40-46 with Slope overlay; quiz on wide calm shot; music warm seed 63 (ambient); voice bf_emma (female, en-gb), music ducked 6 dB under voice.",
+   "music": "ambient",
+   "voice": "bf_emma",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-3612975087446176062",
+   "sources": [
+    "WMO climate normals 1991-2020, Geisenheim 120 m, via https://en.wikipedia.org/wiki/Geisenheim",
+    "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf",
+    "Open Wine Atlas details-de.json and study.json (Rhine regions lesson)"
+   ]
   }
  ]
 }

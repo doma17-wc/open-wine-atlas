@@ -1,0 +1,310 @@
+{
+ "place": "Rheingau",
+ "atlas_id": "de-eupdo-PDO-DE-A1273",
+ "hook": {
+  "text": "Why does Rheingau Riesling face south?",
+  "answer": "Between Wiesbaden and Rüdesheim the Rhine flows west for about 30 km, so the vineyards on its north bank face south; the Taunus hills shelter them from cold north winds.",
+  "source": "Open Wine Atlas details-de.json atlas_note and study.json lesson germany-austria-rhine (Rheingau section)"
+ },
+ "facts": [
+  {
+   "k": "vineyard_area",
+   "v": 3125.0,
+   "u": "ha",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "estates",
+   "v": 540,
+   "u": "Betriebe",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "einzellagen",
+   "v": 120,
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "grosslagen",
+   "v": 12,
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "steep_share",
+   "v": 10.77,
+   "u": "% of planted area on slopes >=30%",
+   "shown": "10.8",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "steep_area",
+   "v": 336.7,
+   "u": "ha",
+   "shown": "337",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "rhine_west_km",
+   "v": 30,
+   "u": "km (about)",
+   "source": "Open Wine Atlas atlas_note: 'A single south-facing slope along the Rhine where it flows west for about 30 km'",
+   "url": "https://openwineatlas.com/places/germany/rheingau"
+  },
+  {
+   "k": "taunus_shelter",
+   "v": "The Taunus hills shelter the vineyards from cold north winds",
+   "source": "Open Wine Atlas study lesson germany-austria-rhine"
+  },
+  {
+   "k": "assmannshausen",
+   "v": "Spätburgunder second grape, famously at Assmannshausen on the bend of the river",
+   "source": "Open Wine Atlas study lesson germany-austria-rhine"
+  },
+  {
+   "k": "riesling_share",
+   "v": 75.36,
+   "u": "%",
+   "shown": "75.4",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "spatburgunder_share",
+   "v": 12.48,
+   "u": "%",
+   "shown": "12.5",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "other_white_share",
+   "v": 9.92,
+   "u": "%",
+   "shown": "9.9",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "other_red_share",
+   "v": 2.24,
+   "u": "%",
+   "shown": "2.2",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "white_share",
+   "v": 85.28,
+   "u": "%",
+   "shown": "85",
+   "derived": "75.36 + 9.92",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025",
+   "url": "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf"
+  },
+  {
+   "k": "station",
+   "v": "Geisenheim, 120 m",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "monthly_tmax",
+   "v": [
+    5.1,
+    6.7,
+    11.4,
+    16.3,
+    20.3,
+    23.7,
+    25.9,
+    25.5,
+    20.8,
+    14.9,
+    9.0,
+    5.7
+   ],
+   "u": "°C",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "monthly_tmin",
+   "v": [
+    -0.1,
+    0.1,
+    2.7,
+    5.8,
+    9.7,
+    12.8,
+    14.8,
+    14.3,
+    10.8,
+    7.1,
+    3.6,
+    0.9
+   ],
+   "u": "°C",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "monthly_tmean",
+   "v": [
+    2.5,
+    3.3,
+    6.8,
+    11.0,
+    14.9,
+    18.2,
+    20.2,
+    19.6,
+    15.3,
+    10.6,
+    6.2,
+    3.3
+   ],
+   "u": "°C",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "monthly_rain",
+   "v": [
+    39.3,
+    34.0,
+    36.2,
+    30.7,
+    49.8,
+    47.5,
+    57.7,
+    48.3,
+    43.0,
+    45.2,
+    43.1,
+    50.4
+   ],
+   "u": "mm",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "monthly_sun",
+   "v": [
+    50.7,
+    80.0,
+    136.5,
+    189.9,
+    212.1,
+    222.0,
+    236.0,
+    221.4,
+    163.1,
+    98.3,
+    48.4,
+    41.7
+   ],
+   "u": "h",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "annual_rain",
+   "v": 525.4,
+   "u": "mm",
+   "shown": "525",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim",
+   "crosscheck": "RP Darmstadt gives 527 mm (Geisenheim 1991-2020)"
+  },
+  {
+   "k": "annual_sun",
+   "v": 1717.1,
+   "u": "h",
+   "shown": "1,717",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim",
+   "crosscheck": "RP Darmstadt gives 1701 h"
+  },
+  {
+   "k": "july_sun",
+   "v": 236.0,
+   "u": "h",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "july_tmax",
+   "v": 25.9,
+   "u": "°C",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "july_tmin",
+   "v": 14.8,
+   "u": "°C",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)",
+   "url": "https://en.wikipedia.org/wiki/Geisenheim"
+  },
+  {
+   "k": "apr_oct_rain",
+   "v": 322.2,
+   "u": "mm",
+   "shown": "322",
+   "derived": "sum(monthly_rain[Apr..Oct]) in Python",
+   "crosscheck": "RP Darmstadt Vegetationszeit 324 mm"
+  },
+  {
+   "k": "apr_oct_mean_temp",
+   "v": 15.69,
+   "u": "°C",
+   "shown": "15.7",
+   "derived": "mean(monthly_tmean[Apr..Oct]) in Python",
+   "crosscheck": "RP Darmstadt Vegetationszeit 15.7 °C"
+  }
+ ],
+ "computation": "ao_rain=round(sum(rain[3:10]),1); ao_t=round(sum(tmean[3:10])/7,2); white=75.36+9.92",
+ "quiz": [
+  {
+   "q": "Which way does the Rhine flow past the vineyards?",
+   "options": [
+    "A North",
+    "B West",
+    "C South"
+   ],
+   "answer": "B West",
+   "source": "Open Wine Atlas atlas_note / study lesson"
+  },
+  {
+   "q": "Second most planted grape?",
+   "options": [
+    "A Silvaner",
+    "B Müller-Thurgau",
+    "C Spätburgunder"
+   ],
+   "answer": "C Spätburgunder (12.5%)",
+   "source": "Regierungspräsidium Darmstadt, Dezernat Weinbau: Kurz-Info Rheingau, Weinbauliche Kenndaten 31. Juli 2025"
+  },
+  {
+   "q": "About how much rain falls a year at Geisenheim?",
+   "options": [
+    "A 525 mm",
+    "B 950 mm",
+    "C 1,500 mm"
+   ],
+   "answer": "A 525 mm",
+   "source": "WMO climate normals 1991-2020, Geisenheim station 120 m (near the Hochschule Geisenheim), as republished in the Wikipedia climate box (source named: World Meteorological Organisation)"
+  }
+ ],
+ "dropped": [
+  "Comparison station (Frankfurt or Trier): no official 1991-2020 normals page could be fetched (DWD pages blocked, JMA page without period)",
+  "Schloss Johannisberg 1775 Spätlese story (tradition, not verifiable as fact)",
+  "Terrain range 70-614 m (atlas zone includes the Felsberg exclave in northern Hesse, so not shown)"
+ ]
+}

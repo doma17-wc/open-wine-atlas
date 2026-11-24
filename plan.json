@@ -412,8 +412,9 @@
    "series": "",
    "not_before": "2026-11-23",
    "why": "Germany study path: Riesling on south-facing slopes above the Rhine, the Taunus shelter, Prädikat levels",
-   "status": "planned",
-   "note": "Added 2026-11-15 to keep 6+ planned. Slot 17:50."
+   "status": "posted",
+   "note": "Added 2026-11-15 to keep 6+ planned. Slot 17:50. Made 2026-11-24 (non-classic 2 of 2 in the 7-day window).",
+   "slot": "2026-11-24T17:50+01:00"
   },
   {
    "slug": "deep-ribera-del-duero",
@@ -483,10 +484,10 @@
    "place": "Vouvray",
    "atlas_id": "fr-inao-a119",
    "series": "",
-   "not_before": "2026-11-27",
+   "not_before": "2026-11-25",
    "why": "Loire study path: Chenin Blanc on tuffeau, dry to sweet and sparkling",
    "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50."
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 25 Nov on 2026-11-24 so the 25 Nov slot gets a classic (Ribera and Valpolicella are non-classics and the 7-day window is full) and announced as next in the Rheingau outro."
   },
   {
    "slug": "deep-cote-rotie",
@@ -538,6 +539,16 @@
    "why": "Bordeaux study path: Left Bank commune between Pauillac and Margaux, gravel, Cabernet Sauvignon, 1855 classified growths",
    "status": "planned",
    "note": "Added 2026-11-22. Slot 17:50. Verify the classified growth count."
+  },
+  {
+   "slug": "deep-chambolle-musigny",
+   "place": "Chambolle-Musigny",
+   "atlas_id": "",
+   "series": "",
+   "not_before": "2026-12-02",
+   "why": "Burgundy study path: Côte de Nuits village of fine-boned Pinot Noir, grands crus Musigny and Bonnes-Mares",
+   "status": "planned",
+   "note": "Added 2026-11-24 to keep 4+ classics planned. Slot 17:50. Look up the atlas id and verify the grand cru list in the INAO data."
   }
  ]
 }

@@ -1,0 +1,94 @@
+{
+ "voice": "bf_emma",
+ "lang": "en-gb",
+ "lines": [
+  {
+   "t0": 0.15,
+   "end": 2.35,
+   "max_end": 3.8,
+   "text": "Why does Rheingau Riesling face south?",
+   "phonemes": "wˌaɪ dˈʌz ɹˈaɪnɡaʊ ɹˈiːslɪŋ fˈeɪs sˈaʊθ?",
+   "sr": 24000
+  },
+  {
+   "t0": 4.25,
+   "end": 8.52,
+   "max_end": 9.1,
+   "text": "Over three thousand hectares of vines, and a hundred and twenty single vineyards.",
+   "phonemes": "ˌəʊvə θɹˈiː θˈaʊzənd hˈɛkteəz ɒv vˈaɪnz, and ɐ hˈʌndɹɪd and twˈɛnti sˈɪŋɡəl vˈɪnjədz.",
+   "sr": 24000
+  },
+  {
+   "t0": 9.65,
+   "end": 12.98,
+   "max_end": 13.8,
+   "text": "Here the Rhine flows west, so its north bank faces the sun.",
+   "phonemes": "hˈiə ðə ɹˈaɪn flˈəʊz wˈɛst, sˌəʊ ɪts nˈɔːθ bˈaŋk fˈeɪsɪz ðə sˈʌn.",
+   "sr": 24000
+  },
+  {
+   "t0": 14.35,
+   "end": 18.42,
+   "max_end": 18.5,
+   "text": "Ten point eight percent of the vines grow on slopes of thirty percent or more.",
+   "phonemes": "tˈɛn pˈɔɪnt ˈeɪt pəsˈɛnt ɒvðə vˈaɪnz ɡɹˈəʊ ˌɒn slˈəʊps ɒv θˈɜːti pəsˈɛnt ɔː mˈɔː.",
+   "sr": 24000
+  },
+  {
+   "t0": 19.15,
+   "end": 23.5,
+   "max_end": 24.9,
+   "text": "From April to October, Geisenheim averages fifteen point seven degrees.",
+   "phonemes": "fɹɒm ˈeɪpɹəl tʊ ɒktˈəʊbə, ɡˈaɪzənhaɪm ˈavɹɪdʒɪz fˈɪftiːn pˈɔɪnt sˈɛvən dɪɡɹˈiːz.",
+   "sr": 24000
+  },
+  {
+   "t0": 25.55,
+   "end": 30.46,
+   "max_end": 30.6,
+   "text": "About seventeen hundred hours of sun a year. July alone has two hundred and thirty six.",
+   "phonemes": "ɐbˌaʊt sˈɛvəntˌiːn hˈʌndɹɪd ˈaʊəz ɒv sˈʌn ɐ jˈiə. dʒuːlˈaɪ ɐlˈəʊn hɐz tˈuː hˈʌndɹɪd and θˈɜːti sˈɪks.",
+   "sr": 24000
+  },
+  {
+   "t0": 31.25,
+   "end": 35.09,
+   "max_end": 36.4,
+   "text": "Only five hundred and twenty five millimetres of rain fall in a year.",
+   "phonemes": "ˈəʊnli fˈaɪv hˈʌndɹɪd and twˈɛnti fˈaɪv mˈɪlɪmˌiːtəz ɒv ɹˈeɪn fˈɔːl ɪn ɐ jˈiə.",
+   "sr": 24000
+  },
+  {
+   "t0": 37.05,
+   "end": 39.82,
+   "max_end": 40.4,
+   "text": "Riesling covers seventy five percent of the vineyards.",
+   "phonemes": "ɹˈiːslɪŋ kˈʌvəz sˈɛvənti fˈaɪv pəsˈɛnt ɒvðə vˈɪnjədz.",
+   "sr": 24000
+  },
+  {
+   "t0": 40.95,
+   "end": 43.87,
+   "max_end": 44.1,
+   "text": "Pinot Noir, here called Spätburgunder, comes second.",
+   "phonemes": "pˈiːnəʊ nwˈɑː, hˈiə kˈɔːld ʃpˈeːtbʊɹɡʊndɐ, kˈʌmz sˈɛkənd.",
+   "sr": 24000
+  },
+  {
+   "t0": 44.75,
+   "end": 48.16,
+   "max_end": 53.5,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "phonemes": "tˈɛst jɔːsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈansəz ɪnðə fˈɜːst kˈɒmɛnt.",
+   "sr": 24000
+  },
+  {
+   "t0": 54.15,
+   "end": 56.71,
+   "max_end": 57.7,
+   "text": "Study it free at open wine atlas dot com.",
+   "phonemes": "stˈʌdi ɪt fɹˈiː at ˈəʊpən wˈaɪn ˈatləs dˈɒt kˈɒm.",
+   "sr": 24000
+  }
+ ]
+}
