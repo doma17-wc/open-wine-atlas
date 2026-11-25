@@ -1,0 +1,506 @@
+{
+ "slug": "deep-vouvray",
+ "id": "fr-inao-a119",
+ "duration": 58.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "dusk",
+  44
+ ],
+ "markers": [
+  {
+   "lng": 0.7272,
+   "lat": 47.4444,
+   "label": "Tours station · 108 m",
+   "shots": [
+    3
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     0.2,
+     47.35,
+     6.4,
+     0,
+     0
+    ],
+    [
+     2.0,
+     0.8177,
+     47.454,
+     9.9,
+     0,
+     4
+    ]
+   ],
+   "layers": {},
+   "labels": false
+  },
+  {
+   "name": "place",
+   "dur": 8.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     0.8177,
+     47.454,
+     9.9,
+     0,
+     4
+    ],
+    [
+     8.0,
+     0.8177,
+     47.454,
+     10.15,
+     -6,
+     18
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 11.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     0.8,
+     47.408,
+     12.7,
+     300,
+     62
+    ],
+    [
+     11.0,
+     0.8,
+     47.408,
+     12.85,
+     338,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.4,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 3.0
+  },
+  {
+   "name": "climate",
+   "dur": 12.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     0.8,
+     47.452,
+     9.3,
+     0,
+     0
+    ],
+    [
+     12.5,
+     0.8,
+     47.452,
+     9.45,
+     5,
+     10
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 13.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 440
+   },
+   "cam": [
+    [
+     0,
+     0.835,
+     47.425,
+     12.2,
+     20,
+     44
+    ],
+    [
+     13.0,
+     0.835,
+     47.425,
+     12.4,
+     36,
+     50
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 14.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     0.8177,
+     47.454,
+     9.7,
+     0,
+     0
+    ],
+    [
+     14.0,
+     0.8177,
+     47.454,
+     9.82,
+     5,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Vouvray",
+   "sub": "Dry one year,<br>sweet the next. Why?"
+  },
+  {
+   "kind": "chips",
+   "t0": 4.0,
+   "t1": 53.9,
+   "items": [
+    "Place",
+    "Soil",
+    "Terrain",
+    "Rain",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     4.0,
+     9.4
+    ],
+    [
+     9.4,
+     14.5
+    ],
+    [
+     14.5,
+     19.9
+    ],
+    [
+     19.9,
+     25.9
+    ],
+    [
+     25.9,
+     31.9
+    ],
+    [
+     31.9,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.1,
+   "t1": 6.7,
+   "kicker": "Layer 1 · The place",
+   "src": "INAO Vouvray specification · Open Wine Atlas Loire lesson",
+   "n": "1936",
+   "u": "AOC",
+   "c": "Chenin Blanc on the north bank of the Loire, just east of Tours."
+  },
+  {
+   "kind": "card",
+   "t0": 6.8,
+   "t1": 9.3,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (INAO delimitation)",
+   "n": "3,280",
+   "u": "ha",
+   "c": "delimited area across 8&nbsp;communes, part of Tours included.",
+   "count": {
+    "v": 3280,
+    "d": 0
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 9.5,
+   "t1": 14.4,
+   "kicker": "Layer 2 · Soil",
+   "src": "INAO Vouvray specification · Open Wine Atlas Loire lesson",
+   "nt": "<i>Tuffeau</i>: soft Turonian chalk under clay and flint. Wine ages in caves dug into it."
+  },
+  {
+   "kind": "card",
+   "t0": 14.6,
+   "t1": 19.8,
+   "kicker": "Layer 3 · Terrain",
+   "src": "INAO Vouvray specification",
+   "n": "85–110",
+   "u": "m",
+   "c": "a plateau cut by small valleys, ending in a tuffeau cliff over the Loire."
+  },
+  {
+   "kind": "card",
+   "t0": 20.0,
+   "t1": 25.8,
+   "kicker": "Layer 4 · Rain",
+   "src": "Météo-France normals 1991–2020, Tours and Paris-Montsouris",
+   "n": "678",
+   "u": "mm",
+   "count": {
+    "v": 677.8,
+    "d": 0
+   },
+   "c": "a year at Tours, 44&nbsp;mm more than Paris. The wettest months come after harvest.",
+   "chart": {
+    "type": "months",
+    "a": [
+     63,
+     52.4,
+     48.7,
+     53,
+     57.7,
+     53.2,
+     46.6,
+     44,
+     51.8,
+     66,
+     69.3,
+     72.1
+    ],
+    "b": [
+     47.6,
+     41.8,
+     45.2,
+     45.8,
+     69,
+     51.3,
+     59.4,
+     58,
+     44.7,
+     55.2,
+     54.3,
+     62
+    ],
+    "max": 80,
+    "bands": [],
+    "hot": [
+     11
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Tours 108&nbsp;m &nbsp; ▢ Paris 75&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 26.0,
+   "t1": 31.8,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France normals 1991–2020, Tours · INAO specification",
+   "n": "16.2",
+   "u": "°C",
+   "count": {
+    "v": 16.2,
+    "d": 1
+   },
+   "c": "mean from April to October at Tours. Chenin Blanc ripens here at its climatic limit.",
+   "chart": {
+    "type": "range",
+    "max": [
+     7.7,
+     9,
+     12.9,
+     16,
+     19.6,
+     23.4,
+     25.9,
+     26,
+     22.1,
+     17,
+     11.4,
+     8.1
+    ],
+    "min": [
+     2.5,
+     2.3,
+     4.3,
+     6,
+     9.4,
+     12.6,
+     14.4,
+     14.3,
+     11.4,
+     9,
+     5.3,
+     2.9
+    ],
+    "hl": 9,
+    "lo": -5,
+    "hi": 30,
+    "grid": [
+     0,
+     10,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · October: 9.0 to 17.0",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 32.0,
+   "t1": 36.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Vouvray specification",
+   "n": "95",
+   "u": "% Chenin",
+   "c": "at least. Orbois, the only other grape, is capped at 5% of the vines.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Chenin Blanc",
+      "v": 95
+     },
+     {
+      "label": "Orbois (max)",
+      "v": 5
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 36.1,
+   "t1": 40.5,
+   "kicker": "Layer 6 · Grapes",
+   "src": "Open Wine Atlas Loire lesson · INAO specification",
+   "nt": "The year decides the style: <i>sec</i>, <i>demi-sec</i> or <i>moelleux</i>. Sweet wines come in the warmest vintages."
+  },
+  {
+   "kind": "card",
+   "t0": 40.6,
+   "t1": 44.4,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Vouvray specification",
+   "n": "12",
+   "u": "months",
+   "c": "minimum ageing from tirage for sparkling Vouvray, fermented a second time in bottle."
+  },
+  {
+   "kind": "card",
+   "t0": 44.6,
+   "t1": 47.6,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which grape makes Vouvray?<br>A&nbsp;&nbsp;Sauvignon Blanc<br>B&nbsp;&nbsp;Chenin Blanc<br>C&nbsp;&nbsp;Chardonnay"
+  },
+  {
+   "kind": "card",
+   "t0": 47.7,
+   "t1": 50.7,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "What is the soft limestone<br>under the vines called?<br>A&nbsp;&nbsp;Tuffeau<br>B&nbsp;&nbsp;Albariza<br>C&nbsp;&nbsp;Kimmeridgian"
+  },
+  {
+   "kind": "card",
+   "t0": 50.8,
+   "t1": 53.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Minimum ageing for sparkling<br>Vouvray, from tirage?<br>A&nbsp;&nbsp;6 months<br>B&nbsp;&nbsp;12 months<br>C&nbsp;&nbsp;36 months"
+  },
+  {
+   "kind": "outro",
+   "t0": 54.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Vouvray",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Côte-Rôtie",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Tours, Paris-Montsouris) · INAO Vouvray specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Vouvray",
+  "sub": "Dry one year,<br>sweet the next. Why?",
+  "size": 150
+ }
+}

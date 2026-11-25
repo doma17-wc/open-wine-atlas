@@ -1,0 +1,268 @@
+{
+ "slug": "deep-vouvray",
+ "place": "Vouvray",
+ "atlas_id": "fr-inao-a119",
+ "made": "2026-11-25",
+ "hook": {
+  "text": "Dry one year, sweet the next. Why?",
+  "answer": "The style depends on the year: sec, demi-sec or moelleux, with sweet wines made in the warmest vintages; the area is at the climatic limit for Chenin Blanc.",
+  "source": "Open Wine Atlas study.json lesson north-france-loire-centre (Vouvray and Montlouis); INAO cahier des charges X.3 (limite climatique du chenin B)",
+  "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+ },
+ "station": {
+  "name": "Tours",
+  "id": "37179001",
+  "height_m": 108,
+  "lat": 47.4444,
+  "lon": 0.7272,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_37179001.pdf",
+  "note": "Fiche climatologique 'Statistiques 1991-2020 et records', edited 06/06/2026. Station at Tours airport, Parçay-Meslay side, just west of the appellation outline (an AOC commune per the INAO list)."
+ },
+ "comparison_station": {
+  "name": "Paris-Montsouris",
+  "id": "75114001",
+  "height_m": 75,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+  "note": "Monthly precipitation reused from facts/deep-sauternes.json (same fiche)."
+ },
+ "monthly": {
+  "tours_tmax": [
+   7.7,
+   9,
+   12.9,
+   16,
+   19.6,
+   23.4,
+   25.9,
+   26,
+   22.1,
+   17,
+   11.4,
+   8.1
+  ],
+  "tours_tmin": [
+   2.5,
+   2.3,
+   4.3,
+   6,
+   9.4,
+   12.6,
+   14.4,
+   14.3,
+   11.4,
+   9,
+   5.3,
+   2.9
+  ],
+  "tours_tmean": [
+   5.1,
+   5.6,
+   8.6,
+   11,
+   14.5,
+   18,
+   20.2,
+   20.2,
+   16.8,
+   13,
+   8.3,
+   5.5
+  ],
+  "tours_precip_mm": [
+   63,
+   52.4,
+   48.7,
+   53,
+   57.7,
+   53.2,
+   46.6,
+   44,
+   51.8,
+   66,
+   69.3,
+   72.1
+  ],
+  "tours_precip_year": 677.8,
+  "tours_sun_h": [
+   68.4,
+   95.2,
+   148.8,
+   187.3,
+   214.2,
+   228.5,
+   247.1,
+   237.7,
+   191.3,
+   122.9,
+   78.9,
+   64.6
+  ],
+  "tours_sun_year": 1884.8,
+  "tours_frost_days_year": 36.3,
+  "tours_days_tx25_year": 56.9,
+  "paris_precip_mm": [
+   47.6,
+   41.8,
+   45.2,
+   45.8,
+   69,
+   51.3,
+   59.4,
+   58,
+   44.7,
+   55.2,
+   54.3,
+   62
+  ],
+  "paris_precip_year": 634.3
+ },
+ "derived": {
+  "aproct_tmean": 16.24,
+  "shown_aproct_tmean": "16.2",
+  "aproct_rain": 372.3,
+  "octdec_rain": 207.4,
+  "rain_vs_paris": 43.5,
+  "shown_rain_vs_paris": "44",
+  "wettest_months": "October 66, November 69.3, December 72.1 mm (the three highest months, after the harvest)",
+  "relief_m": 68
+ },
+ "derived_code": "import json, math\ntx=[7.7,9,12.9,16,19.6,23.4,25.9,26,22.1,17,11.4,8.1]\ntn=[2.5,2.3,4.3,6,9.4,12.6,14.4,14.3,11.4,9,5.3,2.9]\ntm=[5.1,5.6,8.6,11,14.5,18,20.2,20.2,16.8,13,8.3,5.5]\nrr=[63,52.4,48.7,53,57.7,53.2,46.6,44,51.8,66,69.3,72.1]\nsun=[68.4,95.2,148.8,187.3,214.2,228.5,247.1,237.7,191.3,122.9,78.9,64.6]\nfrost=[9.5,9.0,3.9,1.2,0.0,0,0,0,0,0.5,3.4,8.8]\nhot=[0,0,0,0.9,3.4,10.1,17.6,17.0,7.0,0.9,0,0]\nparis=[47.6,41.8,45.2,45.8,69,51.3,59.4,58,44.7,55.2,54.3,62]\nd=dict(\n rr_sum=round(sum(rr),1), sun_sum=round(sum(sun),1),\n aproct_tmean=round(sum(tm[3:10])/7,2), aproct_rain=round(sum(rr[3:10]),1),\n octdec_rain=round(sum(rr[9:12]),1),\n rain_vs_paris=round(677.8-634.3,1), sun_vs_paris=round(1884.8-1717.0,1),\n frost_sum=round(sum(frost),1), hot_sum=round(sum(hot),1),\n relief=120-52)\nprint(json.dumps(d))\n",
+ "facts": [
+  {
+   "claim": "AOC Vouvray recognised in 1936 (décret du 8 décembre 1936)",
+   "value": 1936,
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026), sections I and X.1°b",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "North bank of the Loire, just east of Tours; Chenin Blanc",
+   "source": "Open Wine Atlas study lesson north-france-loire-centre; atlas_note",
+   "url": "https://openwineatlas.com/places/france/vouvray"
+  },
+  {
+   "claim": "Delimited area 3,280.5 ha (shown 3,280)",
+   "value": 3280.5,
+   "unit": "ha",
+   "source": "Open Wine Atlas details-fr.json area_ha (INAO data, 2026-08-31)",
+   "url": "https://openwineatlas.com/places/france/vouvray"
+  },
+  {
+   "claim": "8 communes including Tours: Chançay, Noizay, Parçay-Meslay, Reugny, Rochecorbon, Tours, Vernou-sur-Brenne, Vouvray (plus part of Nazelles-Négron per the 2026 modification)",
+   "value": 8,
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) IV.1°; Open Wine Atlas communes list",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "Tuffeau du Turonien (soft chalk) under clay-silica elements and loess; tuffeau cliffs with caves used for winemaking and storage",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) X.1°a and X.1°b; study lesson 'tuffeau covered with clay and flint'",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "Plateau at 85 to 110 m cut by dry valleys, ending in a cliff over the Loire valley",
+   "value": "85-110",
+   "unit": "m",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) X.1°a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "Atlas terrain of the outline: min 52, mean 100, max 120 m",
+   "source": "Open Wine Atlas details-fr.json terrain.e",
+   "url": "https://openwineatlas.com/places/france/vouvray"
+  },
+  {
+   "claim": "Tours 677.8 mm a year, 1991-2020; specification says about 680 mm",
+   "value": 677.8,
+   "unit": "mm",
+   "source": "Météo-France fiche 37179001; INAO CDC X.1°a",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_37179001.pdf"
+  },
+  {
+   "claim": "Paris-Montsouris 634.3 mm a year, 1991-2020",
+   "value": 634.3,
+   "unit": "mm",
+   "source": "Météo-France fiche 75114001",
+   "url": "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf"
+  },
+  {
+   "claim": "Mean temperature April to October at Tours 16.24 °C (shown 16.2)",
+   "value": 16.24,
+   "unit": "°C",
+   "source": "computed from Météo-France fiche 37179001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_37179001.pdf"
+  },
+  {
+   "claim": "October daily low to high 9.0 to 17.0 °C at Tours",
+   "source": "Météo-France fiche 37179001",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_37179001.pdf"
+  },
+  {
+   "claim": "The area is at the climatic limit for Chenin B",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) X.3",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "Main variety Chenin B; accessory Orbois B at most 5% of the vines, so Chenin at least 95%",
+   "value": 95,
+   "unit": "%",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) V.1°a and V.2°",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "claim": "Style depends on the year: sec, demi-sec or moelleux; sweet wines in the warmest vintages; much Vouvray is sparkling",
+   "source": "Open Wine Atlas study lesson north-france-loire-centre",
+   "url": "https://openwineatlas.com/places/france/vouvray"
+  },
+  {
+   "claim": "Sparkling wines by second fermentation in bottle; at least 12 months of ageing from tirage before marketing",
+   "value": 12,
+   "unit": "months",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) IX.2°b and IX.5°a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which grape makes Vouvray?",
+   "options": [
+    "Sauvignon Blanc",
+    "Chenin Blanc",
+    "Chardonnay"
+   ],
+   "answer": "B. Chenin Blanc",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) V.1°a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "q": "What is the soft limestone under the vines called?",
+   "options": [
+    "Tuffeau",
+    "Albariza",
+    "Kimmeridgian"
+   ],
+   "answer": "A. Tuffeau",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) X.1°a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  },
+  {
+   "q": "Minimum ageing for sparkling Vouvray, from tirage?",
+   "options": [
+    "6 months",
+    "12 months",
+    "36 months"
+   ],
+   "answer": "B. 12 months",
+   "source": "INAO, cahier des charges AOC Vouvray (version with the modification adopted by the Comité national on 18 June 2026) IX.5°a",
+   "url": "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf"
+  }
+ ],
+ "dropped": [
+  "Sunshine layer (1,884.8 h, sourced) left out for Soil",
+  "Montlouis comparison not shown",
+  "Sugar thresholds for demi-sec and moelleux: not in the specification, so only the style names are shown",
+  "Minimum must sugar and alcohol: values are in a modification pair (old/new) in the fetched text, not shown"
+ ]
+}

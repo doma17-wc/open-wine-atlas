@@ -421,20 +421,20 @@
    "place": "Ribera del Duero",
    "atlas_id": "es-eupdo-PDO-ES-A0626",
    "series": "",
-   "not_before": "2026-11-24",
+   "not_before": "2026-12-01",
    "why": "Spain study path: Tempranillo (Tinto Fino) on the high Duero plateau, cold nights, the Rioja comparison",
    "status": "planned",
-   "note": "Added 2026-11-16 to keep 6+ planned. Slot 17:50."
+   "note": "Added 2026-11-16 to keep 6+ planned. Slot 17:50. Moved to 1 Dec on 2026-11-25: two non-classics (Rías Baixas, Rheingau) already in the last 7 days."
   },
   {
    "slug": "deep-valpolicella",
    "place": "Valpolicella",
    "atlas_id": "it-eupdo-PDO-IT-A0442",
    "series": "",
-   "not_before": "2026-11-25",
+   "not_before": "2026-12-02",
    "why": "Italy study path: Corvina, appassimento in the fruttai, Amarone and Ripasso",
    "status": "planned",
-   "note": "Added 2026-11-17 to keep 6+ planned. Slot 17:50. Amarone outline it-eupdo-PDO-IT-A0435 is an option."
+   "note": "Added 2026-11-17 to keep 6+ planned. Slot 17:50. Amarone outline it-eupdo-PDO-IT-A0435 is an option. Moved to 2 Dec on 2026-11-25: non-classic window full."
   },
   {
    "slug": "deep-jerez",
@@ -486,18 +486,19 @@
    "series": "",
    "not_before": "2026-11-25",
    "why": "Loire study path: Chenin Blanc on tuffeau, dry to sweet and sparkling",
-   "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50. Moved to 25 Nov on 2026-11-24 so the 25 Nov slot gets a classic (Ribera and Valpolicella are non-classics and the 7-day window is full) and announced as next in the Rheingau outro."
+   "status": "posted",
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 25 Nov on 2026-11-24 so the 25 Nov slot gets a classic (Ribera and Valpolicella are non-classics and the 7-day window is full) and announced as next in the Rheingau outro. Made 2026-11-25. Hook 'Dry one year, sweet the next. Why?' (Loire lesson + INAO CDC X.3 climatic limit). Climate: Météo-France fiche 37179001 Tours 108 m (1991-2020) vs Paris-Montsouris. Sun swapped for Soil. CDC read is the version with the 18 June 2026 modification.",
+   "slot": "2026-11-25T17:50+01:00"
   },
   {
    "slug": "deep-cote-rotie",
    "place": "Côte Rôtie",
    "atlas_id": "fr-inao-a272",
    "series": "",
-   "not_before": "2026-11-28",
+   "not_before": "2026-11-26",
    "why": "Rhône study path: Syrah with up to 20% Viognier on steep schist terraces",
    "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50."
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 26 Nov on 2026-11-25 and announced as next in the Vouvray outro (Jerez is a non-classic and the 7-day window is full)."
   },
   {
    "slug": "deep-gevrey-chambertin",

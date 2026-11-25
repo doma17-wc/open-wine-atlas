@@ -1,0 +1,115 @@
+{
+ "voice": "af_heart",
+ "lang": "en-us",
+ "sr": 24000,
+ "lines": [
+  {
+   "t0": 0.15,
+   "seg_end": 3.9,
+   "dur": 2.6,
+   "speed": 1.0,
+   "text": "Vouvray. Dry one year, sweet the next. Why?",
+   "phonemes": "vuːvɹˈeɪ. dɹˈaɪ wˈʌn jˈɪɹ, swˈiːt ðə nˈɛkst. wˈaɪ?",
+   "file": "l00.wav"
+  },
+  {
+   "t0": 4.25,
+   "seg_end": 9.4,
+   "dur": 4.12,
+   "speed": 1.0,
+   "text": "Since 1936, Chenin Blanc on the north bank of the Loire.",
+   "phonemes": "sˈɪns nˈaɪntiːnhˈʌndɹɪd θˈɜːɾi sˈɪks, ʃˈɛnɪn blˈɑːŋk ɔnðə nˈɔːɹθ bˈæŋk ʌvðə lwˈɑːɹ.",
+   "file": "l01.wav"
+  },
+  {
+   "t0": 9.65,
+   "seg_end": 14.5,
+   "dur": 3.86,
+   "speed": 1.0,
+   "text": "Under the vines lies tuffeau, a soft chalk, full of cellar caves.",
+   "phonemes": "ˌʌndɚ ðə vˈaɪnz lˈaɪz tuːfˈoʊ, ɐ sˈɔft tʃˈɔːk, fˈʊl ʌv sˈɛlɚ kˈeɪvz.",
+   "file": "l02.wav"
+  },
+  {
+   "t0": 14.75,
+   "seg_end": 19.9,
+   "dur": 4.76,
+   "speed": 1.1,
+   "text": "A plateau, 85 to 110 metres high, ends in a cliff over the river.",
+   "phonemes": "ɐ plætˈoʊ, ˈeɪɾi fˈaɪv tə wˈʌnhˈʌndɹɪd tˈɛn mˈiːɾɚz hˈaɪ, ˈɛndz ɪn ɐ klˈɪf ˌoʊvɚ ðə ɹˈɪvɚ.",
+   "file": "l03.wav"
+  },
+  {
+   "t0": 20.15,
+   "seg_end": 25.9,
+   "dur": 5.44,
+   "speed": 1.1,
+   "text": "Tours gets 678 millimetres of rain a year, and the wettest months come after harvest.",
+   "phonemes": "tˈʊɹ ɡˈɛts sˈɪkshˈʌndɹɪd sˈɛvənti ˈeɪt mˈɪlɪmˌiːɾɚz ʌv ɹˈeɪn ɐ jˈɪɹ, ænd ðə wˈɛɾɪst mˈʌnθs kˈʌm ˈæftɚ hˈɑːɹvɪst.",
+   "file": "l04.wav"
+  },
+  {
+   "t0": 26.15,
+   "seg_end": 31.9,
+   "dur": 5.42,
+   "speed": 1.0,
+   "text": "April to October averages 16.2 degrees. Chenin ripens here at its limit.",
+   "phonemes": "ˈeɪpɹəl tʊ ɑːktˈoʊbɚɹ ˈævɹɪdʒᵻz sˈɪkstiːn pɔɪnt tˈuː dᵻɡɹˈiːz. ʃˈɛnɪn ɹˈaɪpənz hˈɪɹ æɾ ɪts lˈɪmɪt.",
+   "file": "l05.wav"
+  },
+  {
+   "t0": 32.15,
+   "seg_end": 36.1,
+   "dur": 3.11,
+   "speed": 1.0,
+   "text": "Vouvray is at least 95 percent Chenin Blanc.",
+   "phonemes": "vuːvɹˈeɪ ɪz æt lˈiːst nˈaɪnti fˈaɪv pɚsˈɛnt ʃˈɛnɪn blˈɑːŋk.",
+   "file": "l06.wav"
+  },
+  {
+   "t0": 36.25,
+   "seg_end": 40.6,
+   "dur": 3.82,
+   "speed": 1.0,
+   "text": "The year decides the style. Sweet wines come in the warmest years.",
+   "phonemes": "ðə jˈɪɹ dᵻsˈaɪdz ðə stˈaɪl. swˈiːt wˈaɪnz kˈʌm ɪnðə wˈɔːɹmɪst jˈɪɹz.",
+   "file": "l07.wav"
+  },
+  {
+   "t0": 40.75,
+   "seg_end": 44.6,
+   "dur": 3.37,
+   "speed": 1.0,
+   "text": "Sparkling Vouvray ages at least 12 months from tirage.",
+   "phonemes": "spˈɑːɹklɪŋ vuːvɹˈeɪ ˈeɪdʒᵻz æt lˈiːst twˈɛlv mˈʌnθs fɹʌm tiːɹˈɑːʒ.",
+   "file": "l08.wav"
+  },
+  {
+   "t0": 44.75,
+   "seg_end": 53.9,
+   "dur": 3.67,
+   "speed": 1.0,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "phonemes": "tˈɛst jɔːɹsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈænsɚz ɪnðə fˈɜːst kˈɑːmɛnt.",
+   "file": "l09.wav"
+  },
+  {
+   "t0": 54.15,
+   "seg_end": 58.0,
+   "dur": 2.86,
+   "speed": 1.0,
+   "text": "Study it free at open wine atlas dot com.",
+   "phonemes": "stˈʌdi ɪt fɹˈiː æɾ ˈoʊpən wˈaɪn ˈætləs dˈɑːt kˈɑːm.",
+   "file": "l10.wav"
+  }
+ ],
+ "mix": "music ducked 6 dB under voice (0.25 s envelope), high-pass 80 Hz, loudnorm I=-14 TP=-1.5 LRA=11, AAC 192k 48 kHz",
+ "pronunciation_fixes": {
+  "Vouvray": "vuːvɹˈeɪ",
+  "Tours": "tˈʊɹ",
+  "tuffeau": "tuːfˈoʊ",
+  "Chenin": "ʃˈɛnɪn",
+  "Blanc": "blˈɑːŋk",
+  "tirage": "tiːɹˈɑːʒ"
+ }
+}

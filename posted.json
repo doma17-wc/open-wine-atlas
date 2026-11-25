@@ -554,6 +554,23 @@
     "https://rp-darmstadt.hessen.de/sites/rp-darmstadt.hessen.de/files/2025-12/kenndatenblatt_rheingau_31.07.2025.pdf",
     "Open Wine Atlas details-de.json and study.json (Rhine regions lesson)"
    ]
+  },
+  {
+   "slug": "deep-vouvray",
+   "place": "Vouvray",
+   "slot": "2026-11-25T17:50+01:00",
+   "hook": "Dry one year, sweet the next. Why?",
+   "classic": true,
+   "style": "2 s fly-in from the lower Loire at zoom 6.4 to 9.9 (no globe, labels off), hook on screen from frame 0; layers Place, Soil, Terrain, Rain, Heat, Grapes (Sun swapped for Soil, Soil before Terrain); 3D shot terrain 3.0 slow orbit along the tuffeau cliff, bearing 300 to 338, pitch 62 to 66, alt tint plus Slope; one shared climate shot for Rain and Heat with the Tours station marker; two-station rain months chart vs Paris; three grapes cards (shares, style, sparkling) on a close shot pitched 44-50 with the Aspect overlay; quiz on wide calm shot; music dusk seed 44 (waltz); voice af_heart (female, en-us), music ducked 6 dB under voice.",
+   "voice": "af_heart",
+   "music": "waltz",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=1241795322447153187",
+   "sources": [
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_37179001.pdf",
+    "https://donneespubliques.meteofrance.fr/FichesClim/FICHECLIM_75114001.pdf",
+    "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf",
+    "https://openwineatlas.com/places/france/vouvray"
+   ]
   }
  ]
 }
