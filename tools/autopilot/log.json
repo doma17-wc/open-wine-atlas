@@ -5259,5 +5259,292 @@
   "experiment": "",
   "metricool_uuid": "",
   "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Rhône study buddy quiz teaser (quiz cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4901673845165961883",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, 3 questions, member card slide 6",
+  "title": "Rhône study buddy quiz: Who gets 3 out of 3? (Wednesday)",
+  "hook": "Tag the friend you study with. Who gets 3 out of 3?",
+  "places": [
+   "Côtes du Rhône",
+   "Gigondas"
+  ],
+  "question_keys": [
+   "rhone-south-northern-rhone#q7",
+   "rhone-south-southern-rhone#q8",
+   "rhone-south-southern-rhone#q6"
+  ],
+  "experiment": "",
+  "metricool_uuid": "7023134667711791992",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Margaux vs Pessac-Léognan game teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4799629041846668567",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, labels off, hook 3.4 s, no sub, preset alpine seed 22, music: waltz",
+  "title": "Which one is bigger? Margaux or Pessac-Léognan (Margaux 1,874 ha vs Pessac-Léognan 4,487 ha, 2.4x)",
+  "hook": "Which one is bigger?",
+  "places": [
+   "Margaux",
+   "Pessac-Léognan"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-7730721869797963845",
+  "voice": "am_fenrir"
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: altitude 0.6°C per 100 m (answer A, shown in the 20:20 story), with the maritime answer (D) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-climate#q3"
+  ],
+  "experiment": "",
+  "metricool_uuid": "5015405625199117145",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, labels on, maxzoom 15, place 2.5 s, preset warm seed 18, music: ambient",
+  "title": "Five premiers crus. One is just 1 hectare. (Vosne-Romanée: Beaux Monts 12.0, Suchots 13.1, Cros Parantoux 1.0, Brûlées 4.6, Malconsorts 5.9; 36.6 ha)",
+  "hook": "Five premiers crus. One is just 1 hectare.",
+  "places": [
+   "Vosne-Romanée premier cru Les Beaux Monts",
+   "Vosne-Romanée premier cru Les Suchots",
+   "Vosne-Romanée premier cru Cros Parantoux",
+   "Vosne-Romanée premier cru Aux Brulées",
+   "Vosne-Romanée premier cru Aux Malconsorts"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "1054729710238715832",
+  "voice": "bf_emma"
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count: founding_count check failed)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4771636818038797005",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel, no_area",
+  "title": "Three grand crus. One is famous for red. (Champagne: Bouzy, Ambonnay, Tours-sur-Marne; no_area)",
+  "hook": "Three grand crus. One is famous for red.",
+  "places": [
+   "Bouzy",
+   "Ambonnay",
+   "Tours-sur-Marne"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1540581873244418233",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Vosne premiers crus reel teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "3385947505964764630",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Champagne post teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5695303088844879508",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Vouvray deep dive teaser (topic from the Rheingau caption: Next deep dive: Vouvray)",
+  "hook": "",
+  "places": [
+   "Vouvray"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1548710945718647295",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Five vineyards. One red slope. (Roter Hang: Rothenberg 30.0, Pettenthal 42.2, Brudersberg 1.3, Hipping 33.3, Ölberg 68.0)",
+  "hook": "Five vineyards. One red slope.",
+  "places": [
+   "Rothenberg (Nackenheim)",
+   "Pettenthal",
+   "Brudersberg",
+   "Hipping",
+   "Ölberg (Nierstein)"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first Rheinhessen carousel (Roter Hang), the day after the Rheingau deep dive",
+  "metricool_uuid": "8555593313030064079",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Roter Hang post teaser (cover behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5667580121268438734",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: diurnal range (answer C, still to show), with the altitude answer (A) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "foundations-climate#q4"
+  ],
+  "experiment": "",
+  "metricool_uuid": "5223498391183444769",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5986896358410269444",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members: check failed again (Supabase execute_sql: no permission). Followers 5,910 on 2026-11-24.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Corton vs Corton-Charlemagne reel (2026-10-29, 13:05) left as draft: Corton used on 2026-11-21, the outlines overlap, old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [
+   "Corton",
+   "Corton-Charlemagne"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-25",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Diurnal answer (C, cool nights keep acidity and aroma) still to show. Rhône questions left: rhone-south-southern-rhone and northern-rhone used up to q8 except provence and languedoc. Cinematic explainer still not made this week: skipped again (2D overlay approach not built yet). 24 Nov: Montrachet vs Romanée-Conti game 2,738 (skip 68.1%), Beaune premiers crus 1,780 (skip 58.9%), Rheingau deep dive 1,899. 23 Nov: Rías Baixas deep dive 4,793, Sauternes cluster 4,574, Chablis vs Sancerre 3,538. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable. Share prompt today: Save this for your exam (tomorrow: Send this to your study group). Game reels this week: 23, 24, 25 Nov. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
  }
 ]
