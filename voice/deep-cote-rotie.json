@@ -1,0 +1,114 @@
+{
+ "voice": "am_fenrir",
+ "lang": "en-us",
+ "lines": [
+  {
+   "start": 0.15,
+   "seg_end": 3.85,
+   "end": 2.69,
+   "speed": 1.0,
+   "text": "Red wine, with up to twenty percent white grapes.",
+   "phonemes": "ɹˈɛd wˈaɪn, wɪð ˌʌp tə twˈɛnti pɚsˈɛnt wˈaɪt ɡɹˈeɪps.",
+   "ok": true
+  },
+  {
+   "start": 4.25,
+   "seg_end": 8.15,
+   "end": 6.64,
+   "speed": 1.0,
+   "text": "Red only. The Rhône's northernmost cru.",
+   "phonemes": "ɹˈɛd ˈoʊnli. ðə ɹˈoʊn ˈɛs nˈɔːɹðɚnmˌoʊst kɹˈuː.",
+   "ok": true
+  },
+  {
+   "start": 8.55,
+   "seg_end": 13.1,
+   "end": 12.71,
+   "speed": 1.1,
+   "text": "Terraces climb over two hundred metres, on slopes up to sixty percent.",
+   "phonemes": "tˈɛɹɪsᵻz klˈaɪm ˌoʊvɚ tˈuː hˈʌndɹɪd mˈiːɾɚz, ˌɔn slˈoʊps ˌʌp tə sˈɪksti pɚsˈɛnt.",
+   "ok": true
+  },
+  {
+   "start": 13.55,
+   "seg_end": 17.75,
+   "end": 17.41,
+   "speed": 1.0,
+   "text": "Facing south-east, about nine percent more sun than flat ground.",
+   "phonemes": "fˈeɪsɪŋ sˈaʊθˈiːst, ɐbˌaʊt nˈaɪn pɚsˈɛnt mˈɔːɹ sˈʌn ðɐn flˈæt ɡɹˈaʊnd.",
+   "ok": true
+  },
+  {
+   "start": 18.35,
+   "seg_end": 23.05,
+   "end": 22.62,
+   "speed": 1.0,
+   "text": "Côte Brune: dark, iron-rich micaschist. Côte Blonde: pale gneiss.",
+   "phonemes": "kˈoʊt bɹˈuːn : dˈɑːɹk, ˈaɪɚnɹˈɪtʃ mˈaɪkə ʃˈɪst . kˈoʊt blˈɔːnd : pˈeɪl nˈaɪs.",
+   "ok": true
+  },
+  {
+   "start": 23.75,
+   "seg_end": 29.15,
+   "end": 28.83,
+   "speed": 1.05,
+   "text": "Lyon-Bron gets about two thousand and fifty hours of sun a year, close to Bordeaux.",
+   "phonemes": "liˈɔːn bɹˈɔːn ɡˈɛts ɐbˌaʊt tˈuː θˈaʊzənd ænd fˈɪfti ˈaʊɚz ʌv sˈʌn ɐ jˈɪɹ, klˈoʊs tuː bɔːɹdˈoʊ .",
+   "ok": true
+  },
+  {
+   "start": 29.65,
+   "seg_end": 35.05,
+   "end": 34.34,
+   "speed": 1.0,
+   "text": "Eight hundred and twenty-one millimetres of rain, about a hundred less than Bordeaux.",
+   "phonemes": "ˈeɪt hˈʌndɹɪd ænd twˈɛntiwˈʌn mˈɪlɪmˌiːɾɚz ʌv ɹˈeɪn, ɐbˌaʊt ɐ hˈʌndɹɪd lˈɛs ðɐn bɔːɹdˈoʊ .",
+   "ok": true
+  },
+  {
+   "start": 35.75,
+   "seg_end": 39.4,
+   "end": 38.5,
+   "speed": 1.0,
+   "text": "Syrah, plus up to twenty percent white Viognier.",
+   "phonemes": "sɪɹˈɑː , plˈʌs ˌʌp tə twˈɛnti pɚsˈɛnt wˈaɪt vjˈoʊnjeɪ .",
+   "ok": true
+  },
+  {
+   "start": 39.85,
+   "seg_end": 43.4,
+   "end": 43.09,
+   "speed": 1.05,
+   "text": "Both are fermented together. Viognier can lift the perfume.",
+   "phonemes": "bˈoʊθ ɑːɹ fɜːmˈɛntᵻd təɡˈɛðɚ. vjˈoʊnjeɪ kæn lˈɪft ðə pˈɜːfjuːm.",
+   "ok": true
+  },
+  {
+   "start": 43.85,
+   "seg_end": 47.25,
+   "end": 45.9,
+   "speed": 1.0,
+   "text": "At least six thousand vines per hectare.",
+   "phonemes": "æt lˈiːst sˈɪks θˈaʊzənd vˈaɪnz pɜː hˈɛktɛɹ.",
+   "ok": true
+  },
+  {
+   "start": 47.85,
+   "seg_end": 56.75,
+   "end": 51.26,
+   "speed": 1.0,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "phonemes": "tˈɛst jɔːɹsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈænsɚz ɪnðə fˈɜːst kˈɑːmɛnt.",
+   "ok": true
+  },
+  {
+   "start": 57.15,
+   "seg_end": 60.2,
+   "end": 59.86,
+   "speed": 1.0,
+   "text": "Study it free at open wine atlas dot com.",
+   "phonemes": "stˈʌdi ɪt fɹˈiː æɾ ˈoʊpən wˈaɪn ˈætləs dˈɑːt kˈɑːm.",
+   "ok": true
+  }
+ ]
+}

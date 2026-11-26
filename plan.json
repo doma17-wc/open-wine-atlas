@@ -441,10 +441,10 @@
    "place": "Jerez",
    "atlas_id": "es-eupdo-PDO-ES-A1483",
    "series": "",
-   "not_before": "2026-11-26",
+   "not_before": "2026-12-03",
    "why": "Spain study path: albariza, Palomino, flor and the solera, poniente and levante",
    "status": "planned",
-   "note": "Added 2026-11-17. Slot 17:50. Outline is the 248,264 ha production zone of 9 municipalities, not vineyard area."
+   "note": "Added 2026-11-17. Slot 17:50. Outline is the 248,264 ha production zone of 9 municipalities, not vineyard area. Moved to 3 Dec on 2026-11-26: two non-classics (Rías Baixas, Rheingau) in the last 7 days."
   },
   {
    "slug": "deep-margaux",
@@ -497,18 +497,19 @@
    "series": "",
    "not_before": "2026-11-26",
    "why": "Rhône study path: Syrah with up to 20% Viognier on steep schist terraces",
-   "status": "planned",
-   "note": "Added 2026-11-18. Slot 17:50. Moved to 26 Nov on 2026-11-25 and announced as next in the Vouvray outro (Jerez is a non-classic and the 7-day window is full)."
+   "status": "posted",
+   "note": "Added 2026-11-18. Slot 17:50. Moved to 26 Nov on 2026-11-25 and announced as next in the Vouvray outro (Jerez is a non-classic and the 7-day window is full).",
+   "slot": "2026-11-26T17:50+01:00"
   },
   {
    "slug": "deep-gevrey-chambertin",
    "place": "Gevrey-Chambertin",
    "atlas_id": "fr-inao-a182",
    "series": "",
-   "not_before": "2026-11-29",
+   "not_before": "2026-11-27",
    "why": "Burgundy study path: Côte de Nuits village with nine grands crus including Chambertin",
    "status": "planned",
-   "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data."
+   "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data. Moved to 27 Nov on 2026-11-26 and announced as next in the Côte-Rôtie outro."
   },
   {
    "slug": "deep-vino-nobile",

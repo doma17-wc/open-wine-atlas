@@ -1,0 +1,549 @@
+{
+ "slug": "deep-cote-rotie",
+ "id": "fr-inao-a272",
+ "duration": 60.5,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "alpine",
+  58
+ ],
+ "markers": [
+  {
+   "lng": 4.9492,
+   "lat": 45.7211,
+   "label": "Lyon-Bron station · 202 m",
+   "shots": [
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.88,
+     45.56,
+     9.4,
+     0,
+     0
+    ],
+    [
+     2.0,
+     4.8137,
+     45.4965,
+     11.9,
+     0,
+     4
+    ]
+   ],
+   "layers": {},
+   "labels": false
+  },
+  {
+   "name": "place",
+   "dur": 7.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.8137,
+     45.4965,
+     11.9,
+     0,
+     4
+    ],
+    [
+     7.0,
+     4.8137,
+     45.4965,
+     12.15,
+     -8,
+     20
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "terrain3d",
+   "dur": 10.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     4.8,
+     45.499,
+     13.3,
+     300,
+     62
+    ],
+    [
+     10.5,
+     4.8,
+     45.499,
+     13.45,
+     328,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.4,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 2.4
+  },
+  {
+   "name": "soil",
+   "dur": 5.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.795,
+     45.5,
+     13.4,
+     330,
+     30
+    ],
+    [
+     5.5,
+     4.795,
+     45.5,
+     13.6,
+     340,
+     36
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "climate",
+   "dur": 12.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 520
+   },
+   "cam": [
+    [
+     0,
+     4.8137,
+     45.4965,
+     11.6,
+     0,
+     0
+    ],
+    [
+     2.5,
+     4.875,
+     45.64,
+     9.15,
+     0,
+     0
+    ],
+    [
+     12.5,
+     4.875,
+     45.64,
+     9.25,
+     4,
+     8
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 13.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 440
+   },
+   "cam": [
+    [
+     0,
+     4.8,
+     45.495,
+     12.8,
+     20,
+     44
+    ],
+    [
+     13.0,
+     4.8,
+     45.495,
+     13.0,
+     36,
+     50
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.4,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 13.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.8137,
+     45.4965,
+     11.6,
+     0,
+     0
+    ],
+    [
+     13.0,
+     4.8137,
+     45.4965,
+     11.72,
+     5,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.9,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Côte-Rôtie",
+   "sub": "A red wine.<br>Up to 20% white grapes."
+  },
+  {
+   "kind": "chips",
+   "t0": 4.0,
+   "t1": 47.5,
+   "items": [
+    "Place",
+    "Terrain",
+    "Soil",
+    "Sun",
+    "Rain",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     4.0,
+     8.3
+    ],
+    [
+     8.3,
+     18.0
+    ],
+    [
+     18.0,
+     23.4
+    ],
+    [
+     23.4,
+     29.4
+    ],
+    [
+     29.4,
+     35.4
+    ],
+    [
+     35.4,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 4.1,
+   "t1": 6.2,
+   "kicker": "Layer 1 · The place",
+   "src": "INAO Côte Rôtie specification (2024) · Open Wine Atlas Rhône lesson",
+   "n": "1940",
+   "u": "AOC",
+   "c": "Red wine only, on the west bank of the Rhône around Ampuis."
+  },
+  {
+   "kind": "card",
+   "t0": 6.3,
+   "t1": 8.2,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (INAO delimitation)",
+   "n": "505",
+   "u": "ha",
+   "c": "delimited across 3&nbsp;communes. The northernmost cru of the Rhône."
+  },
+  {
+   "kind": "card",
+   "t0": 8.4,
+   "t1": 13.3,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain · INAO",
+   "n": "146–355",
+   "u": "m",
+   "c": "narrow terraces climb 209&nbsp;m above the river. Slopes reach 60%."
+  },
+  {
+   "kind": "card",
+   "t0": 13.4,
+   "t1": 17.9,
+   "kicker": "Layer 2 · Terrain",
+   "src": "Open Wine Atlas terrain and clear-sky model",
+   "n": "+9",
+   "u": "% sun",
+   "c": "on the average south-east slope (19°) than on flat ground, April to October."
+  },
+  {
+   "kind": "card",
+   "t0": 18.2,
+   "t1": 23.2,
+   "kicker": "Layer 3 · Soil",
+   "src": "INAO Côte Rôtie specification (2024)",
+   "nt": "<i>Côte Brune</i>: dark, iron-rich micaschist.<br><i>Côte Blonde</i>: pale, sandy gneiss."
+  },
+  {
+   "kind": "card",
+   "t0": 23.6,
+   "t1": 29.3,
+   "kicker": "Layer 4 · Sun",
+   "src": "Météo-France normals 1991–2020, Lyon-Bron and Bordeaux-Mérignac",
+   "n": "2,050",
+   "u": "h",
+   "count": {
+    "v": 2049.5,
+    "d": 0
+   },
+   "c": "of sunshine a year at Lyon-Bron, 28&nbsp;km away. Bordeaux gets 2,070.",
+   "chart": {
+    "type": "months",
+    "a": [
+     71.1,
+     102.4,
+     173.7,
+     197.7,
+     223.8,
+     256.5,
+     288.1,
+     263.1,
+     204.1,
+     131.4,
+     78.9,
+     58.7
+    ],
+    "b": [
+     89.8,
+     117.4,
+     170.2,
+     186,
+     220.8,
+     237.7,
+     256,
+     248.8,
+     208.8,
+     150.3,
+     100,
+     84.1
+    ],
+    "max": 300,
+    "bands": [],
+    "hot": [
+     6
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Lyon-Bron 202&nbsp;m &nbsp; ▢ Bordeaux 47&nbsp;m &nbsp;·&nbsp; hours"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 29.5,
+   "t1": 35.2,
+   "kicker": "Layer 5 · Rain",
+   "src": "Météo-France normals 1991–2020, Lyon-Bron and Bordeaux-Mérignac",
+   "n": "821",
+   "u": "mm",
+   "count": {
+    "v": 820.8,
+    "d": 0
+   },
+   "c": "a year at Lyon-Bron, about 100&nbsp;mm less than Bordeaux. October is the wettest month.",
+   "chart": {
+    "type": "months",
+    "a": [
+     49.8,
+     41.6,
+     49.4,
+     68.9,
+     80.9,
+     74.1,
+     67.4,
+     65.5,
+     82.5,
+     99.8,
+     87.2,
+     53.7
+    ],
+    "b": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "max": 120,
+    "bands": [],
+    "hot": [
+     9
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Lyon-Bron 202&nbsp;m &nbsp; ▢ Bordeaux 47&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 35.6,
+   "t1": 39.6,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Côte Rôtie specification (2024)",
+   "n": "80",
+   "u": "% Syrah",
+   "c": "at least. Viognier, a white grape, may make up the rest.",
+   "chart": {
+    "type": "shares",
+    "rows": [
+     {
+      "label": "Syrah (min)",
+      "v": 80
+     },
+     {
+      "label": "Viognier (max)",
+      "v": 20
+     }
+    ]
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 39.7,
+   "t1": 43.6,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Côte Rôtie specification (2024) · Open Wine Atlas Rhône lesson",
+   "nt": "The grapes are fermented together, not blended later. Viognier can lift the perfume."
+  },
+  {
+   "kind": "card",
+   "t0": 43.7,
+   "t1": 47.4,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO Côte Rôtie specification (2024)",
+   "n": "6,000",
+   "u": "vines/ha",
+   "c": "minimum. Many vines are tied to wooden stakes, <i>échalas</i>, at least 1.5&nbsp;m tall."
+  },
+  {
+   "kind": "card",
+   "t0": 47.7,
+   "t1": 50.7,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "Which white grape may join<br>Syrah in Côte-Rôtie?<br>A&nbsp;&nbsp;Marsanne<br>B&nbsp;&nbsp;Viognier<br>C&nbsp;&nbsp;Roussanne"
+  },
+  {
+   "kind": "card",
+   "t0": 50.8,
+   "t1": 53.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "Côte Brune is one famous slope.<br>What is the other?<br>A&nbsp;&nbsp;Côte Rousse<br>B&nbsp;&nbsp;Côte d'Or<br>C&nbsp;&nbsp;Côte Blonde"
+  },
+  {
+   "kind": "card",
+   "t0": 53.9,
+   "t1": 56.9,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Minimum planting density<br>in Côte-Rôtie?<br>A&nbsp;&nbsp;3,000 vines/ha<br>B&nbsp;&nbsp;6,000 vines/ha<br>C&nbsp;&nbsp;10,000 vines/ha"
+  },
+  {
+   "kind": "outro",
+   "t0": 57.0,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Côte-Rôtie",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Gevrey-Chambertin",
+   "srcs": "Sources: Météo-France normals 1991–2020 (Lyon-Bron, Bordeaux-Mérignac) · INAO Côte Rôtie specification · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 2,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Côte-Rôtie",
+  "sub": "A red wine.<br>Up to 20% white grapes.",
+  "size": 150
+ }
+}

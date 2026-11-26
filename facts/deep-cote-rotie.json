@@ -1,0 +1,369 @@
+{
+ "slug": "deep-cote-rotie",
+ "place": "Côte-Rôtie (official name Côte Rôtie)",
+ "atlas_id": "fr-inao-a272",
+ "made": "2026-11-26",
+ "hook": {
+  "text": "A red wine. Up to 20% white grapes.",
+  "source": "INAO Côte Rôtie specification, homologated by arrêté of 4 July 2024: syrah N at least 80%, viognier B up to 20%; red still wines only",
+  "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+ },
+ "station": {
+  "name": "Lyon-Bron",
+  "id": "69029001",
+  "height_m": 202,
+  "lat": 45.7211,
+  "lon": 4.9492,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf",
+  "edited": "2026-06-06",
+  "note": "27.6 km NE of the atlas centre of Côte Rôtie. Chosen over Reventin 38336001 (295 m, about 2 km away across the Rhône) because Reventin's temperature and precipitation cover only 2004-2020 and it has no sunshine. Same values as facts/deep-beaujolais.json comparison station."
+ },
+ "comparison_station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "Monthly precipitation and sunshine reused from facts/deep-margaux.json (same fiche)."
+ },
+ "checked_not_used": {
+  "Reventin 38336001": "295 m, 45°28'43\"N 4°48'38\"E, next to the vineyards, but temperature and precipitation 2004-2020 only (rain 775.7 mm, Tmean 12.9 °C), sunshine not available. Not used to avoid mixing periods.",
+  "PNO 2023 production": "The INAO PNO file holds a draft cahier with 2009 figures only (about 250 ha in production, about 10,000 hl). Too old, left out.",
+  "Etymology 'roasted slope'": "No official source fetched, left out.",
+  "Granite": "Atlas bedrock says 31% acid plutonic rocks (granite) but the specification names gneiss, micaschist, leucogneiss and migmatite, not granite. Granite not mentioned on screen."
+ },
+ "monthly": {
+  "lyon_precip_mm": [
+   49.8,
+   41.6,
+   49.4,
+   68.9,
+   80.9,
+   74.1,
+   67.4,
+   65.5,
+   82.5,
+   99.8,
+   87.2,
+   53.7
+  ],
+  "lyon_precip_year": 820.8,
+  "lyon_sun_h": [
+   71.1,
+   102.4,
+   173.7,
+   197.7,
+   223.8,
+   256.5,
+   288.1,
+   263.1,
+   204.1,
+   131.4,
+   78.9,
+   58.7
+  ],
+  "lyon_sun_year": 2049.5,
+  "lyon_tmax": [
+   7.1,
+   9,
+   13.8,
+   17.4,
+   21.5,
+   25.6,
+   28.2,
+   28,
+   23.1,
+   17.7,
+   11.4,
+   7.7
+  ],
+  "lyon_tmin": [
+   1.1,
+   1.4,
+   4.2,
+   7.2,
+   11.2,
+   15,
+   17,
+   16.6,
+   12.8,
+   9.6,
+   4.9,
+   2
+  ],
+  "lyon_tmean": [
+   4.1,
+   5.2,
+   9,
+   12.3,
+   16.3,
+   20.3,
+   22.6,
+   22.3,
+   17.9,
+   13.7,
+   8.1,
+   4.8
+  ],
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9,
+  "merignac_sun_h": [
+   89.8,
+   117.4,
+   170.2,
+   186,
+   220.8,
+   237.7,
+   256,
+   248.8,
+   208.8,
+   150.3,
+   100,
+   84.1
+  ],
+  "merignac_sun_year": 2069.8
+ },
+ "derived": {
+  "lyon_rr_sum": 820.8,
+  "mer_rr_sum": 924.9,
+  "rr_diff": 104.1,
+  "lyon_sun_sum": 2049.5,
+  "mer_sun_sum": 2069.9,
+  "sun_diff": 20.4,
+  "lyon_aproct_rr": 539.1,
+  "lyon_aproct_tmean": 17.91,
+  "lyon_son_rr": 269.5,
+  "station_lat": 45.7211,
+  "station_lon": 4.9492,
+  "km_station": 27.6,
+  "relief_m": 209,
+  "sun_slope_se": 1.0921,
+  "sun_slope_nw": 0.7998,
+  "pct60_deg": 31.0
+ },
+ "derived_code": "work/deep-cote-rotie/derive.py (copied in derive_py)",
+ "derive_py": "import json,math\nlyon_rr=[49.8,41.6,49.4,68.9,80.9,74.1,67.4,65.5,82.5,99.8,87.2,53.7]\nlyon_sun=[71.1,102.4,173.7,197.7,223.8,256.5,288.1,263.1,204.1,131.4,78.9,58.7]\nlyon_tm=[4.1,5.2,9,12.3,16.3,20.3,22.6,22.3,17.9,13.7,8.1,4.8]\nmer_rr=[86.9,66.9,63.3,75.6,71.1,70.4,48.6,56.7,81.2,83.3,114.5,106.4]\nmer_sun=[89.8,117.4,170.2,186,220.8,237.7,256,248.8,208.8,150.3,100,84.1]\ndef hav(a,b,c,d):\n    R=6371;p=math.radians\n    x=math.sin(p(c-a)/2)**2+math.cos(p(a))*math.cos(p(c))*math.sin(p(d-b)/2)**2\n    return 2*R*math.asin(math.sqrt(x))\nR_=math.pi/180\ndef sun(lat,slope,aspect):\n    phi=lat*R_;flat=0;tot=0;s=slope*R_;A0=aspect*R_;n=91\n    while n<=304:\n        dec=23.44*R_*math.sin(2*math.pi*(284+n)/365);t=4\n        while t<=20:\n            h=(t-12)*15*R_;sa=math.sin(phi)*math.sin(dec)+math.cos(phi)*math.cos(dec)*math.cos(h)\n            if sa>0.02:\n                ca=math.sqrt(1-sa*sa);A=math.acos(max(-1,min(1,(math.sin(dec)-sa*math.sin(phi))/(ca*math.cos(phi)))))\n                if h>0:A=2*math.pi-A\n                I=0.7**((1/sa)**0.678);flat+=I*sa\n                c=math.cos(s)*sa+math.sin(s)*ca*math.cos(A-A0)\n                if c>0:tot+=I*c\n            t+=.25\n        n+=7\n    return tot/flat\nblat,blon=45+43/60+16/3600,4+56/60+57/3600\nd=dict(lyon_rr_sum=round(sum(lyon_rr),1),mer_rr_sum=round(sum(mer_rr),1),rr_diff=round(sum(mer_rr)-sum(lyon_rr),1),\n lyon_sun_sum=round(sum(lyon_sun),1),mer_sun_sum=round(sum(mer_sun),1),sun_diff=round(sum(mer_sun)-sum(lyon_sun),1),\n lyon_aproct_rr=round(sum(lyon_rr[3:10]),1),lyon_aproct_tmean=round(sum(lyon_tm[3:10])/7,2),\n lyon_son_rr=round(sum(lyon_rr[8:11]),1),\n station_lat=round(blat,4),station_lon=round(blon,4),km_station=round(hav(blat,blon,45.4948,4.805),1),\n relief_m=355-146,sun_slope_se=round(sun(45.49,19.4,152),4),sun_slope_nw=round(sun(45.49,19.4,332),4),\n pct60_deg=round(math.degrees(math.atan(0.60)),1))\nprint(json.dumps(d,indent=1))\njson.dump(d,open('work/deep-cote-rotie/derived.json','w'),indent=1)\n",
+ "facts": [
+  {
+   "claim": "AOC recognised in 1940 (décret du 18 octobre 1940)",
+   "value": 1940,
+   "unit": "year",
+   "source": "INAO Côte Rôtie specification 2024, chapter I",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Red still wines only",
+   "value": null,
+   "unit": null,
+   "source": "INAO Côte Rôtie specification 2024: 'réservée aux vins tranquilles rouges'",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "West (right) bank of the Rhône around Ampuis; northernmost appellation of the Rhône valley",
+   "value": null,
+   "unit": null,
+   "source": "Open Wine Atlas study lesson rhone-south-northern-rhone and atlas_note",
+   "url": null
+  },
+  {
+   "claim": "Delimited area 505 ha (505.2)",
+   "value": 505.2,
+   "unit": "ha",
+   "source": "Open Wine Atlas web/data/details-fr.json fr-inao-a272 (INAO data, 2026-08-31)",
+   "url": null
+  },
+  {
+   "claim": "3 communes: Ampuis, Saint-Cyr-sur-le-Rhône, Tupin-et-Semons",
+   "value": 3,
+   "unit": "communes",
+   "source": "INAO specification 2024 §IV.1",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Elevation 146 to 355 m",
+   "value": [
+    146,
+    355
+   ],
+   "unit": "m",
+   "source": "Open Wine Atlas web/data/details-fr.json fr-inao-a272 (INAO data, 2026-08-31) terrain.e",
+   "url": null
+  },
+  {
+   "claim": "Relief 209 m (spoken: over two hundred metres)",
+   "value": 209,
+   "unit": "m",
+   "source": "derived: 355-146",
+   "url": null
+  },
+  {
+   "claim": "Slopes up to 60%",
+   "value": 60,
+   "unit": "%",
+   "source": "INAO product page Côte Rôtie: 'Les pentes s'escarpent jusqu'à 60 %'",
+   "url": "https://www.inao.gouv.fr/node/33813/printable/pdf"
+  },
+  {
+   "claim": "Organised in terraces",
+   "value": null,
+   "unit": null,
+   "source": "INAO product page ('organisé en terrasses'); specification §X ('étroites terrasses ou « chaillées »')",
+   "url": "https://www.inao.gouv.fr/node/33813/printable/pdf"
+  },
+  {
+   "claim": "Mean slope 19.4°, dominant aspect SE (152°)",
+   "value": [
+    19.4,
+    152
+   ],
+   "unit": "deg",
+   "source": "Open Wine Atlas web/data/details-fr.json fr-inao-a272 (INAO data, 2026-08-31) terrain.s, terrain.dom, terrain.asp",
+   "url": null
+  },
+  {
+   "claim": "About 9% more clear-sky sun April-October on a 19.4° slope facing 152° than flat ground at 45.49 N",
+   "value": 1.0921,
+   "unit": "ratio",
+   "source": "derived with the atlas sunLUT clear-sky model (web/index.html), see derive_py",
+   "url": null
+  },
+  {
+   "claim": "Côte Brune: micaschist, darker soils, more clay, richer in iron; Côte Blonde: mostly gneiss, light siliceous sandy soils (arzel)",
+   "value": null,
+   "unit": null,
+   "source": "INAO Côte Rôtie specification 2024 §X",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Lyon-Bron 202 m, 2,049.5 h sunshine a year",
+   "value": 2049.5,
+   "unit": "h",
+   "source": "Météo-France fiche climatologique Lyon-Bron 69029001, 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf"
+  },
+  {
+   "claim": "Bordeaux-Mérignac 2,069.8 h sunshine a year (shown as 2,070)",
+   "value": 2069.8,
+   "unit": "h",
+   "source": "Météo-France fiche Bordeaux-Mérignac 33281001, 1991-2020 (via facts/deep-margaux.json)",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf"
+  },
+  {
+   "claim": "Lyon-Bron 28 km away",
+   "value": 27.6,
+   "unit": "km",
+   "source": "derived haversine station to atlas centre",
+   "url": null
+  },
+  {
+   "claim": "Lyon-Bron precipitation 820.8 mm a year",
+   "value": 820.8,
+   "unit": "mm",
+   "source": "Météo-France fiche climatologique Lyon-Bron 69029001, 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf"
+  },
+  {
+   "claim": "About 100 mm less than Bordeaux-Mérignac (924.9)",
+   "value": 104.1,
+   "unit": "mm",
+   "source": "derived",
+   "url": null
+  },
+  {
+   "claim": "October is the wettest month at Lyon-Bron (99.8 mm)",
+   "value": 99.8,
+   "unit": "mm",
+   "source": "Météo-France fiche climatologique Lyon-Bron 69029001, 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf"
+  },
+  {
+   "claim": "Syrah at least 80%, Viognier up to 20%",
+   "value": [
+    80,
+    20
+   ],
+   "unit": "%",
+   "source": "INAO specification 2024 §V and §IX.1.a",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Grapes vinified together ('vinifiés par assemblage des raisins'): co-fermented, not blended later",
+   "value": null,
+   "unit": null,
+   "source": "INAO specification 2024 §IX.1.a and §X.2",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Viognier can lift the perfume",
+   "value": null,
+   "unit": null,
+   "source": "Open Wine Atlas study lesson rhone-south-northern-rhone ('can lift the perfume and help fix colour')",
+   "url": null
+  },
+  {
+   "claim": "Minimum 6,000 vines per hectare",
+   "value": 6000,
+   "unit": "vines/ha",
+   "source": "INAO specification 2024 §VI.1.a",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "claim": "Vines on échalas (wooden stakes) at least 1.50 m, or palissage",
+   "value": 1.5,
+   "unit": "m",
+   "source": "INAO specification 2024 §VI.1.c",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which white grape may join Syrah in Côte-Rôtie?",
+   "options": [
+    "Marsanne",
+    "Viognier",
+    "Roussanne"
+   ],
+   "answer": "B Viognier",
+   "source": "INAO specification 2024 §V",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "q": "Côte Brune is one famous slope. What is the other?",
+   "options": [
+    "Côte Rousse",
+    "Côte d'Or",
+    "Côte Blonde"
+   ],
+   "answer": "C Côte Blonde",
+   "source": "INAO specification 2024 §X",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  },
+  {
+   "q": "Minimum planting density in Côte-Rôtie?",
+   "options": [
+    "3,000 vines/ha",
+    "6,000 vines/ha",
+    "10,000 vines/ha"
+   ],
+   "answer": "B 6,000 vines/ha",
+   "source": "INAO specification 2024 §VI.1.a",
+   "url": "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement"
+  }
+ ]
+}

@@ -571,6 +571,24 @@
     "https://extranet.inao.gouv.fr/fichier/2-CDC-PNO-Vouvray.pdf",
     "https://openwineatlas.com/places/france/vouvray"
    ]
+  },
+  {
+   "slug": "deep-cote-rotie",
+   "place": "Côte-Rôtie",
+   "slot": "2026-11-26T17:50+01:00",
+   "hook": "A red wine. Up to 20% white grapes.",
+   "classic": true,
+   "style": "2 s fly-in from the Vienne/Lyon stretch of the Rhône at zoom 9.4 to 11.9 (no globe, labels off), hook on screen from frame 0; layers Place, Terrain, Soil, Sun, Rain, Grapes (Heat dropped, Sun and Rain split into two cards on one climate shot); 3D shot terrain 2.4 looking NW from across the Rhône at the south-east facing terraces with the Aspect overlay, bearing 300 to 328, pitch 62 to 66; Soil shot flat-ish pitch 30-36 with the Slope overlay; new zoom-out move in the climate shot from the slope (zoom 11.6) to the Lyon area (9.15) with the Lyon-Bron station marker; two-station month charts for sun and rain vs Bordeaux-Mérignac; three grapes cards on a close shot pitched 44-50 with altitude tint only; quiz on wide calm shot; music alpine seed 58 (waltz); voice am_fenrir (male, en-us), music ducked 6 dB under voice.",
+   "voice": "am_fenrir",
+   "music": "waltz",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=-1888480152854445803",
+   "sources": [
+    "https://info.agriculture.gouv.fr/boagri/document_administratif-dceb7462-aee6-4db6-a6f7-a7d5cb91349e/telechargement",
+    "https://www.inao.gouv.fr/node/33813/printable/pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_69029001.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+    "Open Wine Atlas details-fr.json fr-inao-a272"
+   ]
   }
  ]
 }
