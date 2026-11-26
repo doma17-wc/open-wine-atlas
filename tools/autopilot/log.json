@@ -5546,5 +5546,294 @@
   "experiment": "",
   "metricool_uuid": "",
   "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Bordeaux quiz teaser (hook map behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3147412305908643189",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Bordeaux quiz: Blends, ranks, sweet wines. Get all 4?",
+  "hook": "Blends, ranks, sweet wines. Get all 4?",
+  "places": [
+   "Médoc",
+   "Sainte-Croix-du-Mont"
+  ],
+  "question_keys": [
+   "bordeaux-overview#q4",
+   "bordeaux-left-bank#q8",
+   "bordeaux-graves-sauternes#q8",
+   "bordeaux-right-bank#q8"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-6944456374558307107",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Napa vs Sonoma Valley reel teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-8233651523228841703",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs",
+  "style": "vs, hook first (not game), fit_tiles, labels on, preset japan seed 26, music: waltz",
+  "title": "Two famous valleys. One is 3.5 times bigger. (Napa Valley 162,108 ha vs Sonoma Valley 46,530 ha, 3.5x)",
+  "hook": "Two famous valleys. One is 3.5 times bigger.",
+  "places": [
+   "Napa Valley",
+   "Sonoma Valley"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first Napa vs Sonoma reel, a famous New World pair",
+  "metricool_uuid": "-5487126899947975771",
+  "voice": "am_michael"
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Mosel Devonian slate (answer C, given in the 12:10 Mosel caption and on the 20:20 story), with the diurnal answer (C) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "germany-austria-mosel#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "853596221662253003",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, labels on, maxzoom 15, place 3.7 s, preset south seed 27, music: ambient",
+  "title": "Four famous vineyards. One is just 1.7 hectares. (Middle Mosel: Zeltinger Sonnenuhr 22.6, Ürziger Würzgarten 253.2, Erdener Prälat 1.7, Erdener Treppchen 43.6; 321 ha)",
+  "hook": "Four famous vineyards. One is just 1.7 hectares.",
+  "places": [
+   "Sonnenuhr (Zeltingen)",
+   "Würzgarten (Ürzig)",
+   "Prälat (Erden)",
+   "Treppchen (Erden)"
+  ],
+  "question_keys": [],
+  "experiment": "German IPA fixes in the voice (Zeltinger, Ürziger, Würzgarten, Erdener, Prälat, Treppchen)",
+  "metricool_uuid": "-1947945993430874116",
+  "voice": "af_bella"
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count: founding_count check failed)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7242014711432235294",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Four grand crus. One small town. (Guebwiller: Spiegel 17.4, Kessler 27.4, Saering 26.1, Kitterlé 25.0; 95.9 ha)",
+  "hook": "Four grand crus. One small town.",
+  "places": [
+   "Alsace grand cru Spiegel",
+   "Alsace grand cru Kessler",
+   "Alsace grand cru Saering",
+   "Alsace grand cru Kitterlé"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-6203890011971501453",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Mosel reel teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-3633993074085048828",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Guebwiller post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5026930446872327584",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Côte-Rôtie deep dive teaser (topic from the Vouvray caption: Next deep dive: Côte-Rôtie)",
+  "hook": "",
+  "places": [
+   "Côte Rôtie"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "1813673445210276414",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Three Jura names. One makes only vin jaune. (Arbois 2,642, Château-Chalon 94.3, L'Étoile 410.5)",
+  "hook": "Three Jura names. One makes only vin jaune.",
+  "places": [
+   "Arbois",
+   "Château-Chalon",
+   "L'Etoile"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first Jura carousel, a riddle hook answered in the caption",
+  "metricool_uuid": "3952393323806673296",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Jura post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "5101567459291579115",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Napa fog from San Pablo Bay (answer C, still to show), with the Mosel slate answer (C) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "usa-napa#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "1901356667000999648",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, variant 'Get your numbered badge' (no spot count)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7434753721288376474",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members: check failed again (Supabase execute_sql: no permission). Followers not read today.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Côte Chalonnaise villages reel (2026-10-29, 13:05) left as draft: Côte Chalonnaise villages used in the last 30 days (8 Nov post, 23 Nov quiz), old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [
+   "Bouzeron",
+   "Rully",
+   "Mercurey",
+   "Givry",
+   "Montagny"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "4189704966997887139",
+  "voice": false
+ },
+ {
+  "date": "2026-11-26",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Napa fog answer (C, San Pablo Bay) still to show. Story teasers now use a cropped map strip behind the text instead of the full cover, so the cover's own hook text no longer shows through. Cinematic explainer not made this week (skipped again; still no renderer). 25 Nov: Vosne premiers crus 1,336 (skip 64.3%), Margaux vs Pessac 1,507 (skip 64.1%), Vouvray deep dive 1,500. 24 Nov: Montrachet vs Romanée-Conti 3,072, Beaune premiers crus 1,991 (skip 58.8%), Rheingau deep dive 3,203. Best of the last 7 days: Gevrey 'All named Chambertin' 8,190, Brunello deep dive 5,652, Rías Baixas 4,927, Corton climats 4,822. Unused question keys left: bordeaux-overview#q7 (courtiers), Mosel q1 q4 q5, Napa q1 q3 q4. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable. Share prompt today: Send this to your study group (tomorrow: Save this for your exam). Game reels this week: 23, 24, 25 Nov. auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
  }
 ]
