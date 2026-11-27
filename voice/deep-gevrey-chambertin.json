@@ -1,0 +1,114 @@
+{
+ "voice": "af_bella",
+ "lang": "en-us",
+ "lines": [
+  {
+   "start": 0.15,
+   "seg_end": 3.5,
+   "end": 1.79,
+   "speed": 1.0,
+   "text": "Why is Gevrey called Chambertin?",
+   "phonemes": "wˌaɪ ɪz ʒəvɹˈeɪ kˈɔːld ʃɑːmbɛɹtˈæn?",
+   "ok": true
+  },
+  {
+   "start": 3.75,
+   "seg_end": 7.05,
+   "end": 6.7,
+   "speed": 1.0,
+   "text": "In eighteen forty-seven, it took Chambertin's name.",
+   "phonemes": "ɪn ˈeɪtiːn fˈɔːɹɾisˈɛvən, ɪt tˈʊk ʃɑːmbɛɹtˈænz nˈeɪm.",
+   "ok": true
+  },
+  {
+   "start": 7.25,
+   "seg_end": 10.5,
+   "end": 10.17,
+   "speed": 1.0,
+   "text": "Five hundred and forty hectares, in two communes.",
+   "phonemes": "fˈaɪv hˈʌndɹɪd ænd fˈɔːɹɾi hˈɛktɛɹz, ɪn tˈuː kˈɑːmjuːnz.",
+   "ok": true
+  },
+  {
+   "start": 10.75,
+   "seg_end": 14.5,
+   "end": 13.96,
+   "speed": 1.0,
+   "text": "Nine grands crus, and every name ends in Chambertin.",
+   "phonemes": "nˈaɪn ɡɹˈɑːn kɹˈuː, ænd ˈɛvɹi nˈeɪm ˈɛndz ɪn ʃɑːmbɛɹtˈæn.",
+   "ok": true
+  },
+  {
+   "start": 14.65,
+   "seg_end": 18.5,
+   "end": 18.0,
+   "speed": 1.0,
+   "text": "Eighty-seven hectares. Then, twenty-six premiers crus.",
+   "phonemes": "ˈeɪɾisˈɛvən hˈɛktɛɹz. ðˈɛn, twˈɛntisˈɪks pɹəmjˈeɪ kɹˈuː.",
+   "ok": true
+  },
+  {
+   "start": 18.75,
+   "seg_end": 22.9,
+   "end": 22.4,
+   "speed": 1.0,
+   "text": "The vines face east, and climb to almost four hundred metres.",
+   "phonemes": "ðə vˈaɪnz fˈeɪs ˈiːst, ænd klˈaɪm tʊ ˈɔːlmoʊst fˈɔːɹ hˈʌndɹɪd mˈiːɾɚz.",
+   "ok": true
+  },
+  {
+   "start": 23.15,
+   "seg_end": 29.7,
+   "end": 28.46,
+   "speed": 1.0,
+   "text": "About seven hundred and forty millimetres of rain a year. Bordeaux gets over nine hundred.",
+   "phonemes": "ɐbˌaʊt sˈɛvən hˈʌndɹɪd ænd fˈɔːɹɾi mˈɪlɪmˌiːɾɚz ʌv ɹˈeɪn ɐ jˈɪɹ. bɔːɹdˈoʊ ɡˈɛts ˌoʊvɚ nˈaɪn hˈʌndɹɪd.",
+   "ok": true
+  },
+  {
+   "start": 29.95,
+   "seg_end": 36.0,
+   "end": 35.64,
+   "speed": 1.05,
+   "text": "April to October averages just over sixteen degrees. July days near twenty-seven.",
+   "phonemes": "ˈeɪpɹəl tʊ ɑːktˈoʊbɚɹ ˈævɹɪdʒᵻz dʒˈʌst ˌoʊvɚ sˈɪkstiːn dᵻɡɹˈiːz. dʒuːlˈaɪ dˈeɪz nˌɪɹ twˈɛntisˈɛvən.",
+   "ok": true
+  },
+  {
+   "start": 36.25,
+   "seg_end": 40.05,
+   "end": 38.94,
+   "speed": 1.0,
+   "text": "Red only. Pinot Noir is the main grape.",
+   "phonemes": "ɹˈɛd ˈoʊnli. pˈiːnoʊ nwˈɑːɹ ɪz ðə mˈeɪn ɡɹˈeɪp.",
+   "ok": true
+  },
+  {
+   "start": 40.25,
+   "seg_end": 44.0,
+   "end": 42.68,
+   "speed": 1.0,
+   "text": "Fifty-eight hectolitres per hectare, at most.",
+   "phonemes": "fˈɪftiˈeɪt hˈɛktəlˌiːɾɚz pɜː hˈɛktɛɹ, æt mˈoʊst.",
+   "ok": true
+  },
+  {
+   "start": 44.45,
+   "seg_end": 54.15,
+   "end": 48.15,
+   "speed": 1.0,
+   "text": "Test yourself. Three questions. Answers in the first comment.",
+   "phonemes": "tˈɛst jɔːɹsˈɛlf. θɹˈiː kwˈɛstʃənz. ˈænsɚz ɪnðə fˈɜːst kˈɑːmɛnt.",
+   "ok": true
+  },
+  {
+   "start": 54.5,
+   "seg_end": 58.0,
+   "end": 57.26,
+   "speed": 1.0,
+   "text": "Study it free at open wine atlas dot com.",
+   "phonemes": "stˈʌdi ɪt fɹˈiː æɾ ˈoʊpən wˈaɪn ˈætləs dˈɑːt kˈɑːm.",
+   "ok": true
+  }
+ ]
+}

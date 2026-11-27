@@ -1,0 +1,274 @@
+{
+ "slug": "deep-gevrey-chambertin",
+ "place": "Gevrey-Chambertin",
+ "atlas_id": "fr-inao-a182",
+ "made": "2026-11-27",
+ "hook": {
+  "text": "Why is Gevrey called Chambertin?",
+  "answer": "In 1847 the commune of Gevrey added the name of its most prestigious cru, Chambertin, to its own.",
+  "sources": [
+   {
+    "name": "INAO product sheet Gevrey-Chambertin: 'la commune de Gevrey adjoint, à son nom, celui de son « cru » le plus prestigieux, en 1847'",
+    "url": "https://www.inao.gouv.fr/node/1818/printable/pdf"
+   },
+   {
+    "name": "BIVB (burgundywine.com): 'added the name of its most famous vineyard, Chambertin to its name in 1847'",
+    "url": "https://www.burgundywine.com/appellations/gevrey-chambertin/"
+   },
+   {
+    "name": "Open Wine Atlas Study, Côte d'Or lesson question q1 (1847)",
+    "url": "web/data/study.json"
+   }
+  ]
+ },
+ "topical": "No dated event this week; plan 'why' was the Burgundy study path. Kept, but the hook moved from the grand cru count (already used in the Côte de Nuits deep dive) to the 1847 name.",
+ "station": {
+  "name": "Dijon-Longvic",
+  "id": "21473001",
+  "height_m": 219,
+  "lat": "47°16'04\"N",
+  "lon": "5°05'17\"E",
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "edited": "2026-06-06",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf",
+  "note": "No Météo-France fiche with full normals found inside the AOC; Dijon-Longvic is the nearest synoptic station. Cross-check: same monthly precipitation (743.4 mm) already recorded in facts/deep-pommard.json and deep-cote-de-beaune.json from the same fiche."
+ },
+ "comparison_station": {
+  "name": "Bordeaux-Mérignac",
+  "id": "33281001",
+  "height_m": 47,
+  "service": "Météo-France",
+  "period": "1991-2020",
+  "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+  "note": "Monthly precipitation reused from facts/deep-cote-rotie.json / deep-margaux.json (same fiche)."
+ },
+ "monthly": {
+  "tx": [
+   5.6,
+   7.6,
+   12.5,
+   16.2,
+   20,
+   24.2,
+   26.7,
+   26.2,
+   21.7,
+   16.1,
+   9.7,
+   6.1
+  ],
+  "tx_year": 16.1,
+  "tn": [
+   -0.2,
+   0,
+   2.6,
+   5.2,
+   9.2,
+   12.8,
+   14.9,
+   14.6,
+   11,
+   7.6,
+   3.3,
+   0.7
+  ],
+  "tn_year": 6.8,
+  "tm": [
+   2.7,
+   3.8,
+   7.5,
+   10.7,
+   14.6,
+   18.5,
+   20.8,
+   20.4,
+   16.4,
+   11.8,
+   6.5,
+   3.4
+  ],
+  "tm_year": 11.4,
+  "precip_mm": [
+   56.8,
+   42.9,
+   48.2,
+   57.5,
+   76.1,
+   65.8,
+   64.9,
+   62,
+   56.4,
+   73.6,
+   77.6,
+   61.6
+  ],
+  "precip_year_printed": 743.4,
+  "sun_h": [
+   60.8,
+   95.1,
+   159.8,
+   193.7,
+   215.5,
+   240.3,
+   256.9,
+   239.7,
+   190.9,
+   118,
+   66.5,
+   52.9
+  ],
+  "sun_year_printed": 1890.0,
+  "frost_days": [
+   16.0,
+   14.6,
+   7.7,
+   2.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1.1,
+   6.5,
+   13.6
+  ],
+  "frost_year_printed": 61.5,
+  "merignac_precip_mm": [
+   86.9,
+   66.9,
+   63.3,
+   75.6,
+   71.1,
+   70.4,
+   48.6,
+   56.7,
+   81.2,
+   83.3,
+   114.5,
+   106.4
+  ],
+  "merignac_precip_year": 924.9
+ },
+ "derived": {
+  "tmean_apr_oct_C": {
+   "value": 16.17,
+   "shown": "16.2",
+   "how": "mean(tm[3:10]) = (10.7+14.6+18.5+20.8+20.4+16.4+11.8)/7"
+  },
+  "precip_sum_check": {
+   "value": 743.4,
+   "how": "sum(precip_mm)"
+  },
+  "precip_apr_oct_mm": {
+   "value": 456.3,
+   "how": "sum(precip_mm[3:10])"
+  },
+  "station_to_aoc_centre_km": {
+   "value": 9.88,
+   "how": "haversine 47.26778,5.08806 to atlas centre 47.22154,4.97636"
+  },
+  "grand_cru_total_ha": {
+   "value": 87.02,
+   "shown": "87",
+   "how": "sum of atlas area_ha: Chambertin 12.9, Clos de Bèze 15.3, Chapelle 5.5, Charmes 12.24, Griotte 2.7, Latricières 7.4, Mazis 9.1, Mazoyères 18.58, Ruchottes 3.3"
+  }
+ },
+ "claims": [
+  {
+   "claim": "Village AOC area 540.9 ha in the communes of Gevrey-Chambertin and Brochon",
+   "value": 540.9,
+   "source": "Open Wine Atlas, INAO geodata (details-fr.json fr-inao-a182); INAO sheet: 2 communes",
+   "url": "https://www.inao.gouv.fr/node/1818/printable/pdf"
+  },
+  {
+   "claim": "Gevrey lies 11 km SSW of Dijon",
+   "value": 11,
+   "source": "Open Wine Atlas near_city",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "9 grands crus, all named ...-Chambertin",
+   "source": "INAO sheet lists Chapelle, Charmes, Griottes, Latricières, Mazis, Mazoyères, Ruchottes-Chambertin, Chambertin, Chambertin-Clos de Bèze; BIVB 'no fewer than nine Grands Crus'",
+   "url": "https://www.inao.gouv.fr/node/1818/printable/pdf"
+  },
+  {
+   "claim": "Chambertin 12.9 ha",
+   "value": 12.9,
+   "source": "Open Wine Atlas INAO geodata fr-inao-a148",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "26 premiers crus",
+   "value": 26,
+   "source": "INAO sheet '26 lieux-dits classés en premiers crus'; BIVB '26 Premiers Crus climats'; atlas lists 26 (fr-inao-d590..d615)",
+   "url": "https://www.burgundywine.com/appellations/gevrey-chambertin/"
+  },
+  {
+   "claim": "Terrain 244 to 393 m, mean 277 m, dominant aspect E (mean 107°)",
+   "value": [
+    244,
+    277,
+    393
+   ],
+   "source": "Open Wine Atlas terrain (Mapterhorn DEM)",
+   "url": "web/data/details-fr.json"
+  },
+  {
+   "claim": "Rain 743 mm/yr at Dijon-Longvic, 925 mm at Bordeaux-Mérignac",
+   "source": "Météo-France 1991-2020",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf"
+  },
+  {
+   "claim": "Apr-Oct mean 16.2 °C; July mean max 26.7, mean min 14.9",
+   "source": "Météo-France 1991-2020 Dijon-Longvic",
+   "url": "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf"
+  },
+  {
+   "claim": "Red only, no white Gevrey-Chambertin; Pinot Noir main grape (Chardonnay, Pinot Blanc, Pinot Gris accessory)",
+   "source": "INAO 'uniquement rouge'; BIVB 'no white Gevrey-Chambertin wines, only red'; atlas INAO data",
+   "url": "https://www.burgundywine.com/appellations/gevrey-chambertin/"
+  },
+  {
+   "claim": "Max yield 58 hl/ha village, 56 premier cru; min 9,000 vines/ha",
+   "source": "INAO data in the atlas (details-fr.json)",
+   "url": "web/data/details-fr.json"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "When did Gevrey add Chambertin to its name?",
+   "options": [
+    "1789",
+    "1847",
+    "1936"
+   ],
+   "answer": "B, 1847",
+   "source": "https://www.inao.gouv.fr/node/1818/printable/pdf"
+  },
+  {
+   "q": "How many premiers crus does Gevrey have?",
+   "options": [
+    "9",
+    "26",
+    "41"
+   ],
+   "answer": "B, 26",
+   "source": "https://www.burgundywine.com/appellations/gevrey-chambertin/"
+  },
+  {
+   "q": "Which way does the slope face?",
+   "options": [
+    "North",
+    "East",
+    "West"
+   ],
+   "answer": "B, east",
+   "source": "Open Wine Atlas terrain, dominant aspect E"
+  }
+ ],
+ "dropped": [
+  "Soils and geology: neither the BIVB page nor the INAO sheet describes them; no soil layer.",
+  "Sunshine (Dijon 1,890 h) sourced but not shown, Heat used instead."
+ ]
+}

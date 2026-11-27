@@ -1,0 +1,541 @@
+{
+ "slug": "deep-gevrey-chambertin",
+ "id": "fr-inao-a182",
+ "duration": 58.0,
+ "fpsMap": 10,
+ "xfade": 0.5,
+ "music": [
+  "warm",
+  30
+ ],
+ "markers": [
+  {
+   "lng": 4.9655,
+   "lat": 47.2144,
+   "label": "Chambertin",
+   "shots": [
+    2
+   ]
+  },
+  {
+   "lng": 5.0881,
+   "lat": 47.2678,
+   "label": "Dijon-Longvic · 219 m",
+   "shots": [
+    4
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "fly",
+   "dur": 2.0,
+   "fps": 15,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     5.04,
+     47.315,
+     10.2,
+     0,
+     0
+    ],
+    [
+     2.0,
+     4.973,
+     47.221,
+     12.6,
+     0,
+     10
+    ]
+   ],
+   "layers": {},
+   "labels": false
+  },
+  {
+   "name": "place",
+   "dur": 9.0,
+   "fps": 6,
+   "pad": {
+    "top": 100,
+    "bottom": 480
+   },
+   "cam": [
+    [
+     0,
+     4.973,
+     47.221,
+     12.6,
+     0,
+     10
+    ],
+    [
+     9.0,
+     4.973,
+     47.221,
+     12.85,
+     -10,
+     28
+    ]
+   ],
+   "layers": {},
+   "labels": true
+  },
+  {
+   "name": "grandcrus",
+   "dur": 8.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 500
+   },
+   "cam": [
+    [
+     0,
+     4.9665,
+     47.2135,
+     13.85,
+     -10,
+     30
+    ],
+    [
+     8.5,
+     4.9665,
+     47.2135,
+     14.1,
+     -22,
+     40
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "slope": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "terrain3d",
+   "dur": 5.0,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 360
+   },
+   "cam": [
+    [
+     0,
+     4.957,
+     47.2225,
+     13.55,
+     258,
+     62
+    ],
+    [
+     5.0,
+     4.957,
+     47.2225,
+     13.7,
+     280,
+     66
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "slope": true,
+    "pts": false
+   },
+   "labels": false,
+   "terrain": 2.0
+  },
+  {
+   "name": "climate",
+   "dur": 13.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 490
+   },
+   "cam": [
+    [
+     0,
+     5.04,
+     47.26,
+     9.8,
+     0,
+     0
+    ],
+    [
+     13.5,
+     5.04,
+     47.26,
+     9.9,
+     4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "markers": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "grapes",
+   "dur": 8.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 380
+   },
+   "cam": [
+    [
+     0,
+     4.968,
+     47.226,
+     13.3,
+     18,
+     42
+    ],
+    [
+     8.5,
+     4.968,
+     47.226,
+     13.5,
+     30,
+     48
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.35,
+    "aspect": true,
+    "pts": false
+   },
+   "labels": false
+  },
+  {
+   "name": "quiz",
+   "dur": 14.5,
+   "fps": 6,
+   "pad": {
+    "top": 0,
+    "bottom": 560
+   },
+   "cam": [
+    [
+     0,
+     4.973,
+     47.221,
+     11.9,
+     0,
+     0
+    ],
+    [
+     14.5,
+     4.973,
+     47.221,
+     12.05,
+     -4,
+     6
+    ]
+   ],
+   "layers": {
+    "alt": true,
+    "altOpacity": 0.45,
+    "pts": false
+   },
+   "labels": false
+  }
+ ],
+ "segments": [
+  {
+   "kind": "title",
+   "t0": -0.1,
+   "t1": 3.4,
+   "fadeIn": 0.05,
+   "kicker": "France · Deep dive",
+   "title": "Gevrey-Chambertin",
+   "sub": "Why is Gevrey<br>called Chambertin?"
+  },
+  {
+   "kind": "chips",
+   "t0": 3.5,
+   "t1": 44.2,
+   "items": [
+    "Place",
+    "Grands crus",
+    "Terrain",
+    "Rain",
+    "Heat",
+    "Grapes"
+   ],
+   "spans": [
+    [
+     3.5,
+     10.5
+    ],
+    [
+     10.5,
+     18.5
+    ],
+    [
+     18.5,
+     22.9
+    ],
+    [
+     22.9,
+     29.7
+    ],
+    [
+     29.7,
+     36.0
+    ],
+    [
+     36.0,
+     99
+    ]
+   ]
+  },
+  {
+   "kind": "card",
+   "t0": 3.6,
+   "t1": 7.0,
+   "kicker": "Layer 1 · The place",
+   "src": "INAO · BIVB",
+   "n": "1847",
+   "u": "",
+   "c": "the year Gevrey added the name of its most famous vineyard, Chambertin."
+  },
+  {
+   "kind": "card",
+   "t0": 7.1,
+   "t1": 10.4,
+   "kicker": "Layer 1 · The place",
+   "src": "Open Wine Atlas (INAO geodata)",
+   "n": "541",
+   "u": "ha",
+   "count": {
+    "v": 540.9,
+    "d": 0
+   },
+   "c": "of appellation land in two communes, Gevrey and Brochon. Dijon is 11&nbsp;km away."
+  },
+  {
+   "kind": "card",
+   "t0": 10.6,
+   "t1": 14.4,
+   "kicker": "Layer 2 · Grands crus",
+   "src": "INAO · Open Wine Atlas",
+   "n": "9",
+   "u": "grands crus",
+   "c": "and every one ends in -Chambertin. Chambertin itself: 12.9&nbsp;ha."
+  },
+  {
+   "kind": "card",
+   "t0": 14.5,
+   "t1": 18.4,
+   "kicker": "Layer 2 · Grands crus",
+   "src": "INAO · Open Wine Atlas",
+   "n": "87",
+   "u": "ha",
+   "count": {
+    "v": 87.0,
+    "d": 0
+   },
+   "c": "for all nine together. One level down: 26 premiers crus."
+  },
+  {
+   "kind": "card",
+   "t0": 18.6,
+   "t1": 22.8,
+   "kicker": "Layer 3 · Terrain",
+   "src": "Open Wine Atlas terrain",
+   "n": "277",
+   "u": "m",
+   "c": "average height, from 244 to 393&nbsp;m. The slope faces east."
+  },
+  {
+   "kind": "card",
+   "t0": 23.0,
+   "t1": 29.6,
+   "kicker": "Layer 4 · Rain",
+   "src": "Météo-France normals 1991–2020",
+   "n": "743",
+   "u": "mm",
+   "count": {
+    "v": 743.4,
+    "d": 0
+   },
+   "c": "a year at Dijon-Longvic, 10&nbsp;km away. Bordeaux-Mérignac: 925&nbsp;mm.",
+   "chart": {
+    "type": "months",
+    "a": [
+     56.8,
+     42.9,
+     48.2,
+     57.5,
+     76.1,
+     65.8,
+     64.9,
+     62,
+     56.4,
+     73.6,
+     77.6,
+     61.6
+    ],
+    "b": [
+     86.9,
+     66.9,
+     63.3,
+     75.6,
+     71.1,
+     70.4,
+     48.6,
+     56.7,
+     81.2,
+     83.3,
+     114.5,
+     106.4
+    ],
+    "max": 120,
+    "bands": [],
+    "hot": [
+     4
+    ],
+    "labels": [],
+    "legend": "<span style='color:#e2b45f'>■</span> Dijon-Longvic 219&nbsp;m &nbsp; ▢ Bordeaux-Mérignac 47&nbsp;m &nbsp;·&nbsp; mm"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 29.8,
+   "t1": 35.9,
+   "kicker": "Layer 5 · Heat",
+   "src": "Météo-France normals 1991–2020",
+   "n": "16.2",
+   "u": "°C",
+   "count": {
+    "v": 16.2,
+    "d": 1
+   },
+   "c": "mean from April to October at Dijon-Longvic. July days reach 26.7&nbsp;°C, nights 14.9.",
+   "chart": {
+    "type": "range",
+    "max": [
+     5.6,
+     7.6,
+     12.5,
+     16.2,
+     20,
+     24.2,
+     26.7,
+     26.2,
+     21.7,
+     16.1,
+     9.7,
+     6.1
+    ],
+    "min": [
+     -0.2,
+     0,
+     2.6,
+     5.2,
+     9.2,
+     12.8,
+     14.9,
+     14.6,
+     11,
+     7.6,
+     3.3,
+     0.7
+    ],
+    "hl": 6,
+    "lo": -5,
+    "hi": 30,
+    "grid": [
+     0,
+     20,
+     30
+    ],
+    "legend": "Daily low to high, °C · July: 26.7 to 14.9",
+    "lblPos": "tb"
+   }
+  },
+  {
+   "kind": "card",
+   "t0": 36.1,
+   "t1": 40.0,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO (Open Wine Atlas)",
+   "n": "Red",
+   "u": "only",
+   "c": "Pinot Noir is the main grape. There is no white Gevrey-Chambertin."
+  },
+  {
+   "kind": "card",
+   "t0": 40.1,
+   "t1": 43.9,
+   "kicker": "Layer 6 · Grapes",
+   "src": "INAO rules (Open Wine Atlas)",
+   "n": "58",
+   "u": "hl/ha",
+   "c": "maximum yield for village Gevrey, 56 for premier cru. At least 9,000 vines/ha."
+  },
+  {
+   "kind": "card",
+   "t0": 44.3,
+   "t1": 47.5,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q1",
+   "u": "",
+   "c": "When did Gevrey add Chambertin to its name?<br>A&nbsp;&nbsp;1789<br>B&nbsp;&nbsp;1847<br>C&nbsp;&nbsp;1936"
+  },
+  {
+   "kind": "card",
+   "t0": 47.6,
+   "t1": 50.8,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q2",
+   "u": "",
+   "c": "How many premiers crus does Gevrey have?<br>A&nbsp;&nbsp;9<br>B&nbsp;&nbsp;26<br>C&nbsp;&nbsp;41"
+  },
+  {
+   "kind": "card",
+   "t0": 50.9,
+   "t1": 54.1,
+   "kicker": "Test yourself",
+   "src": "Answers in the first comment",
+   "n": "Q3",
+   "u": "",
+   "c": "Which way does the slope face?<br>A&nbsp;&nbsp;North<br>B&nbsp;&nbsp;East<br>C&nbsp;&nbsp;West"
+  },
+  {
+   "kind": "outro",
+   "t0": 54.2,
+   "t1": 999,
+   "fadeIn": 0.7,
+   "kicker": "Answers in the first comment",
+   "title": "Gevrey-Chambertin",
+   "small": "Study it free · Terrain, climate and soil for 4,600 wine places",
+   "next": "Next deep dive: Meursault",
+   "srcs": "Sources: INAO · BIVB · Météo-France normals · Open Wine Atlas"
+  }
+ ],
+ "cover": {
+  "shot": 3,
+  "at": 0.7,
+  "kicker": "Deep dive · France",
+  "title": "Gevrey-Chambertin",
+  "sub": "Why is Gevrey<br>called Chambertin?"
+ }
+}

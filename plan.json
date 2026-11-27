@@ -508,8 +508,9 @@
    "series": "",
    "not_before": "2026-11-27",
    "why": "Burgundy study path: Côte de Nuits village with nine grands crus including Chambertin",
-   "status": "planned",
-   "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data. Moved to 27 Nov on 2026-11-26 and announced as next in the Côte-Rôtie outro."
+   "status": "posted",
+   "note": "Added 2026-11-20 to keep 4+ classics planned. Slot 17:50. Verify the grand cru count in the INAO data. Moved to 27 Nov on 2026-11-26 and announced as next in the Côte-Rôtie outro. Made 2026-11-27; hook moved to the 1847 name (grand cru count already used in the Côte de Nuits deep dive).",
+   "slot": "2026-11-27T17:50+01:00"
   },
   {
    "slug": "deep-vino-nobile",
@@ -527,30 +528,40 @@
    "place": "Meursault",
    "atlas_id": "fr-inao-a204",
    "series": "",
-   "not_before": "2026-11-30",
+   "not_before": "2026-11-28",
    "why": "Burgundy study path: Côte de Beaune white wine village, Chardonnay, premiers crus such as Perrières, Charmes and Genevrières, no grand cru",
    "status": "planned",
-   "note": "Added 2026-11-22 to keep 4+ classics planned. Slot 17:50. Verify the premier cru list in the INAO data."
+   "note": "Added 2026-11-22 to keep 4+ classics planned. Slot 17:50. Verify the premier cru list in the INAO data. Moved to 28 Nov on 2026-11-27 and announced as next in the Gevrey-Chambertin outro (7-day non-classic window still full on 28 Nov)."
   },
   {
    "slug": "deep-saint-julien",
    "place": "Saint-Julien",
    "atlas_id": "fr-inao-a71",
    "series": "",
-   "not_before": "2026-12-01",
+   "not_before": "2026-11-29",
    "why": "Bordeaux study path: Left Bank commune between Pauillac and Margaux, gravel, Cabernet Sauvignon, 1855 classified growths",
    "status": "planned",
-   "note": "Added 2026-11-22. Slot 17:50. Verify the classified growth count."
+   "note": "Added 2026-11-22. Slot 17:50. Verify the classified growth count. Moved to 29 Nov on 2026-11-27 so the 29 Nov slot has a classic."
   },
   {
    "slug": "deep-chambolle-musigny",
    "place": "Chambolle-Musigny",
-   "atlas_id": "",
+   "atlas_id": "fr-inao-a150",
    "series": "",
    "not_before": "2026-12-02",
    "why": "Burgundy study path: Côte de Nuits village of fine-boned Pinot Noir, grands crus Musigny and Bonnes-Mares",
    "status": "planned",
    "note": "Added 2026-11-24 to keep 4+ classics planned. Slot 17:50. Look up the atlas id and verify the grand cru list in the INAO data."
+  },
+  {
+   "slug": "deep-pouilly-fume",
+   "place": "Pouilly-Fumé",
+   "atlas_id": "fr-inao-a101",
+   "series": "",
+   "not_before": "2026-12-04",
+   "why": "Loire study path: Sauvignon Blanc across the river from Sancerre, silex (flint) soils, the 'fumé' name",
+   "status": "planned",
+   "note": "Added 2026-11-27 to keep 4+ classics planned. Slot 17:50. Source the silex soils from the appellation specification or interprofession."
   }
  ]
 }

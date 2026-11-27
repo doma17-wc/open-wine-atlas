@@ -589,6 +589,24 @@
     "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
     "Open Wine Atlas details-fr.json fr-inao-a272"
    ]
+  },
+  {
+   "slug": "deep-gevrey-chambertin",
+   "place": "Gevrey-Chambertin",
+   "slot": "2026-11-27T17:50+01:00",
+   "hook": "Why is Gevrey called Chambertin?",
+   "classic": true,
+   "style": "2 s fly-in southward from Dijon at zoom 10.2 to 12.6 (no globe, labels off), hook on screen from frame 0; layers Place, Grands crus, Terrain, Rain, Heat, Grapes (new Grands crus layer, Sun and Soil dropped); grands crus shot pitched 30-40 with Slope overlay and a Chambertin marker; short 5 s 3D shot terrain 2.0 looking west from the plain at the slope and the Combe de Lavaux, alt tint plus Slope, bearing 258 to 280; wide climate shot zoomed out to 9.8 with the Dijon-Longvic station marker; rain as two-station months chart vs Bordeaux-Mérignac; heat as range chart; grapes shot pitched 42-48 over the village with the Aspect overlay; quiz on wide calm shot; music warm seed 30 (ambient); voice af_bella (female, en-us), music ducked 6 dB under voice.",
+   "voice": "af_bella",
+   "music": "ambient",
+   "planner_url": "https://app.metricool.com/planner/calendar?blogId=7132077&openWithPostUuid=5751294460558983731",
+   "sources": [
+    "https://www.inao.gouv.fr/node/1818/printable/pdf",
+    "https://www.burgundywine.com/appellations/gevrey-chambertin/",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_21473001.pdf",
+    "https://object.files.data.gouv.fr/meteofrance/data/synchro_ftp/REF_STATION/FICHECLIM_33281001.pdf",
+    "Open Wine Atlas web/data/details-fr.json"
+   ]
   }
  ]
 }
