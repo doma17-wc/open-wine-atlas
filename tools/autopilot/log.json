@@ -5835,5 +5835,290 @@
   "experiment": "",
   "metricool_uuid": "",
   "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Veneto quiz teaser (hook map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7695571374929432047",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Veneto quiz: Amarone and Prosecco. Get all 4?",
+  "hook": "Amarone and Prosecco. Get all 4?",
+  "places": [
+   "Amarone della Valpolicella",
+   "Conegliano Valdobbiadene - Prosecco"
+  ],
+  "question_keys": [
+   "italy-veneto#q2",
+   "italy-veneto#q8",
+   "italy-veneto#q7",
+   "italy-veneto#q6"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-3688553215936217016",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Pomerol vs Lalande-de-Pomerol game teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-6607566300575022758",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, labels off (labels showed the areas), hook 3.2 s, no sub, preset dusk seed 29, music: waltz",
+  "title": "Same name. Which one is bigger? (Pomerol 964 ha vs Lalande-de-Pomerol 1,387 ha, 1.4x)",
+  "hook": "Same name. Which one is bigger?",
+  "places": [
+   "Pomerol",
+   "Lalande-de-Pomerol"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: surprise answer, the 'little' namesake is the bigger one",
+  "metricool_uuid": "6709093687746973094",
+  "voice": "bm_george"
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Crémant d'Alsace rosé is Pinot Noir (answer C, shown on the 20:20 story), with the Napa fog answer (C) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "north-france-alsace#q6"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-759085440087833",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, labels on, maxzoom 15, place 2.9 s, preset alpine seed 33, music: ambient",
+  "title": "This town gave the Côte de Nuits its name. (Nuits-Saint-Georges premiers crus: Pruliers 7.7, Porrets-Saint-Georges 3.5, Cailles 3.8, Vaucrains 6.2, Saints-Georges 7.5; 28.7 ha)",
+  "hook": "This town gave the Côte de Nuits its name.",
+  "places": [
+   "Les Pruliers",
+   "Les Porrets-Saint-Georges",
+   "Les Cailles",
+   "Les Vaucrains",
+   "Les Saints-Georges"
+  ],
+  "question_keys": [],
+  "experiment": "History hook instead of a size hook",
+  "metricool_uuid": "380735549623977674",
+  "voice": "af_heart"
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count: founding_count check failed)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "6105377434572308796",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel, total off",
+  "title": "Three villages. One famous hill. (Corton hill: Ladoix 134, Aloxe-Corton 288, Pernand-Vergelesses 183)",
+  "hook": "Three villages. One famous hill.",
+  "places": [
+   "Ladoix",
+   "Aloxe-Corton",
+   "Pernand-Vergelesses"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1590449993832840151",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Nuits premiers crus reel teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-351621550341665661",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Corton hill post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-5394079547325791422",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Gevrey-Chambertin deep dive teaser (topic from the Côte-Rôtie caption: Next deep dive: Gevrey-Chambertin)",
+  "hook": "",
+  "places": [
+   "Gevrey-Chambertin"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-414470381034713346",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel, no_area, riddle hook answered in caption",
+  "title": "Five grand crus. One has a lighthouse. (Montagne de Reims north: Puisieulx, Sillery, Mailly-Champagne, Verzenay, Verzy; no_area)",
+  "hook": "Five grand crus. One has a lighthouse.",
+  "places": [
+   "Puisieulx",
+   "Sillery",
+   "Mailly-Champagne",
+   "Verzenay",
+   "Verzy"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4919824781145062987",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Montagne de Reims post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2256870699650627291",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Quincy is white only (answer A, still to show), with the Crémant rosé answer (C) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "north-france-loire-centre#q8"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-3508239840307952043",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, variant 'Claim your founding spot' (no spot count)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "493824154513591036",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "style": "",
+  "title": "Founding Members: check failed again (Supabase execute_sql: no permission). Followers 6,180 on 2026-11-26.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "style": "",
+  "title": "Mâconnais whites reel (2026-10-29, 13:05) left as draft: Pouilly set used on 2026-11-11, old caption with /r/ link, no member card, no voice",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
+ },
+ {
+  "date": "2026-11-27",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "style": "",
+  "title": "Quincy answer (A, white only from Sauvignon Blanc) still to show. Cinematic explainer not made this week (skipped again, still no renderer). Game reels this week: 23, 24, 25, 27 Nov. 26 Nov: Côte-Rôtie deep dive 2,531 (skip 65.0%), Napa vs Sonoma 1,364 (62.5%), Mosel cluster 1,241 (63.2%). Best last 7 days: Gevrey 'All named Chambertin' 8,247, Brunello deep dive 5,773, Rías Baixas 5,025, Corton climats 4,894 (skip 58.1%), Sauternes 4,691. Burgundy clusters keep leading; far regions (Napa, Mosel) lower. Many famous sets now used in the last 30 days (Meursault, Chablis premiers crus, Côte des Blancs, Châteauneuf vs Gigondas, Côte-Rôtie vs Condrieu). Unused famous pairs: Volnay vs Pommard, Oakville vs Rutherford, Gevrey vs Chambolle. Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable. Share prompt today: Save this for your exam (tomorrow: Send this to your study group). auto-media force-pushed and cleared.",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "",
+  "voice": false
  }
 ]
