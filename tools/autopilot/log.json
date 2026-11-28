@@ -6120,5 +6120,280 @@
   "experiment": "",
   "metricool_uuid": "",
   "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "08:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Southern Italy quiz teaser (hook map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-500658058217829740",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "09:05",
+  "type": "post",
+  "format": "quiz",
+  "style": "quiz carousel, member card slide 7",
+  "title": "Southern Italy quiz: Four red grapes. Get all 4?",
+  "hook": "Four red grapes. Get all 4?",
+  "places": [
+   "Taurasi",
+   "Etna"
+  ],
+  "question_keys": [
+   "italy-south-islands#q1",
+   "italy-south-islands#q4",
+   "italy-south-islands#q6",
+   "italy-south-islands#q7"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-1435146358459774192",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "09:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Volnay vs Pommard game teaser (Volnay tile crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7575829291674913127",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "10:05",
+  "type": "reel",
+  "format": "vs game",
+  "style": "game mode, fit_tiles, labels off, hook 3.8 s, both 5.8 s, preset warm seed 34, music: waltz",
+  "title": "Next-door rivals. Which is bigger? (Volnay 241.6 ha vs Pommard 336.1 ha, 1.4x)",
+  "hook": "Next-door rivals. Which is bigger?",
+  "places": [
+   "Volnay",
+   "Pommard"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-6118611225756481827",
+  "voice": "am_fenrir"
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "11:00",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: Alsace noble grapes (answer C Muscat, given in the 13:05 caption and on the 20:20 story), with the Quincy answer (A) on top",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "north-france-alsace#q2"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-475972616994469319",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "12:10",
+  "type": "reel",
+  "format": "cluster",
+  "style": "cluster, hook first, no eyebrow, labels on, maxzoom 16, place 3.0 s, preset japan seed 36, music: ambient",
+  "title": "Clos de Vougeot's hidden neighbours. (Vougeot premiers crus: Clos de la Perrière 2.1, Les Petits Vougeots 5.2, Le Clos Blanc 2.3, Les Crâs 3.8; 13.4 ha)",
+  "hook": "Clos de Vougeot's hidden neighbours.",
+  "places": [
+   "Clos de la Perrière",
+   "Les Petits Vougeots",
+   "Le Clos Blanc",
+   "Les Crâs"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: hidden-neighbours hook (little-known places next to a famous one), first Vougeot premiers crus reel",
+  "metricool_uuid": "-4096745646637957088",
+  "voice": "bf_emma"
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "12:50",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member (no spot count: founding_count check failed)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "8479558765714884018",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "13:05",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Five grand crus. One is Alsace's smallest. (Bergheim: Kanzlerberg 3.3, Altenberg de Bergheim 33.9; Ribeauvillé: Kirchberg de Ribeauvillé 10.9, Osterberg 25.2, Geisberg 7.9)",
+  "hook": "Five grand crus. One is Alsace's smallest.",
+  "places": [
+   "Alsace grand cru Kanzlerberg",
+   "Alsace grand cru Altenberg de Bergheim",
+   "Alsace grand cru Kirchberg de Ribeauvillé",
+   "Alsace grand cru Osterberg",
+   "Alsace grand cru Geisberg"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-1197799603179076676",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "13:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Vougeot premiers crus reel teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-476735582166889908",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "15:00",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Ribeauvillé and Bergheim post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-4890827880177972831",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "17:20",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Meursault deep dive teaser (plain; topic from the Gevrey-Chambertin caption: Next deep dive: Meursault)",
+  "hook": "",
+  "places": [
+   "Meursault"
+  ],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "7446705901054412721",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "18:30",
+  "type": "post",
+  "format": "cluster",
+  "style": "carousel",
+  "title": "Muscadet has crus. Meet the first three. (Le Pallet 213, Gorges 225, Clisson 298)",
+  "hook": "Muscadet has crus. Meet the first three.",
+  "places": [
+   "Muscadet Sèvre et Maine Le Pallet",
+   "Muscadet Sèvre et Maine Gorges",
+   "Muscadet Sèvre et Maine Clisson"
+  ],
+  "question_keys": [],
+  "experiment": "EXPERIMENT: first Muscadet crus communaux carousel",
+  "metricool_uuid": "-3900193681596004185",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "18:50",
+  "type": "story",
+  "format": "teaser",
+  "style": "",
+  "title": "Muscadet post teaser (map crop behind)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-356974043404481768",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "20:20",
+  "type": "story",
+  "format": "question",
+  "style": "",
+  "title": "Question story: tuffeau (answer A, still to show), with the noble grapes answer (C) on top (label 'Earlier today' in a temp copy)",
+  "hook": "",
+  "places": [],
+  "question_keys": [
+   "north-france-loire-west#q8"
+  ],
+  "experiment": "",
+  "metricool_uuid": "-1827239322826620510",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "21:45",
+  "type": "story",
+  "format": "member",
+  "style": "",
+  "title": "Founding Member, variant 'Your numbered badge is waiting' (no spot count)",
+  "hook": "",
+  "places": [],
+  "question_keys": [],
+  "experiment": "",
+  "metricool_uuid": "-2635779016077524380",
+  "voice": false
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "06:00",
+  "type": "note",
+  "format": "founding count",
+  "title": "Founding Members: check failed again (Supabase execute_sql: no permission).",
+  "places": [],
+  "voice": false,
+  "question_keys": []
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "06:00",
+  "type": "note",
+  "format": "stock draft kept",
+  "title": "Clos de Vougeot vs Romanée-Conti reel (2026-10-29, 13:05) left as draft: Romanée-Conti used on 2026-11-24, old caption with /r/ link, no member card, no voice",
+  "places": [
+   "Clos de Vougeot",
+   "Romanée-Conti"
+  ],
+  "voice": false,
+  "question_keys": []
+ },
+ {
+  "date": "2026-11-28",
+  "slot": "06:00",
+  "type": "note",
+  "format": "open items",
+  "title": "Tuffeau answer (A, soft chalky limestone around Saumur) still to show. Cinematic explainer not made this week (skipped again, still no renderer). Game reels this week: 23, 24, 25, 27, 28 Nov. 27 Nov: Pomerol vs Lalande game 2,395 (skip 58.6%), Nuits premiers crus 1,739 (67.3%), Gevrey deep dive 2,335 (68.8%). Most famous Burgundy, Bordeaux, Champagne and Rhône sets are now used in the last 30 days; Chablis premiers crus such as Montée de Tonnerre, Montmains and Vaillons are not in search.json. Chianti Classico UGAs are points only (no outline). Voices so far: am_michael, bf_emma, bm_george, af_heart, am_fenrir, af_bella, bm_fable; today am_fenrir then bf_emma. Share prompt today: Send this to your study group (tomorrow: Save this for your exam). auto-media force-pushed and cleared.",
+  "places": [],
+  "voice": false,
+  "question_keys": []
  }
 ]
